@@ -4,6 +4,7 @@ import "./globals.css";
 import { Nav } from "@/components/layout/Nav";
 import { Footer } from "@/components/layout/Footer";
 import { MobileCallBar } from "@/components/shared/MobileCallBar";
+import { DesktopStickyBar } from "@/components/layout/DesktopStickyBar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -42,6 +43,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${roboto.variable}`}>
       <body className="font-sans antialiased">
         <Nav />
+        <DesktopStickyBar />
         <main>{children}</main>
         <Footer />
         <MobileCallBar />

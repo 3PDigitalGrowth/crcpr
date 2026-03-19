@@ -5,6 +5,7 @@ import { Check, CheckCircle } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { submitEnquiry } from "@/lib/actions";
 import type { FormState } from "@/types";
+import { PortraitPlaceholder } from "@/components/shared/PortraitPlaceholder";
 
 const initialFormState: FormState = {
   status: "idle",
@@ -44,8 +45,8 @@ export function CrisisContactForm() {
             <h3 className="font-heading font-black text-navy text-2xl">
               Send a confidential message
             </h3>
-            <p className="font-sans italic text-charcoal-mid text-sm mt-2">
-              Everything shared with CRC PR is treated with absolute confidentiality.
+            <p className="text-charcoal-mid text-sm italic mt-1 mb-4">
+              Everything shared with CRC PR is treated with absolute confidentiality. We do not reference client engagements without explicit written permission. Our advisers operate with the same professional discretion as legal counsel.
             </p>
 
             {showSuccess ? (
@@ -56,7 +57,7 @@ export function CrisisContactForm() {
                   aria-hidden
                 />
                 <p className="text-charcoal text-[15px] leading-relaxed text-center lg:text-left">
-                  Thank you. A CRC PR adviser will be in touch shortly — within the
+                  Thank you. A CRC PR adviser will be in touch shortly: within the
                   hour during business hours, or first thing in the morning for
                   after-hours messages.
                 </p>
@@ -162,11 +163,9 @@ export function CrisisContactForm() {
           </div>
 
           <div>
-            <div className="bg-off-white rounded-lg w-[200px] aspect-square flex items-center justify-center mx-auto lg:mx-0">
-              <span className="text-charcoal-mid/30 text-sm font-sans">Portrait</span>
-            </div>
+            <PortraitPlaceholder size="sm" />
             <p className="mt-6 text-charcoal text-[15px] leading-relaxed">
-              You will deal directly with Lyall Mercer or a senior CRC PR adviser —
+              You will deal directly with Lyall Mercer or a senior CRC PR adviser,
               not an account manager.
             </p>
             <p className="mt-4">

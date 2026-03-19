@@ -204,7 +204,7 @@ const questions: Question[] = [
     options: [
       { label: "Not confident", score: 0 },
       { label: "Somewhat confident", score: 1 },
-      { label: "Very confident — we have the people, plan, and processes", score: 2 },
+      { label: "Very confident: we have the people, plan, and processes", score: 2 },
     ],
   },
 ];
@@ -295,7 +295,7 @@ export function ReputationAssessment() {
 
   if (phase === "results" || phase === "capture") {
     return (
-      <section className="bg-white py-16" id="reputation-assessment">
+      <section className="bg-white py-16 scroll-mt-24" id="reputation-assessment">
         <div className="max-w-3xl mx-auto px-6">
           <div className="text-center mb-12">
             <p className="text-brand-teal text-xs font-medium tracking-[0.14em] uppercase">
@@ -412,7 +412,7 @@ export function ReputationAssessment() {
   const currentQ = questions[currentIndex];
 
   return (
-    <section className="bg-white py-16" id="reputation-assessment">
+    <section className="bg-white py-16 scroll-mt-24" id="reputation-assessment">
       <div className="max-w-3xl mx-auto px-6">
         <div className="text-center mb-8">
           <p className="text-brand-teal text-xs font-medium tracking-[0.14em] uppercase">

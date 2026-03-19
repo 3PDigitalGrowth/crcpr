@@ -118,7 +118,92 @@ export const siteConfig = {
 
   capabilityStatement: {
     title: "CRC PR Capability Statement",
+    available: false, // TODO: set to true and add fileName when PDF provided
     fileName: "crcpr-capability-statement.pdf",
-    // TODO: CLIENT TO PROVIDE PDF before go-live
+    requestUrl: "/contact?source=capability-statement",
   },
+
+  caseStudies: [
+    {
+      id: "legislation-amended",
+      sector: "Industry Association",
+      context:
+        "A national peak body faced a Federal Government proposal that would have fundamentally altered the operating environment for its 800+ member organisations.",
+      challenge:
+        "The association needed to mount a coordinated public affairs campaign while managing fractured member sentiment, competing media narratives, and a tight legislative timeline.",
+      approach:
+        "CRC PR developed a stakeholder communications strategy, prepared the executive officer for media and parliamentary engagement, coordinated a coalition of member voices, and managed proactive media placement across the campaign period.",
+      outcome: "Legislation amended.",
+      outcomeSub:
+        "Key provisions unfavourable to members were removed before the bill passed. Media coverage shifted from hostile to measured within six weeks.",
+      icon: "Building2",
+    },
+    {
+      id: "zero-enrolment-loss",
+      sector: "Independent School",
+      context:
+        "A prominent independent school faced a serious safeguarding incident that became public before the school had the opportunity to communicate proactively with its community.",
+      challenge:
+        "Parent confidence was at risk. Media interest was intense. Legal obligations constrained what could be said. The board and principal needed to communicate with compassion, clarity, and legal precision, all simultaneously.",
+      approach:
+        "CRC PR provided immediate crisis counsel, drafted a coordinated parent communications plan, prepared the principal for media enquiries, and worked alongside legal counsel to ensure all messaging was defensible and empathetic.",
+      outcome: "Zero enrolment loss.",
+      outcomeSub:
+        "No students withdrew following the incident. Parent trust surveys conducted six months later showed confidence in leadership had increased.",
+      icon: "GraduationCap",
+    },
+    {
+      id: "funding-secured",
+      sector: "Pacific Government",
+      context:
+        "A Pacific Island government was seeking a significant development funding commitment from an international partner agency, competing against multiple other regional priorities.",
+      challenge:
+        "The government needed to communicate the case for funding with clarity and cultural authority, in a multilateral environment with competing voices and limited media access.",
+      approach:
+        "CRC PR developed the communications strategy, prepared government representatives for stakeholder presentations, managed the narrative across regional media, and coordinated engagement with the partner agency's communications team.",
+      outcome: "Funding secured.",
+      outcomeSub:
+        "Full funding commitment received. The communications approach was subsequently adopted as a model for future engagement with international development partners.",
+      icon: "Globe",
+    },
+  ],
+
+  faqs: [
+    {
+      question: "What makes CRC PR different from a larger PR agency?",
+      answer:
+        "At CRC PR, every client engagement is led directly by a senior advisor, not delegated to account managers or junior staff. You work with people who have decades of experience and take a genuine, long-term interest in your organisation. We are boutique by design, which means you get direct access to the people who actually do the work.",
+    },
+    {
+      question: "How quickly can CRC PR respond to a crisis?",
+      answer:
+        "We are available 24/7. For active crisis situations, our target is to have a senior advisor engaged within the hour of first contact during business hours, or at the start of the next business day for after-hours enquiries. Call 1300 182 186 for immediate crisis support.",
+    },
+    {
+      question: "Do you work with organisations outside Brisbane?",
+      answer:
+        "Yes. CRC PR works with clients across Australia, including Sydney, Melbourne, Canberra, and regional areas, as well as across the Pacific and internationally. We work by phone, video, and in person depending on the situation. Geography is not a barrier.",
+    },
+    {
+      question: "What industries does CRC PR specialise in?",
+      answer:
+        "We have deep experience across corporate and ASX-listed companies, Federal and State government departments, industry associations and peak bodies, independent and faith-based schools, health and aged care organisations, legal and professional services firms, and Pacific governments and NGOs.",
+    },
+    {
+      question: "Is everything I share with CRC PR confidential?",
+      answer:
+        "Absolutely. Everything shared with CRC PR is treated with absolute confidentiality. We do not reference client engagements without explicit written permission. Our advisors operate with the same professional discretion as legal counsel.",
+    },
+    {
+      question:
+        "What is a crisis communications plan and does my organisation need one?",
+      answer:
+        "A crisis communications plan is a documented framework that prepares your organisation to respond effectively when a serious issue or crisis occurs. It covers who is responsible for what, how decisions get made under pressure, how you communicate with different stakeholder groups, and how you engage with media. If your organisation has not tested a crisis plan in the last 12 months, you need one.",
+    },
+    {
+      question: "How does CRC PR charge for its services?",
+      answer:
+        "CRC PR works with clients on retainer arrangements, project-based engagements, and where appropriate, crisis response agreements. Every engagement starts with a conversation about your situation and what you need. We do not operate with fixed packages. Contact us to discuss what is right for your organisation.",
+    },
+  ],
 } as const;

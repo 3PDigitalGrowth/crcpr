@@ -35,7 +35,7 @@ export default function SchoolsFaithPage() {
             <p>
               Schools and faith-based organisations operate under intense scrutiny.
               Parents, alumni, regulators, and the media expect clarity, compassion,
-              and consistency — especially when an incident unfolds. Effective
+              and consistency, especially when an incident unfolds. Effective
               crisis communications protect students, staff, and the trust your
               community places in your leadership.
             </p>
@@ -49,7 +49,7 @@ export default function SchoolsFaithPage() {
             <p>
               From social media storms to governance questions and complex
               stakeholder dynamics, we provide disciplined messaging, rehearsal for
-              spokespeople, and a calm, senior presence at the point of decision —
+              spokespeople, and a calm, senior presence at the point of decision,
               so your organisation can respond with judgment as well as speed.
             </p>
           </div>

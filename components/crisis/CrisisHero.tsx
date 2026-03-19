@@ -16,7 +16,7 @@ export function CrisisHero() {
           href={siteConfig.phone.href}
           className="block font-heading font-black text-navy text-[13px] tracking-widest uppercase"
         >
-          NEED IMMEDIATE CRISIS SUPPORT? CALL 1300 182 186 — AVAILABLE 24/7
+          NEED IMMEDIATE CRISIS SUPPORT? CALL 1300 182 186 | AVAILABLE 24/7
         </a>
       </div>
 
@@ -29,7 +29,7 @@ export function CrisisHero() {
             {`When a crisis breaks,\nthe first 15 minutes define the outcome.`}
           </h1>
           <p className="text-white/75 text-lg leading-relaxed mt-6 max-w-[520px]">
-            We have been in the room when it matters most — guiding companies,
+            We have been in the room when it matters most, guiding companies,
             governments, associations, and organisations through Australia&apos;s
             most significant crises. 24/7. Confidential. Decisive.
           </p>
@@ -39,7 +39,7 @@ export function CrisisHero() {
               className="bg-brand-gold text-navy font-heading font-black text-[13px] tracking-widest uppercase rounded-[4px] px-8 py-4 inline-flex items-center justify-center gap-2"
             >
               <Phone className="shrink-0" size={18} strokeWidth={2.25} aria-hidden />
-              CALL NOW — 1300 182 186
+              CALL NOW: 1300 182 186
             </a>
             <a
               href="#contact-form"

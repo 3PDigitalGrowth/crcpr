@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Check } from "lucide-react";
 import { PageHero } from "@/components/layout/PageHero";
-import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
 import { ReputationAssessment } from "@/components/shared/ReputationAssessment";
 
 export const metadata: Metadata = {
@@ -52,7 +51,7 @@ export default function ReputationManagementPage() {
                 term.
               </p>
               <p className="text-charcoal text-base leading-relaxed mt-6">
-                Our approach begins with a structured vulnerability assessment —
+                Our approach begins with a structured vulnerability assessment:
                 a forensic review of your organisation&apos;s communications
                 posture, stakeholder relationships, media profile, and digital
                 footprint. We map the risks, quantify the exposure, and deliver
@@ -61,12 +60,12 @@ export default function ReputationManagementPage() {
               </p>
               <p className="text-charcoal text-base leading-relaxed mt-6">
                 For organisations already under scrutiny, we provide discreet,
-                senior-level counsel on reputation recovery — managing media
+                senior-level counsel on reputation recovery, managing media
                 narratives, rebuilding stakeholder confidence, and ensuring
                 internal alignment during periods of intense external pressure.
               </p>
               <p className="text-charcoal text-base leading-relaxed mt-6 border-l-[3px] border-brand-gold pl-4 italic text-charcoal-mid">
-                Try our interactive Reputation Vulnerability Assessment below —
+                Try our interactive Reputation Vulnerability Assessment below,
                 or explore the full tool on our{" "}
                 <a
                   href="#reputation-assessment"
@@ -122,7 +121,20 @@ export default function ReputationManagementPage() {
 
       <ReputationAssessment />
 
-      <LeadMagnetBanner magnet="reputationAssessment" variant="dark" />
+      <section className="py-12">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="bg-navy rounded-lg p-8">
+            <p className="text-brand-gold text-xs font-medium tracking-[0.14em] uppercase mb-3">NEXT STEP</p>
+            <h3 className="font-heading font-black text-white text-2xl mb-3">Want to discuss your results?</h3>
+            <p className="text-white/70 text-base mb-6">
+              Once you&apos;ve completed the assessment, our advisers can walk you through your score and what it means for your organisation in a confidential, no-obligation conversation.
+            </p>
+            <Link href="/contact" className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs tracking-widest uppercase px-6 py-3 rounded-[4px] hover:bg-gold-light transition">
+              Book a confidential consultation →
+            </Link>
+          </div>
+        </div>
+      </section>
 
       <section className="bg-navy py-16">
         <div className="max-w-7xl mx-auto px-6 text-center">

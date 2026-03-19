@@ -3,6 +3,7 @@ import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { PageHero } from "@/components/layout/PageHero";
 import { CapabilityDownload } from "@/components/shared/CapabilityDownload";
+import { PortraitPlaceholder } from "@/components/shared/PortraitPlaceholder";
 
 export const metadata: Metadata = {
   title: "About CRC Public Relations",
@@ -35,7 +36,7 @@ export default function AboutPage() {
             <p className="text-charcoal-mid text-[15px] leading-relaxed mt-6">
               CRC Public Relations was founded on a simple principle: that
               organisations facing their most significant communications
-              challenges deserve direct access to experienced, senior advisors —
+              challenges deserve direct access to experienced, senior advisors,
               not account managers or junior staff.
             </p>
             <p className="text-charcoal-mid text-[15px] leading-relaxed mt-4">
@@ -83,9 +84,7 @@ export default function AboutPage() {
             Our Team
           </h2>
           <div className="mt-10 bg-off-white rounded-lg p-8 flex flex-col md:flex-row gap-8 items-start">
-            <div className="bg-navy-mid rounded-lg w-[200px] h-[250px] shrink-0 flex items-center justify-center">
-              <span className="text-white/20 text-sm">Portrait</span>
-            </div>
+            <PortraitPlaceholder size="md" />
             <div>
               <h3 className="font-heading font-black text-navy text-xl">
                 Lyall Mercer
@@ -102,6 +101,20 @@ export default function AboutPage() {
               >
                 Read full profile →
               </Link>
+            </div>
+          </div>
+
+          <div className="mt-6 bg-off-white rounded-lg p-8 flex flex-col md:flex-row gap-8 items-start">
+            <PortraitPlaceholder size="sm" initials="BG" />
+            <div>
+              <h3 className="font-heading font-black text-navy text-xl">Barbara Gorogh</h3>
+              <p className="text-brand-gold text-sm font-medium mb-2">Co-founder, My PR Partner</p>
+              <p className="text-charcoal-mid text-[15px] leading-relaxed">
+                Senior communications strategist and co-founder of My PR Partner, the CRC PR training platform. Barbara brings deep expertise in communications training, practitioner development, and the delivery of crisis communications education to PR professionals across Australia.
+              </p>
+              <a href={siteConfig.myPrPartnerUrl} target="_blank" rel="noopener noreferrer" className="text-brand-teal text-sm font-medium mt-2 inline-block hover:underline">
+                → View My PR Partner
+              </a>
             </div>
           </div>
         </div>

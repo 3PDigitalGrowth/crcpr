@@ -8,15 +8,19 @@ export const metadata: Metadata = {
     "Contact CRC Public Relations for a confidential consultation. Corporate communications, reputation management, crisis response, and media training.",
 };
 
-export default function ContactPage() {
+export default function ContactPage({
+  searchParams,
+}: {
+  searchParams: { source?: string };
+}) {
   return (
     <>
       <PageHero
         eyebrow="CONTACT US"
         title="Let's discuss your needs."
-        description="Every conversation with CRC PR begins with listening. Tell us about your situation and we'll respond promptly — with confidentiality guaranteed."
+        description="Every conversation with CRC PR begins with listening. Tell us about your situation and we'll respond promptly, with confidentiality guaranteed."
       />
-      <ContactFormSection />
+      <ContactFormSection source={searchParams.source} />
     </>
   );
 }

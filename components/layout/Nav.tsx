@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu, Phone, X } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
@@ -30,12 +30,31 @@ function Logo() {
 
 export function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  const capabilityHref = `/downloads/${siteConfig.capabilityStatement.fileName}`;
+  const capabilityAvailable = siteConfig.capabilityStatement.available;
+  const capabilityHref = capabilityAvailable
+    ? `/downloads/${siteConfig.capabilityStatement.fileName}`
+    : siteConfig.capabilityStatement.requestUrl;
+
+  useEffect(() => {
+    const onScroll = () => {
+      setScrolled(window.scrollY > 100);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-navy h-14 lg:h-16 border-b border-white/10">
+      <header
+        className={`sticky top-0 z-50 h-14 lg:h-16 transition-all duration-300 ${
+          scrolled
+            ? "bg-navy/80 backdrop-blur-xl shadow-lg shadow-navy/20 border-b border-white/5"
+            : "bg-navy border-b border-transparent"
+        }`}
+      >
         <div className="h-full max-w-7xl mx-auto px-4 lg:px-6 flex items-center justify-between gap-4">
           <Link href="/" className="shrink-0" onClick={() => setMenuOpen(false)}>
             <Logo />
@@ -59,10 +78,12 @@ export function Nav() {
           <div className="hidden lg:flex items-center gap-6 shrink-0">
             <Link
               href={capabilityHref}
-              download
+              {...(capabilityAvailable ? { download: true } : {})}
               className="font-sans font-medium text-brand-gold text-xs tracking-widest hover:opacity-90 transition-opacity"
             >
-              DOWNLOAD CAPABILITY STATEMENT
+              {capabilityAvailable
+                ? "DOWNLOAD CAPABILITY STATEMENT"
+                : "REQUEST CAPABILITY STATEMENT"}
             </Link>
             <Link
               href="/contact"
@@ -116,11 +137,13 @@ export function Nav() {
             <div className="mt-auto pt-10 flex flex-col gap-4">
               <Link
                 href={capabilityHref}
-                download
+                {...(capabilityAvailable ? { download: true } : {})}
                 className="font-sans font-medium text-brand-gold text-sm tracking-widest text-center py-3"
                 onClick={() => setMenuOpen(false)}
               >
-                DOWNLOAD CAPABILITY STATEMENT
+                {capabilityAvailable
+                  ? "DOWNLOAD CAPABILITY STATEMENT"
+                  : "REQUEST CAPABILITY STATEMENT"}
               </Link>
               <Link
                 href="/contact"

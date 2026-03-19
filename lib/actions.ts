@@ -26,7 +26,7 @@ export async function submitEnquiry(
   return {
     status: "success",
     message:
-      "Thank you. A CRC PR adviser will be in touch shortly — within the hour during business hours, or first thing in the morning for after-hours messages.",
+      "Thank you. A CRC PR adviser will be in touch shortly: within the hour during business hours, or first thing in the morning for after-hours messages.",
   };
 }
 
@@ -43,13 +43,13 @@ export async function submitLeadMagnet(
     return { status: "error", message: "Please provide your name and email." };
   }
 
-  // TODO: Connect to ActiveCampaign — add to CRC PR nurture list with magnet tag
+  // TODO: Connect to ActiveCampaign, add to CRC PR nurture list with magnet tag
   // TODO: Trigger automated email with download link
   console.log("Lead magnet requested:", { firstName, email, organisation, magnet });
 
   return {
     status: "success",
-    message: "Check your inbox — your resource is on its way.",
+    message: "Check your inbox. Your resource is on its way.",
   };
 }
 

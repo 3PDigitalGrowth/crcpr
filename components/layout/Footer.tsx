@@ -128,6 +128,39 @@ export function Footer() {
           </div>
         </div>
 
+        <div className="border-t border-white/10 pt-8 mt-8">
+          <p className="text-white/40 text-xs tracking-widest uppercase font-medium mb-4">
+            The CRC Group Ecosystem
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div className="bg-white/5 rounded-lg p-4">
+              <p className="text-white font-heading font-black text-sm mb-1">CRC Public Relations</p>
+              <p className="text-white/50 text-xs leading-relaxed mb-2">
+                Boutique corporate PR, reputation management and crisis communications.
+              </p>
+              <span className="text-brand-gold text-xs font-medium">You are here</span>
+            </div>
+            <div className="bg-white/5 rounded-lg p-4">
+              <p className="text-white font-heading font-black text-sm mb-1">Crisis Communications Australia</p>
+              <p className="text-white/50 text-xs leading-relaxed mb-2">
+                24/7 crisis support and the Annual Crisis Communications Summit.
+              </p>
+              <a href={siteConfig.crisisCommsAuUrl} target="_blank" rel="noopener noreferrer" className="text-brand-teal text-xs font-medium hover:underline">
+                crisiscommunicationsaustralia.com.au →
+              </a>
+            </div>
+            <div className="bg-white/5 rounded-lg p-4">
+              <p className="text-white font-heading font-black text-sm mb-1">My PR Partner</p>
+              <p className="text-white/50 text-xs leading-relaxed mb-2">
+                PR training and crisis communications education for comms professionals.
+              </p>
+              <a href={siteConfig.myPrPartnerUrl} target="_blank" rel="noopener noreferrer" className="text-brand-teal text-xs font-medium hover:underline">
+                myprpartner.com →
+              </a>
+            </div>
+          </div>
+        </div>
+
         <div className="mt-12 pt-8 border-t border-white/10 flex justify-between items-center flex-wrap gap-4">
           <p className="text-xs text-white/30">
             © {siteConfig.copyrightYear} CRC Public Relations. All rights reserved.
@@ -139,7 +172,6 @@ export function Footer() {
             <Link href={siteConfig.termsUrl} className="hover:text-white/50 transition-colors">
               Terms
             </Link>
-            <span>Part of the CRC PR ecosystem</span>
           </div>
         </div>
       </div>

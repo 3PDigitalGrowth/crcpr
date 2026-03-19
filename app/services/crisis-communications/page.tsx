@@ -38,8 +38,8 @@ export default function CrisisCommunicationsPage() {
             <div className="lg:col-span-3">
               <p className="text-charcoal text-base leading-relaxed">
                 Crisis does not operate on business hours. When a critical
-                incident unfolds — whether a safety failure, a regulatory
-                action, a media exposé, or an internal disclosure — the
+                incident unfolds, whether a safety failure, a regulatory
+                action, a media exposé, or an internal disclosure, the
                 organisation&apos;s response in the first minutes determines the
                 trajectory of the entire event. CRC PR provides immediate,
                 senior-level crisis communications support when it matters most.
@@ -53,7 +53,7 @@ export default function CrisisCommunicationsPage() {
               </p>
               <p className="text-charcoal text-base leading-relaxed mt-6">
                 Beyond immediate response, we work with organisations on crisis
-                preparedness — developing crisis communications plans, running
+                preparedness, developing crisis communications plans, running
                 simulation exercises, and training leadership teams to respond
                 with discipline and authority when the pressure is at its
                 highest.
@@ -114,7 +114,7 @@ export default function CrisisCommunicationsPage() {
           </h3>
           <div className="flex flex-wrap gap-3">
             <span className="bg-off-white border border-brand-border rounded-[4px] px-3 py-1 text-sm text-charcoal-mid">
-              All sectors — crisis is universal
+              All sectors: crisis is universal
             </span>
           </div>
         </div>

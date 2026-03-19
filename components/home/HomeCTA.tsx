@@ -1,44 +1,69 @@
+"use client";
+
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import { AnimateIn } from "@/components/shared/AnimateIn";
 
 export function HomeCTA() {
   return (
-    <section className="bg-navy py-20">
-      <div className="max-w-7xl mx-auto px-6 text-center">
+    <section className="relative bg-navy py-24 md:py-32 overflow-hidden">
+      <div className="absolute inset-0 radial-glow" />
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-off-white/5 to-transparent pointer-events-none" />
+
+      <div className="relative max-w-7xl mx-auto px-6 text-center">
         <div className="max-w-[680px] mx-auto">
-          <p className="font-sans font-medium text-brand-gold text-xs tracking-[0.14em] uppercase">
-            Ready to Work With Us
-          </p>
-          <h2 className="text-white font-heading font-black text-3xl md:text-[42px] mt-3">
-            Your reputation is your most valuable asset. Let&rsquo;s protect it.
-          </h2>
-          <p className="text-white/70 text-base mt-4 mb-10">
-            Whether you need strategic counsel for an emerging issue, a crisis
-            response, or a long-term communications partner — we work directly
-            with senior people who take your success personally.
-          </p>
+          <AnimateIn>
+            <p className="font-sans font-medium text-brand-gold text-xs tracking-[0.14em] uppercase">
+              Ready to Work With Us
+            </p>
+          </AnimateIn>
+
+          <AnimateIn delay={150}>
+            <h2 className="text-white font-heading font-black text-3xl md:text-[42px] leading-[1.08] mt-4">
+              Your reputation is your most valuable asset. Let&rsquo;s protect it.
+            </h2>
+          </AnimateIn>
+
+          <AnimateIn delay={300}>
+            <p className="text-white/70 text-base leading-relaxed mt-6 mb-12">
+              Whether you need strategic counsel for an emerging issue, a crisis
+              response, or a long-term communications partner, we work directly
+              with senior people who take your success personally.
+            </p>
+          </AnimateIn>
 
           <div className="max-w-[500px] mx-auto flex flex-col gap-4">
-            <Link
-              href="/contact"
-              className="bg-brand-gold text-navy font-heading font-black text-sm tracking-widest uppercase w-full py-4 rounded-[4px] hover:bg-gold-light transition inline-block text-center"
-            >
-              Book a Confidential Consultation →
-            </Link>
-            <a
-              href={siteConfig.phone.href}
-              className="border border-brand-gold/50 text-brand-gold font-heading font-black text-sm tracking-widest uppercase w-full py-4 rounded-[4px] hover:bg-brand-gold/10 transition inline-block text-center"
-            >
-              Call Us: {siteConfig.phone.display} →
-            </a>
-            <a
-              href={siteConfig.myPrPartnerUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-brand-teal font-sans font-medium text-sm mt-2 hover:opacity-80 transition"
-            >
-              Not ready for a retainer? Explore My PR Partner →
-            </a>
+            <AnimateIn delay={450}>
+              <Link
+                href="/contact"
+                className="btn-lift bg-brand-gold text-navy font-heading font-black text-sm tracking-widest uppercase w-full py-4 rounded-[4px] hover:bg-gold-light transition inline-flex items-center justify-center gap-2"
+              >
+                Book a Confidential Consultation <ArrowRight size={14} aria-hidden />
+              </Link>
+            </AnimateIn>
+
+            <AnimateIn delay={550}>
+              <a
+                href={siteConfig.phone.href}
+                className="border border-brand-gold/50 text-brand-gold font-heading font-black text-sm tracking-widest uppercase w-full py-4 rounded-[4px] hover:bg-brand-gold/10 transition inline-flex items-center justify-center gap-2"
+              >
+                Call Us: {siteConfig.phone.display}{" "}
+                <ArrowRight size={14} aria-hidden />
+              </a>
+            </AnimateIn>
+
+            <AnimateIn delay={650}>
+              <a
+                href={siteConfig.myPrPartnerUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 text-brand-teal font-sans font-medium text-sm mt-2 hover:gap-3 transition-all"
+              >
+                Not ready for a retainer? Explore My PR Partner{" "}
+                <ArrowRight size={14} aria-hidden />
+              </a>
+            </AnimateIn>
           </div>
         </div>
       </div>

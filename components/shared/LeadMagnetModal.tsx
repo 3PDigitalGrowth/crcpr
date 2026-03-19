@@ -35,6 +35,15 @@ export function LeadMagnetModal({
   const meta = siteConfig.leadMagnets[magnet];
 
   useEffect(() => {
+    if (!isOpen) return;
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    document.addEventListener("keydown", handleKey);
+    return () => document.removeEventListener("keydown", handleKey);
+  }, [isOpen, onClose]);
+
+  useEffect(() => {
     if (!isOpen) {
       setFirstName("");
       setEmail("");
@@ -101,7 +110,7 @@ export function LeadMagnetModal({
               aria-hidden
             />
             <p className="text-charcoal text-center">
-              Check your inbox — {meta.title} is on its way.
+              Check your inbox. {meta.title} is on its way.
             </p>
             <button
               type="button"
@@ -180,7 +189,7 @@ export function LeadMagnetModal({
           </Link>
         </p>
         <p className="mt-2 text-xs text-charcoal-mid italic">
-          Prepared by CRC PR — 25 years of Australian PR expertise.
+          Prepared by CRC PR: 25 years of Australian PR expertise.
         </p>
       </div>
     </div>

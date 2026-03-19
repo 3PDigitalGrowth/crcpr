@@ -6,7 +6,7 @@ import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
 export const metadata: Metadata = {
   title: "Pacific Communications Advisory",
   description:
-    "Pacific communications consultancy. CRC PR is the only Australian corporate PR firm with a deep Pacific practice — government relations, development communications, and crisis response across the Pacific Islands.",
+    "Pacific communications consultancy. CRC PR is the only Australian corporate PR firm with a deep Pacific practice, offering government relations, development communications, and crisis response across the Pacific Islands.",
 };
 
 const PACIFIC_NATIONS = [
@@ -43,7 +43,7 @@ const SERVICE_AREAS = [
     body: "Understanding Pacific cultures, protocols, and communication styles is essential. We bring deep experience in cross-cultural engagement that ensures your message is heard and respected.",
   },
   {
-    title: "Crisis Communications — Pacific Region",
+    title: "Crisis Communications: Pacific Region",
     body: "Crisis response across the Pacific requires a unique approach. We provide immediate, culturally informed crisis communications support anywhere in the region.",
   },
 ] as const;

@@ -34,7 +34,7 @@ export default function GovernmentClientsPage() {
           <div className="lg:col-span-3 space-y-6 text-charcoal-mid text-[15px] leading-relaxed">
             <p>
               Government organisations must communicate with authority, accuracy,
-              and empathy — often while managing competing stakeholder interests,
+              and empathy, often while managing competing stakeholder interests,
               statutory obligations, and intense media attention. The public sector
               environment demands discipline: clear accountabilities, defensible
               messaging, and readiness when programs or incidents attract scrutiny.
@@ -48,7 +48,7 @@ export default function GovernmentClientsPage() {
             </p>
             <p>
               From ministerial announcements to operational incidents and complex
-              reform agendas, we provide experienced counsel — including crisis
+              reform agendas, we provide experienced counsel, including crisis
               response when confidence in public institutions is on the line.
             </p>
           </div>

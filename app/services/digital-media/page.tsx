@@ -46,7 +46,7 @@ export default function DigitalMediaPage() {
                 The digital environment has fundamentally changed the speed and
                 scale at which reputations are built and destroyed.
                 Organisations that treat digital communications as an
-                afterthought — or delegate it to junior teams — leave
+                afterthought, or delegate it to junior teams, leave
                 themselves exposed. CRC PR provides senior-level digital
                 communications counsel for organisations that take their online
                 presence seriously.
@@ -63,7 +63,7 @@ export default function DigitalMediaPage() {
                 For organisations navigating regulatory scrutiny, public
                 controversy, or stakeholder activism online, we provide the
                 frameworks, policies, and tactical support needed to maintain
-                control of your digital narrative — and to respond with
+                control of your digital narrative and to respond with
                 authority when that narrative is challenged.
               </p>
             </div>

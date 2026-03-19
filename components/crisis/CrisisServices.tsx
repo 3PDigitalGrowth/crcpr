@@ -4,7 +4,7 @@ const cards = [
   {
     title: "Crisis Prevention Consultancy",
     body:
-      "Most crises are preventable. We help you assess your reputation risks, identify vulnerabilities, develop crisis communications plans, and train your team — before an issue becomes a crisis.",
+      "Most crises are preventable. We help you assess your reputation risks, identify vulnerabilities, develop crisis communications plans, and train your team before an issue becomes a crisis.",
     cta: "Learn about prevention →",
     href: "/services/crisis-communications" as const,
     hash: false,
@@ -12,7 +12,7 @@ const cards = [
   {
     title: "Crisis Communications Coordination",
     body:
-      "When an incident breaks, we are your guiding force. Managing media, coordinating communications across all stakeholder groups, advising spokespeople, and directing your response — 24/7, anywhere.",
+      "When an incident breaks, we are your guiding force. Managing media, coordinating communications across all stakeholder groups, advising spokespeople, and directing your response, 24/7, anywhere.",
     cta: "Discuss your situation →",
     href: "#contact-form",
     hash: true,
@@ -20,7 +20,7 @@ const cards = [
   {
     title: "Crisis Simulation Exercises",
     body:
-      "Your plan is only as good as your team's ability to execute it under pressure. We run tailored crisis simulation exercises that test your people, your process, and your messaging — in a controlled environment.",
+      "Your plan is only as good as your team's ability to execute it under pressure. We run tailored crisis simulation exercises that test your people, your process, and your messaging in a controlled environment.",
     cta: "Book a simulation →",
     href: "/contact" as const,
     hash: false,

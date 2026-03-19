@@ -44,8 +44,8 @@ export default function IssuesManagementPage() {
             <div className="lg:col-span-3">
               <p className="text-charcoal text-base leading-relaxed">
                 Most organisational crises do not begin as crises. They begin as
-                issues — regulatory shifts, stakeholder concerns, emerging media
-                interest, internal policy failures — that escalate because they
+                issues: regulatory shifts, stakeholder concerns, emerging media
+                interest, and internal policy failures that escalate because they
                 are not identified or managed early enough. CRC PR specialises
                 in the early detection and strategic management of issues before
                 they reach crisis point.
@@ -62,7 +62,7 @@ export default function IssuesManagementPage() {
               <p className="text-charcoal text-base leading-relaxed mt-6">
                 Whether the issue is regulatory, political, community-driven, or
                 internal, we bring the strategic discipline and communications
-                expertise needed to contain it — and the senior counsel to guide
+                expertise needed to contain it, and the senior counsel to guide
                 your organisation through the process with confidence.
               </p>
             </div>

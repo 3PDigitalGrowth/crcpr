@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { PageHero } from "@/components/layout/PageHero";
 import { CapabilityDownload } from "@/components/shared/CapabilityDownload";
+import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
 
 export const metadata: Metadata = {
   title: "Corporate PR Services",
@@ -32,14 +33,14 @@ const services: {
     title: "Corporate Communications",
     slug: "corporate-communications",
     description:
-      "Strategic counsel for internal and external messaging. We help organisations communicate with clarity, consistency, and authority — across stakeholders, media, and the public.",
+      "Strategic counsel for internal and external messaging. We help organisations communicate with clarity, consistency, and authority across stakeholders, media, and the public.",
   },
   {
     icon: "Shield",
     title: "Reputation Management",
     slug: "reputation-management",
     description:
-      "Your reputation is your most valuable asset. We assess vulnerabilities, monitor threats, and build strategies that protect what matters most — before and after issues surface.",
+      "Your reputation is your most valuable asset. We assess vulnerabilities, monitor threats, and build strategies that protect what matters most, before and after issues surface.",
   },
   {
     icon: "AlertTriangle",
@@ -53,7 +54,7 @@ const services: {
     title: "Crisis Communications",
     slug: "crisis-communications",
     description:
-      "24/7 crisis response, media management, and communications coordination. We have been in the room when it matters most — guiding organisations through the most significant challenges.",
+      "24/7 crisis response, media management, and communications coordination. We have been in the room when it matters most, guiding organisations through the most significant challenges.",
   },
   {
     icon: "Radio",
@@ -116,6 +117,8 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+
+      <LeadMagnetBanner magnet="reputationAssessment" />
 
       <div className="max-w-3xl mx-auto px-6 py-16">
         <CapabilityDownload />

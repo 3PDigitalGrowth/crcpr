@@ -44,7 +44,7 @@ export default function CorporateClientsPage() {
               messaging with governance, protect valuation during turbulence, and
               prepare leaders for scrutiny from investors, analysts, and media. We
               bring journalistic judgment and crisis experience to every
-              engagement — without the overhead of a large agency model.
+              engagement, without the overhead of a large agency model.
             </p>
             <p>
               Whether you are managing a live issue, strengthening executive

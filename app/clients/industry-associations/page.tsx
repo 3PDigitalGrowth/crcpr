@@ -36,8 +36,8 @@ export default function IndustryAssociationsPage() {
               Industry associations occupy a unique position in Australian public
               life. They must balance the interests of their members with the
               expectations of regulators, government, media, and the public. When
-              an issue surfaces — whether it&apos;s a regulatory challenge, a
-              member controversy, or a governance dispute — the association&apos;s
+              an issue surfaces, whether it&apos;s a regulatory challenge, a
+              member controversy, or a governance dispute, the association&apos;s
               response must be swift, precise, and strategic.
             </p>
             <p>
@@ -50,7 +50,7 @@ export default function IndustryAssociationsPage() {
               Our approach is always tailored to the specific dynamics of your
               membership, your board, and your sector. We provide the strategic
               counsel and hands-on support that association CEOs and executive
-              officers need — particularly when the stakes are highest.
+              officers need, particularly when the stakes are highest.
             </p>
           </div>
           <div className="lg:col-span-2">

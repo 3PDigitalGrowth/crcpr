@@ -16,7 +16,7 @@ export function PageHero({
   ctaHref,
 }: PageHeroProps) {
   return (
-    <section className="bg-navy py-24 md:py-32">
+    <section id="hero-section" className="bg-navy py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-6">
         {eyebrow ? (
           <p className="text-brand-gold font-sans font-medium text-xs tracking-[0.14em] uppercase mb-4">

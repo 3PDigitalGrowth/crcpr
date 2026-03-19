@@ -12,3 +12,72 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Gradient seams between sections — eliminates hard colour edges */
+.seam-to-white {
+  background: linear-gradient(to bottom, transparent 0%, #ffffff 100%);
+}
+.seam-to-off-white {
+  background: linear-gradient(to bottom, transparent 0%, #F5F2EC 100%);
+}
+.seam-to-navy {
+  background: linear-gradient(to bottom, transparent 0%, #1A2B4A 100%);
+}
+
+/* Gold accent line animation */
+.gold-line-animate {
+  width: 0;
+  transition: width 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.gold-line-animate.visible {
+  width: 100%;
+}
+
+/* Card border expansion on hover */
+.card-border-expand {
+  position: relative;
+  overflow: hidden;
+}
+.card-border-expand::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid transparent;
+  border-radius: inherit;
+  transition: border-color 0.3s ease;
+  pointer-events: none;
+}
+.card-border-expand:hover::before {
+  border-color: #C9A84C;
+}
+
+/* Button lift effect */
+.btn-lift {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+.btn-lift:hover {
+  transform: translateY(-1px) scale(1.015);
+  box-shadow: 0 6px 20px rgba(201, 168, 76, 0.25);
+}
+
+/* Smooth scroll for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hero geometric accent — bleeds beyond container */
+.hero-accent-line {
+  position: absolute;
+  right: -5vw;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 35vw;
+  height: 1px;
+  background: linear-gradient(to right, rgba(201, 168, 76, 0.3), transparent);
+  pointer-events: none;
+}
+
+/* Radial glow for final CTA */
+.radial-glow {
+  background: radial-gradient(ellipse at center, rgba(201, 168, 76, 0.06) 0%, transparent 70%);
+}

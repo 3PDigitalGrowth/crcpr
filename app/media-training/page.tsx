@@ -15,15 +15,15 @@ const TRAINING_TYPES = [
     body: "Intensive one-on-one and small group sessions that prepare executives and spokespeople for television, radio, and press conference appearances. Real camera, real scenarios, real feedback.",
   },
   {
-    title: "Dealing with Hostile Media — Workshops",
+    title: "Dealing with Hostile Media: Workshops",
     body: "Workshops designed for senior leaders who may face aggressive or adversarial media questioning. We teach techniques for staying on message, managing provocation, and maintaining authority under pressure.",
   },
   {
-    title: "PR 101 Fundamentals — Workshops",
+    title: "PR 101 Fundamentals: Workshops",
     body: "Practical workshops covering media relations fundamentals, message development, media interview techniques, and communications planning. Ideal for communications teams and new spokespeople.",
   },
   {
-    title: "Online Media Training — Remote Delivery",
+    title: "Online Media Training: Remote Delivery",
     body: "Full media training programs delivered remotely for organisations with distributed teams, interstate offices, or Pacific Island locations. Same rigour, same results.",
   },
 ] as const;
@@ -33,8 +33,8 @@ export default function MediaTrainingPage() {
     <>
       <PageHero
         eyebrow="MEDIA TRAINING"
-        title="Media Training Australia — Spokespersons, Executives, Teams"
-        description="Professional media training delivered by former broadcast journalists with decades of experience. We prepare your people to perform under pressure — on camera, on radio, and in the toughest interviews."
+        title="Media Training Australia: Spokespersons, Executives, Teams"
+        description="Professional media training delivered by former broadcast journalists with decades of experience. We prepare your people to perform under pressure: on camera, on radio, and in the toughest interviews."
         ctaLabel="BOOK MEDIA TRAINING"
         ctaHref="/contact"
       />

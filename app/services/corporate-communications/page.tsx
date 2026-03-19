@@ -7,7 +7,7 @@ import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
 export const metadata: Metadata = {
   title: "Corporate Communications",
   description:
-    "Strategic internal and external messaging, stakeholder engagement, media relations, and brand positioning — handled by senior advisors.",
+    "Strategic internal and external messaging, stakeholder engagement, media relations, and brand positioning, handled by senior advisors.",
 };
 
 const activities = [
@@ -33,7 +33,7 @@ export default function CorporateCommunicationsPage() {
       <PageHero
         eyebrow="CORPORATE COMMUNICATIONS"
         title="Strategic communications that build trust."
-        description="Internal and external messaging, stakeholder engagement, media relations, and brand positioning — handled by senior advisors."
+        description="Internal and external messaging, stakeholder engagement, media relations, and brand positioning, handled by senior advisors."
         ctaLabel="BOOK A CONSULTATION"
         ctaHref="/contact"
       />
@@ -50,7 +50,7 @@ export default function CorporateCommunicationsPage() {
               </p>
               <p className="text-charcoal text-base leading-relaxed mt-6">
                 CRC PR provides senior-level counsel for every aspect of
-                corporate communications — from developing communications
+                corporate communications, from developing communications
                 strategies and stakeholder engagement frameworks to managing
                 media relationships and crafting executive messaging.
               </p>

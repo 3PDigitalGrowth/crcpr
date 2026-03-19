@@ -45,7 +45,7 @@ export default function MediaStrategyPage() {
               <p className="text-charcoal text-base leading-relaxed">
                 Media coverage is not accidental. Organisations that command
                 sustained, credible media presence do so because they have a
-                deliberate strategy — and the relationships, content, and
+                deliberate strategy, and the relationships, content, and
                 preparation to execute it. CRC PR develops and implements media
                 strategies that position your organisation as a trusted, go-to
                 voice in your sector.
@@ -55,14 +55,14 @@ export default function MediaStrategyPage() {
                 identifying the right journalists and editors, to crafting
                 compelling narratives, to preparing your spokespeople for
                 interviews across print, broadcast, and digital media. We build
-                relationships with newsrooms — not through volume, but through
+                relationships with newsrooms, not through volume, but through
                 relevance and credibility.
               </p>
               <p className="text-charcoal text-base leading-relaxed mt-6">
                 For organisations seeking to elevate their public profile,
                 respond to industry developments, or establish thought
                 leadership, our senior advisors bring decades of media
-                experience — including extensive backgrounds in journalism —
+                experience, including extensive backgrounds in journalism,
                 to every engagement.
               </p>
             </div>

@@ -20,6 +20,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://crcpr.com.au"),
   title: {
     template: "%s | CRC Public Relations",
     default: "CRC Public Relations | Corporate PR, Reputation & Crisis Advisory",

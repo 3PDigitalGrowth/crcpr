@@ -1,124 +1,213 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Check } from "lucide-react";
 import { PageHero } from "@/components/layout/PageHero";
 import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
 
 export const metadata: Metadata = {
-  title: "Media Strategy",
+  title:
+    "Media Relations & Strategy PR Australia | CRC Public Relations",
   description:
-    "Proactive media engagement, spokesperson development, and sustained media presence.",
+    "Proactive media strategy, journalist relationship management, and sustained media presence for Australian organisations. Former journalists with decades of newsroom experience. Brisbane-based, national reach.",
 };
 
-const activities = [
-  "Media strategy development",
-  "Journalist and editor relationship management",
-  "Media training and spokesperson preparation",
-  "Press release and media content creation",
-  "Media monitoring and reporting",
-  "Op-ed and thought leadership placement",
-  "Broadcast media preparation",
-];
-
-const sectors = [
-  "ASX-listed companies",
-  "Industry associations",
-  "Government departments",
-  "Legal and professional services",
-];
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Media Strategy and Media Relations",
+  provider: {
+    "@type": "ProfessionalService",
+    name: "CRC Public Relations",
+    url: "https://crcpr.com.au",
+  },
+  description:
+    "Proactive media strategy, journalist relationship management, and sustained media presence for Australian organisations.",
+  areaServed: "AU",
+  serviceType: "Media Relations Consulting",
+};
 
 export default function MediaStrategyPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <PageHero
         eyebrow="MEDIA STRATEGY"
-        title="Build a media presence that commands attention."
-        description="Proactive media engagement, spokesperson development, and sustained media presence."
+        title="Sustained media presence doesn't happen by accident."
+        description="Proactive media strategy, journalist relationship management, and thought leadership placement for organisations that want to shape their sector's narrative, not just respond to it."
         ctaLabel="BOOK A CONSULTATION"
         ctaHref="/contact"
       />
 
-      <section className="bg-white py-24">
+      {/* Opening section */}
+      <section className="bg-white py-16 md:py-24">
+        <div className="max-w-3xl mx-auto px-6">
+          <p className="text-charcoal text-[15px] leading-relaxed">
+            Most organisations have a media strategy in name only. They issue
+            press releases in response to company announcements, they respond to
+            journalist enquiries when they come, and they measure success by
+            whether coverage was positive or negative. This is media management,
+            not media strategy.
+          </p>
+          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
+            A genuine media strategy begins with a clear understanding of what
+            you want to be known for, who the journalists and editors are who
+            cover your sector and your issues, and what you can consistently
+            offer them that earns sustained, credible coverage. It requires
+            investment in relationships, in content, and in the preparation of
+            your spokespeople, not just when you have something to announce, but
+            as an ongoing discipline.
+          </p>
+          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
+            CRC PR builds and executes media strategies for organisations that
+            want to move from reactive to proactive, and that understand the
+            difference between being covered and being credible.
+          </p>
+        </div>
+      </section>
+
+      {/* What a CRC PR media strategy delivers */}
+      <section className="bg-off-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-16">
-            <div className="lg:col-span-3">
-              <p className="text-charcoal text-base leading-relaxed">
-                Media coverage is not accidental. Organisations that command
-                sustained, credible media presence do so because they have a
-                deliberate strategy, and the relationships, content, and
-                preparation to execute it. CRC PR develops and implements media
-                strategies that position your organisation as a trusted, go-to
-                voice in your sector.
-              </p>
-              <p className="text-charcoal text-base leading-relaxed mt-6">
-                Our media strategy work spans the full engagement cycle: from
-                identifying the right journalists and editors, to crafting
-                compelling narratives, to preparing your spokespeople for
-                interviews across print, broadcast, and digital media. We build
-                relationships with newsrooms, not through volume, but through
-                relevance and credibility.
-              </p>
-              <p className="text-charcoal text-base leading-relaxed mt-6">
-                For organisations seeking to elevate their public profile,
-                respond to industry developments, or establish thought
-                leadership, our senior advisors bring decades of media
-                experience, including extensive backgrounds in journalism,
-                to every engagement.
+          <h2 className="font-heading font-black text-navy text-3xl mb-6">
+            What a CRC PR media strategy delivers
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
+            <div>
+              <h3 className="font-heading font-black text-navy text-xl mb-3">
+                Media strategy development
+              </h3>
+              <p className="text-charcoal text-[15px] leading-relaxed">
+                Every organisation has a story to tell and issues it cares
+                about. Not all of them are media-ready. We work with your
+                leadership team to identify the angles that journalists will
+                actually pursue, the platforms that reach your most important
+                audiences, and the cadence of media engagement that builds
+                profile without creating noise. The result is a media strategy
+                with specific objectives, specific targets, and specific
+                metrics.
               </p>
             </div>
 
-            <div className="lg:col-span-2">
-              <h3 className="font-heading font-black text-navy text-lg mb-6">
-                What we do
+            <div>
+              <h3 className="font-heading font-black text-navy text-xl mb-3">
+                Journalist and editorial relationships
               </h3>
-              <ul className="space-y-4">
-                {activities.map((item) => (
-                  <li key={item} className="flex items-start gap-3">
-                    <Check
-                      className="text-brand-gold shrink-0 mt-0.5"
-                      size={18}
-                      strokeWidth={2.5}
-                      aria-hidden
-                    />
-                    <span className="text-charcoal text-sm leading-relaxed">
-                      {item}
-                    </span>
-                  </li>
-                ))}
-              </ul>
+              <p className="text-charcoal text-[15px] leading-relaxed">
+                Media coverage is built on relationships with specific
+                journalists, editors, and producers who cover your sector.
+                CRC PR has cultivated these relationships over 25 years of
+                corporate PR and journalism practice. We know how newsrooms
+                work, what editors are looking for, and how to present your
+                organisation as a source that is worth coming back to. We
+                introduce your organisation to the right people and build the
+                ongoing relationships that generate sustained coverage.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-heading font-black text-navy text-xl mb-3">
+                Thought leadership and op-ed placement
+              </h3>
+              <p className="text-charcoal text-[15px] leading-relaxed">
+                The most credible media presence is earned through consistent,
+                substantive commentary on the issues that matter in your
+                sector. We work with your senior leaders to develop thought
+                leadership positions, draft op-ed pieces and expert
+                commentary, and place that content with the publications and
+                broadcasters most relevant to your audiences. Over time, this
+                builds an authority profile that no single press release can
+                create.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="font-heading font-black text-navy text-xl mb-3">
+                Spokesperson preparation and briefing
+              </h3>
+              <p className="text-charcoal text-[15px] leading-relaxed">
+                Every media engagement is a risk if your spokesperson is not
+                prepared. We prepare your executives and subject matter experts
+                for interviews, developing their key messages, anticipating
+                difficult questions, building their confidence on camera and on
+                the record. We also provide pre-interview briefings that ensure
+                your spokesperson walks into every media interaction with a
+                clear plan.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-off-white py-16">
-        <div className="max-w-7xl mx-auto px-6">
-          <h3 className="font-heading font-black text-navy text-lg mb-4">
-            Related sectors
+      {/* We understand how newsrooms think */}
+      <section className="bg-white py-16 md:py-24">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="font-heading font-black text-navy text-3xl mb-6">
+            We understand how newsrooms think, because we came from them
+          </h2>
+          <p className="text-charcoal text-[15px] leading-relaxed">
+            CRC PR founder Lyall Mercer began his career as a journalist. That
+            background is not incidental. It is the foundation of everything we
+            do in media strategy. We do not approach media relations from the
+            perspective of a PR firm trying to manage journalists. We approach
+            it from the perspective of people who understand what editors are
+            looking for, what makes a story worth covering, and what makes an
+            organisation worth calling back.
+          </p>
+          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
+            This gives our clients a genuine advantage. We know how to frame a
+            story so it is genuinely newsworthy, not just self-promotional. We
+            know which journalists are most receptive to which angles. And we
+            know when to hold a story back and when to push it.
+          </p>
+          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
+            Media training at CRC PR is delivered in partnership with television
+            and radio journalists with decades of broadcast experience, people
+            who have conducted the kinds of interviews your spokespeople need to
+            be ready for.
+          </p>
+        </div>
+      </section>
+
+      {/* Lead magnet intro + banner */}
+      <section className="bg-off-white py-16 md:py-24">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <h3 className="font-heading font-black text-navy text-xl mb-3">
+            Is your spokesperson ready for their next interview?
           </h3>
-          <div className="flex flex-wrap gap-3">
-            {sectors.map((sector) => (
-              <span
-                key={sector}
-                className="bg-off-white border border-brand-border rounded-[4px] px-3 py-1 text-sm text-charcoal-mid"
-              >
-                {sector}
-              </span>
-            ))}
-          </div>
+          <p className="text-charcoal text-[15px] leading-relaxed">
+            Download our Media Interview Preparation Guide, a pre-interview
+            checklist and briefing framework used by executives and
+            communications directors across Australia. Written by former
+            journalists who have sat on the other side of the camera.
+          </p>
         </div>
       </section>
 
       <LeadMagnetBanner magnet="mediaInterviewGuide" variant="dark" />
 
-      <section className="bg-navy py-16">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <Link
-            href="/contact"
-            className="text-white font-heading font-black text-xl hover:text-brand-gold transition"
-          >
-            Discuss your media strategy needs →
-          </Link>
+      {/* Closing CTA */}
+      <section className="py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="bg-navy text-white rounded-lg p-8 md:p-12 text-center">
+            <h2 className="font-heading font-black text-3xl mb-6">
+              Ready to build media presence that actually moves the needle?
+            </h2>
+            <p className="text-white/75 text-[15px] leading-relaxed max-w-2xl mx-auto mb-8">
+              Media strategy works when it is consistent, strategic, and built
+              on genuine relationships. We would like to hear about your
+              organisation and what you are trying to achieve.
+            </p>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs tracking-widest uppercase rounded-[4px] px-8 py-4 hover:bg-gold-light transition"
+            >
+              BOOK A MEDIA STRATEGY CONSULTATION
+            </Link>
+          </div>
         </div>
       </section>
     </>

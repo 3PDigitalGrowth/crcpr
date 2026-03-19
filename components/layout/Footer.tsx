@@ -11,12 +11,22 @@ const serviceLinks = [
   { label: "Digital Media", slug: "digital-media" },
 ] as const;
 
+const clientLinks = [
+  { label: "Corporate & ASX-Listed", href: "/clients/corporate" },
+  { label: "Government", href: "/clients/government" },
+  { label: "Industry Associations", href: "/clients/industry-associations" },
+  { label: "Schools & Faith-Based", href: "/clients/schools-faith" },
+  { label: "Pacific", href: "/pacific" },
+  { label: "Case Studies", href: "/case-studies" },
+] as const;
+
 const quickLinks = [
   { label: "About", href: "/about" },
-  { label: "Clients", href: "/clients" },
+  { label: "Lyall Mercer", href: "/about/lyall-mercer" },
   { label: "Media Training", href: "/media-training" },
-  { label: "Pacific", href: "/pacific" },
+  { label: "Crisis (24/7)", href: "/crisis" },
   { label: "Insights", href: "/insights" },
+  { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
 ] as const;
 
@@ -37,7 +47,7 @@ export function Footer() {
   return (
     <footer className="bg-navy py-16">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           <div>
             <Logo />
             <p className="text-sm text-white/60 leading-relaxed mt-4">
@@ -75,6 +85,24 @@ export function Footer() {
                 <li key={slug}>
                   <Link
                     href={`/services/${slug}`}
+                    className="text-sm text-white/60 hover:text-white py-1.5 block transition-colors"
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-xs font-sans font-medium text-brand-gold tracking-[0.14em] uppercase mb-4">
+              Clients &amp; Sectors
+            </h4>
+            <ul>
+              {clientLinks.map(({ label, href }) => (
+                <li key={href}>
+                  <Link
+                    href={href}
                     className="text-sm text-white/60 hover:text-white py-1.5 block transition-colors"
                   >
                     {label}

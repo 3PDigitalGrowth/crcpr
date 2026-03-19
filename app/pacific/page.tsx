@@ -4,9 +4,42 @@ import { PageHero } from "@/components/layout/PageHero";
 import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
 
 export const metadata: Metadata = {
-  title: "Pacific Communications Advisory",
+  title: "Pacific Communications & PR Advisory | CRC Public Relations",
   description:
-    "Pacific communications consultancy. CRC PR is the only Australian corporate PR firm with a deep Pacific practice, offering government relations, development communications, and crisis response across the Pacific Islands.",
+    "The only Australian corporate PR firm with sustained expertise across Pacific Island nations. Government relations, development communications, cross-cultural stakeholder engagement, and crisis response.",
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Pacific Communications and PR Advisory",
+  provider: {
+    "@type": "ProfessionalService",
+    name: "CRC Public Relations",
+    url: "https://crcpr.com.au",
+  },
+  description:
+    "The only Australian corporate PR firm with sustained expertise across Pacific Island nations. Government relations, development communications, cross-cultural stakeholder engagement, and crisis response.",
+  areaServed: [
+    "FJ",
+    "PG",
+    "WS",
+    "TO",
+    "VU",
+    "SB",
+    "KI",
+    "NR",
+    "TV",
+    "PW",
+    "FM",
+    "MH",
+    "CK",
+    "NU",
+    "PF",
+    "NC",
+    "NZ",
+  ],
+  serviceType: "Pacific Communications Consulting",
 };
 
 const PACIFIC_NATIONS = [
@@ -29,50 +62,67 @@ const PACIFIC_NATIONS = [
   "New Zealand",
 ] as const;
 
-const SERVICE_AREAS = [
-  {
-    title: "Government Relations",
-    body: "Strategic counsel for Pacific Island governments engaging with international partners, donor agencies, and regional bodies. We help navigate complex multilateral environments with precision and cultural sensitivity.",
-  },
-  {
-    title: "Development Communications",
-    body: "Communications strategy for development projects, international NGOs, and aid programs operating across the Pacific. We ensure that development messaging is clear, culturally appropriate, and effective.",
-  },
-  {
-    title: "Cross-Cultural PR and Stakeholder Engagement",
-    body: "Understanding Pacific cultures, protocols, and communication styles is essential. We bring deep experience in cross-cultural engagement that ensures your message is heard and respected.",
-  },
-  {
-    title: "Crisis Communications: Pacific Region",
-    body: "Crisis response across the Pacific requires a unique approach. We provide immediate, culturally informed crisis communications support anywhere in the region.",
-  },
-] as const;
-
 export default function PacificPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <PageHero
         eyebrow="PACIFIC ADVISORY"
-        title="Pacific Communications and PR Advisory"
-        description="CRC PR is the only Australian corporate PR firm with deep, sustained expertise across the Pacific Islands. We work with governments, NGOs, development partners, and private organisations across the region."
+        title="The Pacific demands communications expertise that most Australian firms don't have."
+        description="CRC PR is the only Australian corporate PR firm with deep, sustained expertise across Pacific Island nations: government relations, development communications, cross-cultural stakeholder engagement, and crisis response."
         ctaLabel="WORK WITH US IN THE PACIFIC"
         ctaHref="/contact"
       />
 
-      <section className="bg-white py-24">
+      {/* Opening */}
+      <section className="bg-white py-16 md:py-24">
+        <div className="max-w-3xl mx-auto px-6">
+          <p className="text-charcoal text-[15px] leading-relaxed">
+            The Pacific region is not a single market. It is seventeen distinct
+            nations, each with its own governance systems, cultural protocols,
+            media environments, and communication expectations. What works in
+            corporate communications in Brisbane or Sydney will not work, and can
+            actively harm relationships, if applied without adaptation to Fiji,
+            Papua New Guinea, or the Solomon Islands.
+          </p>
+          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
+            Most Australian communications firms with Pacific clients treat the
+            region as an extension of their domestic practice. CRC PR does not.
+            Our Pacific advisory work is built on 25 years of direct engagement
+            with Pacific Island governments, development partners, regional
+            organisations, and private sector clients operating across the
+            Pacific. We have worked in the region long enough to understand what
+            genuine cultural sensitivity, adapted communications, and
+            relationship-based counsel means in practice.
+          </p>
+          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
+            For organisations operating in or with the Pacific, whether
+            Australian companies with Pacific operations, international
+            development organisations, Pacific governments, or NGOs, CRC PR
+            provides the communications expertise that the region demands.
+          </p>
+        </div>
+      </section>
+
+      {/* Pacific footprint */}
+      <section className="bg-off-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="font-heading font-black text-navy text-3xl">
-            Operating across the Pacific
+            Our Pacific footprint
           </h2>
           <p className="text-charcoal-mid text-base mt-4">
             CRC PR has worked with clients and stakeholders across the following
-            Pacific Island nations:
+            Pacific Island nations and territories:
           </p>
           <div className="flex flex-wrap gap-3 mt-8">
             {PACIFIC_NATIONS.map((nation) => (
               <span
                 key={nation}
-                className="bg-off-white border border-brand-border rounded-[4px] px-4 py-2 text-sm text-navy font-sans font-medium"
+                className="bg-white border border-brand-border rounded-[4px] px-4 py-2 text-sm text-navy font-sans font-medium"
               >
                 {nation}
               </span>
@@ -81,33 +131,177 @@ export default function PacificPage() {
         </div>
       </section>
 
-      <section className="bg-off-white py-24">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
-          {SERVICE_AREAS.map((card) => (
-            <div
-              key={card.title}
-              className="bg-white border-l-[3px] border-brand-gold rounded-lg p-8"
-            >
-              <h3 className="font-heading font-black text-navy text-xl">
-                {card.title}
+      {/* Pacific communications services */}
+      <section className="bg-white py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="font-heading font-black text-navy text-3xl mb-12">
+            Pacific communications services
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="bg-off-white border-l-[3px] border-brand-gold rounded-lg p-8">
+              <h3 className="font-heading font-black text-navy text-xl mb-4">
+                Pacific government relations
               </h3>
-              <p className="text-charcoal-mid text-[15px] leading-relaxed mt-3">
-                {card.body}
+              <p className="text-charcoal text-[15px] leading-relaxed">
+                Pacific Island governments operate at the intersection of
+                domestic political pressures, regional multilateral commitments,
+                and relationships with international development partners.
+                Communications strategy in this environment requires an
+                understanding of the specific cultural and diplomatic protocols
+                that govern how governments engage publicly, and how they do not.
+              </p>
+              <p className="text-charcoal text-[15px] leading-relaxed mt-4">
+                We provide strategic communications counsel for Pacific Island
+                governments engaging with international partners, donor
+                agencies, regional bodies, and domestic audiences. We understand
+                the realities of Pacific governance: the role of traditional
+                leadership, the weight of community consultation, and the
+                particular communication sensitivities that arise in small
+                communities where every public statement has personal as well as
+                political consequences.
               </p>
             </div>
-          ))}
+
+            <div className="bg-off-white border-l-[3px] border-brand-gold rounded-lg p-8">
+              <h3 className="font-heading font-black text-navy text-xl mb-4">
+                Development communications
+              </h3>
+              <p className="text-charcoal text-[15px] leading-relaxed">
+                Australia, New Zealand, and international development partners
+                invest significantly in Pacific development programs in health,
+                infrastructure, governance, and climate adaptation.
+                Communicating these programs effectively requires navigating
+                relationships with government counterparts, communities, and
+                international stakeholders with cultural precision and strategic
+                clarity.
+              </p>
+              <p className="text-charcoal text-[15px] leading-relaxed mt-4">
+                We work with development organisations, NGOs, and donor agencies
+                to develop communications strategies that are culturally
+                appropriate, politically navigable, and effective in building the
+                community understanding and support that development programs
+                require to succeed.
+              </p>
+            </div>
+
+            <div className="bg-off-white border-l-[3px] border-brand-gold rounded-lg p-8">
+              <h3 className="font-heading font-black text-navy text-xl mb-4">
+                Cross-cultural stakeholder engagement
+              </h3>
+              <p className="text-charcoal text-[15px] leading-relaxed">
+                In Pacific contexts, stakeholder engagement is not a
+                communications discipline. It is a relationship discipline.
+                Community leaders, traditional authorities, church leaders, and
+                civil society organisations must be engaged through protocols
+                that reflect their role and authority. Skipping these protocols,
+                or conducting them perfunctorily, can undermine years of
+                relationship building in a single interaction.
+              </p>
+              <p className="text-charcoal text-[15px] leading-relaxed mt-4">
+                We bring direct experience of cross-cultural engagement across
+                Pacific nations, including an understanding of the specific
+                protocols in different countries and communities, the appropriate
+                sequencing of consultation, and the communication formats that
+                are genuinely inclusive rather than procedurally compliant.
+              </p>
+            </div>
+
+            <div className="bg-off-white border-l-[3px] border-brand-gold rounded-lg p-8">
+              <h3 className="font-heading font-black text-navy text-xl mb-4">
+                Pacific crisis communications
+              </h3>
+              <p className="text-charcoal text-[15px] leading-relaxed">
+                Crisis communications in Pacific Island nations presents
+                challenges that do not exist in Australian contexts: limited
+                media infrastructure, intense community proximity (in small
+                island nations, everyone knows everyone), significant social
+                media penetration in some markets and almost none in others, and
+                the specific reputational risks that arise for organisations,
+                particularly foreign ones, that are perceived as having handled
+                an incident without cultural respect.
+              </p>
+              <p className="text-charcoal text-[15px] leading-relaxed mt-4">
+                We provide crisis communications counsel for organisations
+                operating in the Pacific, drawing on our direct knowledge of the
+                region&apos;s media environments, stakeholder landscapes, and
+                cultural expectations to develop responses that protect both
+                reputation and relationships.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Culture section */}
+      <section className="bg-off-white py-16 md:py-24">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="font-heading font-black text-navy text-3xl mb-6">
+            Communications that respects Pacific culture is not optional. It is
+            essential.
+          </h2>
+          <p className="text-charcoal text-[15px] leading-relaxed">
+            The Pacific region has a long history of external organisations,
+            government, commercial, and philanthropic, arriving with good
+            intentions and communications approaches designed for other contexts.
+            The results have been, at best, ineffective. At worst, they have
+            damaged relationships that took years to build.
+          </p>
+          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
+            CRC PR approaches Pacific communications from the same principle
+            that guides all of our work: that the most effective communications
+            is always built on a genuine understanding of your audience. In
+            Pacific contexts, this means understanding specific cultural
+            protocols, the role of traditional and church leadership in community
+            life, the sensitivity around land and sovereignty issues, and the
+            different expectations around time, consultation, and relationship in
+            different Pacific nations.
+          </p>
+          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
+            We do not offer a &apos;Pacific communications package.&apos; We
+            offer the same senior-level counsel, adapted to the specific
+            cultural and political environment of the nation, community, and
+            issue you are working in.
+          </p>
+        </div>
+      </section>
+
+      {/* Lead magnet */}
+      <section className="bg-white py-16 md:py-24">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <h3 className="font-heading font-black text-navy text-xl mb-3">
+            Free: Pacific Stakeholder Engagement Guide
+          </h3>
+          <p className="text-charcoal text-[15px] leading-relaxed">
+            A practical guide to cross-cultural communications and stakeholder
+            engagement across Pacific Island nations. Covers cultural protocols,
+            government relations, development communications, and the specific
+            communication sensitivities in different Pacific contexts. Written
+            from 25 years of direct Pacific engagement.
+          </p>
         </div>
       </section>
 
       <LeadMagnetBanner magnet="pacificGuide" />
 
-      <section className="bg-navy py-16">
-        <div className="max-w-2xl mx-auto px-6 text-center">
+      {/* Closing CTA */}
+      <section className="bg-navy py-16 md:py-24">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <h2 className="font-heading font-black text-white text-3xl mb-6">
+            Working in the Pacific? Talk to the firm that genuinely knows the
+            region.
+          </h2>
+          <p className="text-white/75 text-[15px] leading-relaxed max-w-2xl mx-auto mb-8">
+            Whether you are an Australian organisation with Pacific operations,
+            a development partner working across the region, or a Pacific
+            government seeking communications counsel, we would like to hear
+            about your situation.
+          </p>
           <Link
             href="/contact"
-            className="inline-block bg-brand-gold text-navy font-heading font-black text-sm tracking-widest uppercase px-8 py-4 rounded-[4px] hover:bg-gold-light transition"
+            className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs tracking-widest uppercase rounded-[4px] px-8 py-4 hover:bg-gold-light transition"
           >
-            Work with us in the Pacific →
+            BOOK A PACIFIC ADVISORY CONSULTATION
           </Link>
         </div>
       </section>

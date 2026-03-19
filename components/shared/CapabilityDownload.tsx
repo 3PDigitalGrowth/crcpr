@@ -1,0 +1,35 @@
+import { FileText } from "lucide-react";
+
+export function CapabilityDownload() {
+  return (
+    <div className="bg-off-white border border-dashed border-brand-gold rounded-lg p-6 flex items-start gap-4">
+      <FileText
+        className="text-brand-gold shrink-0"
+        size={28}
+        strokeWidth={1.75}
+        aria-hidden
+      />
+      <div>
+        <h4 className="font-heading font-black text-navy text-lg">
+          Download our Capability Statement
+        </h4>
+        <p className="text-charcoal-mid text-sm mt-1">
+          A comprehensive overview of CRC PR&apos;s services, team, and approach
+          — for procurement teams, boards, and executive evaluation.
+        </p>
+        <a
+          href="/downloads/crcpr-capability-statement.pdf"
+          download
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs tracking-widest uppercase rounded-[4px] px-6 py-3 mt-4 hover:bg-gold-light transition"
+        >
+          DOWNLOAD PDF →
+        </a>
+        <p className="text-charcoal-mid text-xs italic mt-2">
+          No form required.
+        </p>
+      </div>
+    </div>
+  );
+}

@@ -113,14 +113,14 @@ export default function Home() {
 
       {/* FAQ */}
       <section className="py-20 md:py-28 bg-white">
-        <div className="max-w-3xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6">
           <p className="text-brand-gold text-xs font-medium tracking-[0.14em] uppercase mb-3 text-center">
             Common Questions
           </p>
           <h2 className="font-heading font-black text-navy text-3xl md:text-4xl mb-10 text-center">
             Frequently asked questions.
           </h2>
-          <FAQSection title={false} />
+          <FAQSection title={false} embedded />
           <div className="mt-8 text-center">
             <Link
               href="/faq"

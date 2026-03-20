@@ -1,0 +1,96 @@
+import Link from "next/link";
+import { siteConfig } from "@/config/site";
+
+interface PageClosingCTAProps {
+  eyebrow?: string;
+  title: string;
+  body: string;
+  primaryLabel?: string;
+  primaryHref?: string;
+  secondaryLabel?: string;
+  secondaryHref?: string;
+}
+
+export function PageClosingCTA({
+  eyebrow = "NEXT STEP",
+  title,
+  body,
+  primaryLabel = "BOOK A CONFIDENTIAL CONSULTATION",
+  primaryHref = "/contact",
+  secondaryLabel,
+  secondaryHref,
+}: PageClosingCTAProps) {
+  return (
+    <section className="py-16 md:py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="bg-navy text-white rounded-lg overflow-hidden">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_300px]">
+            <div className="p-8 md:p-12">
+              <p className="text-brand-gold font-sans font-medium text-xs tracking-[0.14em] uppercase mb-4">
+                {eyebrow}
+              </p>
+              <h2 className="font-heading font-black text-3xl mb-5 max-w-3xl">
+                {title}
+              </h2>
+              <p className="text-white/72 text-base leading-relaxed max-w-3xl">
+                {body}
+              </p>
+
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mt-8">
+                <Link
+                  href={primaryHref}
+                  className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs tracking-widest uppercase rounded-[4px] px-8 py-4 hover:bg-gold-light transition"
+                >
+                  {primaryLabel}
+                </Link>
+                {secondaryLabel && secondaryHref ? (
+                  secondaryHref.startsWith("http") ? (
+                    <a
+                      href={secondaryHref}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white/70 text-sm hover:text-white transition-colors"
+                    >
+                      {secondaryLabel}
+                    </a>
+                  ) : (
+                    <Link
+                      href={secondaryHref}
+                      className="text-white/70 text-sm hover:text-white transition-colors"
+                    >
+                      {secondaryLabel}
+                    </Link>
+                  )
+                ) : null}
+              </div>
+            </div>
+
+            <div className="border-t lg:border-t-0 lg:border-l border-white/10 bg-white/[0.03] p-8 md:p-10 flex flex-col justify-between">
+              <div>
+                <p className="text-white/35 text-xs tracking-[0.14em] uppercase mb-3">
+                  Speak to a senior advisor
+                </p>
+                <p className="text-white/65 text-sm leading-relaxed">
+                  Confidential advice, direct access, and a clear recommendation
+                  on what to do next.
+                </p>
+              </div>
+
+              <div className="mt-8">
+                <a
+                  href={siteConfig.phone.href}
+                  className="block font-heading font-black text-brand-gold text-2xl hover:text-gold-light transition-colors"
+                >
+                  {siteConfig.phone.display}
+                </a>
+                <p className="text-white/45 text-sm mt-2">
+                  Available across Australia and the Pacific.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

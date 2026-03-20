@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { PageHero } from "@/components/layout/PageHero";
+import { FAQSection } from "@/components/shared/FAQSection";
+import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
 import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
+import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
+import { PageProofStrip } from "@/components/shared/PageProofStrip";
 
 export const metadata: Metadata = {
   title:
@@ -25,6 +28,45 @@ const jsonLd = {
   serviceType: "Industry Association Public Relations",
 };
 
+const proofItems = [
+  {
+    label: "Association complexity",
+    value: "Multiple audiences",
+    detail:
+      "Peak bodies communicate to members, boards, regulators, government, media, and the public at the same time.",
+  },
+  {
+    label: "Advocacy pressure",
+    value: "Policy-aware",
+    detail:
+      "The strongest campaigns combine board discipline, member alignment, and public-facing communications that can survive scrutiny.",
+  },
+  {
+    label: "Governance risk",
+    value: "Handled early",
+    detail:
+      "Member conduct issues, board disputes, and regulatory attention rarely stay internal unless they are managed carefully from the outset.",
+  },
+] as const;
+
+const faqs = [
+  {
+    question: "What makes association communications different from standard corporate PR?",
+    answer:
+      "Associations are communicating to members, boards, regulators, government, and media at the same time. The work is more politically and governance-sensitive because member confidence and public advocacy often need to be managed together.",
+  },
+  {
+    question: "Can CRC PR support both advocacy and governance matters?",
+    answer:
+      "Yes. That combination is one of the reasons associations engage us. We help peak bodies manage policy-facing communication, member trust, board-sensitive issues, and media pressure in the same engagement when needed.",
+  },
+  {
+    question: "Do you work directly with CEOs, executive officers, and boards?",
+    answer:
+      "Yes. Association work often requires support at CEO, executive officer, chair, and board level, particularly when the issue touches governance, regulation, or member confidence.",
+  },
+];
+
 export default function IndustryAssociationsPage() {
   return (
     <>
@@ -39,6 +81,11 @@ export default function IndustryAssociationsPage() {
         description="Specialist counsel for peak bodies, member organisations, and industry associations across Australia. Regulatory crisis, member communications, board governance, and public affairs."
         ctaLabel="BOOK A CONSULTATION"
         ctaHref="/contact"
+      />
+
+      <PageProofStrip
+        title="Associations need communications advice built for governance, advocacy, and member confidence at once."
+        items={[...proofItems]}
       />
 
       {/* Opening */}
@@ -76,6 +123,33 @@ export default function IndustryAssociationsPage() {
           </p>
         </div>
       </section>
+
+      <section className="bg-off-white py-16 md:py-20">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="font-heading font-black text-navy text-3xl mb-6">
+            The questions association CEOs usually face
+          </h2>
+          <p className="text-charcoal-mid text-[15px] leading-relaxed">
+            How much do we tell members now? When do we go to the board? What
+            do we say publicly if government, media, and members all expect
+            different things at the same time? Associations need a communications
+            approach that recognises those tensions rather than pretending they
+            can be simplified away.
+          </p>
+        </div>
+      </section>
+
+      <InlineEnquirySection
+        title="Need communications counsel for an association or peak body?"
+        body="CRC PR works with association CEOs, executive officers, and boards that need confident advice on member communications, regulatory pressure, advocacy, and governance-sensitive matters."
+        bullets={[
+          "Member, board, and regulator communication support",
+          "Association issue, crisis, and advocacy planning",
+          "Senior counsel for governance-sensitive matters",
+        ]}
+        defaultMessage="We need confidential communications advice for an industry association or peak body."
+        variant="white"
+      />
 
       {/* How CRC PR works with industry associations */}
       <section className="bg-off-white py-16 md:py-24">
@@ -214,43 +288,21 @@ export default function IndustryAssociationsPage() {
         </div>
       </section>
 
-      {/* Lead Magnet */}
-      <section className="bg-off-white py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="font-heading font-black text-navy text-2xl md:text-3xl mb-4">
-            Free: Industry Association Crisis Guide
-          </h2>
-          <p className="text-charcoal-mid text-[15px] leading-relaxed mb-8">
-            A practical guide for association CEOs and executive officers
-            covering the five types of crisis most likely to affect a peak body:
-            regulatory, member conduct, governance, media, and digital, with a
-            framework for managing each. Used by associations across Australia.
-          </p>
-          <LeadMagnetBanner magnet="associationCrisisGuide" />
-        </div>
-      </section>
+      <LeadMagnetBanner
+        magnet="associationCrisisGuide"
+        title="Free: Industry Association Crisis Guide"
+        description="A practical guide for association CEOs and executive officers covering the crisis types most likely to affect a peak body: regulatory, member conduct, governance, media, and digital pressure, with a framework for managing each."
+      />
 
-      {/* Closing CTA */}
-      <section className="bg-navy py-16 md:py-24">
-        <div className="max-w-2xl mx-auto px-6 text-center">
-          <h2 className="font-heading font-black text-white text-2xl md:text-3xl">
-            Association communications challenges are what we do best.
-          </h2>
-          <p className="text-blue-100 text-[15px] leading-relaxed mt-6">
-            CRC PR has spent 25 years helping associations navigate the
-            intersection of member expectations, regulatory pressure, and media
-            scrutiny. If you are facing a communications challenge, or building
-            the capability to handle one when it comes, we would like to hear
-            about your situation.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-block mt-8 bg-brand-gold text-navy font-heading font-black text-sm tracking-widest uppercase px-8 py-4 rounded-[4px] hover:bg-gold-light transition"
-          >
-            BOOK A CONFIDENTIAL CONSULTATION
-          </Link>
-        </div>
-      </section>
+      <FAQSection
+        items={faqs}
+        titleText="Common questions from association and peak-body leaders"
+      />
+
+      <PageClosingCTA
+        title="Association communications challenges are what we do best."
+        body="CRC PR has spent decades helping associations navigate member expectations, regulatory pressure, governance complexity, and media scrutiny with direct senior counsel."
+      />
     </>
   );
 }

@@ -20,7 +20,7 @@ export function CrisisHero() {
         </a>
       </div>
 
-      <section className="bg-navy py-24">
+      <section id="hero-section" className="bg-navy py-24">
         <div className="max-w-7xl mx-auto px-6">
           <p className="text-brand-gold text-xs font-medium tracking-[0.14em] uppercase">
             CRISIS COMMUNICATIONS
@@ -30,8 +30,9 @@ export function CrisisHero() {
           </h1>
           <p className="text-white/75 text-lg leading-relaxed mt-6 max-w-[520px]">
             We have been in the room when it matters most, guiding companies,
-            governments, associations, and organisations through Australia&apos;s
-            most significant crises. 24/7. Confidential. Decisive.
+            governments, associations and organisations through
+            Australia&apos;s most significant crises. 24 hours a day. Seven
+            days a week. Absolutely confidential.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
             <a

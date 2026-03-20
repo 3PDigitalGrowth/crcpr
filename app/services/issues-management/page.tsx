@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { siteConfig } from "@/config/site";
 import { PageHero } from "@/components/layout/PageHero";
+import { FAQSection } from "@/components/shared/FAQSection";
+import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
 import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
+import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
+import { PageProofStrip } from "@/components/shared/PageProofStrip";
 
 export const metadata: Metadata = {
   title: "Issues Management PR Australia | CRC Public Relations",
@@ -25,6 +28,50 @@ const jsonLd = {
   serviceType: "Issues Management Consulting",
 };
 
+const proofItems = [
+  {
+    label: "Timing advantage",
+    value: "Earlier intervention",
+    detail:
+      "The earlier a developing issue is assessed, the more options leadership retains to shape the outcome.",
+  },
+  {
+    label: "Stakeholder control",
+    value: "Mapped and prioritised",
+    detail:
+      "We identify who matters most, how they are likely to move, and what communication sequence will reduce escalation.",
+  },
+  {
+    label: "Escalation discipline",
+    value: "Clear thresholds",
+    detail:
+      "Issues management works best when leadership knows exactly when a matter stays internal and when it becomes a crisis response.",
+  },
+] as const;
+
+const faqs = [
+  {
+    question: "How do we know whether a matter is still an issue or already a crisis?",
+    answer:
+      "The distinction usually comes down to public exposure, pace, and stakeholder consequences. If a matter is still shapeable, with time to assess exposure, align messages, and engage key stakeholders before the story hardens, it is usually still an issues-management engagement. If the matter is already public and media or stakeholder pressure is active, it has likely crossed into crisis response.",
+  },
+  {
+    question: "What does CRC PR actually do in an issues-management engagement?",
+    answer:
+      "We assess the exposure, map the stakeholder environment, define escalation thresholds, develop defensible messaging, and advise leadership on the communication sequence most likely to reduce escalation. The work is both strategic and practical.",
+  },
+  {
+    question: "Can issues management help even if the organisation is already under some scrutiny?",
+    answer:
+      "Yes. Many matters arrive when the first signals are already visible but the outcome is still shapeable. Early scrutiny does not automatically mean the organisation has lost control. What matters is whether leadership acts with enough speed and discipline from that point.",
+  },
+  {
+    question: "Do you work alongside legal, regulatory, and executive teams?",
+    answer:
+      "Yes. Issues management is rarely only a communications matter. We often work alongside general counsel, risk teams, executive leadership, and operational stakeholders so the public position is aligned with the wider response.",
+  },
+];
+
 export default function IssuesManagementPage() {
   return (
     <>
@@ -39,6 +86,11 @@ export default function IssuesManagementPage() {
         description="Proactive identification, monitoring, and strategic management of emerging issues, before they reach crisis point. Senior counsel available nationally."
         ctaLabel="BOOK A CONSULTATION"
         ctaHref="/contact"
+      />
+
+      <PageProofStrip
+        title="The cost of delay is almost always higher than the cost of early action."
+        items={[...proofItems]}
       />
 
       {/* Opening section */}
@@ -65,9 +117,37 @@ export default function IssuesManagementPage() {
         </div>
       </section>
 
-      {/* What issues management looks like in practice */}
       <section className="bg-off-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
+          <h2 className="font-heading font-black text-navy text-3xl mb-6">
+            Typical issues we are engaged to contain
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+            {[
+              "Regulatory attention or correspondence starting to change tone",
+              "Staff or whistleblower complaints with a clear reputational dimension",
+              "Community or member concerns moving from private frustration to organised opposition",
+              "A pattern of media enquiries that suggests a larger story is building",
+            ].map((item) => (
+              <div
+                key={item}
+                className="rounded-lg border border-brand-border bg-white p-6"
+              >
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  {item}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* High-clarity process section earlier in flow */}
+      <section className="bg-off-white py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <p className="text-brand-gold font-sans font-medium text-xs tracking-[0.14em] uppercase mb-4">
+            WHAT HAPPENS NEXT
+          </p>
           <h2 className="font-heading font-black text-navy text-3xl mb-6">
             What issues management looks like in practice
           </h2>
@@ -134,6 +214,17 @@ export default function IssuesManagementPage() {
         </div>
       </section>
 
+      <InlineEnquirySection
+        title="Watching something develop?"
+        body="If your team is seeing signals that a matter could escalate, engage early. The right response now can prevent unnecessary media, stakeholder, and regulatory pressure later."
+        bullets={[
+          "Rapid issue assessment and escalation advice",
+          "Stakeholder mapping and message discipline",
+          "Support before the matter becomes a live crisis",
+        ]}
+        defaultMessage="We are monitoring an emerging issue and would like confidential advice on next steps."
+      />
+
       {/* Eighty per cent of crises were predictable */}
       <section className="bg-white py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-6">
@@ -191,56 +282,28 @@ export default function IssuesManagementPage() {
         </div>
       </section>
 
-      {/* Lead magnet intro */}
-      <section className="bg-off-white py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <h3 className="font-heading font-black text-navy text-xl mb-3">
-            Does your organisation have an escalation protocol for emerging
-            issues?
-          </h3>
-          <p className="text-charcoal text-[15px] leading-relaxed">
-            Download our Crisis Communications Plan Template. It includes the
-            escalation framework and decision triggers that our issues
-            management clients use to determine when a developing situation
-            requires immediate senior response.
-          </p>
-        </div>
-      </section>
+      <LeadMagnetBanner
+        magnet="crisisPlanTemplate"
+        variant="dark"
+        title="Does your organisation have an escalation protocol for emerging issues?"
+        description="Download the CRC PR Crisis Communications Plan Template. It includes the escalation framework and decision triggers our issues-management clients use to decide when a developing matter can still be contained and when it requires immediate senior response."
+        highlights={[
+          "Clarifies issue-to-crisis thresholds",
+          "Useful for executive and risk teams",
+          "Built around real escalation pressure",
+        ]}
+        whatYouGetBody="A practical framework for identifying ownership, escalation triggers, stakeholder sequencing, and first-response discipline before the matter becomes public."
+      />
 
-      <LeadMagnetBanner magnet="crisisPlanTemplate" variant="dark" />
+      <FAQSection
+        items={faqs}
+        titleText="Common questions about issues management"
+      />
 
-      {/* Closing CTA */}
-      <section className="py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-navy text-white rounded-lg p-8 md:p-12 text-center">
-            <h2 className="font-heading font-black text-3xl mb-6">
-              Watching an issue develop? Don&apos;t wait.
-            </h2>
-            <p className="text-white/75 text-[15px] leading-relaxed max-w-2xl mx-auto mb-8">
-              The earlier you engage senior communications counsel on a
-              developing issue, the more options you have. By the time a story
-              breaks or a regulator issues formal correspondence, some of those
-              options are no longer available. If you are watching something
-              develop in your stakeholder environment, talk to us now, in
-              confidence.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs tracking-widest uppercase rounded-[4px] px-8 py-4 hover:bg-gold-light transition"
-              >
-                BOOK A CONFIDENTIAL CONSULTATION
-              </Link>
-              <a
-                href={siteConfig.phone.href}
-                className="text-white/75 font-heading font-black text-sm hover:text-brand-gold transition"
-              >
-                CALL {siteConfig.phone.display}
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageClosingCTA
+        title="Watching an issue develop? Do not wait for public escalation."
+        body="The organisations that handle issues best engage senior communications counsel while the situation is still shapeable. If you are seeing early warning signs, we can help you assess the exposure and decide what to do next."
+      />
     </>
   );
 }

@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/layout/PageHero";
+import { FAQSection } from "@/components/shared/FAQSection";
+import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
 import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
+import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
+import { PageProofStrip } from "@/components/shared/PageProofStrip";
 
 export const metadata: Metadata = {
   title: "Crisis Communications PR Australia | CRC Public Relations",
@@ -24,6 +28,50 @@ const jsonLd = {
   serviceType: "Crisis Communications Consulting",
 };
 
+const proofItems = [
+  {
+    label: "Urgent support",
+    value: "24/7 access",
+    detail:
+      "Active crisis matters are handled by senior advisors, not passed through a generic agency support model.",
+  },
+  {
+    label: "Preparation",
+    value: "Plan, train, test",
+    detail:
+      "Prepared organisations respond faster because their plans, spokespeople, and escalation pathways have already been tested.",
+  },
+  {
+    label: "Recovery",
+    value: "Long-tail thinking",
+    detail:
+      "We focus not only on the first statement but on the stakeholder trust you will need long after the event has passed.",
+  },
+] as const;
+
+const faqs = [
+  {
+    question: "How is this page different from the dedicated crisis response page?",
+    answer:
+      "This page explains the broader crisis communications service, including planning, simulation, live response, and recovery. The dedicated crisis page is designed specifically for urgent visitors who need immediate support during an active matter.",
+  },
+  {
+    question: "Do you only get involved when the crisis is already public?",
+    answer:
+      "No. Many organisations engage CRC PR before a crisis becomes public so their plans, spokespeople, and escalation pathways are properly tested. Others call when the matter is already live and immediate senior support is required.",
+  },
+  {
+    question: "What does a crisis communications engagement usually include?",
+    answer:
+      "Depending on the situation, it can include planning, simulations, spokesperson preparation, first-response messaging, media management, stakeholder communications, and post-crisis recovery advice. The exact mix changes by client and pressure point.",
+  },
+  {
+    question: "Who handles the work during a high-pressure matter?",
+    answer:
+      "Senior advisors. CRC PR does not route crisis matters through a junior account structure. Active situations are handled directly by experienced advisors with crisis judgement and newsroom understanding.",
+  },
+];
+
 export default function CrisisCommunicationsPage() {
   return (
     <>
@@ -38,6 +86,12 @@ export default function CrisisCommunicationsPage() {
         description="24/7 crisis response, crisis communications planning, and simulation exercises for organisations that understand the cost of being unprepared."
         ctaLabel="BOOK A CONSULTATION"
         ctaHref="/contact"
+      />
+
+      <PageProofStrip
+        title="The first decisions in a crisis shape everything that follows."
+        items={[...proofItems]}
+        variant="navy"
       />
 
       {/* Secondary CTA */}
@@ -73,6 +127,57 @@ export default function CrisisCommunicationsPage() {
           <p className="text-charcoal text-[15px] leading-relaxed mt-6">
             This is the preparation we provide.
           </p>
+        </div>
+      </section>
+
+      <InlineEnquirySection
+        title="Need crisis communications support or preparedness advice?"
+        body="Use this form for confidential advice on crisis planning, simulation exercises, spokesperson preparation, or post-crisis recovery. If the matter is already active, call us immediately instead."
+        bullets={[
+          "Crisis plans, simulation exercises, and spokesperson preparation",
+          "Senior support for active incidents and board-facing matters",
+          "Post-crisis recovery and stakeholder trust rebuilding",
+        ]}
+        defaultMessage="We need confidential crisis communications advice."
+        variant="white"
+      />
+
+      <section className="bg-off-white py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <p className="text-brand-gold font-sans font-medium text-xs tracking-[0.14em] uppercase mb-4">
+            WHAT SERIOUS ORGANISATIONS EXPECT
+          </p>
+          <h2 className="font-heading font-black text-navy text-3xl mb-6">
+            What serious organisations expect from crisis communications counsel
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+            {[
+              {
+                title: "Speed with discipline",
+                body: "Fast advice matters, but only if it improves the decision. We move quickly without guessing.",
+              },
+              {
+                title: "Message control",
+                body: "Your first statement, board update, staff message, and media response need to hold together under pressure.",
+              },
+              {
+                title: "Senior judgment",
+                body: "Crises are not the time to learn on the job. They require judgement built from previous high-stakes situations.",
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="rounded-lg border border-brand-border bg-white p-6"
+              >
+                <h3 className="font-heading font-black text-navy text-xl mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  {item.body}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -174,48 +279,27 @@ export default function CrisisCommunicationsPage() {
         </div>
       </section>
 
-      {/* Lead magnet intro */}
-      <section className="bg-off-white py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <h3 className="font-heading font-black text-navy text-xl mb-3">
-            Does your organisation have a crisis plan that has actually been
-            tested?
-          </h3>
-          <p className="text-charcoal text-[15px] leading-relaxed">
-            Most organisations have a crisis plan they approved and filed. Very
-            few have tested it under simulated pressure. Download our Crisis
-            Communications Plan Template as a starting point, the same framework
-            we use with our clients to build plans that work when it matters.
-          </p>
-        </div>
-      </section>
+      <LeadMagnetBanner
+        magnet="crisisPlanTemplate"
+        title="Does your organisation have a crisis plan that leadership would trust under pressure?"
+        description="Download the CRC PR Crisis Communications Plan Template. It is the same framework we use with clients to define first-response ownership, message hierarchy, escalation discipline, and stakeholder sequencing before a live matter strips away thinking time."
+        highlights={[
+          "Built for boards and executive teams",
+          "Useful before simulations and training",
+          "Designed for real response pressure",
+        ]}
+      />
 
-      <LeadMagnetBanner magnet="crisisPlanTemplate" />
+      <FAQSection
+        items={faqs}
+        titleText="Common questions about crisis communications support"
+      />
 
-      {/* Closing CTA */}
-      <section className="py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-navy text-white rounded-lg p-8 md:p-12 text-center">
-            <h2 className="font-heading font-black text-3xl mb-6">
-              Preparation now is worth ten times the cost of response later.
-            </h2>
-            <p className="text-white/75 text-[15px] leading-relaxed max-w-2xl mx-auto mb-8">
-              A crisis communications retainer with CRC PR costs a fraction of
-              what a poorly managed crisis costs in media management, reputation
-              recovery, and lost stakeholder confidence. The organisations that
-              invest in preparation do so because they understand this
-              arithmetic, and because they have seen what happens to those that
-              don&apos;t.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs tracking-widest uppercase rounded-[4px] px-8 py-4 hover:bg-gold-light transition"
-            >
-              BOOK A CRISIS PREPAREDNESS CONSULTATION
-            </Link>
-          </div>
-        </div>
-      </section>
+      <PageClosingCTA
+        title="Preparation now is worth far more than response later."
+        body="A tested crisis communications capability costs a fraction of a poorly handled incident. If your organisation wants a plan, a simulation, or senior support before the next high-pressure event, talk to CRC PR."
+        primaryLabel="BOOK A CRISIS PREPAREDNESS CONSULTATION"
+      />
     </>
   );
 }

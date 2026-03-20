@@ -13,7 +13,7 @@ export const siteConfig = {
   email: {
     general: "info@crcpr.com.au",
     media: "media@crcpr.com.au",
-    newBusiness: "hello@crcpr.com.au", // TODO: CLIENT TO PROVIDE — confirm correct address
+    newBusiness: "hello@crcpr.com.au", // TODO: CLIENT TO PROVIDE, confirm correct address
   },
 
   crcPrUrl: "https://crcpr.com.au",
@@ -30,7 +30,7 @@ export const siteConfig = {
   termsUrl: "/terms",
 
   ga4MeasurementId: "G-XXXXXXXXXX", // TODO: CLIENT TO PROVIDE
-  wildjarScript: "", // TODO: CLIENT TO PROVIDE — Wildjar dynamic number insertion script
+  wildjarScript: "", // TODO: CLIENT TO PROVIDE, Wildjar dynamic number insertion script
 
   formEndpoint: "https://formspree.io/f/XXXXXXXX", // TODO: configure before go-live
 
@@ -85,9 +85,10 @@ export const siteConfig = {
       fileName: "crcpr-reputation-vulnerability-assessment.pdf",
     },
     crisisPlanTemplate: {
-      title: "Crisis Communications Plan Template",
+      title:
+        "Does your organisation have a crisis plan that has actually been tested?",
       description:
-        "A working template covering crisis team roles, stakeholder map, message hierarchy, and media response protocol.",
+        "Most organisations have a crisis plan they approved and filed. Very few have exercised it under simulated pressure with their actual team. Download the CRC PR Crisis Communications Plan Template, the same framework we use with clients across Australia to build plans that work when everything else is under pressure.",
       fileName: "crcpr-crisis-communications-plan-template.pdf",
     },
     mediaInterviewGuide: {

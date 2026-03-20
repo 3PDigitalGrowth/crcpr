@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { PageHero } from "@/components/layout/PageHero";
+import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
+import { PageProofStrip } from "@/components/shared/PageProofStrip";
 import { siteConfig } from "@/config/site";
 
 export const metadata = {
@@ -10,7 +12,48 @@ export const metadata = {
 export default function TermsPage() {
   return (
     <>
-      <PageHero title="Terms of Use" />
+      <PageHero
+        eyebrow="LEGAL"
+        title="Terms of Use"
+        description="The terms that govern use of the CRC Public Relations website, including content use, acceptable use, liability, and contact pathways."
+        ctaLabel="CONTACT CRC PR"
+        ctaHref="/contact"
+      />
+
+      <PageProofStrip
+        title="These terms are designed to be clear, practical, and consistent with a professional-services website."
+        items={[
+          {
+            label: "Use",
+            value: "General information",
+            detail:
+              "Site content is intended as general information and does not create a professional relationship by itself.",
+          },
+          {
+            label: "Rights",
+            value: "Protected content",
+            detail:
+              "CRC PR content, branding, and materials remain protected by copyright and other applicable rights.",
+          },
+          {
+            label: "Contact",
+            value: "Ask directly",
+            detail:
+              "If a term is unclear, contact CRC PR directly rather than making assumptions about its application.",
+          },
+        ]}
+      />
+
+      <section className="bg-white py-16 md:py-20">
+        <div className="max-w-3xl mx-auto px-6">
+          <p className="text-charcoal-mid text-[15px] leading-relaxed">
+            These terms explain how the CRC PR website may be used and the basis on
+            which its content is provided. They are written to be readable, not merely
+            comprehensive, so users can understand the practical boundaries quickly.
+          </p>
+        </div>
+      </section>
+
       <section className="bg-white py-24">
         <div className="max-w-3xl mx-auto px-6 prose prose-lg max-w-none prose-headings:font-heading prose-headings:font-black prose-headings:text-navy prose-p:text-charcoal prose-p:leading-relaxed prose-a:text-brand-gold prose-strong:text-charcoal prose-li:text-charcoal">
           <p className="lead text-charcoal-mid">
@@ -122,6 +165,12 @@ export default function TermsPage() {
           </p>
         </div>
       </section>
+
+      <PageClosingCTA
+        title="Need clarification on these terms?"
+        body="If you have a question about how these terms apply to your use of the site or a potential engagement, contact CRC PR directly and we will clarify the appropriate position."
+        primaryLabel="CONTACT CRC PR"
+      />
     </>
   );
 }

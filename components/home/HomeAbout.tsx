@@ -14,14 +14,14 @@ export function HomeAbout() {
 
       <div className="relative max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
-          {/* Left — portrait with offset treatment */}
+          {/* Left portrait with offset treatment */}
           <AnimateIn className="lg:col-span-5">
             <div className="relative lg:-ml-4 xl:-ml-8">
               <PortraitPlaceholder size="lg" />
             </div>
           </AnimateIn>
 
-          {/* Right — bio content */}
+          {/* Right bio content */}
           <div className="lg:col-span-7">
             <AnimateIn>
               <p className="font-sans font-medium text-brand-teal text-xs tracking-[0.14em] uppercase">

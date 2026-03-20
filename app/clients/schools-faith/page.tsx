@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { PageHero } from "@/components/layout/PageHero";
+import { FAQSection } from "@/components/shared/FAQSection";
+import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
 import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
+import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
+import { PageProofStrip } from "@/components/shared/PageProofStrip";
 
 export const metadata: Metadata = {
   title:
@@ -26,6 +29,45 @@ const jsonLd = {
   serviceType: "School Communications Consulting",
 };
 
+const proofItems = [
+  {
+    label: "Community trust",
+    value: "Pastoral and strategic",
+    detail:
+      "School and faith-based communications requires compassion, legal discipline, and message control at the same time.",
+  },
+  {
+    label: "Leadership pressure",
+    value: "Principal to board",
+    detail:
+      "We support principals, executive teams, boards, and governing bodies through situations where confidence can shift quickly.",
+  },
+  {
+    label: "Urgent realities",
+    value: "24/7 available",
+    detail:
+      "Serious incidents often happen outside school hours. Early communication decisions still shape the outcome.",
+  },
+] as const;
+
+const faqs = [
+  {
+    question: "What kinds of school matters does CRC PR usually support?",
+    answer:
+      "Typical matters include safeguarding disclosures, staff conduct allegations, serious incidents, parent-confidence issues, social media escalation, governance concerns, and situations where pastoral care, legal risk, and media attention are all in play at once.",
+  },
+  {
+    question: "Can you help with parent communications as well as media response?",
+    answer:
+      "Yes. In school and faith-based matters, parent and community communication is often more important than media response in the first instance. We help leaders sequence those audiences carefully while keeping the legal and reputational position aligned.",
+  },
+  {
+    question: "Do you work with principals and boards directly?",
+    answer:
+      "Yes. We regularly support principals, executive teams, governing bodies, and boards where the communication challenge is strategically sensitive and emotionally charged.",
+  },
+];
+
 export default function SchoolsFaithPage() {
   return (
     <>
@@ -40,6 +82,11 @@ export default function SchoolsFaithPage() {
         description="Specialist crisis response, parent communications, and media management for school leaders and faith-based organisations, when pastoral responsibility and strategic communications must work together."
         ctaLabel="BOOK A CONSULTATION"
         ctaHref="/contact"
+      />
+
+      <PageProofStrip
+        title="In schools and faith-based organisations, confidence is built or lost through communication speed, care, and discipline."
+        items={[...proofItems]}
       />
 
       {/* Opening */}
@@ -75,6 +122,32 @@ export default function SchoolsFaithPage() {
           </p>
         </div>
       </section>
+
+      <section className="bg-off-white py-16 md:py-20">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="font-heading font-black text-navy text-3xl mb-6">
+            What schools usually need help deciding first
+          </h2>
+          <p className="text-charcoal text-[15px] leading-relaxed">
+            Who needs to be told first? What can we say to parents now? What do
+            we keep back because the legal position is still moving? How do we
+            show compassion without creating avoidable exposure? These are the
+            decisions that shape trust in the first hour.
+          </p>
+        </div>
+      </section>
+
+      <InlineEnquirySection
+        title="Need confidential advice for a school or faith-based matter?"
+        body="CRC PR advises school leaders, boards, and faith-based organisations facing parent concern, media attention, governance pressure, or a sensitive incident. If it is urgent, call us now."
+        bullets={[
+          "Parent, staff, and community communication support",
+          "Principal, board, and spokesperson advice",
+          "Urgent incident response and preparedness planning",
+        ]}
+        defaultMessage="We need confidential advice for a school or faith-based communications matter."
+        variant="white"
+      />
 
       {/* How CRC PR supports schools and faith-based organisations */}
       <section className="bg-off-white py-16 md:py-24">
@@ -188,57 +261,21 @@ export default function SchoolsFaithPage() {
         </div>
       </section>
 
-      {/* Lead magnet */}
-      <section className="bg-off-white py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="font-heading font-black text-navy text-xl mb-3">
-            Free: School Crisis Communications Playbook
-          </h2>
-          <p className="text-charcoal text-[15px] leading-relaxed">
-            A practical guide for school leaders covering the five most
-            common school crisis scenarios: safeguarding disclosures, staff
-            conduct allegations, medical emergencies, social media
-            incidents, and governance challenges. Includes parent
-            communication templates and a media response framework.
-            Developed from 25 years of working with Australian school
-            networks.
-          </p>
-        </div>
-      </section>
+      <LeadMagnetBanner
+        magnet="schoolsPlaybook"
+        title="Free: School Crisis Communications Playbook"
+        description="A practical guide for school leaders covering the crisis scenarios most likely to affect independent, Catholic, and faith-based schools, including parent communications, media response, and early leadership decisions."
+      />
 
-      <LeadMagnetBanner magnet="schoolsPlaybook" />
+      <FAQSection
+        items={faqs}
+        titleText="Common questions from school and faith-based leaders"
+      />
 
-      {/* Closing CTA */}
-      <section className="bg-navy py-16 md:py-24">
-        <div className="max-w-2xl mx-auto px-6 text-center">
-          <h2 className="font-heading font-black text-white text-2xl md:text-3xl">
-            School crises don&apos;t follow business hours.
-          </h2>
-          <p className="text-white/75 text-[15px] leading-relaxed mt-6 max-w-2xl mx-auto">
-            When a serious incident occurs at your school, the
-            communications decisions you make in the first hour shape the
-            response of your community for months. CRC PR is available 24
-            hours a day, seven days a week, because the incidents that
-            require the most careful communications response tend to occur
-            on weekends and during school holidays.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs tracking-widest uppercase rounded-[4px] px-8 py-4 mt-8 hover:bg-gold-light transition"
-          >
-            BOOK A CONSULTATION
-          </Link>
-          <p className="mt-4">
-            <a
-              href={siteConfig.phone.href}
-              className="text-teal text-sm hover:opacity-80 transition"
-            >
-              For urgent situations, call {siteConfig.phone.display},
-              available 24/7
-            </a>
-          </p>
-        </div>
-      </section>
+      <PageClosingCTA
+        title="School crises do not follow business hours."
+        body="When a serious incident affects a school or faith-based organisation, the communication decisions made in the first hour shape trust for months. CRC PR is available 24/7 because the most sensitive matters rarely arrive at a convenient time."
+      />
     </>
   );
 }

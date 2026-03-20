@@ -10,7 +10,7 @@ export function HomeClients() {
     <section className="bg-white py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-          {/* Left column — text, spans 5 cols */}
+          {/* Left column, spans 5 cols */}
           <div className="lg:col-span-5">
             <AnimateIn>
               <p className="font-sans font-medium text-brand-gold text-xs tracking-[0.14em] uppercase">
@@ -45,7 +45,7 @@ export function HomeClients() {
             </AnimateIn>
           </div>
 
-          {/* Right column — sector grid, spans 7 cols */}
+          {/* Right column, sector grid, spans 7 cols */}
           <div className="lg:col-span-7">
             <div className="grid grid-cols-2 gap-3">
               {siteConfig.sectors.map((sector, i) => (

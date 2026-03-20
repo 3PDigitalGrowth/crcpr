@@ -13,7 +13,7 @@ body {
   }
 }
 
-/* Gradient seams between sections — eliminates hard colour edges */
+/* Gradient seams between sections, eliminates hard colour edges */
 .seam-to-white {
   background: linear-gradient(to bottom, transparent 0%, #ffffff 100%);
 }
@@ -65,7 +65,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Hero geometric accent — bleeds beyond container */
+/* Hero geometric accent, bleeds beyond container */
 .hero-accent-line {
   position: absolute;
   right: -5vw;

@@ -156,7 +156,7 @@ function ServicesPanel({ onClose }: { onClose: () => void }) {
             href="/services/crisis-communications"
             icon={<Zap className="w-full h-full" />}
             title="Crisis Communications"
-            desc="24/7 response — call 1300 182 186"
+            desc="24/7 response, call 1300 182 186"
             onClick={onClose}
           />
           <MegaItem
@@ -558,7 +558,7 @@ export function Nav() {
             className="flex items-center gap-7 flex-1"
             aria-label="Main navigation"
           >
-            {/* Services — mega panel trigger */}
+            {/* Services mega panel trigger */}
             <div
               className="relative"
               onMouseEnter={() => handleMouseEnter("services")}
@@ -592,7 +592,7 @@ export function Nav() {
               )}
             </div>
 
-            {/* Clients — mega panel trigger */}
+            {/* Clients mega panel trigger */}
             <div
               className="relative"
               onMouseEnter={() => handleMouseEnter("clients")}

@@ -3,24 +3,32 @@ import Link from "next/link";
 const cards = [
   {
     title: "Crisis Prevention Consultancy",
-    body:
-      "Most crises are preventable. We help you assess your reputation risks, identify vulnerabilities, develop crisis communications plans, and train your team before an issue becomes a crisis.",
+    paragraphs: [
+      "Most crises are preventable. The issue that eventually makes headlines was almost always visible weeks or months earlier, in stakeholder behaviour, in regulatory correspondence, in the pattern of media enquiries that preceded the story.",
+      "We work with organisations to assess their specific reputation risks, identify the vulnerabilities most likely to produce a crisis, develop communications plans that give your team a tested response framework, and train your key spokespeople before, not after, an incident occurs.",
+      "Crisis prevention is not a one-time exercise. We work with clients on an ongoing basis to monitor their issue landscape, update their plans, and ensure their people remain prepared as their organisation changes.",
+    ],
     cta: "Learn about prevention →",
     href: "/services/crisis-communications" as const,
     hash: false,
   },
   {
     title: "Crisis Communications Coordination",
-    body:
-      "When an incident breaks, we are your guiding force. Managing media, coordinating communications across all stakeholder groups, advising spokespeople, and directing your response, 24/7, anywhere.",
+    paragraphs: [
+      "When a crisis is live, the decisions made in the first hour determine the outcome of the entire event. We join your response team immediately, managing media enquiries, coordinating communications across all stakeholder groups, preparing and briefing your spokespeople, and directing your response with the discipline that separates organisations that emerge intact from those that do not.",
+      "We manage the full response arc: from the initial holding statement, through the sustained communications program during the event, to the stakeholder communications that follow. We are with you 24 hours a day for as long as the crisis requires, not just the first phone call.",
+    ],
     cta: "Discuss your situation →",
     href: "#contact-form",
     hash: true,
   },
   {
     title: "Crisis Simulation Exercises",
-    body:
-      "Your plan is only as good as your team's ability to execute it under pressure. We run tailored crisis simulation exercises that test your people, your process, and your messaging in a controlled environment.",
+    paragraphs: [
+      "A crisis plan that has never been tested is not a plan. It is a document. The difference between an organisation that responds well under pressure and one that does not is almost always whether their people have practised under simulated conditions before they needed to perform under real ones.",
+      "Our crisis simulation exercises are designed specifically for your organisation, built around the scenarios most likely to affect your sector, your stakeholders, and your reputation. We test your crisis team, your spokespeople, your messaging, and your decision-making process in a controlled environment that exposes exactly where your plan needs to be strengthened.",
+      "Simulations are available as half-day or full-day programs, for leadership teams of 4 to 15 people, delivered in person or remotely.",
+    ],
     cta: "Book a simulation →",
     href: "/contact" as const,
     hash: false,
@@ -40,9 +48,16 @@ export function CrisisServices() {
               <h3 className="font-heading font-black text-navy text-xl">
                 {card.title}
               </h3>
-              <p className="text-charcoal-mid text-[15px] leading-relaxed mt-3">
-                {card.body}
-              </p>
+              <div className="mt-3 space-y-3">
+                {card.paragraphs.map((p, i) => (
+                  <p
+                    key={i}
+                    className="text-charcoal-mid text-[15px] leading-relaxed"
+                  >
+                    {p}
+                  </p>
+                ))}
+              </div>
               {card.hash ? (
                 <a
                   href={card.href}

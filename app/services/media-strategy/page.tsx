@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { PageHero } from "@/components/layout/PageHero";
+import { FAQSection } from "@/components/shared/FAQSection";
+import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
 import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
+import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
+import { PageProofStrip } from "@/components/shared/PageProofStrip";
 
 export const metadata: Metadata = {
   title:
@@ -25,6 +28,50 @@ const jsonLd = {
   serviceType: "Media Relations Consulting",
 };
 
+const proofItems = [
+  {
+    label: "Newsroom perspective",
+    value: "Former journalists",
+    detail:
+      "We understand what editors pursue, which angles hold up, and what makes a spokesperson worth calling again.",
+  },
+  {
+    label: "Sustained profile",
+    value: "Beyond the press release",
+    detail:
+      "A strong media profile is built through cadence, relationship management, and a defensible point of view over time.",
+  },
+  {
+    label: "Executive readiness",
+    value: "Prepared voices",
+    detail:
+      "Your strongest story still fails if the spokesperson is not ready for the hardest question in the room.",
+  },
+] as const;
+
+const faqs = [
+  {
+    question: "What is the difference between media strategy and media training?",
+    answer:
+      "Media strategy is the broader discipline of deciding what the organisation should say, when it should say it, where it should appear, and which voices should carry the message. Media training prepares specific spokespeople to perform well within that strategy.",
+  },
+  {
+    question: "Can CRC PR help if we already have media relationships but they are inconsistent?",
+    answer:
+      "Yes. Many organisations have some media activity but no disciplined strategy behind it. We help tighten message focus, strengthen journalist relationships, and create a more credible, sustained market presence.",
+  },
+  {
+    question: "Do you write op-eds and thought leadership pieces?",
+    answer:
+      "Yes. We work with senior leaders to identify positions worth taking, shape commentary that can stand up editorially, and place that thinking with the right outlets over time.",
+  },
+  {
+    question: "Why does Lyall Mercer's journalism background matter here?",
+    answer:
+      "Because good media strategy depends on understanding how editors, producers, and reporters think. Former-journalist perspective improves both story judgement and spokesperson preparation.",
+  },
+];
+
 export default function MediaStrategyPage() {
   return (
     <>
@@ -39,6 +86,11 @@ export default function MediaStrategyPage() {
         description="Proactive media strategy, journalist relationship management, and thought leadership placement for organisations that want to shape their sector's narrative, not just respond to it."
         ctaLabel="BOOK A CONSULTATION"
         ctaHref="/contact"
+      />
+
+      <PageProofStrip
+        title="Being quoted is not the goal. Being trusted is."
+        items={[...proofItems]}
       />
 
       {/* Opening section */}
@@ -67,6 +119,43 @@ export default function MediaStrategyPage() {
           </p>
         </div>
       </section>
+
+      <section className="bg-off-white py-16 md:py-24">
+        <div className="max-w-3xl mx-auto px-6">
+          <p className="text-brand-gold font-sans font-medium text-xs tracking-[0.14em] uppercase mb-4">
+            WHAT GOOD LOOKS LIKE
+          </p>
+          <h2 className="font-heading font-black text-navy text-3xl mb-6">
+            What strong media strategy looks like in the market
+          </h2>
+          <p className="text-charcoal text-[15px] leading-relaxed">
+            Strong media strategy is visible in the pattern of coverage, not a
+            single hit. The organisation becomes a credible source on the issues
+            that matter in its sector. Journalists understand what it stands for.
+            Executives sound like informed authorities rather than corporate
+            placeholders. Commentary appears in the right places, at the right
+            times, with a message that can survive scrutiny.
+          </p>
+          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
+            That outcome requires more than media activity. It requires message
+            discipline, editorial judgment, and a view on what your organisation
+            should say no to. Premium media strategy is as much about restraint
+            as visibility.
+          </p>
+        </div>
+      </section>
+
+      <InlineEnquirySection
+        title="Need a sharper media strategy?"
+        body="If your organisation wants stronger editorial positioning, better spokesperson preparedness, or more deliberate thought leadership, CRC PR can help design the strategy behind it."
+        bullets={[
+          "Media strategy and editorial positioning",
+          "Journalist relationship and spokesperson planning",
+          "Thought leadership and commentary programs",
+        ]}
+        defaultMessage="We would like advice on our media strategy and spokesperson positioning."
+        variant="white"
+      />
 
       {/* What a CRC PR media strategy delivers */}
       <section className="bg-off-white py-16 md:py-24">
@@ -172,44 +261,28 @@ export default function MediaStrategyPage() {
         </div>
       </section>
 
-      {/* Lead magnet intro + banner */}
-      <section className="bg-off-white py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <h3 className="font-heading font-black text-navy text-xl mb-3">
-            Is your spokesperson ready for their next interview?
-          </h3>
-          <p className="text-charcoal text-[15px] leading-relaxed">
-            Download our Media Interview Preparation Guide, a pre-interview
-            checklist and briefing framework used by executives and
-            communications directors across Australia. Written by former
-            journalists who have sat on the other side of the camera.
-          </p>
-        </div>
-      </section>
+      <LeadMagnetBanner
+        magnet="mediaInterviewGuide"
+        variant="dark"
+        title="Is your spokesperson ready for the next meaningful interview?"
+        description="Download the CRC PR Media Interview Preparation Guide, a practical briefing framework used by executives and communications leaders who need their message to hold up on camera, on radio, and on the record."
+        highlights={[
+          "Written from a newsroom perspective",
+          "Useful before high-stakes interviews",
+          "Built for executives and spokespeople",
+        ]}
+      />
 
-      <LeadMagnetBanner magnet="mediaInterviewGuide" variant="dark" />
+      <FAQSection
+        items={faqs}
+        titleText="Common questions about media strategy"
+      />
 
-      {/* Closing CTA */}
-      <section className="py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-navy text-white rounded-lg p-8 md:p-12 text-center">
-            <h2 className="font-heading font-black text-3xl mb-6">
-              Ready to build media presence that actually moves the needle?
-            </h2>
-            <p className="text-white/75 text-[15px] leading-relaxed max-w-2xl mx-auto mb-8">
-              Media strategy works when it is consistent, strategic, and built
-              on genuine relationships. We would like to hear about your
-              organisation and what you are trying to achieve.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs tracking-widest uppercase rounded-[4px] px-8 py-4 hover:bg-gold-light transition"
-            >
-              BOOK A MEDIA STRATEGY CONSULTATION
-            </Link>
-          </div>
-        </div>
-      </section>
+      <PageClosingCTA
+        title="Ready to build media presence that actually moves the needle?"
+        body="Media strategy works when it is consistent, strategic, and built on genuine editorial judgment. CRC PR helps organisations earn coverage that strengthens authority rather than just generating noise."
+        primaryLabel="BOOK A MEDIA STRATEGY CONSULTATION"
+      />
     </>
   );
 }

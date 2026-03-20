@@ -4,7 +4,22 @@ import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
-export function FAQSection({ title = true }: { title?: boolean }) {
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+interface FAQSectionProps {
+  title?: boolean;
+  titleText?: string;
+  items?: readonly FAQItem[];
+}
+
+export function FAQSection({
+  title = true,
+  titleText = "Frequently asked questions",
+  items = siteConfig.faqs,
+}: FAQSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
@@ -12,11 +27,11 @@ export function FAQSection({ title = true }: { title?: boolean }) {
       <div className="max-w-3xl mx-auto px-6">
         {title && (
           <h2 className="font-heading font-black text-navy text-3xl mb-10">
-            Frequently asked questions
+            {titleText}
           </h2>
         )}
         <div>
-          {siteConfig.faqs.map((faq, i) => (
+          {items.map((faq, i) => (
             <div key={i} className="border-b border-brand-border">
               <button
                 type="button"

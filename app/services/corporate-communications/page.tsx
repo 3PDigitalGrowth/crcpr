@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { siteConfig } from "@/config/site";
 import { PageHero } from "@/components/layout/PageHero";
+import { FAQSection } from "@/components/shared/FAQSection";
+import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
 import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
+import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
+import { PageProofStrip } from "@/components/shared/PageProofStrip";
 
 export const metadata: Metadata = {
   title:
@@ -36,6 +39,50 @@ const sectorLinks = [
   { label: "Legal and professional services", href: "/contact" },
 ];
 
+const proofItems = [
+  {
+    label: "Board confidence",
+    value: "Senior-led",
+    detail:
+      "Every engagement is led by a senior advisor who understands board scrutiny, market sensitivity, and stakeholder risk.",
+  },
+  {
+    label: "Communication discipline",
+    value: "Message first",
+    detail:
+      "We build messaging frameworks that hold across leadership, media, staff, regulators, and critical external stakeholders.",
+  },
+  {
+    label: "Real-world pressure",
+    value: "High-stakes ready",
+    detail:
+      "We support sensitive announcements, leadership transitions, difficult stakeholder matters, and media-facing moments where precision matters.",
+  },
+] as const;
+
+const faqs = [
+  {
+    question: "When should an organisation bring in external corporate communications counsel?",
+    answer:
+      "Usually earlier than leadership expects. The best time is before a board decision becomes public, before a stakeholder issue hardens, and before an executive appearance or announcement is locked in. External counsel is most valuable when message architecture, sequencing, and stakeholder reaction still have room to be shaped.",
+  },
+  {
+    question: "Do you work directly with boards, CEOs, and general counsel?",
+    answer:
+      "Yes. CRC PR is structured around direct senior access. We routinely support chairs, CEOs, general counsel, and executive teams on matters where governance, reputation, and communication are tightly connected.",
+  },
+  {
+    question: "What kinds of matters does corporate communications support usually cover?",
+    answer:
+      "Typical matters include leadership transitions, restructures, major announcements, difficult stakeholder issues, sensitive internal communications, market-facing messaging, and communications planning around regulatory or public scrutiny. The common factor is that the message needs to hold under pressure.",
+  },
+  {
+    question: "How is this different from a larger PR agency retainer?",
+    answer:
+      "The difference is direct access and judgement. At CRC PR, the people you brief are the people doing the advisory work. There is no junior handoff and no large account structure sitting between leadership and the advice.",
+  },
+];
+
 export default function CorporateCommunicationsPage() {
   return (
     <>
@@ -52,7 +99,12 @@ export default function CorporateCommunicationsPage() {
         ctaHref="/contact"
       />
 
-      {/* Opening section */}
+      <PageProofStrip
+        title="Corporate communications is not content production. It is strategic control."
+        items={[...proofItems]}
+      />
+
+      {/* High-clarity explainer */}
       <section className="bg-white py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-6">
           <p className="text-charcoal text-[15px] leading-relaxed">
@@ -80,7 +132,80 @@ export default function CorporateCommunicationsPage() {
         </div>
       </section>
 
-      {/* What corporate communications looks like in practice */}
+      {/* Process section moved earlier to match crisis flow */}
+      <section className="bg-off-white py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <p className="text-brand-gold font-sans font-medium text-xs tracking-[0.14em] uppercase mb-4">
+            WHEN YOU ENGAGE CRC PR
+          </p>
+          <h2 className="font-heading font-black text-navy text-3xl mb-6">
+            How a corporate communications engagement begins
+          </h2>
+          <p className="max-w-2xl text-charcoal text-[15px] leading-relaxed">
+            The immediate objective is not more communications activity. It is a clearer
+            picture of what your organisation needs to say, to whom, in what order, and
+            under what level of scrutiny. That discipline is what prevents sensitive
+            communications work from becoming reactive, inconsistent, or unnecessarily exposed.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+            <div className="bg-white border border-brand-border rounded-lg p-6">
+              <span className="text-brand-gold font-heading font-black text-2xl">
+                1
+              </span>
+              <h3 className="font-heading font-black text-navy text-xl mb-3 mt-3">
+                Situation assessment
+              </h3>
+              <p className="text-charcoal text-[15px] leading-relaxed">
+                We assess your communications posture, stakeholder landscape, current
+                messages, and the specific decision or pressure point your leadership
+                team is navigating.
+              </p>
+            </div>
+
+            <div className="bg-white border border-brand-border rounded-lg p-6">
+              <span className="text-brand-gold font-heading font-black text-2xl">
+                2
+              </span>
+              <h3 className="font-heading font-black text-navy text-xl mb-3 mt-3">
+                Message and stakeholder sequence
+              </h3>
+              <p className="text-charcoal text-[15px] leading-relaxed">
+                We define the messages that need to hold across leadership, staff,
+                media, regulators, and other critical stakeholders, then sequence those
+                communications so confidence is built rather than diluted.
+              </p>
+            </div>
+
+            <div className="bg-white border border-brand-border rounded-lg p-6">
+              <span className="text-brand-gold font-heading font-black text-2xl">
+                3
+              </span>
+              <h3 className="font-heading font-black text-navy text-xl mb-3 mt-3">
+                Ongoing senior counsel
+              </h3>
+              <p className="text-charcoal text-[15px] leading-relaxed">
+                We stay close to the matter, reviewing drafts, preparing spokespeople,
+                pressure-testing language, and advising leadership as the situation
+                evolves.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <InlineEnquirySection
+        title="Need senior communications counsel on a sensitive matter?"
+        body="Use this form if you are preparing a significant announcement, managing a board or stakeholder issue, or want an experienced external advisor to review your communications posture before the pressure arrives."
+        bullets={[
+          "Executive and board communication support",
+          "Stakeholder engagement planning and message discipline",
+          "Sensitive media and internal communication advice",
+        ]}
+        defaultMessage="We need senior corporate communications support for an upcoming matter."
+      />
+
+      {/* Service detail */}
       <section className="bg-off-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="font-heading font-black text-navy text-3xl mb-6">
@@ -146,7 +271,31 @@ export default function CorporateCommunicationsPage() {
         </div>
       </section>
 
-      {/* Senior counsel, not account management */}
+      <section className="bg-white py-16 md:py-24">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="font-heading font-black text-navy text-3xl mb-6">
+            Where corporate communications usually breaks down
+          </h2>
+          <p className="text-charcoal text-[15px] leading-relaxed">
+            Most organisations do not suffer from a complete lack of
+            communication activity. They suffer from fragmentation. The board is
+            briefed one way. Staff hear something slightly different. External
+            stakeholders receive a message shaped by operational convenience
+            rather than strategic intent. Media responses are drafted under time
+            pressure and end up sounding defensive or incomplete.
+          </p>
+          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
+            That fragmentation is expensive. It weakens confidence, complicates
+            leadership decision-making, and creates avoidable risk around major
+            announcements, disputes, restructures, and sensitive governance
+            matters. The firms winning trust in difficult environments are the
+            ones that treat corporate communications as a disciplined leadership
+            function, not an afterthought once the decision has already been
+            made.
+          </p>
+        </div>
+      </section>
+
       <section className="bg-white py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-6">
           <h2 className="font-heading font-black text-navy text-3xl mb-6">
@@ -175,82 +324,7 @@ export default function CorporateCommunicationsPage() {
         </div>
       </section>
 
-      {/* How a corporate communications engagement begins */}
-      <section className="bg-off-white py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="font-heading font-black text-navy text-3xl mb-6">
-            How a corporate communications engagement begins
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
-            <div className="bg-off-white border border-brand-border rounded-lg p-6">
-              <span className="text-brand-gold font-heading font-black text-2xl">
-                1
-              </span>
-              <h3 className="font-heading font-black text-navy text-xl mb-3 mt-3">
-                Situation assessment
-              </h3>
-              <p className="text-charcoal text-[15px] leading-relaxed">
-                Every engagement begins with a structured assessment of your
-                current communications posture: your stakeholder map, your
-                media relationships, your messaging strengths and
-                vulnerabilities, and the specific challenges or objectives you
-                are working towards.
-              </p>
-            </div>
-
-            <div className="bg-off-white border border-brand-border rounded-lg p-6">
-              <span className="text-brand-gold font-heading font-black text-2xl">
-                2
-              </span>
-              <h3 className="font-heading font-black text-navy text-xl mb-3 mt-3">
-                Strategy development
-              </h3>
-              <p className="text-charcoal text-[15px] leading-relaxed">
-                Based on the assessment, we develop a communications strategy
-                that is specific to your organisation, your sector, and your
-                objectives. This includes messaging frameworks, stakeholder
-                engagement plans, and a calendar of communications activities.
-              </p>
-            </div>
-
-            <div className="bg-off-white border border-brand-border rounded-lg p-6">
-              <span className="text-brand-gold font-heading font-black text-2xl">
-                3
-              </span>
-              <h3 className="font-heading font-black text-navy text-xl mb-3 mt-3">
-                Ongoing counsel and execution
-              </h3>
-              <p className="text-charcoal text-[15px] leading-relaxed">
-                We work alongside your team as a senior communications partner,
-                providing strategic counsel, drafting and reviewing
-                communications, preparing your spokespeople, and managing your
-                media relationships on an ongoing basis.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Lead magnet intro + banner */}
-      <section className="bg-white py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <h3 className="font-heading font-black text-navy text-xl mb-3">
-            Is your organisation&apos;s communications strategy ready for
-            scrutiny?
-          </h3>
-          <p className="text-charcoal text-[15px] leading-relaxed">
-            Download our Crisis Communications Plan Template, the same
-            framework we use with ASX-listed companies and government
-            departments to prepare for the communications challenges that every
-            organisation eventually faces.
-          </p>
-        </div>
-      </section>
-
-      <LeadMagnetBanner magnet="crisisPlanTemplate" variant="dark" />
-
-      {/* Related sectors */}
+      {/* Proof and next-step resource */}
       <section className="bg-off-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="font-heading font-black text-navy text-3xl mb-6">
@@ -274,38 +348,28 @@ export default function CorporateCommunicationsPage() {
         </div>
       </section>
 
-      {/* Closing CTA */}
-      <section className="py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-navy text-white rounded-lg p-8 md:p-12 text-center">
-            <h2 className="font-heading font-black text-3xl mb-6">
-              Ready to build a communications strategy that holds up under
-              pressure?
-            </h2>
-            <p className="text-white/75 text-[15px] leading-relaxed max-w-2xl mx-auto mb-8">
-              Whether you are preparing for a major announcement, navigating a
-              sensitive stakeholder situation, or building a long-term
-              communications capability, we can help. Every conversation with
-              CRC PR begins with listening. There is no pitch, no template, no
-              account team. Just senior counsel.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs tracking-widest uppercase rounded-[4px] px-8 py-4 hover:bg-gold-light transition"
-              >
-                BOOK A CONFIDENTIAL CONSULTATION
-              </Link>
-              <a
-                href={siteConfig.phone.href}
-                className="text-white/75 font-heading font-black text-sm hover:text-brand-gold transition"
-              >
-                Call {siteConfig.phone.display}
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <LeadMagnetBanner
+        magnet="crisisPlanTemplate"
+        variant="dark"
+        title="Is your organisation's communications strategy ready for scrutiny?"
+        description="Download the CRC PR Crisis Communications Plan Template, the framework we use with listed companies, government departments, and associations to define escalation pathways, stakeholder sequencing, and message discipline before pressure arrives."
+        highlights={[
+          "Useful for boards and executive teams",
+          "Clarifies escalation and approval pathways",
+          "Built for real stakeholder pressure",
+        ]}
+        whatYouGetBody="A practical framework for leadership teams that need stronger communications control before the next sensitive matter becomes public."
+      />
+
+      <FAQSection
+        items={faqs}
+        titleText="Common questions about corporate communications support"
+      />
+
+      <PageClosingCTA
+        title="Ready to build a communications strategy that holds up under pressure?"
+        body="Whether you are preparing for a major announcement, navigating a sensitive stakeholder situation, or building long-term communications capability, CRC PR provides direct access to senior counsel from the first conversation."
+      />
     </>
   );
 }

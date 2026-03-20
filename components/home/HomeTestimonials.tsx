@@ -32,7 +32,7 @@ export function HomeTestimonials() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Asymmetric: featured testimonial large on left, two smaller on right */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-          {/* Featured — large card, 7 cols */}
+          {/* Featured large card, 7 cols */}
           <AnimateIn className="lg:col-span-7">
             <div className="bg-white rounded-lg p-10 h-full border-l-[3px] border-brand-gold shadow-sm hover:shadow-md hover:shadow-navy/5 transition-shadow duration-300">
               <svg
@@ -62,7 +62,7 @@ export function HomeTestimonials() {
             </div>
           </AnimateIn>
 
-          {/* Two smaller cards stacked — 5 cols */}
+          {/* Two smaller cards stacked, 5 cols */}
           <div className="lg:col-span-5 flex flex-col gap-6">
             {testimonials.slice(1).map((t, i) => (
               <AnimateIn key={t.name} delay={(i + 1) * 150}>
@@ -84,7 +84,7 @@ export function HomeTestimonials() {
           </div>
         </div>
 
-        {/* Survey stat — pull-quote style, not a card */}
+        {/* Survey stat, pull-quote style, not a card */}
         <AnimateIn>
           <div className="mt-16 text-center">
             <p className="font-sans italic text-charcoal-mid text-base">

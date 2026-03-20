@@ -8,11 +8,31 @@ import { LeadMagnetModal } from "./LeadMagnetModal";
 export interface LeadMagnetBannerProps {
   magnet: LeadMagnetKey;
   variant?: "dark" | "light";
+  eyebrow?: string;
+  title?: string;
+  description?: string;
+  highlights?: string[];
+  whatYouGetTitle?: string;
+  whatYouGetBody?: string;
+  buttonLabel?: string;
+  footnote?: string;
 }
 
 export function LeadMagnetBanner({
   magnet,
   variant = "dark",
+  eyebrow = "FREE RESOURCE",
+  title,
+  description,
+  highlights = [
+    "Built from senior advisory work",
+    "Immediate next-step guidance",
+    "Delivered directly to your inbox",
+  ],
+  whatYouGetTitle = "What you get",
+  whatYouGetBody = "A practical resource designed to help leadership teams make a better decision sooner.",
+  buttonLabel = "DOWNLOAD FREE RESOURCE →",
+  footnote = "Delivered to your inbox. No commitment required.",
 }: LeadMagnetBannerProps) {
   const [modalOpen, setModalOpen] = useState(false);
   const meta = siteConfig.leadMagnets[magnet];
@@ -22,51 +42,89 @@ export function LeadMagnetBanner({
     <>
       <section
         className={
-          isDark ? "py-16 bg-navy" : "py-16 bg-off-white"
+          isDark ? "py-16 md:py-20 bg-navy" : "py-16 md:py-20 bg-off-white"
         }
       >
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
-            <div className="lg:col-span-3">
+          <div
+            className={`grid grid-cols-1 lg:grid-cols-[minmax(0,1.2fr)_320px] gap-10 items-stretch rounded-lg border ${
+              isDark
+                ? "border-white/10 bg-white/[0.03]"
+                : "border-brand-border bg-white"
+            }`}
+          >
+            <div className="p-8 md:p-10">
               <p className="text-brand-teal text-xs font-medium tracking-[0.14em] uppercase">
-                FREE RESOURCE
+                {eyebrow}
               </p>
               <h2
-                className={`text-3xl font-heading font-black mt-2 ${
+                className={`text-3xl font-heading font-black mt-3 ${
                   isDark ? "text-white" : "text-navy"
                 }`}
               >
-                {meta.title}
+                {title ?? meta.title}
               </h2>
               <p
-                className={`text-base leading-relaxed mt-4 ${
+                className={`text-base leading-relaxed mt-4 max-w-2xl ${
                   isDark ? "text-white/70" : "text-charcoal-mid"
                 }`}
               >
-                {meta.description}
+                {description ?? meta.description}
               </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+                {highlights.map((item) => (
+                  <div
+                    key={item}
+                    className={`rounded-md border px-4 py-4 ${
+                      isDark
+                        ? "border-white/15 bg-white/[0.06] text-white"
+                        : "border-brand-border bg-off-white text-charcoal-mid"
+                    }`}
+                  >
+                    <p className="text-sm leading-relaxed">{item}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-            <div className="lg:col-span-2">
-              <div
-                className={`p-6 rounded-lg ${
-                  isDark
-                    ? "bg-navy-mid border border-brand-gold/20"
-                    : "bg-white border border-brand-border"
-                }`}
-              >
+            <div
+              className={`p-8 md:p-10 ${
+                isDark
+                  ? "border-t lg:border-t-0 lg:border-l border-white/10 bg-navy-mid/70"
+                  : "border-t lg:border-t-0 lg:border-l border-brand-border bg-off-white"
+              }`}
+            >
+              <div className="h-full flex flex-col justify-between">
+                <div>
+                  <p
+                    className={`text-xs tracking-[0.14em] uppercase ${
+                      isDark ? "text-white/35" : "text-charcoal-mid"
+                    }`}
+                  >
+                    {whatYouGetTitle}
+                  </p>
+                  <p
+                    className={`text-sm leading-relaxed mt-3 ${
+                      isDark ? "text-white/65" : "text-charcoal-mid"
+                    }`}
+                  >
+                    {whatYouGetBody}
+                  </p>
+                </div>
+
                 <button
                   type="button"
                   onClick={() => setModalOpen(true)}
-                  className="bg-brand-gold text-navy font-heading font-black text-sm tracking-widest uppercase w-full py-4 rounded-[4px] hover:bg-gold-light transition"
+                  className="bg-brand-gold text-navy font-heading font-black text-sm tracking-widest uppercase w-full py-4 rounded-[4px] hover:bg-gold-light transition mt-8"
                 >
-                  DOWNLOAD FREE RESOURCE →
+                  {buttonLabel}
                 </button>
                 <p
                   className={`text-xs mt-3 ${
                     isDark ? "text-white/50" : "text-charcoal-mid"
                   }`}
                 >
-                  Delivered to your inbox. No commitment required.
+                  {footnote}
                 </p>
               </div>
             </div>

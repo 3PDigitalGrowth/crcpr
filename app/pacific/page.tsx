@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { PageHero } from "@/components/layout/PageHero";
+import { FAQSection } from "@/components/shared/FAQSection";
+import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
 import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
+import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
+import { PageProofStrip } from "@/components/shared/PageProofStrip";
 
 export const metadata: Metadata = {
   title: "Pacific Communications & PR Advisory | CRC Public Relations",
@@ -62,6 +65,45 @@ const PACIFIC_NATIONS = [
   "New Zealand",
 ] as const;
 
+const proofItems = [
+  {
+    label: "Regional depth",
+    value: "Pacific-specific",
+    detail:
+      "Our advice is built for the political, cultural, and stakeholder realities of Pacific Island nations, not copied from an Australian playbook.",
+  },
+  {
+    label: "Relationship discipline",
+    value: "Protocol-aware",
+    detail:
+      "We understand the weight of community, church, traditional leadership, and the practical importance of sequencing engagement correctly.",
+  },
+  {
+    label: "Cross-border counsel",
+    value: "Government to donor",
+    detail:
+      "We support governments, NGOs, development partners, and Australian organisations operating across the region.",
+  },
+] as const;
+
+const faqs = [
+  {
+    question: "What makes Pacific communications advice different from Australian communications advice?",
+    answer:
+      "Pacific work depends far more heavily on protocol, relationship, local authority structures, and sequencing. Advice that is technically correct in an Australian context can still fail badly if it is culturally or politically misread in a Pacific setting.",
+  },
+  {
+    question: "Who do you work with in the Pacific?",
+    answer:
+      "CRC PR works with Pacific governments, regional organisations, NGOs, development partners, and Australian organisations operating in the region. The common requirement is communications judgement shaped by genuine Pacific experience.",
+  },
+  {
+    question: "Can you help with politically or culturally sensitive Pacific matters?",
+    answer:
+      "Yes. Those are often the matters where outside advice is most valuable, provided it is informed by regional understanding rather than imported assumptions. Early communication decisions in the Pacific can affect relationships for years.",
+  },
+];
+
 export default function PacificPage() {
   return (
     <>
@@ -76,6 +118,11 @@ export default function PacificPage() {
         description="CRC PR is the only Australian corporate PR firm with deep, sustained expertise across Pacific Island nations: government relations, development communications, cross-cultural stakeholder engagement, and crisis response."
         ctaLabel="WORK WITH US IN THE PACIFIC"
         ctaHref="/contact"
+      />
+
+      <PageProofStrip
+        title="Pacific advisory work succeeds when communication respects context, protocol, and relationship."
+        items={[...proofItems]}
       />
 
       {/* Opening */}
@@ -107,6 +154,39 @@ export default function PacificPage() {
           </p>
         </div>
       </section>
+
+      <section className="bg-white pb-16 md:pb-24">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="font-heading font-black text-navy text-3xl mb-6">
+            Why generic communications advice fails in the Pacific
+          </h2>
+          <p className="text-charcoal text-[15px] leading-relaxed">
+            The most common mistake external organisations make in Pacific
+            communications is assuming that process equals legitimacy. It does
+            not. Formal consultation can still fail if the real authority
+            structure has not been understood, if cultural protocols are rushed,
+            or if a message is technically correct but relationally tone-deaf.
+          </p>
+          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
+            Effective Pacific communications requires more than translation. It
+            requires judgement about who should hear a message first, what needs
+            to happen before a public position is taken, and how the long-term
+            relationship will be affected by the short-term decision.
+          </p>
+        </div>
+      </section>
+
+      <InlineEnquirySection
+        title="Need senior communications advice for a Pacific matter?"
+        body="We work with Pacific governments, regional organisations, NGOs, development partners, and Australian organisations operating in the region. If the matter is culturally or politically sensitive, early advice matters."
+        bullets={[
+          "Pacific government and donor-facing communications support",
+          "Cross-cultural stakeholder engagement planning",
+          "Crisis and issue advice for region-specific matters",
+        ]}
+        defaultMessage="We need Pacific communications or stakeholder engagement advice."
+        variant="white"
+      />
 
       {/* Pacific footprint */}
       <section className="bg-off-white py-16 md:py-24">
@@ -266,45 +346,22 @@ export default function PacificPage() {
         </div>
       </section>
 
-      {/* Lead magnet */}
-      <section className="bg-white py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <h3 className="font-heading font-black text-navy text-xl mb-3">
-            Free: Pacific Stakeholder Engagement Guide
-          </h3>
-          <p className="text-charcoal text-[15px] leading-relaxed">
-            A practical guide to cross-cultural communications and stakeholder
-            engagement across Pacific Island nations. Covers cultural protocols,
-            government relations, development communications, and the specific
-            communication sensitivities in different Pacific contexts. Written
-            from 25 years of direct Pacific engagement.
-          </p>
-        </div>
-      </section>
+      <LeadMagnetBanner
+        magnet="pacificGuide"
+        title="Free: Pacific Stakeholder Engagement Guide"
+        description="A practical guide to cross-cultural communications and stakeholder engagement across Pacific Island nations. Covers protocol, government relations, development communication, and the decisions that protect long-term relationships in Pacific contexts."
+      />
 
-      <LeadMagnetBanner magnet="pacificGuide" />
+      <FAQSection
+        items={faqs}
+        titleText="Common questions about Pacific advisory work"
+      />
 
-      {/* Closing CTA */}
-      <section className="bg-navy py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="font-heading font-black text-white text-3xl mb-6">
-            Working in the Pacific? Talk to the firm that genuinely knows the
-            region.
-          </h2>
-          <p className="text-white/75 text-[15px] leading-relaxed max-w-2xl mx-auto mb-8">
-            Whether you are an Australian organisation with Pacific operations,
-            a development partner working across the region, or a Pacific
-            government seeking communications counsel, we would like to hear
-            about your situation.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs tracking-widest uppercase rounded-[4px] px-8 py-4 hover:bg-gold-light transition"
-          >
-            BOOK A PACIFIC ADVISORY CONSULTATION
-          </Link>
-        </div>
-      </section>
+      <PageClosingCTA
+        title="Working in the Pacific? Talk to the firm that genuinely knows the region."
+        body="Whether you are operating across multiple Pacific jurisdictions or preparing for a single sensitive engagement, CRC PR provides senior communications counsel grounded in regional experience."
+        primaryLabel="BOOK A PACIFIC ADVISORY CONSULTATION"
+      />
     </>
   );
 }

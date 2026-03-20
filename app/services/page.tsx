@@ -10,7 +10,11 @@ import {
 } from "lucide-react";
 import { PageHero } from "@/components/layout/PageHero";
 import { CapabilityDownload } from "@/components/shared/CapabilityDownload";
+import { FAQSection } from "@/components/shared/FAQSection";
+import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
 import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
+import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
+import { PageProofStrip } from "@/components/shared/PageProofStrip";
 
 export const metadata: Metadata = {
   title: "Corporate PR Services",
@@ -72,6 +76,45 @@ const services: {
   },
 ];
 
+const proofItems = [
+  {
+    label: "Senior access",
+    value: "Direct counsel",
+    detail:
+      "Every service is delivered with direct access to experienced advisors rather than a junior account structure.",
+  },
+  {
+    label: "High-stakes focus",
+    value: "Pressure-tested",
+    detail:
+      "CRC PR is strongest where reputation, governance, stakeholder confidence, or urgent response genuinely matter.",
+  },
+  {
+    label: "Practical outcomes",
+    value: "Strategy to action",
+    detail:
+      "The work spans planning, message development, spokesperson readiness, issue management, and execution under pressure.",
+  },
+] as const;
+
+const faqs = [
+  {
+    question: "How do we know which CRC PR service is the right starting point?",
+    answer:
+      "Most clients arrive with a situation rather than a neatly labelled service category. We help identify whether the immediate need is strategic communications counsel, issues management, crisis support, media strategy, reputation work, or a blend of several services.",
+  },
+  {
+    question: "Do you provide standalone project support as well as ongoing counsel?",
+    answer:
+      "Yes. Some clients need support around a single matter, announcement, or review. Others want an ongoing senior advisory relationship. The structure depends on the situation, the pace, and the level of internal capability.",
+  },
+  {
+    question: "Are all services led by senior advisors?",
+    answer:
+      "Yes. CRC PR is structured around direct senior counsel. There is no separate junior account model for complex or sensitive work.",
+  },
+];
+
 export default function ServicesPage() {
   return (
     <>
@@ -81,6 +124,41 @@ export default function ServicesPage() {
         description="CRC PR provides senior-level counsel across the full spectrum of corporate communications. Every engagement is led by experienced advisors who work directly with your leadership team."
         ctaLabel="BOOK A CONSULTATION"
         ctaHref="/contact"
+      />
+
+      <PageProofStrip
+        title="The service mix changes by client. The standard of counsel does not."
+        items={[...proofItems]}
+      />
+
+      <section className="bg-white py-16 md:py-24">
+        <div className="max-w-3xl mx-auto px-6">
+          <p className="text-charcoal-mid text-[15px] leading-relaxed">
+            Most organisations do not need more communications activity. They need
+            clearer judgement about what matters, which stakeholders carry the greatest
+            risk or influence, and what sequence of communication will hold up under
+            scrutiny. That is why CRC PR&apos;s services are designed around pressure points,
+            not agency departments.
+          </p>
+          <p className="text-charcoal-mid text-[15px] leading-relaxed mt-6">
+            Some clients come to us because a crisis is already active. Others need a
+            stronger media position, sharper executive messaging, better reputation
+            visibility, or earlier intervention around an emerging issue. The right
+            service is usually the one that gives leadership more control sooner.
+          </p>
+        </div>
+      </section>
+
+      <InlineEnquirySection
+        title="Not sure which service is the right starting point?"
+        body="That is common. Many clients come to CRC PR with a situation rather than a neatly labelled service category. We can help identify the right starting point and the right next step."
+        bullets={[
+          "Sensitive matters needing senior communications judgement",
+          "Preparation before a major announcement or issue escalates",
+          "Reputation, media, crisis, and stakeholder communication advice",
+        ]}
+        defaultMessage="We would like advice on which CRC PR service is the right starting point for our situation."
+        variant="white"
       />
 
       <section className="bg-white py-24">
@@ -118,11 +196,25 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <LeadMagnetBanner magnet="reputationAssessment" />
+      <LeadMagnetBanner
+        magnet="reputationAssessment"
+        title="Want a clearer view of where your organisation is exposed?"
+        description="Start with the CRC PR Reputation Vulnerability Assessment. It gives leadership a fast view of media, stakeholder, governance, crisis, and digital exposure so the next decision is based on evidence rather than instinct."
+      />
 
       <div className="max-w-3xl mx-auto px-6 py-16">
         <CapabilityDownload />
       </div>
+
+      <FAQSection
+        items={faqs}
+        titleText="Common questions about CRC PR services"
+      />
+
+      <PageClosingCTA
+        title="Not sure which service is the right starting point?"
+        body="That is common. Many clients come to CRC PR with a situation rather than a neatly labelled service category. We can help you identify the right starting point and the right next step."
+      />
     </>
   );
 }

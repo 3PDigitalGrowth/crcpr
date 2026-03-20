@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/layout/PageHero";
+import { FAQSection } from "@/components/shared/FAQSection";
+import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
+import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
+import { PageProofStrip } from "@/components/shared/PageProofStrip";
 import { ReputationAssessment } from "@/components/shared/ReputationAssessment";
 
 export const metadata: Metadata = {
@@ -32,6 +36,50 @@ const sectorLinks = [
   { label: "Schools & Faith-Based", href: "/clients/schools-faith" },
 ] as const;
 
+const proofItems = [
+  {
+    label: "Exposure mapping",
+    value: "Signals first",
+    detail:
+      "Reputation failures are usually visible in stakeholder, media, and governance signals before they become public events.",
+  },
+  {
+    label: "Leadership clarity",
+    value: "Actionable insight",
+    detail:
+      "We translate communications risk into a decision-ready view for executives, boards, and senior stakeholders.",
+  },
+  {
+    label: "Long-term protection",
+    value: "Disciplined monitoring",
+    detail:
+      "Reputation management is not a one-off campaign. It is an ongoing leadership discipline with regular review points.",
+  },
+] as const;
+
+const faqs = [
+  {
+    question: "What is the difference between reputation management and crisis communications?",
+    answer:
+      "Reputation management is the longer-horizon discipline of identifying vulnerabilities, monitoring risk, and strengthening trust before a major public event occurs. Crisis communications is what happens when the issue is already live and public pressure is active.",
+  },
+  {
+    question: "Who usually uses a reputation vulnerability assessment?",
+    answer:
+      "Boards, CEOs, communications leaders, and risk teams use it when they want a more realistic view of stakeholder, media, digital, and governance exposure. It is especially useful before major change, growth, scrutiny, or leadership transition.",
+  },
+  {
+    question: "Can CRC PR help if reputation damage has already occurred?",
+    answer:
+      "Yes. Reputation work often starts after a trust event. In those cases we assess what caused the damage, how key stakeholders currently perceive the organisation, and what communication and behaviour changes are needed to rebuild confidence over time.",
+  },
+  {
+    question: "Is this a one-off project or an ongoing advisory relationship?",
+    answer:
+      "It can be either. Some organisations want a single vulnerability assessment or recovery roadmap. Others retain CRC PR as an ongoing senior reputation partner because they want regular review points, monitoring, and strategic counsel before new issues emerge.",
+  },
+];
+
 export default function ReputationManagementPage() {
   return (
     <>
@@ -46,6 +94,11 @@ export default function ReputationManagementPage() {
         description="Vulnerability assessments, stakeholder perception analysis, reputation monitoring, and long-term reputation protection for organisations that cannot afford to find out they were exposed the hard way."
         ctaLabel="BOOK A CONSULTATION"
         ctaHref="/contact"
+      />
+
+      <PageProofStrip
+        title="Strong reputations are rarely accidental. They are managed deliberately."
+        items={[...proofItems]}
       />
 
       {/* Opening section */}
@@ -73,7 +126,78 @@ export default function ReputationManagementPage() {
         </div>
       </section>
 
-      {/* How CRC PR approaches reputation management */}
+      <section className="bg-off-white py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="font-heading font-black text-navy text-3xl mb-6">
+            What reputation pressure looks like before it becomes public
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+            {[
+              "A regulator starts asking sharper questions and the tone changes",
+              "Stakeholder frustration becomes more organised and more visible",
+              "Media interest shifts from occasional enquiry to pattern recognition",
+              "Leadership no longer has confidence that internal and external messages are aligned",
+            ].map((item) => (
+              <div
+                key={item}
+                className="rounded-lg border border-brand-border bg-white p-6"
+              >
+                <p className="text-charcoal text-base leading-relaxed">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Primary conversion moved earlier in the flow */}
+      <section className="bg-white py-20">
+        <div className="max-w-3xl mx-auto px-6">
+          <p className="text-brand-gold text-xs font-medium tracking-[0.14em] uppercase mb-4">
+            START HERE
+          </p>
+          <h2 className="font-heading font-black text-navy text-3xl mb-8">
+            Find out where your organisation is exposed
+          </h2>
+          <p className="text-charcoal text-base leading-relaxed">
+            Our Reputation Vulnerability Assessment evaluates your organisation across
+            five risk areas: media readiness, crisis preparedness, stakeholder trust,
+            digital exposure, and governance. It is designed to give leadership a
+            faster, clearer view of where the next trust problem is most likely to emerge.
+          </p>
+          <p className="text-charcoal text-base leading-relaxed mt-6">
+            This is the same framework we use in professional engagements, distilled
+            into a practical self-assessment you can complete now.
+          </p>
+        </div>
+      </section>
+
+      <ReputationAssessment />
+
+      <section className="py-12">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="bg-navy rounded-lg p-8">
+            <p className="text-brand-gold text-xs font-medium tracking-[0.14em] uppercase mb-3">
+              NEXT STEP
+            </p>
+            <h3 className="font-heading font-black text-white text-2xl mb-3">
+              Want to discuss your results?
+            </h3>
+            <p className="text-white/70 text-base mb-6">
+              Once you have completed the assessment, our advisers can walk you
+              through your score and what it means for your organisation in a
+              confidential, no-obligation conversation.
+            </p>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs tracking-widest uppercase px-6 py-3 rounded-[4px] hover:bg-gold-light transition"
+            >
+              Book a confidential consultation →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Service detail */}
       <section className="bg-off-white py-24">
         <div className="max-w-3xl mx-auto px-6">
           <h2 className="font-heading font-black text-navy text-3xl mb-12">
@@ -170,52 +294,6 @@ export default function ReputationManagementPage() {
         </div>
       </section>
 
-      {/* Start here: assessment intro */}
-      <section className="bg-off-white py-24">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="font-heading font-black text-navy text-3xl mb-8">
-            Start here: find out where your organisation is exposed
-          </h2>
-          <p className="text-charcoal text-base leading-relaxed">
-            Our Reputation Vulnerability Assessment is a 20-question tool that
-            evaluates your organisation across five risk areas: media readiness,
-            crisis preparedness, stakeholder trust, digital exposure, and
-            governance. It takes three minutes and produces a scored risk profile
-            that your leadership team can act on immediately.
-          </p>
-          <p className="text-charcoal text-base leading-relaxed mt-6">
-            This is the same framework we use in our professional engagements,
-            distilled into a self-assessment you can complete right now.
-          </p>
-        </div>
-      </section>
-
-      <ReputationAssessment />
-
-      <section className="py-12">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-navy rounded-lg p-8">
-            <p className="text-brand-gold text-xs font-medium tracking-[0.14em] uppercase mb-3">
-              NEXT STEP
-            </p>
-            <h3 className="font-heading font-black text-white text-2xl mb-3">
-              Want to discuss your results?
-            </h3>
-            <p className="text-white/70 text-base mb-6">
-              Once you&apos;ve completed the assessment, our advisers can walk
-              you through your score and what it means for your organisation in a
-              confidential, no-obligation conversation.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs tracking-widest uppercase px-6 py-3 rounded-[4px] hover:bg-gold-light transition"
-            >
-              Book a confidential consultation →
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Related sectors */}
       <section className="bg-off-white py-16">
         <div className="max-w-7xl mx-auto px-6">
@@ -236,16 +314,27 @@ export default function ReputationManagementPage() {
         </div>
       </section>
 
-      <section className="bg-navy py-16">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <Link
-            href="/contact"
-            className="text-white font-heading font-black text-xl hover:text-brand-gold transition"
-          >
-            Discuss your reputation management needs →
-          </Link>
-        </div>
-      </section>
+      <InlineEnquirySection
+        title="Concerned about where your organisation is exposed?"
+        body="If your board, executive team, or communications function needs a clearer view of reputation risk, we can help you assess the pressure points before they become a recovery project."
+        bullets={[
+          "Leadership-level reputation risk assessment",
+          "Stakeholder and media exposure review",
+          "Recovery advice for damaged trust environments",
+        ]}
+        defaultMessage="We would like confidential advice on our organisation's reputation risk and next steps."
+      />
+
+      <FAQSection
+        items={faqs}
+        titleText="Common questions about reputation management"
+      />
+
+      <PageClosingCTA
+        title="Reputation damage is easier to prevent than to reverse."
+        body="CRC PR works with organisations that want a realistic view of where they are exposed, what needs to be strengthened, and what their leadership team should do next."
+        primaryLabel="DISCUSS YOUR REPUTATION MANAGEMENT NEEDS"
+      />
     </>
   );
 }

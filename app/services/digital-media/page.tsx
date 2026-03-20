@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { PageHero } from "@/components/layout/PageHero";
+import { FAQSection } from "@/components/shared/FAQSection";
+import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
 import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
+import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
+import { PageProofStrip } from "@/components/shared/PageProofStrip";
 
 export const metadata: Metadata = {
   title:
@@ -25,6 +28,50 @@ const jsonLd = {
   serviceType: "Online Reputation Management",
 };
 
+const proofItems = [
+  {
+    label: "Digital exposure",
+    value: "Minutes, not days",
+    detail:
+      "Online issues escalate faster than traditional media stories, which is why monitoring and response discipline matter so much.",
+  },
+  {
+    label: "Strategic approach",
+    value: "Reputation first",
+    detail:
+      "We do not treat digital channels as a content exercise. We treat them as reputation environments that require governance and judgement.",
+  },
+  {
+    label: "Channel control",
+    value: "Platform-aware",
+    detail:
+      "Response decisions vary by channel, audience, and severity. Not every online attack deserves the same public answer.",
+  },
+] as const;
+
+const faqs = [
+  {
+    question: "Is online reputation management different from traditional PR?",
+    answer:
+      "The channels are different, but the underlying reputation discipline is the same. Digital environments simply compress the timeframe and make weak governance or slow decision-making visible much faster.",
+  },
+  {
+    question: "Can CRC PR help with social media issues that are starting to escalate?",
+    answer:
+      "Yes. We help organisations assess whether the issue needs acknowledgement, containment, escalation, or silence, then align the digital response with the broader communications and stakeholder position.",
+  },
+  {
+    question: "Do you operate like a social media agency?",
+    answer:
+      "No. CRC PR approaches digital channels from a senior communications and reputation perspective, not a volume-content or community-management model. The emphasis is judgement, escalation, and brand authority.",
+  },
+  {
+    question: "What kinds of digital risks do you usually assess?",
+    answer:
+      "Typical risks include weak approval pathways, poor monitoring, inconsistent tone of voice, slow escalation, review-site pressure, executive social exposure, and digital issues that are likely to spill into mainstream media coverage.",
+  },
+];
+
 export default function DigitalMediaPage() {
   return (
     <>
@@ -39,6 +86,11 @@ export default function DigitalMediaPage() {
         description="Online reputation management, social media strategy, and digital crisis response. Senior PR counsel applied to the digital channels where reputations are increasingly won and lost."
         ctaLabel="BOOK A CONSULTATION"
         ctaHref="/contact"
+      />
+
+      <PageProofStrip
+        title="Online reputation management is reputation management, with a shorter fuse."
+        items={[...proofItems]}
       />
 
       {/* Opening section */}
@@ -68,6 +120,41 @@ export default function DigitalMediaPage() {
           </p>
         </div>
       </section>
+
+      <section className="bg-off-white py-16 md:py-24">
+        <div className="max-w-3xl mx-auto px-6">
+          <p className="text-brand-gold font-sans font-medium text-xs tracking-[0.14em] uppercase mb-4">
+            EARLY WARNING SIGNS
+          </p>
+          <h2 className="font-heading font-black text-navy text-3xl mb-6">
+            What digital reputation pressure usually looks like
+          </h2>
+          <p className="text-charcoal text-[15px] leading-relaxed">
+            It rarely begins with a fully formed crisis. It starts with weak
+            governance, slow monitoring, unclear approval pathways, and no shared
+            position on when to respond, when to hold, and when to escalate. By
+            the time a screenshot reaches the mainstream media, the real problem
+            has usually been live for longer than leadership realised.
+          </p>
+          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
+            The organisations most resilient online are the ones with a clear
+            communications posture, active monitoring, and an agreed digital
+            escalation model before pressure arrives.
+          </p>
+        </div>
+      </section>
+
+      <InlineEnquirySection
+        title="Need a digital reputation review?"
+        body="If your organisation needs better monitoring, stronger governance, or a clearer response plan for online issues, CRC PR can help you assess the exposure and tighten the system."
+        bullets={[
+          "Digital reputation and social governance reviews",
+          "Online issue and escalation planning",
+          "Senior advice for social and review-driven reputation pressure",
+        ]}
+        defaultMessage="We would like a digital reputation review and advice on our online communications risks."
+        variant="white"
+      />
 
       {/* Digital communications services */}
       <section className="bg-off-white py-16 md:py-24">
@@ -172,45 +259,27 @@ export default function DigitalMediaPage() {
         </div>
       </section>
 
-      {/* Lead magnet */}
-      <section className="bg-off-white py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <h3 className="font-heading font-black text-navy text-xl mb-3">
-            How exposed is your organisation&apos;s digital reputation?
-          </h3>
-          <p className="text-charcoal text-[15px] leading-relaxed">
-            Our Reputation Vulnerability Assessment includes a specific digital
-            exposure module, evaluating your social media governance, online
-            monitoring capability, and readiness to respond to a digital crisis.
-            It takes 3 minutes and tells you exactly where you are exposed.
-          </p>
-        </div>
-      </section>
+      <LeadMagnetBanner
+        magnet="reputationAssessment"
+        title="How exposed is your organisation's digital reputation?"
+        description="Our Reputation Vulnerability Assessment includes a digital exposure lens covering monitoring, governance, escalation, and online trust risks. It is a fast way to identify where your organisation is currently overconfident or underprepared."
+        highlights={[
+          "Includes digital exposure review",
+          "Useful for communications and risk leaders",
+          "Turns online risk into practical next steps",
+        ]}
+      />
 
-      <LeadMagnetBanner magnet="reputationAssessment" />
+      <FAQSection
+        items={faqs}
+        titleText="Common questions about digital reputation management"
+      />
 
-      {/* Closing CTA */}
-      <section className="py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-navy text-white rounded-lg p-8 md:p-12 text-center">
-            <h2 className="font-heading font-black text-3xl mb-6">
-              Your organisation is being talked about online right now.
-            </h2>
-            <p className="text-white/75 text-[15px] leading-relaxed max-w-2xl mx-auto mb-8">
-              The question is whether you know about it, and whether you are
-              prepared to respond. We can help you find out, and build the
-              capability to manage your digital reputation with the same rigour
-              you bring to your traditional communications.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs tracking-widest uppercase rounded-[4px] px-8 py-4 hover:bg-gold-light transition"
-            >
-              BOOK A DIGITAL REPUTATION REVIEW
-            </Link>
-          </div>
-        </div>
-      </section>
+      <PageClosingCTA
+        title="Your organisation is being talked about online right now."
+        body="The real question is whether you know where the pressure points are and whether your team is ready to respond with discipline. CRC PR helps organisations manage digital reputation with the same rigour they expect in every other high-stakes communication setting."
+        primaryLabel="BOOK A DIGITAL REPUTATION REVIEW"
+      />
     </>
   );
 }

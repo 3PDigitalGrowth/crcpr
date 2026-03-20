@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { PageHero } from "@/components/layout/PageHero";
+import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
+import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
+import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
+import { PageProofStrip } from "@/components/shared/PageProofStrip";
 import { PortraitPlaceholder } from "@/components/shared/PortraitPlaceholder";
 
 export const metadata: Metadata = {
@@ -16,6 +20,33 @@ export default function LyallMercerPage() {
       <PageHero
         eyebrow="FOUNDER & PRINCIPAL ADVISOR"
         title="Lyall Mercer"
+        description="Founder of CRC Public Relations. Former journalist, trusted crisis advisor, and senior counsellor to leaders facing scrutiny, pressure, and reputational risk."
+        ctaLabel="WORK WITH LYALL"
+        ctaHref="/contact"
+      />
+
+      <PageProofStrip
+        title="Lyall Mercer is trusted when the matter requires judgement, not performance."
+        items={[
+          {
+            label: "Background",
+            value: "Journalist first",
+            detail:
+              "His media background informs how he assesses risk, narrative pressure, and what public scrutiny is likely to do next.",
+          },
+          {
+            label: "Advisory depth",
+            value: "25+ years",
+            detail:
+              "He has advised companies, governments, associations, schools, and high-profile individuals through high-stakes situations.",
+          },
+          {
+            label: "Working style",
+            value: "Direct and measured",
+            detail:
+              "Clients engage Lyall for practical judgement, clear recommendations, and calm counsel when the stakes are high.",
+          },
+        ]}
       />
 
       <section className="bg-white py-24">
@@ -159,16 +190,30 @@ export default function LyallMercerPage() {
         </div>
       </section>
 
-      <section className="bg-navy py-16">
-        <div className="max-w-2xl mx-auto px-6 text-center">
-          <Link
-            href="/contact"
-            className="inline-block bg-brand-gold text-navy font-heading font-black text-sm tracking-widest uppercase px-8 py-4 rounded-[4px] hover:bg-gold-light transition"
-          >
-            Work with Lyall →
-          </Link>
-        </div>
-      </section>
+      <LeadMagnetBanner
+        magnet="mediaInterviewGuide"
+        variant="light"
+        title="Want to see the kind of media preparation Lyall expects before a high-pressure interview?"
+        description="Download the CRC PR Media Interview Preparation Guide. It reflects the practical, journalist-informed approach Lyall Mercer brings to media strategy, spokesperson readiness, and executive preparation."
+      />
+
+      <InlineEnquirySection
+        title="Need Lyall's advice on a high-stakes matter?"
+        body="Use this form for confidential advisory, speaking, commentary, or specialist crisis and reputation enquiries involving Lyall Mercer."
+        bullets={[
+          "Crisis and reputation advisory enquiries",
+          "Speaking, media, and expert commentary requests",
+          "Senior counsel for leaders under pressure",
+        ]}
+        defaultMessage="We would like to discuss advisory or speaking work with Lyall Mercer."
+        variant="white"
+      />
+
+      <PageClosingCTA
+        title="Work directly with Lyall Mercer."
+        body="For advisory, commentary, speaking, or high-stakes communications matters, get in touch and we will route the conversation appropriately."
+        primaryLabel="WORK WITH LYALL"
+      />
     </>
   );
 }

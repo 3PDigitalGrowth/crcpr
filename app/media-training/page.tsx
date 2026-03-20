@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Check } from "lucide-react";
 import { PageHero } from "@/components/layout/PageHero";
+import { FAQSection } from "@/components/shared/FAQSection";
+import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
 import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
+import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
+import { PageProofStrip } from "@/components/shared/PageProofStrip";
 
 export const metadata: Metadata = {
   title:
@@ -35,6 +38,45 @@ const WHO_NEEDS_ITEMS = [
   "Your team handles media enquiries but has never received formal training on how to do so",
 ] as const;
 
+const proofItems = [
+  {
+    label: "Trainer perspective",
+    value: "Journalist-led",
+    detail:
+      "Training is delivered by people who know how interviews are framed, where pressure comes from, and what weak answers sound like.",
+  },
+  {
+    label: "Practical rehearsal",
+    value: "Real scenarios",
+    detail:
+      "Sessions are built around your issues, your likely questions, and the interviews your leaders are actually going to face.",
+  },
+  {
+    label: "Executive confidence",
+    value: "Prepared spokespeople",
+    detail:
+      "The goal is not a performance. It is a spokesperson who can answer difficult questions with control, clarity, and credibility.",
+  },
+] as const;
+
+const faqs = [
+  {
+    question: "Who should attend media training?",
+    answer:
+      "Usually the people most likely to be quoted, filmed, or called when pressure rises: executives, subject matter experts, board-level spokespeople, and communications leaders responsible for supporting them.",
+  },
+  {
+    question: "Is CRC PR's media training generic or tailored?",
+    answer:
+      "Tailored. Sessions are built around your issues, likely lines of questioning, and the specific vulnerabilities a skilled interviewer would test, rather than generic interview exercises.",
+  },
+  {
+    question: "Can you run hostile interview or crisis-specific sessions?",
+    answer:
+      "Yes. We regularly run hostile interview rehearsal and crisis-specific training for leaders preparing for media pressure around regulatory, governance, operational, or reputational issues.",
+  },
+];
+
 export default function MediaTrainingPage() {
   return (
     <>
@@ -49,6 +91,11 @@ export default function MediaTrainingPage() {
         description="Spokesperson training, hostile interview preparation, and on-camera coaching delivered by former television and radio journalists with decades of broadcast experience."
         ctaLabel="BOOK A MEDIA TRAINING SESSION"
         ctaHref="/contact"
+      />
+
+      <PageProofStrip
+        title="Good media training improves judgement, not just technique."
+        items={[...proofItems]}
       />
 
       {/* Opening section */}
@@ -80,6 +127,38 @@ export default function MediaTrainingPage() {
           </p>
         </div>
       </section>
+
+      <section className="bg-white pb-16 md:pb-24">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="font-heading font-black text-navy text-3xl mb-6">
+            What executives usually get wrong
+          </h2>
+          <p className="text-charcoal text-[15px] leading-relaxed">
+            The most common failure in a difficult interview is not saying too
+            little. It is assuming that confidence alone will carry the day. A
+            polished executive can still lose control of the exchange if their
+            answers are not built around the real pressure points in the story.
+          </p>
+          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
+            That is why CRC PR training focuses on substance before style. We
+            identify the question behind the question, work through the most
+            damaging lines of enquiry, and prepare responses that are credible
+            under pressure rather than merely rehearsed.
+          </p>
+        </div>
+      </section>
+
+      <InlineEnquirySection
+        title="Planning a training session for your executives or spokespersons?"
+        body="We run one-to-one, small-group, crisis-specific, and board-level media training for organisations that want stronger performance before the next difficult interview."
+        bullets={[
+          "Executive, spokesperson, and board-level media training",
+          "Hostile interview rehearsal and crisis scenario preparation",
+          "Sessions tailored to your organisation, not generic examples",
+        ]}
+        defaultMessage="We are interested in a media training session for our executives or spokespersons."
+        variant="white"
+      />
 
       {/* Training programs */}
       <section className="bg-off-white py-16 md:py-24">
@@ -191,53 +270,22 @@ export default function MediaTrainingPage() {
         </div>
       </section>
 
-      {/* Lead magnet */}
-      <section className="bg-off-white py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <h3 className="font-heading font-black text-navy text-xl mb-3">
-            Download the Media Interview Preparation Guide
-          </h3>
-          <p className="text-charcoal text-[15px] leading-relaxed">
-            The pre-interview checklist and briefing framework we give to every
-            executive before a media interview. Covers hostile interview
-            preparation, on-camera presence, message prioritisation, and the
-            questions every spokesperson should be able to answer before they
-            walk in.
-          </p>
-        </div>
-      </section>
+      <LeadMagnetBanner
+        magnet="mediaInterviewGuide"
+        title="Download the Media Interview Preparation Guide"
+        description="The pre-interview checklist and briefing framework CRC PR gives to executives before meaningful media appearances. Covers hostile interview preparation, on-camera presence, message prioritisation, and the questions every spokesperson should be able to answer before walking in."
+      />
 
-      <LeadMagnetBanner magnet="mediaInterviewGuide" />
+      <FAQSection
+        items={faqs}
+        titleText="Common questions about media training"
+      />
 
-      {/* Closing CTA */}
-      <section className="py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-navy text-white rounded-lg p-8 md:p-12 text-center">
-            <h2 className="font-heading font-black text-3xl mb-6">
-              Every spokesperson is a risk until they are prepared.
-            </h2>
-            <p className="text-white/75 text-[15px] leading-relaxed max-w-2xl mx-auto mb-8">
-              Media training is not an investment you should make the day before
-              an interview. It is an investment you make when things are quiet,
-              so that your spokespeople perform when things are not.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs tracking-widest uppercase rounded-[4px] px-8 py-4 hover:bg-gold-light transition"
-              >
-                BOOK A MEDIA TRAINING SESSION
-              </Link>
-              <a
-                href="tel:1300182186"
-                className="inline-flex items-center gap-2 border-2 border-brand-gold text-brand-gold font-heading font-black text-xs tracking-widest uppercase rounded-[4px] px-8 py-4 hover:bg-brand-gold hover:text-navy transition"
-              >
-                Questions about our programs? Call 1300 182 186
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageClosingCTA
+        title="Every spokesperson is a risk until they are prepared."
+        body="Media training is an investment you make before the difficult interview, not the day after it. CRC PR prepares leaders for the questions they are actually likely to face."
+        primaryLabel="BOOK A MEDIA TRAINING SESSION"
+      />
     </>
   );
 }

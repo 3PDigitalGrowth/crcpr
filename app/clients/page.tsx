@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { PageHero } from "@/components/layout/PageHero";
+import { FAQSection } from "@/components/shared/FAQSection";
+import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
+import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
+import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
+import { PageProofStrip } from "@/components/shared/PageProofStrip";
 
 export const metadata: Metadata = {
   title: "Sector Expertise",
@@ -36,6 +41,45 @@ const sectors = [
   },
 ];
 
+const proofItems = [
+  {
+    label: "Sector depth",
+    value: "Not generic PR",
+    detail:
+      "CRC PR works best where sector complexity shapes the communications problem as much as the message itself.",
+  },
+  {
+    label: "Leadership access",
+    value: "Senior-only",
+    detail:
+      "Clients work directly with experienced advisors who understand high-stakes governance, media, and stakeholder pressure.",
+  },
+  {
+    label: "Preparedness",
+    value: "Proof and process",
+    detail:
+      "Each sector approach is informed by real-world issues, crisis response, and the practical needs of leadership teams under pressure.",
+  },
+] as const;
+
+const faqs = [
+  {
+    question: "Which sectors does CRC PR work with most often?",
+    answer:
+      "CRC PR works most often with corporate organisations, government departments and authorities, industry associations, schools and faith-based organisations, and clients operating across the Pacific. The common thread is high-stakes communication rather than industry category alone.",
+  },
+  {
+    question: "Do you adapt your advice by sector, or is it the same service everywhere?",
+    answer:
+      "The advisory model stays consistent, direct senior counsel, but the stakeholder logic, proof points, protocol, and communication sequence change materially by sector. That is why sector expertise matters.",
+  },
+  {
+    question: "What if our situation crosses more than one sector?",
+    answer:
+      "That is common. Many matters involve overlapping pressures such as governance, regulation, media, and community trust. We help identify which audience and risk dynamics matter most, then build the communication approach around that reality.",
+  },
+];
+
 export default function ClientsPage() {
   return (
     <>
@@ -43,7 +87,30 @@ export default function ClientsPage() {
         eyebrow="SECTOR EXPERTISE"
         title="Deep expertise across every sector."
         description="We don't take on every client. We work best with organisations that recognise the value of senior-level counsel and treat reputation as a strategic asset."
+        ctaLabel="BOOK A CONSULTATION"
+        ctaHref="/contact"
       />
+
+      <PageProofStrip
+        title="The communications challenge changes by sector. The stakes do not."
+        items={[...proofItems]}
+      />
+
+      <section className="bg-white py-16 md:py-24">
+        <div className="max-w-3xl mx-auto px-6">
+          <p className="text-charcoal-mid text-[15px] leading-relaxed">
+            Sector expertise matters because stakeholder expectations, governance
+            realities, and the likely points of reputational pressure change dramatically
+            between a listed company, a government agency, a peak body, or a school.
+            A message that feels disciplined in one environment can be tone-deaf in another.
+          </p>
+          <p className="text-charcoal-mid text-[15px] leading-relaxed mt-6">
+            CRC PR works best in sectors where communication is inseparable from trust,
+            authority, and strategic judgement. That is why the pages below are organised
+            around leadership pressure points rather than broad industry labels.
+          </p>
+        </div>
+      </section>
 
       <section className="bg-white py-24">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -75,29 +142,36 @@ export default function ClientsPage() {
         </div>
       </section>
 
-      <section className="bg-navy py-16">
-        <div className="max-w-2xl mx-auto px-6 text-center">
-          <h3 className="font-heading font-black text-white text-2xl md:text-3xl">
-            Ready to discuss your communications needs?
-          </h3>
-          <div className="mt-8 flex flex-col items-center gap-4">
-            <Link
-              href="/contact"
-              className="inline-block bg-brand-gold text-navy font-heading font-black text-sm tracking-widest uppercase px-8 py-4 rounded-[4px] hover:bg-gold-light transition"
-            >
-              Book a consultation →
-            </Link>
-            <a
-              href={siteConfig.myPrPartnerUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-brand-teal font-sans font-medium text-sm hover:opacity-80 transition"
-            >
-              Explore My PR Partner →
-            </a>
-          </div>
-        </div>
-      </section>
+      <InlineEnquirySection
+        title="Need advice tailored to your sector?"
+        body="If your situation is shaped by sector-specific governance, stakeholder, or community pressures, CRC PR can help you work out the right starting point and the right communication approach."
+        bullets={[
+          "Sector-aware message and stakeholder strategy",
+          "Direct senior counsel for high-stakes matters",
+          "Help identifying the right service and first move",
+        ]}
+        defaultMessage="We would like sector-specific communications advice."
+        variant="white"
+      />
+
+      <LeadMagnetBanner
+        magnet="crisisPlanTemplate"
+        variant="light"
+        title="Need a practical framework before the next pressure point arrives?"
+        description="Download the CRC PR Crisis Communications Plan Template, a useful starting point for leadership teams across sectors that need clearer escalation, stronger message discipline, and more confidence under scrutiny."
+      />
+
+      <FAQSection
+        items={faqs}
+        titleText="Common questions about CRC PR's sector expertise"
+      />
+
+      <PageClosingCTA
+        title="Ready to discuss your communications needs?"
+        body="If you are working through a sector-specific issue, an emerging reputation risk, or a pressure point that needs senior judgment, CRC PR can help you work out the right next step."
+        secondaryLabel="Explore My PR Partner"
+        secondaryHref={siteConfig.myPrPartnerUrl}
+      />
     </>
   );
 }

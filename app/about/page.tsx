@@ -3,6 +3,9 @@ import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { PageHero } from "@/components/layout/PageHero";
 import { CapabilityDownload } from "@/components/shared/CapabilityDownload";
+import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
+import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
+import { PageProofStrip } from "@/components/shared/PageProofStrip";
 import { PortraitPlaceholder } from "@/components/shared/PortraitPlaceholder";
 
 export const metadata: Metadata = {
@@ -18,6 +21,27 @@ const STATS = [
   { value: "500+", label: "Professionals trained" },
 ] as const;
 
+const proofItems = [
+  {
+    label: "Firm model",
+    value: "Boutique by design",
+    detail:
+      "CRC PR is deliberately structured around direct senior counsel rather than a layered agency model.",
+  },
+  {
+    label: "Operating focus",
+    value: "High-stakes only",
+    detail:
+      "The firm is built for corporate reputation, issues, crisis, stakeholder pressure, and sensitive advisory work.",
+  },
+  {
+    label: "Regional reach",
+    value: "Australia and Pacific",
+    detail:
+      "Clients include companies, governments, associations, schools, and Pacific organisations operating in demanding environments.",
+  },
+] as const;
+
 export default function AboutPage() {
   return (
     <>
@@ -25,6 +49,13 @@ export default function AboutPage() {
         eyebrow="ABOUT US"
         title="About CRC Public Relations"
         description="Boutique corporate PR. 25 years of trusted counsel for companies, governments, and organisations across Australia, the Pacific, and internationally."
+        ctaLabel="BOOK A CONSULTATION"
+        ctaHref="/contact"
+      />
+
+      <PageProofStrip
+        title="CRC PR exists for leaders who need judgement, not volume."
+        items={[...proofItems]}
       />
 
       <section className="bg-white py-24">
@@ -78,6 +109,18 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <InlineEnquirySection
+        title="Need to speak with the firm directly?"
+        body="CRC PR exists for organisations that want senior communications counsel from the first conversation. If your situation is sensitive, high-stakes, or too important for a junior handoff, get in touch."
+        bullets={[
+          "Direct access to experienced senior advisors",
+          "Support across corporate, crisis, reputation, and stakeholder matters",
+          "Confidential review of the situation before recommending a next step",
+        ]}
+        defaultMessage="We would like to speak directly with CRC PR about a sensitive communications matter."
+        variant="white"
+      />
+
       <section className="bg-white py-24">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="font-heading font-black text-navy text-3xl">
@@ -123,6 +166,11 @@ export default function AboutPage() {
       <div className="max-w-3xl mx-auto px-6 py-16">
         <CapabilityDownload />
       </div>
+
+      <PageClosingCTA
+        title="Need to speak with the firm directly?"
+        body="CRC PR works with organisations that want senior communications counsel from the first conversation. If your situation is sensitive, high-stakes, or simply too important for a junior handoff, get in touch."
+      />
     </>
   );
 }

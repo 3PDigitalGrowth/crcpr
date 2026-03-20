@@ -2,8 +2,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
+import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
 import { siteConfig } from "@/config/site";
-import { getInsightBySlug, getInsightSlugs } from "@/lib/mdx";
+import { getAllInsights, getInsightBySlug, getInsightSlugs } from "@/lib/mdx";
 
 // NOTE: requires @tailwindcss/typography plugin in tailwind.config.ts
 
@@ -57,10 +58,14 @@ export default function InsightPage({
 }) {
   const post = getInsightBySlug(params.slug);
   if (!post) notFound();
+  const relatedPosts = getAllInsights()
+    .filter((item) => item.slug !== post.slug)
+    .filter((item) => item.category === post.category)
+    .slice(0, 3);
 
   return (
     <>
-      <header className="bg-navy py-24">
+      <header id="hero-section" className="bg-navy py-24">
         <div className="max-w-3xl mx-auto px-6">
           <p className="text-brand-teal text-xs font-medium tracking-[0.14em] uppercase">
             {post.category}
@@ -91,7 +96,42 @@ export default function InsightPage({
       </article>
 
       {post.leadMagnet ? (
-        <LeadMagnetBanner magnet={post.leadMagnet} />
+        <LeadMagnetBanner
+          magnet={post.leadMagnet}
+          variant="light"
+          title="If this article has highlighted a gap, start with a practical resource."
+          description="CRC PR resources are designed to turn a general insight into a concrete next step for leadership teams managing risk, preparedness, and communication discipline."
+        />
+      ) : null}
+
+      {relatedPosts.length > 0 ? (
+        <section className="bg-white py-16">
+          <div className="max-w-7xl mx-auto px-6">
+            <h2 className="font-heading font-black text-navy text-2xl mb-8">
+              Related insights
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {relatedPosts.map((related) => (
+                <article
+                  key={related.slug}
+                  className="rounded-lg border border-brand-border bg-off-white p-6"
+                >
+                  <p className="text-brand-teal text-xs font-medium tracking-[0.14em] uppercase">
+                    {related.category}
+                  </p>
+                  <h3 className="font-heading font-black text-navy text-lg mt-3">
+                    <Link href={`/insights/${related.slug}`}>
+                      {related.title}
+                    </Link>
+                  </h3>
+                  <p className="text-charcoal-mid text-sm leading-relaxed mt-3">
+                    {related.excerpt}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
       ) : null}
 
       <section className="bg-off-white py-12">
@@ -122,19 +162,11 @@ export default function InsightPage({
         </div>
       </section>
 
-      <section className="bg-navy py-16">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <p className="text-white text-lg font-medium mb-6">
-            Have a crisis communications question?
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs tracking-widest uppercase rounded-[4px] px-8 py-4 hover:bg-gold-light transition"
-          >
-            Get in touch →
-          </Link>
-        </div>
-      </section>
+      <PageClosingCTA
+        title="Need advice on a crisis, issue, or reputation matter?"
+        body="CRC PR articles are designed to clarify the issue. If you need to apply that thinking to a live situation, the next step is a confidential conversation."
+        primaryLabel="GET IN TOUCH"
+      />
     </>
   );
 }

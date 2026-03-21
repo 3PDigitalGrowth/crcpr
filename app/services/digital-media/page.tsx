@@ -95,52 +95,163 @@ export default function DigitalMediaPage() {
 
       {/* Opening section */}
       <section className="bg-white py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-6">
-          <p className="text-charcoal text-[15px] leading-relaxed">
-            Ten years ago, a corporate reputation crisis typically began with a
-            phone call from a journalist. Today, it is more likely to begin with
-            a tweet, a LinkedIn post, or a one-star Google review that gets
-            picked up by a media outlet monitoring social media for stories.
-          </p>
-          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
-            The speed of the digital environment has not made traditional PR
-            expertise less relevant. It has made it more urgent. The
-            communications disciplines that determine how a reputation crisis
-            unfolds, message clarity, stakeholder management, spokesperson
-            preparation, narrative control, are the same in digital channels as
-            they are in traditional media. What changes is the timeframe. What
-            used to take days now takes minutes.
-          </p>
-          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
-            CRC PR applies its 25 years of corporate communications and crisis
-            expertise to digital channels, not as a social media agency, but as
-            a senior communications adviser that understands how digital and
-            traditional media interact, and how to manage your reputation across
-            both simultaneously.
-          </p>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_360px] gap-10 items-start">
+            <div className="max-w-3xl">
+              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
+                Digital Reputation Reality
+              </p>
+              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                Reputation pressure now breaks online first.
+              </h2>
+              <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
+                The channel has changed, but the consequence has not. A digital
+                flare-up can move into mainstream coverage before leadership has
+                agreed what happened or who should respond.
+              </p>
+
+              <div className="space-y-6 mt-8">
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  Ten years ago, a corporate reputation crisis typically began
+                  with a phone call from a journalist. Today, it is more likely
+                  to begin with a tweet, a LinkedIn post, or a one-star Google
+                  review that gets picked up by a media outlet monitoring social
+                  media for stories.
+                </p>
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  The speed of the digital environment has not made traditional
+                  PR expertise less relevant. It has made it more urgent. The
+                  communications disciplines that determine how a reputation
+                  crisis unfolds, message clarity, stakeholder management,
+                  spokesperson preparation, narrative control, are the same in
+                  digital channels as they are in traditional media. What
+                  changes is the timeframe. What used to take days now takes
+                  minutes.
+                </p>
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  CRC PR applies its 25 years of corporate communications and
+                  crisis expertise to digital channels, not as a social media
+                  agency, but as a senior communications adviser that
+                  understands how digital and traditional media interact, and
+                  how to manage your reputation across both simultaneously.
+                </p>
+              </div>
+            </div>
+
+            <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
+              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
+                What Changes Online
+              </p>
+
+              <div className="space-y-4">
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Signals appear earlier
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    Issues often start as posts, reviews, screenshots, or
+                    comments long before a journalist calls.
+                  </p>
+                </div>
+
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Response windows collapse
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    The time available to assess, align, and answer is measured
+                    in minutes rather than days.
+                  </p>
+                </div>
+
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Channels interact
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    Digital pressure rarely stays contained. Online attention can
+                    quickly spill into mainstream media and stakeholder concern.
+                  </p>
+                </div>
+              </div>
+            </aside>
+          </div>
         </div>
       </section>
 
       <section className="bg-off-white py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-6">
-          <p className="text-brand-gold font-sans font-medium text-xs tracking-[0.14em] uppercase mb-4">
-            EARLY WARNING SIGNS
-          </p>
-          <h2 className="font-heading font-black text-navy text-3xl mb-6">
-            What digital reputation pressure usually looks like
-          </h2>
-          <p className="text-charcoal text-[15px] leading-relaxed">
-            It rarely begins with a fully formed crisis. It starts with weak
-            governance, slow monitoring, unclear approval pathways, and no shared
-            position on when to respond, when to hold, and when to escalate. By
-            the time a screenshot reaches the mainstream media, the real problem
-            has usually been live for longer than leadership realised.
-          </p>
-          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
-            The organisations most resilient online are the ones with a clear
-            communications posture, active monitoring, and an agreed digital
-            escalation model before pressure arrives.
-          </p>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_340px] gap-10 items-start">
+            <div className="max-w-3xl">
+              <p className="text-brand-gold font-sans font-medium text-xs tracking-[0.14em] uppercase mb-4">
+                EARLY WARNING SIGNS
+              </p>
+              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                What digital reputation pressure usually looks like
+              </h2>
+              <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
+                It rarely begins as a fully formed crisis. More often, it shows
+                up as process weakness, delayed judgment, and no shared view on
+                when digital noise has become a reputational risk.
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
+                {[
+                  {
+                    title: "Weak governance",
+                    body: "No clear ownership of digital channels, approvals, or reputational decision-making.",
+                  },
+                  {
+                    title: "Slow monitoring",
+                    body: "Pressure builds in comments, reviews, and screenshots before anyone senior sees it.",
+                  },
+                  {
+                    title: "Unclear escalation",
+                    body: "Teams do not share a clear threshold for when to respond, hold, or escalate.",
+                  },
+                  {
+                    title: "Late executive visibility",
+                    body: "By the time leadership is briefed, the issue has often been live longer than realised.",
+                  },
+                ].map((item) => (
+                  <div
+                    key={item.title}
+                    className="rounded-lg border border-brand-border bg-white p-6"
+                  >
+                    <p className="font-sans font-semibold text-navy text-base mb-2">
+                      {item.title}
+                    </p>
+                    <p className="text-charcoal-mid text-sm leading-relaxed">
+                      {item.body}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <aside className="rounded-lg border border-brand-border bg-white p-6 md:p-8">
+              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
+                Resilient Organisations Have
+              </p>
+              <div className="space-y-4">
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    A clear communications posture
+                  </p>
+                </div>
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Active monitoring across key channels
+                  </p>
+                </div>
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    An agreed digital escalation model
+                  </p>
+                </div>
+              </div>
+            </aside>
+          </div>
         </div>
       </section>
 
@@ -233,29 +344,94 @@ export default function DigitalMediaPage() {
 
       {/* Digital reputation management is still reputation management */}
       <section className="bg-white py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="font-heading font-black text-navy text-3xl mb-6">
-            Digital reputation management is still reputation management
-          </h2>
-          <p className="text-charcoal text-[15px] leading-relaxed">
-            The market is full of digital agencies and social media managers who
-            claim expertise in online reputation management. Most of them
-            understand platforms. Fewer of them understand reputation: the
-            strategic, relational, and communicative disciplines that determine
-            whether an organisation emerges from a crisis with its trust intact.
-          </p>
-          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
-            CRC PR is not a digital agency. We are a corporate communications
-            and reputation firm that has developed the digital capability our
-            clients need because the digital environment now demands it. When
-            you retain CRC PR for digital reputation management, you are
-            retaining the same senior-level counsel, the same journalistic
-            judgment, and the same crisis experience that we bring to our
-            traditional media work.
-          </p>
-          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
-            The platforms are different. The expertise required is the same.
-          </p>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.1fr)_360px] gap-10 items-start">
+            <div className="max-w-3xl">
+              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
+                The Difference
+              </p>
+              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                Digital reputation management is still reputation management.
+              </h2>
+              <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
+                Platform knowledge matters, but it is not enough. The harder
+                problem is judgment: knowing how trust is won, damaged, and
+                protected when pressure moves quickly and publicly.
+              </p>
+
+              <div className="space-y-6 mt-8">
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  The market is full of digital agencies and social media
+                  managers who claim expertise in online reputation management.
+                  Most of them understand platforms. Fewer of them understand
+                  reputation: the strategic, relational, and communicative
+                  disciplines that determine whether an organisation emerges
+                  from a crisis with its trust intact.
+                </p>
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  CRC PR is not a digital agency. We are a corporate
+                  communications and reputation firm that has developed the
+                  digital capability our clients need because the digital
+                  environment now demands it. When you retain CRC PR for
+                  digital reputation management, you are retaining the same
+                  senior-level counsel, the same journalistic judgment, and
+                  the same crisis experience that we bring to our traditional
+                  media work.
+                </p>
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  The platforms are different. The expertise required is the
+                  same.
+                </p>
+              </div>
+            </div>
+
+            <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
+              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
+                What Clients Actually Need
+              </p>
+
+              <div className="space-y-4">
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Senior communications counsel
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    Advice that connects digital response to the broader
+                    stakeholder and media position.
+                  </p>
+                </div>
+
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Journalistic judgment
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    A realistic view on what becomes a story, what gets ignored,
+                    and what can make matters worse.
+                  </p>
+                </div>
+
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Crisis experience
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    Tested response discipline when the issue is moving faster
+                    than internal decision-making.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-6 pt-6 border-t border-brand-border">
+                <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-3">
+                  Bottom Line
+                </p>
+                <p className="text-navy font-sans font-semibold text-base leading-relaxed">
+                  The platforms are different. The reputational stakes are not.
+                </p>
+              </div>
+            </aside>
+          </div>
         </div>
       </section>
 

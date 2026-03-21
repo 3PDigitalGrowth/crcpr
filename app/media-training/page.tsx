@@ -30,12 +30,12 @@ const jsonLd = {
 };
 
 const WHO_NEEDS_ITEMS = [
-  "You have one or more executives who regularly speak to media, or will need to",
+  "You have one or more executives who regularly speak to media, or are likely to soon",
   "Your industry is under regulatory or public scrutiny",
   "You have a board-level spokesperson who has not been trained in the past 12 months",
-  "Your organisation has experienced a crisis in the past and your response was not as confident as you would have wanted",
+  "Your organisation has experienced a crisis before and the response was not as confident as it needed to be",
   "You are preparing for a major announcement, a controversy, or a period of heightened media interest",
-  "Your team handles media enquiries but has never received formal training on how to do so",
+  "Your team handles media enquiries but has never received formal spokesperson training",
 ] as const;
 
 const proofItems = [
@@ -100,51 +100,137 @@ export default function MediaTrainingPage() {
 
       {/* Opening section */}
       <section className="bg-white py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-6">
-          <p className="text-charcoal text-[15px] leading-relaxed">
-            Most media training focuses on technique: bridging phrases, body
-            language, staying on message. These things matter. But the most
-            common failure point in a media interview is not technique. It is
-            lack of preparation for the specific questions a journalist is
-            likely to ask.
-          </p>
-          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
-            Generic media training produces spokespeople who know how to bridge
-            but cannot answer the hardest question about their own organisation.
-            CRC PR media training begins not with technique, but with
-            intelligence: understanding the story the journalist is building,
-            the questions they are most likely to ask, and the specific
-            vulnerabilities in your organisation&apos;s position that a skilled
-            interviewer will find.
-          </p>
-          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
-            Our training is delivered by former television and radio journalists
-            who have conducted the kinds of interviews your executives need to
-            be ready for. They know what interviewers are looking for, how
-            hostile interviews are constructed, and what the difference looks
-            like between a spokesperson who holds their position and one who
-            does not.
-          </p>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_360px] gap-10 items-start">
+            <div className="max-w-3xl">
+              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
+                What Better Training Looks Like
+              </p>
+              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                The real risk is not poor technique. It is poor preparation.
+              </h2>
+              <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
+                A spokesperson can look polished and still lose the interview.
+                The difference usually comes down to whether they are ready for
+                the real pressure points in the story.
+              </p>
+
+              <div className="space-y-6 mt-8">
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  Most media training focuses on technique: bridging phrases,
+                  body language, staying on message. These things matter. But
+                  the most common failure point in a media interview is not
+                  technique. It is lack of preparation for the specific
+                  questions a journalist is likely to ask.
+                </p>
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  Generic media training produces spokespeople who know how to
+                  bridge but cannot answer the hardest question about their own
+                  organisation. CRC PR media training begins not with
+                  technique, but with intelligence: understanding the story the
+                  journalist is building, the questions they are most likely to
+                  ask, and the specific vulnerabilities in your
+                  organisation&apos;s position that a skilled interviewer will
+                  find.
+                </p>
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  Our training is delivered by former television and radio
+                  journalists who have conducted the kinds of interviews your
+                  executives need to be ready for. They know what interviewers
+                  are looking for, how hostile interviews are constructed, and
+                  what the difference looks like between a spokesperson who
+                  holds their position and one who does not.
+                </p>
+              </div>
+            </div>
+
+            <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
+              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
+                Technique Is Not Enough
+              </p>
+
+              <div className="space-y-4">
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Bridging without substance
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    Executives can sound polished while still failing to answer
+                    the real question being tested.
+                  </p>
+                </div>
+
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Generic rehearsal
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    Practice is weak if it is not built around your actual
+                    vulnerabilities, timing, and likely scrutiny.
+                  </p>
+                </div>
+
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    False confidence
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    A confident spokesperson can still lose control if the
+                    preparation has not matched the pressure.
+                  </p>
+                </div>
+              </div>
+            </aside>
+          </div>
         </div>
       </section>
 
       <section className="bg-white pb-16 md:pb-24">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="font-heading font-black text-navy text-3xl mb-6">
-            What executives usually get wrong
-          </h2>
-          <p className="text-charcoal text-[15px] leading-relaxed">
-            The most common failure in a difficult interview is not saying too
-            little. It is assuming that confidence alone will carry the day. A
-            polished executive can still lose control of the exchange if their
-            answers are not built around the real pressure points in the story.
-          </p>
-          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
-            That is why CRC PR training focuses on substance before style. We
-            identify the question behind the question, work through the most
-            damaging lines of enquiry, and prepare responses that are credible
-            under pressure rather than merely rehearsed.
-          </p>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="rounded-[28px] border border-brand-border bg-off-white p-8 md:p-10">
+            <div className="max-w-3xl">
+              <p className="text-brand-gold font-sans font-medium text-xs tracking-[0.14em] uppercase mb-4">
+                Executive Mistakes
+              </p>
+              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                What executives usually get wrong
+              </h2>
+              <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
+                The most common failure in a difficult interview is not saying
+                too little. It is assuming that confidence alone will carry the
+                day.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-10">
+              {[
+                {
+                  title: "Confidence without structure",
+                  body: "A polished executive can still lose control if their answers are not built around the real pressure points in the story.",
+                },
+                {
+                  title: "Style before substance",
+                  body: "Strong delivery does not help if the underlying answer is vague, evasive, or strategically weak.",
+                },
+                {
+                  title: "Missing the real question",
+                  body: "CRC PR training prepares for the question behind the question, so responses stay credible under pressure rather than merely rehearsed.",
+                },
+              ].map((item) => (
+                <div
+                  key={item.title}
+                  className="rounded-xl border border-brand-border bg-white p-6"
+                >
+                  <p className="font-sans font-semibold text-navy text-base mb-2">
+                    {item.title}
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    {item.body}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -160,11 +246,11 @@ export default function MediaTrainingPage() {
         variant="white"
       />
 
-      {/* Training programs */}
+      {/* Training programmes */}
       <section className="bg-off-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="font-heading font-black text-navy text-3xl mb-6">
-            Training programs for every situation
+            Training programmes for every situation
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
@@ -229,7 +315,7 @@ export default function MediaTrainingPage() {
                 Online and remote media training
               </h3>
               <p className="text-charcoal text-[15px] leading-relaxed">
-                Full media training programs delivered via video conferencing
+                Full media training programmes delivered via video conferencing
                 for organisations with distributed teams, interstate offices,
                 or Pacific Island locations. We use broadcast-quality recording
                 and playback to maintain the same rigour as in-person sessions.
@@ -247,25 +333,39 @@ export default function MediaTrainingPage() {
 
       {/* Who needs media training */}
       <section className="bg-white py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="font-heading font-black text-navy text-3xl mb-6">
-            Who needs media training
-          </h2>
-          <div className="bg-off-white border border-brand-border rounded-lg p-6 md:p-8">
-            <p className="text-charcoal text-[15px] leading-relaxed mb-6">
-              If any of the following describe your organisation, media training
-              is a priority:
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="max-w-3xl">
+            <p className="text-brand-gold font-sans font-medium text-xs tracking-[0.14em] uppercase mb-4">
+              Readiness Check
             </p>
-            <ul className="space-y-4">
-              {WHO_NEEDS_ITEMS.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <Check className="h-5 w-5 text-brand-gold shrink-0 mt-0.5" />
-                  <span className="text-charcoal text-[15px] leading-relaxed">
+            <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+              Who needs media training
+            </h2>
+            <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
+              If several of these sound familiar, media training is no longer a
+              nice-to-have. It is part of basic executive preparedness.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mt-12">
+            {WHO_NEEDS_ITEMS.map((item) => (
+              <div
+                key={item}
+                className="rounded-[24px] border border-brand-border bg-off-white p-6 md:p-7"
+              >
+                <div className="flex items-start gap-3">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white border border-brand-border">
+                    <Check
+                      className="h-4 w-4 text-brand-gold"
+                      strokeWidth={2.5}
+                    />
+                  </div>
+                  <p className="text-charcoal text-[15px] leading-relaxed">
                     {item}
-                  </span>
-                </li>
-              ))}
-            </ul>
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

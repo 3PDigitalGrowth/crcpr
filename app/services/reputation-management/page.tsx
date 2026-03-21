@@ -332,7 +332,7 @@ export default function ReputationManagementPage() {
                 num: "04",
                 title: "Reputation recovery strategy",
                 body:
-                  "For organisations that have experienced a significant reputation event, the path back to trust is strategic, not tactical. We develop and implement reputation recovery programs that address the root causes of the damage, rebuild stakeholder confidence, and restore your organisation's standing, methodically and measurably.",
+                  "For organisations that have experienced a significant reputation event, the path back to trust is strategic, not tactical. We develop and implement reputation recovery programmes that address the root causes of the damage, rebuild stakeholder confidence, and restore your organisation's standing, methodically and measurably.",
               },
             ].map((item) => (
               <article

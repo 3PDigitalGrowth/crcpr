@@ -249,21 +249,18 @@ export function HomeHero() {
         <div className="max-w-7xl mx-auto px-6 border-t border-white/[0.08] py-4">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 text-center">
             {stats.map((stat, i) => (
-              <AnimateIn key={stat.label} delay={i * 120}>
-                <div
-                  className={
-                    i < 3 ? "lg:border-r lg:border-white/[0.08]" : ""
-                  }
-                >
-                  <AnimatedCounter
-                    value={stat.value}
-                    className="font-heading font-black text-brand-gold text-2xl lg:text-3xl"
-                  />
-                  <p className="font-sans font-medium text-white/40 text-[10px] tracking-widest uppercase mt-0.5">
-                    {stat.label}
-                  </p>
-                </div>
-              </AnimateIn>
+              <div
+                key={stat.label}
+                className={i < 3 ? "lg:border-r lg:border-white/[0.08]" : ""}
+              >
+                <AnimatedCounter
+                  value={stat.value}
+                  className="font-heading font-black text-brand-gold text-2xl lg:text-3xl"
+                />
+                <p className="font-sans font-medium text-white/40 text-[10px] tracking-widest uppercase mt-0.5">
+                  {stat.label}
+                </p>
+              </div>
             ))}
           </div>
         </div>

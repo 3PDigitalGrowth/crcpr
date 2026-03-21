@@ -42,6 +42,42 @@ const proofItems = [
   },
 ] as const;
 
+const teamMembers = [
+  {
+    initials: "LM",
+    size: "md" as const,
+    name: "Lyall Mercer",
+    role: siteConfig.lyall.title,
+    summary: siteConfig.lyall.origin,
+    bio: [
+      "Lyall Mercer began his career as a journalist before building one of Australasia's most respected crisis communications and reputation advisory practices. His media background shapes how he reads pressure, understands the story behind the story, and prepares leaders for scrutiny that can move faster than their internal decision-making.",
+      "Over more than 25 years, he has advised companies, governments, associations, schools, and senior executives across Australia, the Pacific, and internationally. Clients engage Lyall when the matter requires senior judgement, calm counsel, and direct access to someone who has seen how high-stakes situations actually unfold.",
+    ],
+    links: [
+      { label: "Full profile", href: "/about/lyall-mercer", internal: true },
+      { label: "lyallmercer.com", href: siteConfig.lyallMercerUrl },
+      { label: "LinkedIn", href: siteConfig.lyallLinkedIn },
+      { label: "X / Twitter", href: siteConfig.lyallTwitter },
+    ],
+  },
+  {
+    initials: "BG",
+    size: "md" as const,
+    name: "Barbara Gorogh",
+    role: "Co-founder, My PR Partner",
+    summary:
+      "Senior communications strategist focused on training, practitioner development, and workshop delivery.",
+    bio: [
+      "Barbara Gorogh is the co-founder of My PR Partner, CRC PR's training platform for communications practitioners and spokesperson development. Her work sits at the intersection of communications capability, practical training design, and the delivery of programmes that help leaders perform more confidently under pressure.",
+      "She brings deep experience in communications education, practitioner support, and the translation of crisis and media strategy into practical development programmes. Barbara plays a central role in how CRC PR turns senior advisory experience into structured training for organisations and professionals across Australia.",
+    ],
+    links: [
+      { label: "My PR Partner", href: siteConfig.myPrPartnerUrl },
+      { label: "CRC PR LinkedIn", href: siteConfig.linkedInUrl },
+    ],
+  },
+] as const;
+
 export default function AboutPage() {
   return (
     <>
@@ -123,42 +159,115 @@ export default function AboutPage() {
 
       <section className="bg-white py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="font-heading font-black text-navy text-3xl">
-            Our Team
-          </h2>
-          <div className="mt-10 bg-off-white rounded-lg p-8 flex flex-col md:flex-row gap-8 items-start">
-            <PortraitPlaceholder size="md" />
-            <div>
-              <h3 className="font-heading font-black text-navy text-xl">
-                Lyall Mercer
-              </h3>
-              <p className="text-brand-gold font-medium text-sm">
-                {siteConfig.lyall.title}
-              </p>
-              <p className="text-charcoal-mid text-[15px] mt-3">
-                {siteConfig.lyall.origin}
-              </p>
-              <Link
-                href="/about/lyall-mercer"
-                className="text-brand-gold font-medium text-sm mt-4 inline-block hover:underline"
-              >
-                Read full profile →
-              </Link>
-            </div>
+          <div className="max-w-3xl">
+            <p className="text-brand-gold font-sans font-medium text-xs tracking-[0.14em] uppercase mb-4">
+              Leadership Team
+            </p>
+            <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight">
+              Our Team
+            </h2>
+            <p className="text-charcoal-mid text-[15px] leading-relaxed mt-6">
+              CRC PR is intentionally senior-led. The people you meet are the
+              people who shape the advice, lead the work, and stay close to the
+              matter when judgement matters most.
+            </p>
           </div>
 
-          <div className="mt-6 bg-off-white rounded-lg p-8 flex flex-col md:flex-row gap-8 items-start">
-            <PortraitPlaceholder size="sm" initials="BG" />
-            <div>
-              <h3 className="font-heading font-black text-navy text-xl">Barbara Gorogh</h3>
-              <p className="text-brand-gold text-sm font-medium mb-2">Co-founder, My PR Partner</p>
-              <p className="text-charcoal-mid text-[15px] leading-relaxed">
-                Senior communications strategist and co-founder of My PR Partner, the CRC PR training platform. Barbara brings deep expertise in communications training, practitioner development, and the delivery of crisis communications education to PR professionals across Australia.
-              </p>
-              <a href={siteConfig.myPrPartnerUrl} target="_blank" rel="noopener noreferrer" className="text-brand-teal text-sm font-medium mt-2 inline-block hover:underline">
-                → View My PR Partner
-              </a>
-            </div>
+          <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 mt-12">
+            {teamMembers.map((member) => (
+              <div
+                key={member.name}
+                className="rounded-[28px] border border-brand-border bg-off-white p-8 md:p-10"
+              >
+                <div className="flex flex-col sm:flex-row gap-6 items-start">
+                  <PortraitPlaceholder
+                    size={member.size}
+                    initials={member.initials === "LM" ? undefined : member.initials}
+                  />
+
+                  <div className="flex-1">
+                    <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-3">
+                      {member.initials}
+                    </p>
+                    <h3 className="font-heading font-black text-navy text-2xl leading-tight">
+                      {member.name}
+                    </h3>
+                    <p className="text-brand-gold text-sm font-medium mt-2">
+                      {member.role}
+                    </p>
+                    <p className="text-charcoal text-[15px] leading-relaxed mt-4">
+                      {member.summary}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="space-y-4 mt-8">
+                  {member.bio.map((paragraph) => (
+                    <p
+                      key={paragraph}
+                      className="text-charcoal-mid text-[15px] leading-relaxed"
+                    >
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 pt-8 border-t border-brand-border">
+                  <div className="rounded-xl bg-white border border-brand-border p-5">
+                    <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-3">
+                      Contact
+                    </p>
+                    <div className="space-y-2 text-sm">
+                      <a
+                        href={`mailto:${siteConfig.email.newBusiness}`}
+                        className="block text-navy hover:text-brand-gold transition-colors"
+                      >
+                        {siteConfig.email.newBusiness}
+                      </a>
+                      <a
+                        href={siteConfig.phone.href}
+                        className="block text-navy hover:text-brand-gold transition-colors"
+                      >
+                        {siteConfig.phone.display}
+                      </a>
+                      <p className="text-charcoal-mid leading-relaxed">
+                        {siteConfig.address.street}, {siteConfig.address.city}{" "}
+                        {siteConfig.address.state} {siteConfig.address.postcode}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="rounded-xl bg-white border border-brand-border p-5">
+                    <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-3">
+                      Links
+                    </p>
+                    <div className="space-y-2 text-sm">
+                      {member.links.map((link) =>
+                        "internal" in link && link.internal ? (
+                          <Link
+                            key={link.label}
+                            href={link.href}
+                            className="block text-navy hover:text-brand-gold transition-colors"
+                          >
+                            {link.label}
+                          </Link>
+                        ) : (
+                          <a
+                            key={link.label}
+                            href={link.href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block text-navy hover:text-brand-gold transition-colors"
+                          >
+                            {link.label}
+                          </a>
+                        )
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

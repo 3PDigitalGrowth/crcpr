@@ -112,7 +112,7 @@ const questions: Question[] = [
     options: [
       { label: "Only when issues arise", score: 0 },
       { label: "Occasionally, without a structured approach", score: 1 },
-      { label: "Regularly, as part of a planned engagement program", score: 2 },
+      { label: "Regularly, as part of a planned engagement programme", score: 2 },
     ],
   },
   {
@@ -263,6 +263,7 @@ export function ReputationAssessment({ embedded = false }: { embedded?: boolean 
   const progress = Math.round((answeredCount / totalQuestions) * 100);
   const totalScore = Object.values(answers).reduce((a, b) => a + b, 0);
   const rating = getRating(totalScore);
+  const isUnlocked = formState.status === "success";
 
   function selectAnswer(questionIndex: number, score: number) {
     setAnswers((prev) => ({ ...prev, [questionIndex]: score }));
@@ -300,60 +301,131 @@ export function ReputationAssessment({ embedded = false }: { embedded?: boolean 
         id="reputation-assessment"
       >
         <div className={embedded ? "max-w-none" : "max-w-3xl mx-auto px-6"}>
-          <div className="text-center mb-12">
-            <p className="text-brand-teal text-xs font-medium tracking-[0.14em] uppercase">
-              YOUR RESULTS
-            </p>
-            <h2 className="font-heading font-black text-navy text-3xl mt-3">
-              Reputation Vulnerability Score
-            </h2>
+          <div className="relative">
             <div
-              className={`inline-flex items-center gap-3 mt-6 px-8 py-4 rounded-lg ${rating.bgColor}`}
+              className={`transition-all duration-300 ${
+                isUnlocked ? "" : "blur-[10px] select-none pointer-events-none"
+              }`}
+              aria-hidden={!isUnlocked}
             >
-              <span className="font-heading font-black text-5xl text-navy">
-                {totalScore}
-              </span>
-              <span className="text-charcoal-mid text-sm">/40</span>
-              <span
-                className={`font-heading font-black text-lg ${rating.color}`}
-              >
-                {rating.label}
-              </span>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-5 gap-4 mb-12">
-            {categories.map((cat) => {
-              const catScore = getCategoryScore(answers, cat);
-              const maxCatScore = 8;
-              const pct = Math.round((catScore / maxCatScore) * 100);
-              return (
-                <div key={cat} className="text-center">
-                  <p className="text-xs font-medium text-charcoal-mid uppercase tracking-wide mb-2">
-                    {cat}
+              <div className="rounded-[28px] border border-brand-border bg-off-white p-8 md:p-10">
+                <div className="text-center mb-12">
+                  <p className="text-brand-teal text-xs font-medium tracking-[0.14em] uppercase">
+                    YOUR RESULTS
                   </p>
-                  <div className="h-2 bg-brand-border rounded-full overflow-hidden">
-                    <div
-                      className="h-full bg-brand-gold rounded-full transition-all duration-500"
-                      style={{ width: `${pct}%` }}
-                    />
+                  <h2 className="font-heading font-black text-navy text-3xl mt-3">
+                    Reputation Vulnerability Score
+                  </h2>
+                  <div
+                    className={`inline-flex items-center gap-3 mt-6 px-8 py-4 rounded-lg ${rating.bgColor}`}
+                  >
+                    <span className="font-heading font-black text-5xl text-navy">
+                      {totalScore}
+                    </span>
+                    <span className="text-charcoal-mid text-sm">/40</span>
+                    <span
+                      className={`font-heading font-black text-lg ${rating.color}`}
+                    >
+                      {rating.label}
+                    </span>
                   </div>
-                  <p className="text-sm font-heading font-black text-navy mt-1">
-                    {catScore}/{maxCatScore}
+                </div>
+
+                <div className="space-y-4">
+                  {categories.map((cat) => {
+                    const catScore = getCategoryScore(answers, cat);
+                    const maxCatScore = 8;
+                    const pct = Math.round((catScore / maxCatScore) * 100);
+                    return (
+                      <div
+                        key={cat}
+                        className="rounded-xl border border-brand-border bg-white p-4"
+                      >
+                        <div className="flex items-center justify-between gap-4 mb-3">
+                          <p className="text-[11px] sm:text-xs font-medium text-charcoal-mid uppercase tracking-wide">
+                            {cat}
+                          </p>
+                          <p className="text-sm font-heading font-black text-navy whitespace-nowrap">
+                            {catScore}/{maxCatScore}
+                          </p>
+                        </div>
+                        <div className="h-2 bg-brand-border rounded-full overflow-hidden">
+                          <div
+                            className="h-full bg-brand-gold rounded-full transition-all duration-500"
+                            style={{ width: `${pct}%` }}
+                          />
+                        </div>
+                        <p className="text-xs text-charcoal-mid mt-2">
+                          {pct}% readiness in this area
+                        </p>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+
+            {!isUnlocked ? (
+              <div className="absolute inset-0 flex items-center justify-center p-4 md:p-8">
+                <div className="bg-white/95 backdrop-blur-md border border-brand-border rounded-[24px] p-8 max-w-md w-full shadow-[0_20px_60px_rgba(10,22,40,0.18)]">
+                  <h3 className="font-heading font-black text-navy text-xl text-center">
+                    Unlock your full report
+                  </h3>
+                  <p className="text-charcoal-mid text-sm text-center mt-2">
+                    Enter your details to reveal your score and receive the full
+                    assessment breakdown with recommendations for each risk
+                    area.
+                  </p>
+                  <form className="mt-6" onSubmit={handleCaptureSubmit}>
+                    <input
+                      type="text"
+                      name="firstName"
+                      required
+                      placeholder="First name"
+                      value={firstName}
+                      onChange={(e) => setFirstName(e.target.value)}
+                      className="w-full border border-brand-border rounded-[4px] px-4 py-3 text-sm font-sans text-charcoal placeholder:text-charcoal-mid/50 focus:outline-none focus:border-brand-gold transition mb-3"
+                    />
+                    <input
+                      type="email"
+                      name="email"
+                      required
+                      placeholder="Work email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="w-full border border-brand-border rounded-[4px] px-4 py-3 text-sm font-sans text-charcoal placeholder:text-charcoal-mid/50 focus:outline-none focus:border-brand-gold transition mb-3"
+                    />
+                    {formState.status === "error" && (
+                      <p className="text-sm text-red-600 mb-3">
+                        {formState.message}
+                      </p>
+                    )}
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="bg-brand-gold text-navy font-heading font-black text-sm tracking-widest uppercase w-full py-4 rounded-[4px] hover:bg-gold-light transition disabled:opacity-60"
+                    >
+                      {isSubmitting
+                        ? "UNLOCKING..."
+                        : "UNLOCK YOUR FULL REPORT →"}
+                    </button>
+                  </form>
+                  <p className="text-xs text-charcoal-mid text-center mt-4">
+                    No spam. Unsubscribe anytime.
                   </p>
                 </div>
-              );
-            })}
+              </div>
+            ) : null}
           </div>
 
-          {formState.status === "success" ? (
+          {isUnlocked ? (
             <div className="text-center py-8">
               <CheckCircle
                 className="text-brand-teal mx-auto size-16"
                 strokeWidth={1.5}
               />
               <p className="text-charcoal text-lg mt-4">
-                Your Reputation Risk Report has been sent to{" "}
+                Your Reputation Risk Report request has been received for{" "}
                 <strong>{email}</strong>.
               </p>
               <p className="text-charcoal-mid text-sm mt-2">
@@ -361,52 +433,7 @@ export function ReputationAssessment({ embedded = false }: { embedded?: boolean 
                 recommendations.
               </p>
             </div>
-          ) : (
-            <div className="bg-off-white border border-brand-border rounded-lg p-8 max-w-md mx-auto">
-              <h3 className="font-heading font-black text-navy text-xl text-center">
-                Get your full report
-              </h3>
-              <p className="text-charcoal-mid text-sm text-center mt-2">
-                Receive a detailed breakdown with recommendations for each risk
-                area.
-              </p>
-              <form className="mt-6" onSubmit={handleCaptureSubmit}>
-                <input
-                  type="text"
-                  name="firstName"
-                  required
-                  placeholder="First name"
-                  value={firstName}
-                  onChange={(e) => setFirstName(e.target.value)}
-                  className="w-full border border-brand-border rounded-[4px] px-4 py-3 text-sm font-sans text-charcoal placeholder:text-charcoal-mid/50 focus:outline-none focus:border-brand-gold transition mb-3"
-                />
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  placeholder="Work email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="w-full border border-brand-border rounded-[4px] px-4 py-3 text-sm font-sans text-charcoal placeholder:text-charcoal-mid/50 focus:outline-none focus:border-brand-gold transition mb-3"
-                />
-                {formState.status === "error" && (
-                  <p className="text-sm text-red-600 mb-3">
-                    {formState.message}
-                  </p>
-                )}
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="bg-brand-gold text-navy font-heading font-black text-sm tracking-widest uppercase w-full py-4 rounded-[4px] hover:bg-gold-light transition disabled:opacity-60"
-                >
-                  {isSubmitting ? "SENDING..." : "SEND MY REPORT →"}
-                </button>
-              </form>
-              <p className="text-xs text-charcoal-mid text-center mt-4">
-                No spam. Unsubscribe anytime.
-              </p>
-            </div>
-          )}
+          ) : null}
         </div>
       </section>
     );

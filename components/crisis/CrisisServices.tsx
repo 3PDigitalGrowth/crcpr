@@ -16,7 +16,7 @@ const cards = [
     title: "Crisis Communications Coordination",
     paragraphs: [
       "When a crisis is live, the decisions made in the first hour determine the outcome of the entire event. We join your response team immediately, managing media enquiries, coordinating communications across all stakeholder groups, preparing and briefing your spokespeople, and directing your response with the discipline that separates organisations that emerge intact from those that do not.",
-      "We manage the full response arc: from the initial holding statement, through the sustained communications program during the event, to the stakeholder communications that follow. We are with you 24 hours a day for as long as the crisis requires, not just the first phone call.",
+      "We manage the full response arc: from the initial holding statement, through the sustained communications programme during the event, to the stakeholder communications that follow. We are with you 24 hours a day for as long as the crisis requires, not just the first phone call.",
     ],
     cta: "Discuss your situation →",
     href: "#contact-form",
@@ -27,7 +27,7 @@ const cards = [
     paragraphs: [
       "A crisis plan that has never been tested is not a plan. It is a document. The difference between an organisation that responds well under pressure and one that does not is almost always whether their people have practised under simulated conditions before they needed to perform under real ones.",
       "Our crisis simulation exercises are designed specifically for your organisation, built around the scenarios most likely to affect your sector, your stakeholders, and your reputation. We test your crisis team, your spokespeople, your messaging, and your decision-making process in a controlled environment that exposes exactly where your plan needs to be strengthened.",
-      "Simulations are available as half-day or full-day programs, for leadership teams of 4 to 15 people, delivered in person or remotely.",
+      "Simulations are available as half-day or full-day programmes, for leadership teams of 4 to 15 people, delivered in person or remotely.",
     ],
     cta: "Book a simulation →",
     href: "/contact" as const,

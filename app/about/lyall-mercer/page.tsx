@@ -157,7 +157,7 @@ export default function LyallMercerPage() {
           <div className="my-10">
             <h2 className="font-heading font-black text-navy text-2xl mb-4">Speaking and training</h2>
             <p className="text-charcoal text-base leading-relaxed mb-4">
-              Lyall is a sought-after keynote speaker and workshop facilitator on crisis communications, reputation management, and media strategy. He has delivered programs across Australia, the USA, and Canada, including at the Australian Catholic Bishops Conference.
+              Lyall is a sought-after keynote speaker and workshop facilitator on crisis communications, reputation management, and media strategy. He has delivered programmes across Australia, the USA, and Canada, including at the Australian Catholic Bishops Conference.
             </p>
             <p className="text-charcoal text-base leading-relaxed mb-6">
               For speaking enquiries, visit{" "}

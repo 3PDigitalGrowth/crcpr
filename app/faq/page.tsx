@@ -63,13 +63,61 @@ export default function FAQPage() {
       />
 
       <section className="bg-white py-16 md:py-20">
-        <div className="max-w-3xl mx-auto px-6">
-          <p className="text-charcoal-mid text-[15px] leading-relaxed">
-            The questions below reflect the points most clients want to understand
-            before they engage CRC PR: how the firm works, what kinds of matters fit
-            best, how urgent support is handled, and what direct senior counsel
-            actually looks like in practice.
-          </p>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_340px] gap-10 items-start">
+            <div className="max-w-3xl">
+              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
+                Before You Engage
+              </p>
+              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                The questions most clients want answered first.
+              </h2>
+              <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
+                The questions below reflect what most clients want to
+                understand before they engage CRC PR: how the firm works, what
+                kinds of matters fit best, how urgent support is handled, and
+                what direct senior counsel actually looks like in practice.
+              </p>
+            </div>
+
+            <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
+              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
+                What This FAQ Covers
+              </p>
+
+              <div className="space-y-4">
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    How CRC PR works
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    The firm model, how advice is delivered, and what senior-led
+                    support means in practice.
+                  </p>
+                </div>
+
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Fit and urgency
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    What kinds of matters suit CRC PR best, and how urgent
+                    situations are handled.
+                  </p>
+                </div>
+
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    The next sensible step
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    Enough context to decide whether the right move is to keep
+                    reading or start a confidential conversation.
+                  </p>
+                </div>
+              </div>
+            </aside>
+          </div>
         </div>
       </section>
 

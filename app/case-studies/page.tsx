@@ -54,17 +54,73 @@ export default function CaseStudiesPage() {
       />
 
       <section className="bg-white py-16 md:py-20">
-        <div className="max-w-3xl mx-auto px-6">
-          <p className="text-charcoal-mid text-[15px] leading-relaxed">
-            CRC PR does not publicise client work casually. The examples below are shown
-            because senior communications counsel should still be measured by outcomes:
-            changes in legislation, preservation of trust, funding secured, confidence
-            protected, and pressure stabilised before the long-tail damage sets in.
-          </p>
-          <p className="text-charcoal-mid text-[15px] leading-relaxed mt-6">
-            These are anonymised snapshots of the kind of work clients engage us to do
-            when the matter is commercially, politically, or reputationally significant.
-          </p>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_340px] gap-10 items-start">
+            <div className="max-w-3xl">
+              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
+                Why We Show These
+              </p>
+              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                Confidential work. Measurable outcomes.
+              </h2>
+              <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
+                CRC PR does not publicise client work casually. The examples
+                below are shown because senior communications counsel should
+                still be measured by outcomes.
+              </p>
+
+              <div className="space-y-6 mt-8">
+                <p className="text-charcoal-mid text-[15px] leading-relaxed">
+                  That means changes in legislation, preservation of trust,
+                  funding secured, confidence protected, and pressure
+                  stabilised before the long-tail damage sets in.
+                </p>
+                <p className="text-charcoal-mid text-[15px] leading-relaxed">
+                  These are anonymised snapshots of the kind of work clients
+                  engage us to do when the matter is commercially, politically,
+                  or reputationally significant.
+                </p>
+              </div>
+            </div>
+
+            <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
+              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
+                What The Outcomes Show
+              </p>
+
+              <div className="space-y-4">
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Strategic communication moves outcomes
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    The value is not noise or visibility. It is what changed
+                    because the communication strategy held.
+                  </p>
+                </div>
+
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Confidentiality still matters
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    These examples are anonymised by design because discretion is
+                    part of the service, not an afterthought.
+                  </p>
+                </div>
+
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Stakes are real
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    The matters shown here involve real policy, reputational,
+                    and organisational consequences.
+                  </p>
+                </div>
+              </div>
+            </aside>
+          </div>
         </div>
       </section>
 

@@ -343,9 +343,9 @@ export default function PacificPage() {
               </h3>
               <p className="text-charcoal text-[15px] leading-relaxed">
                 Australia, New Zealand, and international development partners
-                invest significantly in Pacific development programs in health,
+                invest significantly in Pacific development programmes in health,
                 infrastructure, governance, and climate adaptation.
-                Communicating these programs effectively requires navigating
+                Communicating these programmes effectively requires navigating
                 relationships with government counterparts, communities, and
                 international stakeholders with cultural precision and strategic
                 clarity.
@@ -354,7 +354,7 @@ export default function PacificPage() {
                 We work with development organisations, NGOs, and donor agencies
                 to develop communications strategies that are culturally
                 appropriate, politically navigable, and effective in building the
-                community understanding and support that development programs
+                community understanding and support that development programmes
                 require to succeed.
               </p>
             </div>

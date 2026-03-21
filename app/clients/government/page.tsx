@@ -40,7 +40,7 @@ const proofItems = [
     label: "Sensitive moments",
     value: "Prepared response",
     detail:
-      "Programs, incidents, reform agendas, and contested decisions all require messages that can withstand media and parliamentary pressure.",
+      "Programmes, incidents, reform agendas, and contested decisions all require messages that can withstand media and parliamentary pressure.",
   },
 ] as const;
 
@@ -79,70 +79,77 @@ export default function GovernmentClientsPage() {
       />
 
       <section className="bg-white py-24">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-5 gap-16">
-          <div className="lg:col-span-3 space-y-6 text-charcoal-mid text-[15px] leading-relaxed">
-            <p>
-              Government organisations must communicate with authority, accuracy,
-              and empathy, often while managing competing stakeholder interests,
-              statutory obligations, and intense media attention. The public sector
-              environment demands discipline: clear accountabilities, defensible
-              messaging, and readiness when programs or incidents attract scrutiny.
-            </p>
-            <p>
-              CRC PR supports departments, agencies, and authorities with
-              communications strategy that respects machinery-of-government
-              realities. We help leaders anticipate friction points, align internal
-              and external narratives, and engage communities and industry with
-              clarity and respect.
-            </p>
-            <p>
-              From ministerial announcements to operational incidents and complex
-              reform agendas, we provide experienced counsel, including crisis
-              response when confidence in public institutions is on the line.
-            </p>
-          </div>
-          <div className="lg:col-span-2">
-            <ul className="space-y-3">
-              {services.map((item) => (
-                <li
-                  key={item}
-                  className="flex gap-3 text-charcoal-mid text-[15px] leading-snug"
-                >
-                  <Check
-                    className="size-5 shrink-0 text-brand-gold mt-0.5"
-                    strokeWidth={2.5}
-                    aria-hidden
-                  />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_380px] gap-10 items-start">
+            <div className="max-w-3xl">
+              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
+                Public Sector Communications
+              </p>
+              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                Authority, process, and public confidence have to hold together.
+              </h2>
+              <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
+                Government organisations must communicate with authority,
+                accuracy, and empathy while managing competing stakeholder
+                interests, statutory obligations, and intense media attention.
+              </p>
 
-      <section className="bg-off-white py-16 md:py-20">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="font-heading font-black text-navy text-3xl mb-6">
-            Where public sector communications often becomes difficult
-          </h2>
-          <p className="text-charcoal-mid text-[15px] leading-relaxed">
-            Complexity rarely comes from the announcement itself. It comes from
-            the number of interested audiences around it: ministers, agency
-            leadership, delivery partners, local communities, media, and staff.
-            The challenge is keeping the message accurate, coordinated, and
-            defensible across all of them without losing pace.
-          </p>
+              <div className="space-y-6 mt-8">
+                <p className="text-charcoal-mid text-[15px] leading-relaxed">
+                  The public sector environment demands discipline: clear
+                  accountabilities, defensible messaging, and readiness when
+                  programmes or incidents attract scrutiny.
+                </p>
+                <p className="text-charcoal-mid text-[15px] leading-relaxed">
+                  CRC PR supports departments, agencies, and authorities with
+                  communications strategy that respects
+                  machinery-of-government realities. We help leaders anticipate
+                  friction points, align internal and external narratives, and
+                  engage communities and industry with clarity and respect.
+                </p>
+                <p className="text-charcoal-mid text-[15px] leading-relaxed">
+                  From ministerial announcements to operational incidents and
+                  complex reform agendas, we provide experienced counsel,
+                  including crisis response when confidence in public
+                  institutions is on the line.
+                </p>
+              </div>
+            </div>
+
+            <aside className="rounded-[28px] border border-brand-border bg-off-white p-6 md:p-8">
+              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
+                Typical Support Areas
+              </p>
+              <div className="space-y-3">
+                {services.map((item) => (
+                  <div
+                    key={item}
+                    className="flex gap-3 rounded-xl border border-brand-border bg-white px-4 py-4"
+                  >
+                    <Check
+                      className="size-5 shrink-0 text-brand-gold mt-0.5"
+                      strokeWidth={2.5}
+                      aria-hidden
+                    />
+                    <span className="text-charcoal-mid text-[15px] leading-snug">
+                      {item}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </aside>
+          </div>
         </div>
       </section>
 
       <InlineEnquirySection
+        eyebrow="WHERE IT GETS DIFFICULT"
         title="Need strategic communications support for a public sector matter?"
-        body="CRC PR supports departments, agencies, and statutory authorities that need clearer stakeholder communication, stronger message discipline, or confidential advice on a sensitive issue."
+        body="Complexity rarely comes from the announcement itself. It comes from the number of interested audiences around it: ministers, agency leadership, delivery partners, local communities, media, and staff. The challenge is keeping the message accurate, coordinated, and defensible across all of them without losing pace."
         bullets={[
           "Public sector stakeholder engagement and narrative planning",
-          "Issue, crisis, and program communications advice",
-          "Senior support for sensitive community and media-facing matters",
+          "Issue, crisis, and programme communications advice",
+          "Senior support for sensitive ministerial, community, and media-facing matters",
         ]}
         defaultMessage="We need government or public sector communications advice on a current matter."
       />

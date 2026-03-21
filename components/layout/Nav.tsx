@@ -267,7 +267,11 @@ function ClientsPanel({ onClose }: { onClose: () => void }) {
 
         <div className="py-5 px-4 border-r border-white/[0.06]">
           <ColumnHeader>CLIENT OUTCOMES</ColumnHeader>
-          <div className="bg-white/[0.02] rounded p-3 mb-2">
+          <Link
+            href="/clients/industry-associations"
+            onClick={onClose}
+            className="block bg-white/[0.02] rounded p-3 mb-2 hover:bg-white/[0.04] transition-colors"
+          >
             <p className="text-xs text-brand-gold tracking-wide uppercase font-medium">
               INDUSTRY ASSOCIATION
             </p>
@@ -278,8 +282,12 @@ function ClientsPanel({ onClose }: { onClose: () => void }) {
               National peak body campaign, regulatory provisions removed before
               the bill passed.
             </p>
-          </div>
-          <div className="bg-white/[0.02] rounded p-3 mb-3">
+          </Link>
+          <Link
+            href="/clients/schools-faith"
+            onClick={onClose}
+            className="block bg-white/[0.02] rounded p-3 mb-3 hover:bg-white/[0.04] transition-colors"
+          >
             <p className="text-xs text-brand-gold tracking-wide uppercase font-medium">
               INDEPENDENT SCHOOL
             </p>
@@ -290,7 +298,7 @@ function ClientsPanel({ onClose }: { onClose: () => void }) {
               Crisis managed from disclosure to recovery, parent confidence
               improved six months on.
             </p>
-          </div>
+          </Link>
           <Link
             href="/case-studies"
             onClick={onClose}

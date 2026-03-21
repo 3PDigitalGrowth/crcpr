@@ -91,49 +91,141 @@ export default function SchoolsFaithPage() {
 
       {/* Opening */}
       <section className="bg-white py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-6">
-          <p className="text-charcoal text-[15px] leading-relaxed">
-            Schools and faith-based organisations face communications
-            challenges that are unlike those of any other sector. When an
-            incident occurs, whether it is a safeguarding matter, a staff
-            conduct issue, a governance concern, or a social media
-            controversy, the audience is not just media and regulators. It
-            is parents who entrust you with the care of their children,
-            alumni who carry your school&apos;s reputation into the world,
-            and a faith community that expects its values to be reflected in
-            how your organisation responds to difficulty.
-          </p>
-          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
-            The legal obligations are significant. The pastoral duty is
-            equally significant. The communications challenge is managing
-            both simultaneously, responding with the transparency that
-            parents demand, the discretion that legal obligations require,
-            and the compassion that the community deserves.
-          </p>
-          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
-            CRC PR has worked with independent schools, Catholic school
-            networks, and faith-based organisations across Australia for
-            over 25 years. Lyall Mercer has presented at the Australian
-            Catholic Bishops Conference and has developed crisis
-            communications frameworks used by school networks across the
-            country. We understand the unique pressures of school and
-            faith-based communications, and the very high stakes of getting
-            them wrong.
-          </p>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_360px] gap-10 items-start">
+            <div className="max-w-3xl">
+              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
+                Sector Reality
+              </p>
+              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                In this sector, communication is judged by care as much as
+                control.
+              </h2>
+              <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
+                School and faith-based matters rarely affect only one audience.
+                The real challenge is responding with accuracy, compassion, and
+                discipline while trust is already under pressure.
+              </p>
+
+              <div className="space-y-6 mt-8">
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  Schools and faith-based organisations face communications
+                  challenges that are unlike those of any other sector. When an
+                  incident occurs, whether it is a safeguarding matter, a staff
+                  conduct issue, a governance concern, or a social media
+                  controversy, the audience is not just media and regulators. It
+                  is parents who entrust you with the care of their children,
+                  alumni who carry your school&apos;s reputation into the world,
+                  and a faith community that expects its values to be reflected
+                  in how your organisation responds to difficulty.
+                </p>
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  The legal obligations are significant. The pastoral duty is
+                  equally significant. The communications challenge is managing
+                  both simultaneously, responding with the transparency that
+                  parents demand, the discretion that legal obligations require,
+                  and the compassion that the community deserves.
+                </p>
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  CRC PR has worked with independent schools, Catholic school
+                  networks, and faith-based organisations across Australia for
+                  over 25 years. Lyall Mercer has presented at the Australian
+                  Catholic Bishops Conference and has developed crisis
+                  communications frameworks used by school networks across the
+                  country. We understand the unique pressures of school and
+                  faith-based communications, and the very high stakes of
+                  getting them wrong.
+                </p>
+              </div>
+            </div>
+
+            <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
+              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
+                What Makes This Different
+              </p>
+
+              <div className="space-y-4">
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    More than media pressure
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    Parents, boards, alumni, parish communities, and regulators
+                    all shape the response environment.
+                  </p>
+                </div>
+
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Pastoral and legal duties
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    Leaders must show compassion without compromising legal,
+                    safeguarding, or governance obligations.
+                  </p>
+                </div>
+
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Trust moves quickly
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    The first messages often shape parent confidence and wider
+                    community sentiment for much longer than expected.
+                  </p>
+                </div>
+              </div>
+            </aside>
+          </div>
         </div>
       </section>
 
       <section className="bg-off-white py-16 md:py-20">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="font-heading font-black text-navy text-3xl mb-6">
-            What schools usually need help deciding first
-          </h2>
-          <p className="text-charcoal text-[15px] leading-relaxed">
-            Who needs to be told first? What can we say to parents now? What do
-            we keep back because the legal position is still moving? How do we
-            show compassion without creating avoidable exposure? These are the
-            decisions that shape trust in the first hour.
-          </p>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_340px] gap-10 items-start">
+            <div className="max-w-3xl">
+              <p className="text-brand-gold font-sans font-medium text-xs tracking-[0.14em] uppercase mb-4">
+                FIRST-HOUR JUDGMENT
+              </p>
+              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                What schools usually need help deciding first
+              </h2>
+              <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
+                The first questions are rarely about wording alone. They are
+                about sequence, disclosure, and how to communicate care without
+                creating unnecessary exposure.
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
+                {[
+                  "Who needs to be told first?",
+                  "What can we say to parents now?",
+                  "What do we hold back while the legal position is still moving?",
+                  "How do we show compassion without creating avoidable exposure?",
+                ].map((question) => (
+                  <div
+                    key={question}
+                    className="rounded-lg border border-brand-border bg-white p-6"
+                  >
+                    <p className="font-sans font-semibold text-navy text-base leading-relaxed">
+                      {question}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <aside className="rounded-lg border border-brand-border bg-white p-6 md:p-8">
+              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
+                Why The First Hour Matters
+              </p>
+              <p className="text-charcoal-mid text-sm leading-relaxed">
+                These are the decisions that shape trust in the first hour and
+                set the tone for every parent, staff, board, and community
+                communication that follows.
+              </p>
+            </aside>
+          </div>
         </div>
       </section>
 
@@ -151,94 +243,55 @@ export default function SchoolsFaithPage() {
 
       {/* How CRC PR supports schools and faith-based organisations */}
       <section className="bg-off-white py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="font-heading font-black text-navy text-3xl mb-12">
-            How CRC PR supports schools and faith-based organisations
-          </h2>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="max-w-3xl">
+            <p className="text-brand-gold font-sans font-medium text-xs tracking-[0.14em] uppercase mb-4">
+              HOW WE SUPPORT
+            </p>
+            <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+              How CRC PR supports schools and faith-based organisations
+            </h2>
+            <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
+              The need is rarely just media advice. School leaders usually need
+              a response model that protects students, reassures families, and
+              keeps governance, legal, and public communication aligned.
+            </p>
+          </div>
 
-          <div className="space-y-12">
-            <div>
-              <h3 className="font-heading font-black text-navy text-xl mb-3">
-                Crisis communications and incident response
-              </h3>
-              <p className="text-charcoal text-[15px] leading-relaxed">
-                When a serious incident occurs at your school, a
-                safeguarding disclosure, a medical emergency, an allegation
-                against staff, or a sudden death in the school community,
-                your first communications obligation is to your students and
-                their families. We help you discharge that obligation
-                clearly, compassionately, and in a way that does not
-                compromise legal processes or create new liability.
-              </p>
-              <p className="text-charcoal text-[15px] leading-relaxed mt-4">
-                We provide immediate senior counsel: drafting parent
-                communications, preparing your principal for media
-                enquiries, advising on social media response, and
-                coordinating messaging across your board, staff, and
-                community simultaneously.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-heading font-black text-navy text-xl mb-3">
-                Parent and community communications
-              </h3>
-              <p className="text-charcoal text-[15px] leading-relaxed">
-                Parent communications during a crisis is one of the most
-                difficult communications challenges a school leader faces.
-                The instinct is to communicate as much as possible, as fast
-                as possible, but the legal and pastoral reality is more
-                nuanced. We help school leaders develop parent
-                communications that are honest, appropriately bounded, and
-                designed to maintain community confidence without
-                prejudicing outcomes.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-heading font-black text-navy text-xl mb-3">
-                Media relations and spokesperson support
-              </h3>
-              <p className="text-charcoal text-[15px] leading-relaxed">
-                When media interest in an incident at your school is
-                sustained, the school&apos;s communications posture must be
-                equally sustained. We manage media enquiries, prepare your
-                principal or spokesperson for on-camera and print media
-                appearances, and develop holding statements and media
-                strategies that maintain your school&apos;s position
-                throughout the coverage period.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-heading font-black text-navy text-xl mb-3">
-                Board and governance communications
-              </h3>
-              <p className="text-charcoal text-[15px] leading-relaxed">
-                School boards and councils face specific governance
-                communications challenges, managing the boundary between
-                board oversight and operational management during a crisis,
-                and communicating with parents about governance processes
-                without compromising confidentiality. We advise boards and
-                councils on their communications obligations and help them
-                discharge those obligations clearly.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-heading font-black text-navy text-xl mb-3">
-                Social media and online reputation
-              </h3>
-              <p className="text-charcoal text-[15px] leading-relaxed">
-                Social media has fundamentally changed the speed and
-                character of school crises. A single parent post, a student
-                video, or an anonymous complaint on a school review forum
-                can generate sustained community attention within hours. We
-                help schools develop social media governance frameworks
-                before incidents occur, and provide rapid response counsel
-                when a social media situation escalates.
-              </p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
+            {[
+              {
+                title: "Crisis communications and incident response",
+                body: "When a serious incident occurs, we help leaders respond clearly, compassionately, and without compromising legal process. That includes immediate senior counsel on parent messaging, principal briefings, media enquiries, and coordinated communication across staff, boards, and the wider community.",
+              },
+              {
+                title: "Parent and community communications",
+                body: "We help schools develop parent and community messaging that is honest, appropriately bounded, and built to maintain confidence. The aim is to show care and transparency without prejudicing outcomes or creating avoidable exposure.",
+              },
+              {
+                title: "Media relations and spokesperson support",
+                body: "When attention is sustained, the school's communications posture needs to be equally disciplined. We manage enquiries, prepare principals and spokespeople for interviews, and develop holding statements and media strategy that can hold up across the full coverage period.",
+              },
+              {
+                title: "Board, governance, and digital escalation",
+                body: "We advise boards and councils on governance communication, the boundary between oversight and operations, and how to communicate confidentially during sensitive matters. We also help schools prepare for social media escalation, where a single post, video, or anonymous complaint can drive community pressure within hours.",
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="rounded-[28px] border border-brand-border bg-white p-7 md:p-8 shadow-[0_10px_30px_rgba(15,23,42,0.04)]"
+              >
+                <div className="inline-flex items-center rounded-full bg-off-white px-3 py-1 text-[11px] font-medium tracking-[0.14em] uppercase text-brand-teal">
+                  Support Area
+                </div>
+                <h3 className="font-heading font-black text-navy text-xl leading-snug mt-4 mb-4">
+                  {item.title}
+                </h3>
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  {item.body}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

@@ -284,7 +284,7 @@ export default function CorporateCommunicationsPage() {
                 obstruct its objectives. We map your stakeholder landscape,
                 identify the relationships that matter most, and design
                 engagement strategies that build trust and maintain it through
-                major change programs, regulatory processes, and periods of
+                major change programmes, regulatory processes, and periods of
                 uncertainty.
               </p>
             </div>
@@ -297,7 +297,7 @@ export default function CorporateCommunicationsPage() {
                 How an organisation communicates with its own people during
                 change, crisis, or transition determines whether that process
                 builds or erodes confidence. We develop internal communications
-                programs that keep your workforce informed, aligned, and
+                programmes that keep your workforce informed, aligned, and
                 engaged, from board announcements to all-staff responses.
               </p>
             </div>
@@ -469,21 +469,34 @@ export default function CorporateCommunicationsPage() {
       {/* Proof and next-step resource */}
       <section className="bg-off-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="font-heading font-black text-navy text-3xl mb-6">
-            Related sectors
-          </h2>
-          <p className="text-charcoal text-[15px] leading-relaxed mb-6">
-            We have delivered corporate communications programs across the
-            following sectors. Click to explore our sector-specific approach.
-          </p>
-          <div className="flex flex-wrap gap-3">
+          <div className="max-w-3xl">
+            <p className="text-brand-gold font-sans font-medium text-xs tracking-[0.14em] uppercase mb-4">
+              Related Sectors
+            </p>
+            <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+              Sector experience that shapes the advice.
+            </h2>
+            <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
+              CRC PR has delivered corporate communications programmes across a
+              range of high-stakes sectors. Explore the pages below to see how
+              our approach changes when the operating environment, stakeholder
+              pressure, and communications risks are different.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
             {sectorLinks.map((sector) => (
               <Link
                 key={sector.label}
                 href={sector.href}
-                className="bg-off-white border border-brand-border rounded-[4px] px-4 py-2 text-sm text-charcoal-mid hover:border-brand-gold hover:text-navy transition"
+                className="rounded-xl border border-brand-border bg-white p-5 text-sm text-charcoal-mid hover:border-brand-gold hover:text-navy hover:-translate-y-0.5 transition"
               >
-                {sector.label}
+                <p className="font-sans font-semibold text-navy text-base leading-snug">
+                  {sector.label}
+                </p>
+                <p className="text-charcoal-mid text-sm mt-2">
+                  Explore CRC PR&apos;s sector-specific communications approach.
+                </p>
               </Link>
             ))}
           </div>

@@ -72,6 +72,6 @@ export async function submitAssessment(
 
   return {
     status: "success",
-    message: "Your Reputation Risk Report has been sent.",
+    message: "Your Reputation Risk Report request has been received.",
   };
 }

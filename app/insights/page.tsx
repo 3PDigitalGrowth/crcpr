@@ -50,19 +50,72 @@ export default function InsightsPage() {
       />
 
       <section className="bg-white py-16 md:py-20">
-        <div className="max-w-3xl mx-auto px-6">
-          <p className="text-charcoal-mid text-[15px] leading-relaxed">
-            CRC PR insights are written for leaders who need clearer judgement, not more
-            commentary. The focus is practical: what matters, where organisations
-            usually misread the pressure, and what experienced advisors would be
-            watching before the situation escalates.
-          </p>
-          <p className="text-charcoal-mid text-[15px] leading-relaxed mt-6">
-            The themes are consistent with the firm&apos;s work across crisis,
-            reputation, media, and stakeholder communication. Articles are designed to
-            be useful on their own, then naturally lead to the next step if your matter
-            is live, emerging, or strategically sensitive.
-          </p>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_340px] gap-10 items-start">
+            <div className="max-w-3xl">
+              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
+                How To Use These Insights
+              </p>
+              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                Practical thinking for leaders under pressure.
+              </h2>
+              <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
+                CRC PR insights are written for leaders who need clearer
+                judgement, not more commentary. The focus is practical: what
+                matters, where organisations usually misread the pressure, and
+                what experienced advisors would be watching before the situation
+                escalates.
+              </p>
+
+              <div className="space-y-6 mt-8">
+                <p className="text-charcoal-mid text-[15px] leading-relaxed">
+                  The themes are consistent with the firm&apos;s work across
+                  crisis, reputation, media, and stakeholder communication.
+                  Articles are designed to be useful on their own, then
+                  naturally lead to the next step if your matter is live,
+                  emerging, or strategically sensitive.
+                </p>
+              </div>
+            </div>
+
+            <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
+              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
+                What You&apos;ll Find Here
+              </p>
+
+              <div className="space-y-4">
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    What matters most
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    Fast clarity on the issues, judgements, and signals that
+                    usually shape the outcome.
+                  </p>
+                </div>
+
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Common leadership blind spots
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    Where organisations often misread scrutiny, timing, and
+                    stakeholder pressure.
+                  </p>
+                </div>
+
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Practical next steps
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    Articles that stand on their own, but also point clearly to
+                    the next decision when the matter is live.
+                  </p>
+                </div>
+              </div>
+            </aside>
+          </div>
         </div>
       </section>
 

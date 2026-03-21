@@ -95,28 +95,97 @@ export default function MediaStrategyPage() {
 
       {/* Opening section */}
       <section className="bg-white py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-6">
-          <p className="text-charcoal text-[15px] leading-relaxed">
-            Most organisations have a media strategy in name only. They issue
-            press releases in response to company announcements, they respond to
-            journalist enquiries when they come, and they measure success by
-            whether coverage was positive or negative. This is media management,
-            not media strategy.
-          </p>
-          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
-            A genuine media strategy begins with a clear understanding of what
-            you want to be known for, who the journalists and editors are who
-            cover your sector and your issues, and what you can consistently
-            offer them that earns sustained, credible coverage. It requires
-            investment in relationships, in content, and in the preparation of
-            your spokespeople, not just when you have something to announce, but
-            as an ongoing discipline.
-          </p>
-          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
-            CRC PR builds and executes media strategies for organisations that
-            want to move from reactive to proactive, and that understand the
-            difference between being covered and being credible.
-          </p>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_360px] gap-10 items-start">
+            <div className="max-w-3xl">
+              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
+                Media Strategy
+              </p>
+              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                Visibility is not the same thing as positioning.
+              </h2>
+              <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
+                Strong media strategy is not a sequence of isolated media
+                moments. It is a disciplined decision about what your
+                organisation should be known for, who should hear it, and why
+                journalists should keep coming back to you.
+              </p>
+
+              <div className="space-y-6 mt-8">
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  Most organisations have a media strategy in name only. They
+                  issue press releases in response to company announcements,
+                  they respond to journalist enquiries when they come, and they
+                  measure success by whether coverage was positive or negative.
+                  This is media management, not media strategy.
+                </p>
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  A genuine media strategy begins with a clear understanding of
+                  what you want to be known for, who the journalists and
+                  editors are who cover your sector and your issues, and what
+                  you can consistently offer them that earns sustained,
+                  credible coverage. It requires investment in relationships,
+                  in content, and in the preparation of your spokespeople, not
+                  just when you have something to announce, but as an ongoing
+                  discipline.
+                </p>
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  CRC PR builds and executes media strategies for organisations
+                  that want to move from reactive to proactive, and that
+                  understand the difference between being covered and being
+                  credible.
+                </p>
+              </div>
+            </div>
+
+            <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
+              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
+                What Weak Strategy Looks Like
+              </p>
+
+              <div className="space-y-4">
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Press release dependence
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    Media activity only appears when the organisation has
+                    something to announce.
+                  </p>
+                </div>
+
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Reactive enquiry handling
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    Journalists drive the agenda because there is no settled
+                    editorial position behind the response.
+                  </p>
+                </div>
+
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Shallow success measures
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    Coverage is judged as positive or negative, rather than by
+                    whether it builds durable authority.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-6 pt-6 border-t border-brand-border">
+                <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-3">
+                  Strategic Aim
+                </p>
+                <p className="text-navy font-sans font-semibold text-base leading-relaxed">
+                  Move from reactive media management to sustained, credible
+                  market positioning.
+                </p>
+              </div>
+            </aside>
+          </div>
         </div>
       </section>
 
@@ -151,7 +220,7 @@ export default function MediaStrategyPage() {
         bullets={[
           "Media strategy and editorial positioning",
           "Journalist relationship and spokesperson planning",
-          "Thought leadership and commentary programs",
+          "Thought leadership and commentary programmes",
         ]}
         defaultMessage="We would like advice on our media strategy and spokesperson positioning."
         variant="white"
@@ -233,31 +302,86 @@ export default function MediaStrategyPage() {
 
       {/* We understand how newsrooms think */}
       <section className="bg-white py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="font-heading font-black text-navy text-3xl mb-6">
-            We understand how newsrooms think, because we came from them
-          </h2>
-          <p className="text-charcoal text-[15px] leading-relaxed">
-            CRC PR founder Lyall Mercer began his career as a journalist. That
-            background is not incidental. It is the foundation of everything we
-            do in media strategy. We do not approach media relations from the
-            perspective of a PR firm trying to manage journalists. We approach
-            it from the perspective of people who understand what editors are
-            looking for, what makes a story worth covering, and what makes an
-            organisation worth calling back.
-          </p>
-          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
-            This gives our clients a genuine advantage. We know how to frame a
-            story so it is genuinely newsworthy, not just self-promotional. We
-            know which journalists are most receptive to which angles. And we
-            know when to hold a story back and when to push it.
-          </p>
-          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
-            Media training at CRC PR is delivered in partnership with television
-            and radio journalists with decades of broadcast experience, people
-            who have conducted the kinds of interviews your spokespeople need to
-            be ready for.
-          </p>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-[320px_minmax(0,1fr)] gap-10 items-start">
+            <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
+              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
+                Why It Matters
+              </p>
+
+              <div className="space-y-4">
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Real editorial judgment
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    We know the difference between a genuine angle and a
+                    self-interested pitch.
+                  </p>
+                </div>
+
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Better reporter fit
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    The right story still fails if it is sent to the wrong
+                    journalist, desk, or format.
+                  </p>
+                </div>
+
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Smarter timing
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    Knowing when to hold back is often as valuable as knowing
+                    when to push forward.
+                  </p>
+                </div>
+              </div>
+            </aside>
+
+            <div className="max-w-3xl">
+              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
+                Newsroom Perspective
+              </p>
+              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                We understand how newsrooms think because we came from them.
+              </h2>
+              <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
+                That background is not a credential line. It shapes how we
+                judge stories, prepare spokespeople, and build coverage that
+                journalists will actually trust.
+              </p>
+
+              <div className="space-y-6 mt-8">
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  CRC PR founder Lyall Mercer began his career as a journalist.
+                  That background is not incidental. It is the foundation of
+                  everything we do in media strategy. We do not approach media
+                  relations from the perspective of a PR firm trying to manage
+                  journalists. We approach it from the perspective of people
+                  who understand what editors are looking for, what makes a
+                  story worth covering, and what makes an organisation worth
+                  calling back.
+                </p>
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  This gives our clients a genuine advantage. We know how to
+                  frame a story so it is genuinely newsworthy, not just
+                  self-promotional. We know which journalists are most
+                  receptive to which angles. And we know when to hold a story
+                  back and when to push it.
+                </p>
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  Media training at CRC PR is delivered in partnership with
+                  television and radio journalists with decades of broadcast
+                  experience, people who have conducted the kinds of interviews
+                  your spokespeople need to be ready for.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

@@ -108,25 +108,92 @@ export default function CrisisCommunicationsPage() {
 
       {/* Opening section */}
       <section className="bg-white py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-6">
-          <p className="text-charcoal text-[15px] leading-relaxed">
-            Most organisations facing a communications crisis make the same
-            mistakes in the first fifteen minutes: they wait for more information
-            before responding, they respond through the wrong channel, or they
-            say more than they should before the facts are established. Each
-            mistake compounds the one before it.
-          </p>
-          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
-            CRC PR founder Lyall Mercer has spent 25 years studying and managing
-            the first moments of corporate crises. His conclusion is
-            unambiguous: the organisations that navigate crises best are not the
-            ones that are most articulate under pressure. They are the ones that
-            have a tested plan, a prepared spokesperson, and senior counsel on
-            the phone before the first journalist calls.
-          </p>
-          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
-            This is the preparation we provide.
-          </p>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_360px] gap-10 items-start">
+            <div className="max-w-3xl">
+              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
+                The First Fifteen Minutes
+              </p>
+              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                The damage often starts before the facts are clear.
+              </h2>
+              <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
+                In a communications crisis, hesitation and overreaction can be
+                equally costly. The organisations that fare best are rarely the
+                most eloquent under pressure. They are the most prepared.
+              </p>
+
+              <div className="space-y-6 mt-8">
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  Most organisations facing a communications crisis make the
+                  same mistakes in the first fifteen minutes: they wait for more
+                  information before responding, they respond through the wrong
+                  channel, or they say more than they should before the facts
+                  are established. Each mistake compounds the one before it.
+                </p>
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  CRC PR founder Lyall Mercer has spent 25 years studying and
+                  managing the first moments of corporate crises. His
+                  conclusion is unambiguous: the organisations that navigate
+                  crises best are not the ones that are most articulate under
+                  pressure. They are the ones that have a tested plan, a
+                  prepared spokesperson, and senior counsel on the phone before
+                  the first journalist calls.
+                </p>
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  This is the preparation we provide.
+                </p>
+              </div>
+            </div>
+
+            <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
+              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
+                Common First-Response Failures
+              </p>
+
+              <div className="space-y-4">
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Waiting for certainty
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    By the time every detail is confirmed, the narrative is
+                    often already moving without you.
+                  </p>
+                </div>
+
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Using the wrong channel
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    Staff, stakeholders, regulators, and media rarely need the
+                    same message in the same order.
+                  </p>
+                </div>
+
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Saying too much too soon
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    Early overstatement creates contradictions later and makes
+                    recovery materially harder.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-6 pt-6 border-t border-brand-border">
+                <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-3">
+                  What Better Looks Like
+                </p>
+                <p className="text-navy font-sans font-semibold text-base leading-relaxed">
+                  A tested plan, a prepared spokesperson, and senior counsel on
+                  the phone before the first journalist calls.
+                </p>
+              </div>
+            </aside>
+          </div>
         </div>
       </section>
 

@@ -79,71 +79,74 @@ export default function CorporateClientsPage() {
       />
 
       <section className="bg-white py-24">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-5 gap-16">
-          <div className="lg:col-span-3 space-y-6 text-charcoal-mid text-[15px] leading-relaxed">
-            <p>
-              Corporate reputation is shaped at the intersection of strategy,
-              behaviour, and narrative. Listed entities, professional services
-              firms, and private companies need counsel that understands regulatory
-              exposure, market expectations, and the pace at which issues move from
-              internal concern to public headline.
-            </p>
-            <p>
-              CRC PR works with chairs, CEOs, and general counsel to align
-              messaging with governance, protect valuation during turbulence, and
-              prepare leaders for scrutiny from investors, analysts, and media. We
-              bring journalistic judgment and crisis experience to every
-              engagement, without the overhead of a large agency model.
-            </p>
-            <p>
-              Whether you are managing a live issue, strengthening executive
-              visibility, or building a communications capability that matches
-              your growth ambitions, we provide direct access to senior advisors
-              who take ownership of outcomes.
-            </p>
-          </div>
-          <div className="lg:col-span-2">
-            <ul className="space-y-3">
-              {services.map((item) => (
-                <li
-                  key={item}
-                  className="flex gap-3 text-charcoal-mid text-[15px] leading-snug"
-                >
-                  <Check
-                    className="size-5 shrink-0 text-brand-gold mt-0.5"
-                    strokeWidth={2.5}
-                    aria-hidden
-                  />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      </section>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_380px] gap-10 items-start">
+            <div className="max-w-3xl">
+              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
+                Corporate Communications
+              </p>
+              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                Reputation is shaped where strategy, behaviour, and narrative meet.
+              </h2>
+              <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
+                Listed entities, professional services firms, and private
+                companies need counsel that understands regulatory exposure,
+                market expectations, and the pace at which issues move from
+                internal concern to public headline.
+              </p>
 
-      <section className="bg-off-white py-16 md:py-20">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="font-heading font-black text-navy text-3xl mb-6">
-            Typical situations where corporate clients bring us in
-          </h2>
-          <p className="text-charcoal-mid text-[15px] leading-relaxed">
-            We are often engaged when the stakes are commercial as well as
-            reputational: a leadership transition, a sensitive market-facing
-            announcement, investor or stakeholder concern building behind the
-            scenes, or a legal and communications issue colliding at the same
-            time. In those environments, speed matters, but so does judgement.
-          </p>
+              <div className="space-y-6 mt-8">
+                <p className="text-charcoal-mid text-[15px] leading-relaxed">
+                  CRC PR works with chairs, CEOs, and general counsel to align
+                  messaging with governance, protect valuation during
+                  turbulence, and prepare leaders for scrutiny from investors,
+                  analysts, and media. We bring journalistic judgment and
+                  crisis experience to every engagement, without the overhead
+                  of a large agency model.
+                </p>
+                <p className="text-charcoal-mid text-[15px] leading-relaxed">
+                  Whether you are managing a live issue, strengthening
+                  executive visibility, or building a communications capability
+                  that matches your growth ambitions, we provide direct access
+                  to senior advisors who take ownership of outcomes.
+                </p>
+              </div>
+            </div>
+
+            <aside className="rounded-[28px] border border-brand-border bg-off-white p-6 md:p-8">
+              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
+                Typical Support Areas
+              </p>
+              <div className="space-y-3">
+                {services.map((item) => (
+                  <div
+                    key={item}
+                    className="flex gap-3 rounded-xl border border-brand-border bg-white px-4 py-4"
+                  >
+                    <Check
+                      className="size-5 shrink-0 text-brand-gold mt-0.5"
+                      strokeWidth={2.5}
+                      aria-hidden
+                    />
+                    <span className="text-charcoal-mid text-[15px] leading-snug">
+                      {item}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </aside>
+          </div>
         </div>
       </section>
 
       <InlineEnquirySection
+        eyebrow="TYPICAL SITUATIONS"
         title="Need senior corporate communications advice?"
-        body="If your organisation is preparing for a sensitive market, board, investor, or stakeholder moment, CRC PR can provide confidential senior counsel from the outset."
+        body="We are often engaged when the stakes are commercial as well as reputational: a leadership transition, a sensitive market-facing announcement, investor or stakeholder concern building behind the scenes, or a legal and communications issue colliding at the same time. In those environments, speed matters, but so does judgement."
         bullets={[
-          "Board and executive communications support",
-          "Market-sensitive and stakeholder-facing planning",
-          "Reputation, issue, and announcement advice",
+          "Leadership transitions and board-facing moments",
+          "Sensitive market, investor, and stakeholder announcements",
+          "Reputation, legal, and communications issues colliding at once",
         ]}
         defaultMessage="We need corporate communications advice on a sensitive matter."
       />

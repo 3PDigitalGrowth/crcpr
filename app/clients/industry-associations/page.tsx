@@ -278,16 +278,19 @@ function AssociationsDirectory({ activeSector }: { activeSector: Sector }) {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <p className="text-brand-gold font-sans font-medium text-xs tracking-[0.18em] uppercase mb-3">
-          Associations Directory
+          Industry Associations
         </p>
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
           <div>
             <h2 className="font-heading font-black text-navy text-4xl mb-2">
-              Major Australian industry associations.
+              Industry associations CRC PR understands and supports.
             </h2>
             <p className="text-charcoal-mid text-base max-w-xl">
-              A reference directory of Australia&apos;s peak bodies and industry associations.
-              Filter by sector. Every entry links to the association&apos;s official website.
+              This page highlights major Australian peak bodies and industry
+              associations operating in sectors where CRC PR has deep
+              experience. Over time, it will expand into a broader pillar page
+              with more detailed sector insights, communications considerations,
+              and tailored support content for individual associations.
             </p>
           </div>
         </div>
@@ -350,9 +353,6 @@ function AssociationsDirectory({ activeSector }: { activeSector: Sector }) {
                         </p>
                         <p className="text-[10px] text-charcoal-mid">{association.subsector}</p>
                       </div>
-                      <span className="text-charcoal-mid text-xs flex-shrink-0 mt-1 group-hover:text-brand-gold transition-colors">
-                        ↗
-                      </span>
                     </a>
                   ))}
                 </div>

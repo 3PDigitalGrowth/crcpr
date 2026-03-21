@@ -18,7 +18,7 @@ const pillars = [
   {
     letter: "C",
     word: "Corporate",
-    desc: "Communicate effectively with every stakeholder, internal and external.",
+    desc: "We help you communicate effectively with every stakeholder, internal and external.",
     icon: (
       <svg
         width="20"
@@ -42,7 +42,7 @@ const pillars = [
   {
     letter: "R",
     word: "Reputation",
-    desc: "Assess vulnerabilities and protect what matters, before and after an issue surfaces.",
+    desc: "We assess your vulnerabilities and protect what matters, before and after an issue surfaces.",
     icon: (
       <svg
         width="20"
@@ -63,7 +63,7 @@ const pillars = [
   {
     letter: "C",
     word: "Crisis",
-    desc: "Guide your organisation through a crisis, and be prepared before it arrives.",
+    desc: "We guide you through a crisis and help you be prepared before it arrives.",
     icon: (
       <svg
         width="20"
@@ -171,11 +171,13 @@ export function HomeHero() {
             </AnimateIn>
 
             <AnimateIn delay={300}>
-              <p className="text-[rgba(245,242,236,0.75)] text-base lg:text-lg leading-relaxed max-w-[480px] mt-4">
-                CRC Public Relations is a boutique corporate PR firm trusted by
-                companies, governments, associations, and organisations across
-                Australia, the Pacific, and internationally, when reputation,
-                issues, and crises demand experienced, senior advice.
+              <p className="text-[rgba(245,242,236,0.75)] text-base lg:text-lg leading-relaxed text-justify w-full mt-4">
+                In today&apos;s media and activist environment, companies and
+                organisations are more vulnerable than ever before. CRC Public
+                Relations is a boutique corporate PR firm trusted by companies,
+                governments, associations, and organisations across Australia,
+                the Pacific, and internationally, when reputation, issues, and
+                crises demand experienced, senior advice.
               </p>
             </AnimateIn>
 

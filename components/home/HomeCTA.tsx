@@ -28,9 +28,10 @@ export function HomeCTA() {
 
           <AnimateIn delay={300}>
             <p className="text-white/70 text-base leading-relaxed mt-6 mb-12">
-              Whether you need strategic counsel for an emerging issue, a crisis
-              response, or a long-term communications partner, we work directly
-              with senior people who take your success personally.
+              Whether you need straightforward advice, help building your
+              profile, a communications strategy, or experienced counsel for a
+              complex issue or crisis - we are your adviser and advocate. We
+              believe in you, and we have your back.
             </p>
           </AnimateIn>
 

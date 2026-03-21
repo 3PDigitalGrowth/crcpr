@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { siteConfig } from "@/config/site";
 import { AnimateIn } from "@/components/shared/AnimateIn";
 import { MyPRPartnerCTA } from "@/components/shared/MyPRPartnerCTA";
 
@@ -76,6 +75,12 @@ export function HomeClients() {
                 departments to independent schools, faith-based organisations, industry
                 associations, and Pacific governments. What they share is a need for
                 experienced, senior advice when the stakes are highest.
+              </p>
+              <p className="text-charcoal-mid text-base leading-relaxed mt-4 max-w-xl">
+                We stand with our clients 24/7 - proactively helping them grow,
+                and working with them to weather the storm through times of
+                crisis. We take their needs and their success personally, and we
+                have their back.
               </p>
               <div className="flex flex-col gap-3 mt-8">
                 <div className="rounded-xl border border-brand-border bg-navy p-5 text-left">

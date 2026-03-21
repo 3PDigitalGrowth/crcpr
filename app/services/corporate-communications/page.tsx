@@ -106,29 +106,77 @@ export default function CorporateCommunicationsPage() {
 
       {/* High-clarity explainer */}
       <section className="bg-white py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-6">
-          <p className="text-charcoal text-[15px] leading-relaxed">
-            Effective corporate communications is not about volume. It is about
-            clarity, consistency, and strategic intent, ensuring that every
-            message, from every channel, reinforces your organisation&apos;s
-            authority and the confidence your stakeholders place in your
-            leadership.
-          </p>
-          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
-            The challenge for most organisations is that corporate
-            communications becomes reactive. Announcements are drafted in a
-            hurry. Media enquiries are handled without a strategy. Stakeholder
-            relationships are maintained informally, without structure. The
-            result is a communications function that responds to events rather
-            than shapes them.
-          </p>
-          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
-            CRC PR works with organisations to build the systems, strategies,
-            and capabilities that shift communications from reactive to
-            proactive, and to provide the senior-level counsel that ensures
-            every significant communication is considered, consistent, and
-            designed to achieve a specific outcome.
-          </p>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_340px] gap-10 items-start">
+            <div className="max-w-3xl">
+              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
+                Strategic Clarity
+              </p>
+              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                Effective corporate communications is about control, consistency,
+                and strategic intent.
+              </h2>
+              <div className="space-y-6">
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  Effective corporate communications is not about volume. It is
+                  about clarity, consistency, and strategic intent, ensuring
+                  that every message, from every channel, reinforces your
+                  organisation&apos;s authority and the confidence your
+                  stakeholders place in your leadership.
+                </p>
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  The challenge for most organisations is that corporate
+                  communications becomes reactive. Announcements are drafted in
+                  a hurry. Media enquiries are handled without a strategy.
+                  Stakeholder relationships are maintained informally, without
+                  structure. The result is a communications function that
+                  responds to events rather than shapes them.
+                </p>
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  CRC PR works with organisations to build the systems,
+                  strategies, and capabilities that shift communications from
+                  reactive to proactive, and to provide the senior-level counsel
+                  that ensures every significant communication is considered,
+                  consistent, and designed to achieve a specific outcome.
+                </p>
+              </div>
+            </div>
+
+            <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
+              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
+                What Strong Corporate Communications Looks Like
+              </p>
+              <div className="space-y-4">
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Message discipline
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    Leadership, media, staff, and stakeholder communications all
+                    support the same strategic position.
+                  </p>
+                </div>
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Planned sequencing
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    The right audiences hear the right message in the right
+                    order, before pressure starts to define the narrative.
+                  </p>
+                </div>
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Senior oversight
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    Important communications are shaped with judgement, not
+                    improvised under time pressure.
+                  </p>
+                </div>
+              </div>
+            </aside>
+          </div>
         </div>
       </section>
 
@@ -272,55 +320,149 @@ export default function CorporateCommunicationsPage() {
       </section>
 
       <section className="bg-white py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="font-heading font-black text-navy text-3xl mb-6">
-            Where corporate communications usually breaks down
-          </h2>
-          <p className="text-charcoal text-[15px] leading-relaxed">
-            Most organisations do not suffer from a complete lack of
-            communication activity. They suffer from fragmentation. The board is
-            briefed one way. Staff hear something slightly different. External
-            stakeholders receive a message shaped by operational convenience
-            rather than strategic intent. Media responses are drafted under time
-            pressure and end up sounding defensive or incomplete.
-          </p>
-          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
-            That fragmentation is expensive. It weakens confidence, complicates
-            leadership decision-making, and creates avoidable risk around major
-            announcements, disputes, restructures, and sensitive governance
-            matters. The firms winning trust in difficult environments are the
-            ones that treat corporate communications as a disciplined leadership
-            function, not an afterthought once the decision has already been
-            made.
-          </p>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.1fr)_360px] gap-10 items-start">
+            <div className="max-w-3xl">
+              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
+                Common Failure Point
+              </p>
+              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl mb-6 leading-tight">
+                Where corporate communications usually breaks down
+              </h2>
+              <div className="space-y-6">
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  Most organisations do not suffer from a complete lack of
+                  communication activity. They suffer from fragmentation. The
+                  board is briefed one way. Staff hear something slightly
+                  different. External stakeholders receive a message shaped by
+                  operational convenience rather than strategic intent. Media
+                  responses are drafted under time pressure and end up sounding
+                  defensive or incomplete.
+                </p>
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  That fragmentation is expensive. It weakens confidence,
+                  complicates leadership decision-making, and creates avoidable
+                  risk around major announcements, disputes, restructures, and
+                  sensitive governance matters. The firms winning trust in
+                  difficult environments are the ones that treat corporate
+                  communications as a disciplined leadership function, not an
+                  afterthought once the decision has already been made.
+                </p>
+              </div>
+            </div>
+
+            <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
+              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
+                Signs Communication Has Fragmented
+              </p>
+              <div className="space-y-4">
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Inconsistent internal and external messaging
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    Different audiences hear different versions of the same
+                    decision, which weakens trust quickly.
+                  </p>
+                </div>
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Reactive media handling
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    Responses are shaped by urgency and exposure, not by a clear
+                    strategic position.
+                  </p>
+                </div>
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Leadership decisions lose force
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    Good decisions still underperform when the communications
+                    discipline behind them is weak.
+                  </p>
+                </div>
+              </div>
+            </aside>
+          </div>
         </div>
       </section>
 
       <section className="bg-white py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="font-heading font-black text-navy text-3xl mb-6">
-            Senior counsel, not account management
-          </h2>
-          <p className="text-charcoal text-[15px] leading-relaxed">
-            The difference between CRC PR and a larger agency is not size. It
-            is access. At most large PR firms, you brief a senior person and
-            are then handed to a team of account managers and junior staff who
-            execute the work. Your senior contact becomes a figurehead rather
-            than an advisor.
-          </p>
-          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
-            At CRC PR, every engagement is led by an experienced senior advisor
-            from start to finish. You work directly with the person who has the
-            expertise, the judgment, and the accountability for the outcome.
-            This is not a service model we stumbled into. It is a deliberate
-            choice. It is why our client satisfaction rate is 100%.
-          </p>
-          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
-            For organisations dealing with sensitive communications challenges,
-            whether a board transition, a difficult stakeholder relationship, or
-            a market-sensitive announcement, this direct access to senior
-            counsel is not a preference. It is a requirement.
-          </p>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="rounded-lg border border-brand-border bg-off-white p-8 md:p-10">
+            <div className="grid grid-cols-1 lg:grid-cols-[320px_minmax(0,1fr)] gap-10 items-start">
+              <div className="rounded-lg bg-navy p-6 md:p-7">
+                <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
+                  CRC PR Model
+                </p>
+                <h2 className="font-heading font-black text-white text-2xl leading-tight mb-4">
+                  Senior counsel, not account management
+                </h2>
+                <p className="text-white/70 text-sm leading-relaxed">
+                  Sensitive communications work needs direct access to judgement,
+                  accountability, and experienced strategic advice.
+                </p>
+              </div>
+
+              <div className="max-w-3xl">
+                <div className="space-y-6">
+                  <p className="text-charcoal text-[15px] leading-relaxed">
+                    The difference between CRC PR and a larger agency is not
+                    size. It is access. At most large PR firms, you brief a
+                    senior person and are then handed to a team of account
+                    managers and junior staff who execute the work. Your senior
+                    contact becomes a figurehead rather than an advisor.
+                  </p>
+                  <p className="text-charcoal text-[15px] leading-relaxed">
+                    At CRC PR, every engagement is led by an experienced senior
+                    advisor from start to finish. You work directly with the
+                    person who has the expertise, the judgment, and the
+                    accountability for the outcome. This is not a service model
+                    we stumbled into. It is a deliberate choice. It is why our
+                    client satisfaction rate is 100%.
+                  </p>
+                  <p className="text-charcoal text-[15px] leading-relaxed">
+                    For organisations dealing with sensitive communications
+                    challenges, whether a board transition, a difficult
+                    stakeholder relationship, or a market-sensitive
+                    announcement, this direct access to senior counsel is not a
+                    preference. It is a requirement.
+                  </p>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+                  <div className="rounded-lg bg-white border border-brand-border p-5">
+                    <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      Direct senior access
+                    </p>
+                    <p className="text-charcoal-mid text-sm leading-relaxed">
+                      The advisor you brief is the advisor shaping the work.
+                    </p>
+                  </div>
+                  <div className="rounded-lg bg-white border border-brand-border p-5">
+                    <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      Consistent judgement
+                    </p>
+                    <p className="text-charcoal-mid text-sm leading-relaxed">
+                      Strategic direction does not get diluted through layers of
+                      delegation.
+                    </p>
+                  </div>
+                  <div className="rounded-lg bg-white border border-brand-border p-5">
+                    <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      Clear accountability
+                    </p>
+                    <p className="text-charcoal-mid text-sm leading-relaxed">
+                      One senior team owns the thinking, the advice, and the
+                      outcome.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

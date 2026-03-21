@@ -247,7 +247,7 @@ function getCategoryScore(
 
 const initialFormState: FormState = { status: "idle", message: "" };
 
-export function ReputationAssessment() {
+export function ReputationAssessment({ embedded = false }: { embedded?: boolean }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, number>>({});
   const [phase, setPhase] = useState<"questions" | "results" | "capture">(
@@ -295,8 +295,11 @@ export function ReputationAssessment() {
 
   if (phase === "results" || phase === "capture") {
     return (
-      <section className="bg-white py-16 scroll-mt-24" id="reputation-assessment">
-        <div className="max-w-3xl mx-auto px-6">
+      <section
+        className={embedded ? "scroll-mt-24" : "bg-white py-16 scroll-mt-24"}
+        id="reputation-assessment"
+      >
+        <div className={embedded ? "max-w-none" : "max-w-3xl mx-auto px-6"}>
           <div className="text-center mb-12">
             <p className="text-brand-teal text-xs font-medium tracking-[0.14em] uppercase">
               YOUR RESULTS
@@ -412,8 +415,11 @@ export function ReputationAssessment() {
   const currentQ = questions[currentIndex];
 
   return (
-    <section className="bg-white py-16 scroll-mt-24" id="reputation-assessment">
-      <div className="max-w-3xl mx-auto px-6">
+    <section
+      className={embedded ? "scroll-mt-24" : "bg-white py-16 scroll-mt-24"}
+      id="reputation-assessment"
+    >
+      <div className={embedded ? "max-w-none" : "max-w-3xl mx-auto px-6"}>
         <div className="text-center mb-8">
           <p className="text-brand-teal text-xs font-medium tracking-[0.14em] uppercase">
             FREE ASSESSMENT

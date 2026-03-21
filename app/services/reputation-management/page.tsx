@@ -103,26 +103,75 @@ export default function ReputationManagementPage() {
 
       {/* Opening section */}
       <section className="bg-white py-24">
-        <div className="max-w-3xl mx-auto px-6">
-          <p className="text-charcoal text-base leading-relaxed">
-            In 2024, a single day of hostile media coverage cost an ASX-listed
-            Australian company an estimated $400&nbsp;million in market
-            capitalisation. The underlying issue had been visible in their
-            stakeholder environment for months. No one had acted on the signals.
-          </p>
-          <p className="text-charcoal text-base leading-relaxed mt-6">
-            Reputation damage is almost always predictable in hindsight. The
-            stakeholder who became a public critic. The regulatory relationship
-            that was allowed to deteriorate. The internal policy that was never
-            communicated clearly. The media relationship that was treated as
-            transactional rather than strategic.
-          </p>
-          <p className="text-charcoal text-base leading-relaxed mt-6">
-            CRC PR works with organisations to identify these vulnerabilities
-            before they become headlines, and to build the communications
-            frameworks and stakeholder relationships that protect reputation over
-            the long term.
-          </p>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_340px] gap-10 items-start">
+            <div className="max-w-3xl">
+              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
+                Reputation Reality
+              </p>
+              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                Reputation damage usually starts long before the headline.
+              </h2>
+              <div className="space-y-6">
+                <p className="text-charcoal text-base leading-relaxed">
+                  In 2024, a single day of hostile media coverage cost an
+                  ASX-listed Australian company an estimated $400&nbsp;million
+                  in market capitalisation. The underlying issue had been
+                  visible in their stakeholder environment for months. No one
+                  had acted on the signals.
+                </p>
+                <p className="text-charcoal text-base leading-relaxed">
+                  Reputation damage is almost always predictable in hindsight.
+                  The stakeholder who became a public critic. The regulatory
+                  relationship that was allowed to deteriorate. The internal
+                  policy that was never communicated clearly. The media
+                  relationship that was treated as transactional rather than
+                  strategic.
+                </p>
+                <p className="text-charcoal text-base leading-relaxed">
+                  CRC PR works with organisations to identify these
+                  vulnerabilities before they become headlines, and to build the
+                  communications frameworks and stakeholder relationships that
+                  protect reputation over the long term.
+                </p>
+              </div>
+            </div>
+
+            <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
+              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
+                Early Warning Signs
+              </p>
+              <div className="space-y-4">
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Stakeholder frustration is building
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    Complaints become more organised, more public, and harder to
+                    contain.
+                  </p>
+                </div>
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Media interest is changing shape
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    Journalists move from isolated enquiries to pattern
+                    recognition and sustained scrutiny.
+                  </p>
+                </div>
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Leadership confidence is slipping
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    Teams know a risk exists, but no one has yet aligned the
+                    messages, relationships, and response plan around it.
+                  </p>
+                </div>
+              </div>
+            </aside>
+          </div>
         </div>
       </section>
 
@@ -151,27 +200,72 @@ export default function ReputationManagementPage() {
 
       {/* Primary conversion moved earlier in the flow */}
       <section className="bg-white py-20">
-        <div className="max-w-3xl mx-auto px-6">
-          <p className="text-brand-gold text-xs font-medium tracking-[0.14em] uppercase mb-4">
-            START HERE
-          </p>
-          <h2 className="font-heading font-black text-navy text-3xl mb-8">
-            Find out where your organisation is exposed
-          </h2>
-          <p className="text-charcoal text-base leading-relaxed">
-            Our Reputation Vulnerability Assessment evaluates your organisation across
-            five risk areas: media readiness, crisis preparedness, stakeholder trust,
-            digital exposure, and governance. It is designed to give leadership a
-            faster, clearer view of where the next trust problem is most likely to emerge.
-          </p>
-          <p className="text-charcoal text-base leading-relaxed mt-6">
-            This is the same framework we use in professional engagements, distilled
-            into a practical self-assessment you can complete now.
-          </p>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] gap-10 items-start">
+            <div className="lg:sticky lg:top-24">
+              <p className="text-brand-gold text-xs font-medium tracking-[0.14em] uppercase mb-4">
+                Start Here
+              </p>
+              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                Find out where your organisation is exposed
+              </h2>
+              <div className="space-y-6">
+                <p className="text-charcoal text-base leading-relaxed">
+                  Our Reputation Vulnerability Assessment evaluates your
+                  organisation across five risk areas: media readiness, crisis
+                  preparedness, stakeholder trust, digital exposure, and
+                  governance. It is designed to give leadership a faster,
+                  clearer view of where the next trust problem is most likely to
+                  emerge.
+                </p>
+                <p className="text-charcoal text-base leading-relaxed">
+                  This is the same framework we use in professional engagements,
+                  distilled into a practical self-assessment you can complete
+                  now.
+                </p>
+              </div>
+
+              <div className="mt-8 rounded-lg border border-brand-border bg-off-white p-6">
+                <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-4">
+                  What You Get
+                </p>
+                <div className="space-y-4">
+                  <div className="border-l-[3px] border-brand-gold pl-4">
+                    <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      20 questions
+                    </p>
+                    <p className="text-charcoal-mid text-sm leading-relaxed">
+                      A fast, practical assessment designed for leadership teams.
+                    </p>
+                  </div>
+                  <div className="border-l-[3px] border-brand-gold pl-4">
+                    <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      5 risk areas
+                    </p>
+                    <p className="text-charcoal-mid text-sm leading-relaxed">
+                      Media readiness, crisis preparedness, stakeholder trust,
+                      digital exposure, and governance.
+                    </p>
+                  </div>
+                  <div className="border-l-[3px] border-brand-gold pl-4">
+                    <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      Clear next-step view
+                    </p>
+                    <p className="text-charcoal-mid text-sm leading-relaxed">
+                      A quicker read on where reputation pressure is most likely
+                      to emerge.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-lg border border-brand-border bg-white p-6 md:p-8 shadow-[0_20px_60px_rgba(10,22,40,0.08)]">
+              <ReputationAssessment embedded />
+            </div>
+          </div>
         </div>
       </section>
-
-      <ReputationAssessment />
 
       <section className="py-12">
         <div className="max-w-7xl mx-auto px-6">
@@ -199,98 +293,155 @@ export default function ReputationManagementPage() {
 
       {/* Service detail */}
       <section className="bg-off-white py-24">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="font-heading font-black text-navy text-3xl mb-12">
-            How CRC PR approaches reputation management
-          </h2>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="max-w-3xl mb-12">
+            <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
+              Reputation Framework
+            </p>
+            <h2 className="font-heading font-black text-navy text-3xl md:text-4xl mb-6 leading-tight">
+              How CRC PR approaches reputation management
+            </h2>
+            <p className="text-charcoal text-base leading-relaxed">
+              Reputation management works best when leadership can see risk
+              clearly, interpret signals early, and act through a disciplined
+              communications framework rather than ad hoc reaction.
+            </p>
+          </div>
 
-          <div className="space-y-12">
-            <div>
-              <h3 className="font-heading font-black text-navy text-xl mb-4">
-                Reputation vulnerability assessments
-              </h3>
-              <p className="text-charcoal text-base leading-relaxed">
-                We conduct structured assessments of your organisation&apos;s
-                communications posture, mapping your stakeholder landscape,
-                reviewing your media profile, evaluating your digital footprint,
-                and stress-testing your messaging against the issues most likely
-                to attract scrutiny. The output is a prioritised action plan your
-                leadership team can act on immediately.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-heading font-black text-navy text-xl mb-4">
-                Ongoing reputation monitoring and early warning
-              </h3>
-              <p className="text-charcoal text-base leading-relaxed">
-                Reputation risks do not appear fully formed. They develop through
-                a series of signals: a change in media tone, a shift in
-                stakeholder sentiment, a pattern of regulatory correspondence. We
-                provide ongoing monitoring and reporting that surfaces these
-                signals early, giving your leadership team time to respond
-                proactively rather than reactively.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-heading font-black text-navy text-xl mb-4">
-                Stakeholder perception analysis
-              </h3>
-              <p className="text-charcoal text-base leading-relaxed">
-                What your stakeholders think about your organisation is often
-                different from what you believe they think. We conduct structured
-                stakeholder perception research, through interviews, surveys, and
-                media analysis, that gives your leadership team an accurate
-                picture of your current reputation and the gaps between intention
-                and perception.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-heading font-black text-navy text-xl mb-4">
-                Reputation recovery strategy
-              </h3>
-              <p className="text-charcoal text-base leading-relaxed">
-                For organisations that have experienced a significant reputation
-                event, the path back to trust is strategic, not tactical. We
-                develop and implement reputation recovery programs that address
-                the root causes of the damage, rebuild stakeholder confidence,
-                and restore your organisation&apos;s standing, methodically and
-                measurably.
-              </p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              {
+                num: "01",
+                title: "Reputation vulnerability assessments",
+                body:
+                  "We conduct structured assessments of your organisation's communications posture, mapping your stakeholder landscape, reviewing your media profile, evaluating your digital footprint, and stress-testing your messaging against the issues most likely to attract scrutiny. The output is a prioritised action plan your leadership team can act on immediately.",
+              },
+              {
+                num: "02",
+                title: "Ongoing reputation monitoring and early warning",
+                body:
+                  "Reputation risks do not appear fully formed. They develop through a series of signals: a change in media tone, a shift in stakeholder sentiment, a pattern of regulatory correspondence. We provide ongoing monitoring and reporting that surfaces these signals early, giving your leadership team time to respond proactively rather than reactively.",
+              },
+              {
+                num: "03",
+                title: "Stakeholder perception analysis",
+                body:
+                  "What your stakeholders think about your organisation is often different from what you believe they think. We conduct structured stakeholder perception research, through interviews, surveys, and media analysis, that gives your leadership team an accurate picture of your current reputation and the gaps between intention and perception.",
+              },
+              {
+                num: "04",
+                title: "Reputation recovery strategy",
+                body:
+                  "For organisations that have experienced a significant reputation event, the path back to trust is strategic, not tactical. We develop and implement reputation recovery programs that address the root causes of the damage, rebuild stakeholder confidence, and restore your organisation's standing, methodically and measurably.",
+              },
+            ].map((item) => (
+              <article
+                key={item.title}
+                className="rounded-lg border border-brand-border bg-white p-7 md:p-8"
+              >
+                <p className="text-brand-gold font-heading font-black text-sm tracking-[0.16em] uppercase mb-4">
+                  {item.num}
+                </p>
+                <h3 className="font-heading font-black text-navy text-xl mb-4 leading-snug">
+                  {item.title}
+                </h3>
+                <p className="text-charcoal text-base leading-relaxed">
+                  {item.body}
+                </p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Why most reputation management fails */}
       <section className="bg-white py-24">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="font-heading font-black text-navy text-3xl mb-8">
-            Why most reputation management fails, and what to do differently
-          </h2>
-          <p className="text-charcoal text-base leading-relaxed">
-            Most organisations approach reputation management as a reactive
-            discipline. They invest in communications capability when something
-            goes wrong and reduce that investment when things are going well. The
-            result is a cycle of crisis, recovery, and complacency that leaves
-            the organisation permanently vulnerable.
-          </p>
-          <p className="text-charcoal text-base leading-relaxed mt-6">
-            The organisations with the strongest reputations treat reputation
-            management as an ongoing strategic investment, the same way they
-            treat financial management or legal risk. They maintain relationships
-            with senior communications advisors before they need them urgently.
-            They conduct regular vulnerability assessments. They test their
-            crisis plans. They build and sustain stakeholder trust deliberately.
-          </p>
-          <p className="text-charcoal text-base leading-relaxed mt-6">
-            CRC PR works as a long-term reputation partner for organisations
-            that have made this decision. We are not a firm you call when
-            something goes wrong. We are the firm you retain so that when
-            something does go wrong, and it will, you are already prepared.
-          </p>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="max-w-3xl mb-10">
+            <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
+              Long-Term Discipline
+            </p>
+            <h2 className="font-heading font-black text-navy text-3xl md:text-4xl mb-6 leading-tight">
+              Why most reputation management fails, and what to do differently
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div className="rounded-lg border border-brand-border bg-off-white p-7 md:p-8">
+              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-4">
+                What Usually Goes Wrong
+              </p>
+              <div className="space-y-6">
+                <p className="text-charcoal text-base leading-relaxed">
+                  Most organisations approach reputation management as a
+                  reactive discipline. They invest in communications capability
+                  when something goes wrong and reduce that investment when
+                  things are going well. The result is a cycle of crisis,
+                  recovery, and complacency that leaves the organisation
+                  permanently vulnerable.
+                </p>
+                <div className="rounded-lg border border-brand-border bg-white p-5">
+                  <p className="font-sans font-semibold text-navy text-sm mb-2">
+                    Reactive cycle
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    Crisis, recovery, and complacency repeats because the
+                    underlying vulnerabilities are never managed systematically.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="rounded-lg border border-brand-border bg-navy p-7 md:p-8">
+              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
+                What Stronger Organisations Do
+              </p>
+              <div className="space-y-6">
+                <p className="text-white/80 text-base leading-relaxed">
+                  The organisations with the strongest reputations treat
+                  reputation management as an ongoing strategic investment, the
+                  same way they treat financial management or legal risk. They
+                  maintain relationships with senior communications advisors
+                  before they need them urgently. They conduct regular
+                  vulnerability assessments. They test their crisis plans. They
+                  build and sustain stakeholder trust deliberately.
+                </p>
+                <p className="text-white/80 text-base leading-relaxed">
+                  CRC PR works as a long-term reputation partner for
+                  organisations that have made this decision. We are not a firm
+                  you call when something goes wrong. We are the firm you retain
+                  so that when something does go wrong, and it will, you are
+                  already prepared.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  <div className="rounded-lg border border-white/10 bg-white/[0.05] p-4">
+                    <p className="font-sans font-semibold text-white text-sm mb-1">
+                      Ongoing assessment
+                    </p>
+                    <p className="text-white/65 text-xs leading-relaxed">
+                      Risks are reviewed before they become events.
+                    </p>
+                  </div>
+                  <div className="rounded-lg border border-white/10 bg-white/[0.05] p-4">
+                    <p className="font-sans font-semibold text-white text-sm mb-1">
+                      Prepared leadership
+                    </p>
+                    <p className="text-white/65 text-xs leading-relaxed">
+                      Plans, messages, and advisors are already in place.
+                    </p>
+                  </div>
+                  <div className="rounded-lg border border-white/10 bg-white/[0.05] p-4">
+                    <p className="font-sans font-semibold text-white text-sm mb-1">
+                      Deliberate trust-building
+                    </p>
+                    <p className="text-white/65 text-xs leading-relaxed">
+                      Reputation is managed as a standing leadership function.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

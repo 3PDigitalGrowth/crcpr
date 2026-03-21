@@ -127,52 +127,146 @@ export default function PacificPage() {
 
       {/* Opening */}
       <section className="bg-white py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-6">
-          <p className="text-charcoal text-[15px] leading-relaxed">
-            The Pacific region is not a single market. It is seventeen distinct
-            nations, each with its own governance systems, cultural protocols,
-            media environments, and communication expectations. What works in
-            corporate communications in Brisbane or Sydney will not work, and can
-            actively harm relationships, if applied without adaptation to Fiji,
-            Papua New Guinea, or the Solomon Islands.
-          </p>
-          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
-            Most Australian communications firms with Pacific clients treat the
-            region as an extension of their domestic practice. CRC PR does not.
-            Our Pacific advisory work is built on 25 years of direct engagement
-            with Pacific Island governments, development partners, regional
-            organisations, and private sector clients operating across the
-            Pacific. We have worked in the region long enough to understand what
-            genuine cultural sensitivity, adapted communications, and
-            relationship-based counsel means in practice.
-          </p>
-          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
-            For organisations operating in or with the Pacific, whether
-            Australian companies with Pacific operations, international
-            development organisations, Pacific governments, or NGOs, CRC PR
-            provides the communications expertise that the region demands.
-          </p>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.2fr)_340px] gap-10 items-start">
+            <div className="max-w-3xl">
+              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
+                Pacific Context
+              </p>
+              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                The Pacific is not one communications market. It is a region of
+                distinct political, cultural, and media realities.
+              </h2>
+              <div className="space-y-6">
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  The Pacific region is not a single market. It is seventeen
+                  distinct nations, each with its own governance systems,
+                  cultural protocols, media environments, and communication
+                  expectations. What works in corporate communications in
+                  Brisbane or Sydney will not work, and can actively harm
+                  relationships, if applied without adaptation to Fiji, Papua
+                  New Guinea, or the Solomon Islands.
+                </p>
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  Most Australian communications firms with Pacific clients
+                  treat the region as an extension of their domestic practice.
+                  CRC PR does not. Our Pacific advisory work is built on 25
+                  years of direct engagement with Pacific Island governments,
+                  development partners, regional organisations, and private
+                  sector clients operating across the Pacific. We have worked in
+                  the region long enough to understand what genuine cultural
+                  sensitivity, adapted communications, and relationship-based
+                  counsel means in practice.
+                </p>
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  For organisations operating in or with the Pacific, whether
+                  Australian companies with Pacific operations, international
+                  development organisations, Pacific governments, or NGOs, CRC
+                  PR provides the communications expertise that the region
+                  demands.
+                </p>
+              </div>
+            </div>
+
+            <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
+              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
+                What serious Pacific work requires
+              </p>
+              <div className="space-y-4">
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Country-specific judgement
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    Advice must reflect the realities of each nation, not a
+                    generic regional shorthand.
+                  </p>
+                </div>
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Protocol-aware sequencing
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    The order in which leaders, communities, governments, and
+                    partners hear from you shapes trust.
+                  </p>
+                </div>
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Relationship protection
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    Short-term communications decisions can have long-term
+                    diplomatic, community, and reputational consequences.
+                  </p>
+                </div>
+              </div>
+            </aside>
+          </div>
         </div>
       </section>
 
       <section className="bg-white pb-16 md:pb-24">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="font-heading font-black text-navy text-3xl mb-6">
-            Why generic communications advice fails in the Pacific
-          </h2>
-          <p className="text-charcoal text-[15px] leading-relaxed">
-            The most common mistake external organisations make in Pacific
-            communications is assuming that process equals legitimacy. It does
-            not. Formal consultation can still fail if the real authority
-            structure has not been understood, if cultural protocols are rushed,
-            or if a message is technically correct but relationally tone-deaf.
-          </p>
-          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
-            Effective Pacific communications requires more than translation. It
-            requires judgement about who should hear a message first, what needs
-            to happen before a public position is taken, and how the long-term
-            relationship will be affected by the short-term decision.
-          </p>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="rounded-lg border border-brand-border bg-off-white p-8 md:p-10">
+            <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_360px] gap-10 items-start">
+              <div className="max-w-3xl">
+                <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
+                  Why Generic Advice Fails
+                </p>
+                <h2 className="font-heading font-black text-navy text-3xl md:text-4xl mb-6 leading-tight">
+                  Why generic communications advice fails in the Pacific
+                </h2>
+                <div className="space-y-6">
+                  <p className="text-charcoal text-[15px] leading-relaxed">
+                    The most common mistake external organisations make in
+                    Pacific communications is assuming that process equals
+                    legitimacy. It does not. Formal consultation can still fail
+                    if the real authority structure has not been understood, if
+                    cultural protocols are rushed, or if a message is
+                    technically correct but relationally tone-deaf.
+                  </p>
+                  <p className="text-charcoal text-[15px] leading-relaxed">
+                    Effective Pacific communications requires more than
+                    translation. It requires judgement about who should hear a
+                    message first, what needs to happen before a public position
+                    is taken, and how the long-term relationship will be
+                    affected by the short-term decision.
+                  </p>
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 gap-4">
+                <div className="rounded-lg bg-white border border-brand-border p-5">
+                  <p className="font-sans font-semibold text-navy text-sm mb-2">
+                    Formal process is not enough
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    A consultation can tick every procedural box and still fail
+                    because the real authority structures were missed.
+                  </p>
+                </div>
+                <div className="rounded-lg bg-white border border-brand-border p-5">
+                  <p className="font-sans font-semibold text-navy text-sm mb-2">
+                    Timing shapes legitimacy
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    Who hears a message first, and when, often matters as much
+                    as the message itself.
+                  </p>
+                </div>
+                <div className="rounded-lg bg-white border border-brand-border p-5">
+                  <p className="font-sans font-semibold text-navy text-sm mb-2">
+                    Relationship damage lasts
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    A short-term communications mistake can affect trust with
+                    governments, communities, and partners for years.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

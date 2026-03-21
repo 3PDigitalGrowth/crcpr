@@ -95,48 +95,138 @@ export default function IssuesManagementPage() {
 
       {/* Opening section */}
       <section className="bg-white py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-6">
-          <p className="text-charcoal text-[15px] leading-relaxed">
-            An issue is not yet a crisis. But without strategic management, it
-            will become one.
-          </p>
-          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
-            Most organisational crises are not sudden events. They are issues
-            that were allowed to escalate: a regulatory concern that became a
-            formal inquiry, a staff complaint that became a media story, a
-            community concern that became an organised campaign. The difference
-            between an issue and a crisis is almost always time, and the
-            strategic choices made within that time.
-          </p>
-          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
-            CRC PR specialises in the space between an emerging issue and a full
-            crisis, providing the senior counsel, monitoring capability, and
-            stakeholder management that can arrest an escalation before it
-            becomes unmanageable.
-          </p>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_340px] gap-10 items-start">
+            <div className="max-w-3xl">
+              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
+                Escalation Window
+              </p>
+              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                An issue is not yet a crisis. Strategic management is what keeps
+                it that way.
+              </h2>
+              <div className="space-y-6">
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  Most organisational crises are not sudden events. They are
+                  issues that were allowed to escalate: a regulatory concern
+                  that became a formal inquiry, a staff complaint that became a
+                  media story, a community concern that became an organised
+                  campaign. The difference between an issue and a crisis is
+                  almost always time, and the strategic choices made within that
+                  time.
+                </p>
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  CRC PR specialises in the space between an emerging issue and
+                  a full crisis, providing the senior counsel, monitoring
+                  capability, and stakeholder management that can arrest an
+                  escalation before it becomes unmanageable.
+                </p>
+              </div>
+            </div>
+
+            <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
+              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
+                What Changes the Outcome
+              </p>
+              <div className="space-y-4">
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Earlier recognition
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    Spotting the reputational dimension before it becomes public
+                    or formalised.
+                  </p>
+                </div>
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Better sequencing
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    Engaging leadership, stakeholders, and external audiences in
+                    the right order.
+                  </p>
+                </div>
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Senior judgement under pressure
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    Making decisions that reduce escalation rather than amplify
+                    it.
+                  </p>
+                </div>
+              </div>
+            </aside>
+          </div>
         </div>
       </section>
 
       <section className="bg-off-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="font-heading font-black text-navy text-3xl mb-6">
-            Typical issues we are engaged to contain
-          </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-10 items-start">
+            <div className="max-w-3xl">
+              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
+                Common Engagements
+              </p>
+              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl mb-6 leading-tight">
+                Typical issues we are engaged to contain
+              </h2>
+              <p className="text-charcoal text-[15px] leading-relaxed">
+                The most damaging issues are rarely the loudest at the start. They
+                usually begin as patterns, shifts in tone, or early signals that a
+                matter is becoming harder to contain.
+              </p>
+            </div>
+
+            <aside className="rounded-lg border border-brand-border bg-white p-6 md:p-7">
+              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-4">
+                Why These Matter
+              </p>
+              <p className="text-charcoal-mid text-sm leading-relaxed">
+                Each of these issues can still be managed early, but once the tone,
+                visibility, or stakeholder coordination changes, the cost of
+                containment rises sharply.
+              </p>
+            </aside>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
             {[
-              "Regulatory attention or correspondence starting to change tone",
-              "Staff or whistleblower complaints with a clear reputational dimension",
-              "Community or member concerns moving from private frustration to organised opposition",
-              "A pattern of media enquiries that suggests a larger story is building",
-            ].map((item) => (
-              <div
-                key={item}
-                className="rounded-lg border border-brand-border bg-white p-6"
+              {
+                title: "Regulatory attention",
+                body: "Regulatory attention or correspondence starting to change tone",
+              },
+              {
+                title: "Staff or whistleblower matters",
+                body: "Staff or whistleblower complaints with a clear reputational dimension",
+              },
+              {
+                title: "Community or member opposition",
+                body: "Community or member concerns moving from private frustration to organised opposition",
+              },
+              {
+                title: "Emerging media pattern",
+                body: "A pattern of media enquiries that suggests a larger story is building",
+              },
+            ].map((item, index) => (
+              <article
+                key={item.title}
+                className="rounded-lg border border-brand-border bg-white p-6 md:p-7 shadow-[0_12px_40px_rgba(10,22,40,0.04)]"
               >
-                <p className="text-charcoal text-[15px] leading-relaxed">
-                  {item}
+                <div className="flex items-center justify-between gap-4 mb-5">
+                  <span className="h-[2px] w-16 bg-brand-gold rounded-full" aria-hidden="true" />
+                  <p className="text-brand-gold font-heading font-black text-sm tracking-[0.16em] uppercase">
+                    {String(index + 1).padStart(2, "0")}
+                  </p>
+                </div>
+                <h3 className="font-heading font-black text-navy text-xl mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-charcoal-mid text-[15px] leading-relaxed">
+                  {item.body}
                 </p>
-              </div>
+              </article>
             ))}
           </div>
         </div>
@@ -225,59 +315,82 @@ export default function IssuesManagementPage() {
         defaultMessage="We are monitoring an emerging issue and would like confidential advice on next steps."
       />
 
-      {/* Eighty per cent of crises were predictable */}
+      {/* Predictability and issue-to-crisis comparison */}
       <section className="bg-white py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="font-heading font-black text-navy text-3xl mb-6">
-            Eighty per cent of crises were predictable
-          </h2>
-          <p className="text-charcoal text-[15px] leading-relaxed">
-            In 25 years of advising organisations through crises, CRC PR
-            founder Lyall Mercer has consistently observed that the vast
-            majority of significant reputation events were predictable, not in
-            their exact form, but in their general shape. They were visible in
-            monitoring data, in stakeholder feedback, in regulatory
-            correspondence, in the pattern of media enquiries that preceded the
-            story.
-          </p>
-          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
-            The organisations that manage issues successfully are not lucky.
-            They have invested in monitoring systems, stakeholder relationships,
-            and the habit of escalating concerns to senior communications
-            counsel early, not after the story breaks.
-          </p>
-          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
-            Retaining CRC PR for issues management is not an admission that
-            your organisation has a problem. It is a recognition that every
-            organisation has potential issues, and that the cost of managing
-            them proactively is a fraction of the cost of managing them once
-            they have become crises.
-          </p>
-        </div>
-      </section>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.1fr)_360px] gap-10 items-start">
+            <div className="max-w-3xl">
+              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
+                Predictability Matters
+              </p>
+              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl mb-6 leading-tight">
+                Eighty per cent of crises were predictable
+              </h2>
+              <div className="space-y-6">
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  In 25 years of advising organisations through crises, CRC PR
+                  founder Lyall Mercer has consistently observed that the vast
+                  majority of significant reputation events were predictable,
+                  not in their exact form, but in their general shape. They
+                  were visible in monitoring data, in stakeholder feedback, in
+                  regulatory correspondence, in the pattern of media enquiries
+                  that preceded the story.
+                </p>
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  The organisations that manage issues successfully are not
+                  lucky. They have invested in monitoring systems, stakeholder
+                  relationships, and the habit of escalating concerns to senior
+                  communications counsel early, not after the story breaks.
+                </p>
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  Retaining CRC PR for issues management is not an admission
+                  that your organisation has a problem. It is a recognition
+                  that every organisation has potential issues, and that the
+                  cost of managing them proactively is a fraction of the cost of
+                  managing them once they have become crises.
+                </p>
+              </div>
+            </div>
 
-      {/* Callout box */}
-      <section className="bg-white pb-16 md:pb-24">
-        <div className="max-w-3xl mx-auto px-6">
-          <div className="bg-off-white border-l-4 border-navy rounded-lg p-6">
-            <h3 className="font-heading font-black text-navy text-xl mb-3">
-              Issues management is not the same as crisis communications
-            </h3>
-            <p className="text-charcoal text-[15px] leading-relaxed">
-              Issues management is proactive. It operates when an issue is
-              developing and the outcome is still shapeable. Crisis
-              communications is reactive. It operates when an event has become
-              public and the organisation is under active media and stakeholder
-              pressure. CRC PR provides both. But the organisations that need
-              crisis communications least are the ones that have invested most
-              in issues management.
-            </p>
-            <Link
-              href="/insights/issues-management-vs-crisis-communications"
-              className="inline-block mt-4 text-teal text-[15px] font-medium hover:opacity-80 transition"
-            >
-              Read our guide to the difference →
-            </Link>
+            <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
+              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
+                Key Distinction
+              </p>
+              <h3 className="font-heading font-black text-navy text-xl mb-4">
+                Issues management is not the same as crisis communications
+              </h3>
+              <div className="space-y-4">
+                <div className="rounded-lg border border-brand-border bg-white p-5">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Issues management
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    Proactive work while the matter is still developing and the
+                    outcome is still shapeable.
+                  </p>
+                </div>
+                <div className="rounded-lg border border-brand-border bg-white p-5">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Crisis communications
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    Reactive work once the event is public and the organisation
+                    is under active pressure.
+                  </p>
+                </div>
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  CRC PR provides both. But the organisations that need crisis
+                  communications least are the ones that have invested most in
+                  issues management.
+                </p>
+                <Link
+                  href="/insights/issues-management-vs-crisis-communications"
+                  className="inline-block text-teal text-[15px] font-medium hover:opacity-80 transition"
+                >
+                  Read our guide to the difference →
+                </Link>
+              </div>
+            </aside>
           </div>
         </div>
       </section>

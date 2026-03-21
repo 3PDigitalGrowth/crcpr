@@ -132,20 +132,75 @@ export default function ServicesPage() {
       />
 
       <section className="bg-white py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-6">
-          <p className="text-charcoal-mid text-[15px] leading-relaxed">
-            Most organisations do not need more communications activity. They need
-            clearer judgement about what matters, which stakeholders carry the greatest
-            risk or influence, and what sequence of communication will hold up under
-            scrutiny. That is why CRC PR&apos;s services are designed around pressure points,
-            not agency departments.
-          </p>
-          <p className="text-charcoal-mid text-[15px] leading-relaxed mt-6">
-            Some clients come to us because a crisis is already active. Others need a
-            stronger media position, sharper executive messaging, better reputation
-            visibility, or earlier intervention around an emerging issue. The right
-            service is usually the one that gives leadership more control sooner.
-          </p>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_360px] gap-10 items-start">
+            <div className="max-w-3xl">
+              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
+                How We Think About Services
+              </p>
+              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                Better judgement matters more than more activity.
+              </h2>
+              <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
+                Most organisations do not need more communications activity.
+                They need clearer judgement about what matters, which
+                stakeholders carry the greatest risk or influence, and what
+                sequence of communication will hold up under scrutiny.
+              </p>
+
+              <div className="space-y-6 mt-8">
+                <p className="text-charcoal-mid text-[15px] leading-relaxed">
+                  That is why CRC PR&apos;s services are designed around
+                  pressure points, not agency departments.
+                </p>
+                <p className="text-charcoal-mid text-[15px] leading-relaxed">
+                  Some clients come to us because a crisis is already active.
+                  Others need a stronger media position, sharper executive
+                  messaging, better reputation visibility, or earlier
+                  intervention around an emerging issue. The right service is
+                  usually the one that gives leadership more control sooner.
+                </p>
+              </div>
+            </div>
+
+            <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
+              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
+                What The Right Starting Point Solves
+              </p>
+
+              <div className="space-y-4">
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Clearer priorities
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    Focus on what matters most rather than adding more
+                    communication for its own sake.
+                  </p>
+                </div>
+
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Better stakeholder sequencing
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    Decide who needs to hear what, and in what order, before
+                    pressure compounds.
+                  </p>
+                </div>
+
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Faster control
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    The right service is usually the one that gives leadership
+                    more control sooner.
+                  </p>
+                </div>
+              </div>
+            </aside>
+          </div>
         </div>
       </section>
 

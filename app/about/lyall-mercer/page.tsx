@@ -4,6 +4,7 @@ import { siteConfig } from "@/config/site";
 import { PageHero } from "@/components/layout/PageHero";
 import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
 import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
+import { MyPRPartnerCTA } from "@/components/shared/MyPRPartnerCTA";
 import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
 import { PageProofStrip } from "@/components/shared/PageProofStrip";
 import { PortraitPlaceholder } from "@/components/shared/PortraitPlaceholder";
@@ -179,14 +180,11 @@ export default function LyallMercerPage() {
           >
             → Visit lyallmercer.com for the full profile
           </a>
-          <a
-            href={siteConfig.myPrPartnerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-brand-teal hover:underline font-medium"
-          >
-            → Explore My PR Partner for training and workshops
-          </a>
+          <MyPRPartnerCTA
+            title="Need training, workshops, or practical communications development?"
+            description="My PR Partner is CRC PR's training platform for communications practitioners, spokesperson development, crisis workshops, and practical support between major advisory engagements."
+            buttonLabel="EXPLORE MY PR PARTNER"
+          />
         </div>
       </section>
 

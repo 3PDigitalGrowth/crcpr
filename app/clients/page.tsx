@@ -97,18 +97,74 @@ export default function ClientsPage() {
       />
 
       <section className="bg-white py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-6">
-          <p className="text-charcoal-mid text-[15px] leading-relaxed">
-            Sector expertise matters because stakeholder expectations, governance
-            realities, and the likely points of reputational pressure change dramatically
-            between a listed company, a government agency, a peak body, or a school.
-            A message that feels disciplined in one environment can be tone-deaf in another.
-          </p>
-          <p className="text-charcoal-mid text-[15px] leading-relaxed mt-6">
-            CRC PR works best in sectors where communication is inseparable from trust,
-            authority, and strategic judgement. That is why the pages below are organised
-            around leadership pressure points rather than broad industry labels.
-          </p>
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_360px] gap-10 items-start">
+            <div className="max-w-3xl">
+              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
+                Why Sector Context Matters
+              </p>
+              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                The communications challenge changes with the environment around it.
+              </h2>
+              <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
+                Sector expertise matters because stakeholder expectations,
+                governance realities, and the likely points of reputational
+                pressure change dramatically between a listed company, a
+                government agency, a peak body, or a school.
+              </p>
+
+              <div className="space-y-6 mt-8">
+                <p className="text-charcoal-mid text-[15px] leading-relaxed">
+                  A message that feels disciplined in one environment can be
+                  tone-deaf in another.
+                </p>
+                <p className="text-charcoal-mid text-[15px] leading-relaxed">
+                  CRC PR works best in sectors where communication is
+                  inseparable from trust, authority, and strategic judgement.
+                  That is why the pages below are organised around leadership
+                  pressure points rather than broad industry labels.
+                </p>
+              </div>
+            </div>
+
+            <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
+              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
+                What Changes By Sector
+              </p>
+
+              <div className="space-y-4">
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Stakeholder expectations
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    The audience that matters most, and what they need to hear,
+                    differs sharply by sector.
+                  </p>
+                </div>
+
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Governance realities
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    Listed, public, member-based, and community institutions all
+                    carry different approval paths and accountability pressures.
+                  </p>
+                </div>
+
+                <div className="border-l-[3px] border-brand-gold pl-4">
+                  <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    Pressure points
+                  </p>
+                  <p className="text-charcoal-mid text-sm leading-relaxed">
+                    The reputational flashpoints are rarely identical, even when
+                    the communication discipline required is equally high.
+                  </p>
+                </div>
+              </div>
+            </aside>
+          </div>
         </div>
       </section>
 
@@ -171,6 +227,7 @@ export default function ClientsPage() {
         body="If you are working through a sector-specific issue, an emerging reputation risk, or a pressure point that needs senior judgment, CRC PR can help you work out the right next step."
         secondaryLabel="Explore My PR Partner"
         secondaryHref={siteConfig.myPrPartnerUrl}
+        secondaryDescription="CRC PR's training and support platform for communications teams, practitioners, and leaders who want practical guidance between major advisory engagements."
       />
     </>
   );

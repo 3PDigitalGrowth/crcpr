@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { AnimateIn } from "@/components/shared/AnimateIn";
+import { MyPRPartnerCTA } from "@/components/shared/MyPRPartnerCTA";
 
 export function HomeCTA() {
   return (
@@ -54,15 +55,14 @@ export function HomeCTA() {
             </AnimateIn>
 
             <AnimateIn delay={650}>
-              <a
-                href={siteConfig.myPrPartnerUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 text-brand-teal font-sans font-medium text-sm mt-2 hover:gap-3 transition-all"
-              >
-                Not ready for a retainer? Explore My PR Partner{" "}
-                <ArrowRight size={14} aria-hidden />
-              </a>
+              <MyPRPartnerCTA
+                variant="dark"
+                compact
+                title="Not ready for a retainer?"
+                description="My PR Partner gives teams and leaders practical PR training, tools, and communications support when they need capability-building before a full advisory engagement."
+                buttonLabel="EXPLORE MY PR PARTNER"
+                className="mt-2 text-left"
+              />
             </AnimateIn>
           </div>
         </div>

@@ -555,9 +555,9 @@ export default function IndustryAssociationsPage({
               </blockquote>
               <figcaption className="mt-4 text-sm text-charcoal-mid">
                 <span className="font-sans font-semibold text-navy">
-                  Vanessa Cheng
+                  Vanessa
                 </span>
-                , Executive Officer, Australian Association of Christian Schools
+                , Executive Officer, Christian schools sector
               </figcaption>
             </figure>
 
@@ -569,9 +569,9 @@ export default function IndustryAssociationsPage({
               </blockquote>
               <figcaption className="mt-4 text-sm text-charcoal-mid">
                 <span className="font-sans font-semibold text-navy">
-                  Peter White AM
+                  Peter
                 </span>
-                , Managing Director, Finance Brokers Association of Australia
+                , Managing Director, finance broking industry
               </figcaption>
             </figure>
           </div>

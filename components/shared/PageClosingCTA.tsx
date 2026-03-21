@@ -9,6 +9,7 @@ interface PageClosingCTAProps {
   primaryHref?: string;
   secondaryLabel?: string;
   secondaryHref?: string;
+  secondaryDescription?: string;
 }
 
 export function PageClosingCTA({
@@ -19,6 +20,7 @@ export function PageClosingCTA({
   primaryHref = "/contact",
   secondaryLabel,
   secondaryHref,
+  secondaryDescription,
 }: PageClosingCTAProps) {
   return (
     <section className="py-16 md:py-24 bg-white">
@@ -44,23 +46,30 @@ export function PageClosingCTA({
                   {primaryLabel}
                 </Link>
                 {secondaryLabel && secondaryHref ? (
-                  secondaryHref.startsWith("http") ? (
-                    <a
-                      href={secondaryHref}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-white/70 text-sm hover:text-white transition-colors"
-                    >
-                      {secondaryLabel}
-                    </a>
-                  ) : (
-                    <Link
-                      href={secondaryHref}
-                      className="text-white/70 text-sm hover:text-white transition-colors"
-                    >
-                      {secondaryLabel}
-                    </Link>
-                  )
+                  <div className="flex flex-col gap-2">
+                    {secondaryHref.startsWith("http") ? (
+                      <a
+                        href={secondaryHref}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center gap-2 border border-white/20 bg-white/[0.04] text-white font-heading font-black text-xs tracking-widest uppercase rounded-[4px] px-6 py-4 hover:bg-white/[0.08] transition"
+                      >
+                        {secondaryLabel}
+                      </a>
+                    ) : (
+                      <Link
+                        href={secondaryHref}
+                        className="inline-flex items-center justify-center gap-2 border border-white/20 bg-white/[0.04] text-white font-heading font-black text-xs tracking-widest uppercase rounded-[4px] px-6 py-4 hover:bg-white/[0.08] transition"
+                      >
+                        {secondaryLabel}
+                      </Link>
+                    )}
+                    {secondaryDescription ? (
+                      <p className="text-white/55 text-xs leading-relaxed max-w-xs">
+                        {secondaryDescription}
+                      </p>
+                    ) : null}
+                  </div>
                 ) : null}
               </div>
             </div>

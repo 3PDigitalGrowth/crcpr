@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Linkedin, Twitter } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import { MyPRPartnerCTA } from "@/components/shared/MyPRPartnerCTA";
 
 const serviceLinks = [
   { label: "Corporate Communications", slug: "corporate-communications" },
@@ -177,15 +178,14 @@ export function Footer() {
                 crisiscommunicationsaustralia.com.au →
               </a>
             </div>
-            <div className="bg-white/5 rounded-lg p-4">
-              <p className="text-white font-heading font-black text-sm mb-1">My PR Partner</p>
-              <p className="text-white/50 text-xs leading-relaxed mb-2">
-                PR training and crisis communications education for comms professionals.
-              </p>
-              <a href={siteConfig.myPrPartnerUrl} target="_blank" rel="noopener noreferrer" className="text-brand-teal text-xs font-medium hover:underline">
-                myprpartner.com →
-              </a>
-            </div>
+            <MyPRPartnerCTA
+              variant="dark"
+              compact
+              title="My PR Partner"
+              description="CRC PR's training platform for communications professionals, workshops, and practical crisis communications education."
+              buttonLabel="VISIT MY PR PARTNER"
+              className="h-full"
+            />
           </div>
         </div>
 

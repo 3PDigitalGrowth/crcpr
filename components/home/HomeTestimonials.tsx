@@ -6,22 +6,22 @@ const testimonials = [
   {
     quote:
       "CRC Public Relations has developed a crisis communications plan for Christian schools and has assisted many of our member schools across Australia to effectively communicate when issues have arisen.",
-    name: "Vanessa Cheng",
-    title: "Executive Officer, Australian Association of Christian Schools",
+    name: "Vanessa",
+    title: "Executive Officer, Christian schools sector",
     featured: true,
   },
   {
     quote:
       "CRC Public Relations has helped us generate major, ongoing, national exposure and ensure that our message is widely heard.",
-    name: "Peter White AM",
-    title: "Managing Director, Finance Brokers Association of Australia",
+    name: "Peter",
+    title: "Managing Director, finance broking industry",
     featured: false,
   },
   {
     quote:
       "The invaluable customer relations support from CRC Public Relations helps ensure a high level of trust in, and growth for, our chain of more than 50 restaurants.",
-    name: "Hamish Watson",
-    title: "Director, Cafe 63",
+    name: "Hamish",
+    title: "Director, hospitality sector",
     featured: false,
   },
 ];

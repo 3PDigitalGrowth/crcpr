@@ -307,8 +307,7 @@ export default function SchoolsFaithPage() {
               communicate when issues have arisen.&rdquo;
             </p>
             <footer className="mt-4 text-charcoal-mid text-sm">
-              Vanessa Cheng, Executive Officer, Australian Association of
-              Christian Schools
+              Vanessa, Executive Officer, Christian schools sector
             </footer>
           </blockquote>
         </div>

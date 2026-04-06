@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Linkedin, Twitter } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { MyPRPartnerCTA } from "@/components/shared/MyPRPartnerCTA";
@@ -10,15 +13,6 @@ const serviceLinks = [
   { label: "Crisis Communications", slug: "crisis-communications" },
   { label: "Media Strategy", slug: "media-strategy" },
   { label: "Digital Media", slug: "digital-media" },
-] as const;
-
-const clientLinks = [
-  { label: "Corporate & ASX-Listed", href: "/clients/corporate" },
-  { label: "Government", href: "/clients/government" },
-  { label: "Industry Associations", href: "/clients/industry-associations" },
-  { label: "Schools & Faith-Based", href: "/clients/schools-faith" },
-  { label: "Pacific", href: "/pacific" },
-  { label: "Case Studies", href: "/case-studies" },
 ] as const;
 
 const quickLinks = [
@@ -43,7 +37,20 @@ function Logo() {
 }
 
 export function Footer() {
+  const pathname = usePathname();
+  const isAlternativeVariant = pathname === "/alternative";
   const { street, city, state, postcode, country } = siteConfig.address;
+  const clientLinks = [
+    {
+      label: isAlternativeVariant ? "Private Companies" : "Corporate & ASX-Listed",
+      href: "/clients/corporate",
+    },
+    { label: "Government", href: "/clients/government" },
+    { label: "Industry Associations", href: "/clients/industry-associations" },
+    { label: "Schools & Faith-Based", href: "/clients/schools-faith" },
+    { label: "Pacific", href: "/pacific" },
+    { label: "Case Studies", href: "/case-studies" },
+  ] as const;
 
   return (
     <footer className="bg-navy py-16">
@@ -52,8 +59,9 @@ export function Footer() {
           <div>
             <Logo />
             <p className="text-sm text-white/60 leading-relaxed mt-4">
-              Boutique corporate PR firm trusted by companies, governments, and
-              organisations across Australia, the Pacific, and internationally.
+              {isAlternativeVariant
+                ? "Boutique corporate PR firm trusted by CEOs, directors, and senior executives across Australia, the Pacific, and internationally."
+                : "Boutique corporate PR firm trusted by companies, governments, and organisations across Australia, the Pacific, and internationally."}
             </p>
             <div className="mt-6 flex gap-4">
               <a

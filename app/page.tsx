@@ -1,24 +1,41 @@
-import Link from "next/link";
+import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
-import { HomeHero } from "@/components/home/HomeHero";
-import { HomeStats } from "@/components/home/HomeStats";
-import { HomePillars } from "@/components/home/HomePillars";
-import { HomeLeadMagnet } from "@/components/home/HomeLeadMagnet";
-import { HomeServices } from "@/components/home/HomeServices";
-import { HomeClients } from "@/components/home/HomeClients";
-import { HomeAbout } from "@/components/home/HomeAbout";
-import { HomeTestimonials } from "@/components/home/HomeTestimonials";
-import { CaseStudies } from "@/components/shared/CaseStudies";
-import { FAQSection } from "@/components/shared/FAQSection";
-import { HomeCrisisLeadMagnet } from "@/components/home/HomeCrisisLeadMagnet";
-import { HomeCTA } from "@/components/home/HomeCTA";
+import { AlternativeHome } from "@/components/alternative/AlternativeHome";
+
+const homepageFaqs = siteConfig.faqs.map((faq, index) => {
+  if (index === 0) {
+    return {
+      question: faq.question,
+      answer: `${faq.answer} That personal, senior approach is the reason clients choose us, and it is also the reason many of our clients are substantial organisations who could afford a larger firm but prefer to work with us.`,
+    };
+  }
+
+  if (index === 3) {
+    return {
+      question: "What types of organisations does CRC PR work with?",
+      answer:
+        "We work with CEOs, directors, and senior executives across private companies, family businesses, industry associations and peak bodies, independent and faith-based schools, health and aged care organisations, legal and professional services firms, government departments, and Pacific governments and NGOs. What our clients share is a preference for working directly with experienced senior advisers rather than through large agency structures.",
+    };
+  }
+
+  return faq;
+});
+
+export const metadata: Metadata = {
+  title: {
+    absolute:
+      "CRC Public Relations | Boutique Corporate PR, Reputation & Crisis Advisory",
+  },
+  description:
+    "Boutique corporate PR firm trusted by CEOs, directors, and senior executives across Australia, the Pacific, and internationally. Senior advice on reputation, issues, crisis response, and communications strategy.",
+};
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: "CRC Public Relations",
   description:
-    "Boutique corporate PR firm specialising in corporate communications, reputation management, crisis communications, and media training across Australia, the Pacific, and internationally.",
+    "Boutique corporate PR firm trusted by CEOs, directors, and senior executives across Australia, the Pacific, and internationally. Corporate communications, reputation management, crisis response, and media training.",
   url: "https://crcpr.com.au",
   telephone: siteConfig.phone.display,
   address: {
@@ -53,7 +70,7 @@ const jsonLd = {
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: siteConfig.faqs.map((faq) => ({
+  mainEntity: homepageFaqs.map((faq) => ({
     "@type": "Question",
     name: faq.question,
     acceptedAnswer: {
@@ -74,65 +91,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <HomeHero />
-      <HomeStats />
-      <HomePillars />
-      <HomeLeadMagnet />
-      <HomeServices />
-      <HomeClients />
-      <HomeAbout />
-      <HomeTestimonials />
-
-      {/* Case Studies */}
-      <section className="py-20 md:py-28 bg-off-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <p className="text-brand-gold text-xs font-medium tracking-[0.14em] uppercase mb-3">
-            Client Outcomes
-          </p>
-          <h2 className="font-heading font-black text-navy text-3xl md:text-4xl mb-4">
-            Results that speak for themselves.
-          </h2>
-          <p className="text-charcoal-mid text-base max-w-2xl mb-12 leading-relaxed">
-            We don&apos;t discuss client engagements without permission. These three
-            anonymised outcomes represent the kind of work we do when the stakes
-            are highest.
-          </p>
-          <CaseStudies />
-          <div className="mt-10 text-center">
-            <Link
-              href="/case-studies"
-              className="text-brand-gold font-medium text-sm hover:underline"
-            >
-              Read more about how we work →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <HomeCrisisLeadMagnet />
-
-      {/* FAQ */}
-      <section className="py-20 md:py-28 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <p className="text-brand-gold text-xs font-medium tracking-[0.14em] uppercase mb-3 text-center">
-            Common Questions
-          </p>
-          <h2 className="font-heading font-black text-navy text-3xl md:text-4xl mb-10 text-center">
-            Frequently asked questions.
-          </h2>
-          <FAQSection title={false} embedded />
-          <div className="mt-8 text-center">
-            <Link
-              href="/faq"
-              className="text-brand-teal text-sm font-medium hover:underline"
-            >
-              View all questions →
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      <HomeCTA />
+      <AlternativeHome faqItems={homepageFaqs} />
     </>
   );
 }

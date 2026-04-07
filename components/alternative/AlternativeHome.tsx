@@ -324,7 +324,7 @@ function AlternativeHero() {
 
 function AlternativePracticeAreas() {
   return (
-    <section className="relative bg-white py-24 md:py-32">
+    <section className="relative bg-off-white py-24 md:py-32">
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-navy-mid/5 to-transparent pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6">
@@ -341,7 +341,7 @@ function AlternativePracticeAreas() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mt-16">
           <AnimateIn className="lg:col-span-7">
-            <div className="relative bg-off-white rounded-lg p-10 h-full card-border-expand group">
+            <div className="relative bg-white border border-brand-border rounded-lg p-10 h-full card-border-expand group shadow-sm shadow-navy/5">
               <div className="h-[3px] bg-brand-gold w-16 group-hover:w-full transition-all duration-700 mb-8" />
               <Building2
                 className="text-brand-gold"
@@ -363,7 +363,7 @@ function AlternativePracticeAreas() {
               </p>
               <Link
                 href="/services/corporate-communications"
-                className="inline-flex items-center gap-2 text-brand-gold font-sans font-medium text-sm mt-6 group-hover:gap-3 transition-all"
+                className="inline-flex items-center gap-2 text-link-teal font-sans font-medium text-sm mt-6 group-hover:text-navy group-hover:gap-3 transition-all"
               >
                 Explore corporate communications <ArrowRight size={14} aria-hidden />
               </Link>
@@ -372,7 +372,7 @@ function AlternativePracticeAreas() {
 
           <div className="lg:col-span-5 flex flex-col gap-6">
             <AnimateIn delay={150}>
-              <div className="relative bg-off-white rounded-lg p-8 card-border-expand group">
+              <div className="relative bg-white border border-brand-border rounded-lg p-8 card-border-expand group shadow-sm shadow-navy/5">
                 <div className="h-[3px] bg-brand-gold w-12 group-hover:w-full transition-all duration-700 mb-6" />
                 <Shield
                   className="text-brand-gold"
@@ -394,7 +394,7 @@ function AlternativePracticeAreas() {
                 </p>
                 <Link
                   href="/services/reputation-management"
-                  className="inline-flex items-center gap-2 text-brand-gold font-sans font-medium text-sm mt-6 group-hover:gap-3 transition-all"
+                  className="inline-flex items-center gap-2 text-link-teal font-sans font-medium text-sm mt-6 group-hover:text-navy group-hover:gap-3 transition-all"
                 >
                   Explore reputation management <ArrowRight size={14} aria-hidden />
                 </Link>
@@ -402,7 +402,7 @@ function AlternativePracticeAreas() {
             </AnimateIn>
 
             <AnimateIn delay={300}>
-              <div className="relative bg-off-white rounded-lg p-8 card-border-expand group">
+              <div className="relative bg-white border border-brand-border rounded-lg p-8 card-border-expand group shadow-sm shadow-navy/5">
                 <div className="h-[3px] bg-brand-gold w-12 group-hover:w-full transition-all duration-700 mb-6" />
                 <AlertCircle
                   className="text-brand-gold"
@@ -422,7 +422,7 @@ function AlternativePracticeAreas() {
                 </p>
                 <Link
                   href="/services/crisis-communications"
-                  className="inline-flex items-center gap-2 text-brand-gold font-sans font-medium text-sm mt-6 group-hover:gap-3 transition-all"
+                  className="inline-flex items-center gap-2 text-link-teal font-sans font-medium text-sm mt-6 group-hover:text-navy group-hover:gap-3 transition-all"
                 >
                   Explore crisis communications <ArrowRight size={14} aria-hidden />
                 </Link>
@@ -439,7 +439,7 @@ function AlternativePracticeAreas() {
               who take a genuine, long-term interest in your organisation. That
               is a deliberate choice. It is how we do our best work.&rdquo;
             </blockquote>
-            <p className="font-sans font-medium text-brand-gold text-sm mt-6 tracking-wide">
+            <p className="font-sans font-medium text-text-secondary text-sm mt-6 tracking-wide">
               - Lyall Mercer, Founder
             </p>
             <div className="w-12 h-[2px] bg-brand-gold mx-auto mt-8" />
@@ -452,8 +452,8 @@ function AlternativePracticeAreas() {
 
 function AlternativeAssessment() {
   return (
-    <section className="relative bg-navy py-24 md:py-32 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy-mid/50 to-navy" />
+    <section className="relative bg-warm-white py-24 md:py-32 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-warm-white via-white to-off-white pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
@@ -462,13 +462,13 @@ function AlternativeAssessment() {
               <p className="font-sans font-medium text-brand-teal text-xs tracking-[0.14em] uppercase">
                 Free Assessment
               </p>
-              <h2 className="font-heading font-black text-white text-3xl md:text-[38px] leading-[1.1] mt-3">
+              <h2 className="font-heading font-black text-navy text-3xl md:text-[38px] leading-[1.1] mt-3">
                 How exposed is your organisation&apos;s reputation?
               </h2>
             </AnimateIn>
             <AnimateIn delay={150}>
               <div className="space-y-4 mt-6">
-                <p className="text-white/70 text-base leading-relaxed">
+                <p className="text-text-body text-base leading-relaxed">
                   Most organisations do not discover their reputation
                   vulnerabilities until a crisis is already underway. Our
                   Reputation Vulnerability Assessment takes three minutes and
@@ -476,7 +476,7 @@ function AlternativeAssessment() {
                   media, social media, stakeholder relationships, and crisis
                   preparedness.
                 </p>
-                <p className="text-white/70 text-base leading-relaxed">
+                <p className="text-text-body text-base leading-relaxed">
                   Used by CEOs, communications directors, and board chairs
                   across Australia.
                 </p>
@@ -485,32 +485,32 @@ function AlternativeAssessment() {
           </div>
 
           <AnimateIn delay={250} className="lg:col-span-5">
-            <div className="relative bg-navy-mid/80 backdrop-blur-sm border border-brand-gold/15 rounded-lg p-8 card-border-expand overflow-hidden">
-              <h3 className="text-white font-heading font-black text-lg">
+            <div className="relative bg-white border border-brand-border rounded-lg p-8 card-border-expand overflow-hidden shadow-sm shadow-navy/5">
+              <h3 className="text-navy font-heading font-black text-lg">
                 Reputation Vulnerability Assessment
               </h3>
               <div className="mt-5 space-y-0">
                 {assessmentAreas.map((area, i) => (
                   <AnimateIn key={area} delay={350 + i * 80} as="div">
-                    <div className="flex items-center gap-3 py-2.5 border-b border-white/5 last:border-0">
+                    <div className="flex items-center gap-3 py-2.5 border-b border-brand-border last:border-0">
                       <Check
                         className="text-brand-teal shrink-0"
                         size={16}
                         strokeWidth={2.5}
                         aria-hidden
                       />
-                      <span className="text-white/70 text-sm">{area}</span>
+                      <span className="text-text-body text-sm">{area}</span>
                     </div>
                   </AnimateIn>
                 ))}
               </div>
               <Link
                 href="/services/reputation-management#reputation-assessment"
-                className="btn-lift block bg-brand-gold text-navy font-heading font-black text-sm tracking-widest uppercase w-full py-4 rounded-[4px] mt-6 hover:bg-gold-light transition text-center"
+                className="btn-lift block bg-brand-teal text-white font-heading font-black text-sm tracking-widest uppercase w-full py-4 rounded-[4px] mt-6 hover:bg-link-teal transition text-center"
               >
                 Start the Free Assessment →
               </Link>
-              <p className="text-white/50 text-xs mt-3 text-center">
+              <p className="text-text-caption text-xs mt-3 text-center">
                 Three minutes. No commitment. Results delivered by email.
               </p>
             </div>
@@ -523,7 +523,7 @@ function AlternativeAssessment() {
 
 function AlternativeClients() {
   return (
-    <section className="bg-white py-24 md:py-32">
+    <section className="bg-warm-white py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
           <div className="lg:col-span-5">
@@ -562,7 +562,7 @@ function AlternativeClients() {
                   </p>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center justify-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs tracking-widest uppercase rounded-[4px] px-5 py-3 mt-4 hover:bg-gold-light transition"
+                    className="inline-flex items-center justify-center gap-2 bg-brand-teal text-white font-heading font-black text-xs tracking-widest uppercase rounded-[4px] px-5 py-3 mt-4 hover:bg-link-teal transition"
                   >
                     WORK WITH US <ArrowRight size={14} aria-hidden />
                   </Link>
@@ -584,9 +584,9 @@ function AlternativeClients() {
                 <AnimateIn key={sector.title} delay={i * 80}>
                   <Link
                     href={sector.href}
-                    className="card-border-expand block bg-off-white border border-brand-border/30 rounded-xl p-6 hover:border-brand-gold/20 hover:shadow-md hover:shadow-brand-gold/5 transition-all duration-300 group min-h-[138px]"
+                    className="card-border-expand block bg-white border border-brand-border rounded-xl p-6 shadow-sm shadow-navy/5 hover:shadow-md transition-all duration-300 group min-h-[138px]"
                   >
-                    <p className="font-sans font-medium text-navy text-sm group-hover:text-brand-gold transition-colors">
+                    <p className="font-sans font-medium text-navy text-sm group-hover:text-link-teal transition-colors">
                       {sector.title}
                     </p>
                     <p className="text-charcoal-mid text-sm leading-relaxed mt-3">
@@ -605,8 +605,8 @@ function AlternativeClients() {
 
 function AlternativeAbout() {
   return (
-    <section className="relative bg-navy py-24 md:py-32 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-navy via-navy to-navy-mid" />
+    <section className="relative bg-off-white py-24 md:py-32 overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-off-white via-warm-white to-off-white" />
 
       <div className="relative max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
@@ -624,24 +624,24 @@ function AlternativeAbout() {
             </AnimateIn>
 
             <AnimateIn delay={100}>
-              <h2 className="font-heading font-black text-white text-3xl md:text-[42px] leading-[1.05] mt-3">
+              <h2 className="font-heading font-black text-navy text-3xl md:text-[42px] leading-[1.05] mt-3">
                 Lyall Mercer
               </h2>
-              <p className="text-brand-gold font-sans font-medium text-lg mt-2">
+              <p className="text-brand-teal font-sans font-medium text-lg mt-2">
                 Founder &amp; Principal Adviser
               </p>
             </AnimateIn>
 
             <AnimateIn delay={200}>
               <div className="space-y-5 mt-8">
-                <p className="text-white/75 text-base leading-relaxed">
+                <p className="text-text-body text-base leading-relaxed">
                   Lyall Mercer began his career as a journalist, writing for
                   some of Australia&apos;s leading newspapers. That foundation,
                   understanding exactly how media thinks, moves, and decides
                   what becomes a story, is what makes his approach to corporate
                   communications and crisis advice unlike any other.
                 </p>
-                <p className="text-white/75 text-base leading-relaxed">
+                <p className="text-text-body text-base leading-relaxed">
                   Over the past 25 years, Lyall has built a reputation across
                   Australasia as a trusted adviser in corporate public
                   relations, reputation and issues management, and crisis
@@ -651,7 +651,7 @@ function AlternativeAbout() {
                   organisations, and has worked with clients and media on every
                   continent.
                 </p>
-                <p className="text-white/75 text-base leading-relaxed">
+                <p className="text-text-body text-base leading-relaxed">
                   Clients choose to work with Lyall because they deal directly
                   with him. There is no handoff to a junior team. When you
                   engage CRC PR, you get the adviser whose name is on the door.
@@ -661,11 +661,11 @@ function AlternativeAbout() {
 
             <AnimateIn delay={350}>
               <blockquote className="border-l-[3px] border-brand-gold pl-6 mt-8">
-                <p className="font-sans italic text-white/85 text-base leading-relaxed">
+                <p className="font-sans italic text-navy text-base leading-relaxed">
                   &ldquo;You have fifteen minutes to respond to an emerging
                   crisis before you start to lose control of the message.&rdquo;
                 </p>
-                <cite className="font-sans font-medium text-brand-gold text-sm mt-3 not-italic block">
+                <cite className="font-sans font-medium text-text-secondary text-sm mt-3 not-italic block">
                   - Lyall Mercer
                 </cite>
               </blockquote>
@@ -675,7 +675,7 @@ function AlternativeAbout() {
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
                 <Link
                   href="/about/lyall-mercer"
-                  className="btn-lift inline-flex items-center gap-2 text-brand-gold font-sans font-medium text-sm hover:gap-3 transition-all"
+                  className="btn-lift inline-flex items-center gap-2 text-link-teal font-sans font-medium text-sm hover:text-navy hover:gap-3 transition-all"
                 >
                   Read Lyall&apos;s full profile <ArrowRight size={14} />
                 </Link>
@@ -683,7 +683,7 @@ function AlternativeAbout() {
                   href={siteConfig.lyallMercerUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-lift inline-flex items-center gap-2 text-brand-teal font-sans font-medium text-sm hover:gap-3 transition-all"
+                  className="btn-lift inline-flex items-center gap-2 text-link-teal font-sans font-medium text-sm hover:text-navy hover:gap-3 transition-all"
                 >
                   View media appearances <ArrowRight size={14} />
                 </a>
@@ -800,7 +800,7 @@ export function AlternativeHome({ faqItems }: AlternativeHomeProps) {
 
       <HomeCrisisLeadMagnet />
 
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-20 md:py-28 bg-off-white">
         <div className="max-w-7xl mx-auto px-6">
           <p className="text-brand-gold text-xs font-medium tracking-[0.14em] uppercase mb-3 text-center">
             Common Questions

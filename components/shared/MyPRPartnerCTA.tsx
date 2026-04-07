@@ -29,7 +29,7 @@ export function MyPRPartnerCTA({
       className={`rounded-xl border p-5 ${
         isDark
           ? "border-white/10 bg-white/[0.04]"
-          : "border-brand-border bg-off-white"
+          : "border-brand-border bg-white shadow-sm shadow-navy/5"
       } ${className}`}
     >
       <p
@@ -60,7 +60,7 @@ export function MyPRPartnerCTA({
         className={`inline-flex items-center justify-center gap-2 font-heading font-black text-xs tracking-widest uppercase rounded-[4px] px-5 py-3 mt-4 transition ${
           isDark
             ? "border border-white/20 bg-white/[0.04] text-white hover:bg-white/[0.08]"
-            : "bg-brand-gold text-navy hover:bg-gold-light"
+            : "bg-brand-teal text-white hover:bg-link-teal"
         }`}
       >
         {buttonLabel}

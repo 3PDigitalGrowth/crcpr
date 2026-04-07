@@ -65,7 +65,7 @@ export default function LyallMercerPage() {
                       href={item.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm text-brand-gold hover:underline block py-1"
+                    className="text-sm text-link-teal hover:text-navy hover:underline block py-1"
                     >
                       {item.name}
                     </a>
@@ -114,24 +114,24 @@ export default function LyallMercerPage() {
         </div>
       </section>
 
-      <section className="bg-white py-16">
+      <section className="bg-warm-white py-16">
         <div className="max-w-3xl mx-auto px-6">
-          <div className="bg-navy rounded-lg p-8 my-10">
+          <div className="bg-white border border-brand-border rounded-lg p-8 my-10 shadow-sm shadow-navy/5">
             <p className="text-brand-teal text-xs font-medium tracking-[0.14em] uppercase mb-3">
               LYALL&apos;S SIGNATURE FRAMEWORK
             </p>
-            <h2 className="font-heading font-black text-white text-3xl mb-4">
+            <h2 className="font-heading font-black text-navy text-3xl mb-4">
               The 15 Minutes Principle
             </h2>
             <blockquote className="border-l-4 border-brand-gold pl-5 mb-5">
-              <p className="text-white/85 text-lg italic leading-relaxed">
+              <p className="text-navy text-lg italic leading-relaxed">
                 &ldquo;You have 15 minutes to respond to an emerging crisis before you start to lose control of the message. After that window closes, you&apos;re no longer shaping the story; you&apos;re responding to it.&rdquo;
               </p>
             </blockquote>
-            <p className="text-white/65 text-base leading-relaxed mb-5">
+            <p className="text-text-body text-base leading-relaxed mb-5">
               Developed over 25 years of crisis communications practice across Australia and internationally, the 15 Minutes Principle is Lyall&apos;s framework for crisis response discipline. It has been shared with executives, boards, and communications teams across Australia, the USA, and Canada.
             </p>
-            <Link href="/insights/the-15-minutes-principle" className="text-brand-gold text-sm font-medium hover:underline">
+            <Link href="/insights/the-15-minutes-principle" className="text-link-teal text-sm font-medium hover:text-navy hover:underline">
               Read the full 15 Minutes Principle article →
             </Link>
           </div>
@@ -162,9 +162,9 @@ export default function LyallMercerPage() {
             </p>
             <p className="text-charcoal text-base leading-relaxed mb-6">
               For speaking enquiries, visit{" "}
-              <a href={siteConfig.lyallMercerUrl} target="_blank" rel="noopener noreferrer" className="text-brand-gold hover:underline">lyallmercer.com</a>
+              <a href={siteConfig.lyallMercerUrl} target="_blank" rel="noopener noreferrer" className="text-link-teal hover:text-navy hover:underline">lyallmercer.com</a>
               . For crisis communications training and masterclasses, visit{" "}
-              <a href={siteConfig.myPrPartnerUrl} target="_blank" rel="noopener noreferrer" className="text-brand-teal hover:underline">myprpartner.com</a>.
+              <a href={siteConfig.myPrPartnerUrl} target="_blank" rel="noopener noreferrer" className="text-link-teal hover:text-navy hover:underline">myprpartner.com</a>.
             </p>
           </div>
         </div>
@@ -176,7 +176,7 @@ export default function LyallMercerPage() {
             href={siteConfig.lyallMercerUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-brand-gold hover:underline font-medium"
+            className="text-link-teal hover:text-navy hover:underline font-medium"
           >
             → Visit lyallmercer.com for the full profile
           </a>

@@ -23,7 +23,7 @@ export function PageClosingCTA({
   secondaryDescription,
 }: PageClosingCTAProps) {
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="py-16 md:py-24 bg-off-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="bg-navy text-white rounded-lg overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_300px]">

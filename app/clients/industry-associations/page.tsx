@@ -169,7 +169,7 @@ function getActiveSector(value?: string): Sector {
 
 function AssociationOpening() {
   return (
-    <section className="bg-navy py-20">
+    <section className="bg-off-white py-20">
       <div className="max-w-7xl mx-auto px-6">
         <p className="text-brand-teal font-sans font-medium text-xs tracking-[0.18em] uppercase mb-8">
           Why associations need specialist communications counsel
@@ -177,16 +177,16 @@ function AssociationOpening() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           <div>
-            <h2 className="font-heading font-black text-white text-3xl leading-tight mb-6">
+            <h2 className="font-heading font-black text-navy text-3xl leading-tight mb-6">
               Association communications is the most complex brief in Australia.
             </h2>
-            <p className="text-white/60 text-base leading-relaxed mb-5">
+            <p className="text-text-body text-base leading-relaxed mb-5">
               Industry associations must simultaneously serve members, satisfy regulators,
               engage government, and withstand media scrutiny, often with the same
               communication, at the same time. No other type of organisation carries
               that load.
             </p>
-            <p className="text-white/60 text-base leading-relaxed mb-8">
+            <p className="text-text-body text-base leading-relaxed mb-8">
               CRC PR has worked with some of Australia&apos;s most prominent peak bodies for
               over 25 years. We understand what boards need, what members expect, and
               what regulators and journalists are looking for. Our approach is always
@@ -195,7 +195,7 @@ function AssociationOpening() {
             </p>
 
             <blockquote className="border-l-[3px] border-brand-gold pl-5">
-              <p className="text-white/80 text-sm leading-relaxed italic mb-3">
+              <p className="text-navy text-sm leading-relaxed italic mb-3">
                 &ldquo;CRC Public Relations created national media coverage that energised our
                 member base, attracted new members and helped us advance important changes
                 for our sector.&rdquo;
@@ -226,7 +226,7 @@ function AssociationOpening() {
             ].map(({ num, title, body }) => (
               <div
                 key={num}
-                className="bg-white/[0.05] border border-white/10 rounded-lg p-5 pl-12 relative"
+                className="bg-white border border-brand-border rounded-lg p-5 pl-12 relative shadow-sm shadow-navy/5"
               >
                 <span
                   className="absolute left-4 top-5 font-heading font-black text-2xl leading-none"
@@ -235,14 +235,14 @@ function AssociationOpening() {
                 >
                   {num}
                 </span>
-                <p className="text-white/85 text-sm font-medium mb-1.5">{title}</p>
-                <p className="text-white/40 text-xs leading-relaxed">{body}</p>
+                  <p className="text-navy text-sm font-medium mb-1.5">{title}</p>
+                <p className="text-text-body text-xs leading-relaxed">{body}</p>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="grid grid-cols-3 divide-x divide-white/10 border-t border-white/10 pt-8">
+        <div className="grid grid-cols-3 divide-x divide-brand-border border-t border-brand-border pt-8">
           {[
             { num: "25+", label: "Years advising Australian associations" },
             { num: "15+", label: "National and state peak bodies advised" },
@@ -252,7 +252,7 @@ function AssociationOpening() {
               <p className="font-heading font-black text-brand-gold text-4xl leading-none mb-2">
                 {num}
               </p>
-              <p className="text-white/35 text-[10px] tracking-wide uppercase leading-snug">
+              <p className="text-text-caption text-[10px] tracking-wide uppercase leading-snug">
                 {label}
               </p>
             </div>

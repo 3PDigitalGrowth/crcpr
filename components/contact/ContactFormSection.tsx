@@ -38,7 +38,7 @@ export function ContactFormSection({ source }: ContactFormSectionProps) {
   }
 
   return (
-    <section className="bg-white py-24">
+    <section className="bg-warm-white py-24">
       <div className="max-w-7xl mx-auto px-6">
         <div className="bg-brand-gold rounded-lg p-4 flex items-center justify-between gap-4 mb-8">
           <div className="flex items-center gap-3">
@@ -64,7 +64,7 @@ export function ContactFormSection({ source }: ContactFormSectionProps) {
 
             {isCapabilityRequest && formState.status !== "success" && (
               <div className="mt-6 rounded-lg border-2 border-brand-gold/60 bg-brand-gold/5 p-4">
-                <p className="text-charcoal text-sm leading-relaxed">
+                <p className="text-text-body text-sm leading-relaxed">
                   You&apos;re requesting our Capability Statement. We&apos;ll
                   send it directly to your inbox.
                 </p>
@@ -72,23 +72,23 @@ export function ContactFormSection({ source }: ContactFormSectionProps) {
             )}
 
             {formState.status === "success" ? (
-              <div className="mt-8 bg-off-white border border-brand-gold/30 rounded-lg p-8">
+              <div className="mt-8 bg-white border border-brand-border rounded-lg p-8 shadow-sm shadow-navy/5">
                 <div className="flex items-center gap-3 mb-4">
                   <CheckCircle className="text-brand-gold w-7 h-7 flex-shrink-0" />
                   <h3 className="font-heading font-black text-navy text-xl">
                     Message received.
                   </h3>
                 </div>
-                <p className="text-charcoal-mid text-base leading-relaxed mb-4">
+                <p className="text-text-body text-base leading-relaxed mb-4">
                   Thank you for reaching out. A CRC PR adviser will be in touch
                   shortly: within the hour during business hours, or first thing
                   in the morning for after-hours messages.
                 </p>
-                <p className="text-charcoal-mid text-sm">
+                <p className="text-text-body text-sm">
                   If your situation is urgent, call us now:{" "}
                   <a
                     href="tel:1300182186"
-                    className="text-brand-gold font-medium hover:underline"
+                    className="text-link-teal font-medium hover:text-navy hover:underline"
                   >
                     1300 182 186
                   </a>{" "}
@@ -105,7 +105,7 @@ export function ContactFormSection({ source }: ContactFormSectionProps) {
                 <div>
                   <label
                     htmlFor="contact-name"
-                    className="block text-xs font-medium text-charcoal-mid uppercase tracking-wide mb-1.5"
+                    className="block text-xs font-medium text-navy uppercase tracking-wide mb-1.5"
                   >
                     Full name <span className="text-brand-teal">*</span>
                   </label>
@@ -115,14 +115,14 @@ export function ContactFormSection({ source }: ContactFormSectionProps) {
                     type="text"
                     required
                     autoComplete="name"
-                    className="w-full rounded-[4px] border border-brand-border px-4 py-3 text-charcoal placeholder:text-charcoal-mid/50 focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal"
+                    className="w-full rounded-[4px] border border-brand-border bg-white px-4 py-3 text-text-body placeholder:text-text-caption focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal"
                     placeholder="Your name"
                   />
                 </div>
                 <div>
                   <label
                     htmlFor="contact-organisation"
-                    className="block text-xs font-medium text-charcoal-mid uppercase tracking-wide mb-1.5"
+                    className="block text-xs font-medium text-navy uppercase tracking-wide mb-1.5"
                   >
                     Organisation
                   </label>
@@ -131,14 +131,14 @@ export function ContactFormSection({ source }: ContactFormSectionProps) {
                     name="organisation"
                     type="text"
                     autoComplete="organization"
-                    className="w-full rounded-[4px] border border-brand-border px-4 py-3 text-charcoal placeholder:text-charcoal-mid/50 focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal"
+                    className="w-full rounded-[4px] border border-brand-border bg-white px-4 py-3 text-text-body placeholder:text-text-caption focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal"
                     placeholder="Company or organisation"
                   />
                 </div>
                 <div>
                   <label
                     htmlFor="contact-email"
-                    className="block text-xs font-medium text-charcoal-mid uppercase tracking-wide mb-1.5"
+                    className="block text-xs font-medium text-navy uppercase tracking-wide mb-1.5"
                   >
                     Email <span className="text-brand-teal">*</span>
                   </label>
@@ -148,14 +148,14 @@ export function ContactFormSection({ source }: ContactFormSectionProps) {
                     type="email"
                     required
                     autoComplete="email"
-                    className="w-full rounded-[4px] border border-brand-border px-4 py-3 text-charcoal placeholder:text-charcoal-mid/50 focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal"
+                    className="w-full rounded-[4px] border border-brand-border bg-white px-4 py-3 text-text-body placeholder:text-text-caption focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal"
                     placeholder="you@example.com"
                   />
                 </div>
                 <div>
                   <label
                     htmlFor="contact-phone"
-                    className="block text-xs font-medium text-charcoal-mid uppercase tracking-wide mb-1.5"
+                    className="block text-xs font-medium text-navy uppercase tracking-wide mb-1.5"
                   >
                     Phone number <span className="text-brand-teal">*</span>
                   </label>
@@ -165,14 +165,14 @@ export function ContactFormSection({ source }: ContactFormSectionProps) {
                     type="tel"
                     required
                     autoComplete="tel"
-                    className="w-full rounded-[4px] border border-brand-border px-4 py-3 text-charcoal placeholder:text-charcoal-mid/50 focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal"
+                    className="w-full rounded-[4px] border border-brand-border bg-white px-4 py-3 text-text-body placeholder:text-text-caption focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal"
                     placeholder="Including area code"
                   />
                 </div>
                 <div>
                   <label
                     htmlFor="contact-message"
-                    className="block text-xs font-medium text-charcoal-mid uppercase tracking-wide mb-1.5"
+                    className="block text-xs font-medium text-navy uppercase tracking-wide mb-1.5"
                   >
                     How can we help?
                   </label>
@@ -180,7 +180,7 @@ export function ContactFormSection({ source }: ContactFormSectionProps) {
                     id="contact-message"
                     name="message"
                     rows={5}
-                    className="w-full rounded-[4px] border border-brand-border px-4 py-3 text-charcoal placeholder:text-charcoal-mid/50 focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal resize-y min-h-[120px]"
+                    className="w-full rounded-[4px] border border-brand-border bg-white px-4 py-3 text-text-body placeholder:text-text-caption focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal resize-y min-h-[120px]"
                     placeholder="Briefly describe your situation or enquiry"
                     defaultValue={
                       isCapabilityRequest
@@ -196,7 +196,7 @@ export function ContactFormSection({ source }: ContactFormSectionProps) {
                 >
                   {isSubmitting ? "SENDING…" : "SEND MESSAGE →"}
                 </button>
-                <p className="text-charcoal-mid text-sm italic">
+                <p className="text-text-body text-sm italic">
                   For general enquiries and new business conversations. For
                   active crises, please call.
                 </p>
@@ -208,14 +208,14 @@ export function ContactFormSection({ source }: ContactFormSectionProps) {
             <h3 className="font-heading font-black text-navy text-xl">
               Other ways to reach us
             </h3>
-            <ul className="mt-6 space-y-4 text-charcoal-mid text-sm leading-relaxed">
+            <ul className="mt-6 space-y-4 text-text-body text-sm leading-relaxed">
               <li>
                 <span className="block text-charcoal text-xs font-medium uppercase tracking-wide mb-1">
                   Phone
                 </span>
                 <a
                   href={siteConfig.phone.href}
-                  className="text-brand-gold font-medium hover:underline"
+                  className="text-link-teal font-medium hover:text-navy hover:underline"
                 >
                   {siteConfig.phone.display}
                 </a>
@@ -226,7 +226,7 @@ export function ContactFormSection({ source }: ContactFormSectionProps) {
                 </span>
                 <a
                   href={`mailto:${siteConfig.email.general}`}
-                  className="text-brand-gold font-medium hover:underline"
+                  className="text-link-teal font-medium hover:text-navy hover:underline"
                 >
                   {siteConfig.email.general}
                 </a>

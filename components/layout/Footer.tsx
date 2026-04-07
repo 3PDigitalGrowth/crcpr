@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { Linkedin, Twitter } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { MyPRPartnerCTA } from "@/components/shared/MyPRPartnerCTA";
@@ -37,12 +36,10 @@ function Logo() {
 }
 
 export function Footer() {
-  const pathname = usePathname();
-  const isAlternativeVariant = pathname === "/alternative";
   const { street, city, state, postcode, country } = siteConfig.address;
   const clientLinks = [
     {
-      label: isAlternativeVariant ? "Private Companies" : "Corporate & ASX-Listed",
+      label: "Private Companies",
       href: "/clients/corporate",
     },
     { label: "Government", href: "/clients/government" },
@@ -53,15 +50,14 @@ export function Footer() {
   ] as const;
 
   return (
-    <footer className="bg-navy py-16">
+    <footer className="bg-charcoal py-16">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           <div>
             <Logo />
             <p className="text-sm text-white/60 leading-relaxed mt-4">
-              {isAlternativeVariant
-                ? "Boutique corporate PR firm trusted by CEOs, directors, and senior executives across Australia, the Pacific, and internationally."
-                : "Boutique corporate PR firm trusted by companies, governments, and organisations across Australia, the Pacific, and internationally."}
+              Boutique corporate PR firm trusted by CEOs, directors, and senior
+              executives across Australia, the Pacific, and internationally.
             </p>
             <div className="mt-6 flex gap-4">
               <a

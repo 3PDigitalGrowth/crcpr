@@ -34,8 +34,8 @@ export function FAQSection({
             key={i}
             className={`rounded-lg border p-6 transition-colors ${
               isOpen
-                ? "border-brand-gold/40 bg-off-white"
-                : "border-brand-border bg-off-white"
+                ? "border-brand-teal/40 bg-white shadow-sm shadow-navy/5"
+                : "border-brand-border bg-white shadow-sm shadow-navy/5"
             }`}
           >
             <div className="flex items-start justify-between gap-4">
@@ -43,7 +43,7 @@ export function FAQSection({
                 {faq.question}
               </h3>
               <ChevronDown
-                className={`size-5 shrink-0 text-navy transition-transform duration-300 ${
+                className={`size-5 shrink-0 text-brand-teal transition-transform duration-300 ${
                   isOpen ? "rotate-180" : ""
                 }`}
                 aria-hidden
@@ -52,6 +52,7 @@ export function FAQSection({
 
             <p
               className={`mt-4 font-sans text-charcoal-mid text-[15px] leading-relaxed ${
+                
                 isOpen ? "" : "line-clamp-3"
               }`}
             >
@@ -60,7 +61,7 @@ export function FAQSection({
 
             <button
               type="button"
-              className="mt-5 text-brand-teal text-sm font-medium hover:underline underline-offset-2"
+              className="mt-5 text-link-teal text-sm font-medium hover:text-navy hover:underline underline-offset-2"
               onClick={() => setOpenIndex(isOpen ? null : i)}
               aria-expanded={isOpen}
             >
@@ -77,7 +78,7 @@ export function FAQSection({
   }
 
   return (
-    <section className="bg-white py-16 md:py-20">
+    <section className="bg-off-white py-16 md:py-20">
       <div className="max-w-7xl mx-auto px-6">
         {title && (
           <div className="max-w-3xl mx-auto text-center mb-10">

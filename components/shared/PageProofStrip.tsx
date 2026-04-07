@@ -21,18 +21,18 @@ export function PageProofStrip({
     variant === "navy"
       ? "bg-navy"
       : variant === "white"
-        ? "bg-white"
+        ? "bg-warm-white"
         : "bg-off-white";
 
   const cardClass =
     variant === "navy"
       ? "border-white/10 bg-white/[0.03]"
-      : "border-brand-border bg-white";
+      : "border-brand-border bg-white shadow-sm shadow-navy/5";
 
   const titleClass = variant === "navy" ? "text-white" : "text-navy";
   const valueClass = variant === "navy" ? "text-white" : "text-navy";
   const detailClass =
-    variant === "navy" ? "text-white/60" : "text-charcoal-mid";
+    variant === "navy" ? "text-white/60" : "text-body";
 
   return (
     <section className={`${sectionClass} py-16 md:py-20`}>

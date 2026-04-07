@@ -19,7 +19,7 @@ export interface LeadMagnetModalProps {
 }
 
 const inputClassName =
-  "w-full border border-brand-border rounded-[4px] px-4 py-3 text-sm font-sans text-charcoal placeholder:text-charcoal-mid/50 focus:outline-none focus:border-brand-gold transition mb-3";
+  "w-full border border-brand-border bg-white rounded-[4px] px-4 py-3 text-sm font-sans text-text-body placeholder:text-text-caption focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal transition mb-3";
 
 export function LeadMagnetModal({
   magnet,
@@ -76,7 +76,7 @@ export function LeadMagnetModal({
       onClick={onClose}
     >
       <div
-        className="bg-white rounded-lg max-w-md w-full p-8 relative"
+        className="bg-warm-white rounded-lg max-w-md w-full p-8 relative shadow-sm shadow-navy/10"
         role="dialog"
         aria-modal="true"
         aria-labelledby="lead-magnet-modal-title"
@@ -84,7 +84,7 @@ export function LeadMagnetModal({
       >
         <button
           type="button"
-          className="absolute top-4 right-4 text-charcoal-mid hover:text-charcoal transition"
+          className="absolute top-4 right-4 text-text-caption hover:text-text-body transition"
           onClick={onClose}
           aria-label="Close"
         >
@@ -100,7 +100,7 @@ export function LeadMagnetModal({
         >
           {meta.title}
         </h3>
-        <p className="text-charcoal text-[15px] mt-3">{meta.description}</p>
+        <p className="text-text-body text-[15px] mt-3">{meta.description}</p>
 
         {showSuccess ? (
           <div className="mt-6 space-y-4">
@@ -109,13 +109,13 @@ export function LeadMagnetModal({
               strokeWidth={1.75}
               aria-hidden
             />
-            <p className="text-charcoal text-center">
+            <p className="text-text-body text-center">
               Check your inbox. {meta.title} is on its way.
             </p>
             <button
               type="button"
               onClick={onClose}
-              className="w-full bg-brand-gold text-navy font-heading font-black text-sm tracking-widest uppercase py-3 rounded-[4px] hover:bg-gold-light transition"
+              className="w-full bg-brand-teal text-white font-heading font-black text-sm tracking-widest uppercase py-3 rounded-[4px] hover:bg-link-teal transition"
             >
               Close
             </button>
@@ -172,23 +172,23 @@ export function LeadMagnetModal({
             <button
               type="submit"
               disabled={isSubmitting}
-              className="bg-brand-gold text-navy font-heading font-black text-sm tracking-widest uppercase w-full py-3 rounded-[4px] mt-4 hover:bg-gold-light transition disabled:opacity-60 disabled:cursor-not-allowed"
+              className="bg-brand-teal text-white font-heading font-black text-sm tracking-widest uppercase w-full py-3 rounded-[4px] mt-4 hover:bg-link-teal transition disabled:opacity-60 disabled:cursor-not-allowed"
             >
               SEND ME THE RESOURCE
             </button>
           </form>
         )}
 
-        <p className="mt-4 text-xs text-charcoal-mid">
+        <p className="mt-4 text-xs text-text-caption">
           No spam. Unsubscribe anytime.{" "}
           <Link
             href="/privacy-policy"
-            className="underline underline-offset-2 hover:text-charcoal transition"
+            className="underline underline-offset-2 text-link-teal hover:text-navy transition"
           >
             Privacy policy
           </Link>
         </p>
-        <p className="mt-2 text-xs text-charcoal-mid italic">
+        <p className="mt-2 text-xs text-text-caption italic">
           Prepared by CRC PR: 25 years of Australian PR expertise.
         </p>
       </div>

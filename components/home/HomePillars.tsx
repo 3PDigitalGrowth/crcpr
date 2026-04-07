@@ -7,7 +7,7 @@ import { AnimateIn } from "@/components/shared/AnimateIn";
 
 export function HomePillars() {
   return (
-    <section className="relative bg-white py-24 md:py-32">
+    <section className="relative bg-off-white py-24 md:py-32">
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-navy-mid/5 to-transparent pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6">
@@ -24,7 +24,7 @@ export function HomePillars() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mt-16">
           <AnimateIn className="lg:col-span-7">
-            <div className="relative bg-off-white rounded-lg p-10 h-full card-border-expand group">
+            <div className="relative bg-white border border-brand-border rounded-lg p-10 h-full card-border-expand group shadow-sm shadow-navy/5">
               <div className="h-[3px] bg-brand-gold w-16 group-hover:w-full transition-all duration-700 mb-8" />
               <Building2
                 className="text-brand-gold"
@@ -43,7 +43,7 @@ export function HomePillars() {
               </p>
               <Link
                 href="/services/corporate-communications"
-                className="inline-flex items-center gap-2 text-brand-gold font-sans font-medium text-sm mt-6 group-hover:gap-3 transition-all"
+                className="inline-flex items-center gap-2 text-link-teal font-sans font-medium text-sm mt-6 group-hover:text-navy group-hover:gap-3 transition-all"
               >
                 Explore corporate communications{" "}
                 <ArrowRight size={14} aria-hidden />
@@ -53,7 +53,7 @@ export function HomePillars() {
 
           <div className="lg:col-span-5 flex flex-col gap-6">
             <AnimateIn delay={150}>
-              <div className="relative bg-off-white rounded-lg p-8 card-border-expand group">
+              <div className="relative bg-white border border-brand-border rounded-lg p-8 card-border-expand group shadow-sm shadow-navy/5">
                 <div className="h-[3px] bg-brand-gold w-12 group-hover:w-full transition-all duration-700 mb-6" />
                 <Shield
                   className="text-brand-gold"
@@ -71,7 +71,7 @@ export function HomePillars() {
                 </p>
                 <Link
                   href="/services/reputation-management"
-                  className="inline-flex items-center gap-2 text-brand-gold font-sans font-medium text-sm mt-6 group-hover:gap-3 transition-all"
+                  className="inline-flex items-center gap-2 text-link-teal font-sans font-medium text-sm mt-6 group-hover:text-navy group-hover:gap-3 transition-all"
                 >
                   Explore reputation management{" "}
                   <ArrowRight size={14} aria-hidden />
@@ -80,7 +80,7 @@ export function HomePillars() {
             </AnimateIn>
 
             <AnimateIn delay={300}>
-              <div className="relative bg-off-white rounded-lg p-8 card-border-expand group">
+              <div className="relative bg-white border border-brand-border rounded-lg p-8 card-border-expand group shadow-sm shadow-navy/5">
                 <div className="h-[3px] bg-brand-gold w-12 group-hover:w-full transition-all duration-700 mb-6" />
                 <AlertCircle
                   className="text-brand-gold"
@@ -98,7 +98,7 @@ export function HomePillars() {
                 </p>
                 <Link
                   href="/services/crisis-communications"
-                  className="inline-flex items-center gap-2 text-brand-gold font-sans font-medium text-sm mt-6 group-hover:gap-3 transition-all"
+                  className="inline-flex items-center gap-2 text-link-teal font-sans font-medium text-sm mt-6 group-hover:text-navy group-hover:gap-3 transition-all"
                 >
                   Explore crisis communications{" "}
                   <ArrowRight size={14} aria-hidden />
@@ -116,7 +116,7 @@ export function HomePillars() {
               senior advisors who take a genuine, long-term interest in your
               organisation.&rdquo;
             </blockquote>
-            <p className="font-sans font-medium text-brand-gold text-sm mt-6 tracking-wide">
+            <p className="font-sans font-medium text-text-secondary text-sm mt-6 tracking-wide">
               – {siteConfig.lyall.fullName}, Founder
             </p>
             <div className="w-12 h-[2px] bg-brand-gold mx-auto mt-8" />

@@ -44,9 +44,9 @@ export function InlineEnquirySection({
   }
 
   return (
-    <section className={variant === "white" ? "bg-white py-16 md:py-20" : "bg-off-white py-16 md:py-20"}>
+    <section className={variant === "white" ? "bg-warm-white py-16 md:py-20" : "bg-off-white py-16 md:py-20"}>
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] border border-brand-border rounded-lg overflow-hidden bg-white">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] border border-brand-border rounded-lg overflow-hidden bg-white shadow-sm shadow-navy/5">
           <div className="p-8 md:p-10 bg-navy text-white">
             <p className="text-brand-gold font-sans font-medium text-xs tracking-[0.14em] uppercase mb-4">
               {eyebrow}
@@ -85,14 +85,14 @@ export function InlineEnquirySection({
 
           <div className="p-8 md:p-10">
             {formState.status === "success" ? (
-              <div className="bg-off-white border border-brand-gold/30 rounded-lg p-8 h-full flex flex-col justify-center">
+              <div className="bg-warm-white border border-brand-border rounded-lg p-8 h-full flex flex-col justify-center">
                 <div className="flex items-center gap-3 mb-4">
                   <CheckCircle className="text-brand-gold w-7 h-7 flex-shrink-0" />
                   <h3 className="font-heading font-black text-navy text-xl">
                     Message received.
                   </h3>
                 </div>
-                <p className="text-charcoal-mid text-base leading-relaxed">
+                <p className="text-text-body text-base leading-relaxed">
                   {formState.message}
                 </p>
               </div>
@@ -107,7 +107,7 @@ export function InlineEnquirySection({
                   <div>
                     <label
                       htmlFor={`${title}-name`}
-                      className="block text-xs font-medium text-charcoal-mid uppercase tracking-wide mb-1.5"
+                      className="block text-xs font-medium text-navy uppercase tracking-wide mb-1.5"
                     >
                       Full name <span className="text-brand-teal">*</span>
                     </label>
@@ -117,14 +117,14 @@ export function InlineEnquirySection({
                       type="text"
                       required
                       autoComplete="name"
-                      className="w-full rounded-[4px] border border-brand-border px-4 py-3 text-charcoal placeholder:text-charcoal-mid/50 focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal"
+                      className="w-full rounded-[4px] border border-brand-border bg-white px-4 py-3 text-text-body placeholder:text-text-caption focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal"
                       placeholder="Your name"
                     />
                   </div>
                   <div>
                     <label
                       htmlFor={`${title}-organisation`}
-                      className="block text-xs font-medium text-charcoal-mid uppercase tracking-wide mb-1.5"
+                      className="block text-xs font-medium text-navy uppercase tracking-wide mb-1.5"
                     >
                       Organisation
                     </label>
@@ -133,14 +133,14 @@ export function InlineEnquirySection({
                       name="organisation"
                       type="text"
                       autoComplete="organization"
-                      className="w-full rounded-[4px] border border-brand-border px-4 py-3 text-charcoal placeholder:text-charcoal-mid/50 focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal"
+                      className="w-full rounded-[4px] border border-brand-border bg-white px-4 py-3 text-text-body placeholder:text-text-caption focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal"
                       placeholder="Organisation"
                     />
                   </div>
                   <div>
                     <label
                       htmlFor={`${title}-email`}
-                      className="block text-xs font-medium text-charcoal-mid uppercase tracking-wide mb-1.5"
+                      className="block text-xs font-medium text-navy uppercase tracking-wide mb-1.5"
                     >
                       Email <span className="text-brand-teal">*</span>
                     </label>
@@ -150,14 +150,14 @@ export function InlineEnquirySection({
                       type="email"
                       required
                       autoComplete="email"
-                      className="w-full rounded-[4px] border border-brand-border px-4 py-3 text-charcoal placeholder:text-charcoal-mid/50 focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal"
+                      className="w-full rounded-[4px] border border-brand-border bg-white px-4 py-3 text-text-body placeholder:text-text-caption focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal"
                       placeholder="you@example.com"
                     />
                   </div>
                   <div>
                     <label
                       htmlFor={`${title}-phone`}
-                      className="block text-xs font-medium text-charcoal-mid uppercase tracking-wide mb-1.5"
+                      className="block text-xs font-medium text-navy uppercase tracking-wide mb-1.5"
                     >
                       Phone <span className="text-brand-teal">*</span>
                     </label>
@@ -167,7 +167,7 @@ export function InlineEnquirySection({
                       type="tel"
                       required
                       autoComplete="tel"
-                      className="w-full rounded-[4px] border border-brand-border px-4 py-3 text-charcoal placeholder:text-charcoal-mid/50 focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal"
+                      className="w-full rounded-[4px] border border-brand-border bg-white px-4 py-3 text-text-body placeholder:text-text-caption focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal"
                       placeholder="Best number"
                     />
                   </div>
@@ -176,7 +176,7 @@ export function InlineEnquirySection({
                 <div>
                   <label
                     htmlFor={`${title}-message`}
-                    className="block text-xs font-medium text-charcoal-mid uppercase tracking-wide mb-1.5"
+                    className="block text-xs font-medium text-navy uppercase tracking-wide mb-1.5"
                   >
                     Brief context
                   </label>
@@ -185,7 +185,7 @@ export function InlineEnquirySection({
                     name="message"
                     rows={5}
                     defaultValue={defaultMessage}
-                    className="w-full rounded-[4px] border border-brand-border px-4 py-3 text-charcoal placeholder:text-charcoal-mid/50 focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal resize-y min-h-[120px]"
+                    className="w-full rounded-[4px] border border-brand-border bg-white px-4 py-3 text-text-body placeholder:text-text-caption focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal resize-y min-h-[120px]"
                     placeholder="Tell us what is happening and what you need help with."
                   />
                 </div>
@@ -197,7 +197,7 @@ export function InlineEnquirySection({
                 >
                   {isSubmitting ? "SENDING…" : `${submitLabel} →`}
                 </button>
-                <p className="text-charcoal-mid text-sm leading-relaxed">
+                <p className="text-text-body text-sm leading-relaxed">
                   Confidential and reviewed by a senior advisor. No junior
                   handoff.
                 </p>

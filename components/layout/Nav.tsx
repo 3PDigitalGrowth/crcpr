@@ -227,10 +227,8 @@ function ServicesPanel({ onClose }: { onClose: () => void }) {
 
 function ClientsPanel({
   onClose,
-  isAlternativeVariant,
 }: {
   onClose: () => void;
-  isAlternativeVariant: boolean;
 }) {
   return (
     <div
@@ -244,16 +242,8 @@ function ClientsPanel({
           <MegaItem
             href="/clients/corporate"
             icon={<Briefcase className="w-full h-full" />}
-            title={
-              isAlternativeVariant
-                ? "Private Companies & Family Businesses"
-                : "Corporate & ASX-listed"
-            }
-            desc={
-              isAlternativeVariant
-                ? "Direct counsel for owners, directors, and senior leadership"
-                : "C-suite and board-level counsel"
-            }
+            title="Private Companies & Family Businesses"
+            desc="Direct counsel for owners, directors, and senior leadership"
             onClick={onClose}
           />
           <MegaItem
@@ -337,10 +327,8 @@ function ClientsPanel({
 
 function MobileDrawer({
   onClose,
-  isAlternativeVariant,
 }: {
   onClose: () => void;
-  isAlternativeVariant: boolean;
 }) {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [clientsOpen, setClientsOpen] = useState(false);
@@ -414,9 +402,7 @@ function MobileDrawer({
           <div className="border-b border-white/[0.06]">
             {[
               {
-                label: isAlternativeVariant
-                  ? "Private Companies & Family Businesses"
-                  : "Corporate & ASX-listed",
+                label: "Private Companies & Family Businesses",
                 href: "/clients/corporate",
               },
               {
@@ -495,7 +481,6 @@ const directLinks = [
 
 export function Nav() {
   const pathname = usePathname();
-  const isAlternativeVariant = pathname === "/alternative";
   const [activePanel, setActivePanel] = useState<PanelKey>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -722,10 +707,7 @@ export function Nav() {
         </div>
 
         {mobileOpen && (
-          <MobileDrawer
-            onClose={() => setMobileOpen(false)}
-            isAlternativeVariant={isAlternativeVariant}
-          />
+          <MobileDrawer onClose={() => setMobileOpen(false)} />
         )}
       </div>
 
@@ -751,10 +733,7 @@ export function Nav() {
         onMouseEnter={cancelClose}
         onMouseLeave={handleMouseLeave}
       >
-        <ClientsPanel
-          onClose={closePanel}
-          isAlternativeVariant={isAlternativeVariant}
-        />
+        <ClientsPanel onClose={closePanel} />
       </div>
     </div>
   );

@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 body {
-  color: #2C2C2C;
-  background: #ffffff;
+  color: #3D3D3D;
+  background: #F5F2EC;
 }
 
 @layer utilities {
@@ -15,7 +15,7 @@ body {
 
 /* Gradient seams between sections, eliminates hard colour edges */
 .seam-to-white {
-  background: linear-gradient(to bottom, transparent 0%, #ffffff 100%);
+  background: linear-gradient(to bottom, transparent 0%, #FAFAF8 100%);
 }
 .seam-to-off-white {
   background: linear-gradient(to bottom, transparent 0%, #F5F2EC 100%);
@@ -48,7 +48,7 @@ body {
   pointer-events: none;
 }
 .card-border-expand:hover::before {
-  border-color: #C9A84C;
+  border-color: #E8E4DE;
 }
 
 /* Button lift effect */
@@ -57,7 +57,7 @@ body {
 }
 .btn-lift:hover {
   transform: translateY(-1px) scale(1.015);
-  box-shadow: 0 6px 20px rgba(201, 168, 76, 0.25);
+  box-shadow: 0 1px 3px rgba(26, 43, 74, 0.06);
 }
 
 /* Smooth scroll for anchor links */

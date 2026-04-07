@@ -102,7 +102,7 @@ export default function ReputationManagementPage() {
       />
 
       {/* Opening section */}
-      <section className="bg-white py-24">
+      <section className="bg-warm-white py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_340px] gap-10 items-start">
             <div className="max-w-3xl">
@@ -199,7 +199,7 @@ export default function ReputationManagementPage() {
       </section>
 
       {/* Primary conversion moved earlier in the flow */}
-      <section className="bg-white py-20">
+      <section className="bg-warm-white py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] gap-10 items-start">
             <div className="lg:sticky lg:top-24">
@@ -260,14 +260,14 @@ export default function ReputationManagementPage() {
               </div>
             </div>
 
-            <div className="rounded-lg border border-brand-border bg-white p-6 md:p-8 shadow-[0_20px_60px_rgba(10,22,40,0.08)]">
+            <div className="rounded-lg border border-brand-border bg-white p-6 md:p-8 shadow-sm shadow-navy/5">
               <ReputationAssessment embedded />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-12">
+      <section className="py-12 bg-off-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="bg-navy rounded-lg p-8">
             <p className="text-brand-gold text-xs font-medium tracking-[0.14em] uppercase mb-3">
@@ -355,7 +355,7 @@ export default function ReputationManagementPage() {
       </section>
 
       {/* Why most reputation management fails */}
-      <section className="bg-white py-24">
+      <section className="bg-warm-white py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl mb-10">
             <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
@@ -392,12 +392,12 @@ export default function ReputationManagementPage() {
               </div>
             </div>
 
-            <div className="rounded-lg border border-brand-border bg-navy p-7 md:p-8">
-              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
+            <div className="rounded-lg border border-brand-border bg-white p-7 md:p-8 shadow-sm shadow-navy/5">
+              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-4">
                 What Stronger Organisations Do
               </p>
               <div className="space-y-6">
-                <p className="text-white/80 text-base leading-relaxed">
+                <p className="text-text-body text-base leading-relaxed">
                   The organisations with the strongest reputations treat
                   reputation management as an ongoing strategic investment, the
                   same way they treat financial management or legal risk. They
@@ -406,7 +406,7 @@ export default function ReputationManagementPage() {
                   vulnerability assessments. They test their crisis plans. They
                   build and sustain stakeholder trust deliberately.
                 </p>
-                <p className="text-white/80 text-base leading-relaxed">
+                <p className="text-text-body text-base leading-relaxed">
                   CRC PR works as a long-term reputation partner for
                   organisations that have made this decision. We are not a firm
                   you call when something goes wrong. We are the firm you retain
@@ -414,27 +414,27 @@ export default function ReputationManagementPage() {
                   already prepared.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                  <div className="rounded-lg border border-white/10 bg-white/[0.05] p-4">
-                    <p className="font-sans font-semibold text-white text-sm mb-1">
+                  <div className="rounded-lg border border-brand-border bg-warm-white p-4">
+                    <p className="font-sans font-semibold text-navy text-sm mb-1">
                       Ongoing assessment
                     </p>
-                    <p className="text-white/65 text-xs leading-relaxed">
+                    <p className="text-text-body text-xs leading-relaxed">
                       Risks are reviewed before they become events.
                     </p>
                   </div>
-                  <div className="rounded-lg border border-white/10 bg-white/[0.05] p-4">
-                    <p className="font-sans font-semibold text-white text-sm mb-1">
+                  <div className="rounded-lg border border-brand-border bg-warm-white p-4">
+                    <p className="font-sans font-semibold text-navy text-sm mb-1">
                       Prepared leadership
                     </p>
-                    <p className="text-white/65 text-xs leading-relaxed">
+                    <p className="text-text-body text-xs leading-relaxed">
                       Plans, messages, and advisors are already in place.
                     </p>
                   </div>
-                  <div className="rounded-lg border border-white/10 bg-white/[0.05] p-4">
-                    <p className="font-sans font-semibold text-white text-sm mb-1">
+                  <div className="rounded-lg border border-brand-border bg-warm-white p-4">
+                    <p className="font-sans font-semibold text-navy text-sm mb-1">
                       Deliberate trust-building
                     </p>
-                    <p className="text-white/65 text-xs leading-relaxed">
+                    <p className="text-text-body text-xs leading-relaxed">
                       Reputation is managed as a standing leadership function.
                     </p>
                   </div>
@@ -456,7 +456,7 @@ export default function ReputationManagementPage() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="bg-off-white border border-brand-border rounded-[4px] px-3 py-1 text-sm text-charcoal-mid hover:text-brand-gold hover:border-brand-gold transition"
+                className="bg-white border border-brand-border rounded-[4px] px-3 py-1 text-sm text-charcoal-mid hover:text-link-teal hover:border-link-teal transition"
               >
                 {link.label}
               </Link>

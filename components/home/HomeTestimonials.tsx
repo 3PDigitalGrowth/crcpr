@@ -28,13 +28,13 @@ const testimonials = [
 
 export function HomeTestimonials() {
   return (
-    <section className="bg-off-white py-24 md:py-32">
+    <section className="bg-warm-white py-24 md:py-32">
       <div className="max-w-7xl mx-auto px-6">
         {/* Asymmetric: featured testimonial large on left, two smaller on right */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
           {/* Featured large card, 7 cols */}
           <AnimateIn className="lg:col-span-7">
-            <div className="bg-white rounded-lg p-10 h-full border-l-[3px] border-brand-gold shadow-sm hover:shadow-md hover:shadow-navy/5 transition-shadow duration-300">
+            <div className="bg-white rounded-lg p-10 h-full border border-brand-border border-l-[3px] border-l-brand-gold shadow-sm shadow-navy/5 hover:shadow-md transition-shadow duration-300">
               <svg
                 width="32"
                 height="24"
@@ -67,7 +67,7 @@ export function HomeTestimonials() {
             {testimonials.slice(1).map((t, i) => (
               <AnimateIn key={t.name} delay={(i + 1) * 150}>
                 <div
-                  className={`bg-white rounded-lg p-8 border-l-[3px] shadow-sm hover:shadow-md hover:shadow-navy/5 transition-shadow duration-300 ${
+                    className={`bg-white rounded-lg p-8 border border-brand-border border-l-[3px] shadow-sm shadow-navy/5 hover:shadow-md transition-shadow duration-300 ${
                     i === 0 ? "border-navy" : "border-brand-gold"
                   }`}
                 >

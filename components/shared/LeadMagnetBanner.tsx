@@ -42,7 +42,7 @@ export function LeadMagnetBanner({
     <>
       <section
         className={
-          isDark ? "py-16 md:py-20 bg-navy" : "py-16 md:py-20 bg-off-white"
+          isDark ? "py-16 md:py-20 bg-navy" : "py-16 md:py-20 bg-warm-white"
         }
       >
         <div className="max-w-7xl mx-auto px-6">
@@ -50,7 +50,7 @@ export function LeadMagnetBanner({
             className={`grid grid-cols-1 lg:grid-cols-[minmax(0,1.2fr)_320px] gap-10 items-stretch rounded-lg border ${
               isDark
                 ? "border-white/10 bg-white/[0.03]"
-                : "border-brand-border bg-white"
+                : "border-brand-border bg-white shadow-sm shadow-navy/5"
             }`}
           >
             <div className="p-8 md:p-10">
@@ -67,6 +67,7 @@ export function LeadMagnetBanner({
               <p
                 className={`text-base leading-relaxed mt-4 max-w-2xl ${
                   isDark ? "text-white/70" : "text-charcoal-mid"
+                  
                 }`}
               >
                 {description ?? meta.description}
@@ -79,7 +80,7 @@ export function LeadMagnetBanner({
                     className={`rounded-md border px-4 py-4 ${
                       isDark
                         ? "border-white/15 bg-white/[0.06] text-white"
-                        : "border-brand-border bg-off-white text-charcoal-mid"
+                        : "border-brand-border bg-warm-white text-text-body"
                     }`}
                   >
                     <p className="text-sm leading-relaxed">{item}</p>
@@ -91,21 +92,21 @@ export function LeadMagnetBanner({
               className={`p-8 md:p-10 ${
                 isDark
                   ? "border-t lg:border-t-0 lg:border-l border-white/10 bg-navy-mid/70"
-                  : "border-t lg:border-t-0 lg:border-l border-brand-border bg-off-white"
+                  : "border-t lg:border-t-0 lg:border-l border-brand-border bg-warm-white"
               }`}
             >
               <div className="h-full flex flex-col justify-between">
                 <div>
                   <p
                     className={`text-xs tracking-[0.14em] uppercase ${
-                      isDark ? "text-white/35" : "text-charcoal-mid"
+                      isDark ? "text-white/35" : "text-text-caption"
                     }`}
                   >
                     {whatYouGetTitle}
                   </p>
                   <p
                     className={`text-sm leading-relaxed mt-3 ${
-                      isDark ? "text-white/65" : "text-charcoal-mid"
+                      isDark ? "text-white/65" : "text-text-body"
                     }`}
                   >
                     {whatYouGetBody}
@@ -115,13 +116,13 @@ export function LeadMagnetBanner({
                 <button
                   type="button"
                   onClick={() => setModalOpen(true)}
-                  className="bg-brand-gold text-navy font-heading font-black text-sm tracking-widest uppercase w-full py-4 rounded-[4px] hover:bg-gold-light transition mt-8"
+                  className="bg-brand-teal text-white font-heading font-black text-sm tracking-widest uppercase w-full py-4 rounded-[4px] hover:bg-link-teal transition mt-8"
                 >
                   {buttonLabel}
                 </button>
                 <p
                   className={`text-xs mt-3 ${
-                    isDark ? "text-white/50" : "text-charcoal-mid"
+                    isDark ? "text-white/50" : "text-text-caption"
                   }`}
                 >
                   {footnote}

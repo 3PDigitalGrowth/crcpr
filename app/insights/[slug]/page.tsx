@@ -84,9 +84,9 @@ export default function InsightPage({
         </div>
       </header>
 
-      <article className="bg-white py-16">
+      <article className="bg-warm-white py-16">
         <div
-          className="max-w-3xl mx-auto px-6 prose prose-lg max-w-none prose-headings:font-heading prose-headings:font-black prose-headings:text-navy prose-p:text-charcoal prose-p:leading-relaxed prose-a:text-brand-gold prose-strong:text-charcoal prose-li:text-charcoal"
+          className="max-w-3xl mx-auto px-6 prose prose-lg max-w-none prose-headings:font-heading prose-headings:font-black prose-headings:text-navy prose-p:text-text-body prose-p:leading-relaxed prose-a:text-link-teal prose-a:no-underline hover:prose-a:text-navy prose-strong:text-text-body prose-li:text-text-body"
         >
           <MDXRemote
             source={post.content}
@@ -105,7 +105,7 @@ export default function InsightPage({
       ) : null}
 
       {relatedPosts.length > 0 ? (
-        <section className="bg-white py-16">
+        <section className="bg-off-white py-16">
           <div className="max-w-7xl mx-auto px-6">
             <h2 className="font-heading font-black text-navy text-2xl mb-8">
               Related insights
@@ -134,7 +134,7 @@ export default function InsightPage({
         </section>
       ) : null}
 
-      <section className="bg-off-white py-12">
+      <section className="bg-warm-white py-12">
         <div className="max-w-3xl mx-auto px-6">
           <div className="flex flex-col sm:flex-row gap-6 items-start">
             <div
@@ -153,7 +153,7 @@ export default function InsightPage({
               </p>
               <Link
                 href="/insights"
-                className="inline-block text-brand-gold text-sm font-medium mt-4 hover:underline"
+                className="inline-block text-link-teal text-sm font-medium mt-4 hover:text-navy hover:underline"
               >
                 Read more from Lyall →
               </Link>

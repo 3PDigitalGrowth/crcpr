@@ -48,7 +48,7 @@ export function PageHero({
               ) : null}
               <a
                 href={siteConfig.phone.href}
-                className="text-white/72 text-sm hover:text-brand-gold transition-colors"
+                className="text-brand-gold text-sm font-heading font-black hover:text-gold-light transition-colors"
               >
                 Or call {siteConfig.phone.display}
               </a>

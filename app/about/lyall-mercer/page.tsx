@@ -10,18 +10,18 @@ import { PageProofStrip } from "@/components/shared/PageProofStrip";
 import { PortraitPlaceholder } from "@/components/shared/PortraitPlaceholder";
 
 export const metadata: Metadata = {
-  title: "Lyall Mercer: Founder & Principal Advisor",
+  title: "Lyall Mercer: Co-founder & Principal Adviser",
   description:
-    "Lyall Mercer is the founder of CRC Public Relations. Former journalist, Australasia's leading crisis communications advisor, with 25+ years advising companies, governments, and high-profile individuals.",
+    "Lyall Mercer is the co-founder of CRC Public Relations. Former journalist, trusted crisis communications adviser, with 25+ years advising companies, governments, and high-profile individuals.",
 };
 
 export default function LyallMercerPage() {
   return (
     <>
       <PageHero
-        eyebrow="Founder & principal advisor"
+        eyebrow="Co-founder & principal adviser"
         title="Lyall Mercer"
-        description="Founder of CRC Public Relations. Former journalist, trusted crisis advisor, and senior counsellor to leaders facing scrutiny, pressure, and reputational risk."
+        description="Co-founder of CRC Public Relations. Former journalist, trusted crisis adviser, and senior counsellor to leaders facing scrutiny, pressure, and reputational risk."
         ctaLabel="Work with Lyall"
         ctaHref="/contact"
       />
@@ -76,8 +76,8 @@ export default function LyallMercerPage() {
           </div>
           <div className="lg:col-span-2">
             <h2 className="text-navy font-heading font-black text-2xl">
-              The journalist who became Australasia&apos;s leading crisis
-              communications advisor
+              The journalist who became a trusted crisis communications
+              adviser
             </h2>
             <p className="text-charcoal-mid text-[15px] leading-relaxed mt-6">
               Lyall Mercer began his career as a journalist, writing for some of
@@ -87,14 +87,15 @@ export default function LyallMercerPage() {
               communications and crisis advice unlike any other.
             </p>
             <p className="text-charcoal-mid text-[15px] leading-relaxed mt-4">
-              Over the past 25 years, Lyall has built a reputation across
-              Australasia as a leader in corporate public relations, reputation
-              and issues management, and crisis communications.
+              His clients include national and international companies,
+              governments, industry associations, not-for-profit organisations,
+              politicians, celebrities, and sporting figures, and he has worked
+              with clients and media on every continent.
             </p>
             <p className="text-charcoal-mid text-[15px] leading-relaxed mt-4">
-              He has advised national and international companies, governments,
-              senior executives, politicians, celebrities, and sporting figures,
-              and has worked with clients and media on every continent.
+              Clients choose to work with Lyall because they deal directly with
+              him. While you&apos;ll get to know other members of our team, he
+              is always involved.
             </p>
             <p className="text-charcoal-mid text-[15px] leading-relaxed mt-4">
               Lyall is a sought-after conference speaker, delivering keynotes and

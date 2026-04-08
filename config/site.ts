@@ -39,7 +39,7 @@ export const siteConfig = {
     title: "Co-founder & Principal Adviser",
     yearsExperience: "25+",
     origin:
-      "Former journalist and Australasia's leading crisis communications advisor.",
+      "Former journalist and Australasia's leading crisis communications adviser.",
     quote:
       "You have 15 minutes to respond to an emerging crisis before you start to lose control of the message.",
     mediaOutlets: [
@@ -67,7 +67,7 @@ export const siteConfig = {
   },
 
   sectors: [
-    "ASX-listed companies",
+    "Companies and family businesses",
     "Federal and State Government departments",
     "Industry associations",
     "Independent schools",
@@ -174,12 +174,12 @@ export const siteConfig = {
       question:
         "What makes CRC Public Relations different from a larger PR agency?",
       answer:
-        "At CRC Public Relations, every client engagement is led directly by a senior advisor, not delegated to account managers or junior staff. You work with people who have decades of experience and take a genuine, long-term interest in your organisation. We are boutique by design, which means you get direct access to the people who actually do the work. That personal, senior approach is the reason clients choose us, including national and international clients.",
+        "At CRC Public Relations, every client engagement is led directly by a senior adviser, not delegated to account managers or junior staff. You work with people who have decades of experience and take a genuine, long-term interest in your organisation. We are boutique by design, which means you get direct access to the people who actually do the work. That personal, senior approach is the reason clients choose us, including national and international clients.",
     },
     {
       question: "How quickly can CRC Public Relations respond to a crisis?",
       answer:
-        "We are available 24/7. For active crisis situations, our target is to have a senior advisor engaged within the hour of first contact during business hours, or at the start of the next business day for after-hours enquiries. Call 1300 182 186 for immediate crisis support.",
+        "We are available 24/7. For active crisis situations, our target is to have a senior adviser engaged within the hour of first contact during business hours, or at the start of the next business day for after-hours enquiries. Call 1300 182 186 for immediate crisis support.",
     },
     {
       question: "In what geographical areas do you operate?",
@@ -189,12 +189,12 @@ export const siteConfig = {
     {
       question: "What industries does CRC Public Relations specialise in?",
       answer:
-        "We have deep experience across corporate and ASX-listed companies, Federal and State government departments, industry associations and peak bodies, independent and faith-based schools, health and aged care organisations, legal and professional services firms, and Pacific governments and NGOs.",
+        "We have deep experience across companies and family businesses, Federal and State government departments, industry associations and peak bodies, independent and faith-based schools, health and aged care organisations, legal and professional services firms, and Pacific governments and NGOs.",
     },
     {
       question: "Is everything I share with CRC Public Relations confidential?",
       answer:
-        "Absolutely. Everything shared with CRC Public Relations is treated with strict confidentiality. Our advisors operate with exceptional and professional discretion.",
+        "Absolutely. Everything shared with CRC Public Relations is treated with strict confidentiality. Our advisers operate with exceptional and professional discretion.",
     },
     {
       question:

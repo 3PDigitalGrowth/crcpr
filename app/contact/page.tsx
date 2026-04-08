@@ -27,7 +27,7 @@ export default function ContactPage({
       />
 
       <PageProofStrip
-        title="When you contact CRC Public Relations, you are beginning a direct conversation with senior advisors."
+        title="When you contact CRC Public Relations, you are beginning a direct conversation with senior advisers."
         items={[
           {
             label: "Confidentiality",
@@ -39,7 +39,7 @@ export default function ContactPage({
             label: "Response model",
             value: "Senior review",
             detail:
-              "Enquiries are reviewed by experienced advisors rather than being routed through a generic sales process.",
+              "Enquiries are reviewed by experienced advisers rather than being routed through a generic sales process.",
           },
           {
             label: "Urgent matters",
@@ -133,7 +133,7 @@ export default function ContactPage({
 
       <PageClosingCTA
         title="If the matter is sensitive, start the conversation now."
-        body="CRC Public Relations works best when leadership engages early enough for the response to be shaped properly. If the issue is already active, call first. If it is emerging, send a confidential message and we will respond promptly."
+        body="We work best when leadership engages early enough for the response to be shaped properly. If the issue is already active, call first. If it is emerging, send a confidential message and we will respond promptly."
         primaryLabel="Urgent crisis support"
         primaryHref="/crisis"
       />

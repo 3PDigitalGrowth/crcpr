@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Linkedin, Twitter } from "lucide-react";
 import { siteConfig } from "@/config/site";
@@ -26,12 +27,13 @@ const quickLinks = [
 
 function Logo() {
   return (
-    <div className="flex flex-col leading-none">
-      <span className="font-heading text-brand-gold font-black text-2xl">CRC</span>
-      <span className="font-sans font-medium text-white text-[10px] mt-0.5">
-        Public relations
-      </span>
-    </div>
+    <Image
+      src="/images/crc-logo.png"
+      alt="CRC Public Relations"
+      width={555}
+      height={140}
+      className="h-9 w-auto"
+    />
   );
 }
 

@@ -77,7 +77,7 @@ export default function SchoolsFaithPage() {
       />
 
       <PageHero
-        eyebrow="Schools & faith-based organisations"
+        eyebrow="Independent schools & faith-based organisations"
         title="School crisis communications that protects students, staff, and the community's trust."
         description="Specialist crisis response, parent communications, and media management for school leaders and faith-based organisations, when pastoral responsibility and strategic communications must work together."
         ctaLabel="Book a consultation"
@@ -102,29 +102,29 @@ export default function SchoolsFaithPage() {
                 control.
               </h2>
               <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
-                School and faith-based matters rarely affect only one audience.
-                The real challenge is responding with accuracy, compassion, and
+                When your school or organisation faces a serious matter, the
+                real challenge is responding with accuracy, compassion, and
                 discipline while trust is already under pressure.
               </p>
 
               <div className="space-y-6 mt-8">
                 <p className="text-charcoal text-[15px] leading-relaxed">
-                  Schools and faith-based organisations face communications
-                  challenges that are unlike those of any other sector. When an
-                  incident occurs, whether it is a safeguarding matter, a staff
-                  conduct issue, a governance concern, or a social media
-                  controversy, the audience is not just media and regulators. It
-                  is parents who entrust you with the care of their children,
-                  alumni who carry your school&apos;s reputation into the world,
-                  and a faith community that expects its values to be reflected
-                  in how your organisation responds to difficulty.
+                  Your communications challenges are unlike those of any other
+                  sector. When an incident occurs, whether it is a safeguarding
+                  matter, a staff conduct issue, a governance concern, or a
+                  social media controversy, the audience is not just media and
+                  regulators. It is parents who entrust you with the care of
+                  their children, alumni who carry your school&apos;s reputation
+                  into the world, and a faith community that expects its values
+                  to be reflected in how your organisation responds to
+                  difficulty.
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
                   The legal obligations are significant. The pastoral duty is
                   equally significant. The communications challenge is managing
                   both simultaneously, responding with the transparency that
                   parents demand, the discretion that legal obligations require,
-                  and the compassion that the community deserves.
+                  and the compassion that your community deserves.
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
                   CRC Public Relations has worked with independent schools, Catholic school
@@ -326,7 +326,7 @@ export default function SchoolsFaithPage() {
 
       <PageClosingCTA
         title="School crises do not follow business hours."
-        body="When a serious incident affects a school or faith-based organisation, the communication decisions made in the first hour shape trust for months. CRC Public Relations is available 24/7 because the most sensitive matters rarely arrive at a convenient time."
+        body="When a serious incident affects a school or faith-based organisation, the communication decisions made in the first hour shape trust for months. We are available 24/7 because the most sensitive matters rarely arrive at a convenient time."
       />
     </>
   );

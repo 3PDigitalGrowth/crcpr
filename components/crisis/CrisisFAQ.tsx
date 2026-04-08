@@ -6,7 +6,7 @@ const crisisFaqs = [
   {
     question: "How quickly can CRC Public Relations respond to an active crisis?",
     answer:
-      "Immediately. Every crisis call is answered by, or returned within minutes to, a senior CRC Public Relations advisor, regardless of the hour. During business hours, our target response is within 15 minutes of first contact. For after-hours situations, we return calls within the hour. We do not have a crisis hotline answered by junior staff. The phone number is Lyall Mercer\u2019s or a senior advisor\u2019s direct line.",
+      "Immediately. Every crisis call is answered by, or returned within minutes to, a senior CRC Public Relations adviser, regardless of the hour. During business hours, our target response is within 15 minutes of first contact. For after-hours situations, we return calls within the hour. We do not have a crisis hotline answered by junior staff. The phone number is Lyall Mercer\u2019s or a senior adviser\u2019s direct line.",
   },
   {
     question: "What types of crises does CRC Public Relations handle?",
@@ -16,7 +16,7 @@ const crisisFaqs = [
   {
     question: "Is everything I share with CRC Public Relations confidential?",
     answer:
-      "Absolutely. Everything shared with CRC Public Relations, including the fact that you contacted us, is treated with complete confidentiality. We do not reference client engagements without explicit written permission. Our advisors operate with the same professional discretion as legal counsel. We have turned away opportunities to be quoted in media articles about clients we have worked with, because we do not believe our clients\u2019 confidentiality should serve our profile.",
+      "Absolutely. Everything shared with CRC Public Relations, including the fact that you contacted us, is treated with complete confidentiality. We do not reference client engagements without explicit written permission. Our advisers operate with the same professional discretion as legal counsel. We have turned away opportunities to be quoted in media articles about clients we have worked with, because we do not believe our clients\u2019 confidentiality should serve our profile.",
   },
   {
     question: "Do you work with organisations outside Brisbane?",

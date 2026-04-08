@@ -33,7 +33,7 @@ const proofItems = [
     label: "Urgent support",
     value: "24/7 access",
     detail:
-      "Active crisis matters are handled by senior advisors, not passed through a generic agency support model.",
+      "Active crisis matters are handled by senior advisers, not passed through a generic agency support model.",
   },
   {
     label: "Preparation",
@@ -68,7 +68,7 @@ const faqs = [
   {
     question: "Who handles the work during a high-pressure matter?",
     answer:
-      "Senior advisors. CRC Public Relations does not route crisis matters through a junior account structure. Active situations are handled directly by experienced advisors with crisis judgement and newsroom understanding.",
+      "Senior advisers. CRC Public Relations does not route crisis matters through a junior account structure. Active situations are handled directly by experienced advisers with crisis judgement and newsroom understanding.",
   },
 ];
 
@@ -83,7 +83,7 @@ export default function CrisisCommunicationsPage() {
       <PageHero
         eyebrow="Crisis communications"
         title="When a crisis breaks, experience is everything."
-        description="24/7 crisis response, crisis communications planning, and simulation exercises for organisations that understand the cost of being unprepared."
+        description="24/7 crisis response, crisis communications planning, and simulation exercises. When you need experienced senior counsel, we are available immediately."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
       />
@@ -132,7 +132,7 @@ export default function CrisisCommunicationsPage() {
                   are established. Each mistake compounds the one before it.
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
-                  CRC Public Relations founder Lyall Mercer has spent 25 years studying and
+                  Our co-founder Lyall Mercer has spent 25 years studying and
                   managing the first moments of corporate crises. His
                   conclusion is unambiguous: the organisations that navigate
                   crises best are not the ones that are most articulate under
@@ -252,7 +252,7 @@ export default function CrisisCommunicationsPage() {
       <section className="bg-off-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="font-heading font-black text-navy text-3xl mb-6">
-            Three ways CRC Public Relations supports organisations through crisis
+            Three ways we support you through crisis
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10">
@@ -293,7 +293,7 @@ export default function CrisisCommunicationsPage() {
               <p className="text-charcoal text-[15px] leading-relaxed mt-4">
                 We are available 24 hours a day, seven days a week. We do not
                 pass crisis calls to juniors. Your situation is managed by senior
-                advisors with the experience and judgment to make difficult calls
+                advisers with the experience and judgment to make difficult calls
                 under pressure.
               </p>
             </div>
@@ -326,7 +326,7 @@ export default function CrisisCommunicationsPage() {
             <p className="text-charcoal text-[15px] leading-relaxed mb-6">
               Do not fill out a form. Call us directly, available 24 hours, 7
               days. Every call is treated with absolute confidentiality. You will
-              speak to a senior CRC Public Relations advisor, not a receptionist.
+              speak to a senior CRC Public Relations adviser, not a receptionist.
             </p>
             <a
               href="tel:1300182186"
@@ -364,7 +364,7 @@ export default function CrisisCommunicationsPage() {
 
       <PageClosingCTA
         title="Preparation now is worth far more than response later."
-        body="A tested crisis communications capability costs a fraction of a poorly handled incident. If your organisation wants a plan, a simulation, or senior support before the next high-pressure event, talk to CRC Public Relations."
+        body="A tested crisis communications capability costs a fraction of a poorly handled incident. If your organisation wants a plan, a simulation, or senior support before the next high-pressure event, talk to us."
         primaryLabel="Book a crisis preparedness consultation"
       />
     </>

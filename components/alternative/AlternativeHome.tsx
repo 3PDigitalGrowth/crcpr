@@ -676,31 +676,33 @@ function AlternativeCTA() {
       <div className="absolute inset-0 radial-glow" />
       <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-off-white/5 to-transparent pointer-events-none" />
 
-      <div className="relative max-w-7xl mx-auto px-6 text-center">
-        <div className="max-w-[680px] mx-auto">
-          <AnimateIn>
-            <p className="font-sans font-medium text-brand-gold text-xs">
-              Ready to work with us
-            </p>
-          </AnimateIn>
+      <div className="relative max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          <div>
+            <AnimateIn>
+              <p className="font-sans font-medium text-brand-gold text-xs">
+                Ready to work with us
+              </p>
+            </AnimateIn>
 
-          <AnimateIn delay={150}>
-            <h2 className="text-white font-heading font-black text-3xl md:text-[42px] leading-[1.08] mt-4">
-              Your reputation is your most valuable asset. Let us help you
-              protect it.
-            </h2>
-          </AnimateIn>
+            <AnimateIn delay={150}>
+              <h2 className="text-white font-heading font-black text-3xl md:text-[42px] leading-[1.08] mt-4">
+                Your reputation is your most valuable asset. Let us help you
+                protect it.
+              </h2>
+            </AnimateIn>
 
-          <AnimateIn delay={300}>
-            <p className="text-white/70 text-base leading-relaxed mt-6 mb-12">
-              Whether you need experienced advice on a complex issue, help
-              building your public profile, a communications strategy for your
-              organisation, or trusted counsel during a crisis, we are your
-              adviser and advocate. We believe in you, and we have your back.
-            </p>
-          </AnimateIn>
+            <AnimateIn delay={300}>
+              <p className="text-white/70 text-base leading-relaxed mt-6">
+                Whether you need experienced advice on a complex issue, help
+                building your public profile, a communications strategy for your
+                organisation, or trusted counsel during a crisis, we are your
+                adviser and advocate. We believe in you, and we have your back.
+              </p>
+            </AnimateIn>
+          </div>
 
-          <div className="max-w-[500px] mx-auto flex flex-col gap-4">
+          <div className="flex flex-col gap-4">
             <AnimateIn delay={450}>
               <Link
                 href="/contact"

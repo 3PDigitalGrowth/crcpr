@@ -95,7 +95,7 @@ const faqs = [
   {
     question: "Who do you work with in the Pacific?",
     answer:
-      "CRC Public Relations works with Pacific governments, regional organisations, NGOs, development partners, and Australian organisations operating in the region. The common requirement is communications judgement shaped by genuine Pacific experience.",
+      "We work with Pacific governments, regional organisations, NGOs, development partners, and Australian organisations operating in the region. The common requirement is communications judgement shaped by genuine Pacific experience.",
   },
   {
     question: "Can you help with politically or culturally sensitive Pacific matters?",
@@ -115,7 +115,7 @@ export default function PacificPage() {
       <PageHero
         eyebrow="Pacific advisory"
         title="The Pacific demands communications expertise that most Australian firms don't have."
-        description="CRC Public Relations is the only Australian corporate PR firm with deep, sustained expertise across Pacific Island nations: government relations, development communications, cross-cultural stakeholder engagement, and crisis response."
+        description="We are the only Australian corporate PR firm with deep, sustained expertise across Pacific Island nations: government relations, development communications, cross-cultural stakeholder engagement, and crisis response."
         ctaLabel="Work with us in the Pacific"
         ctaHref="/contact"
       />
@@ -150,7 +150,7 @@ export default function PacificPage() {
                 <p className="text-charcoal text-[15px] leading-relaxed">
                   Most Australian communications firms with Pacific clients
                   treat the region as an extension of their domestic practice.
-                  CRC Public Relations does not. Our Pacific advisory work is built on 25
+                  We do not. Our Pacific advisory work is built on 25
                   years of direct engagement with Pacific Island governments,
                   development partners, regional organisations, and private
                   sector clients operating across the Pacific. We have worked in
@@ -161,8 +161,8 @@ export default function PacificPage() {
                 <p className="text-charcoal text-[15px] leading-relaxed">
                   For organisations operating in or with the Pacific, whether
                   Australian companies with Pacific operations, international
-                  development organisations, Pacific governments, or NGOs, CRC
-                  PR provides the communications expertise that the region
+                  development organisations, Pacific governments, or NGOs, we
+                  provide the communications expertise that the region
                   demands.
                 </p>
               </div>
@@ -289,7 +289,7 @@ export default function PacificPage() {
             Our Pacific footprint
           </h2>
           <p className="text-charcoal-mid text-base mt-4">
-            CRC Public Relations has worked with clients and stakeholders across the following
+            We have worked with clients and stakeholders across the following
             Pacific Island nations and territories:
           </p>
           <div className="flex flex-wrap gap-3 mt-8">
@@ -422,7 +422,7 @@ export default function PacificPage() {
             damaged relationships that took years to build.
           </p>
           <p className="text-charcoal text-[15px] leading-relaxed mt-6">
-            CRC Public Relations approaches Pacific communications from the same principle
+            We approach Pacific communications from the same principle
             that guides all of our work: that the most effective communications
             is always built on a genuine understanding of your audience. In
             Pacific contexts, this means understanding specific cultural
@@ -453,7 +453,7 @@ export default function PacificPage() {
 
       <PageClosingCTA
         title="Working in the Pacific? Talk to the firm that genuinely knows the region."
-        body="Whether you are operating across multiple Pacific jurisdictions or preparing for a single sensitive engagement, CRC Public Relations provides senior communications counsel grounded in regional experience."
+        body="Whether you are operating across multiple Pacific jurisdictions or preparing for a single sensitive engagement, we provide senior communications counsel grounded in regional experience."
         primaryLabel="Book a Pacific advisory consultation"
       />
     </>

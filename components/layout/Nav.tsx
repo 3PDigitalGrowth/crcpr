@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect, useRef, useCallback } from "react";
@@ -88,7 +89,7 @@ function CTAColumn() {
     >
       <ColumnHeader>Get in touch</ColumnHeader>
       <p className="text-sm font-heading font-black text-white mb-2">
-        Talk to a senior advisor
+        Talk to a senior adviser
       </p>
       <p className="text-xs text-white/40 leading-relaxed">
         Every conversation with CRC Public Relations is confidential. No pitch. No junior
@@ -560,14 +561,14 @@ export function Nav() {
       <div className="hidden md:block">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center">
           <Link href="/" className="shrink-0 mr-10">
-            <span className="flex flex-col leading-none">
-              <span className="font-heading text-brand-gold font-black text-xl lg:text-2xl">
-                CRC
-              </span>
-              <span className="font-sans font-medium text-white text-[10px] mt-0.5">
-                Public relations
-              </span>
-            </span>
+            <Image
+              src="/images/crc-logo.png"
+              alt="CRC Public Relations"
+              width={555}
+              height={140}
+              className="h-9 w-auto"
+              priority
+            />
           </Link>
 
           <nav
@@ -676,11 +677,17 @@ export function Nav() {
         <div className="flex items-center justify-between px-4 h-14">
           <Link
             href="/"
-            className="font-heading font-black text-sm"
+            className="shrink-0"
             onClick={() => setMobileOpen(false)}
           >
-            <span className="text-brand-gold">CRC</span>
-            <span className="text-white"> Public relations</span>
+            <Image
+              src="/images/crc-logo.png"
+              alt="CRC Public Relations"
+              width={555}
+              height={140}
+              className="h-7 w-auto"
+              priority
+            />
           </Link>
 
           <div className="flex items-center gap-2">

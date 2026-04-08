@@ -44,7 +44,7 @@ export default function InsightsPage() {
             label: "Authority flow",
             value: "Linked to counsel",
             detail:
-              "Insights support the wider CRC Public Relations system by connecting thought leadership to advisory, preparedness, and next-step action.",
+              "Our insights support the wider advisory system by connecting thought leadership to preparedness and next-step action.",
           },
         ]}
       />
@@ -60,10 +60,10 @@ export default function InsightsPage() {
                 Practical thinking for leaders under pressure.
               </h2>
               <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
-                CRC Public Relations insights are written for leaders who need clearer
+                Our insights are written for leaders who need clearer
                 judgement, not more commentary. The focus is practical: what
                 matters, where organisations usually misread the pressure, and
-                what experienced advisors would be watching before the situation
+                what experienced advisers would be watching before the situation
                 escalates.
               </p>
 
@@ -216,12 +216,12 @@ export default function InsightsPage() {
         magnet="crisisPlanTemplate"
         variant="light"
         title="Want a practical framework before the next issue becomes urgent?"
-        description="Download the CRC Public Relations Crisis Communications Plan Template. It is a useful next step if one of these articles has highlighted a gap in your organisation's preparedness, escalation, or message discipline."
+        description="Download our Crisis Communications Plan Template. It is a useful next step if one of these articles has highlighted a gap in your organisation's preparedness, escalation, or message discipline."
       />
 
       <PageClosingCTA
         title="Need advice on a live issue, a crisis, or a reputation question?"
-        body="If an article has raised a question about your organisation's exposure, the right next step is usually a confidential conversation with a senior advisor."
+        body="If an article has raised a question about your organisation's exposure, the right next step is usually a confidential conversation with a senior adviser."
       />
     </>
   );

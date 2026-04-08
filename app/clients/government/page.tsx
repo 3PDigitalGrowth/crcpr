@@ -68,7 +68,7 @@ export default function GovernmentClientsPage() {
       <PageHero
         eyebrow="Government"
         title="Government communications and stakeholder engagement"
-        description="Strategic communications counsel for Federal and State government departments, statutory authorities, and public sector organisations."
+        description="We work directly with department heads, agency leaders, and senior public servants who need experienced communications counsel that understands the unique pressures of government."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
       />
@@ -89,9 +89,10 @@ export default function GovernmentClientsPage() {
                 Authority, process, and public confidence have to hold together.
               </h2>
               <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
-                Government organisations must communicate with authority,
-                accuracy, and empathy while managing competing stakeholder
-                interests, statutory obligations, and intense media attention.
+                Your organisation must communicate with authority, accuracy,
+                and empathy while managing competing stakeholder interests,
+                statutory obligations, and intense media attention. We
+                understand that environment.
               </p>
 
               <div className="space-y-6 mt-8">
@@ -101,9 +102,9 @@ export default function GovernmentClientsPage() {
                   programmes or incidents attract scrutiny.
                 </p>
                 <p className="text-charcoal-mid text-[15px] leading-relaxed">
-                  CRC Public Relations supports departments, agencies, and authorities with
+                  We work with departments, agencies, and authorities on
                   communications strategy that respects
-                  machinery-of-government realities. We help leaders anticipate
+                  machinery-of-government realities. We help you anticipate
                   friction points, align internal and external narratives, and
                   engage communities and industry with clarity and respect.
                 </p>
@@ -166,8 +167,8 @@ export default function GovernmentClientsPage() {
       />
 
       <PageClosingCTA
-        title="Discuss your government communications needs with a senior advisor."
-        body="CRC Public Relations works with departments, agencies, and public sector organisations that need disciplined communication in environments where public trust and scrutiny matter."
+        title="Discuss your government communications needs with a senior adviser."
+        body="We work with departments, agencies, and public sector organisations that need disciplined communication in environments where public trust and scrutiny matter."
       />
     </>
   );

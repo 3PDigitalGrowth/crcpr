@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title:
     "Reputation Management Consultants Australia | CRC Public Relations",
   description:
-    "Reputation vulnerability assessments, monitoring, and long-term reputation protection for ASX-listed companies, associations, and government organisations. Direct access to senior advisors.",
+    "Reputation vulnerability assessments, monitoring, and long-term reputation protection for companies, associations, and government organisations. Direct access to senior advisers.",
 };
 
 const jsonLd = {
@@ -30,7 +30,7 @@ const jsonLd = {
 };
 
 const sectorLinks = [
-  { label: "ASX-listed companies", href: "/clients/corporate" },
+  { label: "Companies & family businesses", href: "/clients/corporate" },
   { label: "Industry associations", href: "/clients/industry-associations" },
   { label: "Government", href: "/clients/government" },
   { label: "Schools and faith-based", href: "/clients/schools-faith" },
@@ -91,7 +91,7 @@ export default function ReputationManagementPage() {
       <PageHero
         eyebrow="Reputation management"
         title="Your reputation is your most valuable asset. Protect it before you need to."
-        description="Vulnerability assessments, stakeholder perception analysis, reputation monitoring, and long-term reputation protection for organisations that cannot afford to find out they were exposed the hard way."
+        description="We help you understand where your vulnerabilities sit, put the right protections in place, and respond effectively when your reputation comes under pressure. You work directly with senior advisers who take a long-term interest in your organisation."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
       />
@@ -115,7 +115,7 @@ export default function ReputationManagementPage() {
               <div className="space-y-6">
                 <p className="text-charcoal text-base leading-relaxed">
                   In 2024, a single day of hostile media coverage cost an
-                  ASX-listed Australian company an estimated $400&nbsp;million
+                  Australian company an estimated $400&nbsp;million
                   in market capitalisation. The underlying issue had been
                   visible in their stakeholder environment for months. No one
                   had acted on the signals.
@@ -129,10 +129,10 @@ export default function ReputationManagementPage() {
                   strategic.
                 </p>
                 <p className="text-charcoal text-base leading-relaxed">
-                  CRC Public Relations works with organisations to identify these
-                  vulnerabilities before they become headlines, and to build the
-                  communications frameworks and stakeholder relationships that
-                  protect reputation over the long term.
+                  We work with you to identify these vulnerabilities before
+                  they become headlines, and to build the communications
+                  frameworks and stakeholder relationships that protect your
+                  reputation over the long term.
                 </p>
               </div>
             </div>
@@ -401,7 +401,7 @@ export default function ReputationManagementPage() {
                   The organisations with the strongest reputations treat
                   reputation management as an ongoing strategic investment, the
                   same way they treat financial management or legal risk. They
-                  maintain relationships with senior communications advisors
+                  maintain relationships with senior communications advisers
                   before they need them urgently. They conduct regular
                   vulnerability assessments. They test their crisis plans. They
                   build and sustain stakeholder trust deliberately.
@@ -427,7 +427,7 @@ export default function ReputationManagementPage() {
                       Prepared leadership
                     </p>
                     <p className="text-text-body text-xs leading-relaxed">
-                      Plans, messages, and advisors are already in place.
+                      Plans, messages, and advisers are already in place.
                     </p>
                   </div>
                   <div className="rounded-lg border border-brand-border bg-warm-white p-4">
@@ -483,7 +483,7 @@ export default function ReputationManagementPage() {
 
       <PageClosingCTA
         title="Reputation damage is easier to prevent than to reverse."
-        body="CRC Public Relations works with organisations that want a realistic view of where they are exposed, what needs to be strengthened, and what their leadership team should do next."
+        body="We work with organisations that want a realistic view of where they are exposed, what needs to be strengthened, and what your leadership team should do next."
         primaryLabel="Discuss your reputation management needs"
       />
     </>

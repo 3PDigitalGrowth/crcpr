@@ -84,7 +84,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About us"
         title="About CRC Public Relations"
-        description="Boutique corporate PR. 25 years of trusted counsel for companies, governments, and organisations across Australia, the Pacific, and internationally."
+        description="Boutique corporate PR. 25 years of trusted counsel for CEOs, directors, and senior executives across Australia, the Pacific, and internationally."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
       />
@@ -103,17 +103,17 @@ export default function AboutPage() {
             <p className="text-charcoal-mid text-[15px] leading-relaxed mt-6">
               CRC Public Relations was founded on a simple principle: that
               organisations facing their most significant communications
-              challenges deserve direct access to experienced, senior advisors,
+              challenges deserve direct access to experienced, senior advisers,
               not account managers or junior staff.
             </p>
             <p className="text-charcoal-mid text-[15px] leading-relaxed mt-4">
               For over 25 years, CRC Public Relations has provided that access. We are a
               boutique firm by design. Every client engagement is led by a
-              senior advisor with deep expertise in corporate communications,
+              senior adviser with deep expertise in corporate communications,
               reputation management, and crisis response.
             </p>
             <p className="text-charcoal-mid text-[15px] leading-relaxed mt-4">
-              Our clients include ASX-listed companies, Federal and State
+              Our clients include national and international companies, Federal and State
               Government departments, industry associations, independent schools,
               faith-based organisations, health and aged care providers, and
               Pacific governments and NGOs.
@@ -140,7 +140,7 @@ export default function AboutPage() {
           <p className="italic text-charcoal text-base leading-relaxed mt-6">
             Being boutique and personal means that unlike many PR firms, at CRC
             Public Relations you will deal directly with senior and experienced
-            advisors who take a genuine, long-term interest in your organisation.
+            advisers who take a genuine, long-term interest in your organisation.
           </p>
         </div>
       </section>
@@ -149,7 +149,7 @@ export default function AboutPage() {
         title="Need to speak with the firm directly?"
         body="CRC Public Relations exists for organisations that want senior communications counsel from the first conversation. If your situation is sensitive, high-stakes, or too important for a junior handoff, get in touch."
         bullets={[
-          "Direct access to experienced senior advisors",
+          "Direct access to experienced senior advisers",
           "Support across corporate, crisis, reputation, and stakeholder matters",
           "Confidential review of the situation before recommending a next step",
         ]}
@@ -278,7 +278,7 @@ export default function AboutPage() {
 
       <PageClosingCTA
         title="Need to speak with the firm directly?"
-        body="CRC Public Relations works with organisations that want senior communications counsel from the first conversation. If your situation is sensitive, high-stakes, or simply too important for a junior handoff, get in touch."
+        body="We work with organisations that want senior communications counsel from the first conversation. If your situation is sensitive, high-stakes, or simply too important for a junior handoff, get in touch."
       />
     </>
   );

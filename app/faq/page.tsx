@@ -45,7 +45,7 @@ export default function FAQPage() {
             label: "Working model",
             value: "Senior-led",
             detail:
-              "CRC Public Relations is built around direct access to experienced advisors rather than a layered agency delivery model.",
+              "CRC Public Relations is built around direct access to experienced advisers rather than a layered agency delivery model.",
           },
           {
             label: "Availability",
@@ -125,7 +125,7 @@ export default function FAQPage() {
 
       <InlineEnquirySection
         title="Still deciding whether CRC Public Relations is the right fit?"
-        body="If your question is specific, sensitive, or difficult to reduce to a general FAQ, the best next step is a confidential conversation with a senior advisor."
+        body="If your question is specific, sensitive, or difficult to reduce to a general FAQ, the best next step is a confidential conversation with a senior adviser."
         bullets={[
           "Clarify whether your matter is a fit for CRC Public Relations",
           "Discuss the right starting point before pressure grows",
@@ -137,7 +137,7 @@ export default function FAQPage() {
 
       <PageClosingCTA
         title="Have a question not answered here?"
-        body="If your situation is specific, sensitive, or difficult to fit into a general FAQ, the best next step is to contact CRC Public Relations directly."
+        body="If your situation is specific, sensitive, or difficult to fit into a general FAQ, the best next step is to get in touch directly and we will help."
         primaryLabel="Get in touch"
       />
     </>

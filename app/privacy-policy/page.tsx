@@ -157,7 +157,7 @@ export default function PrivacyPolicyPage() {
 
       <PageClosingCTA
         title="Need clarification on privacy or data handling?"
-        body="If you have a privacy question, access request, or concern about how information is handled, contact CRC Public Relations directly and we will point you to the right next step."
+        body="If you have a privacy question, access request, or concern about how information is handled, contact us directly and we will point you to the right next step."
         primaryLabel="Contact CRC Public Relations"
       />
     </>

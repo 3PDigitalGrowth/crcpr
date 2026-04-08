@@ -15,14 +15,14 @@ export const metadata: Metadata = {
       "Crisis Communications Australia | 24/7 Senior Response | CRC Public Relations",
   },
   description:
-    "Immediate crisis communications support for Australian organisations. Senior advisors available 24/7. Crisis plans, simulation exercises, media management, and post-crisis recovery. Call 1300 182 186.",
+    "Immediate crisis communications support for Australian organisations. Senior advisers available 24/7. Crisis plans, simulation exercises, media management, and post-crisis recovery. Call 1300 182 186.",
 };
 
 const steps = [
   {
     num: "1",
-    heading: "You speak to a senior advisor immediately.",
-    body: "Every call is answered by, or returned within minutes to, a senior CRC Public Relations advisor with direct experience in crisis communications. You do not speak to a receptionist, a junior account manager, or an answering service. If the situation is live, we are with you from the first contact.",
+    heading: "You speak to a senior adviser immediately.",
+    body: "Every call is answered by, or returned within minutes to, a senior CRC Public Relations adviser with direct experience in crisis communications. You do not speak to a receptionist, a junior account manager, or an answering service. If the situation is live, we are with you from the first contact.",
   },
   {
     num: "2",
@@ -50,12 +50,12 @@ const trustColumns = [
   {
     Icon: Lock,
     heading: "Absolute confidentiality.",
-    body: "Everything shared with CRC Public Relations is treated with complete confidentiality. We do not reference client engagements without explicit written permission. Our advisors operate with the same professional discretion as legal counsel. We have never, and will never, disclose the identity of a client in crisis.",
+    body: "Everything shared with CRC Public Relations is treated with complete confidentiality. We do not reference client engagements without explicit written permission. Our advisers operate with the same professional discretion as legal counsel. We have never, and will never, disclose the identity of a client in crisis.",
   },
   {
     Icon: Globe,
     heading: "Available anywhere, anytime.",
-    body: "We manage crisis communications across Australia, New Zealand, and the Pacific. We work by phone, video, and in person, wherever you are, whenever you need us. Our 24/7 availability is genuine: every call during a live crisis is answered or returned within minutes by a senior advisor, regardless of the hour.",
+    body: "We manage crisis communications across Australia, New Zealand, and the Pacific. We work by phone, video, and in person, wherever you are, whenever you need us. Our 24/7 availability is genuine: every call during a live crisis is answered or returned within minutes by a senior adviser, regardless of the hour.",
   },
 ];
 
@@ -125,7 +125,7 @@ const faqJsonLd = {
       name: "How quickly can CRC Public Relations respond to an active crisis?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Immediately. Every crisis call is answered by, or returned within minutes to, a senior CRC Public Relations advisor, regardless of the hour. During business hours, our target response is within 15 minutes of first contact. For after-hours situations, we return calls within the hour. We do not have a crisis hotline answered by junior staff. The phone number is Lyall Mercer's or a senior advisor's direct line.",
+        text: "Immediately. Every crisis call is answered by, or returned within minutes to, a senior CRC Public Relations adviser, regardless of the hour. During business hours, our target response is within 15 minutes of first contact. For after-hours situations, we return calls within the hour. We do not have a crisis hotline answered by junior staff. The phone number is Lyall Mercer's or a senior adviser's direct line.",
       },
     },
     {
@@ -141,7 +141,7 @@ const faqJsonLd = {
       name: "Is everything I share with CRC Public Relations confidential?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Absolutely. Everything shared with CRC Public Relations, including the fact that you contacted us, is treated with complete confidentiality. We do not reference client engagements without explicit written permission. Our advisors operate with the same professional discretion as legal counsel. We have turned away opportunities to be quoted in media articles about clients we have worked with, because we do not believe our clients' confidentiality should serve our profile.",
+        text: "Absolutely. Everything shared with CRC Public Relations, including the fact that you contacted us, is treated with complete confidentiality. We do not reference client engagements without explicit written permission. Our advisers operate with the same professional discretion as legal counsel. We have turned away opportunities to be quoted in media articles about clients we have worked with, because we do not believe our clients' confidentiality should serve our profile.",
       },
     },
     {
@@ -188,7 +188,7 @@ export default function CrisisPage() {
             What happens in the first hour.
           </h2>
           <p className="text-charcoal text-[17px] leading-[1.75] max-w-2xl mt-5 mb-12">
-            In 25 years of crisis communications practice, CRC Public Relations founder Lyall
+            In 25 years of crisis communications practice, CRC Public Relations co-founder Lyall
             Mercer has observed one consistent truth: the organisations that
             navigate crises well are not the ones that never face them. They are
             the ones that had senior counsel on the phone before the first
@@ -309,7 +309,7 @@ export default function CrisisPage() {
       <PageClosingCTA
         eyebrow="When the stakes are high"
         title="If the matter is live, call now. If the next one is coming, prepare now."
-        body="CRC Public Relations supports organisations in both situations: urgent response when the issue is active, and disciplined preparation before pressure arrives. Both begin with a confidential conversation."
+        body="We support organisations in both situations: urgent response when the issue is active, and disciplined preparation before pressure arrives. Both begin with a confidential conversation."
         primaryLabel="Book a crisis preparedness consultation"
       />
     </>

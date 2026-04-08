@@ -164,7 +164,7 @@ export default function InsightPage({
 
       <PageClosingCTA
         title="Need advice on a crisis, issue, or reputation matter?"
-        body="CRC Public Relations articles are designed to clarify the issue. If you need to apply that thinking to a live situation, the next step is a confidential conversation."
+        body="Our articles are designed to clarify the issue. If you need to apply that thinking to a live situation, the next step is a confidential conversation."
         primaryLabel="Get in touch"
       />
     </>

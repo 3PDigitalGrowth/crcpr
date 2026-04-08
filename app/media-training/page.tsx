@@ -126,12 +126,12 @@ export default function MediaTrainingPage() {
                 <p className="text-charcoal text-[15px] leading-relaxed">
                   Generic media training produces spokespeople who know how to
                   bridge but cannot answer the hardest question about their own
-                  organisation. CRC Public Relations media training begins not with
-                  technique, but with intelligence: understanding the story the
-                  journalist is building, the questions they are most likely to
-                  ask, and the specific vulnerabilities in your
-                  organisation&apos;s position that a skilled interviewer will
-                  find.
+                  organisation. Our media training begins not with technique,
+                  but with intelligence: understanding the story the journalist
+                  is building, the questions they are most likely to ask, and
+                  the specific vulnerabilities in your organisation&apos;s
+                  position that a skilled interviewer will find. Every session
+                  is designed and reviewed by a senior adviser.
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
                   Our training is delivered by former television and radio
@@ -214,7 +214,7 @@ export default function MediaTrainingPage() {
                 },
                 {
                   title: "Missing the real question",
-                  body: "CRC Public Relations training prepares for the question behind the question, so responses stay credible under pressure rather than merely rehearsed.",
+                  body: "Our training prepares for the question behind the question, so responses stay credible under pressure rather than merely rehearsed.",
                 },
               ].map((item) => (
                 <div
@@ -373,7 +373,7 @@ export default function MediaTrainingPage() {
       <LeadMagnetBanner
         magnet="mediaInterviewGuide"
         title="Download the Media Interview Preparation Guide"
-        description="The pre-interview checklist and briefing framework CRC Public Relations gives to executives before meaningful media appearances. Covers hostile interview preparation, on-camera presence, message prioritisation, and the questions every spokesperson should be able to answer before walking in."
+        description="The pre-interview checklist and briefing framework we give to executives before meaningful media appearances. Covers hostile interview preparation, on-camera presence, message prioritisation, and the questions every spokesperson should be able to answer before walking in."
       />
 
       <FAQSection
@@ -383,7 +383,7 @@ export default function MediaTrainingPage() {
 
       <PageClosingCTA
         title="Every spokesperson is a risk until they are prepared."
-        body="Media training is an investment you make before the difficult interview, not the day after it. CRC Public Relations prepares leaders for the questions they are actually likely to face."
+        body="Media training is an investment you make before the difficult interview, not the day after it. We prepare leaders for the questions they are actually likely to face."
         primaryLabel="Book a media training session"
       />
     </>

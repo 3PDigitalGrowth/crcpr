@@ -83,7 +83,7 @@ export default function DigitalMediaPage() {
       <PageHero
         eyebrow="Digital media and online reputation"
         title="Your reputation doesn't stop at the newsroom door."
-        description="Online reputation management, social media strategy, and digital crisis response. Senior PR counsel applied to the digital channels where reputations are increasingly won and lost."
+        description="We apply senior PR counsel to the digital channels where reputations are increasingly won and lost. You work with experienced advisers, not a social media team."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
       />
@@ -129,11 +129,12 @@ export default function DigitalMediaPage() {
                   minutes.
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
-                  CRC Public Relations applies its 25 years of corporate communications and
-                  crisis expertise to digital channels, not as a social media
-                  agency, but as a senior communications adviser that
-                  understands how digital and traditional media interact, and
-                  how to manage your reputation across both simultaneously.
+                  When you engage us, you get 25 years of corporate
+                  communications and crisis expertise applied to digital
+                  channels, not as a social media agency, but as senior
+                  communications advisers who understand how digital and
+                  traditional media interact, and how to manage your
+                  reputation across both simultaneously.
                 </p>
               </div>
             </div>
@@ -453,7 +454,7 @@ export default function DigitalMediaPage() {
 
       <PageClosingCTA
         title="Your organisation is being talked about online right now."
-        body="The real question is whether you know where the pressure points are and whether your team is ready to respond with discipline. CRC Public Relations helps organisations manage digital reputation with the same rigour they expect in every other high-stakes communication setting."
+        body="The real question is whether you know where the pressure points are and whether your team is ready to respond with discipline. We help you manage digital reputation with the same rigour you expect in every other high-stakes communication setting."
         primaryLabel="Book a digital reputation review"
       />
     </>

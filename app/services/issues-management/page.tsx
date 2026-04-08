@@ -83,7 +83,7 @@ export default function IssuesManagementPage() {
       <PageHero
         eyebrow="Issues management"
         title="Get ahead of the issue before the media does."
-        description="Proactive identification, monitoring, and strategic management of emerging issues, before they reach crisis point. Senior counsel available nationally."
+        description="We help you identify, monitor, and strategically manage emerging issues before they reach crisis point. Senior counsel available nationally."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
       />
@@ -116,10 +116,10 @@ export default function IssuesManagementPage() {
                   time.
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
-                  CRC Public Relations specialises in the space between an emerging issue and
-                  a full crisis, providing the senior counsel, monitoring
-                  capability, and stakeholder management that can arrest an
-                  escalation before it becomes unmanageable.
+                  We work in the space between an emerging issue and a full
+                  crisis, providing the senior counsel, monitoring capability,
+                  and stakeholder management that can arrest an escalation
+                  before it becomes unmanageable.
                 </p>
               </div>
             </div>

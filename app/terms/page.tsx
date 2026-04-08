@@ -168,7 +168,7 @@ export default function TermsPage() {
 
       <PageClosingCTA
         title="Need clarification on these terms?"
-        body="If you have a question about how these terms apply to your use of the site or a potential engagement, contact CRC Public Relations directly and we will clarify the appropriate position."
+        body="If you have a question about how these terms apply to your use of the site or a potential engagement, contact us directly and we will clarify the appropriate position."
         primaryLabel="Contact CRC Public Relations"
       />
     </>

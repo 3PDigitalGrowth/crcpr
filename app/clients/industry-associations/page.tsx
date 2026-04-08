@@ -591,7 +591,7 @@ export default function IndustryAssociationsPage({
 
       <PageClosingCTA
         title="Association communications challenges are what we do best."
-        body="CRC Public Relations has spent decades helping associations navigate member expectations, regulatory pressure, governance complexity, and media scrutiny with direct senior counsel."
+        body="We have spent decades helping associations navigate member expectations, regulatory pressure, governance complexity, and media scrutiny with direct senior counsel."
       />
     </>
   );

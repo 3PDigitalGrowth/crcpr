@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title:
     "Corporate Communications Consultant Australia | CRC Public Relations",
   description:
-    "Senior-level corporate communications counsel for ASX-listed companies, government departments, and associations. Stakeholder engagement, media relations, executive messaging. Brisbane-based, available nationally.",
+    "Senior-level corporate communications counsel for companies, government departments, and associations. Stakeholder engagement, media relations, executive messaging. Brisbane-based, available nationally.",
 };
 
 const jsonLd = {
@@ -30,7 +30,7 @@ const jsonLd = {
 };
 
 const sectorLinks = [
-  { label: "ASX-listed companies", href: "/clients/corporate" },
+  { label: "Companies & family businesses", href: "/clients/corporate" },
   { label: "Government departments", href: "/clients/government" },
   {
     label: "Industry associations",
@@ -44,7 +44,7 @@ const proofItems = [
     label: "Board confidence",
     value: "Senior-led",
     detail:
-      "Every engagement is led by a senior advisor who understands board scrutiny, market sensitivity, and stakeholder risk.",
+      "Every engagement is led by a senior adviser who understands board scrutiny, market sensitivity, and stakeholder risk.",
   },
   {
     label: "Communication discipline",
@@ -94,7 +94,7 @@ export default function CorporateCommunicationsPage() {
       <PageHero
         eyebrow="Corporate communications"
         title="Corporate communications that build trust and protect value."
-        description="Senior counsel for internal and external messaging, stakeholder engagement, media relations, and executive communications, delivered directly by experienced advisors."
+        description="We work directly with your leadership team to ensure every message — to the board, to staff, to stakeholders, to media — is precise, credible, and effective. You deal with experienced senior advisers, not account managers."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
       />
@@ -133,11 +133,11 @@ export default function CorporateCommunicationsPage() {
                   responds to events rather than shapes them.
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
-                  CRC Public Relations works with organisations to build the systems,
+                  We work with your leadership team to build the systems,
                   strategies, and capabilities that shift communications from
-                  reactive to proactive, and to provide the senior-level counsel
-                  that ensures every significant communication is considered,
-                  consistent, and designed to achieve a specific outcome.
+                  reactive to proactive, ensuring every significant
+                  communication is considered, consistent, and designed to
+                  achieve a specific outcome.
                 </p>
               </div>
             </div>
@@ -244,7 +244,7 @@ export default function CorporateCommunicationsPage() {
 
       <InlineEnquirySection
         title="Need senior communications counsel on a sensitive matter?"
-        body="Use this form if you are preparing a significant announcement, managing a board or stakeholder issue, or want an experienced external advisor to review your communications posture before the pressure arrives."
+        body="Use this form if you are preparing a significant announcement, managing a board or stakeholder issue, or want an experienced external adviser to review your communications posture before the pressure arrives."
         bullets={[
           "Executive and board communication support",
           "Stakeholder engagement planning and message discipline",
@@ -413,11 +413,11 @@ export default function CorporateCommunicationsPage() {
                     size. It is access. At most large PR firms, you brief a
                     senior person and are then handed to a team of account
                     managers and junior staff who execute the work. Your senior
-                    contact becomes a figurehead rather than an advisor.
+                    contact becomes a figurehead rather than an adviser.
                   </p>
                   <p className="text-charcoal text-[15px] leading-relaxed">
                     At CRC Public Relations, every engagement is led by an experienced senior
-                    advisor from start to finish. You work directly with the
+                    adviser from start to finish. You work directly with the
                     person who has the expertise, the judgment, and the
                     accountability for the outcome. This is not a service model
                     we stumbled into. It is a deliberate choice. It is why our
@@ -438,7 +438,7 @@ export default function CorporateCommunicationsPage() {
                       Direct senior access
                     </p>
                     <p className="text-charcoal-mid text-sm leading-relaxed">
-                      The advisor you brief is the advisor shaping the work.
+                      The adviser you brief is the adviser shaping the work.
                     </p>
                   </div>
                   <div className="rounded-lg bg-white border border-brand-border p-5">

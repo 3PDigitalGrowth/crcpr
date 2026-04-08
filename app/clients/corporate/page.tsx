@@ -10,7 +10,7 @@ import { PageProofStrip } from "@/components/shared/PageProofStrip";
 export const metadata: Metadata = {
   title: "Corporate PR & Communications",
   description:
-    "Corporate communications, reputation management, and crisis response for ASX-listed companies, professional services firms, and private enterprises.",
+    "Corporate communications, reputation management, and crisis response for listed and private companies, professional services firms, and family businesses.",
 };
 
 const services = [
@@ -34,7 +34,7 @@ const proofItems = [
     label: "Executive access",
     value: "Senior-only",
     detail:
-      "Corporate clients deal directly with experienced advisors who can operate at chair, CEO, and general counsel level.",
+      "Corporate clients deal directly with experienced advisers who can operate at chair, CEO, and general counsel level.",
   },
   {
     label: "Pressure moments",
@@ -68,7 +68,7 @@ export default function CorporateClientsPage() {
       <PageHero
         eyebrow="Corporate"
         title="Corporate communications and reputation counsel"
-        description="Senior-level communications strategy for ASX-listed companies, professional services firms, and private enterprises."
+        description="Direct, personal counsel for owners, directors, and senior executives. You work with experienced senior advisers who understand board scrutiny, market sensitivity, and stakeholder risk."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
       />
@@ -89,26 +89,26 @@ export default function CorporateClientsPage() {
                 Reputation is shaped where strategy, behaviour, and narrative meet.
               </h2>
               <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
-                Listed entities, professional services firms, and private
-                companies need counsel that understands regulatory exposure,
-                market expectations, and the pace at which issues move from
-                internal concern to public headline.
+                We work with owners, managing directors, and senior executives
+                who need communications counsel that understands regulatory
+                exposure, market expectations, and the pace at which issues
+                move from internal concern to public headline.
               </p>
 
               <div className="space-y-6 mt-8">
                 <p className="text-charcoal-mid text-[15px] leading-relaxed">
-                  CRC Public Relations works with chairs, CEOs, and general counsel to align
+                  You deal directly with experienced senior advisers who align
                   messaging with governance, protect valuation during
-                  turbulence, and prepare leaders for scrutiny from investors,
-                  analysts, and media. We bring journalistic judgment and
-                  crisis experience to every engagement, without the overhead
-                  of a large agency model.
+                  turbulence, and prepare your leadership team for scrutiny
+                  from investors, analysts, and media. We bring journalistic
+                  judgment and crisis experience to every engagement, without
+                  the overhead of a large agency model.
                 </p>
                 <p className="text-charcoal-mid text-[15px] leading-relaxed">
                   Whether you are managing a live issue, strengthening
                   executive visibility, or building a communications capability
-                  that matches your growth ambitions, we provide direct access
-                  to senior advisors who take ownership of outcomes.
+                  that matches your growth ambitions, we work directly with you
+                  and take ownership of outcomes.
                 </p>
               </div>
             </div>
@@ -163,8 +163,8 @@ export default function CorporateClientsPage() {
       />
 
       <PageClosingCTA
-        title="Discuss your corporate communications needs with a senior advisor."
-        body="CRC Public Relations works with listed companies, private enterprises, and professional services firms that need judgement, discretion, and direct access when the stakes are high."
+        title="Discuss your corporate communications needs with a senior adviser."
+        body="We work with companies, family businesses, and professional services firms that need judgement, discretion, and direct access when the stakes are high."
       />
     </>
   );

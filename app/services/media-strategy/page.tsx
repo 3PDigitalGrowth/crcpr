@@ -83,7 +83,7 @@ export default function MediaStrategyPage() {
       <PageHero
         eyebrow="Media strategy"
         title="Sustained media presence doesn't happen by accident."
-        description="Proactive media strategy, journalist relationship management, and thought leadership placement for organisations that want to shape their sector's narrative, not just respond to it."
+        description="We help you build a sustained media presence that positions you as the trusted voice in your sector. You work directly with advisers who understand how media thinks and moves."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
       />
@@ -113,27 +113,25 @@ export default function MediaStrategyPage() {
 
               <div className="space-y-6 mt-8">
                 <p className="text-charcoal text-[15px] leading-relaxed">
-                  Most organisations have a media strategy in name only. They
-                  issue press releases in response to company announcements,
-                  they respond to journalist enquiries when they come, and they
-                  measure success by whether coverage was positive or negative.
-                  This is media management, not media strategy.
+                  We build media strategies that go beyond press releases and
+                  reactive enquiry handling. If your current approach only
+                  generates coverage when you have something to announce, and
+                  measures success by whether that coverage was positive or
+                  negative, you are managing media, not leading it.
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
-                  A genuine media strategy begins with a clear understanding of
-                  what you want to be known for, who the journalists and
-                  editors are who cover your sector and your issues, and what
-                  you can consistently offer them that earns sustained,
-                  credible coverage. It requires investment in relationships,
-                  in content, and in the preparation of your spokespeople, not
-                  just when you have something to announce, but as an ongoing
-                  discipline.
+                  We work with your leadership team to define what you want to
+                  be known for, identify the journalists and editors who cover
+                  your sector and your issues, and build the sustained
+                  relationships and content discipline that earns credible
+                  coverage over time, not just when you have an announcement
+                  to make.
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
-                  CRC Public Relations builds and executes media strategies for organisations
-                  that want to move from reactive to proactive, and that
-                  understand the difference between being covered and being
-                  credible.
+                  We help you move from reactive media management to proactive
+                  positioning, because the difference between being covered
+                  and being credible is the difference that protects your
+                  reputation.
                 </p>
               </div>
             </div>
@@ -404,7 +402,7 @@ export default function MediaStrategyPage() {
 
       <PageClosingCTA
         title="Ready to build media presence that actually moves the needle?"
-        body="Media strategy works when it is consistent, strategic, and built on genuine editorial judgment. CRC Public Relations helps organisations earn coverage that strengthens authority rather than just generating noise."
+        body="Media strategy works when it is consistent, strategic, and built on genuine editorial judgment. We help you earn coverage that strengthens authority rather than just generating noise."
         primaryLabel="Book a media strategy consultation"
       />
     </>

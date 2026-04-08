@@ -81,7 +81,7 @@ const proofItems = [
     label: "Senior access",
     value: "Direct counsel",
     detail:
-      "Every service is delivered with direct access to experienced advisors rather than a junior account structure.",
+      "Every service is delivered with direct access to experienced advisers rather than a junior account structure.",
   },
   {
     label: "High-stakes focus",
@@ -109,7 +109,7 @@ const faqs = [
       "Yes. Some clients need support around a single matter, announcement, or review. Others want an ongoing senior advisory relationship. The structure depends on the situation, the pace, and the level of internal capability.",
   },
   {
-    question: "Are all services led by senior advisors?",
+    question: "Are all services led by senior advisers?",
     answer:
       "Yes. CRC Public Relations is structured around direct senior counsel. There is no separate junior account model for complex or sensitive work.",
   },
@@ -121,7 +121,7 @@ export default function ServicesPage() {
       <PageHero
         eyebrow="Full service offering"
         title="Corporate communications and PR services."
-        description="CRC Public Relations provides senior-level counsel across the full spectrum of corporate communications. Every engagement is led by experienced advisors who work directly with your leadership team."
+        description="We provide senior-level counsel across the full spectrum of corporate communications. Every engagement is led by experienced advisers who work directly with you, not through an account management layer."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
       />
@@ -268,7 +268,7 @@ export default function ServicesPage() {
 
       <PageClosingCTA
         title="Not sure which service is the right starting point?"
-        body="That is common. Many clients come to CRC Public Relations with a situation rather than a neatly labelled service category. We can help you identify the right starting point and the right next step."
+        body="That is common. Many clients come to us with a situation rather than a neatly labelled service category. We can help you identify the right starting point and the right next step."
       />
     </>
   );

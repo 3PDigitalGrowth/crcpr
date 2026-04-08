@@ -64,7 +64,7 @@ export default function CaseStudiesPage() {
                 Confidential work. Measurable outcomes.
               </h2>
               <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
-                CRC Public Relations does not publicise client work casually. The examples
+                We do not publicise client work casually. The examples
                 below are shown because senior communications counsel should
                 still be measured by outcomes.
               </p>
@@ -144,7 +144,7 @@ export default function CaseStudiesPage() {
 
       <InlineEnquirySection
         title="Need senior counsel on a matter where the outcome genuinely matters?"
-        body="If you are navigating a policy fight, a sensitive education issue, a crisis, or a stakeholder engagement challenge with real consequences, CRC Public Relations can help shape the result."
+        body="If you are navigating a policy fight, a sensitive education issue, a crisis, or a stakeholder engagement challenge with real consequences, we can help shape the result."
         bullets={[
           "Strategic communication for high-stakes matters",
           "Senior advice before or during scrutiny",
@@ -156,7 +156,7 @@ export default function CaseStudiesPage() {
 
       <PageClosingCTA
         title="Every engagement is treated with complete confidentiality."
-        body="CRC Public Relations does not reference client work publicly without permission. The examples here are anonymised by design, but they reflect the kinds of high-stakes outcomes our clients engage us to achieve."
+        body="We do not reference client work publicly without permission. The examples here are anonymised by design, but they reflect the kinds of high-stakes outcomes our clients engage us to achieve."
       />
     </>
   );

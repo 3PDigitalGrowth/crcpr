@@ -429,7 +429,7 @@ export function ReputationAssessment({ embedded = false }: { embedded?: boolean 
                 <strong>{email}</strong>.
               </p>
               <p className="text-charcoal-mid text-sm mt-2">
-                A CRC Public Relations advisor may follow up with personalised
+                A CRC Public Relations adviser may follow up with personalised
                 recommendations.
               </p>
             </div>

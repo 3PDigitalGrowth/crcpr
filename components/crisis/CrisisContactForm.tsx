@@ -16,7 +16,7 @@ const inputClassName =
   "w-full border border-brand-border bg-white rounded-[4px] px-4 py-3 text-sm font-sans text-text-body placeholder:text-text-caption focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal transition";
 
 const trustItems = [
-  "Direct access to senior advisors",
+  "Direct access to senior advisers",
   "Complete confidentiality guaranteed",
   "Response within the hour during business hours",
 ] as const;

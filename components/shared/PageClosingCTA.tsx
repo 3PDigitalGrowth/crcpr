@@ -77,7 +77,7 @@ export function PageClosingCTA({
             <div className="border-t lg:border-t-0 lg:border-l border-white/10 bg-white/[0.03] p-8 md:p-10 flex flex-col justify-between">
               <div>
                 <p className="text-white/35 text-xs mb-3">
-                  Speak to a senior advisor
+                  Speak to a senior adviser
                 </p>
                 <p className="text-white/65 text-sm leading-relaxed">
                   Confidential advice, direct access, and a clear recommendation

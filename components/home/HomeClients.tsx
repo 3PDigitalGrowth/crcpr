@@ -7,7 +7,7 @@ import { MyPRPartnerCTA } from "@/components/shared/MyPRPartnerCTA";
 
 const sectorCards = [
   {
-    title: "ASX-listed companies",
+    title: "Companies & family businesses",
     description:
       "Board, market, and reputation counsel when governance and valuation pressures converge.",
     href: "/clients/corporate",
@@ -71,7 +71,7 @@ export function HomeClients() {
                 Trusted across every sector.
               </h2>
               <p className="text-charcoal-mid text-base leading-relaxed mt-6 max-w-xl">
-                Our clients range from ASX-listed companies and Federal Government
+                Our clients range from national and international companies and Federal Government
                 departments to independent schools, faith-based organisations, industry
                 associations, and Pacific governments. What they share is a need for
                 experienced, senior advice when the stakes are highest.
@@ -88,7 +88,7 @@ export function HomeClients() {
                     Work with CRC Public Relations
                   </p>
                   <p className="font-heading font-black text-white text-lg leading-snug">
-                    Start a confidential conversation with a senior advisor.
+                    Start a confidential conversation with a senior adviser.
                   </p>
                   <p className="text-white/65 text-sm leading-relaxed mt-3">
                     Tell us about the issue, sector pressure, or communications

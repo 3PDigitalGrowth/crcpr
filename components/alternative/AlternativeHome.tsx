@@ -442,23 +442,33 @@ function AlternativePracticeAreas() {
 
 function AlternativeAssessment() {
   return (
-    <section className="relative bg-warm-white py-24 md:py-32 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-warm-white via-white to-off-white pointer-events-none" />
+    <section className="relative bg-navy py-24 md:py-32 overflow-hidden">
+      <div className="absolute inset-0">
+        <Image
+          src="/images/assessment-bg.png"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover"
+          loading="lazy"
+        />
+      </div>
+      <div className="absolute inset-0 bg-navy/75 pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-7">
             <AnimateIn>
-              <p className="font-sans font-medium text-brand-teal text-xs">
+              <p className="font-sans font-medium text-brand-gold text-xs">
                 Free assessment
               </p>
-              <h2 className="font-heading font-black text-navy text-3xl md:text-[38px] leading-[1.1] mt-3">
+              <h2 className="font-heading font-black text-white text-3xl md:text-[38px] leading-[1.1] mt-3">
                 How exposed is your organisation&apos;s reputation?
               </h2>
             </AnimateIn>
             <AnimateIn delay={150}>
               <div className="space-y-4 mt-6">
-                <p className="text-text-body text-base leading-relaxed">
+                <p className="text-white/80 text-base leading-relaxed">
                   Most organisations do not discover their reputation
                   vulnerabilities until a crisis is already underway. Our
                   Reputation Vulnerability Assessment takes three minutes and
@@ -466,7 +476,7 @@ function AlternativeAssessment() {
                   media, social media, stakeholder relationships, and crisis
                   preparedness.
                 </p>
-                <p className="text-text-body text-base leading-relaxed">
+                <p className="text-white/80 text-base leading-relaxed">
                   Used by CEOs, communications directors, and board chairs
                   across Australia.
                 </p>

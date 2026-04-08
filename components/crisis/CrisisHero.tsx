@@ -2,10 +2,10 @@ import { Phone } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
 const trustPills = [
-  "24/7 Availability",
-  "100% Confidential",
-  "Immediate Response",
-  "25+ Years Experience",
+  "24/7 availability",
+  "100% confidential",
+  "Immediate response",
+  "25+ years experience",
 ] as const;
 
 export function CrisisHero() {
@@ -14,16 +14,16 @@ export function CrisisHero() {
       <div className="bg-brand-gold py-3 text-center">
         <a
           href={siteConfig.phone.href}
-          className="block font-heading font-black text-navy text-[13px] tracking-widest uppercase"
+          className="block font-heading font-black text-navy text-[13px]"
         >
-          NEED IMMEDIATE CRISIS SUPPORT? CALL 1300 182 186 | AVAILABLE 24/7
+          Need immediate crisis support? Call 1300 182 186 | Available 24/7
         </a>
       </div>
 
       <section id="hero-section" className="bg-navy py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <p className="text-brand-gold text-xs font-medium tracking-[0.14em] uppercase">
-            CRISIS COMMUNICATIONS
+          <p className="text-brand-gold text-xs font-medium">
+            Crisis communications
           </p>
           <h1 className="text-white font-heading font-black text-3xl md:text-[52px] leading-[1.05] mt-4 whitespace-pre-line">
             {`When a crisis breaks,\nthe first 15 minutes define the outcome.`}
@@ -37,16 +37,16 @@ export function CrisisHero() {
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
             <a
               href={siteConfig.phone.href}
-              className="bg-brand-gold text-navy font-heading font-black text-[13px] tracking-widest uppercase rounded-[4px] px-8 py-4 inline-flex items-center justify-center gap-2"
+              className="bg-brand-gold text-navy font-heading font-black text-[13px] rounded-[4px] px-8 py-4 inline-flex items-center justify-center gap-2"
             >
               <Phone className="shrink-0" size={18} strokeWidth={2.25} aria-hidden />
-              CALL NOW: 1300 182 186
+              Call now: 1300 182 186
             </a>
             <a
               href="#contact-form"
-              className="border border-brand-gold/50 text-brand-gold font-heading font-black text-[13px] tracking-widest uppercase rounded-[4px] px-8 py-4 inline-flex items-center justify-center gap-2"
+              className="border border-brand-gold/50 text-brand-gold font-heading font-black text-[13px] rounded-[4px] px-8 py-4 inline-flex items-center justify-center gap-2"
             >
-              SEND A CONFIDENTIAL MESSAGE →
+              Send a confidential message →
             </a>
           </div>
           <div className="flex flex-wrap gap-3 mt-8">

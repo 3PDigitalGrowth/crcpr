@@ -19,10 +19,10 @@ export default function LyallMercerPage() {
   return (
     <>
       <PageHero
-        eyebrow="FOUNDER & PRINCIPAL ADVISOR"
+        eyebrow="Founder & principal advisor"
         title="Lyall Mercer"
         description="Founder of CRC Public Relations. Former journalist, trusted crisis advisor, and senior counsellor to leaders facing scrutiny, pressure, and reputational risk."
-        ctaLabel="WORK WITH LYALL"
+        ctaLabel="Work with Lyall"
         ctaHref="/contact"
       />
 
@@ -55,7 +55,7 @@ export default function LyallMercerPage() {
           <div className="lg:col-span-1">
             <PortraitPlaceholder size="lg" />
             <div className="mt-8">
-              <h4 className="text-xs font-sans font-medium text-charcoal-mid tracking-[0.14em] uppercase mb-3">
+              <h4 className="text-xs font-sans font-medium text-charcoal-mid mb-3">
                 As seen in
               </h4>
               <ul className="list-none p-0 m-0">
@@ -117,8 +117,8 @@ export default function LyallMercerPage() {
       <section className="bg-warm-white py-16">
         <div className="max-w-3xl mx-auto px-6">
           <div className="bg-white border border-brand-border rounded-lg p-8 my-10 shadow-sm shadow-navy/5">
-            <p className="text-brand-teal text-xs font-medium tracking-[0.14em] uppercase mb-3">
-              LYALL&apos;S SIGNATURE FRAMEWORK
+            <p className="text-brand-teal text-xs font-medium mb-3">
+              Lyall&apos;s signature framework
             </p>
             <h2 className="font-heading font-black text-navy text-3xl mb-4">
               The 15 Minutes Principle
@@ -182,8 +182,8 @@ export default function LyallMercerPage() {
           </a>
           <MyPRPartnerCTA
             title="Need training, workshops, or practical communications development?"
-            description="My PR Partner is CRC PR's training platform for communications practitioners, spokesperson development, crisis workshops, and practical support between major advisory engagements."
-            buttonLabel="EXPLORE MY PR PARTNER"
+            description="My PR Partner is CRC Public Relations' training platform for communications practitioners, spokesperson development, crisis workshops, and practical support between major advisory engagements."
+            buttonLabel="Explore My PR Partner"
           />
         </div>
       </section>
@@ -192,7 +192,7 @@ export default function LyallMercerPage() {
         magnet="mediaInterviewGuide"
         variant="light"
         title="Want to see the kind of media preparation Lyall expects before a high-pressure interview?"
-        description="Download the CRC PR Media Interview Preparation Guide. It reflects the practical, journalist-informed approach Lyall Mercer brings to media strategy, spokesperson readiness, and executive preparation."
+        description="Download the CRC Public Relations Media Interview Preparation Guide. It reflects the practical, journalist-informed approach Lyall Mercer brings to media strategy, spokesperson readiness, and executive preparation."
       />
 
       <InlineEnquirySection
@@ -210,7 +210,7 @@ export default function LyallMercerPage() {
       <PageClosingCTA
         title="Work directly with Lyall Mercer."
         body="For advisory, commentary, speaking, or high-stakes communications matters, get in touch and we will route the conversation appropriately."
-        primaryLabel="WORK WITH LYALL"
+        primaryLabel="Work with Lyall"
       />
     </>
   );

@@ -50,7 +50,7 @@ export function ContactFormSection({ source }: ContactFormSectionProps) {
           </div>
           <a
             href="tel:1300182186"
-            className="bg-navy text-white font-heading font-black text-xs tracking-widest uppercase px-4 py-2 rounded flex-shrink-0 hover:bg-navy-mid transition-colors"
+            className="bg-navy text-white font-heading font-black text-xs px-4 py-2 rounded flex-shrink-0 hover:bg-navy-mid transition-colors"
           >
             1300 182 186
           </a>
@@ -80,7 +80,7 @@ export function ContactFormSection({ source }: ContactFormSectionProps) {
                   </h3>
                 </div>
                 <p className="text-text-body text-base leading-relaxed mb-4">
-                  Thank you for reaching out. A CRC PR adviser will be in touch
+                  Thank you for reaching out. A CRC Public Relations adviser will be in touch
                   shortly: within the hour during business hours, or first thing
                   in the morning for after-hours messages.
                 </p>
@@ -105,7 +105,7 @@ export function ContactFormSection({ source }: ContactFormSectionProps) {
                 <div>
                   <label
                     htmlFor="contact-name"
-                    className="block text-xs font-medium text-navy uppercase tracking-wide mb-1.5"
+                    className="block text-xs font-medium text-navy mb-1.5"
                   >
                     Full name <span className="text-brand-teal">*</span>
                   </label>
@@ -122,7 +122,7 @@ export function ContactFormSection({ source }: ContactFormSectionProps) {
                 <div>
                   <label
                     htmlFor="contact-organisation"
-                    className="block text-xs font-medium text-navy uppercase tracking-wide mb-1.5"
+                    className="block text-xs font-medium text-navy mb-1.5"
                   >
                     Organisation
                   </label>
@@ -138,7 +138,7 @@ export function ContactFormSection({ source }: ContactFormSectionProps) {
                 <div>
                   <label
                     htmlFor="contact-email"
-                    className="block text-xs font-medium text-navy uppercase tracking-wide mb-1.5"
+                    className="block text-xs font-medium text-navy mb-1.5"
                   >
                     Email <span className="text-brand-teal">*</span>
                   </label>
@@ -155,7 +155,7 @@ export function ContactFormSection({ source }: ContactFormSectionProps) {
                 <div>
                   <label
                     htmlFor="contact-phone"
-                    className="block text-xs font-medium text-navy uppercase tracking-wide mb-1.5"
+                    className="block text-xs font-medium text-navy mb-1.5"
                   >
                     Phone number <span className="text-brand-teal">*</span>
                   </label>
@@ -172,7 +172,7 @@ export function ContactFormSection({ source }: ContactFormSectionProps) {
                 <div>
                   <label
                     htmlFor="contact-message"
-                    className="block text-xs font-medium text-navy uppercase tracking-wide mb-1.5"
+                    className="block text-xs font-medium text-navy mb-1.5"
                   >
                     How can we help?
                   </label>
@@ -184,7 +184,7 @@ export function ContactFormSection({ source }: ContactFormSectionProps) {
                     placeholder="Briefly describe your situation or enquiry"
                     defaultValue={
                       isCapabilityRequest
-                        ? "I'd like to request a copy of the CRC PR Capability Statement."
+                        ? "I'd like to request a copy of the CRC Public Relations Capability Statement."
                         : undefined
                     }
                   />
@@ -192,9 +192,9 @@ export function ContactFormSection({ source }: ContactFormSectionProps) {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-brand-gold text-navy font-heading font-black text-xs tracking-widest uppercase rounded-[4px] py-4 hover:bg-gold-light transition disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="w-full bg-brand-gold text-navy font-heading font-black text-xs rounded-[4px] py-4 hover:bg-gold-light transition disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  {isSubmitting ? "SENDING…" : "SEND MESSAGE →"}
+                  {isSubmitting ? "Sending…" : "Send message →"}
                 </button>
                 <p className="text-text-body text-sm italic">
                   For general enquiries and new business conversations. For
@@ -210,7 +210,7 @@ export function ContactFormSection({ source }: ContactFormSectionProps) {
             </h3>
             <ul className="mt-6 space-y-4 text-text-body text-sm leading-relaxed">
               <li>
-                <span className="block text-charcoal text-xs font-medium uppercase tracking-wide mb-1">
+                <span className="block text-charcoal text-xs font-medium mb-1">
                   Phone
                 </span>
                 <a
@@ -221,7 +221,7 @@ export function ContactFormSection({ source }: ContactFormSectionProps) {
                 </a>
               </li>
               <li>
-                <span className="block text-charcoal text-xs font-medium uppercase tracking-wide mb-1">
+                <span className="block text-charcoal text-xs font-medium mb-1">
                   Email
                 </span>
                 <a
@@ -232,7 +232,7 @@ export function ContactFormSection({ source }: ContactFormSectionProps) {
                 </a>
               </li>
               <li>
-                <span className="block text-charcoal text-xs font-medium uppercase tracking-wide mb-1">
+                <span className="block text-charcoal text-xs font-medium mb-1">
                   Address
                 </span>
                 <span className="text-charcoal">{addressLine}</span>

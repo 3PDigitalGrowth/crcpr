@@ -9,7 +9,7 @@ import { PageProofStrip } from "@/components/shared/PageProofStrip";
 export const metadata: Metadata = {
   title: "Client Outcomes | CRC Public Relations",
   description:
-    "Anonymised case studies from CRC PR client engagements across industry associations, schools, and Pacific governments.",
+    "Anonymised case studies from CRC Public Relations client engagements across industry associations, schools, and Pacific governments.",
 };
 
 const sectorLinks = [
@@ -22,10 +22,10 @@ export default function CaseStudiesPage() {
   return (
     <>
       <PageHero
-        eyebrow="CLIENT OUTCOMES"
+        eyebrow="Client outcomes"
         title="Results when the stakes are highest."
-        description="Three anonymised outcomes from CRC PR client engagements."
-        ctaLabel="BOOK A CONSULTATION"
+        description="Three anonymised outcomes from CRC Public Relations client engagements."
+        ctaLabel="Book a consultation"
         ctaHref="/contact"
       />
 
@@ -57,14 +57,14 @@ export default function CaseStudiesPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_340px] gap-10 items-start">
             <div className="max-w-3xl">
-              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
-                Why We Show These
+              <p className="text-brand-gold text-xs font-medium mb-4">
+                Why we show these
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
                 Confidential work. Measurable outcomes.
               </h2>
               <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
-                CRC PR does not publicise client work casually. The examples
+                CRC Public Relations does not publicise client work casually. The examples
                 below are shown because senior communications counsel should
                 still be measured by outcomes.
               </p>
@@ -84,8 +84,8 @@ export default function CaseStudiesPage() {
             </div>
 
             <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
-                What The Outcomes Show
+              <p className="text-brand-teal text-xs font-medium mb-5">
+                What the outcomes show
               </p>
 
               <div className="space-y-4">
@@ -144,19 +144,19 @@ export default function CaseStudiesPage() {
 
       <InlineEnquirySection
         title="Need senior counsel on a matter where the outcome genuinely matters?"
-        body="If you are navigating a policy fight, a sensitive education issue, a crisis, or a stakeholder engagement challenge with real consequences, CRC PR can help shape the result."
+        body="If you are navigating a policy fight, a sensitive education issue, a crisis, or a stakeholder engagement challenge with real consequences, CRC Public Relations can help shape the result."
         bullets={[
           "Strategic communication for high-stakes matters",
           "Senior advice before or during scrutiny",
           "Confidential support with clear next-step recommendations",
         ]}
-        defaultMessage="We would like to discuss a high-stakes communications matter with CRC PR."
+        defaultMessage="We would like to discuss a high-stakes communications matter with CRC Public Relations."
         variant="white"
       />
 
       <PageClosingCTA
         title="Every engagement is treated with complete confidentiality."
-        body="CRC PR does not reference client work publicly without permission. The examples here are anonymised by design, but they reflect the kinds of high-stakes outcomes our clients engage us to achieve."
+        body="CRC Public Relations does not reference client work publicly without permission. The examples here are anonymised by design, but they reflect the kinds of high-stakes outcomes our clients engage us to achieve."
       />
     </>
   );

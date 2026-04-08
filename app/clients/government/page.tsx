@@ -46,7 +46,7 @@ const proofItems = [
 
 const faqs = [
   {
-    question: "What kinds of public sector matters does CRC PR usually support?",
+    question: "What kinds of public sector matters does CRC Public Relations usually support?",
     answer:
       "Typical matters include contested announcements, community-facing reforms, stakeholder resistance, incidents affecting public confidence, ministerial or executive office communication pressure, and complex cross-agency messaging environments.",
   },
@@ -66,10 +66,10 @@ export default function GovernmentClientsPage() {
   return (
     <>
       <PageHero
-        eyebrow="GOVERNMENT"
+        eyebrow="Government"
         title="Government communications and stakeholder engagement"
         description="Strategic communications counsel for Federal and State government departments, statutory authorities, and public sector organisations."
-        ctaLabel="BOOK A CONSULTATION"
+        ctaLabel="Book a consultation"
         ctaHref="/contact"
       />
 
@@ -82,8 +82,8 @@ export default function GovernmentClientsPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_380px] gap-10 items-start">
             <div className="max-w-3xl">
-              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
-                Public Sector Communications
+              <p className="text-brand-gold text-xs font-medium mb-4">
+                Public sector communications
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
                 Authority, process, and public confidence have to hold together.
@@ -101,7 +101,7 @@ export default function GovernmentClientsPage() {
                   programmes or incidents attract scrutiny.
                 </p>
                 <p className="text-charcoal-mid text-[15px] leading-relaxed">
-                  CRC PR supports departments, agencies, and authorities with
+                  CRC Public Relations supports departments, agencies, and authorities with
                   communications strategy that respects
                   machinery-of-government realities. We help leaders anticipate
                   friction points, align internal and external narratives, and
@@ -117,8 +117,8 @@ export default function GovernmentClientsPage() {
             </div>
 
             <aside className="rounded-[28px] border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
-                Typical Support Areas
+              <p className="text-brand-teal text-xs font-medium mb-5">
+                Typical support areas
               </p>
               <div className="space-y-3">
                 {services.map((item) => (
@@ -143,7 +143,7 @@ export default function GovernmentClientsPage() {
       </section>
 
       <InlineEnquirySection
-        eyebrow="WHERE IT GETS DIFFICULT"
+        eyebrow="Where it gets difficult"
         title="Need strategic communications support for a public sector matter?"
         body="Complexity rarely comes from the announcement itself. It comes from the number of interested audiences around it: ministers, agency leadership, delivery partners, local communities, media, and staff. The challenge is keeping the message accurate, coordinated, and defensible across all of them without losing pace."
         bullets={[
@@ -157,7 +157,7 @@ export default function GovernmentClientsPage() {
       <LeadMagnetBanner
         magnet="crisisPlanTemplate"
         title="Does your agency have a crisis and escalation framework that will hold up under scrutiny?"
-        description="Download the CRC PR Crisis Communications Plan Template. It helps public sector leaders define ownership, escalation, and stakeholder sequencing before operational pressure, community concern, and media attention collide."
+        description="Download the CRC Public Relations Crisis Communications Plan Template. It helps public sector leaders define ownership, escalation, and stakeholder sequencing before operational pressure, community concern, and media attention collide."
       />
 
       <FAQSection
@@ -167,7 +167,7 @@ export default function GovernmentClientsPage() {
 
       <PageClosingCTA
         title="Discuss your government communications needs with a senior advisor."
-        body="CRC PR works with departments, agencies, and public sector organisations that need disciplined communication in environments where public trust and scrutiny matter."
+        body="CRC Public Relations works with departments, agencies, and public sector organisations that need disciplined communication in environments where public trust and scrutiny matter."
       />
     </>
   );

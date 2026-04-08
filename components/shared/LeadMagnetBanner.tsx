@@ -21,7 +21,7 @@ export interface LeadMagnetBannerProps {
 export function LeadMagnetBanner({
   magnet,
   variant = "dark",
-  eyebrow = "FREE RESOURCE",
+  eyebrow = "Free resource",
   title,
   description,
   highlights = [
@@ -31,7 +31,7 @@ export function LeadMagnetBanner({
   ],
   whatYouGetTitle = "What you get",
   whatYouGetBody = "A practical resource designed to help leadership teams make a better decision sooner.",
-  buttonLabel = "DOWNLOAD FREE RESOURCE →",
+  buttonLabel = "Download free resource →",
   footnote = "Delivered to your inbox. No commitment required.",
 }: LeadMagnetBannerProps) {
   const [modalOpen, setModalOpen] = useState(false);
@@ -54,7 +54,7 @@ export function LeadMagnetBanner({
             }`}
           >
             <div className="p-8 md:p-10">
-              <p className="text-brand-teal text-xs font-medium tracking-[0.14em] uppercase">
+              <p className="text-brand-teal text-xs font-medium">
                 {eyebrow}
               </p>
               <h2
@@ -98,7 +98,7 @@ export function LeadMagnetBanner({
               <div className="h-full flex flex-col justify-between">
                 <div>
                   <p
-                    className={`text-xs tracking-[0.14em] uppercase ${
+                    className={`text-xs ${
                       isDark ? "text-white/35" : "text-text-caption"
                     }`}
                   >
@@ -116,7 +116,7 @@ export function LeadMagnetBanner({
                 <button
                   type="button"
                   onClick={() => setModalOpen(true)}
-                  className="bg-brand-teal text-white font-heading font-black text-sm tracking-widest uppercase w-full py-4 rounded-[4px] hover:bg-link-teal transition mt-8"
+                  className="bg-brand-teal text-white font-heading font-black text-sm w-full py-4 rounded-[4px] hover:bg-link-teal transition mt-8"
                 >
                   {buttonLabel}
                 </button>

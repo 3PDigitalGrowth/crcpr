@@ -12,7 +12,7 @@ export function HomePillars() {
 
       <div className="max-w-7xl mx-auto px-6">
         <AnimateIn>
-          <p className="font-sans font-medium text-brand-gold text-xs tracking-[0.14em] uppercase text-left">
+          <p className="font-sans font-medium text-brand-gold text-xs text-left">
             Our practice areas
           </p>
           <h2 className="font-heading font-black text-navy text-3xl md:text-[42px] leading-[1.05] mt-3">

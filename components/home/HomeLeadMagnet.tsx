@@ -21,8 +21,8 @@ export function HomeLeadMagnet() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-7">
             <AnimateIn>
-              <p className="font-sans font-medium text-brand-teal text-xs tracking-[0.14em] uppercase">
-                Free Assessment
+              <p className="font-sans font-medium text-brand-teal text-xs">
+                Free assessment
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-[38px] leading-[1.1] mt-3">
                 How exposed is your organisation&rsquo;s reputation?
@@ -67,9 +67,9 @@ export function HomeLeadMagnet() {
               </div>
               <Link
                 href="/services/reputation-management#reputation-assessment"
-                className="btn-lift block bg-brand-teal text-white font-heading font-black text-sm tracking-widest uppercase w-full py-4 rounded-[4px] mt-6 hover:bg-link-teal transition text-center"
+                className="btn-lift block bg-brand-teal text-white font-heading font-black text-sm w-full py-4 rounded-[4px] mt-6 hover:bg-link-teal transition text-center"
               >
-                Start the Free Assessment →
+                Start the free assessment →
               </Link>
               <p className="text-text-caption text-xs mt-3 text-center">
                 3 minutes. No commitment. Results delivered by email.

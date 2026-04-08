@@ -3,18 +3,12 @@ import { siteConfig } from "@/config/site";
 import { AlternativeHome } from "@/components/alternative/AlternativeHome";
 
 const homepageFaqs = siteConfig.faqs.map((faq, index) => {
-  if (index === 0) {
-    return {
-      question: faq.question,
-      answer: `${faq.answer} That personal, senior approach is the reason clients choose us, and it is also the reason many of our clients are substantial organisations who could afford a larger firm but prefer to work with us.`,
-    };
-  }
-
   if (index === 3) {
     return {
-      question: "What types of organisations does CRC PR work with?",
+      question:
+        "What types of organisations does CRC Public Relations work with?",
       answer:
-        "We work with CEOs, directors, and senior executives across private companies, family businesses, industry associations and peak bodies, independent and faith-based schools, health and aged care organisations, legal and professional services firms, government departments, and Pacific governments and NGOs. What our clients share is a preference for working directly with experienced senior advisers rather than through large agency structures.",
+        "We work with CEOs, directors, and senior executives across companies, charities, not-for-profits, family businesses, industry associations and peak bodies, independent and faith-based schools, health and aged care organisations, legal and professional services firms, Pacific governments and NGOs, and faith-based organisations. What our clients share is a preference for working directly with experienced senior advisers rather than through large agency structures.",
     };
   }
 

@@ -64,8 +64,8 @@ export function HomeClients() {
           {/* Left column, spans 5 cols */}
           <div className="lg:col-span-5">
             <AnimateIn>
-              <p className="font-sans font-medium text-brand-gold text-xs tracking-[0.14em] uppercase">
-                Who We Work With
+              <p className="font-sans font-medium text-brand-gold text-xs">
+                Who we work with
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-[42px] leading-[1.05] mt-3">
                 Trusted across every sector.
@@ -84,8 +84,8 @@ export function HomeClients() {
               </p>
               <div className="flex flex-col gap-3 mt-8">
                 <div className="rounded-xl border border-brand-border bg-navy p-5 text-left">
-                  <p className="text-brand-teal text-xs font-medium tracking-[0.14em] uppercase mb-3">
-                    Work With CRC PR
+                  <p className="text-brand-teal text-xs font-medium mb-3">
+                    Work with CRC Public Relations
                   </p>
                   <p className="font-heading font-black text-white text-lg leading-snug">
                     Start a confidential conversation with a senior advisor.
@@ -97,16 +97,16 @@ export function HomeClients() {
                   </p>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center justify-center gap-2 bg-brand-teal text-white font-heading font-black text-xs tracking-widest uppercase rounded-[4px] px-5 py-3 mt-4 hover:bg-link-teal transition"
+                    className="inline-flex items-center justify-center gap-2 bg-brand-teal text-white font-heading font-black text-xs rounded-[4px] px-5 py-3 mt-4 hover:bg-link-teal transition"
                   >
-                    WORK WITH US <ArrowRight size={14} aria-hidden />
+                    Work with us <ArrowRight size={14} aria-hidden />
                   </Link>
                 </div>
                 <MyPRPartnerCTA
                   compact
                   title="Not ready for a retainer?"
                   description="Start with My PR Partner for practical communications training, resources, and support designed for teams building capability."
-                  buttonLabel="START WITH MY PR PARTNER"
+                  buttonLabel="Start with My PR Partner"
                   className="text-left"
                 />
               </div>

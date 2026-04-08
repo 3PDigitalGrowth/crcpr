@@ -19,15 +19,15 @@ export default function ContactPage({
   return (
     <>
       <PageHero
-        eyebrow="CONTACT US"
+        eyebrow="Contact us"
         title="Let's discuss your needs."
-        description="Every conversation with CRC PR begins with listening. Tell us about your situation and we'll respond promptly, with confidentiality guaranteed."
-        ctaLabel="URGENT CRISIS SUPPORT"
+        description="Every conversation with CRC Public Relations begins with listening. Tell us about your situation and we'll respond promptly, with confidentiality guaranteed."
+        ctaLabel="Urgent crisis support"
         ctaHref="/crisis"
       />
 
       <PageProofStrip
-        title="When you contact CRC PR, you are beginning a direct conversation with senior advisors."
+        title="When you contact CRC Public Relations, you are beginning a direct conversation with senior advisors."
         items={[
           {
             label: "Confidentiality",
@@ -55,8 +55,8 @@ export default function ContactPage({
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_340px] gap-10 items-start">
             <div className="max-w-3xl">
-              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
-                How Most Enquiries Start
+              <p className="text-brand-gold text-xs font-medium mb-4">
+                How most enquiries start
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
                 Most enquiries fall into one of three categories.
@@ -99,8 +99,8 @@ export default function ContactPage({
             </div>
 
             <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
-                Best First Step
+              <p className="text-brand-teal text-xs font-medium mb-5">
+                Best first step
               </p>
               <div className="space-y-4">
                 <div className="border-l-[3px] border-brand-gold pl-4">
@@ -133,8 +133,8 @@ export default function ContactPage({
 
       <PageClosingCTA
         title="If the matter is sensitive, start the conversation now."
-        body="CRC PR works best when leadership engages early enough for the response to be shaped properly. If the issue is already active, call first. If it is emerging, send a confidential message and we will respond promptly."
-        primaryLabel="URGENT CRISIS SUPPORT"
+        body="CRC Public Relations works best when leadership engages early enough for the response to be shaped properly. If the issue is already active, call first. If it is emerging, send a confidential message and we will respond promptly."
+        primaryLabel="Urgent crisis support"
         primaryHref="/crisis"
       />
     </>

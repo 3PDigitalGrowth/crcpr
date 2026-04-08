@@ -46,7 +46,7 @@ const proofItems = [
 
 const faqs = [
   {
-    question: "What types of corporate matters does CRC PR usually support?",
+    question: "What types of corporate matters does CRC Public Relations usually support?",
     answer:
       "Typical matters include leadership transitions, restructures, market-facing announcements, stakeholder disputes, reputation pressure, investor-facing communication, and situations where legal, governance, and communications issues are colliding at the same time.",
   },
@@ -66,10 +66,10 @@ export default function CorporateClientsPage() {
   return (
     <>
       <PageHero
-        eyebrow="CORPORATE"
+        eyebrow="Corporate"
         title="Corporate communications and reputation counsel"
         description="Senior-level communications strategy for ASX-listed companies, professional services firms, and private enterprises."
-        ctaLabel="BOOK A CONSULTATION"
+        ctaLabel="Book a consultation"
         ctaHref="/contact"
       />
 
@@ -82,8 +82,8 @@ export default function CorporateClientsPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_380px] gap-10 items-start">
             <div className="max-w-3xl">
-              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
-                Corporate Communications
+              <p className="text-brand-gold text-xs font-medium mb-4">
+                Corporate communications
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
                 Reputation is shaped where strategy, behaviour, and narrative meet.
@@ -97,7 +97,7 @@ export default function CorporateClientsPage() {
 
               <div className="space-y-6 mt-8">
                 <p className="text-charcoal-mid text-[15px] leading-relaxed">
-                  CRC PR works with chairs, CEOs, and general counsel to align
+                  CRC Public Relations works with chairs, CEOs, and general counsel to align
                   messaging with governance, protect valuation during
                   turbulence, and prepare leaders for scrutiny from investors,
                   analysts, and media. We bring journalistic judgment and
@@ -114,8 +114,8 @@ export default function CorporateClientsPage() {
             </div>
 
             <aside className="rounded-[28px] border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
-                Typical Support Areas
+              <p className="text-brand-teal text-xs font-medium mb-5">
+                Typical support areas
               </p>
               <div className="space-y-3">
                 {services.map((item) => (
@@ -140,7 +140,7 @@ export default function CorporateClientsPage() {
       </section>
 
       <InlineEnquirySection
-        eyebrow="TYPICAL SITUATIONS"
+        eyebrow="Typical situations"
         title="Need senior corporate communications advice?"
         body="We are often engaged when the stakes are commercial as well as reputational: a leadership transition, a sensitive market-facing announcement, investor or stakeholder concern building behind the scenes, or a legal and communications issue colliding at the same time. In those environments, speed matters, but so does judgement."
         bullets={[
@@ -154,7 +154,7 @@ export default function CorporateClientsPage() {
       <LeadMagnetBanner
         magnet="crisisPlanTemplate"
         title="Does your leadership team have the communications discipline for a high-pressure corporate matter?"
-        description="Download the CRC PR Crisis Communications Plan Template. It is a practical framework for escalation, first-response control, stakeholder sequencing, and executive message discipline when a sensitive matter starts attracting attention."
+        description="Download the CRC Public Relations Crisis Communications Plan Template. It is a practical framework for escalation, first-response control, stakeholder sequencing, and executive message discipline when a sensitive matter starts attracting attention."
       />
 
       <FAQSection
@@ -164,7 +164,7 @@ export default function CorporateClientsPage() {
 
       <PageClosingCTA
         title="Discuss your corporate communications needs with a senior advisor."
-        body="CRC PR works with listed companies, private enterprises, and professional services firms that need judgement, discretion, and direct access when the stakes are high."
+        body="CRC Public Relations works with listed companies, private enterprises, and professional services firms that need judgement, discretion, and direct access when the stakes are high."
       />
     </>
   );

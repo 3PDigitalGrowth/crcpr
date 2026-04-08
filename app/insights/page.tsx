@@ -8,7 +8,7 @@ import { getAllInsights } from "@/lib/mdx";
 export const metadata = {
   title: "Insights",
   description:
-    "Insights, commentary, and crisis thinking from Lyall Mercer and the CRC PR team.",
+    "Insights, commentary, and crisis thinking from Lyall Mercer and the CRC Public Relations team.",
 };
 
 export default function InsightsPage() {
@@ -18,10 +18,10 @@ export default function InsightsPage() {
   return (
     <>
       <PageHero
-        eyebrow="INSIGHTS"
-        title="Insights. Commentary. Crisis Thinking."
-        description="From Lyall Mercer and the CRC PR team."
-        ctaLabel="BOOK A CONSULTATION"
+        eyebrow="Insights"
+        title="Insights. Commentary. Crisis thinking."
+        description="From Lyall Mercer and the CRC Public Relations team."
+        ctaLabel="Book a consultation"
         ctaHref="/contact"
       />
 
@@ -44,7 +44,7 @@ export default function InsightsPage() {
             label: "Authority flow",
             value: "Linked to counsel",
             detail:
-              "Insights support the wider CRC PR system by connecting thought leadership to advisory, preparedness, and next-step action.",
+              "Insights support the wider CRC Public Relations system by connecting thought leadership to advisory, preparedness, and next-step action.",
           },
         ]}
       />
@@ -53,14 +53,14 @@ export default function InsightsPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_340px] gap-10 items-start">
             <div className="max-w-3xl">
-              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
-                How To Use These Insights
+              <p className="text-brand-gold text-xs font-medium mb-4">
+                How to use these insights
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
                 Practical thinking for leaders under pressure.
               </h2>
               <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
-                CRC PR insights are written for leaders who need clearer
+                CRC Public Relations insights are written for leaders who need clearer
                 judgement, not more commentary. The focus is practical: what
                 matters, where organisations usually misread the pressure, and
                 what experienced advisors would be watching before the situation
@@ -79,8 +79,8 @@ export default function InsightsPage() {
             </div>
 
             <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
-                What You&apos;ll Find Here
+              <p className="text-brand-teal text-xs font-medium mb-5">
+                What you&apos;ll find here
               </p>
 
               <div className="space-y-4">
@@ -130,7 +130,7 @@ export default function InsightsPage() {
               {featuredPost ? (
                 <article className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-10 rounded-lg border border-brand-border bg-off-white p-8 md:p-10 mb-10">
                   <div>
-                    <p className="text-brand-gold text-xs font-medium tracking-[0.14em] uppercase">
+                    <p className="text-brand-gold text-xs font-medium">
                       Featured insight
                     </p>
                     <h2 className="font-heading font-black text-navy text-3xl mt-4">
@@ -149,7 +149,7 @@ export default function InsightsPage() {
                     </Link>
                   </div>
                   <div className="border-t lg:border-t-0 lg:border-l border-brand-border pt-6 lg:pt-0 lg:pl-8">
-                    <p className="text-charcoal text-xs font-medium uppercase tracking-wide">
+                    <p className="text-charcoal text-xs font-medium">
                       {featuredPost.category}
                     </p>
                     <p className="text-charcoal-mid text-sm leading-relaxed mt-4">
@@ -175,7 +175,7 @@ export default function InsightsPage() {
                     key={post.slug}
                     className="bg-off-white border border-brand-border/50 rounded-lg p-6 hover:border-brand-gold/30 transition"
                   >
-                    <p className="text-brand-teal text-xs font-medium tracking-[0.14em] uppercase">
+                    <p className="text-brand-teal text-xs font-medium">
                       {post.category}
                     </p>
                     <h3 className="font-heading font-black text-navy text-lg mt-3">
@@ -216,7 +216,7 @@ export default function InsightsPage() {
         magnet="crisisPlanTemplate"
         variant="light"
         title="Want a practical framework before the next issue becomes urgent?"
-        description="Download the CRC PR Crisis Communications Plan Template. It is a useful next step if one of these articles has highlighted a gap in your organisation's preparedness, escalation, or message discipline."
+        description="Download the CRC Public Relations Crisis Communications Plan Template. It is a useful next step if one of these articles has highlighted a gap in your organisation's preparedness, escalation, or message discipline."
       />
 
       <PageClosingCTA

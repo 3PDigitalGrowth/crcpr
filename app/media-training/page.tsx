@@ -66,7 +66,7 @@ const faqs = [
       "Usually the people most likely to be quoted, filmed, or called when pressure rises: executives, subject matter experts, board-level spokespeople, and communications leaders responsible for supporting them.",
   },
   {
-    question: "Is CRC PR's media training generic or tailored?",
+    question: "Is CRC Public Relations' media training generic or tailored?",
     answer:
       "Tailored. Sessions are built around your issues, likely lines of questioning, and the specific vulnerabilities a skilled interviewer would test, rather than generic interview exercises.",
   },
@@ -86,10 +86,10 @@ export default function MediaTrainingPage() {
       />
 
       <PageHero
-        eyebrow="MEDIA TRAINING"
+        eyebrow="Media training"
         title="Media training from people who have sat on the other side of the camera."
         description="Spokesperson training, hostile interview preparation, and on-camera coaching delivered by former television and radio journalists with decades of broadcast experience."
-        ctaLabel="BOOK A MEDIA TRAINING SESSION"
+        ctaLabel="Book a media training session"
         ctaHref="/contact"
       />
 
@@ -103,8 +103,8 @@ export default function MediaTrainingPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_360px] gap-10 items-start">
             <div className="max-w-3xl">
-              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
-                What Better Training Looks Like
+              <p className="text-brand-gold text-xs font-medium mb-4">
+                What better training looks like
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
                 The real risk is not poor technique. It is poor preparation.
@@ -126,7 +126,7 @@ export default function MediaTrainingPage() {
                 <p className="text-charcoal text-[15px] leading-relaxed">
                   Generic media training produces spokespeople who know how to
                   bridge but cannot answer the hardest question about their own
-                  organisation. CRC PR media training begins not with
+                  organisation. CRC Public Relations media training begins not with
                   technique, but with intelligence: understanding the story the
                   journalist is building, the questions they are most likely to
                   ask, and the specific vulnerabilities in your
@@ -145,8 +145,8 @@ export default function MediaTrainingPage() {
             </div>
 
             <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
-                Technique Is Not Enough
+              <p className="text-brand-teal text-xs font-medium mb-5">
+                Technique is not enough
               </p>
 
               <div className="space-y-4">
@@ -189,8 +189,8 @@ export default function MediaTrainingPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="rounded-[28px] border border-brand-border bg-off-white p-8 md:p-10">
             <div className="max-w-3xl">
-              <p className="text-brand-gold font-sans font-medium text-xs tracking-[0.14em] uppercase mb-4">
-                Executive Mistakes
+              <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+                Executive mistakes
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
                 What executives usually get wrong
@@ -214,7 +214,7 @@ export default function MediaTrainingPage() {
                 },
                 {
                   title: "Missing the real question",
-                  body: "CRC PR training prepares for the question behind the question, so responses stay credible under pressure rather than merely rehearsed.",
+                  body: "CRC Public Relations training prepares for the question behind the question, so responses stay credible under pressure rather than merely rehearsed.",
                 },
               ].map((item) => (
                 <div
@@ -335,8 +335,8 @@ export default function MediaTrainingPage() {
       <section className="bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl">
-            <p className="text-brand-gold font-sans font-medium text-xs tracking-[0.14em] uppercase mb-4">
-              Readiness Check
+            <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+              Readiness check
             </p>
             <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
               Who needs media training
@@ -373,7 +373,7 @@ export default function MediaTrainingPage() {
       <LeadMagnetBanner
         magnet="mediaInterviewGuide"
         title="Download the Media Interview Preparation Guide"
-        description="The pre-interview checklist and briefing framework CRC PR gives to executives before meaningful media appearances. Covers hostile interview preparation, on-camera presence, message prioritisation, and the questions every spokesperson should be able to answer before walking in."
+        description="The pre-interview checklist and briefing framework CRC Public Relations gives to executives before meaningful media appearances. Covers hostile interview preparation, on-camera presence, message prioritisation, and the questions every spokesperson should be able to answer before walking in."
       />
 
       <FAQSection
@@ -383,8 +383,8 @@ export default function MediaTrainingPage() {
 
       <PageClosingCTA
         title="Every spokesperson is a risk until they are prepared."
-        body="Media training is an investment you make before the difficult interview, not the day after it. CRC PR prepares leaders for the questions they are actually likely to face."
-        primaryLabel="BOOK A MEDIA TRAINING SESSION"
+        body="Media training is an investment you make before the difficult interview, not the day after it. CRC Public Relations prepares leaders for the questions they are actually likely to face."
+        primaryLabel="Book a media training session"
       />
     </>
   );

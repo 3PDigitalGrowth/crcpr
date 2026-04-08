@@ -67,7 +67,7 @@ export default function InsightPage({
     <>
       <header id="hero-section" className="bg-navy py-24">
         <div className="max-w-3xl mx-auto px-6">
-          <p className="text-brand-teal text-xs font-medium tracking-[0.14em] uppercase">
+          <p className="text-brand-teal text-xs font-medium">
             {post.category}
           </p>
           <h1 className="text-white font-heading font-black text-3xl md:text-[42px] leading-[1.1] mt-4">
@@ -100,7 +100,7 @@ export default function InsightPage({
           magnet={post.leadMagnet}
           variant="light"
           title="If this article has highlighted a gap, start with a practical resource."
-          description="CRC PR resources are designed to turn a general insight into a concrete next step for leadership teams managing risk, preparedness, and communication discipline."
+          description="CRC Public Relations resources are designed to turn a general insight into a concrete next step for leadership teams managing risk, preparedness, and communication discipline."
         />
       ) : null}
 
@@ -116,7 +116,7 @@ export default function InsightPage({
                   key={related.slug}
                   className="rounded-lg border border-brand-border bg-off-white p-6"
                 >
-                  <p className="text-brand-teal text-xs font-medium tracking-[0.14em] uppercase">
+                  <p className="text-brand-teal text-xs font-medium">
                     {related.category}
                   </p>
                   <h3 className="font-heading font-black text-navy text-lg mt-3">
@@ -164,8 +164,8 @@ export default function InsightPage({
 
       <PageClosingCTA
         title="Need advice on a crisis, issue, or reputation matter?"
-        body="CRC PR articles are designed to clarify the issue. If you need to apply that thinking to a live situation, the next step is a confidential conversation."
-        primaryLabel="GET IN TOUCH"
+        body="CRC Public Relations articles are designed to clarify the issue. If you need to apply that thinking to a live situation, the next step is a confidential conversation."
+        primaryLabel="Get in touch"
       />
     </>
   );

@@ -12,7 +12,7 @@ interface PageProofStripProps {
 }
 
 export function PageProofStrip({
-  eyebrow = "WHY CRC PR",
+  eyebrow = "Why CRC Public Relations",
   title,
   items,
   variant = "off-white",
@@ -38,7 +38,7 @@ export function PageProofStrip({
     <section className={`${sectionClass} py-16 md:py-20`}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="max-w-3xl">
-          <p className="text-brand-gold font-sans font-medium text-xs tracking-[0.14em] uppercase mb-4">
+          <p className="text-brand-gold font-sans font-medium text-xs mb-4">
             {eyebrow}
           </p>
           <h2 className={`font-heading font-black text-3xl ${titleClass}`}>
@@ -52,7 +52,7 @@ export function PageProofStrip({
               key={`${item.label}-${item.value}`}
               className={`border rounded-lg p-6 ${cardClass}`}
             >
-              <p className="text-brand-gold text-xs font-medium tracking-[0.14em] uppercase mb-3">
+              <p className="text-brand-gold text-xs font-medium mb-3">
                 {item.label}
               </p>
               <p className={`font-heading font-black text-2xl ${valueClass}`}>

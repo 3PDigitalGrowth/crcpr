@@ -24,8 +24,8 @@ export function HomeCrisisLeadMagnet() {
                     aria-hidden
                   />
                 </div>
-                <p className="font-sans font-medium text-brand-gold text-xs tracking-[0.14em] uppercase">
-                  Free Template
+                <p className="font-sans font-medium text-brand-gold text-xs">
+                  Free template
                 </p>
                 <h3 className="font-heading font-black text-navy text-2xl md:text-[28px] leading-snug mt-2">
                   Crisis Communications Plan Template
@@ -47,9 +47,9 @@ export function HomeCrisisLeadMagnet() {
                   <button
                     type="button"
                     onClick={() => setModalOpen(true)}
-                    className="btn-lift inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-sm tracking-widest uppercase rounded-[4px] px-8 py-4 mt-6 hover:bg-gold-light transition"
+                    className="btn-lift inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-sm rounded-[4px] px-8 py-4 mt-6 hover:bg-gold-light transition"
                   >
-                    Download Free Template <ArrowRight size={14} aria-hidden />
+                    Download free template <ArrowRight size={14} aria-hidden />
                   </button>
                   <p className="text-charcoal-mid text-xs mt-3">
                     Delivered to your inbox. No commitment required.

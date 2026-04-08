@@ -20,7 +20,7 @@ export function CapabilityDownload() {
             : "Request our Capability Statement"}
         </h4>
         <p className="text-charcoal-mid text-sm mt-1">
-          A comprehensive overview of CRC PR&apos;s services, team, and approach
+          A comprehensive overview of CRC Public Relations&apos; services, team, and approach
           for procurement teams, boards, and executive evaluation.
         </p>
         {available ? (
@@ -30,9 +30,9 @@ export function CapabilityDownload() {
               download
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs tracking-widest uppercase rounded-[4px] px-6 py-3 mt-4 hover:bg-gold-light transition"
+              className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs rounded-[4px] px-6 py-3 mt-4 hover:bg-gold-light transition"
             >
-              DOWNLOAD PDF →
+              Download PDF →
             </a>
             <p className="text-charcoal-mid text-xs italic mt-2">
               No form required.
@@ -41,9 +41,9 @@ export function CapabilityDownload() {
         ) : (
           <Link
             href={requestUrl}
-            className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs tracking-widest uppercase rounded-[4px] px-6 py-3 mt-4 hover:bg-gold-light transition"
+            className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs rounded-[4px] px-6 py-3 mt-4 hover:bg-gold-light transition"
           >
-            REQUEST CAPABILITY STATEMENT →
+            Request capability statement →
           </Link>
         )}
       </div>

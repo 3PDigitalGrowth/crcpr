@@ -52,10 +52,7 @@ export function HomeTestimonials() {
                 &ldquo;{testimonials[0].quote}&rdquo;
               </p>
               <div className="mt-6 pt-6 border-t border-brand-border">
-                <p className="font-sans font-medium text-navy text-sm">
-                  {testimonials[0].name}
-                </p>
-                <p className="text-charcoal-mid text-xs mt-1">
+                <p className="text-charcoal-mid text-xs">
                   {testimonials[0].title}
                 </p>
               </div>
@@ -75,8 +72,7 @@ export function HomeTestimonials() {
                     &ldquo;{t.quote}&rdquo;
                   </p>
                   <div className="mt-5 pt-5 border-t border-brand-border">
-                    <p className="font-sans font-medium text-navy text-sm">{t.name}</p>
-                    <p className="text-charcoal-mid text-xs mt-1">{t.title}</p>
+                    <p className="text-charcoal-mid text-xs">{t.title}</p>
                   </div>
                 </div>
               </AnimateIn>
@@ -88,10 +84,10 @@ export function HomeTestimonials() {
         <AnimateIn>
           <div className="mt-16 text-center">
             <p className="font-sans italic text-charcoal-mid text-base">
-              &ldquo;100% of our consulting clients would recommend CRC PR to a
+              &ldquo;100% of our consulting clients would recommend CRC Public Relations to a
               peer.&rdquo;
               <span className="not-italic font-medium text-charcoal-mid/60 text-sm ml-2">
-                – CRC PR Client Survey
+                – CRC Public Relations Client Survey
               </span>
             </p>
           </div>

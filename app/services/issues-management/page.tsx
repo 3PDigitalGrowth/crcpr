@@ -56,7 +56,7 @@ const faqs = [
       "The distinction usually comes down to public exposure, pace, and stakeholder consequences. If a matter is still shapeable, with time to assess exposure, align messages, and engage key stakeholders before the story hardens, it is usually still an issues-management engagement. If the matter is already public and media or stakeholder pressure is active, it has likely crossed into crisis response.",
   },
   {
-    question: "What does CRC PR actually do in an issues-management engagement?",
+    question: "What does CRC Public Relations actually do in an issues-management engagement?",
     answer:
       "We assess the exposure, map the stakeholder environment, define escalation thresholds, develop defensible messaging, and advise leadership on the communication sequence most likely to reduce escalation. The work is both strategic and practical.",
   },
@@ -81,10 +81,10 @@ export default function IssuesManagementPage() {
       />
 
       <PageHero
-        eyebrow="ISSUES MANAGEMENT"
+        eyebrow="Issues management"
         title="Get ahead of the issue before the media does."
         description="Proactive identification, monitoring, and strategic management of emerging issues, before they reach crisis point. Senior counsel available nationally."
-        ctaLabel="BOOK A CONSULTATION"
+        ctaLabel="Book a consultation"
         ctaHref="/contact"
       />
 
@@ -98,8 +98,8 @@ export default function IssuesManagementPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_340px] gap-10 items-start">
             <div className="max-w-3xl">
-              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
-                Escalation Window
+              <p className="text-brand-gold text-xs font-medium mb-4">
+                Escalation window
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
                 An issue is not yet a crisis. Strategic management is what keeps
@@ -116,7 +116,7 @@ export default function IssuesManagementPage() {
                   time.
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
-                  CRC PR specialises in the space between an emerging issue and
+                  CRC Public Relations specialises in the space between an emerging issue and
                   a full crisis, providing the senior counsel, monitoring
                   capability, and stakeholder management that can arrest an
                   escalation before it becomes unmanageable.
@@ -125,8 +125,8 @@ export default function IssuesManagementPage() {
             </div>
 
             <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
-                What Changes the Outcome
+              <p className="text-brand-teal text-xs font-medium mb-5">
+                What changes the outcome
               </p>
               <div className="space-y-4">
                 <div className="border-l-[3px] border-brand-gold pl-4">
@@ -166,8 +166,8 @@ export default function IssuesManagementPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-10 items-start">
             <div className="max-w-3xl">
-              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
-                Common Engagements
+              <p className="text-brand-gold text-xs font-medium mb-4">
+                Common engagements
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl mb-6 leading-tight">
                 Typical issues we are engaged to contain
@@ -180,8 +180,8 @@ export default function IssuesManagementPage() {
             </div>
 
             <aside className="rounded-lg border border-brand-border bg-white p-6 md:p-7">
-              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-4">
-                Why These Matter
+              <p className="text-brand-teal text-xs font-medium mb-4">
+                Why these matter
               </p>
               <p className="text-charcoal-mid text-sm leading-relaxed">
                 Each of these issues can still be managed early, but once the tone,
@@ -216,7 +216,7 @@ export default function IssuesManagementPage() {
               >
                 <div className="flex items-center justify-between gap-4 mb-5">
                   <span className="h-[2px] w-16 bg-brand-gold rounded-full" aria-hidden="true" />
-                  <p className="text-brand-gold font-heading font-black text-sm tracking-[0.16em] uppercase">
+                  <p className="text-brand-gold font-heading font-black text-sm">
                     {String(index + 1).padStart(2, "0")}
                   </p>
                 </div>
@@ -235,8 +235,8 @@ export default function IssuesManagementPage() {
       {/* High-clarity process section earlier in flow */}
       <section className="bg-off-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <p className="text-brand-gold font-sans font-medium text-xs tracking-[0.14em] uppercase mb-4">
-            WHAT HAPPENS NEXT
+          <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+            What happens next
           </p>
           <h2 className="font-heading font-black text-navy text-3xl mb-6">
             What issues management looks like in practice
@@ -320,15 +320,15 @@ export default function IssuesManagementPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.1fr)_360px] gap-10 items-start">
             <div className="max-w-3xl">
-              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
-                Predictability Matters
+              <p className="text-brand-gold text-xs font-medium mb-4">
+                Predictability matters
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl mb-6 leading-tight">
                 Eighty per cent of crises were predictable
               </h2>
               <div className="space-y-6">
                 <p className="text-charcoal text-[15px] leading-relaxed">
-                  In 25 years of advising organisations through crises, CRC PR
+                  In 25 years of advising organisations through crises, CRC Public Relations
                   founder Lyall Mercer has consistently observed that the vast
                   majority of significant reputation events were predictable,
                   not in their exact form, but in their general shape. They
@@ -343,7 +343,7 @@ export default function IssuesManagementPage() {
                   communications counsel early, not after the story breaks.
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
-                  Retaining CRC PR for issues management is not an admission
+                  Retaining CRC Public Relations for issues management is not an admission
                   that your organisation has a problem. It is a recognition
                   that every organisation has potential issues, and that the
                   cost of managing them proactively is a fraction of the cost of
@@ -353,8 +353,8 @@ export default function IssuesManagementPage() {
             </div>
 
             <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
-                Key Distinction
+              <p className="text-brand-teal text-xs font-medium mb-5">
+                Key distinction
               </p>
               <h3 className="font-heading font-black text-navy text-xl mb-4">
                 Issues management is not the same as crisis communications
@@ -379,7 +379,7 @@ export default function IssuesManagementPage() {
                   </p>
                 </div>
                 <p className="text-charcoal text-[15px] leading-relaxed">
-                  CRC PR provides both. But the organisations that need crisis
+                  CRC Public Relations provides both. But the organisations that need crisis
                   communications least are the ones that have invested most in
                   issues management.
                 </p>
@@ -399,7 +399,7 @@ export default function IssuesManagementPage() {
         magnet="crisisPlanTemplate"
         variant="dark"
         title="Does your organisation have an escalation protocol for emerging issues?"
-        description="Download the CRC PR Crisis Communications Plan Template. It includes the escalation framework and decision triggers our issues-management clients use to decide when a developing matter can still be contained and when it requires immediate senior response."
+        description="Download the CRC Public Relations Crisis Communications Plan Template. It includes the escalation framework and decision triggers our issues-management clients use to decide when a developing matter can still be contained and when it requires immediate senior response."
         highlights={[
           "Clarifies issue-to-crisis thresholds",
           "Useful for executive and risk teams",

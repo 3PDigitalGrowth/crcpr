@@ -52,7 +52,7 @@ const proofItems = [
 
 const faqs = [
   {
-    question: "What kinds of school matters does CRC PR usually support?",
+    question: "What kinds of school matters does CRC Public Relations usually support?",
     answer:
       "Typical matters include safeguarding disclosures, staff conduct allegations, serious incidents, parent-confidence issues, social media escalation, governance concerns, and situations where pastoral care, legal risk, and media attention are all in play at once.",
   },
@@ -77,10 +77,10 @@ export default function SchoolsFaithPage() {
       />
 
       <PageHero
-        eyebrow="SCHOOLS & FAITH-BASED ORGANISATIONS"
+        eyebrow="Schools & faith-based organisations"
         title="School crisis communications that protects students, staff, and the community's trust."
         description="Specialist crisis response, parent communications, and media management for school leaders and faith-based organisations, when pastoral responsibility and strategic communications must work together."
-        ctaLabel="BOOK A CONSULTATION"
+        ctaLabel="Book a consultation"
         ctaHref="/contact"
       />
 
@@ -94,8 +94,8 @@ export default function SchoolsFaithPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_360px] gap-10 items-start">
             <div className="max-w-3xl">
-              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
-                Sector Reality
+              <p className="text-brand-gold text-xs font-medium mb-4">
+                Sector reality
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
                 In this sector, communication is judged by care as much as
@@ -127,7 +127,7 @@ export default function SchoolsFaithPage() {
                   and the compassion that the community deserves.
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
-                  CRC PR has worked with independent schools, Catholic school
+                  CRC Public Relations has worked with independent schools, Catholic school
                   networks, and faith-based organisations across Australia for
                   over 25 years. Lyall Mercer has presented at the Australian
                   Catholic Bishops Conference and has developed crisis
@@ -140,8 +140,8 @@ export default function SchoolsFaithPage() {
             </div>
 
             <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
-                What Makes This Different
+              <p className="text-brand-teal text-xs font-medium mb-5">
+                What makes this different
               </p>
 
               <div className="space-y-4">
@@ -184,8 +184,8 @@ export default function SchoolsFaithPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_340px] gap-10 items-start">
             <div className="max-w-3xl">
-              <p className="text-brand-gold font-sans font-medium text-xs tracking-[0.14em] uppercase mb-4">
-                FIRST-HOUR JUDGMENT
+              <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+                First-hour judgment
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
                 What schools usually need help deciding first
@@ -216,8 +216,8 @@ export default function SchoolsFaithPage() {
             </div>
 
             <aside className="rounded-lg border border-brand-border bg-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
-                Why The First Hour Matters
+              <p className="text-brand-teal text-xs font-medium mb-5">
+                Why the first hour matters
               </p>
               <p className="text-charcoal-mid text-sm leading-relaxed">
                 These are the decisions that shape trust in the first hour and
@@ -231,7 +231,7 @@ export default function SchoolsFaithPage() {
 
       <InlineEnquirySection
         title="Need confidential advice for a school or faith-based matter?"
-        body="CRC PR advises school leaders, boards, and faith-based organisations facing parent concern, media attention, governance pressure, or a sensitive incident. If it is urgent, call us now."
+        body="CRC Public Relations advises school leaders, boards, and faith-based organisations facing parent concern, media attention, governance pressure, or a sensitive incident. If it is urgent, call us now."
         bullets={[
           "Parent, staff, and community communication support",
           "Principal, board, and spokesperson advice",
@@ -241,15 +241,15 @@ export default function SchoolsFaithPage() {
         variant="white"
       />
 
-      {/* How CRC PR supports schools and faith-based organisations */}
+      {/* How CRC Public Relations supports schools and faith-based organisations */}
       <section className="bg-off-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl">
-            <p className="text-brand-gold font-sans font-medium text-xs tracking-[0.14em] uppercase mb-4">
-              HOW WE SUPPORT
+            <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+              How we support
             </p>
             <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
-              How CRC PR supports schools and faith-based organisations
+              How CRC Public Relations supports schools and faith-based organisations
             </h2>
             <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
               The need is rarely just media advice. School leaders usually need
@@ -281,8 +281,8 @@ export default function SchoolsFaithPage() {
                 key={item.title}
                 className="rounded-[28px] border border-brand-border bg-white p-7 md:p-8 shadow-[0_10px_30px_rgba(15,23,42,0.04)]"
               >
-                <div className="inline-flex items-center rounded-full bg-off-white px-3 py-1 text-[11px] font-medium tracking-[0.14em] uppercase text-brand-teal">
-                  Support Area
+                <div className="inline-flex items-center rounded-full bg-off-white px-3 py-1 text-[11px] font-medium text-brand-teal">
+                  Support area
                 </div>
                 <h3 className="font-heading font-black text-navy text-xl leading-snug mt-4 mb-4">
                   {item.title}
@@ -315,7 +315,7 @@ export default function SchoolsFaithPage() {
 
       <LeadMagnetBanner
         magnet="schoolsPlaybook"
-        title="Free: School Crisis Communications Playbook"
+        title="Free: School crisis communications playbook"
         description="A practical guide for school leaders covering the crisis scenarios most likely to affect independent, Catholic, and faith-based schools, including parent communications, media response, and early leadership decisions."
       />
 
@@ -326,7 +326,7 @@ export default function SchoolsFaithPage() {
 
       <PageClosingCTA
         title="School crises do not follow business hours."
-        body="When a serious incident affects a school or faith-based organisation, the communication decisions made in the first hour shape trust for months. CRC PR is available 24/7 because the most sensitive matters rarely arrive at a convenient time."
+        body="When a serious incident affects a school or faith-based organisation, the communication decisions made in the first hour shape trust for months. CRC Public Relations is available 24/7 because the most sensitive matters rarely arrive at a convenient time."
       />
     </>
   );

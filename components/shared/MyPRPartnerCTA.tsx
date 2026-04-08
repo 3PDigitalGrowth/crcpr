@@ -16,10 +16,10 @@ interface MyPRPartnerCTAProps {
 export function MyPRPartnerCTA({
   variant = "light",
   compact = false,
-  eyebrow = "MY PR PARTNER",
+  eyebrow = "My PR Partner",
   title = "Training, tools, and practical support between major advisory moments.",
-  description = "My PR Partner is CRC PR's training and support platform for communications teams, practitioners, and leaders who want practical guidance, workshops, and development resources.",
-  buttonLabel = "EXPLORE MY PR PARTNER",
+  description = "My PR Partner is CRC Public Relations' training and support platform for communications teams, practitioners, and leaders who want practical guidance, workshops, and development resources.",
+  buttonLabel = "Explore My PR Partner",
   className = "",
 }: MyPRPartnerCTAProps) {
   const isDark = variant === "dark";
@@ -33,7 +33,7 @@ export function MyPRPartnerCTA({
       } ${className}`}
     >
       <p
-        className={`text-xs font-medium tracking-[0.14em] uppercase mb-3 ${
+        className={`text-xs font-medium mb-3 ${
           isDark ? "text-brand-teal" : "text-brand-teal"
         }`}
       >
@@ -57,7 +57,7 @@ export function MyPRPartnerCTA({
         href={siteConfig.myPrPartnerUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className={`inline-flex items-center justify-center gap-2 font-heading font-black text-xs tracking-widest uppercase rounded-[4px] px-5 py-3 mt-4 transition ${
+        className={`inline-flex items-center justify-center gap-2 font-heading font-black text-xs rounded-[4px] px-5 py-3 mt-4 transition ${
           isDark
             ? "border border-white/20 bg-white/[0.04] text-white hover:bg-white/[0.08]"
             : "bg-brand-teal text-white hover:bg-link-teal"

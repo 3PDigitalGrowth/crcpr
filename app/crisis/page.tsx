@@ -22,7 +22,7 @@ const steps = [
   {
     num: "1",
     heading: "You speak to a senior advisor immediately.",
-    body: "Every call is answered by, or returned within minutes to, a senior CRC PR advisor with direct experience in crisis communications. You do not speak to a receptionist, a junior account manager, or an answering service. If the situation is live, we are with you from the first contact.",
+    body: "Every call is answered by, or returned within minutes to, a senior CRC Public Relations advisor with direct experience in crisis communications. You do not speak to a receptionist, a junior account manager, or an answering service. If the situation is live, we are with you from the first contact.",
   },
   {
     num: "2",
@@ -50,7 +50,7 @@ const trustColumns = [
   {
     Icon: Lock,
     heading: "Absolute confidentiality.",
-    body: "Everything shared with CRC PR is treated with complete confidentiality. We do not reference client engagements without explicit written permission. Our advisors operate with the same professional discretion as legal counsel. We have never, and will never, disclose the identity of a client in crisis.",
+    body: "Everything shared with CRC Public Relations is treated with complete confidentiality. We do not reference client engagements without explicit written permission. Our advisors operate with the same professional discretion as legal counsel. We have never, and will never, disclose the identity of a client in crisis.",
   },
   {
     Icon: Globe,
@@ -61,16 +61,16 @@ const trustColumns = [
 
 const outcomeCards = [
   {
-    sector: "INDUSTRY ASSOCIATION",
+    sector: "Industry association",
     outcome: "Legislation amended.",
     detail:
-      "A national peak body facing a Federal Government proposal that would have fundamentally altered the operating environment for its 800+ member organisations. CRC PR developed the communications strategy, prepared the executive officer for parliamentary and media engagement, and coordinated a coalition of member voices across a tight legislative timeline. Key provisions unfavourable to members were removed before the bill passed. Media coverage shifted from hostile to measured within six weeks.",
+      "A national peak body facing a Federal Government proposal that would have fundamentally altered the operating environment for its 800+ member organisations. CRC Public Relations developed the communications strategy, prepared the executive officer for parliamentary and media engagement, and coordinated a coalition of member voices across a tight legislative timeline. Key provisions unfavourable to members were removed before the bill passed. Media coverage shifted from hostile to measured within six weeks.",
   },
   {
-    sector: "INDEPENDENT SCHOOL",
+    sector: "Independent school",
     outcome: "Zero enrolment loss.",
     detail:
-      "A prominent independent school facing a serious safeguarding incident that became public before the school could communicate proactively with its community. Parent confidence was at immediate risk. CRC PR provided immediate crisis counsel, drafted a coordinated parent communications plan, prepared the principal for media enquiries, and worked alongside legal counsel to ensure all messaging was defensible and empathetic. No students withdrew. Parent trust surveys conducted six months later showed confidence in leadership had increased.",
+      "A prominent independent school facing a serious safeguarding incident that became public before the school could communicate proactively with its community. Parent confidence was at immediate risk. CRC Public Relations provided immediate crisis counsel, drafted a coordinated parent communications plan, prepared the principal for media enquiries, and worked alongside legal counsel to ensure all messaging was defensible and empathetic. No students withdrew. Parent trust surveys conducted six months later showed confidence in leadership had increased.",
   },
 ];
 
@@ -122,15 +122,15 @@ const faqJsonLd = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "How quickly can CRC PR respond to an active crisis?",
+      name: "How quickly can CRC Public Relations respond to an active crisis?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Immediately. Every crisis call is answered by, or returned within minutes to, a senior CRC PR advisor, regardless of the hour. During business hours, our target response is within 15 minutes of first contact. For after-hours situations, we return calls within the hour. We do not have a crisis hotline answered by junior staff. The phone number is Lyall Mercer's or a senior advisor's direct line.",
+        text: "Immediately. Every crisis call is answered by, or returned within minutes to, a senior CRC Public Relations advisor, regardless of the hour. During business hours, our target response is within 15 minutes of first contact. For after-hours situations, we return calls within the hour. We do not have a crisis hotline answered by junior staff. The phone number is Lyall Mercer's or a senior advisor's direct line.",
       },
     },
     {
       "@type": "Question",
-      name: "What types of crises does CRC PR handle?",
+      name: "What types of crises does CRC Public Relations handle?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "We have managed crisis communications across every sector and severity level, including: safety and operational incidents, governance and board disputes, regulatory investigations and inquiries, media exposés and investigative journalism, safeguarding disclosures in schools and faith-based organisations, industrial disputes and employee relations crises, social media pile-ons and digital reputation attacks, and Pacific-specific cultural and political crises. If your situation involves your reputation, we have experience with it.",
@@ -138,10 +138,10 @@ const faqJsonLd = {
     },
     {
       "@type": "Question",
-      name: "Is everything I share with CRC PR confidential?",
+      name: "Is everything I share with CRC Public Relations confidential?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Absolutely. Everything shared with CRC PR, including the fact that you contacted us, is treated with complete confidentiality. We do not reference client engagements without explicit written permission. Our advisors operate with the same professional discretion as legal counsel. We have turned away opportunities to be quoted in media articles about clients we have worked with, because we do not believe our clients' confidentiality should serve our profile.",
+        text: "Absolutely. Everything shared with CRC Public Relations, including the fact that you contacted us, is treated with complete confidentiality. We do not reference client engagements without explicit written permission. Our advisors operate with the same professional discretion as legal counsel. We have turned away opportunities to be quoted in media articles about clients we have worked with, because we do not believe our clients' confidentiality should serve our profile.",
       },
     },
     {
@@ -149,7 +149,7 @@ const faqJsonLd = {
       name: "Do you work with organisations outside Brisbane?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. CRC PR works with clients across Australia, Sydney, Melbourne, Canberra, Perth, regional Queensland, and interstate, as well as New Zealand and across the Pacific. We manage most crisis engagements remotely via phone and video, and travel for in-person work when the situation requires it. Geography has never been a barrier to a CRC PR engagement.",
+        text: "Yes. CRC Public Relations works with clients across Australia, Sydney, Melbourne, Canberra, Perth, regional Queensland, and interstate, as well as New Zealand and across the Pacific. We manage most crisis engagements remotely via phone and video, and travel for in-person work when the situation requires it. Geography has never been a barrier to a CRC Public Relations engagement.",
       },
     },
     {
@@ -181,21 +181,21 @@ export default function CrisisPage() {
       {/* 2. What happens when you call, answers the urgent visitor's question immediately */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <p className="text-brand-gold font-sans font-medium text-xs tracking-[0.14em] uppercase mb-4">
-            WHEN YOU CALL
+          <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+            When you call
           </p>
           <h2 className="font-heading font-black text-navy text-[38px] leading-tight">
             What happens in the first hour.
           </h2>
           <p className="text-charcoal text-[17px] leading-[1.75] max-w-2xl mt-5 mb-12">
-            In 25 years of crisis communications practice, CRC PR founder Lyall
+            In 25 years of crisis communications practice, CRC Public Relations founder Lyall
             Mercer has observed one consistent truth: the organisations that
             navigate crises well are not the ones that never face them. They are
             the ones that had senior counsel on the phone before the first
             journalist called.
           </p>
           <p className="text-charcoal text-[17px] leading-[1.75] max-w-2xl mb-12">
-            Here is what happens when you contact CRC PR during an active
+            Here is what happens when you contact CRC Public Relations during an active
             crisis.
           </p>
 
@@ -257,8 +257,8 @@ export default function CrisisPage() {
       {/* 6. Case outcomes, proof layer */}
       <section className="py-20 bg-off-white">
         <div className="max-w-7xl mx-auto px-6">
-          <p className="text-brand-gold font-sans font-medium text-xs tracking-[0.14em] uppercase mb-4">
-            CLIENT OUTCOMES
+          <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+            Client outcomes
           </p>
           <h2 className="font-heading font-black text-navy text-4xl leading-tight">
             The measure of crisis communications is what happens after.
@@ -275,7 +275,7 @@ export default function CrisisPage() {
                 key={card.outcome}
                 className="bg-white border border-brand-border rounded-lg p-8"
               >
-                <p className="text-brand-gold text-[9px] font-medium tracking-[0.18em] uppercase mb-3">
+                <p className="text-brand-gold text-[9px] font-medium mb-3">
                   {card.sector}
                 </p>
                 <h3 className="font-heading font-black text-navy text-2xl mb-4">
@@ -307,10 +307,10 @@ export default function CrisisPage() {
 
       {/* 9. Closing CTA, final catch-all */}
       <PageClosingCTA
-        eyebrow="WHEN THE STAKES ARE HIGH"
+        eyebrow="When the stakes are high"
         title="If the matter is live, call now. If the next one is coming, prepare now."
-        body="CRC PR supports organisations in both situations: urgent response when the issue is active, and disciplined preparation before pressure arrives. Both begin with a confidential conversation."
-        primaryLabel="BOOK A CRISIS PREPAREDNESS CONSULTATION"
+        body="CRC Public Relations supports organisations in both situations: urgent response when the issue is active, and disciplined preparation before pressure arrives. Both begin with a confidential conversation."
+        primaryLabel="Book a crisis preparedness consultation"
       />
     </>
   );

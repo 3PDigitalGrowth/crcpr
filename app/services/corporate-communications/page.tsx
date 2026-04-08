@@ -69,7 +69,7 @@ const faqs = [
   {
     question: "Do you work directly with boards, CEOs, and general counsel?",
     answer:
-      "Yes. CRC PR is structured around direct senior access. We routinely support chairs, CEOs, general counsel, and executive teams on matters where governance, reputation, and communication are tightly connected.",
+      "Yes. CRC Public Relations is structured around direct senior access. We routinely support chairs, CEOs, general counsel, and executive teams on matters where governance, reputation, and communication are tightly connected.",
   },
   {
     question: "What kinds of matters does corporate communications support usually cover?",
@@ -79,7 +79,7 @@ const faqs = [
   {
     question: "How is this different from a larger PR agency retainer?",
     answer:
-      "The difference is direct access and judgement. At CRC PR, the people you brief are the people doing the advisory work. There is no junior handoff and no large account structure sitting between leadership and the advice.",
+      "The difference is direct access and judgement. At CRC Public Relations, the people you brief are the people doing the advisory work. There is no junior handoff and no large account structure sitting between leadership and the advice.",
   },
 ];
 
@@ -92,10 +92,10 @@ export default function CorporateCommunicationsPage() {
       />
 
       <PageHero
-        eyebrow="CORPORATE COMMUNICATIONS"
+        eyebrow="Corporate communications"
         title="Corporate communications that build trust and protect value."
         description="Senior counsel for internal and external messaging, stakeholder engagement, media relations, and executive communications, delivered directly by experienced advisors."
-        ctaLabel="BOOK A CONSULTATION"
+        ctaLabel="Book a consultation"
         ctaHref="/contact"
       />
 
@@ -109,8 +109,8 @@ export default function CorporateCommunicationsPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_340px] gap-10 items-start">
             <div className="max-w-3xl">
-              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
-                Strategic Clarity
+              <p className="text-brand-gold text-xs font-medium mb-4">
+                Strategic clarity
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
                 Effective corporate communications is about control, consistency,
@@ -133,7 +133,7 @@ export default function CorporateCommunicationsPage() {
                   responds to events rather than shapes them.
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
-                  CRC PR works with organisations to build the systems,
+                  CRC Public Relations works with organisations to build the systems,
                   strategies, and capabilities that shift communications from
                   reactive to proactive, and to provide the senior-level counsel
                   that ensures every significant communication is considered,
@@ -143,8 +143,8 @@ export default function CorporateCommunicationsPage() {
             </div>
 
             <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
-                What Strong Corporate Communications Looks Like
+              <p className="text-brand-teal text-xs font-medium mb-5">
+                What strong corporate communications looks like
               </p>
               <div className="space-y-4">
                 <div className="border-l-[3px] border-brand-gold pl-4">
@@ -183,8 +183,8 @@ export default function CorporateCommunicationsPage() {
       {/* Process section moved earlier to match crisis flow */}
       <section className="bg-off-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <p className="text-brand-gold font-sans font-medium text-xs tracking-[0.14em] uppercase mb-4">
-            WHEN YOU ENGAGE CRC PR
+          <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+            When you engage CRC Public Relations
           </p>
           <h2 className="font-heading font-black text-navy text-3xl mb-6">
             How a corporate communications engagement begins
@@ -323,8 +323,8 @@ export default function CorporateCommunicationsPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.1fr)_360px] gap-10 items-start">
             <div className="max-w-3xl">
-              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
-                Common Failure Point
+              <p className="text-brand-gold text-xs font-medium mb-4">
+                Common failure point
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl mb-6 leading-tight">
                 Where corporate communications usually breaks down
@@ -352,8 +352,8 @@ export default function CorporateCommunicationsPage() {
             </div>
 
             <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
-                Signs Communication Has Fragmented
+              <p className="text-brand-teal text-xs font-medium mb-5">
+                Signs communication has fragmented
               </p>
               <div className="space-y-4">
                 <div className="border-l-[3px] border-brand-gold pl-4">
@@ -394,8 +394,8 @@ export default function CorporateCommunicationsPage() {
           <div className="rounded-lg border border-brand-border bg-off-white p-8 md:p-10">
             <div className="grid grid-cols-1 lg:grid-cols-[320px_minmax(0,1fr)] gap-10 items-start">
               <div className="rounded-lg bg-navy p-6 md:p-7">
-                <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
-                  CRC PR Model
+                <p className="text-brand-gold text-xs font-medium mb-4">
+                  CRC Public Relations model
                 </p>
                 <h2 className="font-heading font-black text-white text-2xl leading-tight mb-4">
                   Senior counsel, not account management
@@ -409,14 +409,14 @@ export default function CorporateCommunicationsPage() {
               <div className="max-w-3xl">
                 <div className="space-y-6">
                   <p className="text-charcoal text-[15px] leading-relaxed">
-                    The difference between CRC PR and a larger agency is not
+                    The difference between CRC Public Relations and a larger agency is not
                     size. It is access. At most large PR firms, you brief a
                     senior person and are then handed to a team of account
                     managers and junior staff who execute the work. Your senior
                     contact becomes a figurehead rather than an advisor.
                   </p>
                   <p className="text-charcoal text-[15px] leading-relaxed">
-                    At CRC PR, every engagement is led by an experienced senior
+                    At CRC Public Relations, every engagement is led by an experienced senior
                     advisor from start to finish. You work directly with the
                     person who has the expertise, the judgment, and the
                     accountability for the outcome. This is not a service model
@@ -470,14 +470,14 @@ export default function CorporateCommunicationsPage() {
       <section className="bg-off-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl">
-            <p className="text-brand-gold font-sans font-medium text-xs tracking-[0.14em] uppercase mb-4">
-              Related Sectors
+            <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+              Related sectors
             </p>
             <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
               Sector experience that shapes the advice.
             </h2>
             <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
-              CRC PR has delivered corporate communications programmes across a
+              CRC Public Relations has delivered corporate communications programmes across a
               range of high-stakes sectors. Explore the pages below to see how
               our approach changes when the operating environment, stakeholder
               pressure, and communications risks are different.
@@ -495,7 +495,7 @@ export default function CorporateCommunicationsPage() {
                   {sector.label}
                 </p>
                 <p className="text-charcoal-mid text-sm mt-2">
-                  Explore CRC PR&apos;s sector-specific communications approach.
+                  Explore CRC Public Relations&apos; sector-specific communications approach.
                 </p>
               </Link>
             ))}
@@ -507,7 +507,7 @@ export default function CorporateCommunicationsPage() {
         magnet="crisisPlanTemplate"
         variant="dark"
         title="Is your organisation's communications strategy ready for scrutiny?"
-        description="Download the CRC PR Crisis Communications Plan Template, the framework we use with listed companies, government departments, and associations to define escalation pathways, stakeholder sequencing, and message discipline before pressure arrives."
+        description="Download the CRC Public Relations Crisis Communications Plan Template, the framework we use with listed companies, government departments, and associations to define escalation pathways, stakeholder sequencing, and message discipline before pressure arrives."
         highlights={[
           "Useful for boards and executive teams",
           "Clarifies escalation and approval pathways",
@@ -523,7 +523,7 @@ export default function CorporateCommunicationsPage() {
 
       <PageClosingCTA
         title="Ready to build a communications strategy that holds up under pressure?"
-        body="Whether you are preparing for a major announcement, navigating a sensitive stakeholder situation, or building long-term communications capability, CRC PR provides direct access to senior counsel from the first conversation."
+        body="Whether you are preparing for a major announcement, navigating a sensitive stakeholder situation, or building long-term communications capability, CRC Public Relations provides direct access to senior counsel from the first conversation."
       />
     </>
   );

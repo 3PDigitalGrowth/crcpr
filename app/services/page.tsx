@@ -34,42 +34,42 @@ const services: {
 }[] = [
   {
     icon: "Building2",
-    title: "Corporate Communications",
+    title: "Corporate communications",
     slug: "corporate-communications",
     description:
       "Strategic counsel for internal and external messaging. We help organisations communicate with clarity, consistency, and authority across stakeholders, media, and the public.",
   },
   {
     icon: "Shield",
-    title: "Reputation Management",
+    title: "Reputation management",
     slug: "reputation-management",
     description:
       "Your reputation is your most valuable asset. We assess vulnerabilities, monitor threats, and build strategies that protect what matters most, before and after issues surface.",
   },
   {
     icon: "AlertTriangle",
-    title: "Issues Management",
+    title: "Issues management",
     slug: "issues-management",
     description:
       "Proactive identification and management of emerging issues. We help organisations get ahead of potential crises with early intervention, stakeholder mapping, and strategic messaging.",
   },
   {
     icon: "Zap",
-    title: "Crisis Communications",
+    title: "Crisis communications",
     slug: "crisis-communications",
     description:
       "24/7 crisis response, media management, and communications coordination. We have been in the room when it matters most, guiding organisations through the most significant challenges.",
   },
   {
     icon: "Radio",
-    title: "Media Strategy",
+    title: "Media strategy",
     slug: "media-strategy",
     description:
       "Proactive media engagement, spokesperson preparation, and sustained media presence. We help organisations build and maintain relationships with journalists and editors.",
   },
   {
     icon: "Globe",
-    title: "Digital Media",
+    title: "Digital media",
     slug: "digital-media",
     description:
       "Online reputation management, social media strategy, and digital communications. We help organisations navigate the digital landscape with authority.",
@@ -87,7 +87,7 @@ const proofItems = [
     label: "High-stakes focus",
     value: "Pressure-tested",
     detail:
-      "CRC PR is strongest where reputation, governance, stakeholder confidence, or urgent response genuinely matter.",
+      "CRC Public Relations is strongest where reputation, governance, stakeholder confidence, or urgent response genuinely matter.",
   },
   {
     label: "Practical outcomes",
@@ -99,7 +99,7 @@ const proofItems = [
 
 const faqs = [
   {
-    question: "How do we know which CRC PR service is the right starting point?",
+    question: "How do we know which CRC Public Relations service is the right starting point?",
     answer:
       "Most clients arrive with a situation rather than a neatly labelled service category. We help identify whether the immediate need is strategic communications counsel, issues management, crisis support, media strategy, reputation work, or a blend of several services.",
   },
@@ -111,7 +111,7 @@ const faqs = [
   {
     question: "Are all services led by senior advisors?",
     answer:
-      "Yes. CRC PR is structured around direct senior counsel. There is no separate junior account model for complex or sensitive work.",
+      "Yes. CRC Public Relations is structured around direct senior counsel. There is no separate junior account model for complex or sensitive work.",
   },
 ];
 
@@ -119,10 +119,10 @@ export default function ServicesPage() {
   return (
     <>
       <PageHero
-        eyebrow="FULL SERVICE OFFERING"
+        eyebrow="Full service offering"
         title="Corporate communications and PR services."
-        description="CRC PR provides senior-level counsel across the full spectrum of corporate communications. Every engagement is led by experienced advisors who work directly with your leadership team."
-        ctaLabel="BOOK A CONSULTATION"
+        description="CRC Public Relations provides senior-level counsel across the full spectrum of corporate communications. Every engagement is led by experienced advisors who work directly with your leadership team."
+        ctaLabel="Book a consultation"
         ctaHref="/contact"
       />
 
@@ -135,8 +135,8 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_360px] gap-10 items-start">
             <div className="max-w-3xl">
-              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
-                How We Think About Services
+              <p className="text-brand-gold text-xs font-medium mb-4">
+                How we think about services
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
                 Better judgement matters more than more activity.
@@ -150,7 +150,7 @@ export default function ServicesPage() {
 
               <div className="space-y-6 mt-8">
                 <p className="text-charcoal-mid text-[15px] leading-relaxed">
-                  That is why CRC PR&apos;s services are designed around
+                  That is why CRC Public Relations&apos; services are designed around
                   pressure points, not agency departments.
                 </p>
                 <p className="text-charcoal-mid text-[15px] leading-relaxed">
@@ -164,8 +164,8 @@ export default function ServicesPage() {
             </div>
 
             <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
-                What The Right Starting Point Solves
+              <p className="text-brand-teal text-xs font-medium mb-5">
+                What the right starting point solves
               </p>
 
               <div className="space-y-4">
@@ -206,13 +206,13 @@ export default function ServicesPage() {
 
       <InlineEnquirySection
         title="Not sure which service is the right starting point?"
-        body="That is common. Many clients come to CRC PR with a situation rather than a neatly labelled service category. We can help identify the right starting point and the right next step."
+        body="That is common. Many clients come to CRC Public Relations with a situation rather than a neatly labelled service category. We can help identify the right starting point and the right next step."
         bullets={[
           "Sensitive matters needing senior communications judgement",
           "Preparation before a major announcement or issue escalates",
           "Reputation, media, crisis, and stakeholder communication advice",
         ]}
-        defaultMessage="We would like advice on which CRC PR service is the right starting point for our situation."
+        defaultMessage="We would like advice on which CRC Public Relations service is the right starting point for our situation."
         variant="white"
       />
 
@@ -254,7 +254,7 @@ export default function ServicesPage() {
       <LeadMagnetBanner
         magnet="reputationAssessment"
         title="Want a clearer view of where your organisation is exposed?"
-        description="Start with the CRC PR Reputation Vulnerability Assessment. It gives leadership a fast view of media, stakeholder, governance, crisis, and digital exposure so the next decision is based on evidence rather than instinct."
+        description="Start with the CRC Public Relations Reputation Vulnerability Assessment. It gives leadership a fast view of media, stakeholder, governance, crisis, and digital exposure so the next decision is based on evidence rather than instinct."
       />
 
       <div className="max-w-3xl mx-auto px-6 py-16">
@@ -263,12 +263,12 @@ export default function ServicesPage() {
 
       <FAQSection
         items={faqs}
-        titleText="Common questions about CRC PR services"
+        titleText="Common questions about CRC Public Relations services"
       />
 
       <PageClosingCTA
         title="Not sure which service is the right starting point?"
-        body="That is common. Many clients come to CRC PR with a situation rather than a neatly labelled service category. We can help you identify the right starting point and the right next step."
+        body="That is common. Many clients come to CRC Public Relations with a situation rather than a neatly labelled service category. We can help you identify the right starting point and the right next step."
       />
     </>
   );

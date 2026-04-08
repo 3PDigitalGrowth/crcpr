@@ -26,7 +26,7 @@ const proofItems = [
     label: "Firm model",
     value: "Boutique by design",
     detail:
-      "CRC PR is deliberately structured around direct senior counsel rather than a layered agency model.",
+      "CRC Public Relations is deliberately structured around direct senior counsel rather than a layered agency model.",
   },
   {
     label: "Operating focus",
@@ -68,12 +68,12 @@ const teamMembers = [
     summary:
       "Senior communications strategist focused on training, practitioner development, and workshop delivery.",
     bio: [
-      "Barbara Gorogh is the co-founder of My PR Partner, CRC PR's training platform for communications practitioners and spokesperson development. Her work sits at the intersection of communications capability, practical training design, and the delivery of programmes that help leaders perform more confidently under pressure.",
-      "She brings deep experience in communications education, practitioner support, and the translation of crisis and media strategy into practical development programmes. Barbara plays a central role in how CRC PR turns senior advisory experience into structured training for organisations and professionals across Australia.",
+      "Barbara Gorogh is the co-founder of My PR Partner, CRC Public Relations' training platform for communications practitioners and spokesperson development. Her work sits at the intersection of communications capability, practical training design, and the delivery of programmes that help leaders perform more confidently under pressure.",
+      "She brings deep experience in communications education, practitioner support, and the translation of crisis and media strategy into practical development programmes. Barbara plays a central role in how CRC Public Relations turns senior advisory experience into structured training for organisations and professionals across Australia.",
     ],
     links: [
       { label: "My PR Partner", href: siteConfig.myPrPartnerUrl },
-      { label: "CRC PR LinkedIn", href: siteConfig.linkedInUrl },
+      { label: "CRC Public Relations LinkedIn", href: siteConfig.linkedInUrl },
     ],
   },
 ] as const;
@@ -82,15 +82,15 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="ABOUT US"
+        eyebrow="About us"
         title="About CRC Public Relations"
         description="Boutique corporate PR. 25 years of trusted counsel for companies, governments, and organisations across Australia, the Pacific, and internationally."
-        ctaLabel="BOOK A CONSULTATION"
+        ctaLabel="Book a consultation"
         ctaHref="/contact"
       />
 
       <PageProofStrip
-        title="CRC PR exists for leaders who need judgement, not volume."
+        title="CRC Public Relations exists for leaders who need judgement, not volume."
         items={[...proofItems]}
       />
 
@@ -107,7 +107,7 @@ export default function AboutPage() {
               not account managers or junior staff.
             </p>
             <p className="text-charcoal-mid text-[15px] leading-relaxed mt-4">
-              For over 25 years, CRC PR has provided that access. We are a
+              For over 25 years, CRC Public Relations has provided that access. We are a
               boutique firm by design. Every client engagement is led by a
               senior advisor with deep expertise in corporate communications,
               reputation management, and crisis response.
@@ -135,7 +135,7 @@ export default function AboutPage() {
       <section className="bg-off-white py-16">
         <div className="max-w-3xl mx-auto px-6 text-center">
           <h2 className="font-heading font-black text-navy text-3xl">
-            Our Mission
+            Our mission
           </h2>
           <p className="italic text-charcoal text-base leading-relaxed mt-6">
             Being boutique and personal means that unlike many PR firms, at CRC
@@ -147,27 +147,27 @@ export default function AboutPage() {
 
       <InlineEnquirySection
         title="Need to speak with the firm directly?"
-        body="CRC PR exists for organisations that want senior communications counsel from the first conversation. If your situation is sensitive, high-stakes, or too important for a junior handoff, get in touch."
+        body="CRC Public Relations exists for organisations that want senior communications counsel from the first conversation. If your situation is sensitive, high-stakes, or too important for a junior handoff, get in touch."
         bullets={[
           "Direct access to experienced senior advisors",
           "Support across corporate, crisis, reputation, and stakeholder matters",
           "Confidential review of the situation before recommending a next step",
         ]}
-        defaultMessage="We would like to speak directly with CRC PR about a sensitive communications matter."
+        defaultMessage="We would like to speak directly with CRC Public Relations about a sensitive communications matter."
         variant="white"
       />
 
       <section className="bg-white py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl">
-            <p className="text-brand-gold font-sans font-medium text-xs tracking-[0.14em] uppercase mb-4">
-              Leadership Team
+            <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+              Leadership team
             </p>
             <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight">
-              Our Team
+              Our team
             </h2>
             <p className="text-charcoal-mid text-[15px] leading-relaxed mt-6">
-              CRC PR is intentionally senior-led. The people you meet are the
+              CRC Public Relations is intentionally senior-led. The people you meet are the
               people who shape the advice, lead the work, and stay close to the
               matter when judgement matters most.
             </p>
@@ -186,7 +186,7 @@ export default function AboutPage() {
                   />
 
                   <div className="flex-1">
-                    <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-3">
+                    <p className="text-brand-teal text-xs font-medium mb-3">
                       {member.initials}
                     </p>
                     <h3 className="font-heading font-black text-navy text-2xl leading-tight">
@@ -214,7 +214,7 @@ export default function AboutPage() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 pt-8 border-t border-brand-border">
                   <div className="rounded-xl bg-white border border-brand-border p-5">
-                    <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-3">
+                    <p className="text-brand-teal text-xs font-medium mb-3">
                       Contact
                     </p>
                     <div className="space-y-2 text-sm">
@@ -238,7 +238,7 @@ export default function AboutPage() {
                   </div>
 
                   <div className="rounded-xl bg-white border border-brand-border p-5">
-                    <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-3">
+                    <p className="text-brand-teal text-xs font-medium mb-3">
                       Links
                     </p>
                     <div className="space-y-2 text-sm">
@@ -278,7 +278,7 @@ export default function AboutPage() {
 
       <PageClosingCTA
         title="Need to speak with the firm directly?"
-        body="CRC PR works with organisations that want senior communications counsel from the first conversation. If your situation is sensitive, high-stakes, or simply too important for a junior handoff, get in touch."
+        body="CRC Public Relations works with organisations that want senior communications counsel from the first conversation. If your situation is sensitive, high-stakes, or simply too important for a junior handoff, get in touch."
       />
     </>
   );

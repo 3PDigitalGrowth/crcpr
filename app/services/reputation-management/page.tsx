@@ -30,10 +30,10 @@ const jsonLd = {
 };
 
 const sectorLinks = [
-  { label: "ASX-Listed Companies", href: "/clients/corporate" },
-  { label: "Industry Associations", href: "/clients/industry-associations" },
+  { label: "ASX-listed companies", href: "/clients/corporate" },
+  { label: "Industry associations", href: "/clients/industry-associations" },
   { label: "Government", href: "/clients/government" },
-  { label: "Schools & Faith-Based", href: "/clients/schools-faith" },
+  { label: "Schools and faith-based", href: "/clients/schools-faith" },
 ] as const;
 
 const proofItems = [
@@ -69,14 +69,14 @@ const faqs = [
       "Boards, CEOs, communications leaders, and risk teams use it when they want a more realistic view of stakeholder, media, digital, and governance exposure. It is especially useful before major change, growth, scrutiny, or leadership transition.",
   },
   {
-    question: "Can CRC PR help if reputation damage has already occurred?",
+    question: "Can CRC Public Relations help if reputation damage has already occurred?",
     answer:
       "Yes. Reputation work often starts after a trust event. In those cases we assess what caused the damage, how key stakeholders currently perceive the organisation, and what communication and behaviour changes are needed to rebuild confidence over time.",
   },
   {
     question: "Is this a one-off project or an ongoing advisory relationship?",
     answer:
-      "It can be either. Some organisations want a single vulnerability assessment or recovery roadmap. Others retain CRC PR as an ongoing senior reputation partner because they want regular review points, monitoring, and strategic counsel before new issues emerge.",
+      "It can be either. Some organisations want a single vulnerability assessment or recovery roadmap. Others retain CRC Public Relations as an ongoing senior reputation partner because they want regular review points, monitoring, and strategic counsel before new issues emerge.",
   },
 ];
 
@@ -89,10 +89,10 @@ export default function ReputationManagementPage() {
       />
 
       <PageHero
-        eyebrow="REPUTATION MANAGEMENT"
+        eyebrow="Reputation management"
         title="Your reputation is your most valuable asset. Protect it before you need to."
         description="Vulnerability assessments, stakeholder perception analysis, reputation monitoring, and long-term reputation protection for organisations that cannot afford to find out they were exposed the hard way."
-        ctaLabel="BOOK A CONSULTATION"
+        ctaLabel="Book a consultation"
         ctaHref="/contact"
       />
 
@@ -106,8 +106,8 @@ export default function ReputationManagementPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_340px] gap-10 items-start">
             <div className="max-w-3xl">
-              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
-                Reputation Reality
+              <p className="text-brand-gold text-xs font-medium mb-4">
+                Reputation reality
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
                 Reputation damage usually starts long before the headline.
@@ -129,7 +129,7 @@ export default function ReputationManagementPage() {
                   strategic.
                 </p>
                 <p className="text-charcoal text-base leading-relaxed">
-                  CRC PR works with organisations to identify these
+                  CRC Public Relations works with organisations to identify these
                   vulnerabilities before they become headlines, and to build the
                   communications frameworks and stakeholder relationships that
                   protect reputation over the long term.
@@ -138,8 +138,8 @@ export default function ReputationManagementPage() {
             </div>
 
             <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
-                Early Warning Signs
+              <p className="text-brand-teal text-xs font-medium mb-5">
+                Early warning signs
               </p>
               <div className="space-y-4">
                 <div className="border-l-[3px] border-brand-gold pl-4">
@@ -203,8 +203,8 @@ export default function ReputationManagementPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] gap-10 items-start">
             <div className="lg:sticky lg:top-24">
-              <p className="text-brand-gold text-xs font-medium tracking-[0.14em] uppercase mb-4">
-                Start Here
+              <p className="text-brand-gold text-xs font-medium mb-4">
+                Start here
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
                 Find out where your organisation is exposed
@@ -226,8 +226,8 @@ export default function ReputationManagementPage() {
               </div>
 
               <div className="mt-8 rounded-lg border border-brand-border bg-off-white p-6">
-                <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-4">
-                  What You Get
+                <p className="text-brand-teal text-xs font-medium mb-4">
+                  What you get
                 </p>
                 <div className="space-y-4">
                   <div className="border-l-[3px] border-brand-gold pl-4">
@@ -270,8 +270,8 @@ export default function ReputationManagementPage() {
       <section className="py-12 bg-off-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="bg-navy rounded-lg p-8">
-            <p className="text-brand-gold text-xs font-medium tracking-[0.14em] uppercase mb-3">
-              NEXT STEP
+            <p className="text-brand-gold text-xs font-medium mb-3">
+              Next step
             </p>
             <h3 className="font-heading font-black text-white text-2xl mb-3">
               Want to discuss your results?
@@ -283,7 +283,7 @@ export default function ReputationManagementPage() {
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs tracking-widest uppercase px-6 py-3 rounded-[4px] hover:bg-gold-light transition"
+              className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs px-6 py-3 rounded-[4px] hover:bg-gold-light transition"
             >
               Book a confidential consultation →
             </Link>
@@ -295,11 +295,11 @@ export default function ReputationManagementPage() {
       <section className="bg-off-white py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl mb-12">
-            <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
-              Reputation Framework
+            <p className="text-brand-gold text-xs font-medium mb-4">
+              Reputation framework
             </p>
             <h2 className="font-heading font-black text-navy text-3xl md:text-4xl mb-6 leading-tight">
-              How CRC PR approaches reputation management
+              How CRC Public Relations approaches reputation management
             </h2>
             <p className="text-charcoal text-base leading-relaxed">
               Reputation management works best when leadership can see risk
@@ -339,7 +339,7 @@ export default function ReputationManagementPage() {
                 key={item.title}
                 className="rounded-lg border border-brand-border bg-white p-7 md:p-8"
               >
-                <p className="text-brand-gold font-heading font-black text-sm tracking-[0.16em] uppercase mb-4">
+                <p className="text-brand-gold font-heading font-black text-sm mb-4">
                   {item.num}
                 </p>
                 <h3 className="font-heading font-black text-navy text-xl mb-4 leading-snug">
@@ -358,8 +358,8 @@ export default function ReputationManagementPage() {
       <section className="bg-warm-white py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl mb-10">
-            <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
-              Long-Term Discipline
+            <p className="text-brand-gold text-xs font-medium mb-4">
+              Long-term discipline
             </p>
             <h2 className="font-heading font-black text-navy text-3xl md:text-4xl mb-6 leading-tight">
               Why most reputation management fails, and what to do differently
@@ -368,8 +368,8 @@ export default function ReputationManagementPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="rounded-lg border border-brand-border bg-off-white p-7 md:p-8">
-              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-4">
-                What Usually Goes Wrong
+              <p className="text-brand-teal text-xs font-medium mb-4">
+                What usually goes wrong
               </p>
               <div className="space-y-6">
                 <p className="text-charcoal text-base leading-relaxed">
@@ -393,8 +393,8 @@ export default function ReputationManagementPage() {
             </div>
 
             <div className="rounded-lg border border-brand-border bg-white p-7 md:p-8 shadow-sm shadow-navy/5">
-              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-4">
-                What Stronger Organisations Do
+              <p className="text-brand-teal text-xs font-medium mb-4">
+                What stronger organisations do
               </p>
               <div className="space-y-6">
                 <p className="text-text-body text-base leading-relaxed">
@@ -407,7 +407,7 @@ export default function ReputationManagementPage() {
                   build and sustain stakeholder trust deliberately.
                 </p>
                 <p className="text-text-body text-base leading-relaxed">
-                  CRC PR works as a long-term reputation partner for
+                  CRC Public Relations works as a long-term reputation partner for
                   organisations that have made this decision. We are not a firm
                   you call when something goes wrong. We are the firm you retain
                   so that when something does go wrong, and it will, you are
@@ -483,8 +483,8 @@ export default function ReputationManagementPage() {
 
       <PageClosingCTA
         title="Reputation damage is easier to prevent than to reverse."
-        body="CRC PR works with organisations that want a realistic view of where they are exposed, what needs to be strengthened, and what their leadership team should do next."
-        primaryLabel="DISCUSS YOUR REPUTATION MANAGEMENT NEEDS"
+        body="CRC Public Relations works with organisations that want a realistic view of where they are exposed, what needs to be strengthened, and what their leadership team should do next."
+        primaryLabel="Discuss your reputation management needs"
       />
     </>
   );

@@ -95,7 +95,7 @@ const faqs = [
   {
     question: "Who do you work with in the Pacific?",
     answer:
-      "CRC PR works with Pacific governments, regional organisations, NGOs, development partners, and Australian organisations operating in the region. The common requirement is communications judgement shaped by genuine Pacific experience.",
+      "CRC Public Relations works with Pacific governments, regional organisations, NGOs, development partners, and Australian organisations operating in the region. The common requirement is communications judgement shaped by genuine Pacific experience.",
   },
   {
     question: "Can you help with politically or culturally sensitive Pacific matters?",
@@ -113,10 +113,10 @@ export default function PacificPage() {
       />
 
       <PageHero
-        eyebrow="PACIFIC ADVISORY"
+        eyebrow="Pacific advisory"
         title="The Pacific demands communications expertise that most Australian firms don't have."
-        description="CRC PR is the only Australian corporate PR firm with deep, sustained expertise across Pacific Island nations: government relations, development communications, cross-cultural stakeholder engagement, and crisis response."
-        ctaLabel="WORK WITH US IN THE PACIFIC"
+        description="CRC Public Relations is the only Australian corporate PR firm with deep, sustained expertise across Pacific Island nations: government relations, development communications, cross-cultural stakeholder engagement, and crisis response."
+        ctaLabel="Work with us in the Pacific"
         ctaHref="/contact"
       />
 
@@ -130,8 +130,8 @@ export default function PacificPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.2fr)_340px] gap-10 items-start">
             <div className="max-w-3xl">
-              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
-                Pacific Context
+              <p className="text-brand-gold text-xs font-medium mb-4">
+                Pacific context
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
                 The Pacific is not one communications market. It is a region of
@@ -150,7 +150,7 @@ export default function PacificPage() {
                 <p className="text-charcoal text-[15px] leading-relaxed">
                   Most Australian communications firms with Pacific clients
                   treat the region as an extension of their domestic practice.
-                  CRC PR does not. Our Pacific advisory work is built on 25
+                  CRC Public Relations does not. Our Pacific advisory work is built on 25
                   years of direct engagement with Pacific Island governments,
                   development partners, regional organisations, and private
                   sector clients operating across the Pacific. We have worked in
@@ -169,7 +169,7 @@ export default function PacificPage() {
             </div>
 
             <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
+              <p className="text-brand-teal text-xs font-medium mb-5">
                 What serious Pacific work requires
               </p>
               <div className="space-y-4">
@@ -211,8 +211,8 @@ export default function PacificPage() {
           <div className="rounded-lg border border-brand-border bg-off-white p-8 md:p-10">
             <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_360px] gap-10 items-start">
               <div className="max-w-3xl">
-                <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
-                  Why Generic Advice Fails
+                <p className="text-brand-gold text-xs font-medium mb-4">
+                  Why generic advice fails
                 </p>
                 <h2 className="font-heading font-black text-navy text-3xl md:text-4xl mb-6 leading-tight">
                   Why generic communications advice fails in the Pacific
@@ -289,7 +289,7 @@ export default function PacificPage() {
             Our Pacific footprint
           </h2>
           <p className="text-charcoal-mid text-base mt-4">
-            CRC PR has worked with clients and stakeholders across the following
+            CRC Public Relations has worked with clients and stakeholders across the following
             Pacific Island nations and territories:
           </p>
           <div className="flex flex-wrap gap-3 mt-8">
@@ -422,7 +422,7 @@ export default function PacificPage() {
             damaged relationships that took years to build.
           </p>
           <p className="text-charcoal text-[15px] leading-relaxed mt-6">
-            CRC PR approaches Pacific communications from the same principle
+            CRC Public Relations approaches Pacific communications from the same principle
             that guides all of our work: that the most effective communications
             is always built on a genuine understanding of your audience. In
             Pacific contexts, this means understanding specific cultural
@@ -453,8 +453,8 @@ export default function PacificPage() {
 
       <PageClosingCTA
         title="Working in the Pacific? Talk to the firm that genuinely knows the region."
-        body="Whether you are operating across multiple Pacific jurisdictions or preparing for a single sensitive engagement, CRC PR provides senior communications counsel grounded in regional experience."
-        primaryLabel="BOOK A PACIFIC ADVISORY CONSULTATION"
+        body="Whether you are operating across multiple Pacific jurisdictions or preparing for a single sensitive engagement, CRC Public Relations provides senior communications counsel grounded in regional experience."
+        primaryLabel="Book a Pacific advisory consultation"
       />
     </>
   );

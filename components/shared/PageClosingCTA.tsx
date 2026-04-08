@@ -13,10 +13,10 @@ interface PageClosingCTAProps {
 }
 
 export function PageClosingCTA({
-  eyebrow = "NEXT STEP",
+  eyebrow = "Next step",
   title,
   body,
-  primaryLabel = "BOOK A CONFIDENTIAL CONSULTATION",
+  primaryLabel = "Book a confidential consultation",
   primaryHref = "/contact",
   secondaryLabel,
   secondaryHref,
@@ -28,7 +28,7 @@ export function PageClosingCTA({
         <div className="bg-navy text-white rounded-lg overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-[1.4fr_300px]">
             <div className="p-8 md:p-12">
-              <p className="text-brand-gold font-sans font-medium text-xs tracking-[0.14em] uppercase mb-4">
+              <p className="text-brand-gold font-sans font-medium text-xs mb-4">
                 {eyebrow}
               </p>
               <h2 className="font-heading font-black text-3xl mb-5 max-w-3xl">
@@ -41,7 +41,7 @@ export function PageClosingCTA({
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mt-8">
                 <Link
                   href={primaryHref}
-                  className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs tracking-widest uppercase rounded-[4px] px-8 py-4 hover:bg-gold-light transition"
+                  className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs rounded-[4px] px-8 py-4 hover:bg-gold-light transition"
                 >
                   {primaryLabel}
                 </Link>
@@ -52,14 +52,14 @@ export function PageClosingCTA({
                         href={secondaryHref}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center gap-2 border border-white/20 bg-white/[0.04] text-white font-heading font-black text-xs tracking-widest uppercase rounded-[4px] px-6 py-4 hover:bg-white/[0.08] transition"
+                        className="inline-flex items-center justify-center gap-2 border border-white/20 bg-white/[0.04] text-white font-heading font-black text-xs rounded-[4px] px-6 py-4 hover:bg-white/[0.08] transition"
                       >
                         {secondaryLabel}
                       </a>
                     ) : (
                       <Link
                         href={secondaryHref}
-                        className="inline-flex items-center justify-center gap-2 border border-white/20 bg-white/[0.04] text-white font-heading font-black text-xs tracking-widest uppercase rounded-[4px] px-6 py-4 hover:bg-white/[0.08] transition"
+                        className="inline-flex items-center justify-center gap-2 border border-white/20 bg-white/[0.04] text-white font-heading font-black text-xs rounded-[4px] px-6 py-4 hover:bg-white/[0.08] transition"
                       >
                         {secondaryLabel}
                       </Link>
@@ -76,7 +76,7 @@ export function PageClosingCTA({
 
             <div className="border-t lg:border-t-0 lg:border-l border-white/10 bg-white/[0.03] p-8 md:p-10 flex flex-col justify-between">
               <div>
-                <p className="text-white/35 text-xs tracking-[0.14em] uppercase mb-3">
+                <p className="text-white/35 text-xs mb-3">
                   Speak to a senior advisor
                 </p>
                 <p className="text-white/65 text-sm leading-relaxed">

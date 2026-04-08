@@ -13,10 +13,10 @@ export default function PrivacyPolicyPage() {
   return (
     <>
       <PageHero
-        eyebrow="LEGAL"
+        eyebrow="Legal"
         title="Privacy Policy"
         description="How CRC Public Relations collects, uses, and protects personal information in connection with this website and our professional services."
-        ctaLabel="CONTACT CRC PR"
+        ctaLabel="Contact CRC Public Relations"
         ctaHref="/contact"
       />
 
@@ -39,7 +39,7 @@ export default function PrivacyPolicyPage() {
             label: "Action",
             value: "Questions welcome",
             detail:
-              "If you need clarification, the right next step is to contact CRC PR directly.",
+              "If you need clarification, the right next step is to contact CRC Public Relations directly.",
           },
         ]}
       />
@@ -47,7 +47,7 @@ export default function PrivacyPolicyPage() {
       <section className="bg-white py-16 md:py-20">
         <div className="max-w-3xl mx-auto px-6">
           <p className="text-charcoal-mid text-[15px] leading-relaxed">
-            CRC PR works in environments where confidentiality, discretion, and trust
+            CRC Public Relations works in environments where confidentiality, discretion, and trust
             are central to the relationship. This page sets out how personal
             information is handled in a way that is clear, practical, and consistent
             with those expectations.
@@ -157,8 +157,8 @@ export default function PrivacyPolicyPage() {
 
       <PageClosingCTA
         title="Need clarification on privacy or data handling?"
-        body="If you have a privacy question, access request, or concern about how information is handled, contact CRC PR directly and we will point you to the right next step."
-        primaryLabel="CONTACT CRC PR"
+        body="If you have a privacy question, access request, or concern about how information is handled, contact CRC Public Relations directly and we will point you to the right next step."
+        primaryLabel="Contact CRC Public Relations"
       />
     </>
   );

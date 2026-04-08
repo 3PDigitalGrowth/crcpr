@@ -91,8 +91,8 @@ export function LeadMagnetModal({
           <X className="size-5" strokeWidth={2} />
         </button>
 
-        <p className="text-brand-teal text-xs font-medium tracking-[0.14em] uppercase">
-          FREE DOWNLOAD
+        <p className="text-brand-teal text-xs font-medium">
+          Free download
         </p>
         <h3
           id="lead-magnet-modal-title"
@@ -115,7 +115,7 @@ export function LeadMagnetModal({
             <button
               type="button"
               onClick={onClose}
-              className="w-full bg-brand-teal text-white font-heading font-black text-sm tracking-widest uppercase py-3 rounded-[4px] hover:bg-link-teal transition"
+              className="w-full bg-brand-teal text-white font-heading font-black text-sm py-3 rounded-[4px] hover:bg-link-teal transition"
             >
               Close
             </button>
@@ -172,9 +172,9 @@ export function LeadMagnetModal({
             <button
               type="submit"
               disabled={isSubmitting}
-              className="bg-brand-teal text-white font-heading font-black text-sm tracking-widest uppercase w-full py-3 rounded-[4px] mt-4 hover:bg-link-teal transition disabled:opacity-60 disabled:cursor-not-allowed"
+              className="bg-brand-teal text-white font-heading font-black text-sm w-full py-3 rounded-[4px] mt-4 hover:bg-link-teal transition disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              SEND ME THE RESOURCE
+              Send me the resource
             </button>
           </form>
         )}
@@ -189,7 +189,7 @@ export function LeadMagnetModal({
           </Link>
         </p>
         <p className="mt-2 text-xs text-text-caption italic">
-          Prepared by CRC PR: 25 years of Australian PR expertise.
+          Prepared by CRC Public Relations: 25 years of Australian PR expertise.
         </p>
       </div>
     </div>

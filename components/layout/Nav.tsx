@@ -71,7 +71,7 @@ function MegaItem({
 
 function ColumnHeader({ children }: { children: React.ReactNode }) {
   return (
-    <p className="text-xs tracking-[0.14em] uppercase text-white/30 mb-3 font-medium">
+    <p className="text-xs text-white/30 mb-3 font-medium">
       {children}
     </p>
   );
@@ -86,12 +86,12 @@ function CTAColumn() {
         borderLeft: "0.5px solid rgba(201,168,76,0.12)",
       }}
     >
-      <ColumnHeader>GET IN TOUCH</ColumnHeader>
+      <ColumnHeader>Get in touch</ColumnHeader>
       <p className="text-sm font-heading font-black text-white mb-2">
         Talk to a senior advisor
       </p>
       <p className="text-xs text-white/40 leading-relaxed">
-        Every conversation with CRC PR is confidential. No pitch. No junior
+        Every conversation with CRC Public Relations is confidential. No pitch. No junior
         staff.
       </p>
       <div className="flex-1" />
@@ -103,9 +103,9 @@ function CTAColumn() {
       </a>
       <Link
         href="/contact"
-        className="block w-full bg-brand-gold text-navy font-bold text-xs tracking-widest uppercase text-center py-2.5 rounded-[3px] hover:bg-gold-light transition-colors"
+        className="block w-full bg-brand-gold text-navy font-bold text-xs text-center py-2.5 rounded-[3px] hover:bg-gold-light transition-colors"
       >
-        BOOK A CONSULTATION &rarr;
+        Book a consultation &rarr;
       </Link>
       <Link
         href="/contact"
@@ -126,50 +126,50 @@ function ServicesPanel({ onClose }: { onClose: () => void }) {
     >
       <div className="grid grid-cols-[1fr_1fr_1fr_220px]">
         <div className="py-5 px-4 border-r border-white/[0.06]">
-          <ColumnHeader>CORE SERVICES</ColumnHeader>
+          <ColumnHeader>Core services</ColumnHeader>
           <MegaItem
             href="/services/corporate-communications"
             icon={<Users className="w-full h-full" />}
-            title="Corporate Communications"
+            title="Corporate communications"
             desc="Stakeholder engagement and executive messaging"
             onClick={onClose}
           />
           <MegaItem
             href="/services/reputation-management"
             icon={<Shield className="w-full h-full" />}
-            title="Reputation Management"
+            title="Reputation management"
             desc="Vulnerability assessments and long-term protection"
             onClick={onClose}
           />
           <MegaItem
             href="/services/issues-management"
             icon={<AlertTriangle className="w-full h-full" />}
-            title="Issues Management"
+            title="Issues management"
             desc="Get ahead before issues become crises"
             onClick={onClose}
           />
         </div>
 
         <div className="py-5 px-4 border-r border-white/[0.06]">
-          <ColumnHeader>SPECIALIST SERVICES</ColumnHeader>
+          <ColumnHeader>Specialist services</ColumnHeader>
           <MegaItem
             href="/services/crisis-communications"
             icon={<Zap className="w-full h-full" />}
-            title="Crisis Communications"
+            title="Crisis communications"
             desc="24/7 response, call 1300 182 186"
             onClick={onClose}
           />
           <MegaItem
             href="/services/media-strategy"
             icon={<Radio className="w-full h-full" />}
-            title="Media Strategy"
+            title="Media strategy"
             desc="Proactive media presence and relationships"
             onClick={onClose}
           />
           <MegaItem
             href="/services/digital-media"
             icon={<Monitor className="w-full h-full" />}
-            title="Digital Media"
+            title="Digital media"
             desc="Online reputation and social strategy"
             onClick={onClose}
           />
@@ -184,11 +184,11 @@ function ServicesPanel({ onClose }: { onClose: () => void }) {
         </div>
 
         <div className="py-5 px-4 border-r border-white/[0.06]">
-          <ColumnHeader>ALSO FROM CRC PR</ColumnHeader>
+          <ColumnHeader>Also from CRC Public Relations</ColumnHeader>
           <MegaItem
             href="/media-training"
             icon={<Video className="w-full h-full" />}
-            title="Media Training"
+            title="Media training"
             desc="Spokesperson and on-camera coaching"
             iconTeal
             onClick={onClose}
@@ -202,20 +202,20 @@ function ServicesPanel({ onClose }: { onClose: () => void }) {
             onClick={onClose}
           />
           <div className="h-px bg-white/[0.06] my-2 mx-3" />
-          <ColumnHeader>FREE RESOURCES</ColumnHeader>
+          <ColumnHeader>Free resources</ColumnHeader>
           <Link
             href="/services/reputation-management#reputation-assessment"
             onClick={onClose}
             className="block px-3 py-1 text-xs text-white/55 hover:text-white/80 transition-colors"
           >
-            &rarr; Reputation Assessment
+            &rarr; Reputation assessment
           </Link>
           <Link
             href="/crisis"
             onClick={onClose}
             className="block px-3 py-1 text-xs text-white/55 hover:text-white/80 transition-colors"
           >
-            &rarr; Crisis Plan Template
+            &rarr; Crisis plan template
           </Link>
         </div>
 
@@ -238,46 +238,46 @@ function ClientsPanel({
     >
       <div className="grid grid-cols-[1fr_1fr_220px]">
         <div className="py-5 px-4 border-r border-white/[0.06]">
-          <ColumnHeader>BY SECTOR</ColumnHeader>
+          <ColumnHeader>By sector</ColumnHeader>
           <MegaItem
             href="/clients/corporate"
             icon={<Briefcase className="w-full h-full" />}
-            title="Private Companies & Family Businesses"
+            title="Private companies & family businesses"
             desc="Direct counsel for owners, directors, and senior leadership"
             onClick={onClose}
           />
           <MegaItem
             href="/clients/government"
             icon={<Building className="w-full h-full" />}
-            title="Government & Public Sector"
+            title="Government & public sector"
             desc="Departments, authorities, public agencies"
             onClick={onClose}
           />
           <MegaItem
             href="/clients/industry-associations"
             icon={<Users className="w-full h-full" />}
-            title="Industry Associations"
+            title="Industry associations"
             desc="Peak bodies, member organisations"
             onClick={onClose}
           />
           <MegaItem
             href="/clients/schools-faith"
             icon={<GraduationCap className="w-full h-full" />}
-            title="Schools & Faith-Based"
+            title="Schools & faith-based"
             desc="Independent schools, Catholic networks"
             onClick={onClose}
           />
         </div>
 
         <div className="py-5 px-4 border-r border-white/[0.06]">
-          <ColumnHeader>CLIENT OUTCOMES</ColumnHeader>
+          <ColumnHeader>Client outcomes</ColumnHeader>
           <Link
             href="/clients/industry-associations"
             onClick={onClose}
             className="block bg-white/[0.02] rounded p-3 mb-2 hover:bg-white/[0.04] transition-colors"
           >
-            <p className="text-xs text-brand-gold tracking-wide uppercase font-medium">
-              INDUSTRY ASSOCIATION
+            <p className="text-xs text-brand-gold font-medium">
+              Industry association
             </p>
             <p className="text-sm font-heading font-black text-white mt-1">
               Legislation amended.
@@ -292,8 +292,8 @@ function ClientsPanel({
             onClick={onClose}
             className="block bg-white/[0.02] rounded p-3 mb-3 hover:bg-white/[0.04] transition-colors"
           >
-            <p className="text-xs text-brand-gold tracking-wide uppercase font-medium">
-              INDEPENDENT SCHOOL
+            <p className="text-xs text-brand-gold font-medium">
+              Independent school
             </p>
             <p className="text-sm font-heading font-black text-white mt-1">
               Zero enrolment loss.
@@ -354,23 +354,23 @@ function MobileDrawer({
           <div className="border-b border-white/[0.06]">
             {[
               {
-                label: "Corporate Communications",
+                label: "Corporate communications",
                 href: "/services/corporate-communications",
               },
               {
-                label: "Reputation Management",
+                label: "Reputation management",
                 href: "/services/reputation-management",
               },
               {
-                label: "Issues Management",
+                label: "Issues management",
                 href: "/services/issues-management",
               },
               {
-                label: "Crisis Communications",
+                label: "Crisis communications",
                 href: "/services/crisis-communications",
               },
-              { label: "Media Strategy", href: "/services/media-strategy" },
-              { label: "Digital Media", href: "/services/digital-media" },
+              { label: "Media strategy", href: "/services/media-strategy" },
+              { label: "Digital media", href: "/services/digital-media" },
             ].map((item) => (
               <Link
                 key={item.href}
@@ -402,19 +402,19 @@ function MobileDrawer({
           <div className="border-b border-white/[0.06]">
             {[
               {
-                label: "Private Companies & Family Businesses",
+                label: "Private companies & family businesses",
                 href: "/clients/corporate",
               },
               {
-                label: "Government & Public Sector",
+                label: "Government & public sector",
                 href: "/clients/government",
               },
               {
-                label: "Industry Associations",
+                label: "Industry associations",
                 href: "/clients/industry-associations",
               },
               {
-                label: "Schools & Faith-Based",
+                label: "Schools & faith-based",
                 href: "/clients/schools-faith",
               },
             ].map((item) => (
@@ -435,8 +435,8 @@ function MobileDrawer({
       {[
         { label: "Crisis", href: "/crisis" },
         { label: "Pacific", href: "/pacific" },
-        { label: "Media Training", href: "/media-training" },
-        { label: "Case Studies", href: "/case-studies" },
+        { label: "Media training", href: "/media-training" },
+        { label: "Case studies", href: "/case-studies" },
         { label: "About", href: "/about" },
         { label: "Insights", href: "/insights" },
         { label: "Contact", href: "/contact" },
@@ -462,9 +462,9 @@ function MobileDrawer({
         <Link
           href="/contact"
           onClick={onClose}
-          className="block w-full bg-brand-gold text-navy font-heading font-black text-xs tracking-widest uppercase text-center py-3 rounded"
+          className="block w-full bg-brand-gold text-navy font-heading font-black text-xs text-center py-3 rounded"
         >
-          BOOK A CONSULTATION &rarr;
+          Book a consultation &rarr;
         </Link>
       </div>
     </div>
@@ -474,7 +474,7 @@ function MobileDrawer({
 const directLinks = [
   { label: "Crisis", href: "/crisis" },
   { label: "Pacific", href: "/pacific" },
-  { label: "Media Training", href: "/media-training" },
+  { label: "Media training", href: "/media-training" },
   { label: "About", href: "/about" },
   { label: "Insights", href: "/insights" },
 ];
@@ -564,8 +564,8 @@ export function Nav() {
               <span className="font-heading text-brand-gold font-black text-xl lg:text-2xl">
                 CRC
               </span>
-              <span className="font-sans font-medium text-white text-[10px] tracking-[0.2em] uppercase mt-0.5">
-                PUBLIC RELATIONS
+              <span className="font-sans font-medium text-white text-[10px] mt-0.5">
+                Public relations
               </span>
             </span>
           </Link>
@@ -663,9 +663,9 @@ export function Nav() {
             </a>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center bg-brand-gold text-navy font-heading font-black text-xs uppercase tracking-widest rounded-[4px] px-5 py-2.5 hover:bg-gold-light transition-colors"
+              className="inline-flex items-center justify-center bg-brand-gold text-navy font-heading font-black text-xs rounded-[4px] px-5 py-2.5 hover:bg-gold-light transition-colors"
             >
-              BOOK A CONSULTATION
+              Book a consultation
             </Link>
           </div>
         </div>
@@ -680,7 +680,7 @@ export function Nav() {
             onClick={() => setMobileOpen(false)}
           >
             <span className="text-brand-gold">CRC</span>
-            <span className="text-white"> PUBLIC RELATIONS</span>
+            <span className="text-white"> Public relations</span>
           </Link>
 
           <div className="flex items-center gap-2">

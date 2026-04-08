@@ -24,8 +24,8 @@ export function HomeAbout() {
           {/* Right bio content */}
           <div className="lg:col-span-7">
             <AnimateIn>
-              <p className="font-sans font-medium text-brand-teal text-xs tracking-[0.14em] uppercase">
-                The Adviser Behind the Firm
+              <p className="font-sans font-medium text-brand-teal text-xs">
+                The adviser behind the firm
               </p>
             </AnimateIn>
 

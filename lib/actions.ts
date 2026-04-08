@@ -26,7 +26,7 @@ export async function submitEnquiry(
   return {
     status: "success",
     message:
-      "Thank you. A CRC PR adviser will be in touch shortly: within the hour during business hours, or first thing in the morning for after-hours messages.",
+      "Thank you. A CRC Public Relations adviser will be in touch shortly: within the hour during business hours, or first thing in the morning for after-hours messages.",
   };
 }
 

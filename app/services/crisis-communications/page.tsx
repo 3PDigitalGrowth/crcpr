@@ -58,7 +58,7 @@ const faqs = [
   {
     question: "Do you only get involved when the crisis is already public?",
     answer:
-      "No. Many organisations engage CRC PR before a crisis becomes public so their plans, spokespeople, and escalation pathways are properly tested. Others call when the matter is already live and immediate senior support is required.",
+      "No. Many organisations engage CRC Public Relations before a crisis becomes public so their plans, spokespeople, and escalation pathways are properly tested. Others call when the matter is already live and immediate senior support is required.",
   },
   {
     question: "What does a crisis communications engagement usually include?",
@@ -68,7 +68,7 @@ const faqs = [
   {
     question: "Who handles the work during a high-pressure matter?",
     answer:
-      "Senior advisors. CRC PR does not route crisis matters through a junior account structure. Active situations are handled directly by experienced advisors with crisis judgement and newsroom understanding.",
+      "Senior advisors. CRC Public Relations does not route crisis matters through a junior account structure. Active situations are handled directly by experienced advisors with crisis judgement and newsroom understanding.",
   },
 ];
 
@@ -81,10 +81,10 @@ export default function CrisisCommunicationsPage() {
       />
 
       <PageHero
-        eyebrow="CRISIS COMMUNICATIONS"
+        eyebrow="Crisis communications"
         title="When a crisis breaks, experience is everything."
         description="24/7 crisis response, crisis communications planning, and simulation exercises for organisations that understand the cost of being unprepared."
-        ctaLabel="BOOK A CONSULTATION"
+        ctaLabel="Book a consultation"
         ctaHref="/contact"
       />
 
@@ -99,9 +99,9 @@ export default function CrisisCommunicationsPage() {
         <div className="max-w-7xl mx-auto px-6">
           <a
             href="tel:1300182186"
-            className="inline-flex items-center gap-2 border-2 border-brand-gold text-brand-gold font-heading font-black text-xs tracking-widest uppercase rounded-[4px] px-8 py-4 hover:bg-brand-gold hover:text-navy transition"
+            className="inline-flex items-center gap-2 border-2 border-brand-gold text-brand-gold font-heading font-black text-xs rounded-[4px] px-8 py-4 hover:bg-brand-gold hover:text-navy transition"
           >
-            NEED IMMEDIATE SUPPORT? CALL NOW
+            Need immediate support? Call now
           </a>
         </div>
       </section>
@@ -111,8 +111,8 @@ export default function CrisisCommunicationsPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_360px] gap-10 items-start">
             <div className="max-w-3xl">
-              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
-                The First Fifteen Minutes
+              <p className="text-brand-gold text-xs font-medium mb-4">
+                The first fifteen minutes
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
                 The damage often starts before the facts are clear.
@@ -132,7 +132,7 @@ export default function CrisisCommunicationsPage() {
                   are established. Each mistake compounds the one before it.
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
-                  CRC PR founder Lyall Mercer has spent 25 years studying and
+                  CRC Public Relations founder Lyall Mercer has spent 25 years studying and
                   managing the first moments of corporate crises. His
                   conclusion is unambiguous: the organisations that navigate
                   crises best are not the ones that are most articulate under
@@ -147,8 +147,8 @@ export default function CrisisCommunicationsPage() {
             </div>
 
             <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
-                Common First-Response Failures
+              <p className="text-brand-teal text-xs font-medium mb-5">
+                Common first-response failures
               </p>
 
               <div className="space-y-4">
@@ -184,8 +184,8 @@ export default function CrisisCommunicationsPage() {
               </div>
 
               <div className="mt-6 pt-6 border-t border-brand-border">
-                <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-3">
-                  What Better Looks Like
+                <p className="text-brand-gold text-xs font-medium mb-3">
+                  What better looks like
                 </p>
                 <p className="text-navy font-sans font-semibold text-base leading-relaxed">
                   A tested plan, a prepared spokesperson, and senior counsel on
@@ -211,8 +211,8 @@ export default function CrisisCommunicationsPage() {
 
       <section className="bg-off-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <p className="text-brand-gold font-sans font-medium text-xs tracking-[0.14em] uppercase mb-4">
-            WHAT SERIOUS ORGANISATIONS EXPECT
+          <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+            What serious organisations expect
           </p>
           <h2 className="font-heading font-black text-navy text-3xl mb-6">
             What serious organisations expect from crisis communications counsel
@@ -248,11 +248,11 @@ export default function CrisisCommunicationsPage() {
         </div>
       </section>
 
-      {/* Three ways CRC PR supports organisations through crisis */}
+      {/* Three ways CRC Public Relations supports organisations through crisis */}
       <section className="bg-off-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="font-heading font-black text-navy text-3xl mb-6">
-            Three ways CRC PR supports organisations through crisis
+            Three ways CRC Public Relations supports organisations through crisis
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10">
@@ -283,7 +283,7 @@ export default function CrisisCommunicationsPage() {
                 Active crisis response, when it is happening now
               </h3>
               <p className="text-charcoal text-[15px] leading-relaxed">
-                When a crisis is live, CRC PR provides immediate, senior-level
+                When a crisis is live, CRC Public Relations provides immediate, senior-level
                 counsel that brings order to a chaotic situation. We join your
                 crisis team, establish media protocols, prepare spokespeople,
                 coordinate communications across stakeholder groups, manage
@@ -326,13 +326,13 @@ export default function CrisisCommunicationsPage() {
             <p className="text-charcoal text-[15px] leading-relaxed mb-6">
               Do not fill out a form. Call us directly, available 24 hours, 7
               days. Every call is treated with absolute confidentiality. You will
-              speak to a senior CRC PR advisor, not a receptionist.
+              speak to a senior CRC Public Relations advisor, not a receptionist.
             </p>
             <a
               href="tel:1300182186"
-              className="block w-full text-center bg-brand-gold text-navy font-heading font-black text-xs tracking-widest uppercase rounded-[4px] px-8 py-4 hover:bg-gold-light transition"
+              className="block w-full text-center bg-brand-gold text-navy font-heading font-black text-xs rounded-[4px] px-8 py-4 hover:bg-gold-light transition"
             >
-              CALL 1300 182 186 NOW
+              Call 1300 182 186 now
             </a>
             <p className="text-center mt-4">
               <Link
@@ -349,7 +349,7 @@ export default function CrisisCommunicationsPage() {
       <LeadMagnetBanner
         magnet="crisisPlanTemplate"
         title="Does your organisation have a crisis plan that leadership would trust under pressure?"
-        description="Download the CRC PR Crisis Communications Plan Template. It is the same framework we use with clients to define first-response ownership, message hierarchy, escalation discipline, and stakeholder sequencing before a live matter strips away thinking time."
+        description="Download the CRC Public Relations Crisis Communications Plan Template. It is the same framework we use with clients to define first-response ownership, message hierarchy, escalation discipline, and stakeholder sequencing before a live matter strips away thinking time."
         highlights={[
           "Built for boards and executive teams",
           "Useful before simulations and training",
@@ -364,8 +364,8 @@ export default function CrisisCommunicationsPage() {
 
       <PageClosingCTA
         title="Preparation now is worth far more than response later."
-        body="A tested crisis communications capability costs a fraction of a poorly handled incident. If your organisation wants a plan, a simulation, or senior support before the next high-pressure event, talk to CRC PR."
-        primaryLabel="BOOK A CRISIS PREPAREDNESS CONSULTATION"
+        body="A tested crisis communications capability costs a fraction of a poorly handled incident. If your organisation wants a plan, a simulation, or senior support before the next high-pressure event, talk to CRC Public Relations."
+        primaryLabel="Book a crisis preparedness consultation"
       />
     </>
   );

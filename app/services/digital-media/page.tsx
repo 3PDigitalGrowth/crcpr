@@ -56,14 +56,14 @@ const faqs = [
       "The channels are different, but the underlying reputation discipline is the same. Digital environments simply compress the timeframe and make weak governance or slow decision-making visible much faster.",
   },
   {
-    question: "Can CRC PR help with social media issues that are starting to escalate?",
+    question: "Can CRC Public Relations help with social media issues that are starting to escalate?",
     answer:
       "Yes. We help organisations assess whether the issue needs acknowledgement, containment, escalation, or silence, then align the digital response with the broader communications and stakeholder position.",
   },
   {
     question: "Do you operate like a social media agency?",
     answer:
-      "No. CRC PR approaches digital channels from a senior communications and reputation perspective, not a volume-content or community-management model. The emphasis is judgement, escalation, and brand authority.",
+      "No. CRC Public Relations approaches digital channels from a senior communications and reputation perspective, not a volume-content or community-management model. The emphasis is judgement, escalation, and brand authority.",
   },
   {
     question: "What kinds of digital risks do you usually assess?",
@@ -81,10 +81,10 @@ export default function DigitalMediaPage() {
       />
 
       <PageHero
-        eyebrow="DIGITAL MEDIA & ONLINE REPUTATION"
+        eyebrow="Digital media and online reputation"
         title="Your reputation doesn't stop at the newsroom door."
         description="Online reputation management, social media strategy, and digital crisis response. Senior PR counsel applied to the digital channels where reputations are increasingly won and lost."
-        ctaLabel="BOOK A CONSULTATION"
+        ctaLabel="Book a consultation"
         ctaHref="/contact"
       />
 
@@ -98,8 +98,8 @@ export default function DigitalMediaPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_360px] gap-10 items-start">
             <div className="max-w-3xl">
-              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
-                Digital Reputation Reality
+              <p className="text-brand-gold text-xs font-medium mb-4">
+                Digital reputation reality
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
                 Reputation pressure now breaks online first.
@@ -129,7 +129,7 @@ export default function DigitalMediaPage() {
                   minutes.
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
-                  CRC PR applies its 25 years of corporate communications and
+                  CRC Public Relations applies its 25 years of corporate communications and
                   crisis expertise to digital channels, not as a social media
                   agency, but as a senior communications adviser that
                   understands how digital and traditional media interact, and
@@ -139,8 +139,8 @@ export default function DigitalMediaPage() {
             </div>
 
             <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
-                What Changes Online
+              <p className="text-brand-teal text-xs font-medium mb-5">
+                What changes online
               </p>
 
               <div className="space-y-4">
@@ -183,8 +183,8 @@ export default function DigitalMediaPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_340px] gap-10 items-start">
             <div className="max-w-3xl">
-              <p className="text-brand-gold font-sans font-medium text-xs tracking-[0.14em] uppercase mb-4">
-                EARLY WARNING SIGNS
+              <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+                Early warning signs
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
                 What digital reputation pressure usually looks like
@@ -230,8 +230,8 @@ export default function DigitalMediaPage() {
             </div>
 
             <aside className="rounded-lg border border-brand-border bg-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
-                Resilient Organisations Have
+              <p className="text-brand-teal text-xs font-medium mb-5">
+                Resilient organisations have
               </p>
               <div className="space-y-4">
                 <div className="border-l-[3px] border-brand-gold pl-4">
@@ -257,7 +257,7 @@ export default function DigitalMediaPage() {
 
       <InlineEnquirySection
         title="Need a digital reputation review?"
-        body="If your organisation needs better monitoring, stronger governance, or a clearer response plan for online issues, CRC PR can help you assess the exposure and tighten the system."
+        body="If your organisation needs better monitoring, stronger governance, or a clearer response plan for online issues, CRC Public Relations can help you assess the exposure and tighten the system."
         bullets={[
           "Digital reputation and social governance reviews",
           "Online issue and escalation planning",
@@ -347,8 +347,8 @@ export default function DigitalMediaPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.1fr)_360px] gap-10 items-start">
             <div className="max-w-3xl">
-              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
-                The Difference
+              <p className="text-brand-gold text-xs font-medium mb-4">
+                The difference
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
                 Digital reputation management is still reputation management.
@@ -369,10 +369,10 @@ export default function DigitalMediaPage() {
                   from a crisis with its trust intact.
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
-                  CRC PR is not a digital agency. We are a corporate
+                  CRC Public Relations is not a digital agency. We are a corporate
                   communications and reputation firm that has developed the
                   digital capability our clients need because the digital
-                  environment now demands it. When you retain CRC PR for
+                  environment now demands it. When you retain CRC Public Relations for
                   digital reputation management, you are retaining the same
                   senior-level counsel, the same journalistic judgment, and
                   the same crisis experience that we bring to our traditional
@@ -386,8 +386,8 @@ export default function DigitalMediaPage() {
             </div>
 
             <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
-                What Clients Actually Need
+              <p className="text-brand-teal text-xs font-medium mb-5">
+                What clients actually need
               </p>
 
               <div className="space-y-4">
@@ -423,8 +423,8 @@ export default function DigitalMediaPage() {
               </div>
 
               <div className="mt-6 pt-6 border-t border-brand-border">
-                <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-3">
-                  Bottom Line
+                <p className="text-brand-gold text-xs font-medium mb-3">
+                  Bottom line
                 </p>
                 <p className="text-navy font-sans font-semibold text-base leading-relaxed">
                   The platforms are different. The reputational stakes are not.
@@ -453,8 +453,8 @@ export default function DigitalMediaPage() {
 
       <PageClosingCTA
         title="Your organisation is being talked about online right now."
-        body="The real question is whether you know where the pressure points are and whether your team is ready to respond with discipline. CRC PR helps organisations manage digital reputation with the same rigour they expect in every other high-stakes communication setting."
-        primaryLabel="BOOK A DIGITAL REPUTATION REVIEW"
+        body="The real question is whether you know where the pressure points are and whether your team is ready to respond with discipline. CRC Public Relations helps organisations manage digital reputation with the same rigour they expect in every other high-stakes communication setting."
+        primaryLabel="Book a digital reputation review"
       />
     </>
   );

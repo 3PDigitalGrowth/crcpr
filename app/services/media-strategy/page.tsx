@@ -56,7 +56,7 @@ const faqs = [
       "Media strategy is the broader discipline of deciding what the organisation should say, when it should say it, where it should appear, and which voices should carry the message. Media training prepares specific spokespeople to perform well within that strategy.",
   },
   {
-    question: "Can CRC PR help if we already have media relationships but they are inconsistent?",
+    question: "Can CRC Public Relations help if we already have media relationships but they are inconsistent?",
     answer:
       "Yes. Many organisations have some media activity but no disciplined strategy behind it. We help tighten message focus, strengthen journalist relationships, and create a more credible, sustained market presence.",
   },
@@ -81,10 +81,10 @@ export default function MediaStrategyPage() {
       />
 
       <PageHero
-        eyebrow="MEDIA STRATEGY"
+        eyebrow="Media strategy"
         title="Sustained media presence doesn't happen by accident."
         description="Proactive media strategy, journalist relationship management, and thought leadership placement for organisations that want to shape their sector's narrative, not just respond to it."
-        ctaLabel="BOOK A CONSULTATION"
+        ctaLabel="Book a consultation"
         ctaHref="/contact"
       />
 
@@ -98,8 +98,8 @@ export default function MediaStrategyPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_360px] gap-10 items-start">
             <div className="max-w-3xl">
-              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
-                Media Strategy
+              <p className="text-brand-gold text-xs font-medium mb-4">
+                Media strategy
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
                 Visibility is not the same thing as positioning.
@@ -130,7 +130,7 @@ export default function MediaStrategyPage() {
                   discipline.
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
-                  CRC PR builds and executes media strategies for organisations
+                  CRC Public Relations builds and executes media strategies for organisations
                   that want to move from reactive to proactive, and that
                   understand the difference between being covered and being
                   credible.
@@ -139,8 +139,8 @@ export default function MediaStrategyPage() {
             </div>
 
             <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
-                What Weak Strategy Looks Like
+              <p className="text-brand-teal text-xs font-medium mb-5">
+                What weak strategy looks like
               </p>
 
               <div className="space-y-4">
@@ -176,8 +176,8 @@ export default function MediaStrategyPage() {
               </div>
 
               <div className="mt-6 pt-6 border-t border-brand-border">
-                <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-3">
-                  Strategic Aim
+                <p className="text-brand-gold text-xs font-medium mb-3">
+                  Strategic aim
                 </p>
                 <p className="text-navy font-sans font-semibold text-base leading-relaxed">
                   Move from reactive media management to sustained, credible
@@ -191,8 +191,8 @@ export default function MediaStrategyPage() {
 
       <section className="bg-off-white py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-6">
-          <p className="text-brand-gold font-sans font-medium text-xs tracking-[0.14em] uppercase mb-4">
-            WHAT GOOD LOOKS LIKE
+          <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+            What good looks like
           </p>
           <h2 className="font-heading font-black text-navy text-3xl mb-6">
             What strong media strategy looks like in the market
@@ -216,7 +216,7 @@ export default function MediaStrategyPage() {
 
       <InlineEnquirySection
         title="Need a sharper media strategy?"
-        body="If your organisation wants stronger editorial positioning, better spokesperson preparedness, or more deliberate thought leadership, CRC PR can help design the strategy behind it."
+        body="If your organisation wants stronger editorial positioning, better spokesperson preparedness, or more deliberate thought leadership, CRC Public Relations can help design the strategy behind it."
         bullets={[
           "Media strategy and editorial positioning",
           "Journalist relationship and spokesperson planning",
@@ -226,11 +226,11 @@ export default function MediaStrategyPage() {
         variant="white"
       />
 
-      {/* What a CRC PR media strategy delivers */}
+      {/* What a CRC Public Relations media strategy delivers */}
       <section className="bg-off-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="font-heading font-black text-navy text-3xl mb-6">
-            What a CRC PR media strategy delivers
+            What a CRC Public Relations media strategy delivers
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
@@ -257,7 +257,7 @@ export default function MediaStrategyPage() {
               <p className="text-charcoal text-[15px] leading-relaxed">
                 Media coverage is built on relationships with specific
                 journalists, editors, and producers who cover your sector.
-                CRC PR has cultivated these relationships over 25 years of
+                CRC Public Relations has cultivated these relationships over 25 years of
                 corporate PR and journalism practice. We know how newsrooms
                 work, what editors are looking for, and how to present your
                 organisation as a source that is worth coming back to. We
@@ -305,8 +305,8 @@ export default function MediaStrategyPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[320px_minmax(0,1fr)] gap-10 items-start">
             <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium tracking-[0.16em] uppercase mb-5">
-                Why It Matters
+              <p className="text-brand-teal text-xs font-medium mb-5">
+                Why it matters
               </p>
 
               <div className="space-y-4">
@@ -343,8 +343,8 @@ export default function MediaStrategyPage() {
             </aside>
 
             <div className="max-w-3xl">
-              <p className="text-brand-gold text-xs font-medium tracking-[0.16em] uppercase mb-4">
-                Newsroom Perspective
+              <p className="text-brand-gold text-xs font-medium mb-4">
+                Newsroom perspective
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
                 We understand how newsrooms think because we came from them.
@@ -357,7 +357,7 @@ export default function MediaStrategyPage() {
 
               <div className="space-y-6 mt-8">
                 <p className="text-charcoal text-[15px] leading-relaxed">
-                  CRC PR founder Lyall Mercer began his career as a journalist.
+                  CRC Public Relations founder Lyall Mercer began his career as a journalist.
                   That background is not incidental. It is the foundation of
                   everything we do in media strategy. We do not approach media
                   relations from the perspective of a PR firm trying to manage
@@ -374,7 +374,7 @@ export default function MediaStrategyPage() {
                   back and when to push it.
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
-                  Media training at CRC PR is delivered in partnership with
+                  Media training at CRC Public Relations is delivered in partnership with
                   television and radio journalists with decades of broadcast
                   experience, people who have conducted the kinds of interviews
                   your spokespeople need to be ready for.
@@ -389,7 +389,7 @@ export default function MediaStrategyPage() {
         magnet="mediaInterviewGuide"
         variant="dark"
         title="Is your spokesperson ready for the next meaningful interview?"
-        description="Download the CRC PR Media Interview Preparation Guide, a practical briefing framework used by executives and communications leaders who need their message to hold up on camera, on radio, and on the record."
+        description="Download the CRC Public Relations Media Interview Preparation Guide, a practical briefing framework used by executives and communications leaders who need their message to hold up on camera, on radio, and on the record."
         highlights={[
           "Written from a newsroom perspective",
           "Useful before high-stakes interviews",
@@ -404,8 +404,8 @@ export default function MediaStrategyPage() {
 
       <PageClosingCTA
         title="Ready to build media presence that actually moves the needle?"
-        body="Media strategy works when it is consistent, strategic, and built on genuine editorial judgment. CRC PR helps organisations earn coverage that strengthens authority rather than just generating noise."
-        primaryLabel="BOOK A MEDIA STRATEGY CONSULTATION"
+        body="Media strategy works when it is consistent, strategic, and built on genuine editorial judgment. CRC Public Relations helps organisations earn coverage that strengthens authority rather than just generating noise."
+        primaryLabel="Book a media strategy consultation"
       />
     </>
   );

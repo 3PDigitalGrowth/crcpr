@@ -310,8 +310,8 @@ export function ReputationAssessment({ embedded = false }: { embedded?: boolean 
             >
               <div className="rounded-[28px] border border-brand-border bg-off-white p-8 md:p-10">
                 <div className="text-center mb-12">
-                  <p className="text-brand-teal text-xs font-medium tracking-[0.14em] uppercase">
-                    YOUR RESULTS
+                  <p className="text-brand-teal text-xs font-medium">
+                    Your results
                   </p>
                   <h2 className="font-heading font-black text-navy text-3xl mt-3">
                     Reputation Vulnerability Score
@@ -342,7 +342,7 @@ export function ReputationAssessment({ embedded = false }: { embedded?: boolean 
                         className="rounded-xl border border-brand-border bg-white p-4"
                       >
                         <div className="flex items-center justify-between gap-4 mb-3">
-                          <p className="text-[11px] sm:text-xs font-medium text-charcoal-mid uppercase tracking-wide">
+                          <p className="text-[11px] sm:text-xs font-medium text-charcoal-mid">
                             {cat}
                           </p>
                           <p className="text-sm font-heading font-black text-navy whitespace-nowrap">
@@ -403,11 +403,11 @@ export function ReputationAssessment({ embedded = false }: { embedded?: boolean 
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="bg-brand-gold text-navy font-heading font-black text-sm tracking-widest uppercase w-full py-4 rounded-[4px] hover:bg-gold-light transition disabled:opacity-60"
+                      className="bg-brand-gold text-navy font-heading font-black text-sm w-full py-4 rounded-[4px] hover:bg-gold-light transition disabled:opacity-60"
                     >
                       {isSubmitting
-                        ? "UNLOCKING..."
-                        : "UNLOCK YOUR FULL REPORT →"}
+                        ? "Unlocking..."
+                        : "Unlock your full report →"}
                     </button>
                   </form>
                   <p className="text-xs text-charcoal-mid text-center mt-4">
@@ -429,7 +429,7 @@ export function ReputationAssessment({ embedded = false }: { embedded?: boolean 
                 <strong>{email}</strong>.
               </p>
               <p className="text-charcoal-mid text-sm mt-2">
-                A CRC PR advisor may follow up with personalised
+                A CRC Public Relations advisor may follow up with personalised
                 recommendations.
               </p>
             </div>
@@ -448,8 +448,8 @@ export function ReputationAssessment({ embedded = false }: { embedded?: boolean 
     >
       <div className={embedded ? "max-w-none" : "max-w-3xl mx-auto px-6"}>
         <div className="text-center mb-8">
-          <p className="text-brand-teal text-xs font-medium tracking-[0.14em] uppercase">
-            FREE ASSESSMENT
+          <p className="text-brand-teal text-xs font-medium">
+            Free assessment
           </p>
           <h2 className="font-heading font-black text-navy text-3xl mt-3">
             Reputation Vulnerability Assessment
@@ -475,7 +475,7 @@ export function ReputationAssessment({ embedded = false }: { embedded?: boolean 
         </div>
 
         <div className="mb-4">
-          <p className="text-brand-teal text-xs font-medium tracking-[0.14em] uppercase mb-2">
+          <p className="text-brand-teal text-xs font-medium mb-2">
             {currentQ.category}
           </p>
           <h3 className="font-heading font-black text-navy text-xl">
@@ -521,9 +521,9 @@ export function ReputationAssessment({ embedded = false }: { embedded?: boolean 
             <button
               type="button"
               onClick={() => setPhase("results")}
-              className="bg-brand-gold text-navy font-heading font-black text-sm tracking-widest uppercase rounded-[4px] px-8 py-3 hover:bg-gold-light transition"
+              className="bg-brand-gold text-navy font-heading font-black text-sm rounded-[4px] px-8 py-3 hover:bg-gold-light transition"
             >
-              VIEW RESULTS →
+              View results →
             </button>
           )}
           <button

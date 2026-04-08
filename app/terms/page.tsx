@@ -13,10 +13,10 @@ export default function TermsPage() {
   return (
     <>
       <PageHero
-        eyebrow="LEGAL"
+        eyebrow="Legal"
         title="Terms of Use"
         description="The terms that govern use of the CRC Public Relations website, including content use, acceptable use, liability, and contact pathways."
-        ctaLabel="CONTACT CRC PR"
+        ctaLabel="Contact CRC Public Relations"
         ctaHref="/contact"
       />
 
@@ -33,13 +33,13 @@ export default function TermsPage() {
             label: "Rights",
             value: "Protected content",
             detail:
-              "CRC PR content, branding, and materials remain protected by copyright and other applicable rights.",
+              "CRC Public Relations content, branding, and materials remain protected by copyright and other applicable rights.",
           },
           {
             label: "Contact",
             value: "Ask directly",
             detail:
-              "If a term is unclear, contact CRC PR directly rather than making assumptions about its application.",
+              "If a term is unclear, contact CRC Public Relations directly rather than making assumptions about its application.",
           },
         ]}
       />
@@ -47,7 +47,7 @@ export default function TermsPage() {
       <section className="bg-white py-16 md:py-20">
         <div className="max-w-3xl mx-auto px-6">
           <p className="text-charcoal-mid text-[15px] leading-relaxed">
-            These terms explain how the CRC PR website may be used and the basis on
+            These terms explain how the CRC Public Relations website may be used and the basis on
             which its content is provided. They are written to be readable, not merely
             comprehensive, so users can understand the practical boundaries quickly.
           </p>
@@ -75,14 +75,14 @@ export default function TermsPage() {
             Content on this Site is for general information only and does not
             constitute legal, financial, or other professional advice. A
             client relationship is not formed by browsing the Site or sending
-            an enquiry. Any engagement of CRC PR is subject to a separate
+            an enquiry. Any engagement of CRC Public Relations is subject to a separate
             agreement and our professional obligations.
           </p>
 
           <h2>Intellectual property</h2>
           <p>
             Unless otherwise stated, text, graphics, logos, and other materials
-            on the Site are owned by or licensed to CRC PR and are protected by
+            on the Site are owned by or licensed to CRC Public Relations and are protected by
             copyright and other intellectual property laws. You may view and
             print pages for personal, non-commercial use. You must not copy,
             reproduce, distribute, or create derivative works without our prior
@@ -105,7 +105,7 @@ export default function TermsPage() {
               the Site&apos;s operation; or
             </li>
             <li>
-              use the Site to harass, defame, or misrepresent CRC PR or third
+              use the Site to harass, defame, or misrepresent CRC Public Relations or third
               parties.
             </li>
           </ul>
@@ -123,7 +123,7 @@ export default function TermsPage() {
           <p>
             The Site and its content are provided &quot;as is&quot; without
             warranties of any kind, to the fullest extent permitted by law. To
-            the extent permitted by law, CRC PR and its directors, employees,
+            the extent permitted by law, CRC Public Relations and its directors, employees,
             and contractors are not liable for any indirect, consequential, or
             special loss arising from your use of the Site or reliance on its
             content.
@@ -168,8 +168,8 @@ export default function TermsPage() {
 
       <PageClosingCTA
         title="Need clarification on these terms?"
-        body="If you have a question about how these terms apply to your use of the site or a potential engagement, contact CRC PR directly and we will clarify the appropriate position."
-        primaryLabel="CONTACT CRC PR"
+        body="If you have a question about how these terms apply to your use of the site or a potential engagement, contact CRC Public Relations directly and we will clarify the appropriate position."
+        primaryLabel="Contact CRC Public Relations"
       />
     </>
   );

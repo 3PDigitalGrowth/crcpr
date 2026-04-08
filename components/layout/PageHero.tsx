@@ -25,7 +25,7 @@ export function PageHero({
         <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-12 items-end">
           <div className="max-w-4xl">
             {eyebrow ? (
-              <p className="text-brand-gold font-sans font-medium text-xs tracking-[0.14em] uppercase mb-4">
+              <p className="text-brand-gold font-sans font-medium text-xs mb-4">
                 {eyebrow}
               </p>
             ) : null}
@@ -41,7 +41,7 @@ export function PageHero({
               {ctaLabel && ctaHref ? (
                 <Link
                   href={ctaHref}
-                  className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs tracking-widest uppercase rounded-[4px] px-8 py-4 hover:bg-gold-light transition"
+                  className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs rounded-[4px] px-8 py-4 hover:bg-gold-light transition"
                 >
                   {ctaLabel}
                 </Link>
@@ -56,7 +56,7 @@ export function PageHero({
           </div>
 
           <div className="border border-white/10 bg-white/[0.03] rounded-lg p-6">
-            <p className="text-white/35 text-xs tracking-[0.14em] uppercase mb-4">
+            <p className="text-white/35 text-xs mb-4">
               Direct senior counsel
             </p>
             <div className="space-y-4">

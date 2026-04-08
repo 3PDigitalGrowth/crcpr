@@ -46,7 +46,7 @@ export function CrisisContactForm() {
               Send a confidential message
             </h3>
             <p className="text-text-body text-sm italic mt-1 mb-4">
-              Everything shared with CRC PR is treated with absolute confidentiality. We do not reference client engagements without explicit written permission. Our advisers operate with the same professional discretion as legal counsel.
+              Everything shared with CRC Public Relations is treated with absolute confidentiality. We do not reference client engagements without explicit written permission. Our advisers operate with the same professional discretion as legal counsel.
             </p>
 
             {showSuccess ? (
@@ -57,7 +57,7 @@ export function CrisisContactForm() {
                   aria-hidden
                 />
                 <p className="text-text-body text-[15px] leading-relaxed text-center lg:text-left">
-                  Thank you. A CRC PR adviser will be in touch shortly: within the
+                  Thank you. A CRC Public Relations adviser will be in touch shortly: within the
                   hour during business hours, or first thing in the morning for
                   after-hours messages.
                 </p>
@@ -69,7 +69,7 @@ export function CrisisContactForm() {
                     htmlFor="crisis-enquiry-name"
                     className="block text-sm font-sans font-medium text-navy mb-1"
                   >
-                    Full Name <span className="text-text-caption">(required)</span>
+                    Full name <span className="text-text-caption">(required)</span>
                   </label>
                   <input
                     id="crisis-enquiry-name"
@@ -102,7 +102,7 @@ export function CrisisContactForm() {
                     htmlFor="crisis-enquiry-phone"
                     className="block text-sm font-sans font-medium text-navy mb-1"
                   >
-                    Phone Number{" "}
+                    Phone number{" "}
                     <span className="text-text-caption">(required)</span>
                   </label>
                   <input
@@ -135,7 +135,7 @@ export function CrisisContactForm() {
                     htmlFor="crisis-enquiry-message"
                     className="block text-sm font-sans font-medium text-navy mb-1"
                   >
-                    Nature of Situation{" "}
+                    Nature of situation{" "}
                     <span className="text-text-caption">(optional)</span>
                   </label>
                   <textarea
@@ -154,9 +154,9 @@ export function CrisisContactForm() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="bg-brand-gold text-navy font-heading font-black text-sm tracking-widest uppercase w-full py-4 rounded-[4px] mt-4 hover:bg-gold-light transition disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="bg-brand-gold text-navy font-heading font-black text-sm w-full py-4 rounded-[4px] mt-4 hover:bg-gold-light transition disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  SEND MESSAGE →
+                  {isSubmitting ? "Sending…" : "Send message →"}
                 </button>
               </form>
             )}
@@ -165,7 +165,7 @@ export function CrisisContactForm() {
           <div>
             <PortraitPlaceholder size="sm" />
             <p className="mt-6 text-text-body text-[15px] leading-relaxed">
-              You will deal directly with Lyall Mercer or a senior CRC PR adviser,
+              You will deal directly with Lyall Mercer or a senior CRC Public Relations adviser,
               not an account manager.
             </p>
             <p className="mt-4">

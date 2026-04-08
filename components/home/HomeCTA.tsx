@@ -15,8 +15,8 @@ export function HomeCTA() {
       <div className="relative max-w-7xl mx-auto px-6 text-center">
         <div className="max-w-[680px] mx-auto">
           <AnimateIn>
-            <p className="font-sans font-medium text-brand-gold text-xs tracking-[0.14em] uppercase">
-              Ready to Work With Us
+            <p className="font-sans font-medium text-brand-gold text-xs">
+              Ready to work with us
             </p>
           </AnimateIn>
 
@@ -39,18 +39,18 @@ export function HomeCTA() {
             <AnimateIn delay={450}>
               <Link
                 href="/contact"
-                className="btn-lift bg-brand-gold text-navy font-heading font-black text-sm tracking-widest uppercase w-full py-4 rounded-[4px] hover:bg-gold-light transition inline-flex items-center justify-center gap-2"
+                className="btn-lift bg-brand-gold text-navy font-heading font-black text-sm w-full py-4 rounded-[4px] hover:bg-gold-light transition inline-flex items-center justify-center gap-2"
               >
-                Book a Confidential Consultation <ArrowRight size={14} aria-hidden />
+                Book a confidential consultation <ArrowRight size={14} aria-hidden />
               </Link>
             </AnimateIn>
 
             <AnimateIn delay={550}>
               <a
                 href={siteConfig.phone.href}
-                className="border border-brand-gold/50 text-brand-gold font-heading font-black text-sm tracking-widest uppercase w-full py-4 rounded-[4px] hover:bg-brand-gold/10 transition inline-flex items-center justify-center gap-2"
+                className="border border-brand-gold/50 text-brand-gold font-heading font-black text-sm w-full py-4 rounded-[4px] hover:bg-brand-gold/10 transition inline-flex items-center justify-center gap-2"
               >
-                Call Us: {siteConfig.phone.display}{" "}
+                Call us: {siteConfig.phone.display}{" "}
                 <ArrowRight size={14} aria-hidden />
               </a>
             </AnimateIn>
@@ -61,7 +61,7 @@ export function HomeCTA() {
                 compact
                 title="Not ready for a retainer?"
                 description="My PR Partner gives teams and leaders practical PR training, tools, and communications support when they need capability-building before a full advisory engagement."
-                buttonLabel="EXPLORE MY PR PARTNER"
+                buttonLabel="Explore My PR Partner"
                 className="mt-2 text-left"
               />
             </AnimateIn>

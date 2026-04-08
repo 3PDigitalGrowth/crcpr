@@ -22,12 +22,12 @@ interface InlineEnquirySectionProps {
 }
 
 export function InlineEnquirySection({
-  eyebrow = "CONFIDENTIAL ENQUIRY",
+  eyebrow = "Confidential enquiry",
   title,
   body,
   bullets = [],
   defaultMessage,
-  submitLabel = "SEND CONFIDENTIAL ENQUIRY",
+  submitLabel = "Send confidential enquiry",
   variant = "off-white",
 }: InlineEnquirySectionProps) {
   const [formState, setFormState] = useState<FormState>(initialState);
@@ -48,7 +48,7 @@ export function InlineEnquirySection({
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] border border-brand-border rounded-lg overflow-hidden bg-white shadow-sm shadow-navy/5">
           <div className="p-8 md:p-10 bg-navy text-white">
-            <p className="text-brand-gold font-sans font-medium text-xs tracking-[0.14em] uppercase mb-4">
+            <p className="text-brand-gold font-sans font-medium text-xs mb-4">
               {eyebrow}
             </p>
             <h2 className="font-heading font-black text-3xl max-w-xl">{title}</h2>
@@ -107,7 +107,7 @@ export function InlineEnquirySection({
                   <div>
                     <label
                       htmlFor={`${title}-name`}
-                      className="block text-xs font-medium text-navy uppercase tracking-wide mb-1.5"
+                      className="block text-xs font-medium text-navy mb-1.5"
                     >
                       Full name <span className="text-brand-teal">*</span>
                     </label>
@@ -124,7 +124,7 @@ export function InlineEnquirySection({
                   <div>
                     <label
                       htmlFor={`${title}-organisation`}
-                      className="block text-xs font-medium text-navy uppercase tracking-wide mb-1.5"
+                      className="block text-xs font-medium text-navy mb-1.5"
                     >
                       Organisation
                     </label>
@@ -140,7 +140,7 @@ export function InlineEnquirySection({
                   <div>
                     <label
                       htmlFor={`${title}-email`}
-                      className="block text-xs font-medium text-navy uppercase tracking-wide mb-1.5"
+                      className="block text-xs font-medium text-navy mb-1.5"
                     >
                       Email <span className="text-brand-teal">*</span>
                     </label>
@@ -157,7 +157,7 @@ export function InlineEnquirySection({
                   <div>
                     <label
                       htmlFor={`${title}-phone`}
-                      className="block text-xs font-medium text-navy uppercase tracking-wide mb-1.5"
+                      className="block text-xs font-medium text-navy mb-1.5"
                     >
                       Phone <span className="text-brand-teal">*</span>
                     </label>
@@ -176,7 +176,7 @@ export function InlineEnquirySection({
                 <div>
                   <label
                     htmlFor={`${title}-message`}
-                    className="block text-xs font-medium text-navy uppercase tracking-wide mb-1.5"
+                    className="block text-xs font-medium text-navy mb-1.5"
                   >
                     Brief context
                   </label>
@@ -193,9 +193,9 @@ export function InlineEnquirySection({
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-brand-gold text-navy font-heading font-black text-xs tracking-widest uppercase rounded-[4px] py-4 hover:bg-gold-light transition disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="w-full bg-brand-gold text-navy font-heading font-black text-xs rounded-[4px] py-4 hover:bg-gold-light transition disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  {isSubmitting ? "SENDING…" : `${submitLabel} →`}
+                  {isSubmitting ? "Sending…" : `${submitLabel} →`}
                 </button>
                 <p className="text-text-body text-sm leading-relaxed">
                   Confidential and reviewed by a senior advisor. No junior

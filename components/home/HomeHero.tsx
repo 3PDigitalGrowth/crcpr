@@ -8,10 +8,10 @@ import { AnimatedCounter } from "@/components/shared/AnimatedCounter";
 import { PortraitPlaceholder } from "@/components/shared/PortraitPlaceholder";
 
 const stats = [
-  { value: siteConfig.stats.yearsTrading, label: "Years Experience" },
-  { value: siteConfig.stats.continents, label: "Global Reach" },
-  { value: siteConfig.stats.clientRetention, label: "Client Satisfaction" },
-  { value: siteConfig.stats.professionsTrained, label: "Professionals Trained" },
+  { value: siteConfig.stats.yearsTrading, label: "Years experience" },
+  { value: siteConfig.stats.continents, label: "Global reach" },
+  { value: siteConfig.stats.clientRetention, label: "Client satisfaction" },
+  { value: siteConfig.stats.professionsTrained, label: "Professionals trained" },
 ];
 
 const pillars = [
@@ -155,8 +155,8 @@ export function HomeHero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center flex-1 pt-12 pb-8 lg:pt-16 lg:pb-10">
           <div className="lg:col-span-7 relative z-10">
             <AnimateIn>
-              <p className="font-sans font-medium text-brand-gold text-xs tracking-[0.14em] uppercase">
-                Boutique Corporate PR · Brisbane · Australia · The Pacific
+              <p className="font-sans font-medium text-brand-gold text-xs">
+                Boutique corporate PR · Brisbane · Australia · The Pacific
               </p>
             </AnimateIn>
 
@@ -185,27 +185,27 @@ export function HomeHero() {
               <div className="flex flex-col sm:flex-row gap-3 mt-6">
                 <Link
                   href="/contact"
-                  className="btn-lift inline-flex items-center justify-center gap-2 bg-brand-gold text-navy font-heading font-black text-[13px] tracking-widest uppercase rounded-[4px] px-6 py-3 hover:bg-gold-light transition"
+                  className="btn-lift inline-flex items-center justify-center gap-2 bg-brand-gold text-navy font-heading font-black text-[13px] rounded-[4px] px-6 py-3 hover:bg-gold-light transition"
                 >
                   <Phone className="size-4" strokeWidth={2} aria-hidden />
-                  Book a Confidential Consultation
+                  Book a confidential consultation
                 </Link>
                 {capabilityAvailable ? (
                   <a
                     href={capabilityHref}
                     download
-                    className="btn-lift inline-flex items-center justify-center gap-2 border border-brand-gold/50 text-brand-gold font-heading font-black text-[13px] tracking-widest uppercase rounded-[4px] px-6 py-3 hover:bg-brand-gold/10 transition"
+                    className="btn-lift inline-flex items-center justify-center gap-2 border border-brand-gold/50 text-brand-gold font-heading font-black text-[13px] rounded-[4px] px-6 py-3 hover:bg-brand-gold/10 transition"
                   >
                     <Download className="size-4" strokeWidth={2} aria-hidden />
-                    Download Capability Statement
+                    Download capability statement
                   </a>
                 ) : (
                   <Link
                     href={capabilityHref}
-                    className="btn-lift inline-flex items-center justify-center gap-2 border border-brand-gold/50 text-brand-gold font-heading font-black text-[13px] tracking-widest uppercase rounded-[4px] px-6 py-3 hover:bg-brand-gold/10 transition"
+                    className="btn-lift inline-flex items-center justify-center gap-2 border border-brand-gold/50 text-brand-gold font-heading font-black text-[13px] rounded-[4px] px-6 py-3 hover:bg-brand-gold/10 transition"
                   >
                     <Download className="size-4" strokeWidth={2} aria-hidden />
-                    Request Capability Statement
+                    Request capability statement
                   </Link>
                 )}
               </div>
@@ -213,8 +213,8 @@ export function HomeHero() {
 
             <AnimateIn delay={600}>
               <div className="mt-6 border-t border-white/10 pt-4">
-                <p className="font-sans font-medium text-white/40 text-[11px] tracking-widest uppercase">
-                  Lyall Mercer: As Seen In
+                <p className="font-sans font-medium text-white/40 text-[11px]">
+                  Lyall Mercer: As seen in
                 </p>
                 <div className="flex flex-wrap gap-5 mt-2">
                   {siteConfig.lyall.mediaLinks.map((link, i) => (
@@ -259,7 +259,7 @@ export function HomeHero() {
                   value={stat.value}
                   className="font-heading font-black text-brand-gold text-2xl lg:text-3xl"
                 />
-                <p className="font-sans font-medium text-white/40 text-[10px] tracking-widest uppercase mt-0.5">
+                <p className="font-sans font-medium text-white/40 text-[10px] mt-0.5">
                   {stat.label}
                 </p>
               </div>

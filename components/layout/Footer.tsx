@@ -6,18 +6,18 @@ import { siteConfig } from "@/config/site";
 import { MyPRPartnerCTA } from "@/components/shared/MyPRPartnerCTA";
 
 const serviceLinks = [
-  { label: "Corporate Communications", slug: "corporate-communications" },
-  { label: "Reputation Management", slug: "reputation-management" },
-  { label: "Issues Management", slug: "issues-management" },
-  { label: "Crisis Communications", slug: "crisis-communications" },
-  { label: "Media Strategy", slug: "media-strategy" },
-  { label: "Digital Media", slug: "digital-media" },
+  { label: "Corporate communications", slug: "corporate-communications" },
+  { label: "Reputation management", slug: "reputation-management" },
+  { label: "Issues management", slug: "issues-management" },
+  { label: "Crisis communications", slug: "crisis-communications" },
+  { label: "Media strategy", slug: "media-strategy" },
+  { label: "Digital media", slug: "digital-media" },
 ] as const;
 
 const quickLinks = [
   { label: "About", href: "/about" },
   { label: "Lyall Mercer", href: "/about/lyall-mercer" },
-  { label: "Media Training", href: "/media-training" },
+  { label: "Media training", href: "/media-training" },
   { label: "Crisis (24/7)", href: "/crisis" },
   { label: "Insights", href: "/insights" },
   { label: "FAQ", href: "/faq" },
@@ -28,8 +28,8 @@ function Logo() {
   return (
     <div className="flex flex-col leading-none">
       <span className="font-heading text-brand-gold font-black text-2xl">CRC</span>
-      <span className="font-sans font-medium text-white text-[10px] tracking-[0.2em] uppercase mt-0.5">
-        PUBLIC RELATIONS
+      <span className="font-sans font-medium text-white text-[10px] mt-0.5">
+        Public relations
       </span>
     </div>
   );
@@ -39,14 +39,14 @@ export function Footer() {
   const { street, city, state, postcode, country } = siteConfig.address;
   const clientLinks = [
     {
-      label: "Private Companies",
+      label: "Private companies",
       href: "/clients/corporate",
     },
     { label: "Government", href: "/clients/government" },
-    { label: "Industry Associations", href: "/clients/industry-associations" },
-    { label: "Schools & Faith-Based", href: "/clients/schools-faith" },
+    { label: "Industry associations", href: "/clients/industry-associations" },
+    { label: "Schools & faith-based", href: "/clients/schools-faith" },
     { label: "Pacific", href: "/pacific" },
-    { label: "Case Studies", href: "/case-studies" },
+    { label: "Case studies", href: "/case-studies" },
   ] as const;
 
   return (
@@ -82,7 +82,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-xs font-sans font-medium text-brand-gold tracking-[0.14em] uppercase mb-4">
+            <h4 className="text-xs font-sans font-medium text-brand-gold mb-4">
               Services
             </h4>
             <ul>
@@ -100,8 +100,8 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-xs font-sans font-medium text-brand-gold tracking-[0.14em] uppercase mb-4">
-              Clients &amp; Sectors
+            <h4 className="text-xs font-sans font-medium text-brand-gold mb-4">
+              Clients &amp; sectors
             </h4>
             <ul>
               {clientLinks.map(({ label, href }) => (
@@ -118,8 +118,8 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-xs font-sans font-medium text-brand-gold tracking-[0.14em] uppercase mb-4">
-              Quick Links
+            <h4 className="text-xs font-sans font-medium text-brand-gold mb-4">
+              Quick links
             </h4>
             <ul>
               {quickLinks.map(({ label, href }) => (
@@ -136,7 +136,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-xs font-sans font-medium text-brand-gold tracking-[0.14em] uppercase mb-4">
+            <h4 className="text-xs font-sans font-medium text-brand-gold mb-4">
               Contact
             </h4>
             <a
@@ -162,8 +162,8 @@ export function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-8 mt-8">
-          <p className="text-white/40 text-xs tracking-widest uppercase font-medium mb-4">
-            The CRC Group Ecosystem
+          <p className="text-white/40 text-xs font-medium mb-4">
+            The CRC Group ecosystem
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div className="bg-white/5 rounded-lg p-4">
@@ -176,7 +176,7 @@ export function Footer() {
             <div className="bg-white/5 rounded-lg p-4">
               <p className="text-white font-heading font-black text-sm mb-1">Crisis Communications Australia</p>
               <p className="text-white/50 text-xs leading-relaxed mb-2">
-                24/7 crisis support and the Annual Crisis Communications Summit.
+                24/7 crisis support.
               </p>
               <a href={siteConfig.crisisCommsAuUrl} target="_blank" rel="noopener noreferrer" className="text-brand-teal text-xs font-medium hover:underline">
                 crisiscommunicationsaustralia.com.au →
@@ -186,8 +186,8 @@ export function Footer() {
               variant="dark"
               compact
               title="My PR Partner"
-              description="CRC PR's training platform for communications professionals, workshops, and practical crisis communications education."
-              buttonLabel="VISIT MY PR PARTNER"
+              description="CRC Public Relations' training platform for communications professionals, workshops, and practical crisis communications education."
+              buttonLabel="Visit My PR Partner"
               className="h-full"
             />
           </div>

@@ -8,7 +8,7 @@ export function CaseStudies() {
           key={study.id}
           className="bg-white border-t-4 border-brand-gold border-x border-b border-brand-border rounded-b-lg p-6"
         >
-          <p className="text-brand-gold text-xs font-medium tracking-[0.14em] uppercase mb-2">
+          <p className="text-brand-gold text-xs font-medium mb-2">
             {study.sector}
           </p>
           <p className="font-heading font-black text-navy text-2xl leading-tight mb-1">
@@ -20,7 +20,7 @@ export function CaseStudies() {
           <hr className="border-brand-border mb-5" />
           <div className="space-y-4">
             <div>
-              <p className="text-navy text-xs font-medium uppercase tracking-wide mb-1">
+              <p className="text-navy text-xs font-medium mb-1">
                 Situation
               </p>
               <p className="text-charcoal text-sm leading-relaxed">
@@ -28,7 +28,7 @@ export function CaseStudies() {
               </p>
             </div>
             <div>
-              <p className="text-navy text-xs font-medium uppercase tracking-wide mb-1">
+              <p className="text-navy text-xs font-medium mb-1">
                 Challenge
               </p>
               <p className="text-charcoal text-sm leading-relaxed">
@@ -36,7 +36,7 @@ export function CaseStudies() {
               </p>
             </div>
             <div>
-              <p className="text-navy text-xs font-medium uppercase tracking-wide mb-1">
+              <p className="text-navy text-xs font-medium mb-1">
                 Our approach
               </p>
               <p className="text-charcoal text-sm leading-relaxed">

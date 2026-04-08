@@ -56,7 +56,7 @@ const faqs = [
       "Associations are communicating to members, boards, regulators, government, and media at the same time. The work is more politically and governance-sensitive because member confidence and public advocacy often need to be managed together.",
   },
   {
-    question: "Can CRC PR support both advocacy and governance matters?",
+    question: "Can CRC Public Relations support both advocacy and governance matters?",
     answer:
       "Yes. That combination is one of the reasons associations engage us. We help peak bodies manage policy-facing communication, member trust, board-sensitive issues, and media pressure in the same engagement when needed.",
   },
@@ -131,7 +131,7 @@ const SECTORS: { key: Sector; label: string }[] = [
   { key: "all", label: "All sectors" },
   { key: "finance", label: "Finance" },
   { key: "health", label: "Health" },
-  { key: "legal", label: "Legal & Professional" },
+  { key: "legal", label: "Legal & professional" },
   { key: "business", label: "Business" },
   { key: "construction", label: "Construction" },
   { key: "education", label: "Education" },
@@ -140,14 +140,14 @@ const SECTORS: { key: Sector; label: string }[] = [
 ];
 
 const SECTOR_LABELS: Record<Exclude<Sector, "all">, string> = {
-  finance: "Finance & Banking",
-  health: "Health & Aged Care",
-  legal: "Legal & Professional Services",
-  business: "Business & Industry",
-  construction: "Construction & Property",
-  education: "Education & Training",
-  resources: "Resources & Energy",
-  other: "Other Sectors",
+  finance: "Finance & banking",
+  health: "Health & aged care",
+  legal: "Legal & professional services",
+  business: "Business & industry",
+  construction: "Construction & property",
+  education: "Education & training",
+  resources: "Resources & energy",
+  other: "Other sectors",
 };
 
 const SECTOR_ORDER: Exclude<Sector, "all">[] = [
@@ -171,7 +171,7 @@ function AssociationOpening() {
   return (
     <section className="bg-off-white py-20">
       <div className="max-w-7xl mx-auto px-6">
-        <p className="text-brand-teal font-sans font-medium text-xs tracking-[0.18em] uppercase mb-8">
+        <p className="text-brand-teal font-sans font-medium text-xs mb-8">
           Why associations need specialist communications counsel
         </p>
 
@@ -187,7 +187,7 @@ function AssociationOpening() {
               that load.
             </p>
             <p className="text-text-body text-base leading-relaxed mb-8">
-              CRC PR has worked with some of Australia&apos;s most prominent peak bodies for
+              CRC Public Relations has worked with some of Australia&apos;s most prominent peak bodies for
               over 25 years. We understand what boards need, what members expect, and
               what regulators and journalists are looking for. Our approach is always
               tailored to the specific character of your membership, your board,
@@ -252,7 +252,7 @@ function AssociationOpening() {
               <p className="font-heading font-black text-brand-gold text-4xl leading-none mb-2">
                 {num}
               </p>
-              <p className="text-text-caption text-[10px] tracking-wide uppercase leading-snug">
+              <p className="text-text-caption text-[10px] leading-snug">
                 {label}
               </p>
             </div>
@@ -277,17 +277,17 @@ function AssociationsDirectory({ activeSector }: { activeSector: Sector }) {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        <p className="text-brand-gold font-sans font-medium text-xs tracking-[0.18em] uppercase mb-3">
-          Industry Associations
+        <p className="text-brand-gold font-sans font-medium text-xs mb-3">
+          Industry associations
         </p>
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
           <div>
             <h2 className="font-heading font-black text-navy text-4xl mb-2">
-              Industry associations CRC PR understands and supports.
+              Industry associations CRC Public Relations understands and supports.
             </h2>
             <p className="text-charcoal-mid text-base max-w-xl">
               This page highlights major Australian peak bodies and industry
-              associations operating in sectors where CRC PR has deep
+              associations operating in sectors where CRC Public Relations has deep
               experience. Over time, it will expand into a broader pillar page
               with more detailed sector insights, communications considerations,
               and tailored support content for individual associations.
@@ -327,7 +327,7 @@ function AssociationsDirectory({ activeSector }: { activeSector: Sector }) {
             return (
               <div key={sectorKey} className="border-b border-brand-border last:border-b-0">
                 <div className="flex items-center gap-3 px-5 py-3 bg-off-white">
-                  <span className="text-[10px] font-medium tracking-[0.12em] uppercase text-charcoal-mid">
+                  <span className="text-[10px] font-medium text-charcoal-mid">
                     {SECTOR_LABELS[sectorKey]}
                   </span>
                   <span className="text-[9px] text-charcoal-mid bg-white border border-brand-border rounded-full px-2 py-0.5">
@@ -393,16 +393,16 @@ function AssociationsDirectory({ activeSector }: { activeSector: Sector }) {
               Is your association dealing with a communications challenge?
             </p>
             <p className="text-[#9A7200] text-xs leading-relaxed">
-              CRC PR provides specialist counsel for peak bodies, regulatory crisis,
+              CRC Public Relations provides specialist counsel for peak bodies, regulatory crisis,
               advocacy, member communications, and board governance. Confidential,
               senior-level advice.
             </p>
           </div>
           <a
             href="/contact"
-            className="bg-brand-gold text-navy font-heading font-black text-[9px] tracking-widest uppercase px-5 py-2.5 rounded flex-shrink-0 hover:bg-brand-gold/90 transition-colors whitespace-nowrap"
+            className="bg-brand-gold text-navy font-heading font-black text-[9px] px-5 py-2.5 rounded flex-shrink-0 hover:bg-brand-gold/90 transition-colors whitespace-nowrap"
           >
-            BOOK A CONSULTATION →
+            Book a consultation →
           </a>
         </div>
       </div>
@@ -425,10 +425,10 @@ export default function IndustryAssociationsPage({
       />
 
       <PageHero
-        eyebrow="INDUSTRY ASSOCIATIONS"
+        eyebrow="Industry associations"
         title="Industry association communications that protects your members, and your standing."
         description="Specialist counsel for peak bodies, member organisations, and industry associations across Australia. Regulatory crisis, member communications, board governance, and public affairs."
-        ctaLabel="BOOK A CONSULTATION"
+        ctaLabel="Book a consultation"
         ctaHref="/contact"
       />
 
@@ -441,11 +441,11 @@ export default function IndustryAssociationsPage({
 
       <AssociationsDirectory activeSector={activeSector} />
 
-      {/* How CRC PR works with industry associations */}
+      {/* How CRC Public Relations works with industry associations */}
       <section className="bg-off-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="font-heading font-black text-navy text-3xl md:text-4xl mb-12">
-            How CRC PR works with industry associations
+            How CRC Public Relations works with industry associations
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -540,7 +540,7 @@ export default function IndustryAssociationsPage({
       <section className="bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <p className="text-charcoal-mid text-sm italic mb-6">
-            CRC PR has worked with member associations and peak bodies at the
+            CRC Public Relations has worked with member associations and peak bodies at the
             state and national level, across financial services, education,
             health, and community sectors.
           </p>
@@ -580,7 +580,7 @@ export default function IndustryAssociationsPage({
 
       <LeadMagnetBanner
         magnet="associationCrisisGuide"
-        title="Free: Industry Association Crisis Guide"
+        title="Free: Industry association crisis guide"
         description="A practical guide for association CEOs and executive officers covering the crisis types most likely to affect a peak body: regulatory, member conduct, governance, media, and digital pressure, with a framework for managing each."
       />
 
@@ -591,7 +591,7 @@ export default function IndustryAssociationsPage({
 
       <PageClosingCTA
         title="Association communications challenges are what we do best."
-        body="CRC PR has spent decades helping associations navigate member expectations, regulatory pressure, governance complexity, and media scrutiny with direct senior counsel."
+        body="CRC Public Relations has spent decades helping associations navigate member expectations, regulatory pressure, governance complexity, and media scrutiny with direct senior counsel."
       />
     </>
   );

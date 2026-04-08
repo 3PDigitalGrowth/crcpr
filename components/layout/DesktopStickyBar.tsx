@@ -36,9 +36,9 @@ export function DesktopStickyBar() {
         </a>
         <Link
           href="/contact"
-          className="bg-brand-gold text-navy font-heading font-black text-xs tracking-widest uppercase px-4 py-2 rounded hover:bg-gold-light transition-colors"
+          className="bg-brand-gold text-navy font-heading font-black text-xs px-4 py-2 rounded hover:bg-gold-light transition-colors"
         >
-          BOOK A CONSULTATION →
+          Book a consultation →
         </Link>
       </div>
     </div>

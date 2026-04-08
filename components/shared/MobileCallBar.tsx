@@ -9,8 +9,8 @@ export function MobileCallBar() {
         className="flex items-center justify-center gap-2"
       >
         <Phone className="text-navy shrink-0" size={18} strokeWidth={2.25} aria-hidden />
-        <span className="font-heading font-black text-navy text-xs tracking-widest uppercase">
-          CALL {siteConfig.phone.display} | AVAILABLE 24/7
+        <span className="font-heading font-black text-navy text-xs">
+          Call {siteConfig.phone.display} | Available 24/7
         </span>
       </a>
     </div>

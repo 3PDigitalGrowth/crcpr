@@ -67,105 +67,48 @@ const faqs = [
   },
 ];
 
-type Sector =
-  | "all"
-  | "finance"
-  | "health"
-  | "legal"
-  | "business"
-  | "construction"
-  | "education"
-  | "resources"
-  | "other";
-
-interface Association {
-  abbr: string;
-  name: string;
-  subsector: string;
-  href: string;
-  sector: Exclude<Sector, "all">;
-}
-
-const ASSOCIATIONS: Association[] = [
-  { abbr: "ABA", name: "Australian Banking Association", subsector: "Banking", href: "https://www.aba.org.au", sector: "finance" },
-  { abbr: "FBAA", name: "Finance Brokers Association of Australia", subsector: "Finance broking", href: "https://www.fbaa.com.au", sector: "finance" },
-  { abbr: "MFAA", name: "Mortgage & Finance Association of Australia", subsector: "Mortgage broking", href: "https://www.mfaa.com.au", sector: "finance" },
-  { abbr: "FPA", name: "Financial Planning Association of Australia", subsector: "Financial planning", href: "https://www.fpa.com.au", sector: "finance" },
-  { abbr: "FSC", name: "Financial Services Council of Australia", subsector: "Financial services", href: "https://www.fsc.org.au", sector: "finance" },
-  { abbr: "ICA", name: "Insurance Council of Australia", subsector: "Insurance", href: "https://www.insurancecouncil.com.au", sector: "finance" },
-  { abbr: "ASFA", name: "Association of Superannuation Funds of Australia", subsector: "Superannuation", href: "https://www.asfa.asn.au", sector: "finance" },
-  { abbr: "AMA", name: "Australian Medical Association", subsector: "Medical professionals", href: "https://www.ama.com.au", sector: "health" },
-  { abbr: "APHA", name: "Australian Private Hospitals Association", subsector: "Private hospitals", href: "https://www.apha.org.au", sector: "health" },
-  { abbr: "LASA", name: "Leading Age Services Australia", subsector: "Aged care", href: "https://www.lasa.asn.au", sector: "health" },
-  { abbr: "PHA", name: "Public Health Association of Australia", subsector: "Public health", href: "https://www.phaa.net.au", sector: "health" },
-  { abbr: "ACSA", name: "Aged Care Industry Association", subsector: "Community care", href: "https://www.acsa.asn.au", sector: "health" },
-  { abbr: "APA", name: "Australian Physiotherapy Association", subsector: "Allied health", href: "https://www.physiotherapy.asn.au", sector: "health" },
-  { abbr: "LCA", name: "Law Council of Australia", subsector: "Legal profession", href: "https://www.lawcouncil.asn.au", sector: "legal" },
-  { abbr: "CPA", name: "CPA Australia", subsector: "Accounting", href: "https://www.cpaaustralia.com.au", sector: "legal" },
-  { abbr: "CA", name: "Chartered Accountants ANZ", subsector: "Accounting", href: "https://www.charteredaccountantsanz.com", sector: "legal" },
-  { abbr: "AHRI", name: "Australian HR Institute", subsector: "Human resources", href: "https://www.ahri.com.au", sector: "legal" },
-  { abbr: "AICD", name: "Australian Institute of Company Directors", subsector: "Governance", href: "https://www.aicd.com.au", sector: "legal" },
-  { abbr: "Ai", name: "Australian Industry Group", subsector: "Manufacturing, services", href: "https://www.aigroup.com.au", sector: "business" },
-  { abbr: "BCA", name: "Business Council of Australia", subsector: "Large business", href: "https://www.businesscouncil.com.au", sector: "business" },
-  { abbr: "ACCI", name: "Australian Chamber of Commerce & Industry", subsector: "Commerce", href: "https://www.acci.asn.au", sector: "business" },
-  { abbr: "COSBOA", name: "Council of Small Business Organisations", subsector: "Small business", href: "https://www.cosboa.org.au", sector: "business" },
-  { abbr: "NRA", name: "National Retail Association", subsector: "Retail", href: "https://www.nra.com.au", sector: "business" },
-  { abbr: "NFF", name: "National Farmers Federation", subsector: "Agriculture", href: "https://www.nff.org.au", sector: "business" },
-  { abbr: "HIA", name: "Housing Industry Association", subsector: "Residential construction", href: "https://www.hia.com.au", sector: "construction" },
-  { abbr: "MBA", name: "Master Builders Australia", subsector: "Commercial construction", href: "https://www.masterbuilders.com.au", sector: "construction" },
-  { abbr: "PCA", name: "Property Council of Australia", subsector: "Property", href: "https://www.propertycouncil.com.au", sector: "construction" },
-  { abbr: "AIBS", name: "Australian Institute of Building Surveyors", subsector: "Building surveying", href: "https://www.aibs.com.au", sector: "construction" },
-  { abbr: "ISA", name: "Independent Schools Australia", subsector: "Independent schools", href: "https://www.isa.edu.au", sector: "education" },
-  { abbr: "AACS", name: "Australian Association of Christian Schools", subsector: "Christian schools", href: "https://www.aacs.org.au", sector: "education" },
-  { abbr: "UA", name: "Universities Australia", subsector: "Higher education", href: "https://www.universitiesaustralia.edu.au", sector: "education" },
-  { abbr: "TDA", name: "TAFE Directors Australia", subsector: "VET / TAFE", href: "https://www.tda.edu.au", sector: "education" },
-  { abbr: "MCA", name: "Minerals Council of Australia", subsector: "Mining", href: "https://www.minerals.org.au", sector: "resources" },
-  { abbr: "AEC", name: "Australian Energy Council", subsector: "Energy", href: "https://www.energycouncil.com.au", sector: "resources" },
-  { abbr: "APPEA", name: "Australian Petroleum Production & Exploration Association", subsector: "Oil & gas", href: "https://www.appea.com.au", sector: "resources" },
-  { abbr: "MLAA", name: "Master Locksmiths Association of Australasia", subsector: "Security", href: "https://www.locksmiths.com.au", sector: "other" },
-  { abbr: "PRIA", name: "Public Relations Institute of Australia", subsector: "Communications", href: "https://www.pria.com.au", sector: "other" },
-  { abbr: "AIIA", name: "Australian Information Industry Association", subsector: "Technology", href: "https://www.aiia.com.au", sector: "other" },
+const sectorCards = [
+  {
+    title: "Finance & banking",
+    description:
+      "When your sector faces regulatory scrutiny, government inquiry, or public trust pressure, your members look to you for leadership. We work directly with CEOs and executive officers of finance and banking peak bodies to navigate member communications, media strategy, and government engagement with the discipline these moments demand.",
+  },
+  {
+    title: "Health & aged care",
+    description:
+      "Health and aged care associations operate under sustained public and political scrutiny. Whether you are managing Royal Commission legacy, workforce advocacy, or public confidence in the sector, we provide direct senior counsel to your leadership team on the communications strategy that protects your members and your standing.",
+  },
+  {
+    title: "Legal & professional services",
+    description:
+      "Your association represents the public voice of a profession. We help you strengthen that voice through strategic media engagement, governance communications, and member conduct management. You deal directly with a senior adviser who understands the reputational weight your sector carries.",
+  },
+  {
+    title: "Business & industry",
+    description:
+      "Business chambers and industry groups need advocacy that influences policy and communications that keep members aligned. We work with your board and executive team on campaigns that are evidence-based, strategically targeted, and designed to be heard by the decision makers who determine the outcome.",
+  },
+  {
+    title: "Construction & property",
+    description:
+      "Safety, regulation, and stakeholder expectations define the communications landscape for construction and property associations. We help your leadership team manage regulatory reform, safety-related communications, and the media scrutiny that accompanies major industry incidents.",
+  },
+  {
+    title: "Education & training",
+    description:
+      "Education associations face unique pressure where parent trust, board governance, and community confidence must work together. We have guided school and education peak bodies through some of the most sensitive issues in the sector, working directly with your executive team and board.",
+  },
+  {
+    title: "Resources & energy",
+    description:
+      "Social licence, environmental scrutiny, and government relations define the operating environment for resources and energy associations. We provide direct senior counsel on the communications strategies that protect your sector\u2019s reputation and advance your advocacy objectives.",
+  },
+  {
+    title: "Other sectors",
+    description:
+      "Every industry association faces communications challenges unique to its membership and operating environment. If your sector is not listed above, we can still help. Our boutique model means you work directly with experienced senior advisers who will understand your sector quickly and act decisively.",
+  },
 ];
-
-const SECTORS: { key: Sector; label: string }[] = [
-  { key: "all", label: "All sectors" },
-  { key: "finance", label: "Finance" },
-  { key: "health", label: "Health" },
-  { key: "legal", label: "Legal & professional" },
-  { key: "business", label: "Business" },
-  { key: "construction", label: "Construction" },
-  { key: "education", label: "Education" },
-  { key: "resources", label: "Resources" },
-  { key: "other", label: "Other" },
-];
-
-const SECTOR_LABELS: Record<Exclude<Sector, "all">, string> = {
-  finance: "Finance & banking",
-  health: "Health & aged care",
-  legal: "Legal & professional services",
-  business: "Business & industry",
-  construction: "Construction & property",
-  education: "Education & training",
-  resources: "Resources & energy",
-  other: "Other sectors",
-};
-
-const SECTOR_ORDER: Exclude<Sector, "all">[] = [
-  "finance",
-  "health",
-  "legal",
-  "business",
-  "construction",
-  "education",
-  "resources",
-  "other",
-];
-
-function getActiveSector(value?: string): Sector {
-  return SECTORS.some((sector) => sector.key === value)
-    ? (value as Sector)
-    : "all";
-}
 
 function AssociationOpening() {
   return (
@@ -263,160 +206,62 @@ function AssociationOpening() {
   );
 }
 
-function AssociationsDirectory({ activeSector }: { activeSector: Sector }) {
-  const grouped = ASSOCIATIONS.reduce<Record<string, Association[]>>(
-    (acc, association) => {
-      if (activeSector !== "all" && association.sector !== activeSector) return acc;
-      if (!acc[association.sector]) acc[association.sector] = [];
-      acc[association.sector].push(association);
-      return acc;
-    },
-    {},
-  );
-
+function SectorCards() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <p className="text-brand-gold font-sans font-medium text-xs mb-3">
-          Industry associations
+          Sectors we advise
         </p>
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
-          <div>
-            <h2 className="font-heading font-black text-navy text-4xl mb-2">
-              Industry associations CRC Public Relations understands and supports.
-            </h2>
-            <p className="text-charcoal-mid text-base max-w-xl">
-              This page highlights major Australian peak bodies and industry
-              associations operating in sectors where CRC Public Relations has deep
-              experience. Over time, it will expand into a broader pillar page
-              with more detailed sector insights, communications considerations,
-              and tailored support content for individual associations.
-            </p>
-          </div>
-        </div>
+        <h2 className="font-heading font-black text-navy text-3xl md:text-4xl mb-4">
+          Sectors where we advise associations
+        </h2>
+        <p className="text-text-body text-base leading-relaxed max-w-3xl mb-12">
+          We work directly with CEOs, executive officers, and boards of industry
+          associations and peak bodies across Australia. Every sector brings
+          unique communications challenges. Here is how we help.
+        </p>
 
-        <div className="flex flex-wrap gap-2 mb-10">
-          {SECTORS.map(({ key, label }) => {
-            const isActive = activeSector === key;
-            const href =
-              key === "all"
-                ? "/clients/industry-associations"
-                : `/clients/industry-associations?sector=${key}`;
-
-            return (
-              <Link
-                key={key}
-                href={href}
-                className={`text-xs font-medium px-4 py-2 rounded transition-colors duration-150 ${
-                  isActive
-                    ? "bg-navy text-white"
-                    : "bg-off-white border border-brand-border text-charcoal-mid hover:border-navy hover:text-navy"
-                }`}
-              >
-                {label}
-              </Link>
-            );
-          })}
-        </div>
-
-        <div className="border border-brand-border rounded-lg overflow-hidden">
-          {SECTOR_ORDER.map((sectorKey) => {
-            const sectorAssociations = grouped[sectorKey];
-            if (!sectorAssociations || sectorAssociations.length === 0) return null;
-
-            return (
-              <div key={sectorKey} className="border-b border-brand-border last:border-b-0">
-                <div className="flex items-center gap-3 px-5 py-3 bg-off-white">
-                  <span className="text-[10px] font-medium text-charcoal-mid">
-                    {SECTOR_LABELS[sectorKey]}
-                  </span>
-                  <span className="text-[9px] text-charcoal-mid bg-white border border-brand-border rounded-full px-2 py-0.5">
-                    {sectorAssociations.length}
-                  </span>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-brand-border">
-                  {sectorAssociations.map((association) => (
-                    <a
-                      key={association.abbr}
-                      href={association.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-start gap-3 px-5 py-4 hover:bg-off-white transition-colors duration-150 group border-b border-brand-border last:border-b-0 sm:last:border-b"
-                    >
-                      <div className="w-10 h-10 rounded flex items-center justify-center flex-shrink-0 bg-[#E8EBF0] text-navy text-[9px] font-bold tracking-wide leading-tight text-center">
-                        {association.abbr}
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <p className="text-[12px] font-medium text-charcoal leading-snug mb-0.5 group-hover:text-navy transition-colors">
-                          {association.name}
-                        </p>
-                        <p className="text-[10px] text-charcoal-mid">{association.subsector}</p>
-                      </div>
-                    </a>
-                  ))}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mt-5 pt-5 border-t border-brand-border">
-          <p className="text-brand-teal text-sm font-medium">
-            Association not listed?{" "}
-            <a href="/contact" className="underline hover:text-brand-teal/80">
-              Contact us →
-            </a>
-          </p>
-        </div>
-
-        <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center gap-4 bg-gold-light border border-brand-gold/30 rounded-lg p-5">
-          <div className="w-10 h-10 bg-brand-gold rounded flex items-center justify-center flex-shrink-0">
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#1A2B4A"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {sectorCards.map((card) => (
+            <div
+              key={card.title}
+              className="bg-off-white border border-brand-border rounded-lg p-8 hover:shadow-md hover:shadow-navy/5 transition-shadow duration-200"
             >
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-              <circle cx="9" cy="7" r="4" />
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-            </svg>
-          </div>
+              <h3 className="font-heading font-black text-navy text-lg mb-3">
+                {card.title}
+              </h3>
+              <p className="text-charcoal-mid text-[15px] leading-relaxed">
+                {card.description}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4 bg-gold-light border border-brand-gold/30 rounded-lg p-6">
           <div className="flex-1 min-w-0">
-            <p className="text-[#7B5A00] text-sm font-medium mb-0.5">
-              Is your association dealing with a communications challenge?
+            <p className="text-[#7B5A00] text-sm font-medium mb-1">
+              Sector not listed?
             </p>
             <p className="text-[#9A7200] text-xs leading-relaxed">
-              CRC Public Relations provides specialist counsel for peak bodies, regulatory crisis,
-              advocacy, member communications, and board governance. Confidential,
-              senior-level advice.
+              We work with associations across every industry. If your sector is
+              not represented above, get in touch for a confidential conversation
+              about how we can help.
             </p>
           </div>
-          <a
+          <Link
             href="/contact"
-            className="bg-brand-gold text-navy font-heading font-black text-[9px] px-5 py-2.5 rounded flex-shrink-0 hover:bg-brand-gold/90 transition-colors whitespace-nowrap"
+            className="bg-brand-gold text-navy font-heading font-black text-xs px-6 py-3 rounded flex-shrink-0 hover:bg-brand-gold/90 transition-colors whitespace-nowrap"
           >
-            Book a consultation →
-          </a>
+            Book a consultation
+          </Link>
         </div>
       </div>
     </section>
   );
 }
 
-export default function IndustryAssociationsPage({
-  searchParams,
-}: {
-  searchParams?: { sector?: string };
-}) {
-  const activeSector = getActiveSector(searchParams?.sector);
-
+export default function IndustryAssociationsPage() {
   return (
     <>
       <script
@@ -439,7 +284,7 @@ export default function IndustryAssociationsPage({
 
       <AssociationOpening />
 
-      <AssociationsDirectory activeSector={activeSector} />
+      <SectorCards />
 
       {/* How CRC Public Relations works with industry associations */}
       <section className="bg-off-white py-16 md:py-24">

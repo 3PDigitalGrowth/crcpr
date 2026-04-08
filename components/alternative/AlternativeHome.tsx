@@ -369,19 +369,20 @@ function AlternativePracticeAreas() {
               <AnimateIn key={area.title} delay={i * 120}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                   <div
-                    className={
+                    className={`relative overflow-hidden rounded-lg shadow-sm shadow-navy/10 ${
                       area.imageOnLeft
                         ? "order-1"
                         : "order-1 md:order-2"
-                    }
+                    }`}
+                    style={{ aspectRatio: "3 / 2" }}
                   >
                     <Image
                       src={area.imageSrc}
                       alt={area.imageAlt}
-                      width={area.imageWidth}
-                      height={area.imageHeight}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
                       loading="lazy"
-                      className="w-full rounded-lg object-cover shadow-sm shadow-navy/10"
+                      className="object-cover object-top"
                     />
                   </div>
 

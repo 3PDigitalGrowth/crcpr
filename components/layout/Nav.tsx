@@ -20,6 +20,9 @@ import {
   Briefcase,
   Building,
   GraduationCap,
+  Scale,
+  Heart,
+  Church,
 } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
@@ -136,17 +139,17 @@ function ServicesPanel({ onClose }: { onClose: () => void }) {
             onClick={onClose}
           />
           <MegaItem
+            href="/services/media-strategy"
+            icon={<Radio className="w-full h-full" />}
+            title="Media relations & strategy"
+            desc="Proactive media presence and relationships"
+            onClick={onClose}
+          />
+          <MegaItem
             href="/services/reputation-management"
             icon={<Shield className="w-full h-full" />}
             title="Reputation management"
             desc="Vulnerability assessments and long-term protection"
-            onClick={onClose}
-          />
-          <MegaItem
-            href="/services/issues-management"
-            icon={<AlertTriangle className="w-full h-full" />}
-            title="Issues management"
-            desc="Get ahead before issues become crises"
             onClick={onClose}
           />
         </div>
@@ -161,10 +164,10 @@ function ServicesPanel({ onClose }: { onClose: () => void }) {
             onClick={onClose}
           />
           <MegaItem
-            href="/services/media-strategy"
-            icon={<Radio className="w-full h-full" />}
-            title="Media strategy"
-            desc="Proactive media presence and relationships"
+            href="/services/issues-management"
+            icon={<AlertTriangle className="w-full h-full" />}
+            title="Issues management"
+            desc="Get ahead before issues become crises"
             onClick={onClose}
           />
           <MegaItem
@@ -237,14 +240,14 @@ function ClientsPanel({
       aria-label="Clients menu"
       className="max-w-7xl mx-auto px-6"
     >
-      <div className="grid grid-cols-[1fr_1fr_220px]">
+      <div className="grid grid-cols-[1fr_1fr_1fr_220px]">
         <div className="py-5 px-4 border-r border-white/[0.06]">
           <ColumnHeader>By sector</ColumnHeader>
           <MegaItem
             href="/clients/corporate"
             icon={<Briefcase className="w-full h-full" />}
-            title="Private companies & family businesses"
-            desc="Direct counsel for owners, directors, and senior leadership"
+            title="Companies & family businesses"
+            desc="Direct counsel for owners, directors, and senior executives"
             onClick={onClose}
           />
           <MegaItem
@@ -257,15 +260,47 @@ function ClientsPanel({
           <MegaItem
             href="/clients/industry-associations"
             icon={<Users className="w-full h-full" />}
-            title="Industry associations"
-            desc="Peak bodies, member organisations"
+            title="Industry and professional associations, peak bodies"
+            desc="Advocacy, member trust, public voice"
             onClick={onClose}
           />
           <MegaItem
             href="/clients/schools-faith"
             icon={<GraduationCap className="w-full h-full" />}
-            title="Schools & faith-based"
-            desc="Independent schools, Catholic networks"
+            title="Independent and faith-based schools"
+            desc="Trust, care, and legal precision"
+            onClick={onClose}
+          />
+        </div>
+
+        <div className="py-5 px-4 border-r border-white/[0.06]">
+          <ColumnHeader>&nbsp;</ColumnHeader>
+          <MegaItem
+            href="/clients/corporate"
+            icon={<Scale className="w-full h-full" />}
+            title="Legal & professional services"
+            desc="Authority-building through strategic media"
+            onClick={onClose}
+          />
+          <MegaItem
+            href="/clients/corporate"
+            icon={<Heart className="w-full h-full" />}
+            title="Health & aged care"
+            desc="Reputation in scrutinised care environments"
+            onClick={onClose}
+          />
+          <MegaItem
+            href="/pacific"
+            icon={<Globe className="w-full h-full" />}
+            title="Pacific islands"
+            desc="The only Australian firm with deep Pacific expertise"
+            onClick={onClose}
+          />
+          <MegaItem
+            href="/clients/schools-faith"
+            icon={<Church className="w-full h-full" />}
+            title="Faith-based organisations"
+            desc="Reputation and crisis for ministries and charities"
             onClick={onClose}
           />
         </div>
@@ -359,18 +394,18 @@ function MobileDrawer({
                 href: "/services/corporate-communications",
               },
               {
-                label: "Reputation management",
-                href: "/services/reputation-management",
+                label: "Media relations & strategy",
+                href: "/services/media-strategy",
               },
               {
-                label: "Issues management",
-                href: "/services/issues-management",
+                label: "Reputation management",
+                href: "/services/reputation-management",
               },
               {
                 label: "Crisis communications",
                 href: "/services/crisis-communications",
               },
-              { label: "Media strategy", href: "/services/media-strategy" },
+              { label: "Issues management", href: "/services/issues-management" },
               { label: "Digital media", href: "/services/digital-media" },
             ].map((item) => (
               <Link
@@ -403,7 +438,7 @@ function MobileDrawer({
           <div className="border-b border-white/[0.06]">
             {[
               {
-                label: "Private companies & family businesses",
+                label: "Companies & family businesses",
                 href: "/clients/corporate",
               },
               {
@@ -411,11 +446,27 @@ function MobileDrawer({
                 href: "/clients/government",
               },
               {
-                label: "Industry associations",
+                label: "Industry and professional associations, peak bodies",
                 href: "/clients/industry-associations",
               },
               {
-                label: "Schools & faith-based",
+                label: "Independent and faith-based schools",
+                href: "/clients/schools-faith",
+              },
+              {
+                label: "Legal & professional services",
+                href: "/clients/corporate",
+              },
+              {
+                label: "Health & aged care",
+                href: "/clients/corporate",
+              },
+              {
+                label: "Pacific islands",
+                href: "/pacific",
+              },
+              {
+                label: "Faith-based organisations",
                 href: "/clients/schools-faith",
               },
             ].map((item) => (

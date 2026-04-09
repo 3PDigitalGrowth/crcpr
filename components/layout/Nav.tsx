@@ -490,8 +490,8 @@ function MobileDrawer({
         { label: "Media training", href: "/media-training" },
         { label: "Case studies", href: "/case-studies" },
         { label: "About", href: "/about" },
-        { label: "Insights", href: "/insights" },
         { label: "Contact", href: "/contact" },
+        { label: "Insights", href: "/insights" },
       ].map((item) => (
         <Link
           key={item.href}
@@ -528,6 +528,7 @@ const directLinks = [
   { label: "Pacific", href: "/pacific" },
   { label: "Media training", href: "/media-training" },
   { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
   { label: "Insights", href: "/insights" },
 ];
 

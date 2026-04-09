@@ -94,7 +94,7 @@ export default function CorporateCommunicationsPage() {
       <PageHero
         eyebrow="Corporate communications"
         title="Corporate communications that build trust and protect value."
-        description="We work directly with your leadership team to ensure every message — to the board, to staff, to stakeholders, to media — is precise, credible, and effective. You deal with experienced senior advisers, not account managers."
+        description="We work directly with your leadership team to ensure every message, whether to the board, staff, stakeholders, or media, is precise, credible, and effective. You deal with experienced senior advisers, not account managers."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
       />

@@ -64,7 +64,7 @@ export function HomeAbout() {
                   &ldquo;{siteConfig.lyall.quote}&rdquo;
                 </p>
                 <cite className="font-sans font-medium text-text-secondary text-sm mt-3 not-italic block">
-                  – Lyall Mercer
+                  Lyall Mercer
                 </cite>
               </blockquote>
             </AnimateIn>

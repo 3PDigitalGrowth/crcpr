@@ -117,7 +117,7 @@ export function HomePillars() {
               organisation.&rdquo;
             </blockquote>
             <p className="font-sans font-medium text-text-secondary text-sm mt-6 tracking-wide">
-              – {siteConfig.lyall.fullName}, Founder
+              {siteConfig.lyall.fullName}, Founder
             </p>
             <div className="w-12 h-[2px] bg-brand-gold mx-auto mt-8" />
           </div>

@@ -83,7 +83,7 @@ const questions: Question[] = [
     text: "How quickly could your organisation issue an initial response to a crisis?",
     options: [
       { label: "More than 2 hours", score: 0 },
-      { label: "Within 1–2 hours", score: 1 },
+      { label: "Within 1-2 hours", score: 1 },
       { label: "Within 15 minutes", score: 2 },
     ],
   },

@@ -87,7 +87,7 @@ export function HomeTestimonials() {
               &ldquo;100% of our consulting clients would recommend CRC Public Relations to a
               peer.&rdquo;
               <span className="not-italic font-medium text-charcoal-mid/60 text-sm ml-2">
-                – CRC Public Relations Client Survey
+                CRC Public Relations Client Survey
               </span>
             </p>
           </div>

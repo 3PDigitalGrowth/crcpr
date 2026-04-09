@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ImageTextRow } from "@/components/layout/ImageTextRow";
 import { PageHero } from "@/components/layout/PageHero";
 import { FAQSection } from "@/components/shared/FAQSection";
 import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
@@ -86,6 +87,10 @@ export default function IssuesManagementPage() {
         description="We help you identify, monitor, and strategically manage emerging issues before they reach crisis point. Senior counsel available nationally."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
+        heroImage={{
+          src: "/images/services/issues-management/hero.webp",
+          alt: "Australian broadsheet newspapers, pen, and reading glasses on a timber desk in warm light",
+        }}
       />
 
       <PageProofStrip
@@ -96,8 +101,12 @@ export default function IssuesManagementPage() {
       {/* Opening section */}
       <section className="bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_340px] gap-10 items-start">
-            <div className="max-w-3xl">
+          <ImageTextRow
+            imageSrc="/images/services/issues-management/mid-corridor.webp"
+            imageAlt="Two professionals walking and talking in an office corridor, seen from behind in warm window light"
+            imagePosition="left"
+          >
+            <div className="max-w-3xl lg:max-w-none">
               <p className="text-brand-gold text-xs font-medium mb-4">
                 Escalation window
               </p>
@@ -122,43 +131,42 @@ export default function IssuesManagementPage() {
                   before it becomes unmanageable.
                 </p>
               </div>
+              <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8 mt-8">
+                <p className="text-brand-teal text-xs font-medium mb-5">
+                  What changes the outcome
+                </p>
+                <div className="space-y-4">
+                  <div className="border-l-[3px] border-brand-gold pl-4">
+                    <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      Earlier recognition
+                    </p>
+                    <p className="text-charcoal-mid text-sm leading-relaxed">
+                      Spotting the reputational dimension before it becomes public
+                      or formalised.
+                    </p>
+                  </div>
+                  <div className="border-l-[3px] border-brand-gold pl-4">
+                    <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      Better sequencing
+                    </p>
+                    <p className="text-charcoal-mid text-sm leading-relaxed">
+                      Engaging leadership, stakeholders, and external audiences in
+                      the right order.
+                    </p>
+                  </div>
+                  <div className="border-l-[3px] border-brand-gold pl-4">
+                    <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      Senior judgement under pressure
+                    </p>
+                    <p className="text-charcoal-mid text-sm leading-relaxed">
+                      Making decisions that reduce escalation rather than amplify
+                      it.
+                    </p>
+                  </div>
+                </div>
+              </aside>
             </div>
-
-            <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium mb-5">
-                What changes the outcome
-              </p>
-              <div className="space-y-4">
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    Earlier recognition
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    Spotting the reputational dimension before it becomes public
-                    or formalised.
-                  </p>
-                </div>
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    Better sequencing
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    Engaging leadership, stakeholders, and external audiences in
-                    the right order.
-                  </p>
-                </div>
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    Senior judgement under pressure
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    Making decisions that reduce escalation rather than amplify
-                    it.
-                  </p>
-                </div>
-              </div>
-            </aside>
-          </div>
+          </ImageTextRow>
         </div>
       </section>
 

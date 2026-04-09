@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
+import { ImageTextRow } from "@/components/layout/ImageTextRow";
 import { PageHero } from "@/components/layout/PageHero";
 import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
 import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
@@ -24,6 +25,10 @@ export default function LyallMercerPage() {
         description="Co-founder of CRC Public Relations. Former journalist, trusted crisis adviser, and senior counsellor to leaders facing scrutiny, pressure, and reputational risk."
         ctaLabel="Work with Lyall"
         ctaHref="/contact"
+        heroImage={{
+          src: "/images/about/hero.webp",
+          alt: "Brisbane CBD and Story Bridge at golden hour from riverside with warm reflections",
+        }}
       />
 
       <PageProofStrip
@@ -50,9 +55,40 @@ export default function LyallMercerPage() {
         ]}
       />
 
-      <section className="bg-white py-24">
+      <section className="bg-white py-16 md:py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <ImageTextRow
+            imageSrc="/images/about/mid-journalism.webp"
+            imageAlt="Vintage journalist desk with broadsheets, notepad, and warm lamp light suggesting a newsroom heritage"
+            imagePosition="left"
+          >
+            <div>
+              <h2 className="text-navy font-heading font-black text-2xl md:text-3xl">
+                The journalist who became a trusted crisis communications
+                adviser
+              </h2>
+              <p className="text-charcoal-mid text-[15px] leading-relaxed mt-6">
+                Lyall Mercer began his career as a journalist, writing for some of
+                Australia&apos;s leading newspapers. That foundation,
+                understanding exactly how media thinks, moves, and decides what
+                becomes a story, is what makes his approach to corporate
+                communications and crisis advice unlike any other.
+              </p>
+              <p className="text-charcoal-mid text-[15px] leading-relaxed mt-4">
+                His clients include national and international companies,
+                governments, industry associations, not-for-profit organisations,
+                politicians, celebrities, and sporting figures, and he has worked
+                with clients and media on every continent.
+              </p>
+            </div>
+          </ImageTextRow>
+        </div>
+      </section>
+
+      <section className="bg-white py-24 border-t border-brand-border">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-16">
           <div className="lg:col-span-1">
+            {/* TODO: Replace with real portrait from photo shoot */}
             <PortraitPlaceholder size="lg" />
             <div className="mt-8">
               <h4 className="text-xs font-sans font-medium text-charcoal-mid mb-3">
@@ -75,24 +111,7 @@ export default function LyallMercerPage() {
             </div>
           </div>
           <div className="lg:col-span-2">
-            <h2 className="text-navy font-heading font-black text-2xl">
-              The journalist who became a trusted crisis communications
-              adviser
-            </h2>
-            <p className="text-charcoal-mid text-[15px] leading-relaxed mt-6">
-              Lyall Mercer began his career as a journalist, writing for some of
-              Australia&apos;s leading newspapers. That foundation,
-              understanding exactly how media thinks, moves, and decides what
-              becomes a story, is what makes his approach to corporate
-              communications and crisis advice unlike any other.
-            </p>
-            <p className="text-charcoal-mid text-[15px] leading-relaxed mt-4">
-              His clients include national and international companies,
-              governments, industry associations, not-for-profit organisations,
-              politicians, celebrities, and sporting figures, and he has worked
-              with clients and media on every continent.
-            </p>
-            <p className="text-charcoal-mid text-[15px] leading-relaxed mt-4">
+            <p className="text-charcoal-mid text-[15px] leading-relaxed">
               Clients choose to work with Lyall because they deal directly with
               him. While you&apos;ll get to know other members of our team, he
               is always involved.

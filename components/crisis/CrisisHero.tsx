@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Phone } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
@@ -8,10 +9,14 @@ const trustPills = [
   "25+ years experience",
 ] as const;
 
-export function CrisisHero() {
+export interface CrisisHeroProps {
+  heroImage?: { src: string; alt: string };
+}
+
+export function CrisisHero({ heroImage }: CrisisHeroProps) {
   return (
     <>
-      <div className="bg-brand-gold py-3 text-center">
+      <div className="bg-brand-gold py-3 text-center relative z-20">
         <a
           href={siteConfig.phone.href}
           className="block font-heading font-black text-navy text-[13px]"
@@ -20,8 +25,30 @@ export function CrisisHero() {
         </a>
       </div>
 
-      <section id="hero-section" className="bg-navy py-24">
-        <div className="max-w-7xl mx-auto px-6">
+      <section
+        id="hero-section"
+        className={`relative overflow-hidden py-24 ${
+          heroImage ? "" : "bg-navy"
+        }`}
+      >
+        {heroImage ? (
+          <>
+            <Image
+              src={heroImage.src}
+              alt={heroImage.alt}
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover object-center"
+            />
+            <div
+              className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-b from-[rgba(26,43,74,0.88)] to-[rgba(26,43,74,0.92)] md:from-[rgba(26,43,74,0.7)] md:to-[rgba(26,43,74,0.85)]"
+              aria-hidden
+            />
+          </>
+        ) : null}
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6">
           <p className="text-brand-gold text-xs font-medium">
             Crisis communications
           </p>
@@ -53,7 +80,7 @@ export function CrisisHero() {
             {trustPills.map((label) => (
               <span
                 key={label}
-                className="bg-white/5 border border-white/10 rounded-[4px] px-4 py-2 text-white/60 text-xs font-sans font-medium"
+                className="bg-white/5 border border-white/10 rounded-[4px] px-4 py-2 text-white/60 text-xs font-sans font-medium backdrop-blur-[2px]"
               >
                 {label}
               </span>

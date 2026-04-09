@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ImageTextRow } from "@/components/layout/ImageTextRow";
 import { PageHero } from "@/components/layout/PageHero";
 import { FAQSection } from "@/components/shared/FAQSection";
 import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
@@ -94,6 +95,10 @@ export default function ReputationManagementPage() {
         description="We help you understand where your vulnerabilities sit, put the right protections in place, and respond effectively when your reputation comes under pressure. You work directly with senior advisers who take a long-term interest in your organisation."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
+        heroImage={{
+          src: "/images/services/reputation-management/hero.webp",
+          alt: "Desk with navy report, pen, laptop showing blurred news, and coffee in warm morning light",
+        }}
       />
 
       <PageProofStrip
@@ -104,8 +109,12 @@ export default function ReputationManagementPage() {
       {/* Opening section */}
       <section className="bg-warm-white py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_340px] gap-10 items-start">
-            <div className="max-w-3xl">
+          <ImageTextRow
+            imageSrc="/images/services/reputation-management/mid-strategy.webp"
+            imageAlt="Glass-walled meeting room with a blurred figure at a whiteboard and warm corridor lighting"
+            imagePosition="left"
+          >
+            <div className="max-w-3xl lg:max-w-none">
               <p className="text-brand-gold text-xs font-medium mb-4">
                 Reputation reality
               </p>
@@ -135,43 +144,42 @@ export default function ReputationManagementPage() {
                   reputation over the long term.
                 </p>
               </div>
+              <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8 mt-8">
+                <p className="text-brand-teal text-xs font-medium mb-5">
+                  Early warning signs
+                </p>
+                <div className="space-y-4">
+                  <div className="border-l-[3px] border-brand-gold pl-4">
+                    <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      Stakeholder frustration is building
+                    </p>
+                    <p className="text-charcoal-mid text-sm leading-relaxed">
+                      Complaints become more organised, more public, and harder to
+                      contain.
+                    </p>
+                  </div>
+                  <div className="border-l-[3px] border-brand-gold pl-4">
+                    <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      Media interest is changing shape
+                    </p>
+                    <p className="text-charcoal-mid text-sm leading-relaxed">
+                      Journalists move from isolated enquiries to pattern
+                      recognition and sustained scrutiny.
+                    </p>
+                  </div>
+                  <div className="border-l-[3px] border-brand-gold pl-4">
+                    <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      Leadership confidence is slipping
+                    </p>
+                    <p className="text-charcoal-mid text-sm leading-relaxed">
+                      Teams know a risk exists, but no one has yet aligned the
+                      messages, relationships, and response plan around it.
+                    </p>
+                  </div>
+                </div>
+              </aside>
             </div>
-
-            <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium mb-5">
-                Early warning signs
-              </p>
-              <div className="space-y-4">
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    Stakeholder frustration is building
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    Complaints become more organised, more public, and harder to
-                    contain.
-                  </p>
-                </div>
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    Media interest is changing shape
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    Journalists move from isolated enquiries to pattern
-                    recognition and sustained scrutiny.
-                  </p>
-                </div>
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    Leadership confidence is slipping
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    Teams know a risk exists, but no one has yet aligned the
-                    messages, relationships, and response plan around it.
-                  </p>
-                </div>
-              </div>
-            </aside>
-          </div>
+          </ImageTextRow>
         </div>
       </section>
 

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { ImageTextRow } from "@/components/layout/ImageTextRow";
 import { PageHero } from "@/components/layout/PageHero";
 import { FAQSection } from "@/components/shared/FAQSection";
 import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
@@ -275,6 +276,10 @@ export default function IndustryAssociationsPage() {
         description="Specialist counsel for peak bodies, member organisations, and industry associations across Australia. Regulatory crisis, member communications, board governance, and public affairs."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
+        heroImage={{
+          src: "/images/clients/industry-associations/hero.webp",
+          alt: "Large conference table set for an industry summit or AGM with lectern, agendas, and warm lighting, no people",
+        }}
       />
 
       <PageProofStrip
@@ -289,11 +294,25 @@ export default function IndustryAssociationsPage() {
       {/* How CRC Public Relations works with industry associations */}
       <section className="bg-off-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="font-heading font-black text-navy text-3xl md:text-4xl mb-12">
-            How CRC Public Relations works with industry associations
-          </h2>
+          <ImageTextRow
+            imageSrc="/images/clients/industry-associations/mid-lectern.webp"
+            imageAlt="Speaker at a lectern addressing an audience in warm conference lighting, viewed from behind"
+            imagePosition="left"
+          >
+            <div>
+              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl mb-4">
+                How CRC Public Relations works with industry associations
+              </h2>
+              <p className="text-charcoal-mid text-[15px] leading-relaxed max-w-xl">
+                When your association represents a whole sector, public affairs,
+                member confidence, and board governance intertwine. We help peak
+                bodies communicate with authority in hearings, campaigns, and
+                critical member moments.
+              </p>
+            </div>
+          </ImageTextRow>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 md:mt-16">
             <div className="bg-white border border-brand-border rounded-lg p-8">
               <h3 className="font-heading font-black text-navy text-lg mb-3">
                 Regulatory crisis communications
@@ -378,6 +397,23 @@ export default function IndustryAssociationsPage() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-12 md:py-16 border-y border-brand-border/60">
+        <div className="max-w-7xl mx-auto px-6">
+          <ImageTextRow
+            imageSrc="/images/clients/industry-associations/mid-boardroom-after.webp"
+            imageAlt="Boardroom table after a productive meeting with papers and coffee cups in warm afternoon light, no people"
+            imagePosition="right"
+            aspectClass="aspect-[4/3]"
+          >
+            <p className="text-navy text-lg md:text-xl leading-relaxed font-medium max-w-md">
+              Peak body work is often decided in session and in the follow-through
+              that follows. We help associations carry disciplined communications
+              from the board table to members, government, and media.
+            </p>
+          </ImageTextRow>
         </div>
       </section>
 

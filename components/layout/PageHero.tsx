@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 
@@ -7,6 +8,8 @@ export interface PageHeroProps {
   description?: string;
   ctaLabel?: string;
   ctaHref?: string;
+  /** Full-bleed background; use /public paths, e.g. /images/services/foo/hero.webp */
+  heroImage?: { src: string; alt: string };
 }
 
 export function PageHero({
@@ -15,13 +18,33 @@ export function PageHero({
   description,
   ctaLabel,
   ctaHref,
+  heroImage,
 }: PageHeroProps) {
   return (
     <section
       id="hero-section"
-      className="bg-navy py-20 md:py-24 border-b border-white/5"
+      className={`relative overflow-hidden py-20 md:py-24 border-b border-white/5 ${
+        heroImage ? "" : "bg-navy"
+      }`}
     >
-      <div className="max-w-7xl mx-auto px-6">
+      {heroImage ? (
+        <>
+          <Image
+            src={heroImage.src}
+            alt={heroImage.alt}
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          <div
+            className="pointer-events-none absolute inset-0 z-[1] bg-gradient-to-b from-[rgba(26,43,74,0.88)] to-[rgba(26,43,74,0.92)] md:from-[rgba(26,43,74,0.7)] md:to-[rgba(26,43,74,0.85)]"
+            aria-hidden
+          />
+        </>
+      ) : null}
+
+      <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-12 items-end">
           <div className="max-w-4xl">
             {eyebrow ? (
@@ -55,10 +78,8 @@ export function PageHero({
             </div>
           </div>
 
-          <div className="border border-white/10 bg-white/[0.03] rounded-lg p-6">
-            <p className="text-white/35 text-xs mb-4">
-              Direct senior counsel
-            </p>
+          <div className="border border-white/10 bg-white/[0.03] rounded-lg p-6 backdrop-blur-[2px]">
+            <p className="text-white/35 text-xs mb-4">Direct senior counsel</p>
             <div className="space-y-4">
               <div>
                 <p className="font-heading font-black text-brand-gold text-2xl">

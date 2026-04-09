@@ -86,6 +86,10 @@ export default function DigitalMediaPage() {
         description="We apply senior PR counsel to the digital channels where reputations are increasingly won and lost. You work with experienced advisers, not a social media team."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
+        heroImage={{
+          src: "/images/services/digital-media/hero.webp",
+          alt: "Professional workspace with monitor showing blurred analytics and warm desk lamp light",
+        }}
       />
 
       <PageProofStrip

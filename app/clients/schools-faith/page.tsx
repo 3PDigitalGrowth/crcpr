@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
+import { ImageTextRow } from "@/components/layout/ImageTextRow";
 import { PageHero } from "@/components/layout/PageHero";
 import { FAQSection } from "@/components/shared/FAQSection";
 import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
@@ -82,6 +83,10 @@ export default function SchoolsFaithPage() {
         description="Specialist crisis response, parent communications, and media management for school leaders and faith-based organisations, when pastoral responsibility and strategic communications must work together."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
+        heroImage={{
+          src: "/images/clients/schools-faith/hero.webp",
+          alt: "Australian independent school heritage building with courtyard and trees in dappled morning light, no people",
+        }}
       />
 
       <PageProofStrip
@@ -92,8 +97,12 @@ export default function SchoolsFaithPage() {
       {/* Opening */}
       <section className="bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_360px] gap-10 items-start">
-            <div className="max-w-3xl">
+          <ImageTextRow
+            imageSrc="/images/clients/schools-faith/mid-chapel.webp"
+            imageAlt="School chapel interior with timber pews and warm light through arched windows, serene and empty"
+            imagePosition="left"
+          >
+            <div className="max-w-3xl lg:max-w-none">
               <p className="text-brand-gold text-xs font-medium mb-4">
                 Sector reality
               </p>
@@ -137,46 +146,45 @@ export default function SchoolsFaithPage() {
                   getting them wrong.
                 </p>
               </div>
+              <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8 mt-8">
+                <p className="text-brand-teal text-xs font-medium mb-5">
+                  What makes this different
+                </p>
+
+                <div className="space-y-4">
+                  <div className="border-l-[3px] border-brand-gold pl-4">
+                    <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      More than media pressure
+                    </p>
+                    <p className="text-charcoal-mid text-sm leading-relaxed">
+                      Parents, boards, alumni, parish communities, and regulators
+                      all shape the response environment.
+                    </p>
+                  </div>
+
+                  <div className="border-l-[3px] border-brand-gold pl-4">
+                    <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      Pastoral and legal duties
+                    </p>
+                    <p className="text-charcoal-mid text-sm leading-relaxed">
+                      Leaders must show compassion without compromising legal,
+                      safeguarding, or governance obligations.
+                    </p>
+                  </div>
+
+                  <div className="border-l-[3px] border-brand-gold pl-4">
+                    <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      Trust moves quickly
+                    </p>
+                    <p className="text-charcoal-mid text-sm leading-relaxed">
+                      The first messages often shape parent confidence and wider
+                      community sentiment for much longer than expected.
+                    </p>
+                  </div>
+                </div>
+              </aside>
             </div>
-
-            <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium mb-5">
-                What makes this different
-              </p>
-
-              <div className="space-y-4">
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    More than media pressure
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    Parents, boards, alumni, parish communities, and regulators
-                    all shape the response environment.
-                  </p>
-                </div>
-
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    Pastoral and legal duties
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    Leaders must show compassion without compromising legal,
-                    safeguarding, or governance obligations.
-                  </p>
-                </div>
-
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    Trust moves quickly
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    The first messages often shape parent confidence and wider
-                    community sentiment for much longer than expected.
-                  </p>
-                </div>
-              </div>
-            </aside>
-          </div>
+          </ImageTextRow>
         </div>
       </section>
 

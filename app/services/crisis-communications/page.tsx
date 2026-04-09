@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ImageTextRow } from "@/components/layout/ImageTextRow";
 import { PageHero } from "@/components/layout/PageHero";
 import { FAQSection } from "@/components/shared/FAQSection";
 import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
@@ -86,6 +87,10 @@ export default function CrisisCommunicationsPage() {
         description="24/7 crisis response, crisis communications planning, and simulation exercises. When you need experienced senior counsel, we are available immediately."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
+        heroImage={{
+          src: "/images/services/crisis-communications/hero.webp",
+          alt: "Dimly lit conference room with desk lamp on spread documents and open laptop suggesting a crisis response workspace",
+        }}
       />
 
       <PageProofStrip
@@ -109,8 +114,13 @@ export default function CrisisCommunicationsPage() {
       {/* Opening section */}
       <section className="bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_360px] gap-10 items-start">
-            <div className="max-w-3xl">
+          <ImageTextRow
+            imageSrc="/images/services/crisis-communications/mid-phone.webp"
+            imageAlt="Hand reaching for a ringing desk phone in warm office light suggesting an urgent senior call"
+            imagePosition="left"
+            aspectClass="aspect-[4/3]"
+          >
+            <div className="max-w-3xl lg:max-w-none">
               <p className="text-brand-gold text-xs font-medium mb-4">
                 The first fifteen minutes
               </p>
@@ -144,56 +154,55 @@ export default function CrisisCommunicationsPage() {
                   This is the preparation we provide.
                 </p>
               </div>
+              <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8 mt-8">
+                <p className="text-brand-teal text-xs font-medium mb-5">
+                  Common first-response failures
+                </p>
+
+                <div className="space-y-4">
+                  <div className="border-l-[3px] border-brand-gold pl-4">
+                    <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      Waiting for certainty
+                    </p>
+                    <p className="text-charcoal-mid text-sm leading-relaxed">
+                      By the time every detail is confirmed, the narrative is
+                      often already moving without you.
+                    </p>
+                  </div>
+
+                  <div className="border-l-[3px] border-brand-gold pl-4">
+                    <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      Using the wrong channel
+                    </p>
+                    <p className="text-charcoal-mid text-sm leading-relaxed">
+                      Staff, stakeholders, regulators, and media rarely need the
+                      same message in the same order.
+                    </p>
+                  </div>
+
+                  <div className="border-l-[3px] border-brand-gold pl-4">
+                    <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      Saying too much too soon
+                    </p>
+                    <p className="text-charcoal-mid text-sm leading-relaxed">
+                      Early overstatement creates contradictions later and makes
+                      recovery materially harder.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="mt-6 pt-6 border-t border-brand-border">
+                  <p className="text-brand-gold text-xs font-medium mb-3">
+                    What better looks like
+                  </p>
+                  <p className="text-navy font-sans font-semibold text-base leading-relaxed">
+                    A tested plan, a prepared spokesperson, and senior counsel on
+                    the phone before the first journalist calls.
+                  </p>
+                </div>
+              </aside>
             </div>
-
-            <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium mb-5">
-                Common first-response failures
-              </p>
-
-              <div className="space-y-4">
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    Waiting for certainty
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    By the time every detail is confirmed, the narrative is
-                    often already moving without you.
-                  </p>
-                </div>
-
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    Using the wrong channel
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    Staff, stakeholders, regulators, and media rarely need the
-                    same message in the same order.
-                  </p>
-                </div>
-
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    Saying too much too soon
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    Early overstatement creates contradictions later and makes
-                    recovery materially harder.
-                  </p>
-                </div>
-              </div>
-
-              <div className="mt-6 pt-6 border-t border-brand-border">
-                <p className="text-brand-gold text-xs font-medium mb-3">
-                  What better looks like
-                </p>
-                <p className="text-navy font-sans font-semibold text-base leading-relaxed">
-                  A tested plan, a prepared spokesperson, and senior counsel on
-                  the phone before the first journalist calls.
-                </p>
-              </div>
-            </aside>
-          </div>
+          </ImageTextRow>
         </div>
       </section>
 

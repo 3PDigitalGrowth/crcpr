@@ -27,6 +27,10 @@ export default function CaseStudiesPage() {
         description="Three anonymised outcomes from CRC Public Relations client engagements."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
+        heroImage={{
+          src: "/images/case-studies/hero.webp",
+          alt: "Australian Parliament House at dusk with warm interior light against a deep blue sky",
+        }}
       />
 
       <PageProofStrip

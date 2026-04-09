@@ -4,6 +4,7 @@ import { Shield, Lock, Globe } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { CrisisContactForm } from "@/components/crisis/CrisisContactForm";
 import { CrisisHero } from "@/components/crisis/CrisisHero";
+import { ImageTextRow } from "@/components/layout/ImageTextRow";
 import { CrisisServices } from "@/components/crisis/CrisisServices";
 import { CrisisFAQ } from "@/components/crisis/CrisisFAQ";
 import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
@@ -176,51 +177,64 @@ export default function CrisisPage() {
       />
 
       {/* 1. Gold bar + Hero */}
-      <CrisisHero />
+      <CrisisHero
+        heroImage={{
+          src: "/images/crisis/hero.webp",
+          alt: "Desk phone glowing in a dim office suggesting an urgent late-night crisis call",
+        }}
+      />
 
       {/* 2. What happens when you call, answers the urgent visitor's question immediately */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
-          <p className="text-brand-gold font-sans font-medium text-xs mb-4">
-            When you call
-          </p>
-          <h2 className="font-heading font-black text-navy text-[38px] leading-tight">
-            What happens in the first hour.
-          </h2>
-          <p className="text-charcoal text-[17px] leading-[1.75] max-w-2xl mt-5 mb-12">
-            In 25 years of crisis communications practice, CRC Public Relations co-founder Lyall
-            Mercer has observed one consistent truth: the organisations that
-            navigate crises well are not the ones that never face them. They are
-            the ones that had senior counsel on the phone before the first
-            journalist called.
-          </p>
-          <p className="text-charcoal text-[17px] leading-[1.75] max-w-2xl mb-12">
-            Here is what happens when you contact CRC Public Relations during an active
-            crisis.
-          </p>
+          <ImageTextRow
+            imageSrc="/images/crisis/mid-arriving.webp"
+            imageAlt="Senior professional walking through a building entrance with a leather document folder in warm daylight"
+            imagePosition="right"
+          >
+            <div>
+              <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+                When you call
+              </p>
+              <h2 className="font-heading font-black text-navy text-[38px] leading-tight">
+                What happens in the first hour.
+              </h2>
+              <p className="text-charcoal text-[17px] leading-[1.75] max-w-2xl mt-5 mb-8">
+                In 25 years of crisis communications practice, CRC Public Relations co-founder Lyall
+                Mercer has observed one consistent truth: the organisations that
+                navigate crises well are not the ones that never face them. They are
+                the ones that had senior counsel on the phone before the first
+                journalist called.
+              </p>
+              <p className="text-charcoal text-[17px] leading-[1.75] max-w-2xl mb-12">
+                Here is what happens when you contact CRC Public Relations during an active
+                crisis.
+              </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {steps.map((step) => (
-              <div
-                key={step.num}
-                className="bg-off-white border border-brand-border rounded-lg p-6"
-              >
-                <div className="flex items-start gap-5">
-                  <span className="font-heading font-black text-brand-gold text-[48px] leading-none select-none">
-                    {step.num}
-                  </span>
-                  <div className="pt-2">
-                    <h3 className="font-heading font-black text-navy text-lg mb-2">
-                      {step.heading}
-                    </h3>
-                    <p className="text-charcoal text-[15px] leading-relaxed">
-                      {step.body}
-                    </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {steps.map((step) => (
+                  <div
+                    key={step.num}
+                    className="bg-off-white border border-brand-border rounded-lg p-6"
+                  >
+                    <div className="flex items-start gap-5">
+                      <span className="font-heading font-black text-brand-gold text-[48px] leading-none select-none">
+                        {step.num}
+                      </span>
+                      <div className="pt-2">
+                        <h3 className="font-heading font-black text-navy text-lg mb-2">
+                          {step.heading}
+                        </h3>
+                        <p className="text-charcoal text-[15px] leading-relaxed">
+                          {step.body}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </div>
+          </ImageTextRow>
         </div>
       </section>
 

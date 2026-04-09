@@ -23,6 +23,10 @@ export default function InsightsPage() {
         description="From Lyall Mercer and the CRC Public Relations team."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
+        heroImage={{
+          src: "/images/insights/hero.webp",
+          alt: "Hands holding a broadsheet newspaper at an outdoor cafe table in warm morning light, face not visible",
+        }}
       />
 
       <PageProofStrip

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ImageTextRow } from "@/components/layout/ImageTextRow";
 import { PageHero } from "@/components/layout/PageHero";
 import { FAQSection } from "@/components/shared/FAQSection";
 import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
@@ -97,6 +98,10 @@ export default function CorporateCommunicationsPage() {
         description="We work directly with your leadership team to ensure every message, whether to the board, staff, stakeholders, or media, is precise, credible, and effective. You deal with experienced senior advisers, not account managers."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
+        heroImage={{
+          src: "/images/services/corporate-communications/hero.webp",
+          alt: "Empty Australian boardroom with warm morning light and city skyline beyond floor-to-ceiling windows",
+        }}
       />
 
       <PageProofStrip
@@ -107,8 +112,12 @@ export default function CorporateCommunicationsPage() {
       {/* High-clarity explainer */}
       <section className="bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_340px] gap-10 items-start">
-            <div className="max-w-3xl">
+          <ImageTextRow
+            imageSrc="/images/services/corporate-communications/mid-what-we-do.webp"
+            imageAlt="Senior professional reviewing a printed communications brief at a desk in warm window light"
+            imagePosition="left"
+          >
+            <div className="max-w-3xl lg:max-w-none">
               <p className="text-brand-gold text-xs font-medium mb-4">
                 Strategic clarity
               </p>
@@ -140,43 +149,42 @@ export default function CorporateCommunicationsPage() {
                   achieve a specific outcome.
                 </p>
               </div>
+              <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8 mt-8">
+                <p className="text-brand-teal text-xs font-medium mb-5">
+                  What strong corporate communications looks like
+                </p>
+                <div className="space-y-4">
+                  <div className="border-l-[3px] border-brand-gold pl-4">
+                    <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      Message discipline
+                    </p>
+                    <p className="text-charcoal-mid text-sm leading-relaxed">
+                      Leadership, media, staff, and stakeholder communications all
+                      support the same strategic position.
+                    </p>
+                  </div>
+                  <div className="border-l-[3px] border-brand-gold pl-4">
+                    <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      Planned sequencing
+                    </p>
+                    <p className="text-charcoal-mid text-sm leading-relaxed">
+                      The right audiences hear the right message in the right
+                      order, before pressure starts to define the narrative.
+                    </p>
+                  </div>
+                  <div className="border-l-[3px] border-brand-gold pl-4">
+                    <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      Senior oversight
+                    </p>
+                    <p className="text-charcoal-mid text-sm leading-relaxed">
+                      Important communications are shaped with judgement, not
+                      improvised under time pressure.
+                    </p>
+                  </div>
+                </div>
+              </aside>
             </div>
-
-            <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium mb-5">
-                What strong corporate communications looks like
-              </p>
-              <div className="space-y-4">
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    Message discipline
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    Leadership, media, staff, and stakeholder communications all
-                    support the same strategic position.
-                  </p>
-                </div>
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    Planned sequencing
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    The right audiences hear the right message in the right
-                    order, before pressure starts to define the narrative.
-                  </p>
-                </div>
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    Senior oversight
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    Important communications are shaped with judgement, not
-                    improvised under time pressure.
-                  </p>
-                </div>
-              </div>
-            </aside>
-          </div>
+          </ImageTextRow>
         </div>
       </section>
 

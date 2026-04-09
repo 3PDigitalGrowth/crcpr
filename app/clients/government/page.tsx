@@ -71,6 +71,10 @@ export default function GovernmentClientsPage() {
         description="We work directly with department heads, agency leaders, and senior public servants who need experienced communications counsel that understands the unique pressures of government."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
+        heroImage={{
+          src: "/images/clients/government/hero.webp",
+          alt: "Australian government building with sandstone facade and flag in late afternoon light, no people",
+        }}
       />
 
       <PageProofStrip

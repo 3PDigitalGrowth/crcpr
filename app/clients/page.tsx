@@ -89,6 +89,10 @@ export default function ClientsPage() {
         description="We work directly with CEOs, directors, and senior executives who recognise the value of experienced counsel and treat reputation as a strategic asset. No junior handoff, no layers."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
+        heroImage={{
+          src: "/images/clients-index/hero.webp",
+          alt: "Brisbane cityscape at golden hour showing mix of modern and heritage architecture",
+        }}
       />
 
       <PageProofStrip

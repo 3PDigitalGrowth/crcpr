@@ -87,6 +87,10 @@ export default function AboutPage() {
         description="Boutique corporate PR. 25 years of trusted counsel for CEOs, directors, and senior executives across Australia, the Pacific, and internationally."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
+        heroImage={{
+          src: "/images/about/hero.webp",
+          alt: "Brisbane CBD and Story Bridge at golden hour from riverside with warm reflections",
+        }}
       />
 
       <PageProofStrip
@@ -180,6 +184,7 @@ export default function AboutPage() {
                 className="rounded-[28px] border border-brand-border bg-off-white p-8 md:p-10"
               >
                 <div className="flex flex-col sm:flex-row gap-6 items-start">
+                  {/* TODO: Replace with real portrait from photo shoot */}
                   <PortraitPlaceholder
                     size={member.size}
                     initials={member.initials === "LM" ? undefined : member.initials}

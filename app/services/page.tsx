@@ -124,6 +124,10 @@ export default function ServicesPage() {
         description="We provide senior-level counsel across the full spectrum of corporate communications. Every engagement is led by experienced advisers who work directly with you, not through an account management layer."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
+        heroImage={{
+          src: "/images/services/corporate-communications/hero.webp",
+          alt: "Australian boardroom prepared for a leadership meeting in warm morning light",
+        }}
       />
 
       <PageProofStrip

@@ -91,6 +91,10 @@ export default function MediaTrainingPage() {
         description="Spokesperson training, hostile interview preparation, and on-camera coaching delivered by former television and radio journalists with decades of broadcast experience."
         ctaLabel="Book a media training session"
         ctaHref="/contact"
+        heroImage={{
+          src: "/images/media-training/hero.webp",
+          alt: "Video camera on tripod in a training room with presentation screen and chairs set for practice interviews",
+        }}
       />
 
       <PageProofStrip

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Check } from "lucide-react";
+import { ImageTextRow } from "@/components/layout/ImageTextRow";
 import { PageHero } from "@/components/layout/PageHero";
 import { FAQSection } from "@/components/shared/FAQSection";
 import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
@@ -71,6 +72,10 @@ export default function CorporateClientsPage() {
         description="Direct, personal counsel for owners, directors, and senior executives. You work with experienced senior advisers who understand board scrutiny, market sensitivity, and stakeholder risk."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
+        heroImage={{
+          src: "/images/clients/corporate/hero.webp",
+          alt: "Exterior of an established Australian commercial building in warm morning light, no people",
+        }}
       />
 
       <PageProofStrip
@@ -80,8 +85,12 @@ export default function CorporateClientsPage() {
 
       <section className="bg-white py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_380px] gap-10 items-start">
-            <div className="max-w-3xl">
+          <ImageTextRow
+            imageSrc="/images/clients/corporate/mid-office.webp"
+            imageAlt="Managing director office with leather chair, timber desk, and warm afternoon light"
+            imagePosition="left"
+          >
+            <div className="max-w-3xl lg:max-w-none">
               <p className="text-brand-gold text-xs font-medium mb-4">
                 Corporate communications
               </p>
@@ -111,31 +120,30 @@ export default function CorporateClientsPage() {
                   and take ownership of outcomes.
                 </p>
               </div>
+              <aside className="rounded-[28px] border border-brand-border bg-off-white p-6 md:p-8 mt-8">
+                <p className="text-brand-teal text-xs font-medium mb-5">
+                  Typical support areas
+                </p>
+                <div className="space-y-3">
+                  {services.map((item) => (
+                    <div
+                      key={item}
+                      className="flex gap-3 rounded-xl border border-brand-border bg-white px-4 py-4"
+                    >
+                      <Check
+                        className="size-5 shrink-0 text-brand-gold mt-0.5"
+                        strokeWidth={2.5}
+                        aria-hidden
+                      />
+                      <span className="text-charcoal-mid text-[15px] leading-snug">
+                        {item}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </aside>
             </div>
-
-            <aside className="rounded-[28px] border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium mb-5">
-                Typical support areas
-              </p>
-              <div className="space-y-3">
-                {services.map((item) => (
-                  <div
-                    key={item}
-                    className="flex gap-3 rounded-xl border border-brand-border bg-white px-4 py-4"
-                  >
-                    <Check
-                      className="size-5 shrink-0 text-brand-gold mt-0.5"
-                      strokeWidth={2.5}
-                      aria-hidden
-                    />
-                    <span className="text-charcoal-mid text-[15px] leading-snug">
-                      {item}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </aside>
-          </div>
+          </ImageTextRow>
         </div>
       </section>
 

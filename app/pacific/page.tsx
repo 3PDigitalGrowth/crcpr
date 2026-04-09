@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ImageTextRow } from "@/components/layout/ImageTextRow";
 import { PageHero } from "@/components/layout/PageHero";
 import { FAQSection } from "@/components/shared/FAQSection";
 import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
@@ -118,6 +119,10 @@ export default function PacificPage() {
         description="We are the only Australian corporate PR firm with deep, sustained expertise across Pacific Island nations: government relations, development communications, cross-cultural stakeholder engagement, and crisis response."
         ctaLabel="Work with us in the Pacific"
         ctaHref="/contact"
+        heroImage={{
+          src: "/images/pacific/hero.webp",
+          alt: "Pacific island coastline with turquoise water, palms, and settlement in golden hour light",
+        }}
       />
 
       <PageProofStrip
@@ -128,8 +133,12 @@ export default function PacificPage() {
       {/* Opening */}
       <section className="bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.2fr)_340px] gap-10 items-start">
-            <div className="max-w-3xl">
+          <ImageTextRow
+            imageSrc="/images/pacific/mid-meeting-house.webp"
+            imageAlt="Pacific meeting house with traditional roofline and tropical vegetation in warm golden light, no people"
+            imagePosition="left"
+          >
+            <div className="max-w-3xl lg:max-w-none">
               <p className="text-brand-gold text-xs font-medium mb-4">
                 Pacific context
               </p>
@@ -166,43 +175,42 @@ export default function PacificPage() {
                   demands.
                 </p>
               </div>
+              <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8 mt-8">
+                <p className="text-brand-teal text-xs font-medium mb-5">
+                  What serious Pacific work requires
+                </p>
+                <div className="space-y-4">
+                  <div className="border-l-[3px] border-brand-gold pl-4">
+                    <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      Country-specific judgement
+                    </p>
+                    <p className="text-charcoal-mid text-sm leading-relaxed">
+                      Advice must reflect the realities of each nation, not a
+                      generic regional shorthand.
+                    </p>
+                  </div>
+                  <div className="border-l-[3px] border-brand-gold pl-4">
+                    <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      Protocol-aware sequencing
+                    </p>
+                    <p className="text-charcoal-mid text-sm leading-relaxed">
+                      The order in which leaders, communities, governments, and
+                      partners hear from you shapes trust.
+                    </p>
+                  </div>
+                  <div className="border-l-[3px] border-brand-gold pl-4">
+                    <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      Relationship protection
+                    </p>
+                    <p className="text-charcoal-mid text-sm leading-relaxed">
+                      Short-term communications decisions can have long-term
+                      diplomatic, community, and reputational consequences.
+                    </p>
+                  </div>
+                </div>
+              </aside>
             </div>
-
-            <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium mb-5">
-                What serious Pacific work requires
-              </p>
-              <div className="space-y-4">
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    Country-specific judgement
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    Advice must reflect the realities of each nation, not a
-                    generic regional shorthand.
-                  </p>
-                </div>
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    Protocol-aware sequencing
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    The order in which leaders, communities, governments, and
-                    partners hear from you shapes trust.
-                  </p>
-                </div>
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    Relationship protection
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    Short-term communications decisions can have long-term
-                    diplomatic, community, and reputational consequences.
-                  </p>
-                </div>
-              </div>
-            </aside>
-          </div>
+          </ImageTextRow>
         </div>
       </section>
 
@@ -281,6 +289,34 @@ export default function PacificPage() {
         defaultMessage="We need Pacific communications or stakeholder engagement advice."
         variant="white"
       />
+
+      <section className="bg-off-white py-12 md:py-16">
+        <div className="max-w-7xl mx-auto px-6">
+          <ImageTextRow
+            imageSrc="/images/pacific/mid-harbour.webp"
+            imageAlt="Pacific harbour with outrigger canoes near a wharf, turquoise water and green hills"
+            imagePosition="right"
+            aspectClass="aspect-[4/3]"
+          >
+            <div>
+              <p className="text-brand-gold text-xs font-medium mb-3">
+                Trade, development, and daily life
+              </p>
+              <h2 className="font-heading font-black text-navy text-2xl md:text-3xl leading-tight mb-4">
+                Pacific communications sits at the intersection of tradition and
+                modern institutions.
+              </h2>
+              <p className="text-charcoal-mid text-[15px] leading-relaxed">
+                From ports and provincial centres to capitals and regional
+                forums, the audiences you need to influence are rarely reached
+                with a single channel or tone. Development programmes, government
+                relations, and private sector expansion each require sequencing
+                that respects local authority.
+              </p>
+            </div>
+          </ImageTextRow>
+        </div>
+      </section>
 
       {/* Pacific footprint */}
       <section className="bg-off-white py-16 md:py-24">

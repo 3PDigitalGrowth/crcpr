@@ -24,6 +24,10 @@ export default function ContactPage({
         description="Every conversation with CRC Public Relations begins with listening. Tell us about your situation and we'll respond promptly, with confidentiality guaranteed."
         ctaLabel="Urgent crisis support"
         ctaHref="/crisis"
+        heroImage={{
+          src: "/images/contact/hero.webp",
+          alt: "Welcoming entrance to a professional Brisbane office building in late afternoon light",
+        }}
       />
 
       <PageProofStrip

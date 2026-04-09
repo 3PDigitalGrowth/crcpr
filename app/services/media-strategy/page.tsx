@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ImageTextRow } from "@/components/layout/ImageTextRow";
 import { PageHero } from "@/components/layout/PageHero";
 import { FAQSection } from "@/components/shared/FAQSection";
 import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
@@ -86,6 +87,10 @@ export default function MediaStrategyPage() {
         description="We help you build a sustained media presence that positions you as the trusted voice in your sector. You work directly with advisers who understand how media thinks and moves."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
+        heroImage={{
+          src: "/images/services/media-strategy/hero.webp",
+          alt: "Broadcast studio or media room viewed from behind camera with microphone and warm lighting",
+        }}
       />
 
       <PageProofStrip
@@ -96,8 +101,12 @@ export default function MediaStrategyPage() {
       {/* Opening section */}
       <section className="bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_360px] gap-10 items-start">
-            <div className="max-w-3xl">
+          <ImageTextRow
+            imageSrc="/images/services/media-strategy/mid-prep.webp"
+            imageAlt="Senior professional preparing for an interview in a corridor with warm lighting"
+            imagePosition="left"
+          >
+            <div className="max-w-3xl lg:max-w-none">
               <p className="text-brand-gold text-xs font-medium mb-4">
                 Media strategy
               </p>
@@ -134,56 +143,55 @@ export default function MediaStrategyPage() {
                   reputation.
                 </p>
               </div>
+              <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8 mt-8">
+                <p className="text-brand-teal text-xs font-medium mb-5">
+                  What weak strategy looks like
+                </p>
+
+                <div className="space-y-4">
+                  <div className="border-l-[3px] border-brand-gold pl-4">
+                    <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      Press release dependence
+                    </p>
+                    <p className="text-charcoal-mid text-sm leading-relaxed">
+                      Media activity only appears when the organisation has
+                      something to announce.
+                    </p>
+                  </div>
+
+                  <div className="border-l-[3px] border-brand-gold pl-4">
+                    <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      Reactive enquiry handling
+                    </p>
+                    <p className="text-charcoal-mid text-sm leading-relaxed">
+                      Journalists drive the agenda because there is no settled
+                      editorial position behind the response.
+                    </p>
+                  </div>
+
+                  <div className="border-l-[3px] border-brand-gold pl-4">
+                    <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      Shallow success measures
+                    </p>
+                    <p className="text-charcoal-mid text-sm leading-relaxed">
+                      Coverage is judged as positive or negative, rather than by
+                      whether it builds durable authority.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="mt-6 pt-6 border-t border-brand-border">
+                  <p className="text-brand-gold text-xs font-medium mb-3">
+                    Strategic aim
+                  </p>
+                  <p className="text-navy font-sans font-semibold text-base leading-relaxed">
+                    Move from reactive media management to sustained, credible
+                    market positioning.
+                  </p>
+                </div>
+              </aside>
             </div>
-
-            <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium mb-5">
-                What weak strategy looks like
-              </p>
-
-              <div className="space-y-4">
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    Press release dependence
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    Media activity only appears when the organisation has
-                    something to announce.
-                  </p>
-                </div>
-
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    Reactive enquiry handling
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    Journalists drive the agenda because there is no settled
-                    editorial position behind the response.
-                  </p>
-                </div>
-
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    Shallow success measures
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    Coverage is judged as positive or negative, rather than by
-                    whether it builds durable authority.
-                  </p>
-                </div>
-              </div>
-
-              <div className="mt-6 pt-6 border-t border-brand-border">
-                <p className="text-brand-gold text-xs font-medium mb-3">
-                  Strategic aim
-                </p>
-                <p className="text-navy font-sans font-semibold text-base leading-relaxed">
-                  Move from reactive media management to sustained, credible
-                  market positioning.
-                </p>
-              </div>
-            </aside>
-          </div>
+          </ImageTextRow>
         </div>
       </section>
 

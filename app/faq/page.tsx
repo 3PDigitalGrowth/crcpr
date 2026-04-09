@@ -36,6 +36,10 @@ export default function FAQPage() {
         description="Straight answers about how CRC Public Relations works, what kind of organisations we support, and what to expect when you get in touch."
         ctaLabel="Contact CRC Public Relations"
         ctaHref="/contact"
+        heroImage={{
+          src: "/images/faq/hero.webp",
+          alt: "Open notebook and pen on a timber desk with warm lamp light suggesting considered conversation",
+        }}
       />
 
       <PageProofStrip

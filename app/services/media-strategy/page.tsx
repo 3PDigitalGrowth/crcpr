@@ -103,7 +103,7 @@ export default function MediaStrategyPage() {
         <div className="max-w-7xl mx-auto px-6">
           <ImageTextRow
             imageSrc="/images/services/media-strategy/mid-prep.webp"
-            imageAlt="Senior professional preparing for an interview in a corridor with warm lighting"
+            imageAlt="Media strategy workshop: presenter leading colleagues through an integrated launch plan shown on screen in a conference room"
             imagePosition="left"
           >
             <div className="max-w-3xl lg:max-w-none">

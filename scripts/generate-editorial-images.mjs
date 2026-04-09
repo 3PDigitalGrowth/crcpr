@@ -110,12 +110,13 @@ const jobs = [
     seed: 109,
     prompt: `Behind professional video camera looking toward small modern TV studio, warm tungsten style lighting, microphone and field monitor in foreground, blurred interview chairs and softbox in background, controlled media environment. ${STYLE}`,
   },
+  // mid-prep.webp is replaced with supplied brand photography in-repo; re-run will overwrite — restore from backup if needed.
   {
     rel: "services/media-strategy/mid-prep.webp",
     w: 1200,
     h: 800,
-    seed: 110,
-    prompt: `Senior professional in suit adjusting collar while holding cue card notes in office corridor before interview, warm practical lighting, candid editorial moment, face angled down toward notes. ${STYLE}`,
+    seed: 2110,
+    prompt: `Media strategy planning session wide polished timber conference table with spread broadsheet newspapers clipped printouts open briefing binder highlighters and pens hands of professionals gesturing over documents open laptop edge in frame warm lateral window light shallow depth of field faces obscured or out of focus editorial positioning and coverage review mood no legible headlines or logos. ${STYLE}`,
   },
   {
     rel: "services/digital-media/hero.webp",

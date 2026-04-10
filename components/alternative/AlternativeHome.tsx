@@ -208,14 +208,14 @@ function AlternativeHero() {
     >
       <div className="absolute inset-0">
         <Image
-          src="/images/Gemini_Generated_Image_m38thnm38thnm38t.png"
-          alt=""
+          src="/images/homepage/hero-founders.png"
+          alt="Lyall Mercer and Barbara Gorogh, CRC co-founders"
           fill
           priority
           loading="eager"
-          quality={100}
+          unoptimized
           sizes="100vw"
-          className="object-cover object-right"
+          className="object-cover object-[80%_center] sm:object-[83%_center] lg:object-[86%_center]"
         />
       </div>
       <div className="relative flex-1 max-w-7xl mx-auto px-6 w-full flex flex-col">

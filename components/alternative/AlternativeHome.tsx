@@ -215,9 +215,11 @@ function AlternativeHero() {
           loading="eager"
           unoptimized
           sizes="100vw"
-          className="object-cover object-[80%_center] sm:object-[83%_center] lg:object-[86%_center]"
+          className="object-cover"
+          style={{ objectPosition: "95% center" }}
         />
       </div>
+
       <div className="relative flex-1 max-w-7xl mx-auto px-6 w-full flex flex-col">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center flex-1 pt-12 pb-8 lg:pt-16 lg:pb-10">
           <div className="lg:col-span-7 relative">

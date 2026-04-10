@@ -208,7 +208,7 @@ function AlternativeHero() {
     >
       <div className="absolute inset-0">
         <Image
-          src="/images/homepage/hero-founders.png"
+          src="/images/homepage/MyPrPartnerHeadshots2025-14.jpg"
           alt="Lyall Mercer and Barbara Gorogh, CRC co-founders"
           fill
           priority

@@ -14,7 +14,7 @@ import { siteConfig } from "@/config/site";
 import { AnimateIn } from "@/components/shared/AnimateIn";
 import { FAQSection } from "@/components/shared/FAQSection";
 import { CaseStudies } from "@/components/shared/CaseStudies";
-import { MyPRPartnerCTA } from "@/components/shared/MyPRPartnerCTA";
+
 import { HomeTestimonials } from "@/components/home/HomeTestimonials";
 
 interface FAQItem {
@@ -110,7 +110,7 @@ const practiceAreas = [
   {
     title: "Corporate Communications",
     description:
-      "Strategic counsel through effective communications that supports your overall objectives, both internally and externally. Whether this be managing stakeholder relationships, achieving media coverage that positions you as a trusted voice of authority, navigating a sensitive announcement, or other needs, we provide the experienced guidance that senior leaders expect. Our senior team works directly with you to ensure your messaging is precise, consistent, credible, and effective.",
+      "Strategic communications counsel that supports your overall objectives, both internally and externally. Whether this be managing stakeholder relationships, achieving media coverage that positions you as a trusted voice of authority, navigating a sensitive announcement, dealing with a challenging media or stakeholder issue, or other needs, we provide the experienced guidance that senior leaders expect. Our team works directly with you to ensure your messaging is precise, consistent, credible, and effective.",
     href: "/services/corporate-communications",
     linkLabel: "Explore corporate communications",
     imageSrc: "/images/practice-corporate.png",
@@ -123,7 +123,7 @@ const practiceAreas = [
   {
     title: "Reputation Management",
     description:
-      "Your reputation is the single most valuable asset your organisation holds, and also the most difficult to rebuild once damaged. We help you understand where your vulnerabilities sit, put the right protections in place, and respond effectively when your reputation comes under pressure. Our approach is practical and tailored to your organisation, because no two reputation risks are the same.",
+      "Your reputation is the single most valuable asset your organisation holds, and also the most difficult to rebuild once damaged. In this new media, activist and AI age, companies and organisations are more vulnerable than ever before. We help you to identify areas of vulnerability, mitigate risk, and communicate and respond effectively when company, executive or personal reputations are at stake. We will provide objective, honest advice that serves your best interests.",
     href: "/services/reputation-management",
     linkLabel: "Explore reputation management",
     imageSrc: "/images/practice-reputation.png",
@@ -136,7 +136,7 @@ const practiceAreas = [
   {
     title: "Crisis Communications",
     description:
-      "When a crisis breaks, the decisions you make in the first fifteen minutes will define the outcome. We have been in the room during some of Australia&apos;s most significant crises, advising the people who had to make those calls. We bring that experience to every engagement. 24/7. Confidential. Decisive.",
+      "We help you become crisis ready. When a crisis breaks, the decisions you make in the first 15 minutes can impact the outcome. It is at these times you need objective, strategic advice that only comes from vast experience. We have walked with clients through high profile public issues and crises across Australasia and internationally for more than 20 years and are your guiding force. The wrong advice can lead to disaster. In times of stress, our \u2018outside\u2019 advice and calmness under pressure is vital. 24/7. Confidential. Decisive.",
     href: "/services/crisis-communications",
     linkLabel: "Explore crisis communications",
     imageSrc: "/images/practice-crisis.png",
@@ -206,25 +206,18 @@ function AlternativeHero() {
       className="relative flex flex-col bg-navy overflow-hidden"
       style={{ minHeight: "calc(100vh - 4rem)" }}
     >
-      <div className="absolute inset-0">
-        <Image
-          src="/images/homepage/MyPrPartnerHeadshots2025-14.jpg"
+      <div className="absolute inset-0 overflow-hidden">
+        <img
+          src="/images/homepage/hero-founders-v2.png"
           alt="Lyall Mercer and Barbara Gorogh, CRC co-founders"
-          fill
-          priority
-          loading="eager"
-          unoptimized
-          sizes="100vw"
-          className="object-cover"
-          style={{ objectPosition: "95% center" }}
+          className="absolute right-0 top-0 h-full w-auto max-w-none"
         />
       </div>
-
       <div className="relative flex-1 max-w-7xl mx-auto px-6 w-full flex flex-col">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center flex-1 pt-12 pb-8 lg:pt-16 lg:pb-10">
           <div className="lg:col-span-7 relative">
-            <div className="absolute inset-x-[-1rem] inset-y-[-1.25rem] rounded-[32px] bg-gradient-to-r from-navy/85 via-navy/72 to-navy/18 backdrop-blur-[2px] sm:inset-x-[-1.5rem] sm:inset-y-[-1.5rem] lg:inset-x-[-2rem] lg:inset-y-[-2rem]" />
-            <div className="relative z-10">
+            <div className="absolute inset-x-[-1rem] inset-y-[-1.25rem] rounded-[32px] bg-gradient-to-r from-navy/[0.97] via-navy/92 to-navy/88 backdrop-blur-md sm:inset-x-[-1.5rem] sm:inset-y-[-1.5rem] lg:inset-x-[-2rem] lg:inset-y-[-2rem]" />
+            <div className="relative z-10 [text-shadow:0_1px_2px_rgba(15,31,54,0.65)]">
               <AnimateIn>
                 <p className="inline-flex items-center rounded-full border border-white/10 bg-navy/55 px-3 py-1.5 font-sans font-semibold text-off-white text-xs backdrop-blur-sm">
                   Boutique corporate PR · Australia · New Zealand · Pacific
@@ -242,12 +235,14 @@ function AlternativeHero() {
                   Whatever your communications objectives, you need experienced
                   counsel you can trust. CRC Public Relations is a boutique
                   corporate PR firm where every client works directly with a
-                  senior adviser. We help CEOs, senior executives, and leaders
-                  across private companies, industry associations, government,
-                  and the not-for-profit sector to build their brand, become the
-                  public voice of authority in their industry through effective
-                  media relations, protect their reputation, manage issues before
-                  they escalate, and navigate crises with confidence.
+                  senior adviser. We partner with CEOs, executives, and leaders
+                  within companies, industry associations, government, and the
+                  not-for-profit sector, assisting them to communicate
+                  effectively to key stakeholders, be the public voice of
+                  authority in their field through strategic media engagement,
+                  protect their reputation, deal with complex issues, and
+                  navigate crises with confidence. We are your trusted adviser
+                  and advocate &ndash; and we believe in you.
                 </p>
               </AnimateIn>
 
@@ -255,14 +250,14 @@ function AlternativeHero() {
                 <div className="flex flex-col sm:flex-row gap-3 mt-6">
                   <Link
                     href="/contact"
-                    className="btn-lift inline-flex items-center justify-center gap-2 bg-brand-gold text-navy font-heading font-black text-[13px] rounded-[4px] px-6 py-3 hover:bg-gold-light transition"
+                    className="btn-lift inline-flex items-center justify-center gap-2 bg-brand-gold text-navy font-sans font-semibold text-sm leading-snug rounded-[4px] px-6 py-3 shadow-sm hover:bg-gold-light transition antialiased"
                   >
-                    <Phone className="size-4" strokeWidth={2} aria-hidden />
+                    <Phone className="size-4 shrink-0" strokeWidth={2} aria-hidden />
                     Book a confidential consultation
                   </Link>
                   <Link
                     href="/contact?source=capability-statement"
-                    className="btn-lift inline-flex items-center justify-center gap-2 border border-brand-gold/50 bg-off-white/70 text-brand-gold font-heading font-black text-[13px] rounded-[4px] px-6 py-3 hover:bg-gold-light transition"
+                    className="btn-lift inline-flex items-center justify-center gap-2 border border-navy/15 bg-white text-navy font-sans font-semibold text-sm leading-snug rounded-[4px] px-6 py-3 shadow-sm hover:bg-off-white hover:border-navy/25 transition antialiased"
                   >
                     <Download className="size-4" strokeWidth={2} aria-hidden />
                     Request capability statement
@@ -427,9 +422,10 @@ function AlternativePracticeAreas() {
           <div className="mt-20 md:mt-28 mb-4 max-w-4xl mx-auto text-center">
             <div className="w-12 h-[2px] bg-brand-gold mx-auto mb-8" />
             <blockquote className="font-heading font-black text-navy text-xl md:text-[28px] leading-snug tracking-tight">
-              &ldquo;Being boutique means you deal directly with senior advisers
-              who take a genuine, long-term interest in your organisation. That
-              is a deliberate choice. It is how we do our best work.&rdquo;
+              &ldquo;As a boutique PR firm, you deal directly with senior
+              advisers who take a genuine, long-term interest in your
+              organisation. It&rsquo;s a partnership, and it makes a huge
+              difference to outcomes.&rdquo;
             </blockquote>
             <p className="font-sans font-medium text-text-secondary text-sm mt-6 tracking-wide">
               - Lyall Mercer, Co-founder
@@ -473,7 +469,7 @@ function AlternativeAssessment() {
                 <p className="text-white/80 text-base leading-relaxed">
                   Most organisations do not discover their reputation
                   vulnerabilities until a crisis is already underway. Our
-                  Reputation Vulnerability Assessment takes three minutes and
+                  Reputation vulnerability assessment takes three minutes and
                   identifies exactly where you are exposed, across governance,
                   media, social media, stakeholder relationships, and crisis
                   preparedness.
@@ -489,7 +485,7 @@ function AlternativeAssessment() {
           <AnimateIn delay={250} className="lg:col-span-5">
             <div className="relative bg-white border border-brand-border rounded-lg p-8 card-border-expand overflow-hidden shadow-sm shadow-navy/5">
               <h3 className="text-navy font-heading font-black text-lg">
-                Reputation Vulnerability Assessment
+                Reputation vulnerability assessment
               </h3>
               <div className="mt-5 space-y-0">
                 {assessmentAreas.map((area, i) => (
@@ -538,15 +534,16 @@ function AlternativeClients() {
               </h2>
               <p className="text-charcoal-mid text-base leading-relaxed mt-6 max-w-xl">
                 Our clients are CEOs, managing directors, board chairs, and
-                senior executives who need experienced, direct advice when the
-                stakes are highest. They choose CRC Public Relations because
-                they work with the people who actually do the work, not a team
-                of junior staff learning on the job.
+                executives across the business and non-profit sectors, as well
+                as high profile individuals, who need experienced, direct advice
+                when the stakes are highest. They choose CRC Public Relations
+                because we offer personal service from an experienced, highly
+                qualified team.
               </p>
               <p className="text-charcoal-mid text-base leading-relaxed mt-4 max-w-xl">
                 We stand with our clients around the clock, proactively helping
                 them grow their public presence and working alongside them
-                through times of crisis. We take their success personally, and
+                through challenging times. We take their success personally, and
                 we have their back.
               </p>
               <div className="flex flex-col gap-3 mt-8">
@@ -569,13 +566,6 @@ function AlternativeClients() {
                     Work with us <ArrowRight size={14} aria-hidden />
                   </Link>
                 </div>
-                <MyPRPartnerCTA
-                  compact
-                  title="Not ready for a retainer?"
-                  description="Start with My PR Partner for practical communications training, resources, and support designed for teams building internal capability."
-                  buttonLabel="Start with My PR Partner"
-                  className="text-left"
-                />
               </div>
             </AnimateIn>
           </div>
@@ -638,22 +628,25 @@ function AlternativeAbout() {
               <div className="space-y-5 mt-8">
                 <p className="text-text-body text-base leading-relaxed">
                   Lyall Mercer began his career as a journalist, writing for
-                  some of Australia&apos;s leading newspapers. That foundation,
-                  understanding exactly how media thinks, moves, and decides
-                  what becomes a story, is what makes his approach to corporate
-                  communications and crisis advice unlike any other.
+                  some of Australia&apos;s leading newspapers and magazines.
+                  That foundation, understanding exactly how media thinks,
+                  moves, and decides what becomes a story, led him into a 25
+                  year public relations career delivering high-quality results
+                  in the areas of corporate communications and crisis advice.
                 </p>
                 <p className="text-text-body text-base leading-relaxed">
                   His clients include national and international companies,
                   governments, industry associations, not-for-profit
-                  organisations, politicians, celebrities, and sporting
-                  figures, and he has worked with clients and media on every
-                  continent.
+                  organisations, politicians, heads of state, celebrities, and
+                  sporting figures; and he has worked with clients and media on
+                  every continent, coordinating communications strategies and
+                  walking clients through issues that have generated intense
+                  national and global media exposure.
                 </p>
                 <p className="text-text-body text-base leading-relaxed">
-                  Clients choose to work with Lyall because they deal directly
-                  with him. While you&apos;ll get to know other members of our
-                  team, he is always involved.
+                  When you choose CRC Public Relations, you&apos;ll deal with
+                  various members of our team but Lyall will always be available
+                  for you. This level of expertise is why our clients choose us.
                 </p>
               </div>
             </AnimateIn>
@@ -735,16 +728,6 @@ function AlternativeCTA() {
               </a>
             </AnimateIn>
 
-            <AnimateIn delay={650}>
-              <MyPRPartnerCTA
-                variant="dark"
-                compact
-                title="Not ready for a retainer?"
-                description="My PR Partner gives teams and leaders practical PR training, tools, and communications support when they need capability-building before a full advisory engagement."
-                buttonLabel="Explore My PR Partner"
-                className="mt-2 text-left"
-              />
-            </AnimateIn>
           </div>
         </div>
       </div>

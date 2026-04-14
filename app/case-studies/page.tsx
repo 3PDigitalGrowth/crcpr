@@ -9,13 +9,13 @@ import { PageProofStrip } from "@/components/shared/PageProofStrip";
 export const metadata: Metadata = {
   title: "Client Outcomes | CRC Public Relations",
   description:
-    "Anonymised case studies from CRC Public Relations client engagements across industry associations, schools, and Pacific governments.",
+    "Anonymised case studies from CRC Public Relations client engagements across industry associations, schools, and government.",
 };
 
 const sectorLinks = [
   { label: "Industry Associations", href: "/clients/industry-associations" },
   { label: "Schools & Faith-Based", href: "/clients/schools-faith" },
-  { label: "Pacific", href: "/pacific" },
+  { label: "Government", href: "/clients/government" },
 ] as const;
 
 export default function CaseStudiesPage() {
@@ -37,8 +37,8 @@ export default function CaseStudiesPage() {
         title="We protect confidentiality, but we still show the kind of outcomes our work is designed to deliver."
         items={[
           {
-            label: "Advocacy",
-            value: "Legislation amended",
+            label: "National industry association",
+            value: "Legislation scrapped",
             detail:
               "Sector advocacy supported by disciplined communications can move an outcome before the policy is final.",
           },
@@ -49,10 +49,10 @@ export default function CaseStudiesPage() {
               "In sensitive school matters, careful parent, board, and media communication can preserve confidence through recovery.",
           },
           {
-            label: "Pacific",
+            label: "Government",
             value: "Funding secured",
             detail:
-              "Regional communications and stakeholder engagement can materially shape high-value government and development outcomes.",
+              "Strategic communications and stakeholder engagement can materially shape high-value government and development outcomes.",
           },
         ]}
       />

@@ -127,16 +127,16 @@ export const siteConfig = {
   caseStudies: [
     {
       id: "legislation-amended",
-      sector: "Industry association",
+      sector: "National industry association",
       context:
-        "A national peak body faced a Federal Government proposal that would have fundamentally altered the operating environment for its 800+ member organisations.",
+        "A national peak body faced a government proposal that would have fundamentally and detrimentally altered the operating environment for more than 20,000 businesses.",
       challenge:
         "The association needed to mount a coordinated public affairs campaign while managing fractured member sentiment, competing media narratives, and a tight legislative timeline.",
       approach:
-        "CRC Public Relations developed a stakeholder communications strategy, prepared the executive officer for media and parliamentary engagement, coordinated a coalition of member voices, and managed proactive media placement across the campaign period.",
-      outcome: "Legislation amended.",
+        "CRC Public Relations developed a national media and stakeholder communications strategy that supported the organisation's parliamentary engagement, and managed proactive media engagement across the campaign period.",
+      outcome: "Legislation scrapped.",
       outcomeSub:
-        "Key provisions unfavourable to members were removed before the bill passed. Media coverage shifted from hostile to measured within six weeks.",
+        "Recommendations unfavourable to the industry that were initially supported by government were dropped. Media coverage shifted from hostile to measured within five days.",
       icon: "Building2",
     },
     {
@@ -155,17 +155,17 @@ export const siteConfig = {
     },
     {
       id: "funding-secured",
-      sector: "Pacific government",
+      sector: "Government",
       context:
-        "A Pacific Island government was seeking a significant development funding commitment from an international partner agency, competing against multiple other regional priorities.",
+        "A national government was seeking a significant development funding commitment from an international partner agency, competing against multiple other regional priorities.",
       challenge:
-        "The government needed to communicate the case for funding with clarity and cultural authority, in a multilateral environment with competing voices and limited media access.",
+        "The government needed to communicate the case for funding with clarity and cultural authority, in a multilateral environment with competing voices, limited media access, and an antagonistic media narrative.",
       approach:
-        "CRC Public Relations developed the communications strategy, prepared government representatives for stakeholder presentations, managed the narrative across regional media, and coordinated engagement with the partner agency's communications team.",
+        "CRC Public Relations developed the communications strategy, created impacting messaging that cut across the false narrative, and managed the international media engagement.",
       outcome: "Funding secured.",
       outcomeSub:
         "Full funding commitment received. The communications approach was subsequently adopted as a model for future engagement with international development partners.",
-      icon: "Globe",
+      icon: "Landmark",
     },
   ],
 

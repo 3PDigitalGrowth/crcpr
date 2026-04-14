@@ -313,14 +313,14 @@ function ClientsPanel({
             className="block bg-white/[0.02] rounded p-3 mb-2 hover:bg-white/[0.04] transition-colors"
           >
             <p className="text-xs text-brand-gold font-medium">
-              Industry association
+              National industry association
             </p>
             <p className="text-sm font-heading font-black text-white mt-1">
-              Legislation amended.
+              Legislation scrapped.
             </p>
             <p className="text-xs text-white/30 leading-relaxed mt-1">
-              National peak body campaign, regulatory provisions removed before
-              the bill passed.
+              Recommendations unfavourable to the industry dropped. Media
+              coverage shifted from hostile to measured within five days.
             </p>
           </Link>
           <Link

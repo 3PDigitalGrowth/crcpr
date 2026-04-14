@@ -32,9 +32,9 @@ const jsonLd = {
 
 const sectorLinks = [
   { label: "Companies & family businesses", href: "/clients/corporate" },
-  { label: "Government departments", href: "/clients/government" },
+  { label: "Government", href: "/clients/government" },
   {
-    label: "Industry associations",
+    label: "Industry & professional associations",
     href: "/clients/industry-associations",
   },
   { label: "Legal and professional services", href: "/contact" },
@@ -65,7 +65,7 @@ const faqs = [
   {
     question: "When should an organisation bring in external corporate communications counsel?",
     answer:
-      "Usually earlier than leadership expects. The best time is before a board decision becomes public, before a stakeholder issue hardens, and before an executive appearance or announcement is locked in. External counsel is most valuable when message architecture, sequencing, and stakeholder reaction still have room to be shaped.",
+      "PR should be at the table before decisions are made, to assess ramifications and provide objective input: Before a board or executive decision becomes public, a stakeholder issue escalates, or a marketing campaign is launched. External counsel is most valuable when message architecture, sequencing, and stakeholder reaction still have room to be shaped.",
   },
   {
     question: "Do you work directly with boards, CEOs, and general counsel?",
@@ -75,7 +75,7 @@ const faqs = [
   {
     question: "What kinds of matters does corporate communications support usually cover?",
     answer:
-      "Typical matters include leadership transitions, restructures, major announcements, difficult stakeholder issues, sensitive internal communications, market-facing messaging, and communications planning around regulatory or public scrutiny. The common factor is that the message needs to hold under pressure.",
+      "Public relations means to have a 'relationship with your publics' (stakeholders). Relationships are ongoing and therefore communication is ongoing. Trust is built through regular communication, and this trust is needed when major decisions or changes are made. Intentional communications is vital during announcements, difficult stakeholder issues, sensitive internal communications, and communications planning around regulatory or public scrutiny. It is at these times when trust is required more than ever.",
   },
   {
     question: "How is this different from a larger PR agency retainer?",
@@ -95,7 +95,7 @@ export default function CorporateCommunicationsPage() {
       <PageHero
         eyebrow="Corporate communications"
         title="Corporate communications that build trust and protect value."
-        description="We work directly with your leadership team to ensure every message, whether to the board, staff, stakeholders, or media, is precise, credible, and effective. You deal with experienced senior advisers, not account managers."
+        description="As partners in your success, we work directly with your leadership team to ensure every message, whether to important stakeholders – internal and external – or media, is precise, credible, and effective. You deal with experienced senior advisers, not account managers."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
         heroImage={{
@@ -122,21 +122,20 @@ export default function CorporateCommunicationsPage() {
                 Strategic clarity
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
-                Effective corporate communications is about control, consistency,
-                and strategic intent.
+                Effective corporate communications supports your objectives with
+                strategy and consistency.
               </h2>
               <div className="space-y-6">
                 <p className="text-charcoal text-[15px] leading-relaxed">
-                  Effective corporate communications is not about volume. It is
-                  about clarity, consistency, and strategic intent, ensuring
-                  that every message, from every channel, reinforces your
-                  organisation&apos;s authority and the confidence your
-                  stakeholders place in your leadership.
+                  Effective corporate communications is based on clarity,
+                  consistency, and strategic intent, ensuring that every message,
+                  from every channel, reinforces your organisation&apos;s authority
+                  and the confidence your stakeholders place in your leadership.
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
-                  The challenge for most organisations is that corporate
-                  communications becomes reactive. Announcements are drafted in
-                  a hurry. Media enquiries are handled without a strategy.
+                  The challenge for many organisations is that corporate
+                  communications becomes reactive. Announcements are drafted in a
+                  hurry. Media enquiries are handled without a strategy.
                   Stakeholder relationships are maintained informally, without
                   structure. The result is a communications function that
                   responds to events rather than shapes them.
@@ -144,9 +143,9 @@ export default function CorporateCommunicationsPage() {
                 <p className="text-charcoal text-[15px] leading-relaxed">
                   We work with your leadership team to build the systems,
                   strategies, and capabilities that shift communications from
-                  reactive to proactive, ensuring every significant
-                  communication is considered, consistent, and designed to
-                  achieve a specific outcome.
+                  reactive to proactive, ensuring every significant communication
+                  is considered, consistent, and designed to achieve a specific
+                  outcome.
                 </p>
               </div>
               <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8 mt-8">
@@ -288,12 +287,12 @@ export default function CorporateCommunicationsPage() {
                 Stakeholder engagement and communications strategy
               </h3>
               <p className="text-charcoal text-[15px] leading-relaxed">
-                Every organisation has stakeholders who can either support or
-                obstruct its objectives. We map your stakeholder landscape,
-                identify the relationships that matter most, and design
-                engagement strategies that build trust and maintain it through
-                major change programmes, regulatory processes, and periods of
-                uncertainty.
+                Are your stakeholders advocates or adversaries? Every organisation
+                has stakeholders who can either support or obstruct its objectives.
+                We map your stakeholder landscape, identify the relationships that
+                matter most, and design engagement strategies that build trust and
+                maintain it through major change programmes, regulatory processes,
+                and periods of uncertainty.
               </p>
             </div>
 

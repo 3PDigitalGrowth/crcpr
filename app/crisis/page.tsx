@@ -62,10 +62,10 @@ const trustColumns = [
 
 const outcomeCards = [
   {
-    sector: "Industry association",
-    outcome: "Legislation amended.",
+    sector: "National industry association",
+    outcome: "Legislation scrapped.",
     detail:
-      "A national peak body facing a Federal Government proposal that would have fundamentally altered the operating environment for its 800+ member organisations. CRC Public Relations developed the communications strategy, prepared the executive officer for parliamentary and media engagement, and coordinated a coalition of member voices across a tight legislative timeline. Key provisions unfavourable to members were removed before the bill passed. Media coverage shifted from hostile to measured within six weeks.",
+      "A national peak body faced a government proposal that would have fundamentally and detrimentally altered the operating environment for more than 20,000 businesses. CRC Public Relations developed a national media and stakeholder communications strategy that supported the organisation's parliamentary engagement, and managed proactive media engagement across the campaign period. Recommendations unfavourable to the industry that were initially supported by government were dropped. Media coverage shifted from hostile to measured within five days.",
   },
   {
     sector: "Independent school",

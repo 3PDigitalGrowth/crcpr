@@ -67,9 +67,9 @@ const faqs = [
       "Yes. We work with senior leaders to identify positions worth taking, shape commentary that can stand up editorially, and place that thinking with the right outlets over time.",
   },
   {
-    question: "Why does Lyall Mercer's journalism background matter here?",
+    question: "Why is journalism experience beneficial?",
     answer:
-      "Because good media strategy depends on understanding how editors, producers, and reporters think. Former-journalist perspective improves both story judgement and spokesperson preparation.",
+      "Effective media strategy depends on understanding how editors, producers, and reporters think. Our team has a wide media background.",
   },
 ];
 
@@ -186,7 +186,8 @@ export default function MediaStrategyPage() {
                   </p>
                   <p className="text-navy font-sans font-semibold text-base leading-relaxed">
                     Move from reactive media management to sustained, credible
-                    market positioning.
+                    market positioning that directly supports your organisational
+                    objectives.
                   </p>
                 </div>
               </aside>
@@ -198,7 +199,7 @@ export default function MediaStrategyPage() {
       <section className="bg-off-white py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-6">
           <p className="text-brand-gold font-sans font-medium text-xs mb-4">
-            What good looks like
+            An effective strategy
           </p>
           <h2 className="font-heading font-black text-navy text-3xl mb-6">
             What strong media strategy looks like in the market
@@ -363,27 +364,26 @@ export default function MediaStrategyPage() {
 
               <div className="space-y-6 mt-8">
                 <p className="text-charcoal text-[15px] leading-relaxed">
-                  CRC Public Relations founder Lyall Mercer began his career as a journalist.
-                  That background is not incidental. It is the foundation of
-                  everything we do in media strategy. We do not approach media
-                  relations from the perspective of a PR firm trying to manage
-                  journalists. We approach it from the perspective of people
-                  who understand what editors are looking for, what makes a
-                  story worth covering, and what makes an organisation worth
-                  calling back.
+                  The CRC Public Relations team has a wide range of public
+                  relations and journalism experience, including newsroom
+                  backgrounds, so we know how the media works.
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
-                  This gives our clients a genuine advantage. We know how to
-                  frame a story so it is genuinely newsworthy, not just
-                  self-promotional. We know which journalists are most
-                  receptive to which angles. And we know when to hold a story
-                  back and when to push it.
+                  We value the role journalists play and understand what they
+                  require to prepare a great story and what makes it worth
+                  covering.
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
-                  Media training at CRC Public Relations is delivered in partnership with
-                  television and radio journalists with decades of broadcast
-                  experience, people who have conducted the kinds of interviews
-                  your spokespeople need to be ready for.
+                  We know how to frame a media angle so it is genuinely
+                  newsworthy, not just self-promotional, and we understand the
+                  news cycle and timing required that will make a story most
+                  beneficial to the media.
+                </p>
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  Media training at CRC Public Relations is delivered in
+                  partnership with television and radio journalists with decades
+                  of broadcast experience, people who have conducted the kinds of
+                  interviews your spokespeople need to be ready for.
                 </p>
               </div>
             </div>

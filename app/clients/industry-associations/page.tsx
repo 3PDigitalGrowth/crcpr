@@ -452,7 +452,7 @@ export default function IndustryAssociationsPage() {
                 <span className="font-sans font-semibold text-navy">
                   Peter
                 </span>
-                , Managing Director, finance broking industry
+                , CEO, national industry association with 14,000 members
               </figcaption>
             </figure>
           </div>

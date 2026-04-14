@@ -203,7 +203,7 @@ function AlternativeHero() {
   return (
     <section
       id="hero-section"
-      className="relative flex flex-col bg-navy overflow-hidden"
+      className="relative flex flex-col bg-[#eaebef] overflow-hidden"
       style={{ minHeight: "calc(100vh - 4rem)" }}
     >
       <div className="absolute inset-0 overflow-hidden">

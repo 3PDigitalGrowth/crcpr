@@ -203,8 +203,8 @@ function AlternativeHero() {
   return (
     <section
       id="hero-section"
-      className="relative flex flex-col overflow-hidden"
-      style={{ minHeight: "calc(100vh - 4rem)", backgroundColor: "transparent" }}
+      className="relative flex flex-col overflow-hidden w-screen"
+      style={{ minHeight: "calc(100vh - 4rem)", backgroundColor: "transparent", marginLeft: "calc(-50vw + 50%)" }}
     >
       <div className="absolute inset-0 overflow-hidden">
         <img

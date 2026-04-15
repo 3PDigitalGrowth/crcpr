@@ -18,6 +18,7 @@ export default function InsightsPage() {
   return (
     <>
       <PageHero
+        asidePreset="editorialInsights"
         eyebrow="Insights"
         title="Insights. Commentary. Crisis thinking."
         description="From Lyall Mercer and the CRC Public Relations team."

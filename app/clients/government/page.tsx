@@ -66,6 +66,7 @@ export default function GovernmentClientsPage() {
   return (
     <>
       <PageHero
+        asidePreset="clientsBreadth"
         eyebrow="Government"
         title="Government communications and stakeholder engagement"
         description="We work directly with department heads, agency leaders, and senior public servants who need experienced communications counsel that understands the unique pressures of government."

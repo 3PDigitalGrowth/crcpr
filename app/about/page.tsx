@@ -82,6 +82,7 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
+        asidePreset="editorialInsights"
         eyebrow="About us"
         title="About CRC Public Relations"
         description="Boutique corporate PR. 25 years of trusted counsel for CEOs, directors, and senior executives across Australia, the Pacific, and internationally."

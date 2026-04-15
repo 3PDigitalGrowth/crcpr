@@ -81,6 +81,7 @@ export default function DigitalMediaPage() {
       />
 
       <PageHero
+        asidePreset="mediaEditorial"
         eyebrow="Digital media and online reputation"
         title="Your reputation doesn't stop at the newsroom door."
         description="We apply senior PR counsel to the digital channels where reputations are increasingly won and lost. You work with experienced advisers, not a social media team."

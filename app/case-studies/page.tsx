@@ -22,6 +22,7 @@ export default function CaseStudiesPage() {
   return (
     <>
       <PageHero
+        asidePreset="anonymisedOutcomes"
         eyebrow="Client outcomes"
         title="Results when the stakes are highest."
         description="Three anonymised outcomes from CRC Public Relations client engagements."
@@ -34,7 +35,7 @@ export default function CaseStudiesPage() {
       />
 
       <PageProofStrip
-        title="We protect confidentiality, but we still show the kind of outcomes our work is designed to deliver."
+        title="These examples are anonymised, but they still show the outcomes our work is designed to deliver."
         items={[
           {
             label: "National industry association",
@@ -65,12 +66,12 @@ export default function CaseStudiesPage() {
                 Why we show these
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
-                Confidential work. Measurable outcomes.
+                Measurable outcomes from high-stakes work.
               </h2>
               <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
-                We do not publicise client work casually. The examples
-                below are shown because senior communications counsel should
-                still be measured by outcomes.
+                We do not publicise client work casually. The examples below are
+                here because senior communications counsel should still be judged
+                by what changed—not by visibility alone.
               </p>
 
               <div className="space-y-6 mt-8">
@@ -105,11 +106,11 @@ export default function CaseStudiesPage() {
 
                 <div className="border-l-[3px] border-brand-gold pl-4">
                   <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    Confidentiality still matters
+                    Anonymised by design
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
-                    These examples are anonymised by design because discretion is
-                    part of the service, not an afterthought.
+                    Names and identifying detail stay private so the focus stays
+                    on the result, not on who the client was.
                   </p>
                 </div>
 
@@ -152,15 +153,15 @@ export default function CaseStudiesPage() {
         bullets={[
           "Strategic communication for high-stakes matters",
           "Senior advice before or during scrutiny",
-          "Confidential support with clear next-step recommendations",
+          "Clear next-step recommendations from experienced advisers",
         ]}
         defaultMessage="We would like to discuss a high-stakes communications matter with CRC Public Relations."
         variant="white"
       />
 
       <PageClosingCTA
-        title="Every engagement is treated with complete confidentiality."
-        body="We do not reference client work publicly without permission. The examples here are anonymised by design, but they reflect the kinds of high-stakes outcomes our clients engage us to achieve."
+        title="Outcomes matter more than headlines."
+        body="The examples here are anonymised, but they reflect the kinds of policy, reputational, and organisational results clients engage us to pursue when the stakes are real."
       />
     </>
   );

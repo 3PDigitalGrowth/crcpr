@@ -20,6 +20,7 @@ export default function LyallMercerPage() {
   return (
     <>
       <PageHero
+        asidePreset="editorialInsights"
         eyebrow="Co-founder & principal adviser"
         title="Lyall Mercer"
         description="Co-founder of CRC Public Relations. Former journalist, trusted crisis adviser, and senior counsellor to leaders facing scrutiny, pressure, and reputational risk."

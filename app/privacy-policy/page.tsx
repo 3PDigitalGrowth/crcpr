@@ -13,6 +13,7 @@ export default function PrivacyPolicyPage() {
   return (
     <>
       <PageHero
+        asidePreset="legalNeutral"
         eyebrow="Legal"
         title="Privacy Policy"
         description="How CRC Public Relations collects, uses, and protects personal information in connection with this website and our professional services."

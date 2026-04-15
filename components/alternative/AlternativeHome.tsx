@@ -264,7 +264,7 @@ function AlternativeHero() {
                     className="btn-lift inline-flex items-center justify-center gap-2 bg-brand-gold text-navy font-sans font-semibold text-sm leading-snug rounded-[4px] px-6 py-3 shadow-sm hover:bg-gold-light transition antialiased"
                   >
                     <Phone className="size-4 shrink-0" strokeWidth={2} aria-hidden />
-                    Book a confidential consultation
+                    Book a consultation
                   </Link>
                   <Link
                     href="/contact?source=capability-statement"
@@ -563,7 +563,7 @@ function AlternativeClients() {
                     Work with CRC Public Relations
                   </p>
                   <p className="font-heading font-black text-white text-lg leading-snug">
-                    Start a confidential conversation with a senior adviser.
+                    Start a direct conversation with a senior adviser.
                   </p>
                   <p className="text-white/65 text-sm leading-relaxed mt-3">
                     Tell us about the issue, sector pressure, or communications
@@ -725,7 +725,7 @@ function AlternativeCTA() {
                 href="/contact"
                 className="btn-lift bg-brand-gold text-navy font-heading font-black text-sm w-full py-4 rounded-[4px] hover:bg-gold-light transition inline-flex items-center justify-center gap-2"
               >
-                Book a confidential consultation <ArrowRight size={14} aria-hidden />
+                Book a consultation <ArrowRight size={14} aria-hidden />
               </Link>
             </AnimateIn>
 
@@ -765,9 +765,8 @@ export function AlternativeHome({ faqItems }: AlternativeHomeProps) {
             Results that speak for themselves.
           </h2>
           <p className="text-charcoal-mid text-base max-w-2xl mb-12 leading-relaxed">
-            We don&apos;t discuss client engagements without permission. These
-            three anonymised outcomes represent the kind of work we do when the
-            stakes are highest.
+            Three anonymised outcomes that show the kind of strategic work we do
+            when policy, reputation, and stakeholder pressure converge.
           </p>
           <CaseStudies />
           <div className="mt-10 text-center">

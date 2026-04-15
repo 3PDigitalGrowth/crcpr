@@ -114,6 +114,7 @@ export default function PacificPage() {
       />
 
       <PageHero
+        asidePreset="pacificRegional"
         eyebrow="Pacific advisory"
         title="The Pacific demands communications expertise that most Australian firms don't have."
         description="We are the only Australian corporate PR firm with deep, sustained expertise across Pacific Island nations: government relations, development communications, cross-cultural stakeholder engagement, and crisis response."

@@ -13,6 +13,7 @@ export default function TermsPage() {
   return (
     <>
       <PageHero
+        asidePreset="legalNeutral"
         eyebrow="Legal"
         title="Terms of Use"
         description="The terms that govern use of the CRC Public Relations website, including content use, acceptable use, liability, and contact pathways."

@@ -86,6 +86,7 @@ export default function MediaTrainingPage() {
       />
 
       <PageHero
+        asidePreset="mediaTraining"
         eyebrow="Media training"
         title="Media training from people who have sat on the other side of the camera."
         description="Spokesperson training, hostile interview preparation, and on-camera coaching delivered by former television and radio journalists with decades of broadcast experience."

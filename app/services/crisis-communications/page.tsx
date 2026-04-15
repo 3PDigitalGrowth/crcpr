@@ -82,6 +82,7 @@ export default function CrisisCommunicationsPage() {
       />
 
       <PageHero
+        asidePreset="crisisTrust"
         eyebrow="Crisis communications"
         title="When a crisis breaks, experience is everything."
         description="24/7 crisis response, crisis communications planning, and simulation exercises. When you need experienced senior counsel, we are available immediately."
@@ -207,6 +208,8 @@ export default function CrisisCommunicationsPage() {
       </section>
 
       <InlineEnquirySection
+        eyebrow="Confidential enquiry"
+        submitLabel="Send confidential enquiry"
         title="Need crisis communications support or preparedness advice?"
         body="Use this form for confidential advice on crisis planning, simulation exercises, spokesperson preparation, or post-crisis recovery. If the matter is already active, call us immediately instead."
         bullets={[

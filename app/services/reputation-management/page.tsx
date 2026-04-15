@@ -90,6 +90,7 @@ export default function ReputationManagementPage() {
       />
 
       <PageHero
+        asidePreset="proofLed"
         eyebrow="Reputation management"
         title="Your reputation is your most valuable asset. Protect it before you need to."
         description="We help you understand where your vulnerabilities sit, put the right protections in place, and respond effectively when your reputation comes under pressure. You work directly with senior advisers who take a long-term interest in your organisation."
@@ -287,13 +288,13 @@ export default function ReputationManagementPage() {
             <p className="text-white/70 text-base mb-6">
               Once you have completed the assessment, our advisers can walk you
               through your score and what it means for your organisation in a
-              confidential, no-obligation conversation.
+              private, no-obligation conversation.
             </p>
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs px-6 py-3 rounded-[4px] hover:bg-gold-light transition"
             >
-              Book a confidential consultation →
+              Book a consultation →
             </Link>
           </div>
         </div>

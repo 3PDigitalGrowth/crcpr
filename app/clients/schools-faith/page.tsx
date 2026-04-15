@@ -78,6 +78,7 @@ export default function SchoolsFaithPage() {
       />
 
       <PageHero
+        asidePreset="clientsBreadth"
         eyebrow="Independent schools & faith-based organisations"
         title="School crisis communications that protects students, staff, and the community's trust."
         description="Specialist crisis response, parent communications, and media management for school leaders and faith-based organisations, when pastoral responsibility and strategic communications must work together."

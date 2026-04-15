@@ -82,6 +82,7 @@ export default function IssuesManagementPage() {
       />
 
       <PageHero
+        asidePreset="strategicIntegrated"
         eyebrow="Issues management"
         title="Get ahead of the issue before the media does."
         description="We help you identify, monitor, and strategically manage emerging issues before they reach crisis point. Senior counsel available nationally."

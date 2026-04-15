@@ -119,6 +119,7 @@ export default function ServicesPage() {
   return (
     <>
       <PageHero
+        asidePreset="strategicIntegrated"
         eyebrow="Full service offering"
         title="Corporate communications and PR services."
         description="We provide senior-level counsel across the full spectrum of corporate communications. Every engagement is led by experienced advisers who work directly with you, not through an account management layer."

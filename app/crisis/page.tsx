@@ -38,7 +38,7 @@ const steps = [
   {
     num: "4",
     heading: "We stay with you.",
-    body: "Crisis communications is not a one-call service. We remain engaged throughout, managing media, monitoring coverage, advising on each subsequent communication, and steering your organisation's response until your reputation is stable. Every engagement is treated with absolute confidentiality.",
+    body: "Crisis communications is not a one-call service. We remain engaged throughout, managing media, monitoring coverage, advising on each subsequent communication, and steering your organisation's response until your reputation is stable.",
   },
 ];
 
@@ -278,9 +278,8 @@ export default function CrisisPage() {
             The measure of crisis communications is what happens after.
           </h2>
           <p className="text-charcoal-mid text-base leading-relaxed max-w-2xl mt-4 mb-12">
-            We do not discuss client engagements without permission. These
-            outcomes represent the standard of work we bring to every crisis
-            engagement.
+            These anonymised outcomes represent the standard of work we bring to
+            every crisis engagement.
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

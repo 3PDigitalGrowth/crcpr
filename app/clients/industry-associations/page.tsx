@@ -271,6 +271,7 @@ export default function IndustryAssociationsPage() {
       />
 
       <PageHero
+        asidePreset="clientsBreadth"
         eyebrow="Industry associations"
         title="Industry association communications that protects your members, and your standing."
         description="Specialist counsel for peak bodies, member organisations, and industry associations across Australia. Regulatory crisis, member communications, board governance, and public affairs."

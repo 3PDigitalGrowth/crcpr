@@ -8,7 +8,7 @@ import { PageProofStrip } from "@/components/shared/PageProofStrip";
 export const metadata: Metadata = {
   title: "Contact CRC Public Relations",
   description:
-    "Contact CRC Public Relations for a confidential consultation. Corporate communications, reputation management, crisis response, and media training.",
+    "Contact CRC Public Relations for senior communications counsel: corporate communications, reputation management, crisis response, and media training.",
 };
 
 export default function ContactPage({
@@ -19,9 +19,10 @@ export default function ContactPage({
   return (
     <>
       <PageHero
+        asidePreset="practicalNextStep"
         eyebrow="Contact us"
         title="Let's discuss your needs."
-        description="Every conversation with CRC Public Relations begins with listening. Tell us about your situation and we'll respond promptly, with confidentiality guaranteed."
+        description="Every conversation with CRC Public Relations begins with listening. Tell us about your situation and we will respond promptly with senior-led advice."
         ctaLabel="Urgent crisis support"
         ctaHref="/crisis"
         heroImage={{
@@ -34,10 +35,10 @@ export default function ContactPage({
         title="When you contact CRC Public Relations, you are beginning a direct conversation with senior advisers."
         items={[
           {
-            label: "Confidentiality",
-            value: "Default setting",
+            label: "How we work",
+            value: "Senior-led",
             detail:
-              "Sensitive matters are treated with discretion from the first conversation and are not referenced publicly without permission.",
+              "Enquiries are shaped by experienced advisers—clear judgement, coordinated messaging, and discretion where it matters.",
           },
           {
             label: "Response model",
@@ -112,8 +113,7 @@ export default function ContactPage({
                     Use the form for planned matters
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
-                    The contact form is best for planned, confidential, and
-                    non-urgent enquiries.
+                    The contact form is best for planned, non-urgent enquiries.
                   </p>
                 </div>
                 <div className="border-l-[3px] border-brand-gold pl-4">
@@ -137,7 +137,7 @@ export default function ContactPage({
 
       <PageClosingCTA
         title="If the matter is sensitive, start the conversation now."
-        body="We work best when leadership engages early enough for the response to be shaped properly. If the issue is already active, call first. If it is emerging, send a confidential message and we will respond promptly."
+        body="We work best when leadership engages early enough for the response to be shaped properly. If the issue is already active, call first. If it is emerging, send a message and we will respond promptly."
         primaryLabel="Urgent crisis support"
         primaryHref="/crisis"
       />

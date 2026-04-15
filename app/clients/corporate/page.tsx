@@ -67,6 +67,7 @@ export default function CorporateClientsPage() {
   return (
     <>
       <PageHero
+        asidePreset="clientsBreadth"
         eyebrow="Corporate"
         title="Corporate communications and reputation counsel"
         description="Direct, personal counsel for owners, directors, and senior executives. You work with experienced senior advisers who understand board scrutiny, market sensitivity, and stakeholder risk."

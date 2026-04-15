@@ -31,6 +31,7 @@ export default function FAQPage() {
       />
 
       <PageHero
+        asidePreset="editorialInsights"
         eyebrow="FAQ"
         title="Frequently asked questions."
         description="Straight answers about how CRC Public Relations works, what kind of organisations we support, and what to expect when you get in touch."
@@ -129,7 +130,7 @@ export default function FAQPage() {
 
       <InlineEnquirySection
         title="Still deciding whether CRC Public Relations is the right fit?"
-        body="If your question is specific, sensitive, or difficult to reduce to a general FAQ, the best next step is a confidential conversation with a senior adviser."
+        body="If your question is specific, sensitive, or difficult to reduce to a general FAQ, the best next step is a direct conversation with a senior adviser."
         bullets={[
           "Clarify whether your matter is a fit for CRC Public Relations",
           "Discuss the right starting point before pressure grows",

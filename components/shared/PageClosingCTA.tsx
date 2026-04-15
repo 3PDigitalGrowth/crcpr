@@ -16,7 +16,7 @@ export function PageClosingCTA({
   eyebrow = "Next step",
   title,
   body,
-  primaryLabel = "Book a confidential consultation",
+  primaryLabel = "Book a consultation",
   primaryHref = "/contact",
   secondaryLabel,
   secondaryHref,
@@ -80,8 +80,8 @@ export function PageClosingCTA({
                   Speak to a senior adviser
                 </p>
                 <p className="text-white/65 text-sm leading-relaxed">
-                  Confidential advice, direct access, and a clear recommendation
-                  on what to do next.
+                  Direct access to senior advisers and a clear recommendation on
+                  what to do next.
                 </p>
               </div>
 

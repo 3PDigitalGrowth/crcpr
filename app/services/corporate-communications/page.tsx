@@ -93,6 +93,7 @@ export default function CorporateCommunicationsPage() {
       />
 
       <PageHero
+        asidePreset="strategicIntegrated"
         eyebrow="Corporate communications"
         title="Corporate communications that build trust and protect value."
         description="As partners in your success, we work directly with your leadership team to ensure every message, whether to important stakeholders – internal and external – or media, is precise, credible, and effective. You deal with experienced senior advisers, not account managers."

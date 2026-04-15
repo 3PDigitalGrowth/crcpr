@@ -1,6 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
+import {
+  PAGE_HERO_ASIDES,
+  type AsideHighlight,
+  type PageHeroAsidePreset,
+} from "@/config/pageHeroAsides";
 
 export interface PageHeroProps {
   eyebrow?: string;
@@ -10,6 +15,10 @@ export interface PageHeroProps {
   ctaHref?: string;
   /** Full-bleed background; use /public paths, e.g. /images/services/foo/hero.webp */
   heroImage?: { src: string; alt: string };
+  /** Right-rail message variant (below years stat). Defaults to seniorAccess. */
+  asidePreset?: PageHeroAsidePreset;
+  /** Override aside copy entirely when a page needs one-off wording */
+  asideHighlight?: AsideHighlight;
 }
 
 export function PageHero({
@@ -19,7 +28,12 @@ export function PageHero({
   ctaLabel,
   ctaHref,
   heroImage,
+  asidePreset = "seniorAccess",
+  asideHighlight,
 }: PageHeroProps) {
+  const aside =
+    asideHighlight ?? PAGE_HERO_ASIDES[asidePreset];
+
   return (
     <section
       id="hero-section"
@@ -92,11 +106,10 @@ export function PageHero({
               <div className="h-px bg-white/10" />
               <div>
                 <p className="font-heading font-black text-white text-lg">
-                  Confidential by default
+                  {aside.title}
                 </p>
                 <p className="text-white/60 text-sm leading-relaxed mt-1">
-                  No junior handoff, no generic account team, and no public
-                  reference to client work without permission.
+                  {aside.body}
                 </p>
               </div>
             </div>

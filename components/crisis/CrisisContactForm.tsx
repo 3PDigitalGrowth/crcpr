@@ -46,7 +46,7 @@ export function CrisisContactForm() {
               Send a confidential message
             </h3>
             <p className="text-text-body text-sm italic mt-1 mb-4">
-              Everything shared with CRC Public Relations is treated with absolute confidentiality. We do not reference client engagements without explicit written permission. Our advisers operate with the same professional discretion as legal counsel.
+              Everything you share is treated with absolute discretion. This page includes a detailed FAQ on confidentiality if you need the full policy context.
             </p>
 
             {showSuccess ? (

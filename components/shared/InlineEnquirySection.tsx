@@ -22,12 +22,12 @@ interface InlineEnquirySectionProps {
 }
 
 export function InlineEnquirySection({
-  eyebrow = "Confidential enquiry",
+  eyebrow = "Enquiry",
   title,
   body,
   bullets = [],
   defaultMessage,
-  submitLabel = "Send confidential enquiry",
+  submitLabel = "Send message",
   variant = "off-white",
 }: InlineEnquirySectionProps) {
   const [formState, setFormState] = useState<FormState>(initialState);
@@ -198,8 +198,7 @@ export function InlineEnquirySection({
                   {isSubmitting ? "Sending…" : `${submitLabel} →`}
                 </button>
                 <p className="text-text-body text-sm leading-relaxed">
-                  Confidential and reviewed by a senior adviser. No junior
-                  handoff.
+                  Reviewed by a senior adviser. No junior handoff.
                 </p>
               </form>
             )}

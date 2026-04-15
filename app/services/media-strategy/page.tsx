@@ -82,6 +82,7 @@ export default function MediaStrategyPage() {
       />
 
       <PageHero
+        asidePreset="mediaEditorial"
         eyebrow="Media strategy"
         title="Sustained media presence doesn't happen by accident."
         description="We help you build a sustained media presence that positions you as the trusted voice in your sector. You work directly with advisers who understand how media thinks and moves."

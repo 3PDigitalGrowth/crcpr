@@ -148,6 +148,10 @@ const practiceAreas = [
   },
 ] as const;
 
+const HOMEPAGE_HERO_IMAGE =
+  "/images/homepage/" +
+  encodeURIComponent("ChatGPT Image Apr 16, 2026, 09_06_29 AM.png");
+
 const sectorCards = [
   {
     title: "Companies & family businesses",
@@ -204,18 +208,18 @@ function AlternativeHero() {
     <section
       id="hero-section"
       className="relative flex flex-col overflow-hidden w-screen"
-      style={{ minHeight: "calc(100vh - 4rem)", backgroundColor: "transparent", marginLeft: "calc(-50vw + 50%)" }}
+      style={{ marginLeft: "calc(-50vw + 50%)" }}
     >
-      <div className="absolute inset-0 overflow-hidden">
+      <div className="relative w-full">
         <img
-          src="/images/homepage/hero-founders-v2.png"
+          src={HOMEPAGE_HERO_IMAGE}
           alt="Lyall Mercer and Barbara Gorogh, CRC co-founders"
-          className="absolute right-0 top-0 h-full w-auto max-w-none"
+          className="block w-full h-auto"
+          fetchPriority="high"
         />
-      </div>
-      <div className="relative flex-1 max-w-7xl mx-auto px-6 w-full flex flex-col">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center flex-1 pt-12 pb-8 lg:pt-16 lg:pb-10">
-          <div className="lg:col-span-7 relative">
+        <div className="absolute inset-0 max-w-7xl mx-auto px-6 w-full flex flex-col">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center flex-1 pt-12 pb-8 lg:pt-16 lg:pb-10">
+            <div className="lg:col-span-7 relative">
             <div
               className="absolute inset-x-[-1rem] inset-y-[-1.25rem] overflow-hidden rounded-[32px] bg-gradient-to-r from-navy/[0.99] from-[5%] via-navy/[0.98] via-[55%] to-navy/[0.96] shadow-[inset_0_0_120px_rgba(0,0,0,0.12)] backdrop-blur-xl before:pointer-events-none before:absolute before:inset-0 before:rounded-[32px] before:content-[''] before:bg-[linear-gradient(128deg,rgba(255,255,255,0.07)_0%,transparent_42%,transparent_58%,rgba(255,255,255,0.035)_100%),repeating-linear-gradient(-14deg,rgba(255,255,255,0)_0px,rgba(255,255,255,0)_13px,rgba(255,255,255,0.028)_13px,rgba(255,255,255,0.028)_14px),radial-gradient(ellipse_85%_70%_at_88%_72%,rgba(255,255,255,0.05),transparent_62%)] sm:inset-x-[-1.5rem] sm:inset-y-[-1.5rem] lg:inset-x-[-2rem] lg:inset-y-[-2rem]"
               aria-hidden
@@ -306,6 +310,7 @@ function AlternativeHero() {
           </div>
 
           <div className="hidden lg:block lg:col-span-5" aria-hidden="true" />
+        </div>
         </div>
       </div>
 

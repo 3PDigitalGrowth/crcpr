@@ -216,8 +216,11 @@ function AlternativeHero() {
       <div className="relative flex-1 max-w-7xl mx-auto px-6 w-full flex flex-col">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center flex-1 pt-12 pb-8 lg:pt-16 lg:pb-10">
           <div className="lg:col-span-7 relative">
-            <div className="absolute inset-x-[-1rem] inset-y-[-1.25rem] rounded-[32px] bg-gradient-to-r from-navy/[0.97] via-navy/92 to-navy/88 backdrop-blur-md sm:inset-x-[-1.5rem] sm:inset-y-[-1.5rem] lg:inset-x-[-2rem] lg:inset-y-[-2rem]" />
-            <div className="relative z-10 [text-shadow:0_1px_2px_rgba(15,31,54,0.65)]">
+            <div
+              className="absolute inset-x-[-1rem] inset-y-[-1.25rem] overflow-hidden rounded-[32px] bg-gradient-to-r from-navy/[0.99] from-[5%] via-navy/[0.98] via-[55%] to-navy/[0.96] shadow-[inset_0_0_120px_rgba(0,0,0,0.12)] backdrop-blur-xl before:pointer-events-none before:absolute before:inset-0 before:rounded-[32px] before:content-[''] before:bg-[linear-gradient(128deg,rgba(255,255,255,0.07)_0%,transparent_42%,transparent_58%,rgba(255,255,255,0.035)_100%),repeating-linear-gradient(-14deg,rgba(255,255,255,0)_0px,rgba(255,255,255,0)_13px,rgba(255,255,255,0.028)_13px,rgba(255,255,255,0.028)_14px),radial-gradient(ellipse_85%_70%_at_88%_72%,rgba(255,255,255,0.05),transparent_62%)] sm:inset-x-[-1.5rem] sm:inset-y-[-1.5rem] lg:inset-x-[-2rem] lg:inset-y-[-2rem]"
+              aria-hidden
+            />
+            <div className="relative z-10 [text-shadow:0_1px_3px_rgba(0,0,0,0.55),0_2px_12px_rgba(15,31,54,0.45)]">
               <AnimateIn>
                 <p className="inline-flex items-center rounded-full border border-white/10 bg-navy/55 px-3 py-1.5 font-sans font-semibold text-off-white text-xs backdrop-blur-sm">
                   Boutique corporate PR · Australia · New Zealand · Pacific
@@ -231,19 +234,27 @@ function AlternativeHero() {
               </AnimateIn>
 
               <AnimateIn delay={300}>
-                <p className="text-off-white text-base lg:text-lg leading-relaxed w-full mt-4">
-                  Whatever your communications objectives, you need experienced
-                  counsel you can trust. CRC Public Relations is a boutique
-                  corporate PR firm where every client works directly with a
-                  senior adviser. We partner with CEOs, executives, and leaders
-                  within companies, industry associations, government, and the
-                  not-for-profit sector, assisting them to communicate
-                  effectively to key stakeholders, be the public voice of
-                  authority in their field through strategic media engagement,
-                  protect their reputation, deal with complex issues, and
-                  navigate crises with confidence. We are your trusted adviser
-                  and advocate &ndash; and we believe in you.
-                </p>
+                <div className="mt-4 space-y-4">
+                  <p className="text-white text-base lg:text-lg leading-relaxed w-full">
+                    Whatever your communications objectives, you need experienced
+                    counsel you can trust. CRC Public Relations is a boutique
+                    corporate PR firm where every client works directly with a
+                    senior adviser.
+                  </p>
+                  <p className="text-white text-base lg:text-lg leading-relaxed w-full">
+                    We partner with CEOs, executives, and leaders within
+                    companies, industry associations, government, and the
+                    not-for-profit sector, assisting them to communicate
+                    effectively to key stakeholders, be the public voice of
+                    authority in their field through strategic media engagement,
+                    protect their reputation, deal with complex issues, and
+                    navigate crises with confidence.
+                  </p>
+                  <p className="text-white text-base lg:text-lg leading-relaxed w-full">
+                    We are your trusted adviser and advocate &ndash; and we
+                    believe in you.
+                  </p>
+                </div>
               </AnimateIn>
 
               <AnimateIn delay={450}>
@@ -530,7 +541,7 @@ function AlternativeClients() {
                 Who we work with
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-[42px] leading-[1.05] mt-3">
-                Trusted by senior leaders across every sector.
+                Trusted by leaders across every sector.
               </h2>
               <p className="text-charcoal-mid text-base leading-relaxed mt-6 max-w-xl">
                 Our clients are CEOs, managing directors, board chairs, and

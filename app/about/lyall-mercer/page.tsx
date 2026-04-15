@@ -89,8 +89,12 @@ export default function LyallMercerPage() {
       <section className="bg-white py-24 border-t border-brand-border">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-16">
           <div className="lg:col-span-1">
-            {/* TODO: Replace with real portrait from photo shoot */}
-            <PortraitPlaceholder size="lg" />
+            <PortraitPlaceholder
+              size="lg"
+              initials={undefined}
+              imageSrc="/images/about/lyall-mercer-portrait.png"
+              imageAlt="Lyall Mercer"
+            />
             <div className="mt-8">
               <h4 className="text-xs font-sans font-medium text-charcoal-mid mb-3">
                 As seen in

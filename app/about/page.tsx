@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { PageHero } from "@/components/layout/PageHero";
 import { CapabilityDownload } from "@/components/shared/CapabilityDownload";
@@ -45,6 +44,7 @@ const proofItems = [
 const teamMembers = [
   {
     initials: "LM",
+    portraitSrc: "/images/about/lyall-mercer-portrait.png",
     size: "md" as const,
     name: "Lyall Mercer",
     role: siteConfig.lyall.title,
@@ -53,15 +53,10 @@ const teamMembers = [
       "Lyall Mercer began his career as a journalist before building one of Australasia's most respected crisis communications and reputation advisory practices. His media background shapes how he reads pressure, understands the story behind the story, and prepares leaders for scrutiny that can move faster than their internal decision-making.",
       "Over more than 25 years, he has advised companies, governments, associations, schools, and senior executives across Australia, the Pacific, and internationally. Clients engage Lyall when the matter requires senior judgement, calm counsel, and direct access to someone who has seen how high-stakes situations actually unfold.",
     ],
-    links: [
-      { label: "Full profile", href: "/about/lyall-mercer", internal: true },
-      { label: "lyallmercer.com", href: siteConfig.lyallMercerUrl },
-      { label: "LinkedIn", href: siteConfig.lyallLinkedIn },
-      { label: "X / Twitter", href: siteConfig.lyallTwitter },
-    ],
   },
   {
     initials: "BG",
+    portraitSrc: "/images/about/barbara-gorogh-portrait.png",
     size: "md" as const,
     name: "Barbara Gorogh",
     role: "Co-founder, My PR Partner",
@@ -70,10 +65,6 @@ const teamMembers = [
     bio: [
       "Barbara Gorogh is the co-founder of My PR Partner, CRC Public Relations' training platform for communications practitioners and spokesperson development. Her work sits at the intersection of communications capability, practical training design, and the delivery of programmes that help leaders perform more confidently under pressure.",
       "She brings deep experience in communications education, practitioner support, and the translation of crisis and media strategy into practical development programmes. Barbara plays a central role in how CRC Public Relations turns senior advisory experience into structured training for organisations and professionals across Australia.",
-    ],
-    links: [
-      { label: "My PR Partner", href: siteConfig.myPrPartnerUrl },
-      { label: "CRC Public Relations LinkedIn", href: siteConfig.linkedInUrl },
     ],
   },
 ] as const;
@@ -185,10 +176,16 @@ export default function AboutPage() {
                 className="rounded-[28px] border border-brand-border bg-off-white p-8 md:p-10"
               >
                 <div className="flex flex-col sm:flex-row gap-6 items-start">
-                  {/* TODO: Replace with real portrait from photo shoot */}
                   <PortraitPlaceholder
                     size={member.size}
-                    initials={member.initials === "LM" ? undefined : member.initials}
+                    initials={undefined}
+                    imageSrc={member.portraitSrc}
+                    imageAlt={member.name}
+                    imageObjectClassName={
+                      member.initials === "BG"
+                        ? "object-[center_12%]"
+                        : undefined
+                    }
                   />
 
                   <div className="flex-1">
@@ -216,61 +213,6 @@ export default function AboutPage() {
                       {paragraph}
                     </p>
                   ))}
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 pt-8 border-t border-brand-border">
-                  <div className="rounded-xl bg-white border border-brand-border p-5">
-                    <p className="text-brand-teal text-xs font-medium mb-3">
-                      Contact
-                    </p>
-                    <div className="space-y-2 text-sm">
-                      <a
-                        href={`mailto:${siteConfig.email.newBusiness}`}
-                        className="block text-navy hover:text-brand-gold transition-colors"
-                      >
-                        {siteConfig.email.newBusiness}
-                      </a>
-                      <a
-                        href={siteConfig.phone.href}
-                        className="block text-navy hover:text-brand-gold transition-colors"
-                      >
-                        {siteConfig.phone.display}
-                      </a>
-                      <p className="text-charcoal-mid leading-relaxed">
-                        {siteConfig.address.street}, {siteConfig.address.city}{" "}
-                        {siteConfig.address.state} {siteConfig.address.postcode}
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="rounded-xl bg-white border border-brand-border p-5">
-                    <p className="text-brand-teal text-xs font-medium mb-3">
-                      Links
-                    </p>
-                    <div className="space-y-2 text-sm">
-                      {member.links.map((link) =>
-                        "internal" in link && link.internal ? (
-                          <Link
-                            key={link.label}
-                            href={link.href}
-                            className="block text-navy hover:text-brand-gold transition-colors"
-                          >
-                            {link.label}
-                          </Link>
-                        ) : (
-                          <a
-                            key={link.label}
-                            href={link.href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="block text-navy hover:text-brand-gold transition-colors"
-                          >
-                            {link.label}
-                          </a>
-                        )
-                      )}
-                    </div>
-                  </div>
                 </div>
               </div>
             ))}

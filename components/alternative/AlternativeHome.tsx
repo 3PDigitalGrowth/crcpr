@@ -208,17 +208,18 @@ function AlternativeHero() {
     <section
       id="hero-section"
       className="relative flex flex-col overflow-hidden w-screen"
-      style={{ marginLeft: "calc(-50vw + 50%)" }}
+      style={{ height: "calc(100svh - 4rem)", marginLeft: "calc(-50vw + 50%)" }}
     >
-      <div className="relative w-full">
+      {/* Image area fills whatever space the proof strip doesn't need */}
+      <div className="relative w-full flex-1 min-h-0 overflow-hidden">
         <img
           src={HOMEPAGE_HERO_IMAGE}
           alt="Lyall Mercer and Barbara Gorogh, CRC co-founders"
-          className="block w-full h-auto"
+          className="absolute inset-0 h-full w-full object-cover object-right"
           fetchPriority="high"
         />
-        <div className="absolute inset-0 max-w-7xl mx-auto px-6 w-full flex flex-col">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center flex-1 pt-12 pb-8 lg:pt-16 lg:pb-10">
+        <div className="absolute inset-0 max-w-7xl mx-auto px-6 w-full flex flex-col min-h-0">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-6 items-center flex-1 min-h-0 py-8 md:py-10 lg:py-12">
             <div className="lg:col-span-7 relative">
             <div
               className="absolute inset-x-[-1rem] inset-y-[-1.25rem] overflow-hidden rounded-[32px] bg-gradient-to-r from-navy/[0.99] from-[5%] via-navy/[0.98] via-[55%] to-navy/[0.96] shadow-[inset_0_0_120px_rgba(0,0,0,0.12)] backdrop-blur-xl before:pointer-events-none before:absolute before:inset-0 before:rounded-[32px] before:content-[''] before:bg-[linear-gradient(128deg,rgba(255,255,255,0.07)_0%,transparent_42%,transparent_58%,rgba(255,255,255,0.035)_100%),repeating-linear-gradient(-14deg,rgba(255,255,255,0)_0px,rgba(255,255,255,0)_13px,rgba(255,255,255,0.028)_13px,rgba(255,255,255,0.028)_14px),radial-gradient(ellipse_85%_70%_at_88%_72%,rgba(255,255,255,0.05),transparent_62%)] sm:inset-x-[-1.5rem] sm:inset-y-[-1.5rem] lg:inset-x-[-2rem] lg:inset-y-[-2rem]"

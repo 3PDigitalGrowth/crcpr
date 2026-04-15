@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title:
     "Media Relations & Strategy PR Australia | CRC Public Relations",
   description:
-    "Proactive media strategy, journalist relationship management, and sustained media presence for Australian organisations. Former journalists with decades of newsroom experience. Brisbane-based, national reach.",
+    "Proactive media strategy, journalist relationship management, and sustained media presence for Australian organisations. Senior advisers with broad media and editorial experience. Brisbane-based, national reach.",
 };
 
 const jsonLd = {
@@ -34,19 +34,19 @@ const proofItems = [
     label: "Newsroom perspective",
     value: "Former journalists",
     detail:
-      "We understand what editors pursue, which angles hold up, and what makes a spokesperson worth calling again.",
+      "We understand what makes a great media story, and how to position you as the voice of authority in your field.",
   },
   {
     label: "Sustained profile",
     value: "Beyond the press release",
     detail:
-      "A strong media profile is built through cadence, relationship management, and a defensible point of view over time.",
+      "Impacting media coverage that brings you trust and drives business is based on strategy, creativity, and an understanding of your ultimate objectives.",
   },
   {
     label: "Executive readiness",
     value: "Prepared voices",
     detail:
-      "Your strongest story still fails if the spokesperson is not ready for the hardest question in the room.",
+      "We ensure you are briefed and prepared, to maximise the impact of every media appearance and interview, and that you are ready for anything unexpected.",
   },
 ] as const;
 
@@ -205,18 +205,19 @@ export default function MediaStrategyPage() {
             What strong media strategy looks like in the market
           </h2>
           <p className="text-charcoal text-[15px] leading-relaxed">
-            Strong media strategy is visible in the pattern of coverage, not a
-            single hit. The organisation becomes a credible source on the issues
-            that matter in its sector. Journalists understand what it stands for.
-            Executives sound like informed authorities rather than corporate
-            placeholders. Commentary appears in the right places, at the right
-            times, with a message that can survive scrutiny.
+            A strong media strategy is based on an understanding that a public
+            voice is essential to your overall objectives. You become a credible
+            source of authority in your sector. Trust is built with key
+            stakeholders &ndash; internal and external. Journalists understand
+            what you stand for. Executives sound like informed authorities rather
+            than corporate placeholders. Commentary appears in the right places,
+            at the right times, with a message that can survive scrutiny.
           </p>
           <p className="text-charcoal text-[15px] leading-relaxed mt-6">
             That outcome requires more than media activity. It requires message
-            discipline, editorial judgment, and a view on what your organisation
-            should say no to. Premium media strategy is as much about restraint
-            as visibility.
+            discipline, editorial judgment, and the ability to discern when media
+            exposure is not beneficial. Premium media strategy is as much about
+            restraint as visibility.
           </p>
         </div>
       </section>
@@ -250,10 +251,9 @@ export default function MediaStrategyPage() {
                 about. Not all of them are media-ready. We work with your
                 leadership team to identify the angles that journalists will
                 actually pursue, the platforms that reach your most important
-                audiences, and the cadence of media engagement that builds
-                profile without creating noise. The result is a media strategy
-                with specific objectives, specific targets, and specific
-                metrics.
+                audiences, and the strategy that will work best for you. The
+                result is a media strategy with specific objectives, specific
+                targets, and specific metrics.
               </p>
             </div>
 
@@ -265,11 +265,12 @@ export default function MediaStrategyPage() {
                 Media coverage is built on relationships with specific
                 journalists, editors, and producers who cover your sector.
                 CRC Public Relations has cultivated these relationships over 25 years of
-                corporate PR and journalism practice. We know how newsrooms
-                work, what editors are looking for, and how to present your
-                organisation as a source that is worth coming back to. We
-                introduce your organisation to the right people and build the
-                ongoing relationships that generate sustained coverage.
+                corporate PR and journalism practice. We understand what editors
+                and producers need, how stories are commissioned and developed,
+                and how to present your organisation as a source that is worth
+                coming back to. We introduce your organisation to the right people
+                and build the ongoing relationships that generate sustained
+                coverage.
               </p>
             </div>
 
@@ -354,13 +355,8 @@ export default function MediaStrategyPage() {
                 Newsroom perspective
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
-                We understand how newsrooms think because we came from them.
+                We understand how newsrooms think
               </h2>
-              <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
-                That background is not a credential line. It shapes how we
-                judge stories, prepare spokespeople, and build coverage that
-                journalists will actually trust.
-              </p>
 
               <div className="space-y-6 mt-8">
                 <p className="text-charcoal text-[15px] leading-relaxed">
@@ -397,7 +393,7 @@ export default function MediaStrategyPage() {
         title="Is your spokesperson ready for the next meaningful interview?"
         description="Download the CRC Public Relations Media Interview Preparation Guide, a practical briefing framework used by executives and communications leaders who need their message to hold up on camera, on radio, and on the record."
         highlights={[
-          "Written from a newsroom perspective",
+          "Practical framework for print, radio, and broadcast",
           "Useful before high-stakes interviews",
           "Built for executives and spokespeople",
         ]}

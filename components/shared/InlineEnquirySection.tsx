@@ -198,7 +198,7 @@ export function InlineEnquirySection({
                   {isSubmitting ? "Sending…" : `${submitLabel} →`}
                 </button>
                 <p className="text-text-body text-sm leading-relaxed">
-                  Reviewed by a senior adviser. No junior handoff.
+                  Confidential and reviewed by a senior adviser.
                 </p>
               </form>
             )}

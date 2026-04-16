@@ -9,6 +9,7 @@ import { MyPRPartnerCTA } from "@/components/shared/MyPRPartnerCTA";
 import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
 import { PageProofStrip } from "@/components/shared/PageProofStrip";
 import { PortraitPlaceholder } from "@/components/shared/PortraitPlaceholder";
+import { MediaOutletLogoLink } from "@/components/shared/MediaOutletLogoLink";
 
 export const metadata: Metadata = {
   title: "Lyall Mercer: Co-founder & Principal Adviser",
@@ -99,20 +100,17 @@ export default function LyallMercerPage() {
               <h4 className="text-xs font-sans font-medium text-charcoal-mid mb-3">
                 As seen in
               </h4>
-              <ul className="list-none p-0 m-0">
+              <div className="flex flex-wrap gap-4 items-center">
                 {siteConfig.lyall.mediaLinks.map((item) => (
-                  <li key={item.name}>
-                    <a
-                      href={item.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    className="text-sm text-link-teal hover:text-navy hover:underline block py-1"
-                    >
-                      {item.name}
-                    </a>
-                  </li>
+                  <MediaOutletLogoLink
+                    key={item.name}
+                    href={item.href}
+                    name={item.name}
+                    logoSrc={item.logoSrc}
+                    variant="onLight"
+                  />
                 ))}
-              </ul>
+              </div>
             </div>
           </div>
           <div className="lg:col-span-2">

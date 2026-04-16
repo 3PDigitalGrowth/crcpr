@@ -14,6 +14,8 @@ interface FAQSectionProps {
   titleText?: string;
   items?: readonly FAQItem[];
   embedded?: boolean;
+  /** When false, answers are shown in full with no "View more" toggle. */
+  expandable?: boolean;
 }
 
 export function FAQSection({
@@ -21,6 +23,7 @@ export function FAQSection({
   titleText = "Frequently asked questions",
   items = siteConfig.faqs,
   embedded = !title,
+  expandable = true,
 }: FAQSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -33,7 +36,7 @@ export function FAQSection({
           <article
             key={i}
             className={`rounded-lg border p-6 transition-colors ${
-              isOpen
+              expandable && isOpen
                 ? "border-brand-teal/40 bg-white shadow-sm shadow-navy/5"
                 : "border-brand-border bg-white shadow-sm shadow-navy/5"
             }`}
@@ -42,31 +45,34 @@ export function FAQSection({
               <h3 className="font-heading font-black text-navy text-xl leading-snug">
                 {faq.question}
               </h3>
-              <ChevronDown
-                className={`size-5 shrink-0 text-brand-teal transition-transform duration-300 ${
-                  isOpen ? "rotate-180" : ""
-                }`}
-                aria-hidden
-              />
+              {expandable && (
+                <ChevronDown
+                  className={`size-5 shrink-0 text-brand-teal transition-transform duration-300 ${
+                    isOpen ? "rotate-180" : ""
+                  }`}
+                  aria-hidden
+                />
+              )}
             </div>
 
             <p
               className={`mt-4 font-sans text-charcoal-mid text-[15px] leading-relaxed ${
-                
-                isOpen ? "" : "line-clamp-3"
+                expandable && !isOpen ? "line-clamp-3" : ""
               }`}
             >
               {faq.answer}
             </p>
 
-            <button
-              type="button"
-              className="mt-5 text-link-teal text-sm font-medium hover:text-navy hover:underline underline-offset-2"
-              onClick={() => setOpenIndex(isOpen ? null : i)}
-              aria-expanded={isOpen}
-            >
-              {isOpen ? "View less" : "View more"}
-            </button>
+            {expandable && (
+              <button
+                type="button"
+                className="mt-5 text-link-teal text-sm font-medium hover:text-navy hover:underline underline-offset-2"
+                onClick={() => setOpenIndex(isOpen ? null : i)}
+                aria-expanded={isOpen}
+              >
+                {isOpen ? "View less" : "View more"}
+              </button>
+            )}
           </article>
         );
       })}

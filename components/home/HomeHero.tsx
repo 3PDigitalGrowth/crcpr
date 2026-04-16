@@ -6,6 +6,7 @@ import { siteConfig } from "@/config/site";
 import { AnimateIn } from "@/components/shared/AnimateIn";
 import { AnimatedCounter } from "@/components/shared/AnimatedCounter";
 import { PortraitPlaceholder } from "@/components/shared/PortraitPlaceholder";
+import { MediaOutletLogoLink } from "@/components/shared/MediaOutletLogoLink";
 
 const stats = [
   { value: siteConfig.stats.yearsTrading, label: "Years experience" },
@@ -224,14 +225,12 @@ export function HomeHero() {
                       as="span"
                       className="inline-block"
                     >
-                      <a
+                      <MediaOutletLogoLink
                         href={link.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="font-heading font-black text-white/25 text-sm hover:text-white/50 transition"
-                      >
-                        {link.name}
-                      </a>
+                        name={link.name}
+                        logoSrc={link.logoSrc}
+                        variant="onDark"
+                      />
                     </AnimateIn>
                   ))}
                 </div>

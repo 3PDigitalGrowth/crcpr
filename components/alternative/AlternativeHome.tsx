@@ -16,6 +16,7 @@ import { FAQSection } from "@/components/shared/FAQSection";
 import { CaseStudies } from "@/components/shared/CaseStudies";
 
 import { HomeTestimonials } from "@/components/home/HomeTestimonials";
+import { MediaOutletLogoLink } from "@/components/shared/MediaOutletLogoLink";
 
 interface FAQItem {
   question: string;
@@ -208,7 +209,7 @@ function AlternativeHero() {
     <section
       id="hero-section"
       className="relative flex flex-col overflow-hidden w-screen"
-      style={{ height: "calc(100svh - 4rem)", marginLeft: "calc(-50vw + 50%)" }}
+      style={{ minHeight: "calc(100svh - 4rem)", marginLeft: "calc(-50vw + 50%)" }}
     >
       {/* Image area fills whatever space the proof strip doesn't need */}
       <div className="relative w-full flex-1 min-h-0 overflow-hidden">
@@ -294,14 +295,12 @@ function AlternativeHero() {
                         as="span"
                         className="inline-block"
                       >
-                        <a
+                        <MediaOutletLogoLink
                           href={link.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="font-heading font-black text-white text-sm hover:text-off-white transition"
-                        >
-                          {link.name}
-                        </a>
+                          name={link.name}
+                          logoSrc={link.logoSrc}
+                          variant="onDark"
+                        />
                       </AnimateIn>
                     ))}
                   </div>

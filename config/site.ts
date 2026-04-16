@@ -50,12 +50,32 @@ export const siteConfig = {
       "ABC Radio",
     ],
     mediaLinks: [
-      // TODO: replace each with specific article URL when confirmed
-      { name: "ABC News", href: "https://lyallmercer.com" },
-      { name: "The Australian", href: "https://lyallmercer.com" },
-      { name: "Sky News", href: "https://lyallmercer.com" },
-      { name: "AFR", href: "https://lyallmercer.com" },
-      { name: "ABC Radio", href: "https://lyallmercer.com" },
+      // TODO: replace each href with specific article URL when confirmed
+      {
+        name: "ABC News",
+        href: "https://lyallmercer.com",
+        logoSrc: "/images/media-outlets/abc-news.png",
+      },
+      {
+        name: "The Australian",
+        href: "https://lyallmercer.com",
+        logoSrc: "/images/media-outlets/the-australian.png",
+      },
+      {
+        name: "Sky News",
+        href: "https://lyallmercer.com",
+        logoSrc: "/images/media-outlets/sky-news.png",
+      },
+      {
+        name: "AFR",
+        href: "https://lyallmercer.com",
+        logoSrc: "/images/media-outlets/afr.png",
+      },
+      {
+        name: "ABC Radio",
+        href: "https://lyallmercer.com",
+        logoSrc: "/images/media-outlets/abc-radio.png",
+      },
     ],
   },
 

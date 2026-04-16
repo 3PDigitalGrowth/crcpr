@@ -403,6 +403,7 @@ export default function MediaStrategyPage() {
       <FAQSection
         items={faqs}
         titleText="Common questions about media strategy"
+        expandable={false}
       />
 
       <PageClosingCTA

@@ -80,7 +80,7 @@ const faqs = [
   {
     question: "How is this different from a larger PR agency retainer?",
     answer:
-      "The difference is direct access and judgement. At CRC Public Relations, the people you brief are the people doing the advisory work. There is no junior handoff and no large account structure sitting between leadership and the advice.",
+      "The difference is direct access and judgement. At CRC Public Relations, the people you brief are the people doing the advisory work. There is no large account structure sitting between leadership and the advice.",
   },
 ];
 

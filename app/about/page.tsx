@@ -143,7 +143,7 @@ export default function AboutPage() {
 
       <InlineEnquirySection
         title="Need to speak with the firm directly?"
-        body="CRC Public Relations exists for organisations that want senior communications counsel from the first conversation. If your situation is sensitive, high-stakes, or too important for a junior handoff, get in touch."
+        body="CRC Public Relations exists for organisations that want senior communications counsel from the first conversation. If your situation is sensitive or high-stakes, get in touch."
         bullets={[
           "Direct access to experienced senior advisers",
           "Support across corporate, crisis, reputation, and stakeholder matters",
@@ -226,7 +226,7 @@ export default function AboutPage() {
 
       <PageClosingCTA
         title="Need to speak with the firm directly?"
-        body="We work with organisations that want senior communications counsel from the first conversation. If your situation is sensitive, high-stakes, or simply too important for a junior handoff, get in touch."
+        body="We work with organisations that want senior communications counsel from the first conversation. If your situation is sensitive or high-stakes, get in touch."
       />
     </>
   );

@@ -95,8 +95,8 @@ function CTAColumn() {
         Talk to a senior adviser
       </p>
       <p className="text-xs text-white/40 leading-relaxed">
-        You reach senior advisers directly—no pitch deck, no junior account team. Sensitive
-        matters are handled with professional discretion.
+        You reach senior advisers directly. Sensitive matters are handled with
+        professional discretion.
       </p>
       <div className="flex-1" />
       <a

@@ -87,7 +87,7 @@ export default function ClientsPage() {
         asidePreset="clientsBreadth"
         eyebrow="Sector expertise"
         title="Deep expertise across every sector."
-        description="We work directly with CEOs, directors, and senior executives who recognise the value of experienced counsel and treat reputation as a strategic asset. No junior handoff, no layers."
+        description="We work directly with CEOs, directors, and senior executives who recognise the value of experienced counsel and treat reputation as a strategic asset."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
         heroImage={{

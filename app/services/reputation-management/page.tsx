@@ -39,22 +39,22 @@ const sectorLinks = [
 
 const proofItems = [
   {
-    label: "Exposure mapping",
-    value: "Signals first",
+    label: "Strategic foresight",
+    value: "A step ahead",
     detail:
-      "Reputation failures are usually visible in stakeholder, media, and governance signals before they become public events.",
+      'Our "outside" perspective means we can identify current and future vulnerabilities that clients might miss, and protect their reputation, brand, values, and revenue.',
   },
   {
     label: "Leadership clarity",
-    value: "Actionable insight",
+    value: "Experience matters",
     detail:
-      "We translate communications risk into a decision-ready view for executives, boards, and senior stakeholders.",
+      "Creating the right messaging and crafting the most effective strategies that puts reputation at the centre only comes from years of experience across all sectors.",
   },
   {
-    label: "Long-term protection",
-    value: "Disciplined monitoring",
+    label: "Ongoing protection",
+    value: "It's a relationship",
     detail:
-      "Reputation management is not a one-off campaign. It is an ongoing leadership discipline with regular review points.",
+      "We take our mission seriously: to promote, protect, and be advocates for our clients. Our success is why we have so many long-term client relationships.",
   },
 ] as const;
 
@@ -92,8 +92,8 @@ export default function ReputationManagementPage() {
       <PageHero
         asidePreset="proofLed"
         eyebrow="Reputation management"
-        title="Your reputation is your most valuable asset. Protect it before you need to."
-        description="We help you understand where your vulnerabilities sit, put the right protections in place, and respond effectively when your reputation comes under pressure. You work directly with senior advisers who take a long-term interest in your organisation."
+        title="Your reputation is your most valuable asset. Protect it."
+        description={`Warren Buffett said: "It takes 20 years to build a reputation and five minutes to ruin it. If you think about that, you'll do things differently". We think differently because your reputation is at the core of our communications strategies. This includes understanding and identifying your vulnerabilities, evaluating potential ramifications of messaging, and responding effectively when your reputation comes under pressure.`}
         ctaLabel="Book a consultation"
         ctaHref="/contact"
         heroImage={{
@@ -103,7 +103,7 @@ export default function ReputationManagementPage() {
       />
 
       <PageProofStrip
-        title="Strong reputations are rarely accidental. They are managed deliberately."
+        title="Strong reputations are never accidental. They are built by trust and managed deliberately."
         items={[...proofItems]}
       />
 
@@ -124,19 +124,26 @@ export default function ReputationManagementPage() {
               </h2>
               <div className="space-y-6">
                 <p className="text-charcoal text-base leading-relaxed">
-                  In 2024, a single day of hostile media coverage cost an
-                  Australian company an estimated $400&nbsp;million
-                  in market capitalisation. The underlying issue had been
-                  visible in their stakeholder environment for months. No one
-                  had acted on the signals.
+                  There isn&apos;t a year that passes without a major company
+                  receiving hostile media coverage that brings with it major
+                  ramifications, costs, revenue losses and severe ongoing
+                  reputational damage. But while we hear about the high profile
+                  companies, there are countless others also battling their own
+                  issues because of a loss of trust by their stakeholders.
+                </p>
+                <p className="text-charcoal text-base leading-relaxed">
+                  What we don&apos;t hear about, is what initially created the
+                  problem. What will surprise many, is that in most cases, the
+                  issue or crisis could have been completely avoided.
                 </p>
                 <p className="text-charcoal text-base leading-relaxed">
                   Reputation damage is almost always predictable in hindsight.
-                  The stakeholder who became a public critic. The regulatory
-                  relationship that was allowed to deteriorate. The internal
-                  policy that was never communicated clearly. The media
-                  relationship that was treated as transactional rather than
-                  strategic.
+                  Usually the reason for the issue can be traced back to one
+                  point: a wrong decision, a missed vulnerability, an oversight,
+                  a client who became a public critic, a social media post that
+                  was ignored, a regulatory relationship that was allowed to
+                  deteriorate, an internal policy that was never communicated
+                  clearly, a media enquiry that wasn&apos;t handled correctly.
                 </p>
                 <p className="text-charcoal text-base leading-relaxed">
                   We work with you to identify these vulnerabilities before
@@ -191,10 +198,10 @@ export default function ReputationManagementPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
             {[
-              "A regulator starts asking sharper questions and the tone changes",
-              "Stakeholder frustration becomes more organised and more visible",
-              "Media interest shifts from occasional enquiry to pattern recognition",
-              "Leadership no longer has confidence that internal and external messages are aligned",
+              "A regulator or government body shifts from routine correspondence to pointed questions",
+              "Customers, suppliers, or partners begin raising concerns privately that have not surfaced publicly",
+              "Search results and online sentiment quietly turn, telling a different story about your organisation",
+              "Board and executive alignment on a difficult issue begins to fracture behind the scenes",
             ].map((item) => (
               <div
                 key={item}

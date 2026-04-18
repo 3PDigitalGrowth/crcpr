@@ -64,7 +64,7 @@ const faqs = [
   {
     question: "Do you write op-eds and thought leadership pieces?",
     answer:
-      "Yes. We work with senior leaders to identify positions worth taking, shape commentary that can stand up editorially, and place that thinking with the right outlets over time.",
+      "Yes. We work with leaders to identify positions worth taking, shape commentary that can stand up editorially, and place that thinking with the right outlets over time.",
   },
   {
     question: "Why is journalism experience beneficial?",

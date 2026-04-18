@@ -58,7 +58,7 @@ export function Footer() {
           <div>
             <Logo />
             <p className="text-sm text-white/60 leading-relaxed mt-4">
-              Boutique corporate PR firm trusted by CEOs, directors, and senior
+              Boutique corporate PR firm trusted by CEOs, directors, and
               executives across Australia, the Pacific, and internationally.
             </p>
             <div className="mt-6 flex gap-4">

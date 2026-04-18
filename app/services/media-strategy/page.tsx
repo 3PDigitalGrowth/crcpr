@@ -282,7 +282,7 @@ export default function MediaStrategyPage() {
               <p className="text-charcoal text-[15px] leading-relaxed">
                 The most credible media presence is earned through consistent,
                 substantive commentary on the issues that matter in your
-                sector. We work with your senior leaders to develop thought
+                sector. We work with your leaders to develop thought
                 leadership positions, draft op-ed pieces and expert
                 commentary, and place that content with the publications and
                 broadcasters most relevant to your audiences. Over time, this

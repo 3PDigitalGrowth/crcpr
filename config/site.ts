@@ -199,7 +199,7 @@ export const siteConfig = {
     {
       question: "How quickly can CRC Public Relations respond to a crisis?",
       answer:
-        "We are available 24/7. For active crisis situations, our target is to have a senior adviser engaged within the hour of first contact during business hours, or at the start of the next business day for after-hours enquiries. Call 1300 182 186 for immediate crisis support.",
+        "We are available 24/7. For active crisis situations, our target is to have an adviser engaged within the hour of first contact during business hours, or at the start of the next business day for after-hours enquiries. Call 1300 182 186 for immediate crisis support.",
     },
     {
       question: "In what geographical areas do you operate?",

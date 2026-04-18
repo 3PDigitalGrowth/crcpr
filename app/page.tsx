@@ -8,7 +8,7 @@ const homepageFaqs = siteConfig.faqs.map((faq, index) => {
       question:
         "What types of organisations does CRC Public Relations work with?",
       answer:
-        "We work with CEOs, directors, and senior executives across companies, charities, not-for-profits, family businesses, industry associations and peak bodies, independent and faith-based schools, health and aged care organisations, legal and professional services firms, Pacific governments and NGOs, and faith-based organisations. What our clients share is a preference for working directly with experienced senior advisers rather than through large agency structures.",
+        "We work with CEOs, directors, and executives across companies, charities, not-for-profits, family businesses, industry associations and peak bodies, independent and faith-based schools, health and aged care organisations, legal and professional services firms, Pacific governments and NGOs, and faith-based organisations. What our clients share is a preference for working directly with experienced advisers rather than through large agency structures.",
     };
   }
 

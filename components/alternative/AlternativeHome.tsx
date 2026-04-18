@@ -111,7 +111,7 @@ const practiceAreas = [
   {
     title: "Corporate Communications",
     description:
-      "Strategic communications counsel that supports your overall objectives, both internally and externally. Whether this be managing stakeholder relationships, achieving media coverage that positions you as a trusted voice of authority, navigating a sensitive announcement, dealing with a challenging media or stakeholder issue, or other needs, we provide the experienced guidance that senior leaders expect. Our team works directly with you to ensure your messaging is precise, consistent, credible, and effective.",
+      "Strategic communications counsel that supports your overall objectives, both internally and externally. Whether this be managing stakeholder relationships, achieving media coverage that positions you as a trusted voice of authority, navigating a sensitive announcement, dealing with a challenging media or stakeholder issue, or other needs, we provide the experienced guidance that leaders expect. Our team works directly with you to ensure your messaging is precise, consistent, credible, and effective.",
     href: "/services/corporate-communications",
     linkLabel: "Explore corporate communications",
     imageSrc: "/images/practice-corporate.png",
@@ -157,7 +157,7 @@ const sectorCards = [
   {
     title: "Companies & family businesses",
     description:
-      "Direct, personal counsel for owners, directors and senior executives seeking communications solutions and navigating reputation, media and stakeholder challenges.",
+      "Direct, personal counsel for owners, directors and executives seeking communications solutions and navigating reputation, media and stakeholder challenges.",
     href: "/clients/corporate",
   },
   {
@@ -568,7 +568,7 @@ function AlternativeClients() {
                     Work with CRC Public Relations
                   </p>
                   <p className="font-heading font-black text-white text-lg leading-snug">
-                    Start a direct conversation with a senior adviser.
+                    Start a direct conversation with an adviser.
                   </p>
                   <p className="text-white/65 text-sm leading-relaxed mt-3">
                     Tell us about the issue, sector pressure, or communications

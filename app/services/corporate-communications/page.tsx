@@ -70,7 +70,7 @@ const faqs = [
   {
     question: "Do you work directly with boards, CEOs, and general counsel?",
     answer:
-      "Yes. CRC Public Relations is structured around direct senior access. We routinely support chairs, CEOs, general counsel, and executive teams on matters where governance, reputation, and communication are tightly connected.",
+      "Yes. CRC Public Relations is structured around direct access. We routinely support chairs, CEOs, general counsel, and executive teams on matters where governance, reputation, and communication are tightly connected.",
   },
   {
     question: "What kinds of matters does corporate communications support usually cover?",
@@ -238,7 +238,7 @@ export default function CorporateCommunicationsPage() {
                 3
               </span>
               <h3 className="font-heading font-black text-navy text-xl mb-3 mt-3">
-                Ongoing senior counsel
+                Ongoing counsel
               </h3>
               <p className="text-charcoal text-[15px] leading-relaxed">
                 We stay close to the matter, reviewing drafts, preparing spokespeople,
@@ -258,7 +258,7 @@ export default function CorporateCommunicationsPage() {
           "Stakeholder engagement planning and message discipline",
           "Sensitive media and internal communication advice",
         ]}
-        defaultMessage="We need senior corporate communications support for an upcoming matter."
+        defaultMessage="We need corporate communications support for an upcoming matter."
       />
 
       {/* Service detail */}
@@ -315,7 +315,7 @@ export default function CorporateCommunicationsPage() {
                 Executive communications and media positioning
               </h3>
               <p className="text-charcoal text-[15px] leading-relaxed">
-                Senior leaders are the face of the organisations they run. We
+                Leaders are the face of the organisations they run. We
                 help executives develop their communications voice, prepare for
                 media and stakeholder appearances, and build a public profile
                 that reflects the quality of their leadership. This includes
@@ -406,7 +406,7 @@ export default function CorporateCommunicationsPage() {
                   CRC Public Relations model
                 </p>
                 <h2 className="font-heading font-black text-white text-2xl leading-tight mb-4">
-                  Senior counsel, not account management
+                  Experienced counsel, not account management
                 </h2>
                 <p className="text-white/70 text-sm leading-relaxed">
                   Sensitive communications work needs direct access to judgement,
@@ -417,16 +417,17 @@ export default function CorporateCommunicationsPage() {
               <div className="max-w-3xl">
                 <div className="space-y-6">
                   <p className="text-charcoal text-[15px] leading-relaxed">
-                    The difference between CRC Public Relations and a larger agency is not
-                    size. It is access. At most large PR firms, you brief a
-                    senior person and are then handed to a team of account
-                    managers and junior staff who execute the work. Your senior
-                    contact becomes a figurehead rather than an adviser.
+                    The difference between CRC Public Relations and a larger
+                    agency is not size. It is access. At many PR firms,
+                    you&apos;ll brief a manager or director, and are then handed
+                    to a team of account managers and more junior staff who
+                    execute the work. Your initial contact becomes a figurehead
+                    rather than an adviser.
                   </p>
                   <p className="text-charcoal text-[15px] leading-relaxed">
-                    At CRC Public Relations, every engagement is led by an experienced senior
-                    adviser from start to finish. You work directly with the
-                    person who has the expertise, the judgment, and the
+                    At CRC Public Relations, every engagement is led by an
+                    experienced adviser from start to finish. You work directly
+                    with the person who has the expertise, the judgment, and the
                     accountability for the outcome. This is not a service model
                     we stumbled into. It is a deliberate choice. It is why our
                     client satisfaction rate is 100%.
@@ -435,15 +436,15 @@ export default function CorporateCommunicationsPage() {
                     For organisations dealing with sensitive communications
                     challenges, whether a board transition, a difficult
                     stakeholder relationship, or a market-sensitive
-                    announcement, this direct access to senior counsel is not a
-                    preference. It is a requirement.
+                    announcement, this direct access is not a preference. It is
+                    a requirement.
                   </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
                   <div className="rounded-lg bg-white border border-brand-border p-5">
                     <p className="font-sans font-semibold text-navy text-sm mb-1">
-                      Direct senior access
+                      Direct management access
                     </p>
                     <p className="text-charcoal-mid text-sm leading-relaxed">
                       The adviser you brief is the adviser shaping the work.
@@ -463,8 +464,7 @@ export default function CorporateCommunicationsPage() {
                       Clear accountability
                     </p>
                     <p className="text-charcoal-mid text-sm leading-relaxed">
-                      One senior team owns the thinking, the advice, and the
-                      outcome.
+                      Our team owns the thinking, the advice, and the outcome.
                     </p>
                   </div>
                 </div>

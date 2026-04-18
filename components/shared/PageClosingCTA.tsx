@@ -77,11 +77,11 @@ export function PageClosingCTA({
             <div className="border-t lg:border-t-0 lg:border-l border-white/10 bg-white/[0.03] p-8 md:p-10 flex flex-col justify-between">
               <div>
                 <p className="text-white/35 text-xs mb-3">
-                  Speak to a senior adviser
+                  Speak to an adviser
                 </p>
                 <p className="text-white/65 text-sm leading-relaxed">
-                  Direct access to senior advisers and a clear recommendation on
-                  what to do next.
+                  Direct access to advisers and a clear recommendation on what
+                  to do next.
                 </p>
               </div>
 

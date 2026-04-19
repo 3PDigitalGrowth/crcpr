@@ -204,7 +204,7 @@ export const siteConfig = {
     {
       question: "In what geographical areas do you operate?",
       answer:
-        "CRC Public Relations works with clients in every Australian state, New Zealand and across the Pacific Islands. Geography is not a barrier.",
+        "CRC Public Relations works with local and national clients based in every Australian state, New Zealand and across the Pacific Islands. Some of our clients have branches across the world and we have travelled to assist them in many countries. We deal with a wide range of media outlets, from local, rural, regional, and national through to international media across the globe. We also work with specialist industry publications, and new media including podcasts in any location. We can assist you whatever your size, wherever you are. Geography is not a barrier.",
     },
     {
       question: "What industries does CRC Public Relations specialise in?",

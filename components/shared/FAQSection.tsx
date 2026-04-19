@@ -16,6 +16,8 @@ interface FAQSectionProps {
   embedded?: boolean;
   /** When false, answers are shown in full with no "View more" toggle. */
   expandable?: boolean;
+  /** Number of columns on large screens. Defaults to 2. */
+  columns?: 2 | 3;
 }
 
 export function FAQSection({
@@ -24,11 +26,14 @@ export function FAQSection({
   items = siteConfig.faqs,
   embedded = !title,
   expandable = true,
+  columns = 2,
 }: FAQSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
+  const columnsClass = columns === 3 ? "lg:grid-cols-3" : "lg:grid-cols-2";
+
   const grid = (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    <div className={`grid grid-cols-1 ${columnsClass} gap-6`}>
       {items.map((faq, i) => {
         const isOpen = openIndex === i;
 

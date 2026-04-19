@@ -93,7 +93,9 @@ export default function ReputationManagementPage() {
         asidePreset="proofLed"
         eyebrow="Reputation management"
         title="Your reputation is your most valuable asset. Protect it."
-        description={`Warren Buffett said: "It takes 20 years to build a reputation and five minutes to ruin it. If you think about that, you'll do things differently". We think differently because your reputation is at the core of our communications strategies. This includes understanding and identifying your vulnerabilities, evaluating potential ramifications of messaging, and responding effectively when your reputation comes under pressure.`}
+        description={`"It takes 20 years to build a reputation and five minutes to ruin it. If you think about that, you'll do things differently" - Warren Buffett.
+
+Your reputation is at the core of our communications strategies. This includes understanding and identifying your vulnerabilities, evaluating potential ramifications of messaging, and responding effectively when your reputation comes under pressure.`}
         ctaLabel="Book a consultation"
         ctaHref="/contact"
         heroImage={{
@@ -132,9 +134,8 @@ export default function ReputationManagementPage() {
                   issues because of a loss of trust by their stakeholders.
                 </p>
                 <p className="text-charcoal text-base leading-relaxed">
-                  What we don&apos;t hear about, is what initially created the
-                  problem. What will surprise many, is that in most cases, the
-                  issue or crisis could have been completely avoided.
+                  What will surprise many, is that in most cases, these issues
+                  or crises could have been completely avoided.
                 </p>
                 <p className="text-charcoal text-base leading-relaxed">
                   Reputation damage is almost always predictable in hindsight.
@@ -330,22 +331,16 @@ export default function ReputationManagementPage() {
                 num: "01",
                 title: "Reputation vulnerability assessments",
                 body:
-                  "We conduct structured assessments of your organisation's communications posture, mapping your stakeholder landscape, reviewing your media profile, evaluating your digital footprint, and stress-testing your messaging against the issues most likely to attract scrutiny. The output is a prioritised action plan your leadership team can act on immediately.",
+                  "We conduct assessments of your organisation's communications, considering all stakeholders. We review your media profile, evaluate your digital footprint, and stress-test your messaging against the issues most likely to attract scrutiny. The output is a prioritised action plan your leadership team can act on immediately.",
               },
               {
                 num: "02",
                 title: "Ongoing reputation monitoring and early warning",
                 body:
-                  "Reputation risks do not appear fully formed. They develop through a series of signals: a change in media tone, a shift in stakeholder sentiment, a pattern of regulatory correspondence. We provide ongoing monitoring and reporting that surfaces these signals early, giving your leadership team time to respond proactively rather than reactively.",
+                  "Reputation risks do not appear fully formed. They develop through a series of signals: a change in media tone, a shift in stakeholder sentiment, a pattern of regulatory correspondence. Through a combination of ongoing dialogue with clients, and the provision of media monitoring and reporting, we work to identify signals early, giving your leadership team time to respond proactively rather than reactively.",
               },
               {
                 num: "03",
-                title: "Stakeholder perception analysis",
-                body:
-                  "What your stakeholders think about your organisation is often different from what you believe they think. We conduct structured stakeholder perception research, through interviews, surveys, and media analysis, that gives your leadership team an accurate picture of your current reputation and the gaps between intention and perception.",
-              },
-              {
-                num: "04",
                 title: "Reputation recovery strategy",
                 body:
                   "For organisations that have experienced a significant reputation event, the path back to trust is strategic, not tactical. We develop and implement reputation recovery programmes that address the root causes of the damage, rebuild stakeholder confidence, and restore your organisation's standing, methodically and measurably.",
@@ -414,20 +409,11 @@ export default function ReputationManagementPage() {
               </p>
               <div className="space-y-6">
                 <p className="text-text-body text-base leading-relaxed">
-                  The organisations with the strongest reputations treat
-                  reputation management as an ongoing strategic investment, the
-                  same way they treat financial management or legal risk. They
-                  maintain relationships with senior communications advisers
-                  before they need them urgently. They conduct regular
-                  vulnerability assessments. They test their crisis plans. They
-                  build and sustain stakeholder trust deliberately.
-                </p>
-                <p className="text-text-body text-base leading-relaxed">
-                  CRC Public Relations works as a long-term reputation partner for
-                  organisations that have made this decision. We are not a firm
-                  you call when something goes wrong. We are the firm you retain
-                  so that when something does go wrong, and it will, you are
-                  already prepared.
+                  CRC Public Relations works as a long-term reputation partner
+                  for organisations that have made this decision. While you can
+                  call us when something goes wrong, the better option is to
+                  retain us now, so that when something does go wrong (and it
+                  will at some stage), you are already prepared.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   <div className="rounded-lg border border-brand-border bg-warm-white p-4">

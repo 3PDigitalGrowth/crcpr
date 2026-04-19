@@ -19,6 +19,7 @@ interface InlineEnquirySectionProps {
   defaultMessage?: string;
   submitLabel?: string;
   variant?: "white" | "off-white";
+  disclaimer?: string;
 }
 
 export function InlineEnquirySection({
@@ -29,6 +30,7 @@ export function InlineEnquirySection({
   defaultMessage,
   submitLabel = "Send message",
   variant = "off-white",
+  disclaimer = "Confidential and reviewed by an experienced adviser.",
 }: InlineEnquirySectionProps) {
   const [formState, setFormState] = useState<FormState>(initialState);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -198,7 +200,7 @@ export function InlineEnquirySection({
                   {isSubmitting ? "Sending…" : `${submitLabel} →`}
                 </button>
                 <p className="text-text-body text-sm leading-relaxed">
-                  Confidential and reviewed by a senior adviser.
+                  {disclaimer}
                 </p>
               </form>
             )}

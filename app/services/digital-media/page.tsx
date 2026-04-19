@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
-import { PageHero } from "@/components/layout/PageHero";
+import Image from "next/image";
+import Link from "next/link";
 import { FAQSection } from "@/components/shared/FAQSection";
 import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
 import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
 import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
-import { PageProofStrip } from "@/components/shared/PageProofStrip";
+import { PAGE_HERO_ASIDES } from "@/config/pageHeroAsides";
+import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
   title:
@@ -53,26 +55,28 @@ const faqs = [
   {
     question: "Is online reputation management different from traditional PR?",
     answer:
-      "The channels are different, but the underlying reputation discipline is the same. Digital environments simply compress the timeframe and make weak governance or slow decision-making visible much faster.",
+      "The channels are different, but the underlying reputation needs are the same. Digital environments can escalate issues faster and expose weak policies and procedures.",
   },
   {
     question: "Can CRC Public Relations help with social media issues that are starting to escalate?",
     answer:
-      "Yes. We help organisations assess whether the issue needs acknowledgement, containment, escalation, or silence, then align the digital response with the broader communications and stakeholder position.",
+      "Yes. We help organisations deal with issues that can damage their reputation and create the right responses that align with their overall objectives.",
   },
   {
     question: "Do you operate like a social media agency?",
     answer:
-      "No. CRC Public Relations approaches digital channels from a senior communications and reputation perspective, not a volume-content or community-management model. The emphasis is judgement, escalation, and brand authority.",
+      "No. CRC Public Relations approaches digital channels from a communications and reputation perspective, not a volume-content or community-management model. The emphasis is judgement, brand authority, and reputation protection.",
   },
   {
     question: "What kinds of digital risks do you usually assess?",
     answer:
-      "Typical risks include weak approval pathways, poor monitoring, inconsistent tone of voice, slow escalation, review-site pressure, executive social exposure, and digital issues that are likely to spill into mainstream media coverage.",
+      "Typical risks include weak internal social policies and accountability, poor monitoring, inconsistent messaging, slow escalation of issues, poor online reviews, and issues that are likely to create wider media coverage.",
   },
 ];
 
 export default function DigitalMediaPage() {
+  const aside = PAGE_HERO_ASIDES.mediaEditorial;
+
   return (
     <>
       <script
@@ -80,23 +84,115 @@ export default function DigitalMediaPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <PageHero
-        asidePreset="mediaEditorial"
-        eyebrow="Digital media and online reputation"
-        title="Your reputation doesn't stop at the newsroom door."
-        description="We apply senior PR counsel to the digital channels where reputations are increasingly won and lost. You work with experienced advisers, not a social media team."
-        ctaLabel="Book a consultation"
-        ctaHref="/contact"
-        heroImage={{
-          src: "/images/services/digital-media/hero.webp",
-          alt: "Professional workspace with monitor showing blurred analytics and warm desk lamp light",
-        }}
-      />
+      {/* Unified hero: image, title & aside, proof strip */}
+      <section
+        id="hero-section"
+        className="relative overflow-hidden bg-navy border-b border-white/5"
+      >
+        <div
+          className="absolute inset-x-0 top-0 h-[560px] md:h-[720px] pointer-events-none"
+          aria-hidden
+        >
+          <Image
+            src="/images/services/digital-media/hero.webp"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[rgba(26,43,74,0.72)] via-[rgba(26,43,74,0.92)] to-[#1A2B4A]" />
+        </div>
 
-      <PageProofStrip
-        title="Online reputation management is reputation management, with a shorter fuse."
-        items={[...proofItems]}
-      />
+        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-20 md:pt-24 pb-12 md:pb-14">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-12 items-end">
+            <div className="max-w-4xl">
+              <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+                Digital media and online reputation
+              </p>
+              <h1 className="font-heading font-black text-white text-4xl md:text-[56px] leading-[1.02] max-w-4xl">
+                The digital media age puts more pressure on your reputation.
+              </h1>
+              <p className="text-white/75 text-lg leading-relaxed mt-6 max-w-2xl">
+                Your &lsquo;owned media&rsquo;, your digital and social media
+                channels, carries your messages and news. It&apos;s also where
+                reputations are increasingly won and lost.
+              </p>
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mt-8">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs rounded-[4px] px-8 py-4 hover:bg-gold-light transition"
+                >
+                  Book a consultation
+                </Link>
+                <a
+                  href={siteConfig.phone.href}
+                  className="text-brand-gold text-sm font-heading font-black hover:text-gold-light transition-colors"
+                >
+                  Or call {siteConfig.phone.display}
+                </a>
+              </div>
+            </div>
+
+            <div className="border border-white/10 bg-white/[0.03] rounded-lg p-6 backdrop-blur-[2px]">
+              <p className="text-white/35 text-xs mb-4">Direct senior counsel</p>
+              <div className="space-y-4">
+                <div>
+                  <p className="font-heading font-black text-brand-gold text-2xl">
+                    {siteConfig.stats.yearsTrading}
+                  </p>
+                  <p className="text-white/60 text-sm">
+                    Years advising leaders in high-stakes environments
+                  </p>
+                </div>
+                <div className="h-px bg-white/10" />
+                <div>
+                  <p className="font-heading font-black text-white text-lg">
+                    {aside.title}
+                  </p>
+                  <p className="text-white/60 text-sm leading-relaxed mt-1">
+                    {aside.body}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6">
+          <div className="h-px bg-white/10" />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-12 md:pt-14 pb-16 md:pb-20">
+          <div className="max-w-3xl">
+            <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+              Why CRC Public Relations
+            </p>
+            <h2 className="font-heading font-black text-white text-3xl">
+              Online reputation management has a shorter fuse.
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+            {proofItems.map((item) => (
+              <div
+                key={`${item.label}-${item.value}`}
+                className="border border-white/10 bg-white/[0.03] rounded-lg p-6"
+              >
+                <p className="text-brand-gold text-xs font-medium mb-3">
+                  {item.label}
+                </p>
+                <p className="font-heading font-black text-white text-2xl">
+                  {item.value}
+                </p>
+                <p className="text-sm leading-relaxed mt-3 text-white/60">
+                  {item.detail}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Opening section */}
       <section className="bg-white py-16 md:py-24">
@@ -107,7 +203,8 @@ export default function DigitalMediaPage() {
                 Digital reputation reality
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
-                Reputation pressure now breaks online first.
+                Issues that can damage your reputation often break online
+                first.
               </h2>
               <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
                 The channel has changed, but the consequence has not. A digital
@@ -136,10 +233,10 @@ export default function DigitalMediaPage() {
                 <p className="text-charcoal text-[15px] leading-relaxed">
                   When you engage us, you get 25 years of corporate
                   communications and crisis expertise applied to digital
-                  channels, not as a social media agency, but as senior
-                  communications advisers who understand how digital and
-                  traditional media interact, and how to manage your
-                  reputation across both simultaneously.
+                  channels, not as a social media agency, but as communications
+                  advisers who understand how digital and traditional media
+                  interact, and how to manage your reputation across both
+                  simultaneously.
                 </p>
               </div>
             </div>
@@ -152,21 +249,22 @@ export default function DigitalMediaPage() {
               <div className="space-y-4">
                 <div className="border-l-[3px] border-brand-gold pl-4">
                   <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    Signals appear earlier
+                    Instant communication
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
-                    Issues often start as posts, reviews, screenshots, or
-                    comments long before a journalist calls.
+                    Everyone has access, and issues often start as negative
+                    posts, reviews, screenshots, allegations, or comments.
                   </p>
                 </div>
 
                 <div className="border-l-[3px] border-brand-gold pl-4">
                   <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    Response windows collapse
+                    Timing is reduced
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
-                    The time available to assess, align, and answer is measured
-                    in minutes rather than days.
+                    People can share posts or add comments in seconds, reducing
+                    the time available to assess, evaluate, and respond
+                    strategically.
                   </p>
                 </div>
 
@@ -175,8 +273,9 @@ export default function DigitalMediaPage() {
                     Channels interact
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
-                    Digital pressure rarely stays contained. Online attention can
-                    quickly spill into mainstream media and stakeholder concern.
+                    What starts online spreads not only online but can quickly
+                    spill into mainstream media, resulting in stakeholder
+                    concern.
                   </p>
                 </div>
               </div>
@@ -193,31 +292,32 @@ export default function DigitalMediaPage() {
                 Early warning signs
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
-                What digital reputation pressure usually looks like
+                How does it happen?
               </h2>
               <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
-                It rarely begins as a fully formed crisis. More often, it shows
-                up as process weakness, delayed judgment, and no shared view on
-                when digital noise has become a reputational risk.
+                Many organisations don&apos;t safeguard against the
+                vulnerabilities of digital and social media. They don&apos;t
+                have the right controls or policies, and don&apos;t respond
+                effectively.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
                 {[
                   {
-                    title: "Weak governance",
-                    body: "No clear ownership of digital channels, approvals, or reputational decision-making.",
+                    title: "Weak or no policies",
+                    body: "No policies for organisation or personal (staff) social media accounts, or proofing process.",
                   },
                   {
-                    title: "Slow monitoring",
-                    body: "Pressure builds in comments, reviews, and screenshots before anyone senior sees it.",
+                    title: "Slow or no monitoring",
+                    body: "Pressure builds in comments, reviews, and screenshots before anyone realises.",
                   },
                   {
                     title: "Unclear escalation",
-                    body: "Teams do not share a clear threshold for when to respond, hold, or escalate.",
+                    body: "There are no clear procedures or guidelines for when to respond, hold, delete, or escalate.",
                   },
                   {
-                    title: "Late executive visibility",
-                    body: "By the time leadership is briefed, the issue has often been live longer than realised.",
+                    title: "Delayed decisions",
+                    body: "By the time leadership is briefed, the issue has evolved or widened in impact, or there is no response at all.",
                   },
                 ].map((item) => (
                   <div
@@ -267,7 +367,7 @@ export default function DigitalMediaPage() {
         bullets={[
           "Digital reputation and social governance reviews",
           "Online issue and escalation planning",
-          "Senior advice for social and review-driven reputation pressure",
+          "Experienced advice for social and review-driven reputation pressure",
         ]}
         defaultMessage="We would like a digital reputation review and advice on our online communications risks."
         variant="white"
@@ -283,33 +383,34 @@ export default function DigitalMediaPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
             <div>
               <h3 className="font-heading font-black text-navy text-xl mb-3">
-                Online reputation monitoring and management
+                Online and social media management and monitoring
               </h3>
               <p className="text-charcoal text-[15px] leading-relaxed">
-                We establish systematic monitoring of your organisation&apos;s
-                online presence across news media, social platforms, review
-                sites, and forums, tracking sentiment, identifying emerging
-                threats, and providing the early-warning capability that allows
-                you to respond before a digital issue becomes a media story. We
-                also work with organisations on strategies to build positive
-                digital presence that creates resilience against future
-                reputation threats.
+                Communication is two way, speaking and listening. We listen to
+                what others are saying about you and to you, by monitoring your
+                online presence across news media, social platforms, and review
+                sites. By tracking sentiment, we help you identify and respond
+                to issues before they escalate. We can also manage your social
+                media and review responses as part of an overall communications
+                strategy that positions you as a trusted voice while protecting
+                your reputation.
               </p>
             </div>
 
             <div>
               <h3 className="font-heading font-black text-navy text-xl mb-3">
-                Social media strategy and governance
+                Social media strategy and policies
               </h3>
               <p className="text-charcoal text-[15px] leading-relaxed">
-                A social media strategy that is not aligned with your
-                organisation&apos;s communications posture and risk profile is a
-                liability. We help organisations develop social media strategies
-                that reflect their brand authority, define the topics they should
-                and should not comment on, and establish the governance
-                frameworks, including approval workflows, escalation protocols,
-                and crisis response procedures, that protect against the most
-                common social media risks.
+                Social media presents an opportunity to present your messaging
+                to stakeholders in a way that supports your overall objectives,
+                and a risk to your reputation if these platforms are not
+                managed well. We help you develop social media policies that
+                provide your team with clear guidelines around what to comment
+                on, how to respond, when to escalate, and any approval process.
+                We also assist to create policies for staff behaviour on their
+                personal social media accounts that may impact your
+                organisation.
               </p>
             </div>
 
@@ -318,30 +419,30 @@ export default function DigitalMediaPage() {
                 Digital crisis response
               </h3>
               <p className="text-charcoal text-[15px] leading-relaxed">
-                When a social media incident escalates, whether it is a viral
-                negative post, an organised pile-on, or a digital petition, the
-                response framework is the same as for a traditional media
-                crisis: fast, disciplined, and strategically directed. We
-                provide immediate digital crisis counsel, prepare holding
-                statements for digital channels, advise on whether to engage or
-                not engage, and manage the response across platforms in
-                coordination with your communications team.
+                If a social media issue arises, an immediate response and
+                strategy is required to contain the issue and prevent it from
+                escalating and causing damage to your reputation. While the
+                core messaging may be the same as a response to stakeholders
+                across other channels, it must consider the faster-moving and
+                more vitriolic nature of social media. We provide immediate
+                digital crisis counsel, and can manage the response across your
+                platforms in coordination with your communications team.
               </p>
             </div>
 
             <div>
               <h3 className="font-heading font-black text-navy text-xl mb-3">
-                Content strategy and online authority
+                Content strategy
               </h3>
               <p className="text-charcoal text-[15px] leading-relaxed">
-                Organisations with strong online authority, consistent,
-                substantive digital content that establishes them as trusted
-                voices in their sector, are significantly more resilient to
-                reputation attacks than organisations with thin or inconsistent
-                digital presence. We work with organisations to develop content
-                strategies that build this authority over time, including
-                executive thought leadership, corporate commentary, and digital
-                publication planning.
+                Just as mainstream media presents an opportunity to become a
+                trusted voice of authority in your industry, so does your
+                &lsquo;owned media&rsquo;, including blogs, websites, and
+                social media. The more trust earned, the more resilient you
+                are when a negative issue arises. We work with organisations to
+                develop content strategies across all platforms that build this
+                authority over time, positioning you in a positive way and
+                ensuring your communication is heard by all stakeholders.
               </p>
             </div>
           </div>
@@ -357,32 +458,34 @@ export default function DigitalMediaPage() {
                 The difference
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
-                Digital reputation management is still reputation management.
+                Reputation management for the digital age
               </h2>
               <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
-                Platform knowledge matters, but it is not enough. The harder
-                problem is judgment: knowing how trust is won, damaged, and
-                protected when pressure moves quickly and publicly.
+                We live in a digital world and have now entered the world of
+                artificial intelligence. While technology and how we communicate
+                is changing, the need for organisations to build trust with
+                stakeholders, effectively communicate their message, and
+                protect their reputation is not. When issues arise and
+                reputations are impacted, people are hurt.
               </p>
 
               <div className="space-y-6 mt-8">
                 <p className="text-charcoal text-[15px] leading-relaxed">
                   The market is full of digital agencies and social media
                   managers who claim expertise in online reputation management.
-                  Most of them understand platforms. Fewer of them understand
-                  reputation: the strategic, relational, and communicative
-                  disciplines that determine whether an organisation emerges
-                  from a crisis with its trust intact.
+                  Most of them understand platforms. Few understand
+                  communications strategy. Almost none have walked business
+                  leaders and owners through high-profile crises or understand
+                  the impact these have.
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
-                  CRC Public Relations is not a digital agency. We are a corporate
-                  communications and reputation firm that has developed the
-                  digital capability our clients need because the digital
-                  environment now demands it. When you retain CRC Public Relations for
-                  digital reputation management, you are retaining the same
-                  senior-level counsel, the same journalistic judgment, and
-                  the same crisis experience that we bring to our traditional
-                  media work.
+                  CRC Public Relations is not a digital agency. We are a
+                  corporate communications and reputation firm that understands
+                  our clients&apos; need to communicate authentically in the
+                  digital age. When you retain CRC Public Relations for digital
+                  reputation management, you are retaining the same experienced
+                  counsel and gaining the same crisis experience that we bring
+                  to every other part of our work.
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
                   The platforms are different. The expertise required is the
@@ -399,11 +502,11 @@ export default function DigitalMediaPage() {
               <div className="space-y-4">
                 <div className="border-l-[3px] border-brand-gold pl-4">
                   <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    Senior communications counsel
+                    Effective communications counsel
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
-                    Advice that connects digital response to the broader
-                    stakeholder and media position.
+                    Advice that understands the potential and vulnerability of
+                    digital media.
                   </p>
                 </div>
 
@@ -412,8 +515,8 @@ export default function DigitalMediaPage() {
                     Journalistic judgment
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
-                    A realistic view on what becomes a story, what gets ignored,
-                    and what can make matters worse.
+                    A realistic view on what becomes a story, how the media
+                    operates, and what can escalate an issue.
                   </p>
                 </div>
 
@@ -422,8 +525,8 @@ export default function DigitalMediaPage() {
                     Crisis experience
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
-                    Tested response discipline when the issue is moving faster
-                    than internal decision-making.
+                    Proven results across a multitude of issues and industries
+                    when the stakes are high.
                   </p>
                 </div>
               </div>

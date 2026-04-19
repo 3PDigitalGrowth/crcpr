@@ -29,7 +29,7 @@ export const PAGE_HERO_ASIDES: Record<PageHeroAsidePreset, AsideHighlight> = {
   },
   proofLed: {
     title: "Advice clients stay for",
-    body: "Our work is built on judgement, depth, and outcomes that hold under scrutiny—not on volume accounts or rotating contacts.",
+    body: "Our work is built on a passionate belief in our clients, along with judgement, depth, and outcomes that hold under scrutiny.",
   },
   strategicIntegrated: {
     title: "Strategy that holds under pressure",

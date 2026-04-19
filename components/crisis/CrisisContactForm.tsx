@@ -163,7 +163,12 @@ export function CrisisContactForm() {
           </div>
 
           <div>
-            <PortraitPlaceholder size="sm" />
+            <PortraitPlaceholder
+              size="sm"
+              imageSrc="/images/crisis/lyall-mercer-portrait.png"
+              imageAlt="Lyall Mercer, CRC Public Relations co-founder"
+              imageObjectClassName="object-[center_18%]"
+            />
             <p className="mt-6 text-text-body text-[15px] leading-relaxed">
               You will deal directly with Lyall Mercer or a senior CRC Public Relations adviser,
               not an account manager.

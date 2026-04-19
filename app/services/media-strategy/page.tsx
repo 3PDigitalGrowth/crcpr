@@ -84,8 +84,8 @@ export default function MediaStrategyPage() {
       <PageHero
         asidePreset="mediaEditorial"
         eyebrow="Media strategy"
-        title="Sustained media presence doesn't happen by accident."
-        description="We help you build a sustained media presence that positions you as the trusted voice in your sector. You work directly with advisers who understand how media thinks and moves."
+        title="A trusted media presence doesn't happen by accident."
+        description="We help you build a strong public presence that positions you as the trusted voice in your sector. You work directly with advisers who not only understand how the media works, but how media coverage supports, or in some cases doesn't support, your overall objectives."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
         heroImage={{
@@ -112,30 +112,44 @@ export default function MediaStrategyPage() {
                 Media strategy
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
-                Visibility is not the same thing as positioning.
+                You don&apos;t need publicity. You need results.
               </h2>
               <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
-                Strong media strategy is not a sequence of isolated media
-                moments. It is a disciplined decision about what your
-                organisation should be known for, who should hear it, and why
-                journalists should keep coming back to you.
+                An impacting and sustained media presence is a major part of
+                an effective communications strategy as it helps to build
+                trust with those important to your success. It builds
+                credibility, positions you as the expert, and separates you
+                from the crowd.
               </p>
 
               <div className="space-y-6 mt-8">
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  But many confuse media relations with publicity or
+                  promotion. Yet visibility is not the same thing as
+                  positioning, and the saying that &lsquo;all publicity is
+                  good publicity&rsquo; can&apos;t be further from the truth,
+                  as many companies, organisations and people have sadly
+                  discovered.
+                </p>
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  That&apos;s why we partner with you to achieve the right
+                  coverage. We create media strategies that hit the right
+                  market with the right messaging, and achieve maximum
+                  results. And we know how to respond to media enquiries that
+                  won&apos;t benefit you, or worse, could work against you.
+                </p>
+                <p className="text-charcoal text-[15px] leading-relaxed">
+                  Strong media strategy is not a sequence of isolated media
+                  moments. It is a disciplined decision about what your
+                  organisation should be known for, who should hear it, and
+                  why journalists should keep coming back to you.
+                </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
                   We build media strategies that go beyond press releases and
                   reactive enquiry handling. If your current approach only
                   generates coverage when you have something to announce, and
                   measures success by whether that coverage was positive or
                   negative, you are managing media, not leading it.
-                </p>
-                <p className="text-charcoal text-[15px] leading-relaxed">
-                  We work with your leadership team to define what you want to
-                  be known for, identify the journalists and editors who cover
-                  your sector and your issues, and build the sustained
-                  relationships and content discipline that earns credible
-                  coverage over time, not just when you have an announcement
-                  to make.
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
                   We help you move from reactive media management to proactive
@@ -306,6 +320,100 @@ export default function MediaStrategyPage() {
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Our media experience */}
+      <section className="bg-warm-white py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <ImageTextRow
+            imageSrc="/images/services/media-strategy/media-experience.png"
+            imageAlt="Cluster of broadcast microphones on a press conference podium with photojournalists and a television camera operator visible in the warm, softly lit background"
+            imagePosition="right"
+          >
+            <div className="max-w-3xl lg:max-w-none">
+              <p className="text-brand-gold text-xs font-medium mb-4">
+                Our media experience
+              </p>
+              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                The reach and relationships built over 25 years
+              </h2>
+              <p className="text-charcoal text-lg leading-relaxed mb-6">
+                The CRC Public Relations difference is our vast experience
+                dealing with journalists across so many regions and media
+                outlets, from the smallest to the largest. This allows us to
+                assist clients of all sizes in all regions.
+              </p>
+              <p className="text-charcoal text-[15px] leading-relaxed">
+                Our team has coordinated strategic media coverage, publicity,
+                interviews, comments and responses for clients with:
+              </p>
+              <ul className="mt-5 space-y-3">
+                {[
+                  "Media outlets in every city and state across Australia and New Zealand, and most rural and regional centres",
+                  "Media across the Pacific region",
+                  "Media on every continent, including major news outlets across the USA, UK, Europe and Asia",
+                  "International outlets and news wires like CNN, Bloomberg, AFP, and Associated Press",
+                  "Remote and rural Australian media",
+                  "Niche industry publications",
+                  "Major Australian TV, radio and digital publications",
+                  "Podcasts and new media",
+                ].map((item) => (
+                  <li
+                    key={item}
+                    className="flex gap-3 text-charcoal text-[15px] leading-relaxed"
+                  >
+                    <span
+                      className="mt-[9px] size-1.5 shrink-0 rounded-full bg-brand-gold"
+                      aria-hidden
+                    />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </ImageTextRow>
+
+          <aside className="mt-14 rounded-lg bg-navy p-7 md:p-10">
+            <p className="text-brand-gold text-xs font-medium mb-3">
+              International reach
+            </p>
+            <h3 className="font-heading font-black text-white text-xl md:text-2xl leading-tight mb-6">
+              International media conferences hosted in
+            </h3>
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {[
+                {
+                  location: "The Pacific Islands",
+                  detail: "Forum with 18 national leaders and heads of state",
+                },
+                {
+                  location: "Los Angeles",
+                  detail: "Global news story",
+                },
+                {
+                  location: "Baghdad",
+                  detail: "International military coalition",
+                },
+                {
+                  location: "France",
+                  detail: "Global news story",
+                },
+              ].map((item) => (
+                <li
+                  key={item.location}
+                  className="rounded-lg border border-white/10 bg-white/[0.03] p-5"
+                >
+                  <p className="font-sans font-semibold text-white text-base mb-1">
+                    {item.location}
+                  </p>
+                  <p className="text-white/65 text-sm leading-relaxed">
+                    {item.detail}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </aside>
         </div>
       </section>
 

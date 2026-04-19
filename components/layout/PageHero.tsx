@@ -69,11 +69,21 @@ export function PageHero({
             <h1 className="font-heading font-black text-white text-4xl md:text-[56px] leading-[1.02] max-w-4xl">
               {title}
             </h1>
-            {description ? (
-              <p className="text-white/75 text-lg leading-relaxed mt-6 max-w-2xl">
-                {description}
-              </p>
-            ) : null}
+            {description
+              ? description
+                  .split(/\n\n+/)
+                  .filter(Boolean)
+                  .map((paragraph, idx) => (
+                    <p
+                      key={idx}
+                      className={`text-white/75 text-lg leading-relaxed max-w-2xl ${
+                        idx === 0 ? "mt-6" : "mt-4"
+                      }`}
+                    >
+                      {paragraph}
+                    </p>
+                  ))
+              : null}
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mt-8">
               {ctaLabel && ctaHref ? (
                 <Link

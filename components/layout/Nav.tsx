@@ -215,7 +215,7 @@ function ServicesPanel({ onClose }: { onClose: () => void }) {
             &rarr; Reputation assessment
           </Link>
           <Link
-            href="/crisis"
+            href="/services/crisis-communications"
             onClick={onClose}
             className="block px-3 py-1 text-xs text-white/55 hover:text-white/80 transition-colors"
           >
@@ -485,7 +485,7 @@ function MobileDrawer({
       </div>
 
       {[
-        { label: "Crisis", href: "/crisis" },
+        { label: "Crisis", href: "/services/crisis-communications" },
         { label: "Pacific", href: "/pacific" },
         { label: "Media training", href: "/media-training" },
         { label: "Case studies", href: "/case-studies" },
@@ -524,7 +524,7 @@ function MobileDrawer({
 }
 
 const directLinks = [
-  { label: "Crisis", href: "/crisis" },
+  { label: "Crisis", href: "/services/crisis-communications" },
   { label: "Pacific", href: "/pacific" },
   { label: "Media training", href: "/media-training" },
   { label: "About", href: "/about" },

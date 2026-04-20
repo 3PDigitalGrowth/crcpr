@@ -21,7 +21,6 @@ const staticRoutes: { path: string; priority: number; changeFrequency: MetadataR
   { path: "/clients/industry-associations", priority: 0.7, changeFrequency: "monthly" },
   { path: "/clients/schools-faith", priority: 0.7, changeFrequency: "monthly" },
 
-  { path: "/crisis", priority: 0.9, changeFrequency: "monthly" },
   { path: "/pacific", priority: 0.7, changeFrequency: "monthly" },
   { path: "/media-training", priority: 0.7, changeFrequency: "monthly" },
   { path: "/case-studies", priority: 0.7, changeFrequency: "monthly" },

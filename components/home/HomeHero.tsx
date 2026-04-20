@@ -82,7 +82,7 @@ const pillars = [
         <line x1="12" y1="16" x2="12.01" y2="16" />
       </svg>
     ),
-    href: "/crisis",
+    href: "/services/crisis-communications",
   },
 ];
 

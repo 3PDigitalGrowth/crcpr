@@ -78,7 +78,7 @@ const heroPillars = [
     letter: "C",
     word: "Crisis",
     desc: "We assist you to prevent, prepare for and strategically manage crises. 24/7. Confidential. Decisive.",
-    href: "/crisis",
+    href: "/services/crisis-communications",
     icon: (
       <svg
         width="20"

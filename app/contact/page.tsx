@@ -24,7 +24,7 @@ export default function ContactPage({
         title="Let's discuss your needs."
         description="Every conversation with CRC Public Relations begins with listening. Tell us about your situation and we will respond promptly with senior-led advice."
         ctaLabel="Urgent crisis support"
-        ctaHref="/crisis"
+        ctaHref="/services/crisis-communications"
         heroImage={{
           src: "/images/contact/hero.webp",
           alt: "Welcoming entrance to a professional Brisbane office building in late afternoon light",
@@ -139,7 +139,7 @@ export default function ContactPage({
         title="If the matter is sensitive, start the conversation now."
         body="We work best when leadership engages early enough for the response to be shaped properly. If the issue is already active, call first. If it is emerging, send a message and we will respond promptly."
         primaryLabel="Urgent crisis support"
-        primaryHref="/crisis"
+        primaryHref="/services/crisis-communications"
       />
     </>
   );

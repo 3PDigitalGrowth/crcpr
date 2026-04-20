@@ -496,14 +496,6 @@ export default function CrisisCommunicationsPage() {
               >
                 Call 1300 182 186 now
               </a>
-              <p className="text-center mt-4">
-                <Link
-                  href="/crisis"
-                  className="text-teal text-sm font-medium hover:opacity-80 transition underline"
-                >
-                  Or visit our dedicated crisis response page
-                </Link>
-              </p>
             </div>
           </div>
         </div>

@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import Link from "next/link";
 import { siteConfig } from "@/config/site";
-import { PageHero } from "@/components/layout/PageHero";
 import { CapabilityDownload } from "@/components/shared/CapabilityDownload";
 import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
 import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
-import { PageProofStrip } from "@/components/shared/PageProofStrip";
 import { PortraitPlaceholder } from "@/components/shared/PortraitPlaceholder";
+import { PAGE_HERO_ASIDES } from "@/config/pageHeroAsides";
 
 export const metadata: Metadata = {
   title: "About CRC Public Relations",
@@ -31,7 +32,7 @@ const proofItems = [
     label: "Operating focus",
     value: "High-stakes only",
     detail:
-      "The firm is built for corporate reputation, issues, crisis, stakeholder pressure, and sensitive advisory work.",
+      "Purpose-built for corporate reputation, issues, crisis, stakeholder pressure, and sensitive advisory work.",
   },
   {
     label: "Regional reach",
@@ -70,31 +71,126 @@ const teamMembers = [
 ] as const;
 
 export default function AboutPage() {
+  const aside = PAGE_HERO_ASIDES.editorialInsights;
+
   return (
     <>
-      <PageHero
-        asidePreset="editorialInsights"
-        eyebrow="About us"
-        title="About CRC Public Relations"
-        description="Boutique corporate PR. 25 years of trusted counsel for CEOs, directors, and senior executives across Australia, the Pacific, and internationally."
-        ctaLabel="Book a consultation"
-        ctaHref="/contact"
-        heroImage={{
-          src: "/images/about/hero.webp",
-          alt: "Brisbane CBD and Story Bridge at golden hour from riverside with warm reflections",
-        }}
-      />
+      {/* Unified hero: image, title & aside, proof strip */}
+      <section
+        id="hero-section"
+        className="relative overflow-hidden bg-navy border-b border-white/5"
+      >
+        <div
+          className="absolute inset-x-0 top-0 h-[560px] md:h-[720px] pointer-events-none"
+          aria-hidden
+        >
+          <Image
+            src="/images/about/hero.webp"
+            alt=""
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[rgba(26,43,74,0.72)] via-[rgba(26,43,74,0.92)] to-[#1A2B4A]" />
+        </div>
 
-      <PageProofStrip
-        title="CRC Public Relations exists for leaders who need judgement, not volume."
-        items={[...proofItems]}
-      />
+        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-20 md:pt-24 pb-12 md:pb-14">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-12 items-end">
+            <div className="max-w-4xl">
+              <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+                About us
+              </p>
+              <h1 className="font-heading font-black text-white text-4xl md:text-[56px] leading-[1.02] max-w-4xl">
+                About CRC Public Relations
+              </h1>
+              <p className="text-white/75 text-lg leading-relaxed mt-6 max-w-2xl">
+                Boutique corporate PR. 25 years of trusted counsel for CEOs,
+                directors, and senior executives across Australia, the Pacific,
+                and internationally.
+              </p>
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mt-8">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs rounded-[4px] px-8 py-4 hover:bg-gold-light transition"
+                >
+                  Book a consultation
+                </Link>
+                <a
+                  href={siteConfig.phone.href}
+                  className="text-brand-gold text-sm font-heading font-black hover:text-gold-light transition-colors"
+                >
+                  Or call {siteConfig.phone.display}
+                </a>
+              </div>
+            </div>
+
+            <div className="border border-white/10 bg-white/[0.03] rounded-lg p-6 backdrop-blur-[2px]">
+              <p className="text-white/35 text-xs mb-4">Direct senior counsel</p>
+              <div className="space-y-4">
+                <div>
+                  <p className="font-heading font-black text-brand-gold text-2xl">
+                    {siteConfig.stats.yearsTrading}
+                  </p>
+                  <p className="text-white/60 text-sm">
+                    Years advising leaders in high-stakes environments
+                  </p>
+                </div>
+                <div className="h-px bg-white/10" />
+                <div>
+                  <p className="font-heading font-black text-white text-lg">
+                    {aside.title}
+                  </p>
+                  <p className="text-white/60 text-sm leading-relaxed mt-1">
+                    {aside.body}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6">
+          <div className="h-px bg-white/10" />
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 pt-12 md:pt-14 pb-16 md:pb-20">
+          <div className="max-w-3xl">
+            <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+              Why CRC Public Relations
+            </p>
+            <h2 className="font-heading font-black text-white text-3xl">
+              CRC Public Relations exists for leaders who need judgement, not
+              volume.
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+            {proofItems.map((item) => (
+              <div
+                key={`${item.label}-${item.value}`}
+                className="border border-white/10 bg-white/[0.03] rounded-lg p-6"
+              >
+                <p className="text-brand-gold text-xs font-medium mb-3">
+                  {item.label}
+                </p>
+                <p className="font-heading font-black text-white text-2xl">
+                  {item.value}
+                </p>
+                <p className="text-sm leading-relaxed mt-3 text-white/60">
+                  {item.detail}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className="bg-white py-24">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
             <h2 className="font-heading font-black text-navy text-3xl">
-              The firm
+              How we work
             </h2>
             <p className="text-charcoal-mid text-[15px] leading-relaxed mt-6">
               CRC Public Relations was founded on a simple principle: that
@@ -142,10 +238,10 @@ export default function AboutPage() {
       </section>
 
       <InlineEnquirySection
-        title="Need to speak with the firm directly?"
-        body="CRC Public Relations exists for organisations that want senior communications counsel from the first conversation. If your situation is sensitive or high-stakes, get in touch."
+        title="Start a direct conversation"
+        body="If your situation is sensitive or high-stakes, the first step is a short, confidential conversation. You will speak with an experienced adviser, not an account team."
         bullets={[
-          "Direct access to experienced senior advisers",
+          "Direct access to experienced advisers",
           "Support across corporate, crisis, reputation, and stakeholder matters",
           "Confidential review of the situation before recommending a next step",
         ]}
@@ -225,8 +321,8 @@ export default function AboutPage() {
       </div>
 
       <PageClosingCTA
-        title="Need to speak with the firm directly?"
-        body="We work with organisations that want senior communications counsel from the first conversation. If your situation is sensitive or high-stakes, get in touch."
+        title="Considering engaging us?"
+        body="If you have read this page and think CRC Public Relations may be the right partner for your organisation, the next step is a direct conversation. We will listen first, then come back with a clear view of whether we are the right fit and what that engagement could look like."
       />
     </>
   );

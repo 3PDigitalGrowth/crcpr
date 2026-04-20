@@ -19,7 +19,7 @@ const quickLinks = [
   { label: "About", href: "/about" },
   { label: "Lyall Mercer", href: "/about/lyall-mercer" },
   { label: "Media training", href: "/media-training" },
-  { label: "Crisis (24/7)", href: "/crisis" },
+  { label: "Crisis (24/7)", href: "/services/crisis-communications" },
   { label: "Insights", href: "/insights" },
   { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },

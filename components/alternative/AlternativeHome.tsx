@@ -245,7 +245,7 @@ function AlternativeHero() {
                     Whatever your communications objectives, you need experienced
                     counsel you can trust. CRC Public Relations is a boutique
                     corporate PR firm where every client works directly with a
-                    senior adviser.
+                    principal adviser.
                   </p>
                   <p className="text-white text-base lg:text-lg leading-relaxed w-full">
                     We partner with CEOs, executives, and leaders within
@@ -285,7 +285,7 @@ function AlternativeHero() {
               <AnimateIn delay={600}>
                 <div className="mt-6 border-t border-white/10 pt-4">
                   <p className="font-sans font-medium text-white text-[11px]">
-                    With 25+ years&apos; experience, expert comments from our senior advisers have been featured in:
+                    Expert comments from our advisers have been featured in:
                   </p>
                   <div className="flex flex-wrap gap-5 mt-2">
                     {siteConfig.lyall.mediaLinks.map((link, i) => (
@@ -438,7 +438,7 @@ function AlternativePracticeAreas() {
           <div className="mt-20 md:mt-28 mb-4 max-w-4xl mx-auto text-center">
             <div className="w-12 h-[2px] bg-brand-gold mx-auto mb-8" />
             <blockquote className="font-heading font-black text-navy text-xl md:text-[28px] leading-snug tracking-tight">
-              &ldquo;As a boutique PR firm, you deal directly with senior
+              &ldquo;As a boutique PR firm, you deal directly with experienced
               advisers who take a genuine, long-term interest in your
               organisation. It&rsquo;s a partnership, and it makes a huge
               difference to outcomes.&rdquo;
@@ -654,8 +654,8 @@ function AlternativeAbout() {
                   His clients include national and international companies,
                   governments, industry associations, not-for-profit
                   organisations, politicians, heads of state, celebrities, and
-                  sporting figures; and he has worked with clients and media on
-                  every continent, coordinating communications strategies and
+                  sporting figures; and he has supported clients and media
+                  internationally, coordinating communications strategies and
                   walking clients through issues that have generated intense
                   national and global media exposure.
                 </p>

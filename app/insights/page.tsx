@@ -226,7 +226,7 @@ export default function InsightsPage() {
 
       <PageClosingCTA
         title="Need advice on a live issue, a crisis, or a reputation question?"
-        body="If an article has raised a question about your organisation's exposure, the right next step is usually a confidential conversation with a senior adviser."
+        body="If an article has raised a question about your organisation's exposure, the right next step is usually a confidential conversation with an experienced adviser."
       />
     </>
   );

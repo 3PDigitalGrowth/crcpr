@@ -9,8 +9,8 @@ import { PortraitPlaceholder } from "@/components/shared/PortraitPlaceholder";
 import { MediaOutletLogoLink } from "@/components/shared/MediaOutletLogoLink";
 
 const stats = [
-  { value: siteConfig.stats.yearsTrading, label: "Years experience" },
-  { value: siteConfig.stats.continents, label: "Global reach" },
+  { value: siteConfig.stats.yearsTrading, label: "Years serving clients" },
+  { value: siteConfig.stats.continents, label: "Supporting clients around the world" },
   { value: siteConfig.stats.clientRetention, label: "Client satisfaction" },
   { value: siteConfig.stats.professionsTrained, label: "Professionals trained" },
 ];
@@ -178,7 +178,7 @@ export function HomeHero() {
                 Relations is a boutique corporate PR firm trusted by companies,
                 governments, associations, and organisations across Australia,
                 the Pacific, and internationally, when reputation, issues, and
-                crises demand experienced, senior advice.
+                crises demand experienced advice.
               </p>
             </AnimateIn>
 

@@ -25,7 +25,7 @@ export function LeadMagnetBanner({
   title,
   description,
   highlights = [
-    "Built from senior advisory work",
+    "Built from specialist advisory work",
     "Immediate next-step guidance",
     "Delivered directly to your inbox",
   ],

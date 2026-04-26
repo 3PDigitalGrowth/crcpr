@@ -29,7 +29,7 @@ const sectors = [
   },
   {
     title: "Companies & family businesses",
-    body: "Direct, senior-level communications counsel and reputation management for owners, directors, and executives of companies, family businesses, and professional services firms.",
+    body: "Direct communications counsel and reputation management for owners, directors, and executives of companies, family businesses, and professional services firms.",
     href: "/clients/corporate",
     magnetKey: "crisisPlanTemplate" as const,
   },
@@ -50,7 +50,7 @@ const proofItems = [
   },
   {
     label: "Leadership access",
-    value: "Senior-only",
+    value: "Principal access",
     detail:
       "Clients work directly with experienced advisers who understand high-stakes governance, media, and stakeholder pressure.",
   },
@@ -71,7 +71,7 @@ const faqs = [
   {
     question: "Do you adapt your advice by sector, or is it the same service everywhere?",
     answer:
-      "The advisory model stays consistent, direct senior counsel, but the stakeholder logic, proof points, protocol, and communication sequence change materially by sector. That is why sector expertise matters.",
+      "The advisory model stays consistent: direct counsel from experienced advisers. The stakeholder logic, proof points, protocol, and communication sequence change materially by sector. That is why sector expertise matters.",
   },
   {
     question: "What if our situation crosses more than one sector?",
@@ -87,7 +87,7 @@ export default function ClientsPage() {
         asidePreset="clientsBreadth"
         eyebrow="Sector expertise"
         title="Deep expertise across every sector."
-        description="We work directly with CEOs, directors, and senior executives who recognise the value of experienced counsel and treat reputation as a strategic asset."
+        description="We work directly with CEOs, directors, and executives who recognise the value of experienced counsel and treat reputation as a strategic asset."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
         heroImage={{
@@ -208,7 +208,7 @@ export default function ClientsPage() {
         body="If your situation is shaped by sector-specific governance, stakeholder, or community pressures, we can help you work out the right starting point and the right communication approach."
         bullets={[
           "Sector-aware message and stakeholder strategy",
-          "Direct senior counsel for high-stakes matters",
+          "Direct counsel for high-stakes matters",
           "Help identifying the right service and first move",
         ]}
         defaultMessage="We would like sector-specific communications advice."
@@ -229,7 +229,7 @@ export default function ClientsPage() {
 
       <PageClosingCTA
         title="Ready to discuss your communications needs?"
-        body="If you are working through a sector-specific issue, an emerging reputation risk, or a pressure point that needs senior judgment, we can help you work out the right next step."
+        body="If you are working through a sector-specific issue, an emerging reputation risk, or a pressure point that needs experienced judgment, we can help you work out the right next step."
         secondaryLabel="Explore My PR Partner"
         secondaryHref={siteConfig.myPrPartnerUrl}
         secondaryDescription="CRC Public Relations' training and support platform for communications teams, practitioners, and leaders who want practical guidance between major advisory engagements."

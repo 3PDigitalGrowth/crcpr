@@ -69,7 +69,7 @@ export default function GovernmentClientsPage() {
         asidePreset="clientsBreadth"
         eyebrow="Government"
         title="Government communications and stakeholder engagement"
-        description="We work directly with department heads, agency leaders, and senior public servants who need experienced communications counsel that understands the unique pressures of government."
+        description="We work directly with department heads, agency leaders, and public sector leaders who need experienced communications counsel that understands the unique pressures of government."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
         heroImage={{
@@ -172,7 +172,7 @@ export default function GovernmentClientsPage() {
       />
 
       <PageClosingCTA
-        title="Discuss your government communications needs with a senior adviser."
+        title="Discuss your government communications needs with an experienced adviser."
         body="We work with departments, agencies, and public sector organisations that need disciplined communication in environments where public trust and scrutiny matter."
       />
     </>

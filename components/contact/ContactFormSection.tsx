@@ -238,18 +238,10 @@ export function ContactFormSection({ source }: ContactFormSectionProps) {
                 <span className="text-charcoal">{addressLine}</span>
               </li>
             </ul>
-            <div className="rounded-lg overflow-hidden border border-brand-border h-64 w-full mt-6">
-              <iframe
-                src="https://maps.google.com/maps?q=320+Adelaide+Street,+Brisbane+QLD+4000,+Australia&output=embed"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="CRC Public Relations, 320 Adelaide Street Brisbane"
-              />
-            </div>
+            <p className="mt-6 rounded-lg border border-brand-border bg-white p-5 text-sm leading-relaxed text-charcoal-mid shadow-sm shadow-navy/5">
+              We operate Australia wide in every state, New Zealand and the
+              Pacific region.
+            </p>
           </div>
         </div>
       </div>

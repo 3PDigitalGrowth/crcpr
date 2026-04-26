@@ -38,7 +38,7 @@ export function HomePillars() {
               <p className="text-charcoal-mid text-base leading-relaxed mt-4 max-w-lg">
                 Strategic counsel for internal and external communications.
                 Stakeholder engagement, media relations, brand positioning, and
-                corporate messaging, handled with the precision that senior
+                corporate messaging, handled with the precision that key
                 stakeholders expect.
               </p>
               <Link
@@ -113,7 +113,7 @@ export function HomePillars() {
             <div className="w-12 h-[2px] bg-brand-gold mx-auto mb-8" />
             <blockquote className="font-heading font-black text-navy text-xl md:text-[28px] leading-snug tracking-tight">
               &ldquo;Being boutique and personal means you deal directly with
-              senior advisers who take a genuine, long-term interest in your
+              experienced advisers who take a genuine, long-term interest in your
               organisation.&rdquo;
             </blockquote>
             <p className="font-sans font-medium text-text-secondary text-sm mt-6 tracking-wide">

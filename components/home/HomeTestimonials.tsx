@@ -6,7 +6,7 @@ const testimonials = [
   {
     quote:
       "CRC Public Relations has developed a crisis communications plan for Christian schools and has assisted many of our member schools across Australia to effectively communicate when issues have arisen.",
-    name: "Vanessa",
+    name: "christian-schools-sector",
     title: "Executive Officer, Christian schools sector",
   },
   {

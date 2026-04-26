@@ -48,12 +48,13 @@ export function HomeAbout() {
                   communications and crisis advice unlike any other.
                 </p>
                 <p className="text-text-body text-base leading-relaxed">
-                  Over the past 25 years, Lyall has built a reputation across
-                  Australasia as a leader in corporate public relations, reputation
-                  and issues management, and crisis communications. He has advised
-                  national and international companies, governments, senior
-                  executives, politicians, celebrities, and sporting figures, and
-                  has worked with clients and media on every continent.
+                  Lyall has built a reputation across Australasia as a leader in
+                  corporate public relations, reputation and issues management,
+                  and crisis communications. He has advised national and
+                  international companies, governments, executives, politicians,
+                  celebrities, and sporting figures, and has worked with
+                  clients and media across Australia, the Pacific, North
+                  America, Europe, Asia, and other international markets.
                 </p>
               </div>
             </AnimateIn>

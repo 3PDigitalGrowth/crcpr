@@ -231,6 +231,27 @@ const jobs = [
     prompt: `South Pacific harbour scene outrigger canoes tied near simple wharf turquoise water lush green volcanic hills background warm humid light traditional and modern together. ${STYLE}`,
   },
   {
+    rel: "pacific/case-forum.webp",
+    w: 1200,
+    h: 800,
+    seed: 521,
+    prompt: `Pacific Islands Forum style conference venue exterior at golden hour, multiple flagpoles bearing different Pacific national flags in warm light, modern conference hall with traditional carved roofline accents, palm trees softly out of focus in background, formal diplomatic atmosphere, no people. ${STYLE}`,
+  },
+  {
+    rel: "pacific/case-government.webp",
+    w: 1200,
+    h: 800,
+    seed: 522,
+    prompt: `Pacific national parliament or government house, stately modest tropical architecture with white walls and red metal roof, single national flag on a flagpole catching late afternoon warm light, palm trees and lush garden in foreground, sense of civic authority and sovereignty, no people. ${STYLE}`,
+  },
+  {
+    rel: "pacific/case-company.webp",
+    w: 1200,
+    h: 800,
+    seed: 523,
+    prompt: `Working Pacific port at golden hour, container cranes and stacked colourful shipping containers, calm turquoise harbour water, lush green volcanic ridge in background, industrial logistics scene with warm cinematic light, no people. ${STYLE}`,
+  },
+  {
     rel: "media-training/hero.webp",
     w: 1920,
     h: 1080,

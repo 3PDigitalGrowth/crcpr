@@ -92,10 +92,10 @@ function CTAColumn() {
     >
       <ColumnHeader>Get in touch</ColumnHeader>
       <p className="text-sm font-heading font-black text-white mb-2">
-        Talk to a senior adviser
+        Talk to an experienced adviser
       </p>
       <p className="text-xs text-white/40 leading-relaxed">
-        You reach senior advisers directly. Sensitive matters are handled with
+        You reach our advisers directly. Sensitive matters are handled with
         professional discretion.
       </p>
       <div className="flex-1" />
@@ -247,7 +247,7 @@ function ClientsPanel({
             href="/clients/corporate"
             icon={<Briefcase className="w-full h-full" />}
             title="Companies & family businesses"
-            desc="Direct counsel for owners, directors, and senior executives"
+            desc="Direct counsel for owners, directors, and executives"
             onClick={onClose}
           />
           <MegaItem

@@ -8,7 +8,7 @@ import { PageProofStrip } from "@/components/shared/PageProofStrip";
 export const metadata: Metadata = {
   title: "Contact CRC Public Relations",
   description:
-    "Contact CRC Public Relations for senior communications counsel: corporate communications, reputation management, crisis response, and media training.",
+    "Contact CRC Public Relations for specialist communications counsel: corporate communications, reputation management, crisis response, and media training.",
 };
 
 export default function ContactPage({
@@ -22,7 +22,7 @@ export default function ContactPage({
         asidePreset="practicalNextStep"
         eyebrow="Contact us"
         title="Let's discuss your needs."
-        description="Every conversation with CRC Public Relations begins with listening. Tell us about your situation and we will respond promptly with senior-led advice."
+        description="Every conversation with CRC Public Relations begins with listening. Tell us about your situation and we will respond promptly."
         ctaLabel="Urgent crisis support"
         ctaHref="/services/crisis-communications"
         heroImage={{
@@ -32,25 +32,26 @@ export default function ContactPage({
       />
 
       <PageProofStrip
-        title="When you contact CRC Public Relations, you are beginning a direct conversation with senior advisers."
+        title="Why CRC Public Relations"
+        body="When you contact CRC Public Relations, we will carefully consider your situation and unique needs with a commitment of confidentiality."
         items={[
           {
             label: "How we work",
             value: "Senior-led",
             detail:
-              "Enquiries are shaped by experienced advisers—clear judgement, coordinated messaging, and discretion where it matters.",
+              "Your enquiry will be passed to an experienced adviser, who will consider your request and respond at the first available opportunity.",
           },
           {
             label: "Response model",
             value: "Senior review",
             detail:
-              "Enquiries are reviewed by experienced advisers rather than being routed through a generic sales process.",
+              "We will respond directly by email or phone, depending on your enquiry.",
           },
           {
             label: "Urgent matters",
             value: "Call first",
             detail:
-              "If the issue is already active, phone is the right channel. The form is best for general and planned advisory matters.",
+              "If the issue is already active, phone is the best channel. The form is best for general and planned advisory matters.",
           },
         ]}
         variant="off-white"
@@ -67,25 +68,25 @@ export default function ContactPage({
                 Most enquiries fall into one of three categories.
               </h2>
               <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
-                A live issue that needs immediate senior advice, a planned
-                matter that requires stronger message and stakeholder
-                discipline, or a leadership team that wants a clearer view of
-                its communication risks before pressure arrives.
+                A discussion about a specific communications need or an overall
+                media or public relations strategy; a decision to plan for
+                future issues or conduct crisis planning; or a live issue that
+                needs immediate advice.
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-10">
                 {[
                   {
+                    title: "Strategy",
+                    body: "You'd like an effective communications strategy, to elevate your voice, or protect your reputation.",
+                  },
+                  {
+                    title: "Planning",
+                    body: "You are (very wisely) looking ahead and want to be ready for any issue or crises that arise.",
+                  },
+                  {
                     title: "Live issue",
-                    body: "A matter already moving that needs immediate senior advice and rapid judgement.",
-                  },
-                  {
-                    title: "Planned matter",
-                    body: "An announcement, issue, or stakeholder moment that needs stronger communication discipline.",
-                  },
-                  {
-                    title: "Preparedness gap",
-                    body: "A leadership team that wants a clearer view of its communication risks before pressure arrives.",
+                    body: "A matter already moving that needs immediate advice and rapid action.",
                   },
                 ].map((item) => (
                   <div
@@ -110,7 +111,7 @@ export default function ContactPage({
               <div className="space-y-4">
                 <div className="border-l-[3px] border-brand-gold pl-4">
                   <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    Use the form for planned matters
+                    Use the form for strategy or planning matters
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
                     The contact form is best for planned, non-urgent enquiries.

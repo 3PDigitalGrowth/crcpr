@@ -74,7 +74,7 @@ export function HomeClients() {
                 Our clients range from national and international companies and Federal Government
                 departments to independent schools, faith-based organisations, industry
                 associations, and Pacific governments. What they share is a need for
-                experienced, senior advice when the stakes are highest.
+                experienced advice when the stakes are highest.
               </p>
               <p className="text-charcoal-mid text-base leading-relaxed mt-4 max-w-xl">
                 We stand with our clients 24/7 - proactively helping them grow,
@@ -88,7 +88,7 @@ export function HomeClients() {
                     Work with CRC Public Relations
                   </p>
                   <p className="font-heading font-black text-white text-lg leading-snug">
-                    Start a confidential conversation with a senior adviser.
+                    Start a confidential conversation with an experienced adviser.
                   </p>
                   <p className="text-white/65 text-sm leading-relaxed mt-3">
                     Tell us about the issue, sector pressure, or communications

@@ -70,7 +70,7 @@ export default function CaseStudiesPage() {
               </h2>
               <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
                 We do not publicise client work casually. The examples below are
-                here because senior communications counsel should still be judged
+                here because communications counsel should still be judged
                 by what changed—not by visibility alone.
               </p>
 
@@ -148,11 +148,11 @@ export default function CaseStudiesPage() {
       </section>
 
       <InlineEnquirySection
-        title="Need senior counsel on a matter where the outcome genuinely matters?"
+        title="Need counsel on a matter where the outcome genuinely matters?"
         body="If you are navigating a policy fight, a sensitive education issue, a crisis, or a stakeholder engagement challenge with real consequences, we can help shape the result."
         bullets={[
           "Strategic communication for high-stakes matters",
-          "Senior advice before or during scrutiny",
+          "Experienced advice before or during scrutiny",
           "Clear next-step recommendations from experienced advisers",
         ]}
         defaultMessage="We would like to discuss a high-stakes communications matter with CRC Public Relations."

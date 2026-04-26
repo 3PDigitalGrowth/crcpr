@@ -106,12 +106,12 @@ const faqs = [
   {
     question: "Do you provide standalone project support as well as ongoing counsel?",
     answer:
-      "Yes. Some clients need support around a single matter, announcement, or review. Others want an ongoing senior advisory relationship. The structure depends on the situation, the pace, and the level of internal capability.",
+      "Yes. Some clients need support around a single matter, announcement, or review. Others want an ongoing advisory relationship. The structure depends on the situation, the pace, and the level of internal capability.",
   },
   {
-    question: "Are all services led by senior advisers?",
+    question: "Are all services led by experienced advisers?",
     answer:
-      "Yes. CRC Public Relations is structured around direct senior counsel. There is no separate junior account model for complex or sensitive work.",
+      "Yes. CRC Public Relations is structured around direct counsel from experienced advisers. There is no separate junior account model for complex or sensitive work.",
   },
 ];
 
@@ -122,7 +122,7 @@ export default function ServicesPage() {
         asidePreset="strategicIntegrated"
         eyebrow="Full service offering"
         title="Corporate communications and PR services."
-        description="We provide senior-level counsel across the full spectrum of corporate communications. Every engagement is led by experienced advisers who work directly with you, not through an account management layer."
+        description="We provide specialist counsel across the full spectrum of corporate communications. Every engagement is led by experienced advisers who work directly with you, not through an account management layer."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
         heroImage={{
@@ -213,7 +213,7 @@ export default function ServicesPage() {
         title="Not sure which service is the right starting point?"
         body="That is common. Many clients come to CRC Public Relations with a situation rather than a neatly labelled service category. We can help identify the right starting point and the right next step."
         bullets={[
-          "Sensitive matters needing senior communications judgement",
+          "Sensitive matters needing experienced communications judgement",
           "Preparation before a major announcement or issue escalates",
           "Reputation, media, crisis, and stakeholder communication advice",
         ]}

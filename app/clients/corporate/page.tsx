@@ -70,7 +70,7 @@ export default function CorporateClientsPage() {
         asidePreset="clientsBreadth"
         eyebrow="Corporate"
         title="Corporate communications and reputation counsel"
-        description="Direct, personal counsel for owners, directors, and senior executives. You work with experienced senior advisers who understand board scrutiny, market sensitivity, and stakeholder risk."
+        description="Direct, personal counsel for owners, directors, and executives. You work with experienced advisers who understand board scrutiny, market sensitivity, and stakeholder risk."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
         heroImage={{
@@ -99,15 +99,15 @@ export default function CorporateClientsPage() {
                 Reputation is shaped where strategy, behaviour, and narrative meet.
               </h2>
               <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
-                We work with owners, managing directors, and senior executives
-                who need communications counsel that understands regulatory
-                exposure, market expectations, and the pace at which issues
-                move from internal concern to public headline.
+                We work with owners, managing directors, and executives who need
+                communications counsel that understands regulatory exposure,
+                market expectations, and the pace at which issues move from
+                internal concern to public headline.
               </p>
 
               <div className="space-y-6 mt-8">
                 <p className="text-charcoal-mid text-[15px] leading-relaxed">
-                  You deal directly with experienced senior advisers who align
+                  You deal directly with experienced advisers who align
                   messaging with governance, protect valuation during
                   turbulence, and prepare your leadership team for scrutiny
                   from investors, analysts, and media. We bring journalistic
@@ -150,7 +150,7 @@ export default function CorporateClientsPage() {
 
       <InlineEnquirySection
         eyebrow="Typical situations"
-        title="Need senior corporate communications advice?"
+        title="Need corporate communications advice?"
         body="We are often engaged when the stakes are commercial as well as reputational: a leadership transition, a sensitive market-facing announcement, investor or stakeholder concern building behind the scenes, or a legal and communications issue colliding at the same time. In those environments, speed matters, but so does judgement."
         bullets={[
           "Leadership transitions and board-facing moments",
@@ -172,7 +172,7 @@ export default function CorporateClientsPage() {
       />
 
       <PageClosingCTA
-        title="Discuss your corporate communications needs with a senior adviser."
+        title="Discuss your corporate communications needs with an experienced adviser."
         body="We work with companies, family businesses, and professional services firms that need judgement, discretion, and direct access when the stakes are high."
       />
     </>

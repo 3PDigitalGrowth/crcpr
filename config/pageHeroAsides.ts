@@ -1,5 +1,5 @@
 /**
- * Right-rail second block copy for PageHero (below years-trading stat).
+ * Right-rail second block copy for PageHero (below firm tenure stat).
  * Variants avoid repeating “confidential by default” as a sitewide differentiator;
  * crisis-oriented pages use `crisisTrust` where discretion still matters.
  */
@@ -24,7 +24,7 @@ export type AsideHighlight = {
 
 export const PAGE_HERO_ASIDES: Record<PageHeroAsidePreset, AsideHighlight> = {
   seniorAccess: {
-    title: "Direct to senior advisers",
+    title: "Direct to experienced advisers",
     body: "Every engagement is led by experienced principals—you are not handed off to junior staff or a generic account team.",
   },
   proofLed: {
@@ -45,11 +45,11 @@ export const PAGE_HERO_ASIDES: Record<PageHeroAsidePreset, AsideHighlight> = {
   },
   editorialInsights: {
     title: "Clear thinking, applied",
-    body: "Perspective grounded in decades advising boards and executives—practical counsel, not generic industry filler.",
+    body: "Perspective grounded in our team's experience advising boards and executives—practical counsel, not generic industry filler.",
   },
   practicalNextStep: {
     title: "A direct response",
-    body: "Tell us what you are navigating. A senior adviser will come back with clear next steps—not a generic pitch.",
+    body: "Tell us what you are navigating. An experienced adviser will come back with clear next steps—not a generic pitch.",
   },
   anonymisedOutcomes: {
     title: "Outcomes without names",
@@ -61,7 +61,7 @@ export const PAGE_HERO_ASIDES: Record<PageHeroAsidePreset, AsideHighlight> = {
   },
   pacificRegional: {
     title: "Regional judgement",
-    body: "Pacific contexts demand cross-cultural fluency and careful stakeholder pacing alongside disciplined communications.",
+    body: "Pacific contexts demand cultural understanding, knowledge of the region and its media, and the ability to connect with key stakeholders.",
   },
   legalNeutral: {
     title: "Professional standards",
@@ -69,6 +69,6 @@ export const PAGE_HERO_ASIDES: Record<PageHeroAsidePreset, AsideHighlight> = {
   },
   mediaTraining: {
     title: "Broadcast-ready preparation",
-    body: "Training draws on senior journalists and coaches who replicate real interviews—camera, print, and radio.",
+    body: "Training draws on experienced journalists and coaches who replicate real interviews—camera, print, and radio.",
   },
 };

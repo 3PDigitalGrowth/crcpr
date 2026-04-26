@@ -43,9 +43,9 @@ const sectorLinks = [
 const proofItems = [
   {
     label: "Board confidence",
-    value: "Senior-led",
+    value: "Principal-led",
     detail:
-      "Every engagement is led by a senior adviser who understands board scrutiny, market sensitivity, and stakeholder risk.",
+      "Every engagement is led by an experienced adviser who understands board scrutiny, market sensitivity, and stakeholder risk.",
   },
   {
     label: "Communication discipline",
@@ -96,7 +96,7 @@ export default function CorporateCommunicationsPage() {
         asidePreset="strategicIntegrated"
         eyebrow="Corporate communications"
         title="Corporate communications that build trust and protect value."
-        description="As partners in your success, we work directly with your leadership team to ensure every message, whether to important stakeholders – internal and external – or media, is precise, credible, and effective. You deal with experienced senior advisers, not account managers."
+        description="As partners in your success, we work directly with your leadership team to ensure every message, whether to important stakeholders – internal and external – or media, is precise, credible, and effective. You deal with experienced advisers, not account managers."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
         heroImage={{
@@ -174,7 +174,7 @@ export default function CorporateCommunicationsPage() {
                   </div>
                   <div className="border-l-[3px] border-brand-gold pl-4">
                     <p className="font-sans font-semibold text-navy text-sm mb-1">
-                      Senior oversight
+                      Expert oversight
                     </p>
                     <p className="text-charcoal-mid text-sm leading-relaxed">
                       Important communications are shaped with judgement, not
@@ -251,7 +251,7 @@ export default function CorporateCommunicationsPage() {
       </section>
 
       <InlineEnquirySection
-        title="Need senior communications counsel on a sensitive matter?"
+        title="Need communications counsel on a sensitive matter?"
         body="Use this form if you are preparing a significant announcement, managing a board or stakeholder issue, or want an experienced external adviser to review your communications posture before the pressure arrives."
         bullets={[
           "Executive and board communication support",
@@ -531,7 +531,7 @@ export default function CorporateCommunicationsPage() {
 
       <PageClosingCTA
         title="Ready to build a communications strategy that holds up under pressure?"
-        body="Whether you are preparing for a major announcement, navigating a sensitive stakeholder situation, or building long-term communications capability, CRC Public Relations provides direct access to senior counsel from the first conversation."
+        body="Whether you are preparing for a major announcement, navigating a sensitive stakeholder situation, or building long-term communications capability, CRC Public Relations provides direct access to experienced counsel from the first conversation."
       />
     </>
   );

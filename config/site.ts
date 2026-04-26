@@ -80,8 +80,8 @@ export const siteConfig = {
   },
 
   stats: {
-    yearsTrading: "25+",
-    continents: "Every continent",
+    yearsTrading: "15+",
+    continents: "Worldwide",
     clientRetention: "100%",
     professionsTrained: "500+",
   },
@@ -194,7 +194,7 @@ export const siteConfig = {
       question:
         "What makes CRC Public Relations different from a larger PR agency?",
       answer:
-        "At CRC Public Relations, every client engagement is led directly by a senior adviser, not delegated to account managers or junior staff. You work with people who have decades of experience and take a genuine, long-term interest in your organisation. We are boutique by design, which means you get direct access to the people who actually do the work. That personal, senior approach is the reason clients choose us, including national and international clients.",
+        "At CRC Public Relations, every client engagement is led directly by experienced advisers, not delegated to account managers or junior staff. You work with a team with deep practical experience and a genuine, long-term interest in your organisation. We are boutique by design, which means you get direct access to the people who actually do the work. That personal approach is the reason clients choose us, including national and international clients.",
     },
     {
       question: "How quickly can CRC Public Relations respond to a crisis?",
@@ -207,9 +207,10 @@ export const siteConfig = {
         "CRC Public Relations works with local and national clients based in every Australian state, New Zealand and across the Pacific Islands. Some of our clients have branches across the world and we have travelled to assist them in many countries. We deal with a wide range of media outlets, from local, rural, regional, and national through to international media across the globe. We also work with specialist industry publications, and new media including podcasts in any location. We can assist you whatever your size, wherever you are. Geography is not a barrier.",
     },
     {
-      question: "What industries does CRC Public Relations specialise in?",
+      question:
+        "What types of organisations does CRC Public Relations work with?",
       answer:
-        "We have deep experience across companies and family businesses, Federal and State government departments, industry associations and peak bodies, independent and faith-based schools, health and aged care organisations, legal and professional services firms, and Pacific governments and NGOs.",
+        "We work with CEOs, directors, and executives across companies, charities, not-for-profits, family businesses, industry associations and peak bodies, independent and faith-based schools, health and aged care organisations, legal and professional services firms, Pacific governments and NGOs, and faith-based organisations. What our clients share is a preference for working directly with experienced advisers rather than through large agency structures.",
     },
     {
       question: "Is everything I share with CRC Public Relations confidential?",

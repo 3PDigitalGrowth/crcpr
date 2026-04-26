@@ -12,7 +12,7 @@ import { siteConfig } from "@/config/site";
 export const metadata: Metadata = {
   title: "Issues Management PR Australia | CRC Public Relations",
   description:
-    "Proactive issues management for organisations facing emerging media, regulatory, or stakeholder threats. Senior PR counsel in Brisbane, available nationally. Call 1300 182 186.",
+    "Proactive issues management for organisations facing emerging media, regulatory, or stakeholder threats. Specialist PR counsel in Brisbane, available nationally. Call 1300 182 186.",
 };
 
 const jsonLd = {
@@ -135,14 +135,14 @@ export default function IssuesManagementPage() {
             </div>
 
             <div className="border border-white/10 bg-white/[0.03] rounded-lg p-6 backdrop-blur-[2px]">
-              <p className="text-white/35 text-xs mb-4">Direct senior counsel</p>
+              <p className="text-white/35 text-xs mb-4">Direct strategic counsel</p>
               <div className="space-y-4">
                 <div>
                   <p className="font-heading font-black text-brand-gold text-2xl">
                     {siteConfig.stats.yearsTrading}
                   </p>
                   <p className="text-white/60 text-sm">
-                    Years advising leaders in high-stakes environments
+                    Years serving organisations across Australia and the Pacific
                   </p>
                 </div>
                 <div className="h-px bg-white/10" />
@@ -451,8 +451,8 @@ export default function IssuesManagementPage() {
               </h2>
               <div className="space-y-6">
                 <p className="text-charcoal text-[15px] leading-relaxed">
-                  With two decades of assisting organisations through crises,
-                  CRC Public Relations co-founder Lyall Mercer has consistently
+                  Drawing on extensive crisis communications experience, CRC
+                  Public Relations co-founder Lyall Mercer has consistently
                   observed that many significant reputation events were
                   predictable, not in their exact form, but in their general
                   shape.
@@ -546,7 +546,7 @@ export default function IssuesManagementPage() {
         magnet="crisisPlanTemplate"
         variant="dark"
         title="Does your organisation have an escalation protocol for emerging issues?"
-        description="Download the CRC Public Relations Crisis Communications Plan Template. It includes the escalation framework and decision triggers our issues-management clients use to decide when a developing matter can still be contained and when it requires immediate senior response."
+        description="Download the CRC Public Relations Crisis Communications Plan Template. It includes the escalation framework and decision triggers our issues-management clients use to decide when a developing matter can still be contained and when it requires immediate leadership response."
         highlights={[
           "Clarifies issue-to-crisis thresholds",
           "Useful for executive and risk teams",

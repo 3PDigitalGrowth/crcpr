@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     default: "CRC Public Relations | Corporate PR, Reputation & Crisis Advisory",
   },
   description:
-    "CRC Public Relations is a boutique corporate PR firm trusted by CEOs, directors, and senior executives across Australia, the Pacific, and internationally. Corporate communications, reputation management, crisis response, and media training.",
+    "CRC Public Relations is a boutique corporate PR firm trusted by CEOs, directors, and executives across Australia, the Pacific, and internationally. Corporate communications, reputation management, crisis response, and media training.",
   openGraph: {
     siteName: "CRC Public Relations",
     locale: "en_AU",

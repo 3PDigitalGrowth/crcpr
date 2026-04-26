@@ -81,7 +81,7 @@ export default function FAQPage() {
                 The questions below reflect what most clients want to
                 understand before they engage CRC Public Relations: how the firm works, what
                 kinds of matters fit best, how urgent support is handled, and
-                what direct senior counsel actually looks like in practice.
+                what direct counsel actually looks like in practice.
               </p>
             </div>
 
@@ -96,7 +96,7 @@ export default function FAQPage() {
                     How CRC Public Relations works
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
-                    The firm model, how advice is delivered, and what senior-led
+                    The firm model, how advice is delivered, and what experienced
                     support means in practice.
                   </p>
                 </div>
@@ -130,11 +130,11 @@ export default function FAQPage() {
 
       <InlineEnquirySection
         title="Still deciding whether CRC Public Relations is the right fit?"
-        body="If your question is specific, sensitive, or difficult to reduce to a general FAQ, the best next step is a direct conversation with a senior adviser."
+        body="If your question is specific, sensitive, or difficult to reduce to a general FAQ, the best next step is a direct conversation with an experienced adviser."
         bullets={[
           "Clarify whether your matter is a fit for CRC Public Relations",
           "Discuss the right starting point before pressure grows",
-          "Get a senior view on the most sensible next step",
+          "Get an experienced view on the most sensible next step",
         ]}
         defaultMessage="We have a specific question about whether CRC Public Relations is the right fit for our situation."
         variant="white"

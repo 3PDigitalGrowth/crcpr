@@ -279,13 +279,13 @@ export default function MediaStrategyPage() {
               <p className="text-charcoal text-[15px] leading-relaxed">
                 Media coverage is built on relationships with specific
                 journalists, editors, and producers who cover your sector.
-                CRC Public Relations has cultivated these relationships over 25 years of
-                corporate PR and journalism practice. We understand what editors
-                and producers need, how stories are commissioned and developed,
-                and how to present your organisation as a source that is worth
-                coming back to. We introduce your organisation to the right people
-                and build the ongoing relationships that generate sustained
-                coverage.
+                CRC Public Relations brings corporate PR and journalism
+                practice to the way we build and manage media relationships. We
+                understand what editors and producers need, how stories are
+                commissioned and developed, and how to present your organisation
+                as a source that is worth coming back to. We introduce your
+                organisation to the right people and build the ongoing
+                relationships that generate sustained coverage.
               </p>
             </div>
 
@@ -336,7 +336,7 @@ export default function MediaStrategyPage() {
                 Our media experience
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
-                The reach and relationships built over 25 years
+                The reach and relationships behind effective media strategy
               </h2>
               <p className="text-charcoal text-lg leading-relaxed mb-6">
                 The CRC Public Relations difference is our vast experience
@@ -352,7 +352,7 @@ export default function MediaStrategyPage() {
                 {[
                   "Media outlets in every city and state across Australia and New Zealand, and most rural and regional centres",
                   "Media across the Pacific region",
-                  "Media on every continent, including major news outlets across the USA, UK, Europe and Asia",
+                  "International media markets, including major news outlets across the USA, UK, Europe and Asia",
                   "International outlets and news wires like CNN, Bloomberg, AFP, and Associated Press",
                   "Remote and rural Australian media",
                   "Niche industry publications",

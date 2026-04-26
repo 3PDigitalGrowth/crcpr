@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title:
     "Industry Association PR Australia | Communications for Peak Bodies | CRC Public Relations",
   description:
-    "Specialist PR and communications counsel for Australian industry associations and peak bodies. Regulatory crisis, member communications, board governance, and advocacy campaigns. Call 1300 182 186.",
+    "Specialist communications counsel for Australian industry and professional associations and peak bodies. Advocacy support, member communications, media relations, and crisis planning. Call 1300 182 186.",
 };
 
 const jsonLd = {
@@ -24,29 +24,29 @@ const jsonLd = {
     url: "https://crcpr.com.au",
   },
   description:
-    "Specialist PR and communications counsel for Australian industry associations and peak bodies. Regulatory crisis, member communications, board governance, and advocacy campaigns.",
+    "Specialist communications counsel for Australian industry and professional associations and peak bodies. Advocacy support, member communications, media relations, and crisis planning.",
   areaServed: "AU",
   serviceType: "Industry Association Public Relations",
 };
 
 const proofItems = [
   {
-    label: "Association complexity",
-    value: "Multiple audiences",
+    label: "Importance of your voice",
+    value: "Trusted authority",
     detail:
-      "Peak bodies communicate to members, boards, regulators, government, media, and the public at the same time.",
+      "Member associations and peak bodies must be the trusted public voice of their industry and be heard by their audiences.",
   },
   {
-    label: "Advocacy pressure",
-    value: "Policy-aware",
+    label: "Vital advocacy support",
+    value: "Campaign elevation",
     detail:
-      "The strongest campaigns combine board discipline, member alignment, and public-facing communications that can survive scrutiny.",
+      "Advocacy becomes more effective by using PR to influence policy and legislation, building public support and adding pressure.",
   },
   {
-    label: "Governance risk",
-    value: "Handled early",
+    label: "Members become your advocates",
+    value: "Member confidence",
     detail:
-      "Member conduct issues, board disputes, and regulatory attention rarely stay internal unless they are managed carefully from the outset.",
+      "Effective member communication that builds trust means members are informed, aligned, and confident in the association's leadership.",
   },
 ] as const;
 
@@ -54,12 +54,7 @@ const faqs = [
   {
     question: "What makes association communications different from standard corporate PR?",
     answer:
-      "Associations are communicating to members, boards, regulators, government, and media at the same time. The work is more politically and governance-sensitive because member confidence and public advocacy often need to be managed together.",
-  },
-  {
-    question: "Can CRC Public Relations support both advocacy and governance matters?",
-    answer:
-      "Yes. That combination is one of the reasons associations engage us. We help peak bodies manage policy-facing communication, member trust, board-sensitive issues, and media pressure in the same engagement when needed.",
+      "Associations have unique stakeholders, and also carry the authority of their industry. This means they are better placed to be that trusted voice than businesses, however many don't know how. The work is often more politically sensitive, and member confidence and public advocacy often need to be managed together.",
   },
   {
     question: "Do you work directly with CEOs, executive officers, and boards?",
@@ -70,46 +65,119 @@ const faqs = [
 
 const sectorCards = [
   {
-    title: "Finance & banking",
+    title: "Finance, banking, lending",
     description:
-      "When your sector faces regulatory scrutiny, government inquiry, or public trust pressure, your members look to you for leadership. We work directly with CEOs and executive officers of finance and banking peak bodies to navigate member communications, media strategy, and government engagement with the discipline these moments demand.",
+      "With extensive experience across Australasia in this sector, we understand the regulatory scrutiny it faces and the need for public trust. We work directly with CEOs and executive officers of finance sector peak bodies to navigate media strategy, member communications, and government advocacy support.",
   },
   {
-    title: "Health & aged care",
+    title: "Aged care and child care",
     description:
-      "Health and aged care associations operate under sustained public and political scrutiny. Whether you are managing Royal Commission legacy, workforce advocacy, or public confidence in the sector, we provide direct senior counsel to your leadership team on the communications strategy that protects your members and your standing.",
+      "Aged care and child care associations operate under sustained public and political scrutiny. Whether you are managing royal commission legacy, workforce challenges, or public confidence in the sector, we provide counsel to your leadership team on the right communications strategy that protects your members and your standing.",
   },
   {
-    title: "Legal & professional services",
+    title: "Professional services",
     description:
-      "Your association represents the public voice of a profession. We help you strengthen that voice through strategic media engagement, governance communications, and member conduct management. You deal directly with a senior adviser who understands the reputational weight your sector carries.",
-  },
-  {
-    title: "Business & industry",
-    description:
-      "Business chambers and industry groups need advocacy that influences policy and communications that keep members aligned. We work with your board and executive team on campaigns that are evidence-based, strategically targeted, and designed to be heard by the decision makers who determine the outcome.",
-  },
-  {
-    title: "Construction & property",
-    description:
-      "Safety, regulation, and stakeholder expectations define the communications landscape for construction and property associations. We help your leadership team manage regulatory reform, safety-related communications, and the media scrutiny that accompanies major industry incidents.",
+      "We have dealt across many professional sectors, and know how to identify unique media opportunities for your association to be the voice of credibility and authority. We help you amplify that voice through strategic media engagement, government and MP communications, and member engagement. You deal directly with an experienced adviser who understands the reputational weight your sector carries.",
   },
   {
     title: "Education & training",
     description:
-      "Education associations face unique pressure where parent trust, board governance, and community confidence must work together. We have guided school and education peak bodies through some of the most sensitive issues in the sector, working directly with your executive team and board.",
+      "CRC Public Relations is highly respected across the education and schools sectors, and has dealt across every Australian state. Education associations operate in an ever-changing and ever-challenging environment, and provide an important support and advocacy role to their members. We have worked alongside school and education peak bodies to assist their government lobbying efforts.",
+  },
+  {
+    title: "Tourism and accommodation",
+    description:
+      "The tourism and accommodation sectors, more than many others, must be prepared to respond to outside influences and pressures beyond their control. Strategic communication in this sector means being proactive and reactive in the media, and ensuring your voice is heard amid the many other associations in this space.",
+  },
+  {
+    title: "Trades",
+    description:
+      "From promoting their industry, to ensuring there is a supply of future tradespeople through apprenticeships and ongoing training, trades is a sector that will thrive in this AI age. However there are specific challenges trades associations face and we have worked closely with associations to maximise their voice, generate new members and support their advocacy through media and communications.",
+  },
+  {
+    title: "Transport",
+    description:
+      "The transport sector is so important to Australia, and as such has a high profile. We've worked across various areas of transport and understand the need to react quickly when issues arise. We've learnt that the best way to be prepared is with a proactive communications strategy that keeps you on the front foot.",
+  },
+  {
+    title: "Sports",
+    description:
+      "One of the biggest challenges of sports associations is raising the profile of their sport in an environment where a few larger sports dominate the media coverage. The needs of associations in the sports sector is to craft their own narrative and be creative in their public messaging.",
+  },
+  {
+    title: "Agriculture",
+    description:
+      "Associations in this sector face many challenges beyond their control, and are faced with a media environment that often doesn't appreciate the importance of the agricultural sector. Yet the right communications and public relations strategy that considers all stakeholders can bring real results.",
+  },
+  {
+    title: "Health and mental health",
+    description:
+      "There is so much public commentary in the health and mental health space, so how does an association stand out? By positioning itself as the voice of authority in their specific area, and using media and communications to help achieve their important goals and objectives. We have not only supported their advocacy efforts but helped them open new doors and opportunities.",
+  },
+  {
+    title: "Construction & property",
+    description:
+      "Safety, regulation, and stakeholder expectations can define the communications landscape for construction and property associations. We help your leadership team manage regulatory reform, safety-related communications, and the media scrutiny that accompanies major incidents.",
   },
   {
     title: "Resources & energy",
     description:
-      "Social licence, environmental scrutiny, and government relations define the operating environment for resources and energy associations. We provide direct senior counsel on the communications strategies that protect your sector\u2019s reputation and advance your advocacy objectives.",
+      "Activism, environmental scrutiny, and government relationships are ongoing challenges for resources and energy associations. We provide direct counsel on the communications strategies that protect your sector's reputation and advance your advocacy objectives.",
+  },
+  {
+    title: "Faith based associations",
+    description:
+      "The co-founder of CRC Public Relations has been assisting faith based associations across Australia and the world for more than 20 years, and we understand the unique objectives and challenges they face. From religious discrimination to achieving your mission objectives, we provide experienced, specialty communications counsel.",
   },
   {
     title: "Other sectors",
     description:
-      "Every industry association faces communications challenges unique to its membership and operating environment. If your sector is not listed above, we can still help. Our boutique model means you work directly with experienced senior advisers who will understand your sector quickly and act decisively.",
+      "Every industry association faces communications challenges unique to its membership and operating environment. If your sector is not listed above, we can still help. Our boutique model means you work directly with experienced advisers who will understand your sector quickly and act decisively.",
   },
 ];
+
+const associationObjectives = [
+  "You become the public voice of authority for your industry - trusted by the media.",
+  "Your advocacy efforts to influence policy and legislation will be more effective.",
+  "You build stronger trust and greater credibility with members, media and government.",
+  "Your member value, engagement and retention is increased.",
+  "Your members are more informed, aligned and confident in your leadership.",
+  "You manage negative issues with confidence.",
+  "Your entire industry's reputation is protected and strengthened.",
+] as const;
+
+const associationServiceCards = [
+  {
+    title: "Media relations and spokesperson preparation",
+    description:
+      "If your association is not the voice of authority in your industry, someone else will be, and this will dilute your message. A public voice will elevate your profile and exposure to those who are important to your success, including governments, MPs, suppliers, members and others across your industry. We help you build and manage media relationships across general and industry-specific media, and social media, as well as preparing your leaders to represent your association and sector with credibility.",
+  },
+  {
+    title: "Advocacy support",
+    description:
+      "When your association needs to shift a government position, build a public case, create public awareness, or mobilise stakeholder support for a policy objective, an effective communications strategy is central to the outcome. We work with associations on public affairs campaigns and messaging that build connection with key stakeholders, bring public support, and help influence decisions and impact.",
+  },
+  {
+    title: "Member communications strategy",
+    description:
+      "Are your members advocates or adversaries? Many members don't know what their association does, which is why we help you communicate with them in a way that informs them not only about issues that affect them, but what your association is doing for them. We help associations develop member communications strategies that build trust, manage expectations during difficult periods, and maintain the confidence that sustains membership.",
+  },
+  {
+    title: "Issues and crisis communications planning for associations",
+    description:
+      "Every association deals with challenging issues that could escalate, and sometimes larger issues become a reputational crisis. Whether this is a member misconduct matter, data breach, public or group opposition, or a government or regulator decision that will adversely affect your industry, we assist you to be prepared for scenarios most likely in your sector.",
+  },
+  {
+    title: "Regulatory crisis communications",
+    description:
+      "When a government inquiry, regulatory action, or adverse legislative proposal threatens your sector, your association's response to members, government, and the public via media and social media engagement, must be coordinated and strategic. We have worked across these very issues with associations, and have created the communications frameworks, stakeholder engagement plans, and media strategies that have helped bring the desired results by maximising your influence during these processes.",
+  },
+  {
+    title: "Campaign support",
+    description:
+      "Along with the broader messaging, associations often have specific short-term campaign objectives. These may be to promote employment in the industry, celebrate leading members or make the public aware of an important matter. We support your efforts through ensuring that the right messaging is heard by the right people using mainstream, industry and social media.",
+  },
+] as const;
 
 function AssociationOpening() {
   return (
@@ -122,20 +190,31 @@ function AssociationOpening() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           <div>
             <h2 className="font-heading font-black text-navy text-3xl leading-tight mb-6">
-              Association communications is the most complex brief in Australia.
+              Association communications is unlike any other.
             </h2>
             <p className="text-text-body text-base leading-relaxed mb-5">
-              Industry associations must simultaneously serve members, satisfy regulators,
-              engage government, and withstand media scrutiny, often with the same
-              communication, at the same time. No other type of organisation carries
-              that load.
+              Industry and professional associations are engaged on multiple
+              fronts. While being over existing and new regulations, developing
+              training, and engaging with multiple stakeholders including
+              governments, they must also serve their members, many who are not
+              engaged or don&apos;t understand the hard work the association does. In
+              some cases there is also government, regulatory or media scrutiny
+              around their industry or members. No other type of organisation
+              carries that load.
+            </p>
+            <p className="text-text-body text-base leading-relaxed mb-5">
+              CRC Public Relations has worked with Australian and New Zealand
+              peak bodies, and industry and professional associations for 15
+              years. We understand the needs of boards, executive management and
+              members, and the continual quest to advocate for members and the
+              industry. Our approach is always tailored to the specific character
+              of your membership, your board, and your sector.
             </p>
             <p className="text-text-body text-base leading-relaxed mb-8">
-              CRC Public Relations has worked with some of Australia&apos;s most prominent peak bodies for
-              over 25 years. We understand what boards need, what members expect, and
-              what regulators and journalists are looking for. Our approach is always
-              tailored to the specific character of your membership, your board,
-              and your sector.
+              Importantly, we also understand how to ensure that associations
+              maximise their public and media voice to achieve their objectives,
+              and how communications can attract new, and retain current,
+              members.
             </p>
 
             <blockquote className="border-l-[3px] border-brand-gold pl-5">
@@ -150,46 +229,29 @@ function AssociationOpening() {
             </blockquote>
           </div>
 
-          <div className="flex flex-col gap-4">
-            {[
-              {
-                num: "1",
-                title: "Multiple audiences, one message",
-                body: "Members, board, regulators, government, and media all require different things, often simultaneously, and from the same event.",
-              },
-              {
-                num: "2",
-                title: "Governance-sensitive by nature",
-                body: "Member conduct issues, board disputes, and regulatory attention rarely stay internal without careful, early management.",
-              },
-              {
-                num: "3",
-                title: "Advocacy must survive scrutiny",
-                body: "The strongest campaigns combine board discipline, member alignment, and public-facing communications that can withstand pressure.",
-              },
-            ].map(({ num, title, body }) => (
-              <div
-                key={num}
-                className="bg-white border border-brand-border rounded-lg p-5 pl-12 relative shadow-sm shadow-navy/5"
-              >
-                <span
-                  className="absolute left-4 top-5 font-heading font-black text-2xl leading-none"
-                  style={{ color: "rgba(201,168,76,0.35)" }}
-                  aria-hidden="true"
+          <div className="bg-white border border-brand-border rounded-lg p-8 shadow-sm shadow-navy/5">
+            <p className="font-heading font-black text-navy text-xl leading-snug mb-5">
+              CRC Public Relations can create a public relations strategy that
+              will advance these objectives for your association:
+            </p>
+            <ul className="space-y-3">
+              {associationObjectives.map((objective) => (
+                <li
+                  key={objective}
+                  className="flex gap-3 text-text-body text-sm leading-relaxed"
                 >
-                  {num}
-                </span>
-                  <p className="text-navy text-sm font-medium mb-1.5">{title}</p>
-                <p className="text-text-body text-xs leading-relaxed">{body}</p>
-              </div>
-            ))}
+                  <span className="mt-2 size-1.5 rounded-full bg-brand-gold flex-shrink-0" />
+                  <span>{objective}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 
         <div className="grid grid-cols-3 divide-x divide-brand-border border-t border-brand-border pt-8">
           {[
-            { num: "25+", label: "Years advising Australian associations" },
-            { num: "15+", label: "National and state peak bodies advised" },
+            { num: "15+", label: "Years advising Australian associations" },
+            { num: "30+", label: "National and state peak bodies advised" },
             { num: "100%", label: "Client satisfaction rate" },
           ].map(({ num, label }) => (
             <div key={label} className="text-center px-6">
@@ -219,8 +281,9 @@ function SectorCards() {
         </h2>
         <p className="text-text-body text-base leading-relaxed max-w-3xl mb-12">
           We work directly with CEOs, executive officers, and boards of industry
-          associations and peak bodies across Australia. Every sector brings
-          unique communications challenges. Here is how we help.
+          and professional associations and peak bodies across Australia and
+          New Zealand. Every sector brings unique communications challenges.
+          Here is how we help.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -273,10 +336,14 @@ export default function IndustryAssociationsPage() {
       <PageHero
         asidePreset="clientsBreadth"
         eyebrow="Industry associations"
-        title="Industry association communications that protects your members, and your standing."
-        description="Specialist counsel for peak bodies, member organisations, and industry associations across Australia. Regulatory crisis, member communications, board governance, and public affairs."
+        title="Industry and professional association communications have specific needs and objectives"
+        description="Specialist counsel for peak bodies, industry and professional associations across Australia, that positions you as the voice of authority, elevates your advocacy, and builds stakeholder and member trust."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
+        asideHighlight={{
+          title: "Proven results",
+          body: "Documented, impacting and consistent results achieved for national and state associations across many sectors.",
+        }}
         heroImage={{
           src: "/images/clients/industry-associations/hero.webp",
           alt: "Large conference table set for an industry summit or AGM with lectern, agendas, and warm lighting, no people",
@@ -284,7 +351,7 @@ export default function IndustryAssociationsPage() {
       />
 
       <PageProofStrip
-        title="Associations need communications advice built for governance, advocacy, and member confidence at once."
+        title="We create communications strategies that meet your specific and unique objectives."
         items={[...proofItems]}
       />
 
@@ -292,7 +359,7 @@ export default function IndustryAssociationsPage() {
 
       <SectorCards />
 
-      {/* How CRC Public Relations works with industry associations */}
+      {/* How CRC Public Relations works with industry and professional associations */}
       <section className="bg-off-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <ImageTextRow
@@ -302,119 +369,31 @@ export default function IndustryAssociationsPage() {
           >
             <div>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl mb-4">
-                How CRC Public Relations works with industry associations
+                How CRC Public Relations works with industry and professional associations
               </h2>
               <p className="text-charcoal-mid text-[15px] leading-relaxed max-w-xl">
-                When your association represents a whole sector, public affairs,
-                member confidence, and board governance intertwine. We help peak
-                bodies communicate with authority in hearings, campaigns, and
-                critical member moments.
+                We help industry and professional associations and peak bodies
+                achieve their overall objectives through effective media and
+                communication strategies that consider all stakeholders.
               </p>
             </div>
           </ImageTextRow>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 md:mt-16">
-            <div className="bg-white border border-brand-border rounded-lg p-8">
-              <h3 className="font-heading font-black text-navy text-lg mb-3">
-                Regulatory crisis communications
-              </h3>
-              <p className="text-charcoal-mid text-[15px] leading-relaxed">
-                When a government inquiry, regulatory action, or adverse
-                legislative proposal threatens your sector, your
-                association&apos;s response, to members, to government, to
-                media, and to the public, needs to be coordinated and strategic.
-                We develop the communications frameworks, stakeholder engagement
-                plans, and media strategies that give your association maximum
-                influence during regulatory processes.
-              </p>
-            </div>
-
-            <div className="bg-white border border-brand-border rounded-lg p-8">
-              <h3 className="font-heading font-black text-navy text-lg mb-3">
-                Member communications strategy
-              </h3>
-              <p className="text-charcoal-mid text-[15px] leading-relaxed">
-                Your members need to trust that their association is representing
-                them effectively, and they need to be kept informed when the
-                environment in which they operate is changing. We help
-                associations develop member communications strategies that build
-                trust, manage expectations during difficult periods, and maintain
-                the confidence that sustains membership.
-              </p>
-            </div>
-
-            <div className="bg-white border border-brand-border rounded-lg p-8">
-              <h3 className="font-heading font-black text-navy text-lg mb-3">
-                Board governance and stakeholder communications
-              </h3>
-              <p className="text-charcoal-mid text-[15px] leading-relaxed">
-                Association boards operate under scrutiny that is increasing as
-                regulatory expectations for governance transparency rise. We
-                help associations communicate their governance arrangements
-                clearly, prepare for questions about board decision-making under
-                pressure, and manage the communications dimension of internal
-                disputes before they become external ones.
-              </p>
-            </div>
-
-            <div className="bg-white border border-brand-border rounded-lg p-8">
-              <h3 className="font-heading font-black text-navy text-lg mb-3">
-                Public affairs and advocacy
-              </h3>
-              <p className="text-charcoal-mid text-[15px] leading-relaxed">
-                When your association needs to shift a government position, build
-                a public case, or mobilise stakeholder support for a policy
-                objective, communications strategy is central to the outcome. We
-                work with associations on public affairs campaigns that are
-                evidence-based, strategically targeted, and designed to be heard
-                by the audiences that determine the outcome.
-              </p>
-            </div>
-
-            <div className="bg-white border border-brand-border rounded-lg p-8">
-              <h3 className="font-heading font-black text-navy text-lg mb-3">
-                Crisis communications planning for associations
-              </h3>
-              <p className="text-charcoal-mid text-[15px] leading-relaxed">
-                Every association has scenarios that could produce a reputation
-                crisis: a member misconduct matter, a data breach, a governance
-                failure, a public dispute between board members. We work with
-                associations to develop crisis communications plans specific to
-                the scenarios most likely in their sector, and to test those
-                plans before they are needed.
-              </p>
-            </div>
-
-            <div className="bg-white border border-brand-border rounded-lg p-8">
-              <h3 className="font-heading font-black text-navy text-lg mb-3">
-                Media relations and spokesperson preparation
-              </h3>
-              <p className="text-charcoal-mid text-[15px] leading-relaxed">
-                Your CEO and board chair are your association&apos;s public face.
-                Their credibility with journalists, government officials, and the
-                public is a significant asset, or liability. We build and manage
-                media relationships on your behalf, and prepare your senior
-                people to represent your sector with authority.
-              </p>
-            </div>
+            {associationServiceCards.map((card) => (
+              <div
+                key={card.title}
+                className="bg-white border border-brand-border rounded-lg p-8"
+              >
+                <h3 className="font-heading font-black text-navy text-lg mb-3">
+                  {card.title}
+                </h3>
+                <p className="text-charcoal-mid text-[15px] leading-relaxed">
+                  {card.description}
+                </p>
+              </div>
+            ))}
           </div>
-        </div>
-      </section>
-
-      <section className="bg-white py-12 md:py-16 border-y border-brand-border/60">
-        <div className="max-w-7xl mx-auto px-6">
-          <ImageTextRow
-            imageSrc="/images/clients/industry-associations/mid-boardroom-after.webp"
-            imageAlt="Boardroom table after a productive meeting with papers and coffee cups in warm afternoon light, no people"
-            imagePosition="right"
-            aspectClass="aspect-[4/3]"
-          >
-            <p className="text-navy text-lg md:text-xl leading-relaxed font-medium max-w-md">
-              Peak body work is often decided in session and in the follow-through
-              that follows. We help associations carry disciplined communications
-              from the board table to members, government, and media.
-            </p>
-          </ImageTextRow>
         </div>
       </section>
 
@@ -436,10 +415,7 @@ export default function IndustryAssociationsPage() {
                 communicate when issues have arisen.&rdquo;
               </blockquote>
               <figcaption className="mt-4 text-sm text-charcoal-mid">
-                <span className="font-sans font-semibold text-navy">
-                  Vanessa
-                </span>
-                , Executive Officer, Christian schools sector
+                Executive Officer, Christian schools sector
               </figcaption>
             </figure>
 
@@ -473,7 +449,7 @@ export default function IndustryAssociationsPage() {
 
       <PageClosingCTA
         title="Association communications challenges are what we do best."
-        body="We have spent decades helping associations navigate member expectations, regulatory pressure, governance complexity, and media scrutiny with direct senior counsel."
+        body="We have spent many years helping associations elevate their public voice, achieve successful outcomes, build member trust and support, and deal with media scrutiny."
       />
     </>
   );

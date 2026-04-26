@@ -189,7 +189,7 @@ export function LeadMagnetModal({
           </Link>
         </p>
         <p className="mt-2 text-xs text-text-caption italic">
-          Prepared by CRC Public Relations: 25 years of Australian PR expertise.
+          Prepared by CRC Public Relations: specialist Australian PR expertise.
         </p>
       </div>
     </div>

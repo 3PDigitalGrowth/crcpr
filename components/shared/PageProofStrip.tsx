@@ -7,6 +7,7 @@ interface ProofItem {
 interface PageProofStripProps {
   eyebrow?: string;
   title: string;
+  body?: string;
   items: ProofItem[];
   variant?: "white" | "off-white" | "navy";
 }
@@ -14,6 +15,7 @@ interface PageProofStripProps {
 export function PageProofStrip({
   eyebrow = "Why CRC Public Relations",
   title,
+  body,
   items,
   variant = "off-white",
 }: PageProofStripProps) {
@@ -30,6 +32,7 @@ export function PageProofStrip({
       : "border-brand-border bg-white shadow-sm shadow-navy/5";
 
   const titleClass = variant === "navy" ? "text-white" : "text-navy";
+  const bodyClass = variant === "navy" ? "text-white/70" : "text-charcoal-mid";
   const valueClass = variant === "navy" ? "text-white" : "text-navy";
   const detailClass =
     variant === "navy" ? "text-white/60" : "text-body";
@@ -44,6 +47,11 @@ export function PageProofStrip({
           <h2 className={`font-heading font-black text-3xl ${titleClass}`}>
             {title}
           </h2>
+          {body ? (
+            <p className={`mt-5 text-lg leading-relaxed ${bodyClass}`}>
+              {body}
+            </p>
+          ) : null}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">

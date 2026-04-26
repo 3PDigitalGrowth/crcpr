@@ -136,7 +136,7 @@ export default function MediaTrainingPage() {
                   is building, the questions they are most likely to ask, and
                   the specific vulnerabilities in your organisation&apos;s
                   position that a skilled interviewer will find. Every session
-                  is designed and reviewed by a senior adviser.
+                  is designed and reviewed by an experienced adviser.
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
                   Our training is delivered by former television and radio
@@ -265,7 +265,7 @@ export default function MediaTrainingPage() {
               </h3>
               <p className="text-charcoal text-[15px] leading-relaxed">
                 Intensive one-on-one or small group sessions that prepare
-                executives, senior managers, and communications staff for
+                executives, managers, and communications staff for
                 television, radio, and press conference appearances. Sessions
                 are conducted using real broadcast equipment and recorded for
                 review, because watching yourself on camera is the fastest path
@@ -285,10 +285,10 @@ export default function MediaTrainingPage() {
                 Hostile media and crisis interview preparation
               </h3>
               <p className="text-charcoal text-[15px] leading-relaxed">
-                For senior leaders who may face adversarial media questioning
-                during a regulatory inquiry, a crisis event, or a contentious
-                public debate, we run intensive workshops that simulate the
-                specific conditions they are likely to face.
+                For leaders who may face adversarial media questioning during a
+                regulatory inquiry, a crisis event, or a contentious public
+                debate, we run intensive workshops that simulate the specific
+                conditions they are likely to face.
               </p>
               <p className="text-charcoal text-[15px] leading-relaxed mt-4">
                 These sessions include: mock hostile interviews conducted by

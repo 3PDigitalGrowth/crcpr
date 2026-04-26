@@ -137,9 +137,9 @@ export default function SchoolsFaithPage() {
                   and the compassion that your community deserves.
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
-                  CRC Public Relations has worked with independent schools, Catholic school
-                  networks, and faith-based organisations across Australia for
-                  over 25 years. Lyall Mercer has presented at the Australian
+                  CRC Public Relations works with independent schools, Catholic
+                  school networks, and faith-based organisations across
+                  Australia. Lyall Mercer has presented at the Australian
                   Catholic Bishops Conference and has developed crisis
                   communications frameworks used by school networks across the
                   country. We understand the unique pressures of school and
@@ -271,7 +271,7 @@ export default function SchoolsFaithPage() {
             {[
               {
                 title: "Crisis communications and incident response",
-                body: "When a serious incident occurs, we help leaders respond clearly, compassionately, and without compromising legal process. That includes immediate senior counsel on parent messaging, principal briefings, media enquiries, and coordinated communication across staff, boards, and the wider community.",
+                body: "When a serious incident occurs, we help leaders respond clearly, compassionately, and without compromising legal process. That includes immediate counsel on parent messaging, principal briefings, media enquiries, and coordinated communication across staff, boards, and the wider community.",
               },
               {
                 title: "Parent and community communications",
@@ -316,7 +316,7 @@ export default function SchoolsFaithPage() {
               communicate when issues have arisen.&rdquo;
             </p>
             <footer className="mt-4 text-charcoal-mid text-sm">
-              Vanessa, Executive Officer, Christian schools sector
+              Executive Officer, Christian schools sector
             </footer>
           </blockquote>
         </div>

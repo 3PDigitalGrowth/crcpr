@@ -14,7 +14,7 @@ import { MediaOutletLogoLink } from "@/components/shared/MediaOutletLogoLink";
 export const metadata: Metadata = {
   title: "Lyall Mercer: Co-founder & Principal Adviser",
   description:
-    "Lyall Mercer is the co-founder of CRC Public Relations. Former journalist, trusted crisis communications adviser, with 25+ years advising companies, governments, and high-profile individuals.",
+    "Lyall Mercer is the co-founder of CRC Public Relations. Former journalist and trusted crisis communications adviser with a career spanning media, PR, and high-stakes communications.",
 };
 
 export default function LyallMercerPage() {
@@ -24,7 +24,7 @@ export default function LyallMercerPage() {
         asidePreset="editorialInsights"
         eyebrow="Co-founder & principal adviser"
         title="Lyall Mercer"
-        description="Co-founder of CRC Public Relations. Former journalist, trusted crisis adviser, and senior counsellor to leaders facing scrutiny, pressure, and reputational risk."
+        description="Co-founder of CRC Public Relations. Former journalist and trusted crisis adviser to leaders facing scrutiny, pressure, and reputational risk."
         ctaLabel="Work with Lyall"
         ctaHref="/contact"
         heroImage={{
@@ -44,7 +44,7 @@ export default function LyallMercerPage() {
           },
           {
             label: "Advisory depth",
-            value: "25+ years",
+            value: "Career depth",
             detail:
               "He has advised companies, governments, associations, schools, and high-profile individuals through high-stakes situations.",
           },
@@ -80,7 +80,8 @@ export default function LyallMercerPage() {
                 His clients include national and international companies,
                 governments, industry associations, not-for-profit organisations,
                 politicians, celebrities, and sporting figures, and he has worked
-                with clients and media on every continent.
+                with clients and media across Australia, the Pacific, North
+                America, Europe, Asia, and other international markets.
               </p>
             </div>
           </ImageTextRow>
@@ -152,7 +153,7 @@ export default function LyallMercerPage() {
               </p>
             </blockquote>
             <p className="text-text-body text-base leading-relaxed mb-5">
-              Developed over 25 years of crisis communications practice across Australia and internationally, the 15 Minutes Principle is Lyall&apos;s framework for crisis response discipline. It has been shared with executives, boards, and communications teams across Australia, the USA, and Canada.
+              Developed through Lyall&apos;s crisis communications practice across Australia and internationally, the 15 Minutes Principle is his framework for crisis response discipline. It has been shared with executives, boards, and communications teams across Australia, the USA, and Canada.
             </p>
             <Link href="/insights/the-15-minutes-principle" className="text-link-teal text-sm font-medium hover:text-navy hover:underline">
               Read the full 15 Minutes Principle article →
@@ -163,7 +164,7 @@ export default function LyallMercerPage() {
             <h2 className="font-heading font-black text-navy text-2xl mb-6">Areas of specialist expertise</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                { area: "Crisis Communications", desc: "25 years of crisis counsel across every sector and severity level, from governance failures to safety incidents, media exposés, and social media firestorms." },
+                { area: "Crisis Communications", desc: "Crisis counsel across every sector and severity level, from governance failures to safety incidents, media exposés, and social media firestorms." },
                 { area: "Reputation Management", desc: "Vulnerability assessments, reputation monitoring, and long-term reputation protection strategies for organisations under scrutiny or at risk." },
                 { area: "Industry Associations", desc: "Deep experience with peak bodies, member organisations, and regulatory engagement, including some of Australia's most prominent national associations." },
                 { area: "Schools & Faith-Based Organisations", desc: "Specialist crisis communications for independent schools, Catholic systems, and faith-based organisations navigating sensitive disclosures and media attention." },

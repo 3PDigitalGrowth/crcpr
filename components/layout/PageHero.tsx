@@ -15,7 +15,7 @@ export interface PageHeroProps {
   ctaHref?: string;
   /** Full-bleed background; use /public paths, e.g. /images/services/foo/hero.webp */
   heroImage?: { src: string; alt: string };
-  /** Right-rail message variant (below years stat). Defaults to seniorAccess. */
+  /** Right-rail message variant (below firm tenure stat). Defaults to seniorAccess. */
   asidePreset?: PageHeroAsidePreset;
   /** Override aside copy entirely when a page needs one-off wording */
   asideHighlight?: AsideHighlight;
@@ -103,14 +103,14 @@ export function PageHero({
           </div>
 
           <div className="border border-white/10 bg-white/[0.03] rounded-lg p-6 backdrop-blur-[2px]">
-            <p className="text-white/35 text-xs mb-4">Direct senior counsel</p>
+            <p className="text-white/35 text-xs mb-4">Direct strategic counsel</p>
             <div className="space-y-4">
               <div>
                 <p className="font-heading font-black text-brand-gold text-2xl">
                   {siteConfig.stats.yearsTrading}
                 </p>
                 <p className="text-white/60 text-sm">
-                  Years advising leaders in high-stakes environments
+                  Years serving organisations across Australia and the Pacific
                 </p>
               </div>
               <div className="h-px bg-white/10" />

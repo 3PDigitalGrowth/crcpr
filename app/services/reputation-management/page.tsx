@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   title:
     "Reputation Management Consultants Australia | CRC Public Relations",
   description:
-    "Reputation vulnerability assessments, monitoring, and long-term reputation protection for companies, associations, and government organisations. Direct access to senior advisers.",
+    "Reputation vulnerability assessments, monitoring, and long-term reputation protection for companies, associations, and government organisations. Direct access to experienced advisers.",
 };
 
 const jsonLd = {
@@ -77,7 +77,7 @@ const faqs = [
   {
     question: "Is this a one-off project or an ongoing advisory relationship?",
     answer:
-      "It can be either. Some organisations want a single vulnerability assessment or recovery roadmap. Others retain CRC Public Relations as an ongoing senior reputation partner because they want regular review points, monitoring, and strategic counsel before new issues emerge.",
+      "It can be either. Some organisations want a single vulnerability assessment or recovery roadmap. Others retain CRC Public Relations as an ongoing reputation partner because they want regular review points, monitoring, and strategic counsel before new issues emerge.",
   },
 ];
 

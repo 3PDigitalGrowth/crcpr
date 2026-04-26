@@ -5,6 +5,7 @@ import { PageHero } from "@/components/layout/PageHero";
 import { FAQSection } from "@/components/shared/FAQSection";
 import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
 import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
+import { IndustryAssociationsGallery } from "@/components/clients/IndustryAssociationsGallery";
 import { PageProofStrip } from "@/components/shared/PageProofStrip";
 
 export const metadata: Metadata = {
@@ -432,6 +433,38 @@ export default function IndustryAssociationsPage() {
                 , CEO, national industry association with 14,000 members
               </figcaption>
             </figure>
+          </div>
+        </div>
+      </section>
+
+      {/* Industry events gallery */}
+      <section className="bg-off-white py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] gap-10 lg:gap-14 items-start">
+            <div className="lg:sticky lg:top-24">
+              <p className="text-brand-gold text-xs font-sans font-medium uppercase tracking-[0.18em] mb-4">
+                Industry events
+              </p>
+              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-[1.15]">
+                On the ground with Australia&rsquo;s industry associations
+              </h2>
+              <p className="text-charcoal-mid text-[15px] leading-relaxed mt-5 max-w-md">
+                Conferences, exhibition floors, panel discussions, and member
+                networking are the moments where association communications
+                matters most. We have supported industry and professional
+                associations behind the scenes at events of every size&mdash;
+                helping leaders prepare, message clearly, and stay close to
+                members when matters become contested.
+              </p>
+              <p className="text-charcoal-mid text-[15px] leading-relaxed mt-4 max-w-md">
+                A small selection of events we&rsquo;ve been a part of, from
+                state forums to national conferences.
+              </p>
+            </div>
+
+            <div>
+              <IndustryAssociationsGallery />
+            </div>
           </div>
         </div>
       </section>

@@ -147,6 +147,20 @@ export default function PacificPage() {
       <PageProofStrip
         title="Pacific advisory work succeeds when communication respects context, protocol, and relationship."
         items={[...proofItems]}
+        testimonial={{
+          quote:
+            "CRC Public Relations has worked extensively across the Pacific Region providing high-level advice to governments.",
+          attribution: [
+            "His Excellency Baron Waqa",
+            "Former President, Republic of Nauru",
+            "Secretary General, Pacific Islands Forum",
+          ],
+          highlightLastLine: true,
+          portrait: {
+            src: "/images/pacific/baron-waqa.png",
+            alt: "His Excellency Baron Waqa, Secretary General of the Pacific Islands Forum and former President of the Republic of Nauru",
+          },
+        }}
       />
 
       {/* Opening */}

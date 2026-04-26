@@ -17,16 +17,10 @@ import {
   Monitor,
   Video,
   Globe,
-  Briefcase,
-  Building,
-  GraduationCap,
-  Scale,
-  Heart,
-  Church,
 } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
-type PanelKey = "services" | "clients" | null;
+type PanelKey = "services" | null;
 
 interface MegaItemProps {
   href: string;
@@ -229,145 +223,12 @@ function ServicesPanel({ onClose }: { onClose: () => void }) {
   );
 }
 
-function ClientsPanel({
-  onClose,
-}: {
-  onClose: () => void;
-}) {
-  return (
-    <div
-      role="dialog"
-      aria-label="Clients menu"
-      className="max-w-7xl mx-auto px-6"
-    >
-      <div className="grid grid-cols-[1fr_1fr_1fr_220px]">
-        <div className="py-5 px-4 border-r border-white/[0.06]">
-          <ColumnHeader>By sector</ColumnHeader>
-          <MegaItem
-            href="/clients/corporate"
-            icon={<Briefcase className="w-full h-full" />}
-            title="Companies & family businesses"
-            desc="Direct counsel for owners, directors, and executives"
-            onClick={onClose}
-          />
-          <MegaItem
-            href="/clients/government"
-            icon={<Building className="w-full h-full" />}
-            title="Government & public sector"
-            desc="Departments, authorities, public agencies"
-            onClick={onClose}
-          />
-          <MegaItem
-            href="/clients/industry-associations"
-            icon={<Users className="w-full h-full" />}
-            title="Industry and professional associations, peak bodies"
-            desc="Advocacy, member trust, public voice"
-            onClick={onClose}
-          />
-          <MegaItem
-            href="/clients/schools-faith"
-            icon={<GraduationCap className="w-full h-full" />}
-            title="Independent and faith-based schools"
-            desc="Trust, care, and legal precision"
-            onClick={onClose}
-          />
-        </div>
-
-        <div className="py-5 px-4 border-r border-white/[0.06]">
-          <ColumnHeader>&nbsp;</ColumnHeader>
-          <MegaItem
-            href="/clients/corporate"
-            icon={<Scale className="w-full h-full" />}
-            title="Legal & professional services"
-            desc="Authority-building through strategic media"
-            onClick={onClose}
-          />
-          <MegaItem
-            href="/clients/corporate"
-            icon={<Heart className="w-full h-full" />}
-            title="Health & aged care"
-            desc="Reputation in scrutinised care environments"
-            onClick={onClose}
-          />
-          <MegaItem
-            href="/pacific"
-            icon={<Globe className="w-full h-full" />}
-            title="Pacific islands"
-            desc="The only Australian firm with deep Pacific expertise"
-            onClick={onClose}
-          />
-          <MegaItem
-            href="/clients/schools-faith"
-            icon={<Church className="w-full h-full" />}
-            title="Faith-based organisations"
-            desc="Reputation and crisis for ministries and charities"
-            onClick={onClose}
-          />
-        </div>
-
-        <div className="py-5 px-4 border-r border-white/[0.06]">
-          <ColumnHeader>Client outcomes</ColumnHeader>
-          <Link
-            href="/clients/industry-associations"
-            onClick={onClose}
-            className="block bg-white/[0.02] rounded p-3 mb-2 hover:bg-white/[0.04] transition-colors"
-          >
-            <p className="text-xs text-brand-gold font-medium">
-              National industry association
-            </p>
-            <p className="text-sm font-heading font-black text-white mt-1">
-              Legislation scrapped.
-            </p>
-            <p className="text-xs text-white/30 leading-relaxed mt-1">
-              Recommendations unfavourable to the industry dropped. Media
-              coverage shifted from hostile to measured within five days.
-            </p>
-          </Link>
-          <Link
-            href="/clients/schools-faith"
-            onClick={onClose}
-            className="block bg-white/[0.02] rounded p-3 mb-3 hover:bg-white/[0.04] transition-colors"
-          >
-            <p className="text-xs text-brand-gold font-medium">
-              Independent school
-            </p>
-            <p className="text-sm font-heading font-black text-white mt-1">
-              Zero enrolment loss.
-            </p>
-            <p className="text-xs text-white/30 leading-relaxed mt-1">
-              Crisis managed from disclosure to recovery, parent confidence
-              improved six months on.
-            </p>
-          </Link>
-          <Link
-            href="/case-studies"
-            onClick={onClose}
-            className="block px-1 text-xs text-white/40 hover:text-white/70 transition-colors mb-1"
-          >
-            &rarr; View all case outcomes
-          </Link>
-          <Link
-            href="/clients"
-            onClick={onClose}
-            className="block px-1 text-xs text-white/40 hover:text-white/70 transition-colors"
-          >
-            &rarr; View all sectors
-          </Link>
-        </div>
-
-        <CTAColumn />
-      </div>
-    </div>
-  );
-}
-
 function MobileDrawer({
   onClose,
 }: {
   onClose: () => void;
 }) {
   const [servicesOpen, setServicesOpen] = useState(false);
-  const [clientsOpen, setClientsOpen] = useState(false);
 
   return (
     <div
@@ -422,72 +283,10 @@ function MobileDrawer({
         )}
       </div>
 
-      <div>
-        <button
-          onClick={() => setClientsOpen(!clientsOpen)}
-          className="w-full flex items-center justify-between px-4 py-4 border-b border-white/[0.06]"
-        >
-          <span className="text-sm font-medium text-white/75 tracking-wide">
-            Clients
-          </span>
-          <ChevronDown
-            className={`w-4 h-4 text-white/40 transition-transform duration-200 ${clientsOpen ? "rotate-180" : ""}`}
-          />
-        </button>
-        {clientsOpen && (
-          <div className="border-b border-white/[0.06]">
-            {[
-              {
-                label: "Companies & family businesses",
-                href: "/clients/corporate",
-              },
-              {
-                label: "Government & public sector",
-                href: "/clients/government",
-              },
-              {
-                label: "Industry and professional associations, peak bodies",
-                href: "/clients/industry-associations",
-              },
-              {
-                label: "Independent and faith-based schools",
-                href: "/clients/schools-faith",
-              },
-              {
-                label: "Legal & professional services",
-                href: "/clients/corporate",
-              },
-              {
-                label: "Health & aged care",
-                href: "/clients/corporate",
-              },
-              {
-                label: "Pacific islands",
-                href: "/pacific",
-              },
-              {
-                label: "Faith-based organisations",
-                href: "/clients/schools-faith",
-              },
-            ].map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={onClose}
-                className="flex items-center justify-between pl-7 pr-4 py-3 border-b border-white/[0.04] text-sm text-white/60 hover:text-white/90 transition-colors"
-              >
-                {item.label}
-                <span className="text-white/20 text-xs">&rsaquo;</span>
-              </Link>
-            ))}
-          </div>
-        )}
-      </div>
-
       {[
         { label: "Crisis", href: "/services/crisis-communications" },
         { label: "Pacific", href: "/pacific" },
-        { label: "Media training", href: "/media-training" },
+        { label: "Industry Associations", href: "/clients/industry-associations" },
         { label: "Case studies", href: "/case-studies" },
         { label: "About", href: "/about" },
         { label: "Contact", href: "/contact" },
@@ -526,7 +325,7 @@ function MobileDrawer({
 const directLinks = [
   { label: "Crisis", href: "/services/crisis-communications" },
   { label: "Pacific", href: "/pacific" },
-  { label: "Media training", href: "/media-training" },
+  { label: "Industry Associations", href: "/clients/industry-associations" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
   { label: "Insights", href: "/insights" },
@@ -574,7 +373,7 @@ export function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const handleMouseEnter = useCallback((panel: "services" | "clients") => {
+  const handleMouseEnter = useCallback((panel: "services") => {
     if (closeTimerRef.current) clearTimeout(closeTimerRef.current);
     openTimerRef.current = setTimeout(() => setActivePanel(panel), 200);
   }, []);
@@ -648,40 +447,6 @@ export function Nav() {
                 />
               </button>
               {activePanel === "services" && (
-                <div
-                  className="absolute left-1/2 -translate-x-1/2 top-full"
-                  style={{
-                    width: 0,
-                    height: 0,
-                    borderLeft: "6px solid transparent",
-                    borderRight: "6px solid transparent",
-                    borderBottom: "6px solid #0F1F36",
-                  }}
-                />
-              )}
-            </div>
-
-            {/* Clients mega panel trigger */}
-            <div
-              className="relative"
-              onMouseEnter={() => handleMouseEnter("clients")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <button
-                type="button"
-                className={`${navItemBase} ${isActive("/clients") ? navItemActive : navItemIdle} flex items-center gap-1`}
-                aria-expanded={activePanel === "clients"}
-                aria-haspopup="true"
-                onClick={() =>
-                  setActivePanel((p) => (p === "clients" ? null : "clients"))
-                }
-              >
-                Clients
-                <ChevronDown
-                  className={`w-3 h-3 transition-transform duration-150 ${activePanel === "clients" ? "rotate-180" : ""}`}
-                />
-              </button>
-              {activePanel === "clients" && (
                 <div
                   className="absolute left-1/2 -translate-x-1/2 top-full"
                   style={{
@@ -781,18 +546,6 @@ export function Nav() {
         onMouseLeave={handleMouseLeave}
       >
         <ServicesPanel onClose={closePanel} />
-      </div>
-
-      <div
-        className={`hidden md:block absolute left-0 right-0 top-full bg-[#0F1F36] border-t border-brand-gold/[0.15] z-50 transition-opacity duration-150 ${
-          activePanel === "clients"
-            ? "opacity-100"
-            : "opacity-0 pointer-events-none"
-        }`}
-        onMouseEnter={cancelClose}
-        onMouseLeave={handleMouseLeave}
-      >
-        <ClientsPanel onClose={closePanel} />
       </div>
     </div>
   );

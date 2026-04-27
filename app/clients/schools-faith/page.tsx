@@ -331,6 +331,7 @@ export default function SchoolsFaithPage() {
       <FAQSection
         items={faqs}
         titleText="Common questions from school and faith-based leaders"
+        expandable={false}
       />
 
       <PageClosingCTA

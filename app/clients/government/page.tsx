@@ -169,6 +169,7 @@ export default function GovernmentClientsPage() {
       <FAQSection
         items={faqs}
         titleText="Common questions about government communications support"
+        expandable={false}
       />
 
       <PageClosingCTA

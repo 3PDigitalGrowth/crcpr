@@ -227,8 +227,8 @@ export default function CrisisCommunicationsPage() {
                 <p className="text-charcoal text-[15px] leading-relaxed">
                   A tailored and tested crisis communications plan is essential
                   for every organisation, but it must be accompanied by a
-                  readiness, both logistical and emotional, to respond to any
-                  issue or crisis.
+                  readiness &ndash; logistical and emotional &ndash; to respond
+                  to any issue or crisis.
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
                   CRC Public Relations believes that readiness means
@@ -258,20 +258,22 @@ export default function CrisisCommunicationsPage() {
                   greater the material impact becomes.&rdquo;
                 </blockquote>
                 <p className="mt-4 pl-5 text-charcoal-mid text-sm font-sans font-medium">
-                  Melissa Agnes, CEO of the Crisis Ready Institute
+                  Melissa Agnes, CEO of the Crisis Ready Institute (presenter
+                  of our Crisis Masterclass for crisis leaders)
                 </p>
               </aside>
 
               <div className="space-y-6 mt-8">
                 <p className="text-charcoal text-[15px] leading-relaxed">
-                  But there is good news. As Melissa Agnes also notes: &ldquo;The
-                  Crisis Response Penalty is preventable&hellip; when you have
-                  the right mindset, skillset, and capabilities in place&rdquo;.
+                  But as Melissa also notes: &ldquo;The Crisis Response Penalty
+                  is preventable&hellip; when you have the right mindset,
+                  skillset, and capabilities in place&rdquo;.
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
-                  That&apos;s why preparation and the right guidance not only
-                  helps to navigate through a crisis, but to turn it into an
-                  opportunity to build even greater trust.
+                  In a crisis, hesitation and overreaction can be equally
+                  costly. That&apos;s why preparation and the right guidance
+                  not only helps to navigate through a crisis, but to turn them
+                  into opportunities to build even greater trust.
                 </p>
               </div>
             </div>
@@ -516,6 +518,7 @@ export default function CrisisCommunicationsPage() {
         items={faqs}
         titleText="Common questions about crisis communications support"
         columns={3}
+        expandable={false}
       />
 
       <PageClosingCTA

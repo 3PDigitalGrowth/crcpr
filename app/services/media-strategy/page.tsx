@@ -85,7 +85,7 @@ export default function MediaStrategyPage() {
         asidePreset="mediaEditorial"
         eyebrow="Media strategy"
         title="A trusted media presence doesn't happen by accident."
-        description="We help you build a strong public presence that positions you as the trusted voice in your sector. You work directly with advisers who not only understand how the media works, but how media coverage supports, or in some cases doesn't support, your overall objectives."
+        description="We help you build a strong public presence that positions you as the trusted voice in your sector. You work directly with advisers who not only understand how the media works, but how media coverage supports - or in some cases doesn’t support - your overall objectives."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
         heroImage={{

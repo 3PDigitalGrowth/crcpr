@@ -109,6 +109,7 @@ export default function LyallMercerPage() {
                     name={item.name}
                     logoSrc={item.logoSrc}
                     variant="onLight"
+                    tone={item.tone}
                   />
                 ))}
               </div>

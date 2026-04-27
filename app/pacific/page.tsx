@@ -542,6 +542,7 @@ export default function PacificPage() {
       <FAQSection
         items={faqs}
         titleText="Common questions about Pacific advisory work"
+        expandable={false}
       />
 
       <PageClosingCTA

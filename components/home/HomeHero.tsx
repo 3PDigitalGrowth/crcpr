@@ -230,6 +230,7 @@ export function HomeHero() {
                         name={link.name}
                         logoSrc={link.logoSrc}
                         variant="onDark"
+                        tone={link.tone}
                       />
                     </AnimateIn>
                   ))}

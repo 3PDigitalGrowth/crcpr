@@ -481,6 +481,7 @@ Your reputation is at the core of our communications strategies. This includes u
       <FAQSection
         items={faqs}
         titleText="Common questions about reputation management"
+        expandable={false}
       />
 
       <PageClosingCTA

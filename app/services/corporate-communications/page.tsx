@@ -527,6 +527,7 @@ export default function CorporateCommunicationsPage() {
       <FAQSection
         items={faqs}
         titleText="Common questions about corporate communications support"
+        expandable={false}
       />
 
       <PageClosingCTA

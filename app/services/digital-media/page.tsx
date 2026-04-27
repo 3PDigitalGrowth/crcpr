@@ -114,9 +114,9 @@ export default function DigitalMediaPage() {
                 The digital media age puts more pressure on your reputation.
               </h1>
               <p className="text-white/75 text-lg leading-relaxed mt-6 max-w-2xl">
-                Your &lsquo;owned media&rsquo;, your digital and social media
-                channels, carries your messages and news. It&apos;s also where
-                reputations are increasingly won and lost.
+                Your &lsquo;owned media&rsquo; &mdash; digital and social media
+                channels &mdash; carries your messages and news. It&apos;s also
+                where reputations are increasingly won and lost.
               </p>
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mt-8">
                 <Link
@@ -316,7 +316,7 @@ export default function DigitalMediaPage() {
                   },
                   {
                     title: "Delayed decisions",
-                    body: "By the time leadership is briefed, the issue has evolved or widened in impact, or there is no response at all.",
+                    body: "By the time leadership is briefed the issue has evolved or widened in impact, or there is no response.",
                   },
                 ].map((item) => (
                   <div
@@ -557,6 +557,7 @@ export default function DigitalMediaPage() {
       <FAQSection
         items={faqs}
         titleText="Common questions about digital reputation management"
+        expandable={false}
       />
 
       <PageClosingCTA

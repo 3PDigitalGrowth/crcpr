@@ -384,6 +384,7 @@ export default function MediaTrainingPage() {
       <FAQSection
         items={faqs}
         titleText="Common questions about media training"
+        expandable={false}
       />
 
       <PageClosingCTA

@@ -225,6 +225,7 @@ export default function ClientsPage() {
       <FAQSection
         items={faqs}
         titleText="Common questions about CRC Public Relations' sector expertise"
+        expandable={false}
       />
 
       <PageClosingCTA

@@ -478,6 +478,7 @@ export default function IndustryAssociationsPage() {
       <FAQSection
         items={faqs}
         titleText="Common questions from association and peak-body leaders"
+        expandable={false}
       />
 
       <PageClosingCTA

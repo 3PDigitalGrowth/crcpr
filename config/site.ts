@@ -43,38 +43,72 @@ export const siteConfig = {
     quote:
       "You have 15 minutes to respond to an emerging crisis before you start to lose control of the message.",
     mediaOutlets: [
-      "ABC News",
-      "The Australian",
-      "Sky News",
-      "AFR",
+      "ABC",
       "ABC Radio",
+      "The Australian",
+      "The Daily Telegraph",
+      "AFR",
+      "Sky News",
+      "Associated Press",
+      "Australian Associated Press",
     ],
     mediaLinks: [
       // TODO: replace each href with specific article URL when confirmed
+      // tone: "mono" silhouettes the logo (good for text-shaped marks).
+      //       "color" preserves brand colors (good for fill-block logos).
       {
-        name: "ABC News",
+        name: "ABC",
         href: "https://lyallmercer.com",
-        logoSrc: "/images/media-outlets/abc-news.png",
-      },
-      {
-        name: "The Australian",
-        href: "https://lyallmercer.com",
-        logoSrc: "/images/media-outlets/the-australian.png",
-      },
-      {
-        name: "Sky News",
-        href: "https://lyallmercer.com",
-        logoSrc: "/images/media-outlets/sky-news.png",
-      },
-      {
-        name: "AFR",
-        href: "https://lyallmercer.com",
-        logoSrc: "/images/media-outlets/afr.png",
+        logoSrc: "/images/media-outlets/abc.png",
+        tone: "mono" as const,
       },
       {
         name: "ABC Radio",
         href: "https://lyallmercer.com",
         logoSrc: "/images/media-outlets/abc-radio.png",
+        tone: "color" as const,
+      },
+      {
+        name: "The Australian",
+        href: "https://lyallmercer.com",
+        logoSrc: "/images/media-outlets/the-australian.png",
+        tone: "mono" as const,
+      },
+      {
+        name: "The Daily Telegraph",
+        href: "https://lyallmercer.com",
+        logoSrc: "/images/media-outlets/daily-telegraph.png",
+        tone: "mono" as const,
+      },
+      {
+        name: "AFR",
+        href: "https://lyallmercer.com",
+        logoSrc: "/images/media-outlets/afr.png",
+        tone: "color" as const,
+      },
+      {
+        name: "Sky News",
+        href: "https://lyallmercer.com",
+        logoSrc: "/images/media-outlets/sky-news.png",
+        tone: "color" as const,
+      },
+      {
+        name: "Associated Press",
+        href: "https://lyallmercer.com",
+        logoSrc: "/images/media-outlets/ap.png",
+        tone: "mono" as const,
+      },
+      {
+        name: "Australian Associated Press",
+        href: "https://lyallmercer.com",
+        logoSrc: "/images/media-outlets/aap.png",
+        tone: "color" as const,
+      },
+      {
+        name: "APP",
+        href: "https://lyallmercer.com",
+        logoSrc: "/images/media-outlets/news-app.png",
+        tone: "mono" as const,
       },
     ],
   },

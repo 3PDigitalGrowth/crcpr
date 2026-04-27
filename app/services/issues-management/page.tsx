@@ -558,6 +558,7 @@ export default function IssuesManagementPage() {
       <FAQSection
         items={faqs}
         titleText="Common questions about issues management"
+        expandable={false}
       />
 
       <PageClosingCTA

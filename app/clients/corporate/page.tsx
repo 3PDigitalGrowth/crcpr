@@ -169,6 +169,7 @@ export default function CorporateClientsPage() {
       <FAQSection
         items={faqs}
         titleText="Common questions from corporate clients"
+        expandable={false}
       />
 
       <PageClosingCTA

@@ -6,6 +6,7 @@ export interface LeadMagnetMeta {
   title: string;
   description: string;
   fileName: string;
+  available?: boolean;
 }
 
 export interface FormState {

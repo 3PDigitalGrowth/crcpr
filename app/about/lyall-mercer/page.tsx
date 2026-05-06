@@ -214,10 +214,10 @@ export default function LyallMercerPage() {
       </section>
 
       <LeadMagnetBanner
-        magnet="mediaInterviewGuide"
+        magnet="publicVoiceSteps"
         variant="light"
-        title="Want to see the kind of media preparation Lyall expects before a high-pressure interview?"
-        description="Download the CRC Public Relations Media Interview Preparation Guide. It reflects the practical, journalist-informed approach Lyall Mercer brings to media strategy, spokesperson readiness, and executive preparation."
+        title="Are you ready to raise your public profile and be the trusted voice of authority for your area of expertise?"
+        description="Download the CRC Public Relations '5 steps to becoming a trusted public voice', and drive new clients and staff through the credibility this brings. Applies to companies, non-profits, governments, professional services firms, schools and associations."
       />
 
       <InlineEnquirySection

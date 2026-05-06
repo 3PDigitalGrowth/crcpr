@@ -470,9 +470,15 @@ export default function IndustryAssociationsPage() {
       </section>
 
       <LeadMagnetBanner
-        magnet="associationCrisisGuide"
-        title="Free: Industry association crisis guide"
-        description="A practical guide for association CEOs and executive officers covering the crisis types most likely to affect a peak body: regulatory, member conduct, governance, media, and digital pressure, with a framework for managing each."
+        magnet="associationsPRChecklist"
+        title="Is your association communicating in a way that builds trust with members, government, and the media?"
+        description="Is your industry or professional association communicating in a way that builds member trust, supports your advocacy, and builds trust with stakeholders including government and regulators? Are you the voice the media seeks out for regular expert commentary? This checklist is created from 15+ years of association experience and is a great place to start."
+        highlights={[
+          "Built from 15+ years of association advisory work",
+          "Covers member trust, advocacy, and media authority",
+          "We'll send it the moment it is published",
+        ]}
+        whatYouGetBody="A practical PR and communications strategy checklist for industry and professional associations. Sign up now and we'll email it the moment it goes live."
       />
 
       <FAQSection

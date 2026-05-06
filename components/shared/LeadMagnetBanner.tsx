@@ -21,7 +21,7 @@ export interface LeadMagnetBannerProps {
 export function LeadMagnetBanner({
   magnet,
   variant = "dark",
-  eyebrow = "Free resource",
+  eyebrow,
   title,
   description,
   highlights = [
@@ -31,12 +31,23 @@ export function LeadMagnetBanner({
   ],
   whatYouGetTitle = "What you get",
   whatYouGetBody = "A practical resource designed to help leadership teams make a better decision sooner.",
-  buttonLabel = "Download free resource →",
-  footnote = "Delivered to your inbox. No commitment required.",
+  buttonLabel,
+  footnote,
 }: LeadMagnetBannerProps) {
   const [modalOpen, setModalOpen] = useState(false);
   const meta = siteConfig.leadMagnets[magnet];
   const isDark = variant === "dark";
+  const isComingSoon = meta.available === false;
+  const resolvedEyebrow =
+    eyebrow ?? (isComingSoon ? "Coming soon" : "Free resource");
+  const resolvedButtonLabel =
+    buttonLabel ??
+    (isComingSoon ? "Notify me when it is ready →" : "Download free resource →");
+  const resolvedFootnote =
+    footnote ??
+    (isComingSoon
+      ? "We will email you the moment this resource is published. No spam."
+      : "Delivered to your inbox. No commitment required.");
 
   return (
     <>
@@ -55,7 +66,7 @@ export function LeadMagnetBanner({
           >
             <div className="p-8 md:p-10">
               <p className="text-brand-teal text-xs font-medium">
-                {eyebrow}
+                {resolvedEyebrow}
               </p>
               <h2
                 className={`text-3xl font-heading font-black mt-3 ${
@@ -118,14 +129,14 @@ export function LeadMagnetBanner({
                   onClick={() => setModalOpen(true)}
                   className="bg-brand-teal text-white font-heading font-black text-sm w-full py-4 rounded-[4px] hover:bg-link-teal transition mt-8"
                 >
-                  {buttonLabel}
+                  {resolvedButtonLabel}
                 </button>
                 <p
                   className={`text-xs mt-3 ${
                     isDark ? "text-white/50" : "text-text-caption"
                   }`}
                 >
-                  {footnote}
+                  {resolvedFootnote}
                 </p>
               </div>
             </div>

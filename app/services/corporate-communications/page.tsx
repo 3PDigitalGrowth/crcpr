@@ -512,16 +512,16 @@ export default function CorporateCommunicationsPage() {
       </section>
 
       <LeadMagnetBanner
-        magnet="crisisPlanTemplate"
+        magnet="corpCommsChecklist"
         variant="dark"
         title="Is your organisation's communications strategy ready for scrutiny?"
-        description="Download the CRC Public Relations Crisis Communications Plan Template, the framework we use with listed companies, government departments, and associations to define escalation pathways, stakeholder sequencing, and message discipline before pressure arrives."
+        description="Download the CRC Public Relations 10 point communications checklist. This provides you with 10 key areas that together ensure your communication isn't random, but is strategically planned with the aim of building ongoing trust with your stakeholders. Applies to companies, non-profits, governments, professional services firms, schools and associations."
         highlights={[
-          "Useful for boards and executive teams",
-          "Clarifies escalation and approval pathways",
-          "Built for real stakeholder pressure",
+          "10 strategic communication checkpoints",
+          "Useful for boards, executives, and comms leaders",
+          "Built to surface trust and reputation gaps",
         ]}
-        whatYouGetBody="A practical framework for leadership teams that need stronger communications control before the next sensitive matter becomes public."
+        whatYouGetBody="A 10 point checklist that helps your team identify whether your communications strategy is strategically planned to build ongoing stakeholder trust, or leaving you exposed."
       />
 
       <FAQSection

@@ -1,10 +1,12 @@
 "use server";
 
+import { siteConfig } from "@/config/site";
 import { sendAssessmentEmail } from "@/lib/email/sendAssessmentEmail";
 import {
   ASSESSMENT_CATEGORIES,
   type AssessmentCategory,
 } from "@/lib/email/assessmentEmail";
+import type { LeadMagnetKey } from "@/types";
 
 export type FormState = {
   status: "idle" | "success" | "error";
@@ -49,13 +51,27 @@ export async function submitLeadMagnet(
     return { status: "error", message: "Please provide your name and email." };
   }
 
-  // TODO: Connect to ActiveCampaign, add to CRC PR nurture list with magnet tag
-  // TODO: Trigger automated email with download link
-  console.log("Lead magnet requested:", { firstName, email, organisation, magnet });
+  const magnetMeta =
+    siteConfig.leadMagnets[magnet as LeadMagnetKey] ?? null;
+  const isWaitlist = magnetMeta ? magnetMeta.available === false : false;
+
+  // TODO: Connect to ActiveCampaign, add to CRC PR nurture list with magnet tag.
+  // Waitlist signups (resource not yet published) should be routed to the
+  // dedicated "coming soon" list so they are emailed once the PDF is ready.
+  // TODO: Trigger automated email with download link (or waitlist confirmation).
+  console.log("Lead magnet requested:", {
+    firstName,
+    email,
+    organisation,
+    magnet,
+    waitlist: isWaitlist,
+  });
 
   return {
     status: "success",
-    message: "Check your inbox. Your resource is on its way.",
+    message: isWaitlist
+      ? "Thanks. We will email you the moment this resource is published."
+      : "Check your inbox. Your resource is on its way.",
   };
 }
 

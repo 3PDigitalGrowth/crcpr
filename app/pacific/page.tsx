@@ -3,7 +3,6 @@ import { ImageTextRow } from "@/components/layout/ImageTextRow";
 import { PageHero } from "@/components/layout/PageHero";
 import { FAQSection } from "@/components/shared/FAQSection";
 import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
-import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
 import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
 import { PageProofStrip } from "@/components/shared/PageProofStrip";
 import {
@@ -532,12 +531,6 @@ export default function PacificPage() {
           </p>
         </div>
       </section>
-
-      <LeadMagnetBanner
-        magnet="pacificGuide"
-        title="Free: Pacific Stakeholder Engagement Guide"
-        description="A practical guide to cross-cultural communications and stakeholder engagement across Pacific Island nations. Covers protocol, government relations, development communication, and the decisions that protect long-term relationships in Pacific contexts."
-      />
 
       <FAQSection
         items={faqs}

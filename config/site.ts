@@ -124,6 +124,7 @@ export const siteConfig = {
       description:
         "20 questions across 5 risk areas. Instantly identifies where your organisation is exposed.",
       fileName: "crcpr-reputation-vulnerability-assessment.pdf",
+      available: true,
     },
     crisisPlanTemplate: {
       title:
@@ -131,30 +132,63 @@ export const siteConfig = {
       description:
         "Most organisations have a crisis plan they approved and filed. Very few have exercised it under simulated pressure with their actual team. Download the CRC Public Relations Crisis Communications Plan Template, the same framework we use with clients across Australia to build plans that work when everything else is under pressure.",
       fileName: "crcpr-crisis-communications-plan-template.pdf",
+      available: true,
     },
     mediaInterviewGuide: {
       title: "Media Interview Preparation Guide",
       description:
         "Pre-interview checklist and briefing framework for executives and spokespeople.",
       fileName: "crcpr-media-interview-guide.pdf",
+      available: true,
     },
     associationCrisisGuide: {
       title: "Industry Association Crisis Guide",
       description:
         "For association CEOs and executive officers facing regulatory crisis, member controversy, or board governance pressure.",
       fileName: "crcpr-association-crisis-guide.pdf",
+      available: true,
     },
     schoolsPlaybook: {
       title: "School Crisis Communications Playbook",
       description:
         "Covers parent communications, media management, board governance, and social media incidents for school leaders.",
       fileName: "crcpr-schools-crisis-playbook.pdf",
+      available: true,
     },
     pacificGuide: {
       title: "Pacific Stakeholder Engagement Guide",
       description:
         "Practical guide to cross-cultural communications and stakeholder engagement across Pacific island nations.",
       fileName: "crcpr-pacific-stakeholder-guide.pdf",
+      available: true,
+    },
+    corpCommsChecklist: {
+      title: "10 Point Corporate Communications Checklist",
+      description:
+        "Is your organisation's communications strategy ready for scrutiny? The CRC Public Relations 10 point communications checklist sets out 10 key areas that, together, ensure your communication isn't random, but is strategically planned with the aim of building ongoing trust with your stakeholders. Applies to companies, non-profits, governments, professional services firms, schools and associations.",
+      fileName: "crcpr-corporate-communications-checklist.pdf",
+      available: true,
+    },
+    publicVoiceSteps: {
+      title: "5 Steps to Becoming a Trusted Public Voice",
+      description:
+        "Are you ready to raise your public profile and be the trusted voice of authority for your area of expertise? Download the CRC Public Relations '5 steps to becoming a trusted public voice', and drive new clients and staff through the credibility this brings. Applies to companies, non-profits, governments, professional services firms, schools and associations.",
+      fileName: "crcpr-5-steps-public-voice.pdf",
+      available: true,
+    },
+    crisisReadinessChecklist: {
+      title: "The Essential Crisis Readiness Checklist",
+      description:
+        "Is your organisation prepared for a crisis? Help future-proof your organisation by identifying areas of vulnerability and risk that can lead to reputational damage. This is by no means an exhaustive list but it's a great start. Used by Australian communications teams, HR managers, and executive leaders. 30 questions to assess your organisation's real crisis readiness, with an action plan for every gap.",
+      fileName: "crcpr-crisis-readiness-checklist.pdf",
+      available: true,
+    },
+    associationsPRChecklist: {
+      title: "PR and Communication Strategy Checklist for Associations",
+      description:
+        "Is your industry or professional association communicating in a way that builds member trust, supports your advocacy, and builds trust with stakeholders including government and regulators? Are you the voice the media seeks out for regular expert commentary? This checklist is created from 15+ years of association experience and is a great place to start.",
+      fileName: "crcpr-associations-pr-checklist.pdf",
+      available: false,
     },
   },
 

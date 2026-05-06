@@ -33,6 +33,18 @@ export function LeadMagnetModal({
   const [formState, setFormState] = useState<FormState>(initialFormState);
 
   const meta = siteConfig.leadMagnets[magnet];
+  const isComingSoon = meta.available === false;
+  const eyebrowLabel = isComingSoon ? "Coming soon" : "Free download";
+  const submitLabel = isComingSoon
+    ? isSubmitting
+      ? "Adding you to the list..."
+      : "Notify me when ready"
+    : isSubmitting
+      ? "Sending..."
+      : "Send me the resource";
+  const successMessage = isComingSoon
+    ? `Thanks. We will email you the moment ${meta.title} is published.`
+    : `Check your inbox. ${meta.title} is on its way.`;
 
   useEffect(() => {
     if (!isOpen) return;
@@ -92,7 +104,7 @@ export function LeadMagnetModal({
         </button>
 
         <p className="text-brand-teal text-xs font-medium">
-          Free download
+          {eyebrowLabel}
         </p>
         <h3
           id="lead-magnet-modal-title"
@@ -109,9 +121,7 @@ export function LeadMagnetModal({
               strokeWidth={1.75}
               aria-hidden
             />
-            <p className="text-text-body text-center">
-              Check your inbox. {meta.title} is on its way.
-            </p>
+            <p className="text-text-body text-center">{successMessage}</p>
             <button
               type="button"
               onClick={onClose}
@@ -174,7 +184,7 @@ export function LeadMagnetModal({
               disabled={isSubmitting}
               className="bg-brand-teal text-white font-heading font-black text-sm w-full py-3 rounded-[4px] mt-4 hover:bg-link-teal transition disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              Send me the resource
+              {submitLabel}
             </button>
           </form>
         )}

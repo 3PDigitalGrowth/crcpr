@@ -218,10 +218,10 @@ export default function InsightsPage() {
       </section>
 
       <LeadMagnetBanner
-        magnet="crisisPlanTemplate"
+        magnet="crisisReadinessChecklist"
         variant="light"
-        title="Want a practical framework before the next issue becomes urgent?"
-        description="Download our Crisis Communications Plan Template. It is a useful next step if one of these articles has highlighted a gap in your organisation's preparedness, escalation, or message discipline."
+        title="Is your organisation prepared for a crisis?"
+        description="Help future-proof your organisation by identifying areas of vulnerability and risk that can lead to reputational damage. This is by no means an exhaustive list but it's a great start. Used by Australian communications teams, HR managers, and executive leaders. 30 questions to assess your organisation's real crisis readiness, with an action plan for every gap."
       />
 
       <PageClosingCTA

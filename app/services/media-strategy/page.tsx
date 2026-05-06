@@ -392,10 +392,6 @@ export default function MediaStrategyPage() {
                   detail: "Global news story",
                 },
                 {
-                  location: "Baghdad",
-                  detail: "International military coalition",
-                },
-                {
                   location: "France",
                   detail: "Global news story",
                 },

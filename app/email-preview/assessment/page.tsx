@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { render } from "@react-email/render";
 import {
   AssessmentEmail,
@@ -7,6 +7,11 @@ import {
 } from "@/lib/email/assessmentEmail";
 
 export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = {
+  title: "Assessment email preview",
+  robots: { index: false, follow: false },
+};
 
 interface SamplePreset {
   band: "low" | "mid" | "high";
@@ -63,10 +68,6 @@ export default async function AssessmentEmailPreviewPage({
 }: {
   searchParams?: Promise<{ band?: string }>;
 }) {
-  if (process.env.NODE_ENV === "production") {
-    notFound();
-  }
-
   const params = (await searchParams) ?? {};
   const requested = (params.band ?? "low") as SamplePreset["band"];
   const sample = samples.find((s) => s.band === requested) ?? samples[0];
@@ -98,7 +99,7 @@ export default async function AssessmentEmailPreviewPage({
             margin: 0,
           }}
         >
-          Dev preview
+          Internal preview
         </p>
         <h1
           style={{
@@ -110,8 +111,8 @@ export default async function AssessmentEmailPreviewPage({
           Assessment completion email
         </h1>
         <p style={{ fontSize: 13, color: "#cbd5e1", marginTop: 6 }}>
-          Showing: <strong>{sample.label}</strong> — switch with the links
-          below. Not visible in production.
+          Showing: <strong>{sample.label}</strong>. Switch sample bands with
+          the links below.
         </p>
         <nav style={{ marginTop: 14, display: "flex", gap: 12 }}>
           {samples.map((s) => {

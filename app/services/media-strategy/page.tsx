@@ -4,14 +4,14 @@ import { PageHero } from "@/components/layout/PageHero";
 import { FAQSection } from "@/components/shared/FAQSection";
 import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
 import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
+import { MediaReachSnapshot } from "@/components/shared/MediaReachSnapshot";
 import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
-import { PageProofStrip } from "@/components/shared/PageProofStrip";
 
 export const metadata: Metadata = {
   title:
     "Media Relations & Strategy PR Australia | CRC Public Relations",
   description:
-    "Proactive media strategy, journalist relationship management, and sustained media presence for Australian organisations. Senior advisers with broad media and editorial experience. Brisbane-based, national reach.",
+    "Proactive media strategy, journalist relationship management, and sustained media presence for Australian organisations. Documented media reach including 221 placements for one client in a single month. Senior advisers with broad media and editorial experience. Brisbane-based, national reach.",
 };
 
 const jsonLd = {
@@ -92,11 +92,11 @@ export default function MediaStrategyPage() {
           src: "/images/services/media-strategy/hero.webp",
           alt: "Broadcast studio or media room viewed from behind camera with microphone and warm lighting",
         }}
-      />
-
-      <PageProofStrip
-        title="Being quoted is not the goal. Being trusted is."
-        items={[...proofItems]}
+        proofStrip={{
+          eyebrow: "Why CRC Public Relations",
+          title: "Being quoted is not the goal. Being trusted is.",
+          items: proofItems,
+        }}
       />
 
       {/* Opening section */}
@@ -495,6 +495,10 @@ export default function MediaStrategyPage() {
           </div>
         </div>
       </section>
+
+      <div id="media-reach-snapshot">
+        <MediaReachSnapshot />
+      </div>
 
       <LeadMagnetBanner
         magnet="mediaInterviewGuide"

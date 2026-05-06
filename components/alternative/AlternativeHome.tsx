@@ -14,6 +14,7 @@ import { siteConfig } from "@/config/site";
 import { AnimateIn } from "@/components/shared/AnimateIn";
 import { FAQSection } from "@/components/shared/FAQSection";
 import { CaseStudies } from "@/components/shared/CaseStudies";
+import { MediaReachSnapshot } from "@/components/shared/MediaReachSnapshot";
 
 import { HomeTestimonials } from "@/components/home/HomeTestimonials";
 import { MediaOutletLogoLink } from "@/components/shared/MediaOutletLogoLink";
@@ -761,6 +762,12 @@ export function AlternativeHome({ faqItems }: AlternativeHomeProps) {
       <AlternativeClients />
       <AlternativeAbout />
       <HomeTestimonials />
+
+      <MediaReachSnapshot
+        compact
+        href="/services/media-strategy#media-reach-snapshot"
+        hrefLabel="See the full breakdown on Media Strategy"
+      />
 
       <section className="py-20 md:py-28 bg-off-white">
         <div className="max-w-7xl mx-auto px-6">

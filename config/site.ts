@@ -178,6 +178,47 @@ export const siteConfig = {
     requestUrl: "/contact?source=capability-statement",
   },
 
+  mediaReachSnapshot: {
+    period: "April",
+    clientDescriptor:
+      "mid-sized, Brisbane-based professional services firm with national reach",
+    storyCount: 4,
+    total: 221,
+    breakdown: [
+      { label: "Online articles", value: 93 },
+      { label: "Newspaper print articles", value: 2 },
+      { label: "Radio stories", value: 67 },
+      { label: "TV stories (via syndication)", value: 59 },
+    ],
+    clientLed: {
+      total: 175,
+      note: "stories led by the client (client as the focus of the story)",
+      items: [
+        { label: "Online", value: 48 },
+        { label: "Print", value: 1 },
+        { label: "Radio (incl. long-form ABC Sydney interview)", value: 67 },
+        { label: "TV", value: 59 },
+      ],
+    },
+    expertComment: {
+      total: 46,
+      note: "stories where the client featured as an expert voice",
+    },
+    source:
+      "Independently verified via Isentia media monitoring. Coverage spanned every major Australian television network and most national newspaper, digital and radio brands.",
+    intro: {
+      eyebrow: "Snapshot of expertise",
+      headline:
+        "What proactive media relations can produce in a single month.",
+      body: [
+        "Four media stories developed for one client across April generated 221 placements nationally — across television, radio, print and digital.",
+        "Reach of this scale is not the standard outcome of every campaign. Coverage depends on the story, the strategy, and the news cycle. It is shown here as evidence of what disciplined media relations is capable of producing when those elements align.",
+      ],
+    },
+    caveat:
+      "Anonymised. Indicative of capability, not a guaranteed result.",
+  },
+
   caseStudies: [
     {
       id: "legislation-amended",

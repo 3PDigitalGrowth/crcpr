@@ -7,6 +7,18 @@ import {
   type PageHeroAsidePreset,
 } from "@/config/pageHeroAsides";
 
+export interface PageHeroProofItem {
+  label: string;
+  value: string;
+  detail: string;
+}
+
+export interface PageHeroProofStrip {
+  eyebrow?: string;
+  title?: string;
+  items: readonly PageHeroProofItem[];
+}
+
 export interface PageHeroProps {
   eyebrow?: string;
   title: string;
@@ -19,6 +31,12 @@ export interface PageHeroProps {
   asidePreset?: PageHeroAsidePreset;
   /** Override aside copy entirely when a page needs one-off wording */
   asideHighlight?: AsideHighlight;
+  /**
+   * Optional proof strip rendered as a darker band attached to the bottom of
+   * the hero. When provided, removes the need for a separate `PageProofStrip`
+   * section directly below the hero on the page.
+   */
+  proofStrip?: PageHeroProofStrip;
 }
 
 export function PageHero({
@@ -30,6 +48,7 @@ export function PageHero({
   heroImage,
   asidePreset = "seniorAccess",
   asideHighlight,
+  proofStrip,
 }: PageHeroProps) {
   const aside =
     asideHighlight ?? PAGE_HERO_ASIDES[asidePreset];
@@ -37,7 +56,7 @@ export function PageHero({
   return (
     <section
       id="hero-section"
-      className={`relative overflow-hidden py-20 md:py-24 border-b border-white/5 ${
+      className={`relative overflow-hidden ${proofStrip ? "" : "border-b border-white/5"} ${
         heroImage ? "" : "bg-navy"
       }`}
     >
@@ -58,7 +77,7 @@ export function PageHero({
         </>
       ) : null}
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-12 items-end">
           <div className="max-w-4xl">
             {eyebrow ? (
@@ -126,6 +145,50 @@ export function PageHero({
           </div>
         </div>
       </div>
+
+      {proofStrip ? (
+        <div className="relative z-10 bg-[rgba(7,18,40,0.78)] backdrop-blur-[2px] border-t border-white/[0.08]">
+          <div className="max-w-7xl mx-auto px-6 py-10 md:py-12">
+            {proofStrip.title || proofStrip.eyebrow ? (
+              <div className="max-w-3xl mb-8">
+                {proofStrip.eyebrow ? (
+                  <p className="font-sans font-medium tracking-[0.18em] uppercase text-brand-gold text-[10px] mb-3">
+                    {proofStrip.eyebrow}
+                  </p>
+                ) : null}
+                {proofStrip.title ? (
+                  <p className="font-heading font-black text-white text-xl md:text-2xl leading-snug">
+                    {proofStrip.title}
+                  </p>
+                ) : null}
+              </div>
+            ) : null}
+
+            <div
+              className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/[0.08]"
+              role="list"
+            >
+              {proofStrip.items.map((item) => (
+                <div
+                  key={`${item.label}-${item.value}`}
+                  role="listitem"
+                  className="px-0 md:px-8 py-5 md:py-2 first:md:pl-0 last:md:pr-0"
+                >
+                  <p className="text-brand-gold text-[11px] font-sans font-medium tracking-wider uppercase">
+                    {item.label}
+                  </p>
+                  <p className="font-heading font-black text-white text-lg md:text-xl mt-2">
+                    {item.value}
+                  </p>
+                  <p className="text-white/65 text-sm leading-relaxed mt-2">
+                    {item.detail}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      ) : null}
     </section>
   );
 }

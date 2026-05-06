@@ -3,6 +3,7 @@ import Link from "next/link";
 import { PageHero } from "@/components/layout/PageHero";
 import { CaseStudies } from "@/components/shared/CaseStudies";
 import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
+import { MediaReachSnapshot } from "@/components/shared/MediaReachSnapshot";
 import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
 import { PageProofStrip } from "@/components/shared/PageProofStrip";
 
@@ -57,6 +58,8 @@ export default function CaseStudiesPage() {
           },
         ]}
       />
+
+      <MediaReachSnapshot />
 
       <section className="bg-white py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-6">

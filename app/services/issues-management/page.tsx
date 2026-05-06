@@ -530,12 +530,6 @@ export default function IssuesManagementPage() {
                   communications least are the ones that have invested most in
                   issues management.
                 </p>
-                <Link
-                  href="/insights/issues-management-vs-crisis-communications"
-                  className="inline-block text-teal text-[15px] font-medium hover:opacity-80 transition"
-                >
-                  Read our guide to the difference →
-                </Link>
               </div>
             </aside>
           </div>

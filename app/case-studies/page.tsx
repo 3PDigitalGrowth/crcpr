@@ -25,8 +25,8 @@ export default function CaseStudiesPage() {
       <PageHero
         asidePreset="anonymisedOutcomes"
         eyebrow="Client outcomes"
-        title="Results when the stakes are highest."
-        description="Three anonymised outcomes from CRC Public Relations client engagements."
+        title="Results when the needs are great and the stakes are high."
+        description="Four outcomes from CRC Public Relations client engagements."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
         heroImage={{
@@ -48,13 +48,19 @@ export default function CaseStudiesPage() {
             label: "Education",
             value: "Zero enrolment loss",
             detail:
-              "In sensitive school matters, careful parent, board, and media communication can preserve confidence through recovery.",
+              "In sensitive school matters, careful parent, staff and media communication can preserve confidence through recovery.",
           },
           {
             label: "Government",
             value: "Funding secured",
             detail:
               "Strategic communications and stakeholder engagement can materially shape high-value government and development outcomes.",
+          },
+          {
+            label: "Legal firm",
+            value: "Revenue generated",
+            detail:
+              "A proactive, strategic and well-executed media strategy can built trust, drive new clients and increase revenue.",
           },
         ]}
       />
@@ -69,19 +75,48 @@ export default function CaseStudiesPage() {
                 Why we show these
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
-                Measurable outcomes from high-stakes work.
+                Measurable outcomes based on expert counsel.
               </h2>
               <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
-                We do not publicise client work casually. The examples below are
-                here because communications counsel should still be judged
-                by what changed—not by visibility alone.
+                Because we prioritise the confidentiality of our clients, we
+                don&rsquo;t publicise their details. While we can point to
+                countless examples of successful outcomes, we have outlined
+                four here. We list them to make one important point:
+              </p>
+
+              <p className="font-heading font-black text-brand-gold text-2xl md:text-3xl leading-tight mt-6">
+                What matters are results!
               </p>
 
               <div className="space-y-6 mt-8">
                 <p className="text-charcoal-mid text-[15px] leading-relaxed">
-                  That means changes in legislation, preservation of trust,
-                  funding secured, confidence protected, and pressure
-                  stabilised before the long-tail damage sets in.
+                  Many of our clients have been working with us for more than
+                  a decade, some from the time we commenced in 2010. They stay
+                  with us because we bring results, and through results we have
+                  built strong relationships and are now part of their team.
+                  We are proud of our record but we are always striving to be
+                  better, more creative and more proactive.
+                </p>
+                <p className="text-charcoal-mid text-[15px] leading-relaxed">
+                  Results mean different things to each client. To some
+                  it&rsquo;s generating public profile that builds enormous
+                  trust with their clients, potential clients and other
+                  stakeholders who are vital to their success. To others,
+                  it&rsquo;s using media engagement to help them achieve other
+                  objectives.
+                </p>
+                <p className="text-charcoal-mid text-[15px] leading-relaxed">
+                  Of course sometimes media isn&rsquo;t even part of the
+                  strategy. They may need to build trust with their
+                  &lsquo;publics&rsquo; (stakeholders) through direct
+                  engagement, or to be guided through a challenging issue and
+                  ensure it doesn&rsquo;t escalate.
+                </p>
+                <p className="text-charcoal-mid text-[15px] leading-relaxed">
+                  Others may need to navigate through a major issue or crisis
+                  and deal with adversarial stakeholders, social media
+                  warriors, or media. Every time, no matter the need, we stand
+                  beside you.
                 </p>
                 <p className="text-charcoal-mid text-[15px] leading-relaxed">
                   These are anonymised snapshots of the kind of work clients
@@ -103,17 +138,18 @@ export default function CaseStudiesPage() {
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
                     The value is not noise or visibility. It is what changed
-                    because the communication strategy held.
+                    because of the communication strategy adopted.
                   </p>
                 </div>
 
                 <div className="border-l-[3px] border-brand-gold pl-4">
                   <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    Anonymised by design
+                    Not all PR agencies are the same
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
-                    Names and identifying detail stay private so the focus stays
-                    on the result, not on who the client was.
+                    Choosing a PR agency isn&rsquo;t about how slick their
+                    marketing is, or their promises. It&rsquo;s about
+                    relationship and results.
                   </p>
                 </div>
 
@@ -122,8 +158,8 @@ export default function CaseStudiesPage() {
                     Stakes are real
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
-                    The matters shown here involve real policy, reputational,
-                    and organisational consequences.
+                    The matters shown here involve real people and policy,
+                    reputational, and organisational consequences.
                   </p>
                 </div>
               </div>
@@ -134,7 +170,18 @@ export default function CaseStudiesPage() {
 
       <section className="bg-off-white py-20">
         <div className="max-w-7xl mx-auto px-6">
-          <CaseStudies />
+          <CaseStudies
+            columnsClassName="md:grid-cols-2 xl:grid-cols-4"
+            extra={[
+              {
+                id: "legal-revenue",
+                sector: "Legal firm",
+                outcome: "Revenue generated.",
+                outcomeSub:
+                  "A proactive, strategic and well-executed media strategy can built trust, drive new clients and increase revenue.",
+              },
+            ]}
+          />
 
           <div className="flex flex-wrap justify-center gap-4 mt-12">
             {sectorLinks.map((link) => (
@@ -152,7 +199,7 @@ export default function CaseStudiesPage() {
 
       <InlineEnquirySection
         title="Need counsel on a matter where the outcome genuinely matters?"
-        body="If you are navigating a policy fight, a sensitive education issue, a crisis, or a stakeholder engagement challenge with real consequences, we can help shape the result."
+        body="Whatever your communications need, sensitive issue, or stakeholder engagement challenge with real consequences, we can help shape the result."
         bullets={[
           "Strategic communication for high-stakes matters",
           "Experienced advice before or during scrutiny",

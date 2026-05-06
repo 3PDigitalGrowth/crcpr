@@ -36,9 +36,13 @@ const questions: Question[] = [
     category: "Media Readiness",
     text: "How prepared is your team to handle an unexpected media enquiry?",
     options: [
-      { label: "No protocol in place", score: 0 },
-      { label: "Basic protocol exists but untested", score: 1 },
-      { label: "Clear protocol, tested within the last 12 months", score: 2 },
+      { label: "No specific media policy", score: 0 },
+      { label: "Most would know what to do but nothing formal", score: 1 },
+      {
+        label:
+          "A written, understood and tested media policy for all employees",
+        score: 2,
+      },
     ],
   },
   {
@@ -52,11 +56,15 @@ const questions: Question[] = [
   },
   {
     category: "Media Readiness",
-    text: "How would you rate your organisation's relationship with key journalists?",
+    text: "Does your organisation have a proactive media voice?",
     options: [
-      { label: "No established media relationships", score: 0 },
-      { label: "Some contacts but no proactive engagement", score: 1 },
-      { label: "Active, maintained relationships with relevant journalists", score: 2 },
+      { label: "We avoid all media engagement", score: 0 },
+      { label: "We deal with media when they approach us", score: 1 },
+      {
+        label:
+          "Active engagement with media. We are the voice of authority in our industry",
+        score: 2,
+      },
     ],
   },
   // Crisis Preparedness
@@ -99,11 +107,14 @@ const questions: Question[] = [
   // Stakeholder Trust
   {
     category: "Stakeholder Trust",
-    text: "Do you have a current stakeholder map identifying key audiences and their concerns?",
+    text: "Do you have a communications strategy to build trust with each stakeholder?",
     options: [
-      { label: "No stakeholder map", score: 0 },
-      { label: "Informal understanding but not documented", score: 1 },
-      { label: "Documented, current stakeholder map with engagement strategy", score: 2 },
+      { label: "Not much stakeholder communication", score: 0 },
+      { label: "Communicate but with no overall strategy", score: 1 },
+      {
+        label: "Strategic trust-building engagement with all stakeholders",
+        score: 2,
+      },
     ],
   },
   {
@@ -117,7 +128,7 @@ const questions: Question[] = [
   },
   {
     category: "Stakeholder Trust",
-    text: "Do your stakeholders know who to contact in your organisation during a crisis?",
+    text: "Do your stakeholders know who to contact in your organisation when issues arise?",
     options: [
       { label: "No clear contact point communicated", score: 0 },
       { label: "Some stakeholders know, but it's inconsistent", score: 1 },
@@ -126,17 +137,17 @@ const questions: Question[] = [
   },
   {
     category: "Stakeholder Trust",
-    text: "Have you surveyed or assessed stakeholder trust in the last 12 months?",
+    text: "Are your stakeholders (incl staff) your advocates or adversaries?",
     options: [
-      { label: "No", score: 0 },
-      { label: "Informally", score: 1 },
-      { label: "Yes, through a structured survey or assessment", score: 2 },
+      { label: "Don\u2019t know. Haven\u2019t thought about it", score: 0 },
+      { label: "Supportive overall but many issues", score: 1 },
+      { label: "Overwhelmingly advocates who trust us", score: 2 },
     ],
   },
   // Digital Exposure
   {
     category: "Digital Exposure",
-    text: "Does your organisation monitor social media for mentions, sentiment, and emerging issues?",
+    text: "Do you monitor digital and social media for mentions, sentiment, and emerging issues?",
     options: [
       { label: "No monitoring in place", score: 0 },
       { label: "Ad-hoc checks but no systematic monitoring", score: 1 },
@@ -173,9 +184,9 @@ const questions: Question[] = [
   // Governance
   {
     category: "Governance",
-    text: "Is your board briefed on reputation risks and crisis preparedness?",
+    text: "Is your executive leadership and/or board briefed on reputation risks and crisis preparedness?",
     options: [
-      { label: "Board is not briefed on reputation matters", score: 0 },
+      { label: "Briefed on reputation matters", score: 0 },
       { label: "Occasional updates but not structured", score: 1 },
       { label: "Regular, structured reputation risk briefings", score: 2 },
     ],

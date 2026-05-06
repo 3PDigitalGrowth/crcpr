@@ -44,7 +44,6 @@ export const siteConfig = {
       "You have 15 minutes to respond to an emerging crisis before you start to lose control of the message.",
     mediaOutlets: [
       "ABC",
-      "ABC Radio",
       "The Australian",
       "The Daily Telegraph",
       "AFR",
@@ -61,12 +60,6 @@ export const siteConfig = {
         href: "https://lyallmercer.com",
         logoSrc: "/images/media-outlets/abc.png",
         tone: "mono" as const,
-      },
-      {
-        name: "ABC Radio",
-        href: "https://lyallmercer.com",
-        logoSrc: "/images/media-outlets/abc-radio.png",
-        tone: "color" as const,
       },
       {
         name: "The Australian",
@@ -103,12 +96,6 @@ export const siteConfig = {
         href: "https://lyallmercer.com",
         logoSrc: "/images/media-outlets/aap.png",
         tone: "color" as const,
-      },
-      {
-        name: "APP",
-        href: "https://lyallmercer.com",
-        logoSrc: "/images/media-outlets/news-app.png",
-        tone: "mono" as const,
       },
     ],
   },
@@ -220,6 +207,20 @@ export const siteConfig = {
   },
 
   caseStudies: [
+    {
+      id: "legal-firm-class-action",
+      sector: "International legal firm",
+      context:
+        "A legal firm based overseas was weeks away from a statute of limitations deadline for an Australian incident, and their usual approach to generate new clients wasn't working.",
+      challenge:
+        "In only a few weeks, potential claimants in a major class action who resided across many locations had to be found, and the company looked to media exposure for the first time. The problem? It wasn't an obvious media story.",
+      approach:
+        "CRC Public Relations created an innovative media angle and storyline, and a strategy focused on national exposure and a call to action. The campaign, that had never been done in Australia, hit the mark and achieved outstanding results.",
+      outcome: "New clients generated.",
+      outcomeSub:
+        "With a deadline approaching, 100 new claimants were added to a class action. More people were supported financially and company revenue increased by millions of dollars.",
+      icon: "Scale",
+    },
     {
       id: "legislation-amended",
       sector: "National industry association",

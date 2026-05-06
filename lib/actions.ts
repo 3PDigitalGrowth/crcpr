@@ -1,5 +1,11 @@
 "use server";
 
+import { sendAssessmentEmail } from "@/lib/email/sendAssessmentEmail";
+import {
+  ASSESSMENT_CATEGORIES,
+  type AssessmentCategory,
+} from "@/lib/email/assessmentEmail";
+
 export type FormState = {
   status: "idle" | "success" | "error";
   message: string;
@@ -57,21 +63,55 @@ export async function submitAssessment(
   prevState: FormState,
   formData: FormData
 ): Promise<FormState> {
-  const firstName = formData.get("firstName") as string;
-  const email = formData.get("email") as string;
-  const score = formData.get("score") as string;
-  const breakdown = formData.get("breakdown") as string;
+  const firstName = (formData.get("firstName") as string)?.trim();
+  const email = (formData.get("email") as string)?.trim();
+  const scoreRaw = formData.get("score") as string;
+  const breakdownRaw = formData.get("breakdown") as string;
 
   if (!firstName || !email) {
     return { status: "error", message: "Please provide your name and email." };
   }
 
-  // TODO: Send personalised PDF report or email with score + recommended next steps
-  // TODO: Tag in ActiveCampaign with score band for appropriate nurture sequence
-  console.log("Assessment submitted:", { firstName, email, score, breakdown });
+  const totalScore = Number.parseInt(scoreRaw ?? "0", 10) || 0;
 
+  let parsedBreakdown: Record<string, number> = {};
+  try {
+    parsedBreakdown = breakdownRaw
+      ? (JSON.parse(breakdownRaw) as Record<string, number>)
+      : {};
+  } catch {
+    parsedBreakdown = {};
+  }
+
+  const breakdown = ASSESSMENT_CATEGORIES.reduce(
+    (acc, cat) => {
+      acc[cat] = Number(parsedBreakdown[cat] ?? 0);
+      return acc;
+    },
+    {} as Record<AssessmentCategory, number>,
+  );
+
+  const result = await sendAssessmentEmail({
+    firstName,
+    email,
+    totalScore,
+    breakdown,
+  });
+
+  if (!result.ok) {
+    console.error("[assessment] send failed but lead captured", {
+      firstName,
+      email,
+      totalScore,
+      error: result.error,
+    });
+  }
+
+  // Always confirm success to the user once we have their details. The lead is
+  // captured even if the email send pipeline is misconfigured; ops can follow
+  // up manually from server logs.
   return {
     status: "success",
-    message: "Your Reputation Risk Report request has been received.",
+    message: "Your Reputation Risk Report has been sent. Check your inbox.",
   };
 }

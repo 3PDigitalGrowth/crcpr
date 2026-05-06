@@ -33,7 +33,7 @@ const heroPillars = [
   {
     letter: "C",
     word: "Corporate",
-    desc: "We help you communicate with clarity and confidence to every stakeholder group, internal and external.",
+    desc: "We help you build trust and achieve corporate objectives through effective stakeholder and media engagement.",
     href: "/services/corporate-communications",
     icon: (
       <svg
@@ -103,9 +103,9 @@ const heroPillars = [
 const assessmentAreas = [
   "Media and spokesperson readiness",
   "Crisis planning and testing",
-  "Stakeholder trust and relationships",
+  "Stakeholder communication and trust",
   "Digital and social media exposure",
-  "Governance and board communications",
+  "Governance and procedures",
 ];
 
 const practiceAreas = [
@@ -150,21 +150,19 @@ const practiceAreas = [
   },
 ] as const;
 
-const HOMEPAGE_HERO_IMAGE =
-  "/images/homepage/" +
-  encodeURIComponent("ChatGPT Image Apr 16, 2026, 09_06_29 AM.png");
+const HOMEPAGE_HERO_IMAGE = "/images/homepage/hero-abstract.webp";
 
 const sectorCards = [
   {
     title: "Companies & family businesses",
     description:
-      "Direct, personal counsel for owners, directors and executives seeking communications solutions and navigating reputation, media and stakeholder challenges.",
+      "Direct personal counsel for owners, directors and executives seeking trust-building communications solutions, wanting to embrace opportunities for positive public exposure, and navigating reputation, media or stakeholder challenges.",
     href: "/clients/corporate",
   },
   {
-    title: "Government & Public Sector",
+    title: "Local government",
     description:
-      "Stakeholder, programme, and public communications shaped for scrutiny, accountability, and the unique pressures of the public sector environment.",
+      "Working alongside the council\u2019s internal comms team, we provide objective expertise that brings clarity and understanding of their unique challenges.",
     href: "/clients/government",
   },
   {
@@ -180,15 +178,15 @@ const sectorCards = [
     href: "/clients/schools-faith",
   },
   {
-    title: "Legal & Professional Services",
+    title: "Legal & professional services",
     description:
       "Law firms and other professionals have a unique opportunity to become the public voice of authority in their area through strategic media engagement. This helps build trust in their brand and drive business.",
     href: "/clients/corporate",
   },
   {
-    title: "Health & Aged Care",
+    title: "Child care, aged care and health",
     description:
-      "High-stakes stakeholder and reputation advice in heavily scrutinised care environments where public confidence is everything.",
+      "High stakes stakeholder and reputation advice, crisis planning and media representation in heavily scrutinised care environments where media exposure is intensifying and public confidence is everything.",
     href: "/clients/corporate",
   },
   {
@@ -203,6 +201,18 @@ const sectorCards = [
       "Faith-based ministries, churches and charities have unique challenges. We are the only Australian PR firm that provides reputation management and crisis planning, communications and management based on deep understanding of their needs, ethos and culture.",
     href: "/clients/schools-faith",
   },
+  {
+    title: "Hospitality",
+    description:
+      "In an industry extremely vulnerable to online and social media issues and crises, reputation advice, monitoring, media engagement and complaints escalation are essential.",
+    href: "/contact?source=hospitality",
+  },
+  {
+    title: "High profile individuals",
+    description:
+      "Celebrities, sportspeople, politicians and others in the spotlight require the right reputation and media guidance when things go wrong and crises arise.",
+    href: "/contact?source=high-profile",
+  },
 ];
 
 function AlternativeHero() {
@@ -216,18 +226,24 @@ function AlternativeHero() {
       <div className="relative w-full flex-1 flex">
         <img
           src={HOMEPAGE_HERO_IMAGE}
-          alt="Lyall Mercer and Barbara Gorogh, CRC co-founders"
+          alt=""
           className="absolute inset-0 h-full w-full object-cover object-right pointer-events-none"
           fetchPriority="high"
+        />
+        {/* Mobile: heavier, near-flat veil because text reflows full-width over the amber zone */}
+        <div
+          className="absolute inset-0 pointer-events-none lg:hidden bg-[linear-gradient(to_right,rgba(10,24,48,0.82)_0%,rgba(10,24,48,0.7)_60%,rgba(10,24,48,0.55)_100%)]"
+          aria-hidden
+        />
+        {/* Desktop: asymmetric gradient that protects the text column on the left and lets the warm tungsten breathe on the right */}
+        <div
+          className="hidden lg:block absolute inset-0 pointer-events-none bg-[linear-gradient(to_right,rgba(10,24,48,0.88)_0%,rgba(10,24,48,0.55)_42%,rgba(10,24,48,0.15)_72%,transparent_92%)]"
+          aria-hidden
         />
         <div className="relative max-w-7xl mx-auto px-6 w-full flex items-center py-8 md:py-10 lg:py-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 md:gap-6 items-center w-full">
             <div className="lg:col-span-7 relative">
-            <div
-              className="absolute inset-x-[-1rem] inset-y-[-1.25rem] overflow-hidden rounded-[32px] bg-gradient-to-r from-navy/[0.99] from-[5%] via-navy/[0.98] via-[55%] to-navy/[0.96] shadow-[inset_0_0_120px_rgba(0,0,0,0.12)] backdrop-blur-xl before:pointer-events-none before:absolute before:inset-0 before:rounded-[32px] before:content-[''] before:bg-[linear-gradient(128deg,rgba(255,255,255,0.07)_0%,transparent_42%,transparent_58%,rgba(255,255,255,0.035)_100%),repeating-linear-gradient(-14deg,rgba(255,255,255,0)_0px,rgba(255,255,255,0)_13px,rgba(255,255,255,0.028)_13px,rgba(255,255,255,0.028)_14px),radial-gradient(ellipse_85%_70%_at_88%_72%,rgba(255,255,255,0.05),transparent_62%)] sm:inset-x-[-1.5rem] sm:inset-y-[-1.5rem] lg:inset-x-[-2rem] lg:inset-y-[-2rem]"
-              aria-hidden
-            />
-            <div className="relative z-10 [text-shadow:0_1px_3px_rgba(0,0,0,0.55),0_2px_12px_rgba(15,31,54,0.45)]">
+            <div className="relative z-10 [text-shadow:0_1px_3px_rgba(0,0,0,0.6),0_2px_14px_rgba(0,0,0,0.55)]">
               <AnimateIn>
                 <p className="inline-flex items-center rounded-full border border-white/10 bg-navy/55 px-3 py-1.5 font-sans font-semibold text-off-white text-xs backdrop-blur-sm">
                   Boutique corporate PR · Australia · New Zealand · Pacific
@@ -246,7 +262,7 @@ function AlternativeHero() {
                     Whatever your communications objectives, you need experienced
                     counsel you can trust. CRC Public Relations is a boutique
                     corporate PR firm where every client works directly with a
-                    principal adviser.
+                    senior adviser.
                   </p>
                   <p className="text-white text-base lg:text-lg leading-relaxed w-full">
                     We partner with CEOs, executives, and leaders within
@@ -487,10 +503,10 @@ function AlternativeAssessment() {
                 <p className="text-white/80 text-base leading-relaxed">
                   Most organisations do not discover their reputation
                   vulnerabilities until a crisis is already underway. Our
-                  Reputation vulnerability assessment takes three minutes and
-                  identifies exactly where you are exposed, across governance,
-                  media, social media, stakeholder relationships, and crisis
-                  preparedness.
+                  reputation vulnerability assessment takes three minutes and
+                  identifies areas where you are exposed across governance,
+                  media, social media, stakeholder communication and trust,
+                  and crisis preparedness.
                 </p>
                 <p className="text-white/80 text-base leading-relaxed">
                   Used by CEOs, communications directors, and board chairs
@@ -551,12 +567,13 @@ function AlternativeClients() {
                 Trusted by leaders across every sector.
               </h2>
               <p className="text-charcoal-mid text-base leading-relaxed mt-6 max-w-xl">
-                Our clients are CEOs, managing directors, board chairs, and
-                executives across the business and non-profit sectors, as well
-                as high profile individuals, who need experienced, direct advice
-                when the stakes are highest. They choose CRC Public Relations
-                because we offer personal service from an experienced, highly
-                qualified team.
+                We assist company and non-profit CEOs, managing directors,
+                board chairs, and executives, as well as high profile
+                individuals, who need experienced, direct advice to communicate
+                effectively, build trust with key stakeholders, elevate their
+                public voice and guide them when the stakes are highest. They
+                choose CRC Public Relations because we offer personal service
+                from an experienced, highly qualified team.
               </p>
               <p className="text-charcoal-mid text-base leading-relaxed mt-4 max-w-xl">
                 We stand with our clients around the clock, proactively helping
@@ -573,9 +590,8 @@ function AlternativeClients() {
                     Start a direct conversation with an adviser.
                   </p>
                   <p className="text-white/65 text-sm leading-relaxed mt-3">
-                    Tell us about the issue, sector pressure, or communications
-                    challenge you are facing and we will help identify the right
-                    starting point.
+                    Tell us about your communications needs or challenges and
+                    we will help identify the right starting point.
                   </p>
                   <Link
                     href="/contact"
@@ -638,7 +654,7 @@ function AlternativeAbout() {
                 Lyall Mercer
               </h2>
               <p className="text-brand-teal font-sans font-medium text-lg mt-2">
-                Co-founder &amp; Principal Adviser
+                Co-founder &amp; principal adviser
               </p>
             </AnimateIn>
 
@@ -649,17 +665,18 @@ function AlternativeAbout() {
                   some of Australia&apos;s leading newspapers and magazines.
                   That foundation, understanding exactly how media thinks,
                   moves, and decides what becomes a story, led him into a 25
-                  year public relations career delivering high-quality results
-                  in the areas of corporate communications and crisis advice.
+                  year public relations career spanning every continent,
+                  delivering high-quality results in the areas of corporate
+                  communications and crisis advice.
                 </p>
                 <p className="text-text-body text-base leading-relaxed">
                   His clients include national and international companies,
                   governments, industry associations, not-for-profit
                   organisations, politicians, heads of state, celebrities, and
-                  sporting figures; and he has supported clients and media
-                  internationally, coordinating communications strategies and
-                  walking clients through issues that have generated intense
-                  national and global media exposure.
+                  sporting figures; and he has supported clients and dealt
+                  with media internationally, coordinating communications
+                  strategies and walking clients through issues that have
+                  generated intense national and global media exposure.
                 </p>
                 <p className="text-text-body text-base leading-relaxed">
                   When you choose CRC Public Relations, you&apos;ll deal with
@@ -711,8 +728,7 @@ function AlternativeCTA() {
 
             <AnimateIn delay={150}>
               <h2 className="text-white font-heading font-black text-3xl md:text-[42px] leading-[1.08] mt-4">
-                Your reputation is your most valuable asset. Let us help you
-                protect it.
+                Trust is your most valuable asset. Let us help you build it.
               </h2>
             </AnimateIn>
 
@@ -778,10 +794,10 @@ export function AlternativeHome({ faqItems }: AlternativeHomeProps) {
             Results that speak for themselves.
           </h2>
           <p className="text-charcoal-mid text-base max-w-2xl mb-12 leading-relaxed">
-            Three anonymised outcomes that show the kind of strategic work we do
-            when policy, reputation, and stakeholder pressure converge.
+            Four outcomes that show how we help clients communicate effectively,
+            grow their public profile, and navigate complex issues.
           </p>
-          <CaseStudies />
+          <CaseStudies columnsClassName="md:grid-cols-2" />
           <div className="mt-10 text-center">
             <Link
               href="/case-studies"

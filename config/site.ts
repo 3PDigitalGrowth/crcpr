@@ -19,7 +19,7 @@ export const siteConfig = {
   crcPrUrl: "https://crcpr.com.au",
   lyallMercerUrl: "https://lyallmercer.com",
   myPrPartnerUrl: "https://myprpartner.com",
-  crisisCommsAuUrl: "https://crisiscommunicationsaustralia.vercel.app",
+  crisisCommsAuUrl: "https://crisiscommunicationsaustralia.com.au",
   linkedInUrl: "https://www.linkedin.com/company/crc-public-relation/",
   lyallLinkedIn: "https://www.linkedin.com/in/lyallmercer/",
   lyallTwitter: "https://twitter.com/Lyall_Mercer",
@@ -36,7 +36,7 @@ export const siteConfig = {
 
   lyall: {
     fullName: "Lyall Mercer",
-    title: "Co-founder & Principal Adviser",
+    title: "Co-founder & principal adviser",
     yearsExperience: "25+",
     origin:
       "Former journalist and Australasia's leading crisis communications adviser.",
@@ -209,7 +209,7 @@ export const siteConfig = {
       { label: "Online articles", value: 93 },
       { label: "Newspaper print articles", value: 2 },
       { label: "Radio stories", value: 67 },
-      { label: "TV stories (via syndication)", value: 59 },
+      { label: "TV stories", value: 59 },
     ],
     clientLed: {
       total: 175,
@@ -232,7 +232,7 @@ export const siteConfig = {
       headline:
         "What proactive media relations can produce in a single month.",
       body: [
-        "Four media stories developed for one client across April generated 221 placements nationally — across television, radio, print and digital.",
+        "For a mid-sized, Brisbane-based professional services firm with national reach, four media stories developed across April generated 221 placements nationally — across television, radio, print and digital.",
         "Reach of this scale is not the standard outcome of every campaign. Coverage depends on the story, the strategy, and the news cycle. It is shown here as evidence of what disciplined media relations is capable of producing when those elements align.",
       ],
     },

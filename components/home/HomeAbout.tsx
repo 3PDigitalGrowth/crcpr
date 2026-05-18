@@ -72,19 +72,13 @@ export function HomeAbout() {
 
             <AnimateIn delay={450}>
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
-                <Link
-                  href="/about/lyall-mercer"
-                  className="btn-lift inline-flex items-center gap-2 text-link-teal font-sans font-medium text-sm hover:text-navy hover:gap-3 transition-all"
-                >
-                  Read Lyall&rsquo;s full profile <ArrowRight size={14} />
-                </Link>
                 <a
-                  href={siteConfig.lyall.mediaLinks[0].href}
+                  href="https://lyallmercer.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-lift inline-flex items-center gap-2 text-link-teal font-sans font-medium text-sm hover:text-navy hover:gap-3 transition-all"
                 >
-                  View media appearances <ArrowRight size={14} />
+                  Read Lyall&rsquo;s full profile <ArrowRight size={14} />
                 </a>
               </div>
             </AnimateIn>

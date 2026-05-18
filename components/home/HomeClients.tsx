@@ -10,13 +10,13 @@ const sectorCards = [
     title: "Companies & family businesses",
     description:
       "Board, market, and reputation counsel when governance and valuation pressures converge.",
-    href: "/clients/corporate",
+    href: null,
   },
   {
     title: "Federal and State Government departments",
     description:
       "Stakeholder, programme, and public communications shaped for scrutiny and accountability.",
-    href: "/clients/government",
+    href: null,
   },
   {
     title: "Industry associations",
@@ -28,25 +28,25 @@ const sectorCards = [
     title: "Independent schools",
     description:
       "Parent, board, and incident communications where trust and care are inseparable.",
-    href: "/clients/schools-faith",
+    href: null,
   },
   {
     title: "Faith-based organisations",
     description:
       "Sensitive communications support where values, leadership, and community confidence must align.",
-    href: "/clients/schools-faith",
+    href: null,
   },
   {
     title: "Legal and professional services firms",
     description:
       "Authority-building, issue response, and partner-level communications for expert businesses.",
-    href: "/clients/corporate",
+    href: null,
   },
   {
     title: "Health and aged care organisations",
     description:
       "High-stakes stakeholder and reputation advice in heavily scrutinised care environments.",
-    href: "/clients/corporate",
+    href: null,
   },
   {
     title: "Pacific governments and NGOs",
@@ -116,21 +116,37 @@ export function HomeClients() {
           {/* Right column, sector grid, spans 7 cols */}
           <div className="lg:col-span-7">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {sectorCards.map((sector, i) => (
-                <AnimateIn key={sector.title} delay={i * 80}>
-                  <Link
-                    href={sector.href}
-                    className="card-border-expand block bg-white border border-brand-border rounded-xl p-6 shadow-sm shadow-navy/5 hover:shadow-md transition-all duration-300 group min-h-[138px]"
-                  >
-                    <p className="font-sans font-medium text-navy text-sm group-hover:text-link-teal transition-colors">
-                      {sector.title}
-                    </p>
-                    <p className="text-charcoal-mid text-sm leading-relaxed mt-3">
-                      {sector.description}
-                    </p>
-                  </Link>
-                </AnimateIn>
-              ))}
+              {sectorCards.map((sector, i) => {
+                const cardClass =
+                  "block bg-white border border-brand-border rounded-xl p-6 shadow-sm shadow-navy/5 min-h-[138px]";
+
+                return (
+                  <AnimateIn key={sector.title} delay={i * 80}>
+                    {sector.href ? (
+                      <Link
+                        href={sector.href}
+                        className={`${cardClass} card-border-expand hover:shadow-md transition-all duration-300 group`}
+                      >
+                        <p className="font-sans font-medium text-navy text-sm group-hover:text-link-teal transition-colors">
+                          {sector.title}
+                        </p>
+                        <p className="text-charcoal-mid text-sm leading-relaxed mt-3">
+                          {sector.description}
+                        </p>
+                      </Link>
+                    ) : (
+                      <div className={cardClass}>
+                        <p className="font-sans font-medium text-navy text-sm">
+                          {sector.title}
+                        </p>
+                        <p className="text-charcoal-mid text-sm leading-relaxed mt-3">
+                          {sector.description}
+                        </p>
+                      </div>
+                    )}
+                  </AnimateIn>
+                );
+              })}
             </div>
           </div>
         </div>

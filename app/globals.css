@@ -67,9 +67,9 @@ html {
   box-shadow: 0 1px 3px rgba(26, 43, 74, 0.06);
 }
 
-/* Smooth scroll for anchor links */
+/* Smooth scroll only for in-page anchor navigation, not route changes */
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 /* Hero geometric accent, bleeds beyond container */

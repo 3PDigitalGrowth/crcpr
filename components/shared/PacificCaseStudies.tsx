@@ -41,7 +41,7 @@ export function PacificCaseStudies({ items }: PacificCaseStudiesProps) {
               {study.body}
             </p>
             <p className="text-charcoal-mid text-xs italic mt-5 pt-4 border-t border-brand-border">
-              Anonymised; details adjusted to protect client identity.
+              Anonymised to protect client confidentiality
             </p>
           </div>
         </article>

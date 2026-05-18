@@ -1,7 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
-import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
 import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
 import { siteConfig } from "@/config/site";
 import { getAllInsights, getInsightBySlug, getInsightSlugs } from "@/lib/mdx";
@@ -95,15 +95,6 @@ export default function InsightPage({
         </div>
       </article>
 
-      {post.leadMagnet ? (
-        <LeadMagnetBanner
-          magnet={post.leadMagnet}
-          variant="light"
-          title="If this article has highlighted a gap, start with a practical resource."
-          description="CRC Public Relations resources are designed to turn a general insight into a concrete next step for leadership teams managing risk, preparedness, and communication discipline."
-        />
-      ) : null}
-
       {relatedPosts.length > 0 ? (
         <section className="bg-off-white py-16">
           <div className="max-w-7xl mx-auto px-6">
@@ -137,10 +128,15 @@ export default function InsightPage({
       <section className="bg-warm-white py-12">
         <div className="max-w-3xl mx-auto px-6">
           <div className="flex flex-col sm:flex-row gap-6 items-start">
-            <div
-              className="w-16 h-16 rounded-full bg-navy-mid shrink-0"
-              aria-hidden
-            />
+            <div className="w-16 h-16 rounded-full shrink-0 overflow-hidden">
+              <Image
+                src="/images/about/lyall-mercer-portrait.png"
+                alt={siteConfig.lyall.fullName}
+                width={64}
+                height={64}
+                className="w-full h-full object-cover"
+              />
+            </div>
             <div>
               <p className="font-heading font-black text-navy text-lg">
                 {siteConfig.lyall.fullName}

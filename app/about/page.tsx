@@ -14,17 +14,17 @@ export const metadata: Metadata = {
 };
 
 const STATS = [
-  { value: "25+", label: "Years of team experience" },
-  { value: "Worldwide", label: "Supporting clients around the world" },
+  { value: "2010", label: "Year of commencement" },
+  { value: "International", label: "Media relations across the world" },
   { value: "100%", label: "Client satisfaction" },
 ] as const;
 
 const proofItems = [
   {
-    label: "Firm model",
+    label: "Our firm",
     value: "Boutique by design",
     detail:
-      "CRC Public Relations is deliberately structured to provide personal counsel by experienced strategists.",
+      "CRC Public Relations is deliberately structured to provide personal counsel by senior strategists.",
   },
   {
     label: "Operating focus",
@@ -57,8 +57,8 @@ const teamMembers = [
     summary:
       "Former journalist; one of Australasia's leading public relations and crisis communications strategists.",
     bio: [
-      "Lyall's career spans journalism, public relations, and high-stakes communications for national and international companies and organisations, governments, executives, politicians, celebrities and sporting figures across Australia, the Pacific, and internationally. He has coordinated international media conferences, walked clients through issues that have generated intense national and global media exposure, and has been a keynote speaker and presenter at corporate, industry and faith-based conferences across Australia and the USA. As an expert commentator in the area of crisis communications, Lyall has been quoted or interviewed by news organisations from around the world.",
-      "Clients engage Lyall when the matter requires experienced judgement, calm counsel, and direct access to someone who has seen how high-stakes situations actually unfold.",
+      "For more than 25 years, Lyall has advised national and international companies and organisations, governments, senior executives, politicians, celebrities and sporting figures across Australia, the Pacific, and internationally. He has coordinated international media conferences, walked clients though issues that have generated intense national and global media exposure, and has been a keynote speaker and presenter at corporate, industry and faith-based conferences across Australia and the USA. As an expert commentator in the area of crisis communications, Lyall has been quoted or interviewed by news organisations from around the world.",
+      "Clients engage Lyall when the matter requires senior judgement, calm counsel, and direct access to someone who has seen how high-stakes situations actually unfold.",
     ],
   },
   {
@@ -68,7 +68,7 @@ const teamMembers = [
     name: "Barbara Gorogh",
     role: "Co-founder and director",
     summary:
-      "Experienced communications strategist focused on client relations, media relations and practitioner development.",
+      "Senior communications strategist focused on client relations, media relations and practitioner development.",
     bio: [
       "Barbara has worked across Australia and the Pacific region for more than a decade, dealing with companies, organisations and governments in the area of corporate communications and reputation management. She has overseen major online corporate and government communications campaigns designed to achieve vital client objectives, and developed a specialty area in reputation management in the B2C environment. Barbara also oversees digital and social media strategies for our clients - which form an important part of every public relations, reputation and crisis strategy - and the development of our digital team based across Australia and the Pacific.",
       "Barbara's work in the media monitoring space ensures our clients are ahead of the stories that matter.",
@@ -127,6 +127,29 @@ export default function AboutPage() {
                 </a>
               </div>
             </div>
+
+            <div className="border border-white/10 bg-white/[0.03] rounded-lg p-6 backdrop-blur-[2px]">
+              <p className="text-white/35 text-xs mb-4">Direct strategic counsel</p>
+              <div className="space-y-4">
+                <div>
+                  <p className="font-heading font-black text-brand-gold text-2xl">
+                    {siteConfig.stats.yearsTrading}
+                  </p>
+                  <p className="text-white/60 text-sm">
+                    Years serving organisations across Australia and the Pacific
+                  </p>
+                </div>
+                <div className="h-px bg-white/10" />
+                <div>
+                  <p className="font-heading font-black text-white text-lg">
+                    Clear thinking, applied
+                  </p>
+                  <p className="text-white/60 text-sm leading-relaxed mt-1">
+                    A perspective that brings clarity and results, valued by our clients.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -173,9 +196,9 @@ export default function AboutPage() {
               How we work
             </h2>
             <p className="text-charcoal-mid text-[15px] leading-relaxed mt-6">
-              Being &quot;boutique and personal&quot; means that unlike many PR
+              Being &apos;boutique and personal&apos; means that unlike many PR
               companies, at CRC Public Relations you&apos;ll deal directly with
-              experienced PR and crisis communications strategists who take a
+              senior and experienced PR and crisis communications strategists who take a
               genuine, long-term interest in your organisation. We take your
               needs and your success personally, and we have your back.
             </p>
@@ -248,7 +271,7 @@ export default function AboutPage() {
 
       <InlineEnquirySection
         title="Start a direct conversation"
-        body="If your situation is sensitive or high-stakes, the first step is a short, confidential conversation. You will speak with an experienced adviser, not an account team."
+        body="If your situation is sensitive or high-stakes, the first step is a short, confidential conversation. You will speak with an experienced adviser."
         bullets={[
           "Direct access to experienced advisers",
           "Support across corporate, crisis, reputation, and stakeholder matters",

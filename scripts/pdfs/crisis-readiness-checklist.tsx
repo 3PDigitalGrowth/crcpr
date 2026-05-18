@@ -255,7 +255,7 @@ export function CrisisReadinessChecklistDocument() {
       eyebrow="Free resource"
     >
       <View style={baseStyles.hero}>
-        <Text style={baseStyles.eyebrow}>Free CRC PR resource</Text>
+        <Text style={baseStyles.eyebrow}>Free CRC Public Relations resource</Text>
         <Text style={baseStyles.title}>
           The Essential Crisis Readiness Checklist
         </Text>

@@ -116,10 +116,13 @@ export function IndustryAssociationsGallery() {
       `[data-thumb-index="${activeIndex}"]`,
     );
     if (activeThumb) {
-      activeThumb.scrollIntoView({
+      const strip = thumbStripRef.current;
+      const thumbLeft = activeThumb.offsetLeft;
+      const thumbWidth = activeThumb.offsetWidth;
+      const stripWidth = strip.offsetWidth;
+      strip.scrollTo({
+        left: thumbLeft - stripWidth / 2 + thumbWidth / 2,
         behavior: "smooth",
-        block: "nearest",
-        inline: "center",
       });
     }
   }, [activeIndex]);

@@ -15,8 +15,8 @@ import {
   Zap,
   Radio,
   Monitor,
-  Video,
   Globe,
+  FileText,
 } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
@@ -184,18 +184,18 @@ function ServicesPanel({ onClose }: { onClose: () => void }) {
         <div className="py-5 px-4 border-r border-white/[0.06]">
           <ColumnHeader>Also from CRC Public Relations</ColumnHeader>
           <MegaItem
-            href="/media-training"
-            icon={<Video className="w-full h-full" />}
-            title="Media training"
-            desc="Spokesperson and on-camera coaching"
-            iconTeal
-            onClick={onClose}
-          />
-          <MegaItem
             href="/pacific"
             icon={<Globe className="w-full h-full" />}
             title="Pacific Advisory"
             desc="The only Australian firm with Pacific expertise"
+            iconTeal
+            onClick={onClose}
+          />
+          <MegaItem
+            href="/case-studies"
+            icon={<FileText className="w-full h-full" />}
+            title="Case studies"
+            desc="Successful outcomes across sectors"
             iconTeal
             onClick={onClose}
           />
@@ -326,6 +326,7 @@ const directLinks = [
   { label: "Crisis", href: "/services/crisis-communications" },
   { label: "Pacific", href: "/pacific" },
   { label: "Industry Associations", href: "/clients/industry-associations" },
+  { label: "Case studies", href: "/case-studies" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
   { label: "Insights", href: "/insights" },

@@ -462,7 +462,7 @@ function AlternativePracticeAreas() {
               difference to outcomes.&rdquo;
             </blockquote>
             <p className="font-sans font-medium text-text-secondary text-sm mt-6 tracking-wide">
-              - Lyall Mercer, Co-founder
+              - Lyall Mercer, co-founder
             </p>
             <div className="w-12 h-[2px] bg-brand-gold mx-auto mt-8" />
           </div>
@@ -794,8 +794,7 @@ export function AlternativeHome({ faqItems }: AlternativeHomeProps) {
             Results that speak for themselves.
           </h2>
           <p className="text-charcoal-mid text-base max-w-2xl mb-12 leading-relaxed">
-            Four outcomes that show how we help clients communicate effectively,
-            grow their public profile, and navigate complex issues.
+            Four successful outcomes that show the kind of strategic work we do when policy, reputation, and stakeholder pressure converge.
           </p>
           <CaseStudies columnsClassName="md:grid-cols-2" />
           <div className="mt-10 text-center">

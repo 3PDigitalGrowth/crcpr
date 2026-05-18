@@ -26,7 +26,7 @@ export default function CaseStudiesPage() {
         asidePreset="anonymisedOutcomes"
         eyebrow="Client outcomes"
         title="Results when the needs are great and the stakes are high."
-        description="Four outcomes from CRC Public Relations client engagements."
+        description="Four successful outcomes that show the kind of strategic work we do when policy, reputation, and stakeholder pressure converge."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
         heroImage={{
@@ -55,12 +55,6 @@ export default function CaseStudiesPage() {
             value: "Funding secured",
             detail:
               "Strategic communications and stakeholder engagement can materially shape high-value government and development outcomes.",
-          },
-          {
-            label: "Legal firm",
-            value: "Revenue generated",
-            detail:
-              "A proactive, strategic and well-executed media strategy can built trust, drive new clients and increase revenue.",
           },
         ]}
       />
@@ -172,28 +166,7 @@ export default function CaseStudiesPage() {
         <div className="max-w-7xl mx-auto px-6">
           <CaseStudies
             columnsClassName="md:grid-cols-2 xl:grid-cols-4"
-            extra={[
-              {
-                id: "legal-revenue",
-                sector: "Legal firm",
-                outcome: "Revenue generated.",
-                outcomeSub:
-                  "A proactive, strategic and well-executed media strategy can built trust, drive new clients and increase revenue.",
-              },
-            ]}
           />
-
-          <div className="flex flex-wrap justify-center gap-4 mt-12">
-            {sectorLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-brand-gold font-medium text-sm hover:underline"
-              >
-                {link.label} →
-              </Link>
-            ))}
-          </div>
         </div>
       </section>
 

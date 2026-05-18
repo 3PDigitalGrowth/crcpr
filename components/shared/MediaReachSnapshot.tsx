@@ -79,8 +79,8 @@ export function MediaReachSnapshot({
               </p>
             ) : (
               <p className="mt-6 text-white/80 text-base md:text-lg leading-relaxed max-w-2xl">
-                Four planned media stories, developed for a {data.clientDescriptor},
-                generated 221 placements nationally across television, radio,
+                For a {data.clientDescriptor},
+                four media stories generated 221 placements nationally across television, radio,
                 print and digital — in a single month.
               </p>
             )}
@@ -94,9 +94,6 @@ export function MediaReachSnapshot({
               </p>
               <p className="mt-3 font-heading font-black text-white text-lg md:text-xl tracking-tight">
                 media placements
-              </p>
-              <p className="mt-1 text-white/55 text-sm">
-                from {data.storyCount} planned stories &nbsp;·&nbsp; one month
               </p>
             </div>
           </div>

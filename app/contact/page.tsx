@@ -82,7 +82,7 @@ export default function ContactPage({
                   },
                   {
                     title: "Planning",
-                    body: "You are (very wisely) looking ahead and want to be ready for any issue or crises that arise.",
+                    body: "You are (very wisely) looking ahead and want to be ready for any issue or crisis that arises.",
                   },
                   {
                     title: "Live issue",

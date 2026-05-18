@@ -2,27 +2,27 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Linkedin, Twitter } from "lucide-react";
+import { Linkedin } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { MyPRPartnerCTA } from "@/components/shared/MyPRPartnerCTA";
 
 const serviceLinks = [
   { label: "Corporate communications", slug: "corporate-communications" },
+  { label: "Media relations & strategy", slug: "media-strategy" },
   { label: "Reputation management", slug: "reputation-management" },
-  { label: "Issues management", slug: "issues-management" },
   { label: "Crisis communications", slug: "crisis-communications" },
-  { label: "Media strategy", slug: "media-strategy" },
+  { label: "Issues management", slug: "issues-management" },
   { label: "Digital media", slug: "digital-media" },
 ] as const;
 
 const quickLinks = [
+  { label: "Crisis", href: "/services/crisis-communications" },
+  { label: "Pacific", href: "/pacific" },
+  { label: "Industry Associations", href: "/clients/industry-associations" },
+  { label: "Case studies", href: "/case-studies" },
   { label: "About", href: "/about" },
-  { label: "Lyall Mercer", href: "/about/lyall-mercer" },
-  { label: "Media training", href: "/media-training" },
-  { label: "Crisis (24/7)", href: "/services/crisis-communications" },
-  { label: "Insights", href: "/insights" },
-  { label: "FAQ", href: "/faq" },
   { label: "Contact", href: "/contact" },
+  { label: "Insights", href: "/insights" },
 ] as const;
 
 function Logo() {
@@ -39,22 +39,11 @@ function Logo() {
 
 export function Footer() {
   const { street, city, state, postcode, country } = siteConfig.address;
-  const clientLinks = [
-    {
-      label: "Private companies",
-      href: "/clients/corporate",
-    },
-    { label: "Government", href: "/clients/government" },
-    { label: "Industry associations", href: "/clients/industry-associations" },
-    { label: "Schools & faith-based", href: "/clients/schools-faith" },
-    { label: "Pacific", href: "/pacific" },
-    { label: "Case studies", href: "/case-studies" },
-  ] as const;
 
   return (
     <footer className="bg-charcoal py-16">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
             <Logo />
             <p className="text-sm text-white/60 leading-relaxed mt-4">
@@ -71,15 +60,6 @@ export function Footer() {
               >
                 <Linkedin className="size-5" />
               </a>
-              <a
-                href={siteConfig.lyallTwitter}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white/40 hover:text-brand-gold transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter className="size-5" />
-              </a>
             </div>
           </div>
 
@@ -92,24 +72,6 @@ export function Footer() {
                 <li key={slug}>
                   <Link
                     href={`/services/${slug}`}
-                    className="text-sm text-white/60 hover:text-white py-1.5 block transition-colors"
-                  >
-                    {label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-xs font-sans font-medium text-brand-gold mb-4">
-              Clients &amp; sectors
-            </h4>
-            <ul>
-              {clientLinks.map(({ label, href }) => (
-                <li key={href}>
-                  <Link
-                    href={href}
                     className="text-sm text-white/60 hover:text-white py-1.5 block transition-colors"
                   >
                     {label}
@@ -165,7 +127,7 @@ export function Footer() {
 
         <div className="border-t border-white/10 pt-8 mt-8">
           <p className="text-white/40 text-xs font-medium mb-4">
-            The CRC Group ecosystem
+            The CRC Public Relations group ecosystem
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div className="bg-white/5 rounded-lg p-4">

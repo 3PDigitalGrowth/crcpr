@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 interface ProofItem {
   label: string;
   value: string;
@@ -51,12 +49,6 @@ export function PageProofStrip({
   const detailClass =
     variant === "navy" ? "text-white/60" : "text-body";
 
-  const dividerClass =
-    variant === "navy" ? "border-white/10" : "border-brand-border";
-  const testimonialCardClass =
-    variant === "navy"
-      ? "border-white/10 bg-white/[0.04]"
-      : "border-brand-border bg-white shadow-sm shadow-navy/5";
   const quoteClass =
     variant === "navy" ? "text-white/85" : "text-charcoal";
   const attributionPrimaryClass =
@@ -106,46 +98,16 @@ export function PageProofStrip({
 
         {testimonial ? (
           <figure
-            className={`mt-12 border rounded-lg p-8 md:p-10 border-t-[3px] border-t-brand-gold ${testimonialCardClass}`}
+            className={`mt-12 border-l-[3px] border-l-brand-gold rounded-lg p-6 ${
+              variant === "navy" ? "bg-white/[0.04]" : "bg-off-white"
+            }`}
           >
-            <div className="flex items-start justify-between gap-6">
-              <svg
-                width="32"
-                height="22"
-                viewBox="0 0 32 24"
-                fill="none"
-                className="text-brand-gold/30 shrink-0"
-                aria-hidden
-              >
-                <path
-                  d="M0 24V14.4C0 6.13 5.01 1.31 13.33 0l1.34 4.8C9.09 5.87 6.67 9.07 6.67 14.4H12V24H0zm18.67 0V14.4c0-8.27 5-13.09 13.33-14.4l1.33 4.8C27.76 5.87 25.33 9.07 25.33 14.4h5.34V24H18.67z"
-                  fill="currentColor"
-                />
-              </svg>
-              {testimonial.portrait ? (
-                <div
-                  className={`relative w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden border-2 shrink-0 ${
-                    variant === "navy" ? "border-white/15" : "border-brand-border"
-                  }`}
-                >
-                  <Image
-                    src={testimonial.portrait.src}
-                    alt={testimonial.portrait.alt}
-                    fill
-                    sizes="80px"
-                    className="object-cover"
-                  />
-                </div>
-              ) : null}
-            </div>
             <blockquote
-              className={`mt-5 font-sans italic text-lg md:text-xl leading-relaxed max-w-3xl ${quoteClass}`}
+              className={`font-sans italic text-[15px] leading-relaxed ${quoteClass}`}
             >
               &ldquo;{testimonial.quote}&rdquo;
             </blockquote>
-            <figcaption
-              className={`mt-6 pt-5 border-t ${dividerClass} space-y-1`}
-            >
+            <figcaption className="mt-4 space-y-0.5">
               {testimonial.attribution.map((line, idx) => {
                 const isLast = idx === testimonial.attribution.length - 1;
                 const emphasised = testimonial.highlightLastLine && isLast;
@@ -163,7 +125,7 @@ export function PageProofStrip({
                   return (
                     <p
                       key={line}
-                      className="font-sans font-semibold text-brand-gold text-sm"
+                      className="font-sans font-semibold text-brand-gold text-xs"
                     >
                       {line}
                     </p>
@@ -172,7 +134,7 @@ export function PageProofStrip({
                 return (
                   <p
                     key={line}
-                    className={`text-sm ${attributionSecondaryClass}`}
+                    className={`text-xs ${attributionSecondaryClass}`}
                   >
                     {line}
                   </p>

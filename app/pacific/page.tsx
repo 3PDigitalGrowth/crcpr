@@ -78,8 +78,8 @@ const pacificCaseStudies: PacificCaseStudy[] = [
     headline: "Major regional political forum — media coordination",
     body: "We coordinated the Pacific and international media operations for a host nation of the Pacific Islands Forum Leaders Meeting, featuring 18 heads of state and government. This involved authorising international media attendance, overseeing the forum media centre, and creating strategies that ensured maximum regional and global coverage while protecting local sensitivities. The timing of the event was in the midst of a high-profile, politically charged debate, meaning we had to deal with unexpected diplomatic issues involving media, political leaders and local authorities. To achieve a successful outcome we worked closely with the host nation's political and executive leaders, their communications team, local media, the Pacific Islands Forum, government representatives across Oceania, and media from the Pacific region, Australia, New Zealand and across the world.",
     image: {
-      src: "/images/pacific/case-forum.webp",
-      alt: "Pacific regional forum venue exterior at golden hour with flags of Pacific nations on poles, no people",
+      src: "/images/pacific/case-forum-pif.png",
+      alt: "49th Pacific Islands Forum leaders seated at the conference table, Republic of Nauru, September 2018",
     },
   },
   {
@@ -88,18 +88,18 @@ const pacificCaseStudies: PacificCaseStudy[] = [
     headline: "National government — elevated and expanded messaging",
     body: "We created and implemented a communication strategy for a Pacific government with unique geographical challenges. A significant portion of its population lived overseas and those at home resided across many islands, some without internet access. Working directly with the head of state, ministers, and the internal communications team, we reformed and strengthened the government's communications strategy, messaging, and use of its current media channels. We also implemented an effective social media strategy to reach the domestic audience and elevate the government's international voice, and built stronger relationships with independent media. Importantly, we ensured that the work the government was doing in areas like the economy, trade, domestic services, and international relations were supported by impacting communications that build trust and advocacy.",
     image: {
-      src: "/images/pacific/case-government.webp",
-      alt: "Pacific national parliament or government house with flag pole in late afternoon warm light, no people",
+      src: "/images/pacific/case-government-island.png",
+      alt: "Aerial view of a Pacific island resort with turquoise water, white sand beach, and tropical vegetation",
     },
   },
   {
     id: "australian-company",
     sector: "Corporate, in-region",
-    headline: "Australian company in Pacific",
+    headline: "Australian company in the Pacific",
     body: "We worked with an Australian company doing major construction and logistics work in the Pacific region. Elevating the challenge, the company was under intense public scrutiny and a regional — sometimes global — media spotlight due to ongoing and highly emotive political issues beyond its control. Our first step was to create a crisis communication plan to ensure the company was prepared, and we worked with the CEO and management team across three countries to ensure it was properly tested. For more than a decade we supported the company with media engagement, proactive messaging across cultural divides, employee engagement, political and government liaison, reputation management and crisis communications. Our strategy and hands-on work played an invaluable part in the company's success, and its subsequent growth, prosperity and diversification.",
     image: {
-      src: "/images/pacific/case-company.webp",
-      alt: "Working Pacific port at golden hour with container cranes and turquoise harbour, no people",
+      src: "/images/pacific/case-company-construction.png",
+      alt: "Aerial view of a major Pacific port construction site with cranes, containers, and turquoise water",
     },
   },
 ];
@@ -166,8 +166,8 @@ export default function PacificPage() {
       <section className="bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <ImageTextRow
-            imageSrc="/images/pacific/mid-meeting-house.webp"
-            imageAlt="Pacific meeting house with traditional roofline and tropical vegetation in warm golden light, no people"
+            imageSrc="/images/pacific/pacific-flags-parliament.png"
+            imageAlt="Pacific Island nation flags flying outside a parliament building"
             imagePosition="left"
           >
             <div className="max-w-3xl lg:max-w-none">
@@ -258,11 +258,10 @@ export default function PacificPage() {
             <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_360px] gap-10 items-start">
               <div className="max-w-3xl">
                 <p className="text-brand-gold text-xs font-medium mb-4">
-                  Pacific opportunities
+                  The opportunities in and for the Pacific region
                 </p>
                 <h2 className="font-heading font-black text-navy text-3xl md:text-4xl mb-6 leading-tight">
-                  The Pacific region has long been under-estimated and
-                  under-valued.
+                  The Pacific region has long been under-estimated and under-valued.
                 </h2>
                 <p className="text-charcoal text-[15px] leading-relaxed font-medium mb-6">
                   No longer. The issues that currently impact the world are
@@ -338,7 +337,7 @@ export default function PacificPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl mb-12">
             <p className="text-brand-gold text-xs font-medium mb-4">
-              Anonymised outcomes
+              Successful outcomes
             </p>
             <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
               Our Pacific experience
@@ -369,8 +368,8 @@ export default function PacificPage() {
       <section className="bg-off-white py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-6">
           <ImageTextRow
-            imageSrc="/images/pacific/mid-harbour.webp"
-            imageAlt="Pacific harbour with outrigger canoes near a wharf, turquoise water and green hills"
+            imageSrc="/images/pacific/mid-harbour-yacht.png"
+            imageAlt="Aerial view of a superyacht docked at a Pacific port with containers and cranes"
             imagePosition="right"
             aspectClass="aspect-[4/3]"
           >

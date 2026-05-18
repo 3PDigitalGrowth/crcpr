@@ -62,7 +62,7 @@ export default function InsightsPage() {
                 How to use these insights
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
-                Practical thinking for leaders under pressure.
+                What experienced advisers should be watching for before.
               </h2>
               <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
                 Our insights are written for leaders who need clearer

@@ -12,7 +12,7 @@ import { PortraitPlaceholder } from "@/components/shared/PortraitPlaceholder";
 import { MediaOutletLogoLink } from "@/components/shared/MediaOutletLogoLink";
 
 export const metadata: Metadata = {
-  title: "Lyall Mercer: Co-founder & Principal Adviser",
+  title: "Lyall Mercer: co-founder & principal adviser",
   description:
     "Lyall Mercer is the co-founder of CRC Public Relations. Former journalist and trusted crisis communications adviser with a career spanning media, PR, and high-stakes communications.",
 };
@@ -22,7 +22,7 @@ export default function LyallMercerPage() {
     <>
       <PageHero
         asidePreset="editorialInsights"
-        eyebrow="Co-founder & principal adviser"
+        eyebrow="co-founder & principal adviser"
         title="Lyall Mercer"
         description="Co-founder of CRC Public Relations. Former journalist and trusted crisis adviser to leaders facing scrutiny, pressure, and reputational risk."
         ctaLabel="Work with Lyall"

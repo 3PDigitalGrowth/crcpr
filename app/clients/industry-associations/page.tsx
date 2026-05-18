@@ -5,7 +5,6 @@ import { PageHero } from "@/components/layout/PageHero";
 import { FAQSection } from "@/components/shared/FAQSection";
 import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
 import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
-import { IndustryAssociationsGallery } from "@/components/clients/IndustryAssociationsGallery";
 import { PageProofStrip } from "@/components/shared/PageProofStrip";
 
 export const metadata: Metadata = {
@@ -151,7 +150,7 @@ const associationServiceCards = [
   {
     title: "Media relations and spokesperson preparation",
     description:
-      "If your association is not the voice of authority in your industry, someone else will be, and this will dilute your message. A public voice will elevate your profile and exposure to those who are important to your success, including governments, MPs, suppliers, members and others across your industry. We help you build and manage media relationships across general and industry-specific media, and social media, as well as preparing your leaders to represent your association and sector with credibility.",
+      "If your association is not the voice of authority in your industry, someone else will be, and this will dilute your message. A public voice will elevate your profile and exposure to those who are important to your success, including governments, MPs, suppliers, members and other across your industry. We help you build and manage media relationships across general and industry-specific media, and social media, as well as preparing your senior people to represent your association and sector with credibility.",
   },
   {
     title: "Advocacy support",
@@ -274,20 +273,28 @@ function SectorCards() {
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
-        <p className="text-brand-gold font-sans font-medium text-xs mb-3">
-          Sectors we advise
-        </p>
-        <h2 className="font-heading font-black text-navy text-3xl md:text-4xl mb-4">
-          Sectors where we advise associations
-        </h2>
-        <p className="text-text-body text-base leading-relaxed max-w-3xl mb-12">
-          We work directly with CEOs, executive officers, and boards of industry
-          and professional associations and peak bodies across Australia and
-          New Zealand. Every sector brings unique communications challenges.
-          Here is how we help.
-        </p>
+        <ImageTextRow
+          imageSrc="/images/clients/industry-associations/gallery/03-mcgrathlocks.png"
+          imageAlt="Delegates gathered around exhibitor displays at a national industry event"
+          imagePosition="right"
+        >
+          <div>
+            <p className="text-brand-gold font-sans font-medium text-xs mb-3">
+              Sectors we advise
+            </p>
+            <h2 className="font-heading font-black text-navy text-3xl md:text-4xl mb-4">
+              Sectors where we advise associations
+            </h2>
+            <p className="text-text-body text-base leading-relaxed max-w-xl">
+              We work directly with CEOs, executive officers, and boards of industry
+              and professional associations and peak bodies across Australia and
+              New Zealand. Every sector brings unique communications challenges.
+              Here is how we help.
+            </p>
+          </div>
+        </ImageTextRow>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
           {sectorCards.map((card) => (
             <div
               key={card.title}
@@ -410,13 +417,15 @@ export default function IndustryAssociationsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <figure className="border-l-[3px] border-brand-gold bg-off-white p-6 rounded-lg">
               <blockquote className="text-charcoal text-[15px] leading-relaxed">
-                &ldquo;CRC Public Relations has developed a crisis
-                communications plan for Christian schools and has assisted many
-                of our member schools across Australia to effectively
-                communicate when issues have arisen.&rdquo;
+                &ldquo;CRC Public Relations created national media coverage that
+                energised our member base, attracted new members and helped us
+                advance important changes for our sector.&rdquo;
               </blockquote>
               <figcaption className="mt-4 text-sm text-charcoal-mid">
-                Executive Officer, Christian schools sector
+                <span className="font-sans font-semibold text-navy">
+                  Martin Coote
+                </span>
+                , President, Master Locksmiths Association of Australasia
               </figcaption>
             </figure>
 
@@ -437,41 +446,9 @@ export default function IndustryAssociationsPage() {
         </div>
       </section>
 
-      {/* Industry events gallery */}
-      <section className="bg-off-white py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] gap-10 lg:gap-14 items-start">
-            <div className="lg:sticky lg:top-24">
-              <p className="text-brand-gold text-xs font-sans font-medium uppercase tracking-[0.18em] mb-4">
-                Industry events
-              </p>
-              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-[1.15]">
-                On the ground with Australia&rsquo;s industry associations
-              </h2>
-              <p className="text-charcoal-mid text-[15px] leading-relaxed mt-5 max-w-md">
-                Conferences, exhibition floors, panel discussions, and member
-                networking are the moments where association communications
-                matters most. We have supported industry and professional
-                associations behind the scenes at events of every size&mdash;
-                helping leaders prepare, message clearly, and stay close to
-                members when matters become contested.
-              </p>
-              <p className="text-charcoal-mid text-[15px] leading-relaxed mt-4 max-w-md">
-                A small selection of events we&rsquo;ve been a part of, from
-                state forums to national conferences.
-              </p>
-            </div>
-
-            <div>
-              <IndustryAssociationsGallery />
-            </div>
-          </div>
-        </div>
-      </section>
-
       <LeadMagnetBanner
         magnet="associationsPRChecklist"
-        title="Is your association communicating in a way that builds trust with members, government, and the media?"
+        title="Elevate your voice and build trust"
         description="Is your industry or professional association communicating in a way that builds member trust, supports your advocacy, and builds trust with stakeholders including government and regulators? Are you the voice the media seeks out for regular expert commentary? This checklist is created from 15+ years of association experience and is a great place to start."
         highlights={[
           "Built from 15+ years of association advisory work",

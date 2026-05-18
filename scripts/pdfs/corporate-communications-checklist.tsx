@@ -89,7 +89,7 @@ export function CorporateCommsChecklistDocument() {
       eyebrow="Free resource"
     >
       <View style={baseStyles.hero}>
-        <Text style={baseStyles.eyebrow}>Free CRC PR resource</Text>
+        <Text style={baseStyles.eyebrow}>Free CRC Public Relations resource</Text>
         <Text style={baseStyles.title}>
           The 10 Point Corporate Communications Checklist
         </Text>

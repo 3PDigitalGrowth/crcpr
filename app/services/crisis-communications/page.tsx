@@ -487,7 +487,7 @@ export default function CrisisCommunicationsPage() {
                 Facing a crisis right now?
               </h3>
               <p className="text-charcoal text-[15px] leading-relaxed mb-6">
-                Do not fill out a form. Call us directly, available 24 hours, 7
+                Call us directly, available 7
                 days. Every call is treated with absolute confidentiality. You
                 will speak to a CRC Public Relations adviser, not a
                 receptionist.
@@ -522,7 +522,7 @@ export default function CrisisCommunicationsPage() {
       />
 
       <PageClosingCTA
-        title="Preparation now is worth far more than response later."
+        title="Preparation now is worth far more than an ad hoc response later."
         body="A tested crisis communications capability costs a fraction of a poorly handled incident. If your organisation needs a plan, crisis simulation, or requires other support before the next high-pressure event, talk to us."
         primaryLabel="Book a crisis preparedness consultation"
       />

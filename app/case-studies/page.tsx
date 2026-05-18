@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { PageHero } from "@/components/layout/PageHero";
 import { CaseStudies } from "@/components/shared/CaseStudies";
 import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
@@ -12,12 +11,6 @@ export const metadata: Metadata = {
   description:
     "Anonymised case studies from CRC Public Relations client engagements across industry associations, schools, and government.",
 };
-
-const sectorLinks = [
-  { label: "Industry Associations", href: "/clients/industry-associations" },
-  { label: "Schools & Faith-Based", href: "/clients/schools-faith" },
-  { label: "Government", href: "/clients/government" },
-] as const;
 
 export default function CaseStudiesPage() {
   return (

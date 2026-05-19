@@ -127,7 +127,7 @@ const sectorCards = [
   {
     title: "Faith based associations",
     description:
-      "The co-founder of CRC Public Relations has been assisting faith based associations across Australia and the world for more than 20 years, and we understand the unique objectives and challenges they face. From religious discrimination to achieving your mission objectives, we provide experienced, specialty communications counsel.",
+      "The co-founder of CRC Public Relations has been assisting faith based associations across Australia and the world for more than 25 years, and we understand the unique objectives and challenges they face. From religious discrimination to achieving your mission objectives, we provide experienced, specialty communications counsel.",
   },
   {
     title: "Other sectors",

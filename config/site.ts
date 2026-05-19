@@ -37,6 +37,7 @@ export const siteConfig = {
   lyall: {
     fullName: "Lyall Mercer",
     title: "Co-founder & principal adviser",
+    /** Lyall Mercer personal career tenure (not firm tenure). */
     yearsExperience: "25+",
     origin:
       "Former journalist and Australasia's leading crisis communications adviser.",
@@ -101,6 +102,7 @@ export const siteConfig = {
   },
 
   stats: {
+    /** CRC Public Relations as a firm (not Lyall's personal career). */
     yearsTrading: "15+",
     continents: "Worldwide",
     clientRetention: "100%",

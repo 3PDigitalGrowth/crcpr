@@ -138,7 +138,7 @@ const practiceAreas = [
   {
     title: "Crisis Communications",
     description:
-      "We help you become crisis ready. When a crisis breaks, the decisions you make in the first 15 minutes can impact the outcome. It is at these times you need objective, strategic advice that only comes from vast experience. We have walked with clients through high profile public issues and crises across Australasia and internationally for more than 20 years and are your guiding force. The wrong advice can lead to disaster. In times of stress, our \u2018outside\u2019 advice and calmness under pressure is vital. 24/7. Confidential. Decisive.",
+      "We help you become crisis ready. When a crisis breaks, the decisions you make in the first 15 minutes can impact the outcome. It is at these times you need objective, strategic advice that only comes from vast experience. We have walked with clients through high profile public issues and crises across Australasia and internationally for more than 15 years and are your guiding force. The wrong advice can lead to disaster. In times of stress, our \u2018outside\u2019 advice and calmness under pressure is vital. 24/7. Confidential. Decisive.",
     href: "/services/crisis-communications",
     linkLabel: "Explore crisis communications",
     imageSrc: "/images/practice-crisis.png",

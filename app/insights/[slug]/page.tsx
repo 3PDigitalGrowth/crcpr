@@ -86,7 +86,7 @@ export default function InsightPage({
 
       <article className="bg-warm-white py-16">
         <div
-          className="max-w-3xl mx-auto px-6 prose prose-lg max-w-none prose-headings:font-heading prose-headings:font-black prose-headings:text-navy prose-p:text-text-body prose-p:leading-relaxed prose-a:text-link-teal prose-a:no-underline hover:prose-a:text-navy prose-strong:text-text-body prose-li:text-text-body"
+          className="max-w-3xl mx-auto px-6 prose prose-lg max-w-none prose-headings:font-heading prose-headings:font-black prose-headings:text-navy prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-p:text-text-body prose-p:leading-relaxed prose-ol:text-text-body prose-ul:text-text-body prose-li:text-text-body prose-li:leading-relaxed prose-blockquote:border-l-brand-gold prose-blockquote:bg-off-white prose-blockquote:py-4 prose-blockquote:px-6 prose-blockquote:not-italic prose-blockquote:text-charcoal prose-a:text-link-teal prose-a:no-underline hover:prose-a:text-navy prose-strong:text-navy"
         >
           <MDXRemote
             source={post.content}

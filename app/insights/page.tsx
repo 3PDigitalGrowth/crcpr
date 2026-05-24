@@ -62,14 +62,12 @@ export default function InsightsPage() {
                 How to use these insights
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
-                What experienced advisers should be watching for before.
+                Our insights are written for leaders who need clearer judgement, not more commentary.
               </h2>
               <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
-                Our insights are written for leaders who need clearer
-                judgement, not more commentary. The focus is practical: what
-                matters, where organisations usually misread the pressure, and
-                what experienced advisers would be watching before the situation
-                escalates.
+                The focus is practical: what matters, where organisations
+                usually misread the pressure, and what experienced advisers
+                would be watching before the situation escalates.
               </p>
 
               <div className="space-y-6 mt-8">

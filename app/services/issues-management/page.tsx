@@ -537,16 +537,14 @@ export default function IssuesManagementPage() {
       </section>
 
       <LeadMagnetBanner
-        magnet="crisisPlanTemplate"
+        magnet="crisisReadinessChecklist"
         variant="dark"
-        title="Does your organisation have an escalation protocol for emerging issues?"
-        description="Download the CRC Public Relations Crisis Communications Plan Template. It includes the escalation framework and decision triggers our issues-management clients use to decide when a developing matter can still be contained and when it requires immediate leadership response."
+        whatYouGetBody="The essential crisis readiness checklist — 30 questions with an action plan for every gap."
         highlights={[
-          "Clarifies issue-to-crisis thresholds",
-          "Useful for executive and risk teams",
-          "Built around real escalation pressure",
+          "30 questions across readiness areas",
+          "Action plan guidance for every gap",
+          "Used by Australian leadership teams",
         ]}
-        whatYouGetBody="A practical framework for identifying ownership, escalation triggers, stakeholder sequencing, and first-response discipline before the matter becomes public."
       />
 
       <FAQSection

@@ -73,7 +73,10 @@ export function LeadMagnetBanner({
                   isDark ? "text-white" : "text-navy"
                 }`}
               >
-                {title ?? meta.title}
+                {title ??
+                  ("headline" in meta && typeof meta.headline === "string"
+                    ? meta.headline
+                    : meta.title)}
               </h2>
               <p
                 className={`text-base leading-relaxed mt-4 max-w-2xl ${

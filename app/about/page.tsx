@@ -50,7 +50,7 @@ const missionItems = [
 const teamMembers = [
   {
     initials: "LM",
-    portraitSrc: "/images/about/lyall-mercer-portrait.png",
+    portraitSrc: siteConfig.lyall.portraitSrc,
     size: "md" as const,
     name: "Lyall Mercer",
     role: "Co-founder & principal adviser",

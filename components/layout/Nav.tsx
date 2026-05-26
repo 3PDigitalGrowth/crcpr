@@ -213,7 +213,7 @@ function ServicesPanel({ onClose }: { onClose: () => void }) {
             onClick={onClose}
             className="block px-3 py-1 text-xs text-white/55 hover:text-white/80 transition-colors"
           >
-            &rarr; Crisis plan template
+            &rarr; Crisis readiness checklist
           </Link>
         </div>
 

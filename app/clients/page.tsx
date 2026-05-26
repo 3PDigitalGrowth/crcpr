@@ -31,13 +31,13 @@ const sectors = [
     title: "Companies & family businesses",
     body: "Direct communications counsel and reputation management for owners, directors, and executives of companies, family businesses, and professional services firms.",
     href: "/clients/corporate",
-    magnetKey: "crisisPlanTemplate" as const,
+    magnetKey: "crisisReadinessChecklist" as const,
   },
   {
     title: "Government",
     body: "Federal and state government departments, statutory authorities, and public sector organisations requiring strategic communications and stakeholder engagement.",
     href: "/clients/government",
-    magnetKey: "crisisPlanTemplate" as const,
+    magnetKey: "crisisReadinessChecklist" as const,
   },
 ];
 
@@ -215,12 +215,7 @@ export default function ClientsPage() {
         variant="white"
       />
 
-      <LeadMagnetBanner
-        magnet="crisisPlanTemplate"
-        variant="light"
-        title="Need a practical framework before the next pressure point arrives?"
-        description="Download the CRC Public Relations Crisis Communications Plan Template, a useful starting point for leadership teams across sectors that need clearer escalation, stronger message discipline, and more confidence under scrutiny."
-      />
+      <LeadMagnetBanner magnet="crisisReadinessChecklist" variant="light" />
 
       <FAQSection
         items={faqs}

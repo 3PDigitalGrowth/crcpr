@@ -16,7 +16,11 @@ export function HomeAbout() {
           {/* Left portrait with offset treatment */}
           <AnimateIn className="lg:col-span-5">
             <div className="relative lg:-ml-4 xl:-ml-8">
-              <PortraitPlaceholder size="lg" />
+              <PortraitPlaceholder
+                size="lg"
+                imageSrc={siteConfig.lyall.portraitSrc}
+                imageAlt={siteConfig.lyall.fullName}
+              />
             </div>
           </AnimateIn>
 

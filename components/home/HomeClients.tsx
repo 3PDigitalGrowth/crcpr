@@ -115,13 +115,13 @@ export function HomeClients() {
 
           {/* Right column, sector grid, spans 7 cols */}
           <div className="lg:col-span-7">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-stretch">
               {sectorCards.map((sector, i) => {
                 const cardClass =
-                  "block bg-white border border-brand-border rounded-xl p-6 shadow-sm shadow-navy/5 min-h-[138px]";
+                  "flex h-full flex-col bg-white border border-brand-border rounded-xl p-6 shadow-sm shadow-navy/5";
 
                 return (
-                  <AnimateIn key={sector.title} delay={i * 80}>
+                  <AnimateIn key={sector.title} delay={i * 80} className="h-full">
                     {sector.href ? (
                       <Link
                         href={sector.href}

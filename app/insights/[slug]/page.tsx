@@ -1,8 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
+import { PortraitPlaceholder } from "@/components/shared/PortraitPlaceholder";
 import { siteConfig } from "@/config/site";
 import { getAllInsights, getInsightBySlug, getInsightSlugs } from "@/lib/mdx";
 
@@ -128,15 +128,13 @@ export default function InsightPage({
       <section className="bg-warm-white py-12">
         <div className="max-w-3xl mx-auto px-6">
           <div className="flex flex-col sm:flex-row gap-6 items-start">
-            <div className="w-16 h-16 rounded-full shrink-0 overflow-hidden">
-              <Image
-                src="/images/about/lyall-mercer-portrait.png"
-                alt={siteConfig.lyall.fullName}
-                width={64}
-                height={64}
-                className="w-full h-full object-cover"
-              />
-            </div>
+            <PortraitPlaceholder
+              size="xs"
+              variant="avatar"
+              className="rounded-full"
+              imageSrc={siteConfig.lyall.portraitSrc}
+              imageAlt={siteConfig.lyall.fullName}
+            />
             <div>
               <p className="font-heading font-black text-navy text-lg">
                 {siteConfig.lyall.fullName}

@@ -504,13 +504,12 @@ export default function CrisisCommunicationsPage() {
       </section>
 
       <LeadMagnetBanner
-        magnet="crisisPlanTemplate"
-        title="Does your organisation have a crisis plan that leadership would trust under pressure?"
-        description="Download the CRC Public Relations Crisis Communications Plan Template. It is the same framework we use with clients to define first-response ownership, message hierarchy, escalation discipline, and stakeholder sequencing before a live matter strips away thinking time."
+        magnet="crisisReadinessChecklist"
+        whatYouGetBody="The essential crisis readiness checklist — 30 questions with an action plan for every gap."
         highlights={[
-          "Built for boards and executive teams",
-          "Useful before simulations and training",
-          "Designed for real response pressure",
+          "30 questions across readiness areas",
+          "Action plan guidance for every gap",
+          "Used by Australian leadership teams",
         ]}
       />
 

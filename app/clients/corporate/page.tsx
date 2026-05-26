@@ -160,11 +160,7 @@ export default function CorporateClientsPage() {
         defaultMessage="We need corporate communications advice on a sensitive matter."
       />
 
-      <LeadMagnetBanner
-        magnet="crisisPlanTemplate"
-        title="Does your leadership team have the communications discipline for a high-pressure corporate matter?"
-        description="Download the CRC Public Relations Crisis Communications Plan Template. It is a practical framework for escalation, first-response control, stakeholder sequencing, and executive message discipline when a sensitive matter starts attracting attention."
-      />
+      <LeadMagnetBanner magnet="crisisReadinessChecklist" />
 
       <FAQSection
         items={faqs}

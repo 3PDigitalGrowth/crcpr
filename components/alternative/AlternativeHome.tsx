@@ -605,12 +605,12 @@ function AlternativeClients() {
           </div>
 
           <div className="lg:col-span-7">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-stretch">
               {sectorCards.map((sector, i) => (
-                <AnimateIn key={sector.title} delay={i * 80}>
+                <AnimateIn key={sector.title} delay={i * 80} className="h-full">
                   <Link
                     href={sector.href}
-                    className="card-border-expand block bg-white border border-brand-border rounded-xl p-6 shadow-sm shadow-navy/5 hover:shadow-md transition-all duration-300 group min-h-[138px]"
+                    className="card-border-expand flex h-full flex-col bg-white border border-brand-border rounded-xl p-6 shadow-sm shadow-navy/5 hover:shadow-md transition-all duration-300 group"
                   >
                     <p className="font-sans font-medium text-navy text-sm group-hover:text-link-teal transition-colors">
                       {sector.title}
@@ -639,7 +639,7 @@ function AlternativeAbout() {
           <AnimateIn className="lg:col-span-5">
             <div className="relative mx-auto w-full max-w-[22rem] sm:max-w-[26rem] lg:-ml-4 lg:max-w-[28rem] xl:-ml-8 xl:max-w-[30rem]">
               <Image
-                src="/images/lyall-mercer-portrait.png"
+                src={siteConfig.lyall.featuredPortraitSrc}
                 alt="Lyall Mercer standing in a corridor"
                 width={682}
                 height={1024}
@@ -688,19 +688,13 @@ function AlternativeAbout() {
 
             <AnimateIn delay={350}>
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
-                <Link
-                  href="/about/lyall-mercer"
-                  className="btn-lift inline-flex items-center gap-2 text-link-teal font-sans font-medium text-sm hover:text-navy hover:gap-3 transition-all"
-                >
-                  Read Lyall&apos;s full profile <ArrowRight size={14} />
-                </Link>
                 <a
                   href={siteConfig.lyallMercerUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-lift inline-flex items-center gap-2 text-link-teal font-sans font-medium text-sm hover:text-navy hover:gap-3 transition-all"
                 >
-                  View media appearances <ArrowRight size={14} />
+                  Read Lyall&apos;s full profile <ArrowRight size={14} />
                 </a>
               </div>
             </AnimateIn>

@@ -25,10 +25,10 @@ export function HomeCrisisLeadMagnet() {
                   />
                 </div>
                 <p className="font-sans font-medium text-brand-gold text-xs">
-                  Free template
+                  Free resource
                 </p>
                 <h3 className="font-heading font-black text-navy text-2xl md:text-[28px] leading-snug mt-2">
-                  Crisis Communications Plan Template
+                  The essential crisis readiness checklist
                 </h3>
               </div>
             </AnimateIn>
@@ -37,19 +37,20 @@ export function HomeCrisisLeadMagnet() {
               <div className="relative rounded-2xl border border-brand-border/40 bg-white/80 backdrop-blur-sm p-8 md:p-10 lg:rounded-none lg:border-0 lg:bg-transparent lg:backdrop-blur-none lg:p-0 card-border-expand">
                 <div className="lg:border-l lg:border-brand-border lg:pl-12">
                   <p className="text-charcoal text-[15px] leading-relaxed">
-                    Most organisations have a crisis plan that has never been tested,
-                    or no plan at all. Our practical template covers everything your
-                    team needs: crisis roles and responsibilities, stakeholder
-                    mapping, message hierarchy, media response protocol, and
-                    post-crisis review. Used by communications teams across
-                    Australia.
+                    Is your organisation prepared for a crisis? Help future-proof
+                    your organisation by identifying areas of vulnerability and risk
+                    that can lead to reputational damage. This is by no means an
+                    exhaustive list but it&apos;s a great start. Used by Australian
+                    communications teams, HR managers, and executive leaders. 30
+                    questions to assess your organisation&apos;s real crisis readiness,
+                    with an action plan for every gap.
                   </p>
                   <button
                     type="button"
                     onClick={() => setModalOpen(true)}
                     className="btn-lift inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-sm rounded-[4px] px-8 py-4 mt-6 hover:bg-gold-light transition"
                   >
-                    Download free template <ArrowRight size={14} aria-hidden />
+                    Download free resource <ArrowRight size={14} aria-hidden />
                   </button>
                   <p className="text-charcoal-mid text-xs mt-3">
                     Delivered to your inbox. No commitment required.
@@ -62,7 +63,7 @@ export function HomeCrisisLeadMagnet() {
       </section>
 
       <LeadMagnetModal
-        magnet="crisisPlanTemplate"
+        magnet="crisisReadinessChecklist"
         isOpen={modalOpen}
         onClose={() => setModalOpen(false)}
       />

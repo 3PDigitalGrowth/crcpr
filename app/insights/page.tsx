@@ -215,12 +215,7 @@ export default function InsightsPage() {
         </div>
       </section>
 
-      <LeadMagnetBanner
-        magnet="crisisReadinessChecklist"
-        variant="light"
-        title="Is your organisation prepared for a crisis?"
-        description="Help future-proof your organisation by identifying areas of vulnerability and risk that can lead to reputational damage. This is by no means an exhaustive list but it's a great start. Used by Australian communications teams, HR managers, and executive leaders. 30 questions to assess your organisation's real crisis readiness, with an action plan for every gap."
-      />
+      <LeadMagnetBanner magnet="crisisReadinessChecklist" variant="light" />
 
       <PageClosingCTA
         title="Need advice on a live issue, a crisis, or a reputation question?"

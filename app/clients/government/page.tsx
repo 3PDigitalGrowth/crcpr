@@ -160,11 +160,7 @@ export default function GovernmentClientsPage() {
         defaultMessage="We need government or public sector communications advice on a current matter."
       />
 
-      <LeadMagnetBanner
-        magnet="crisisPlanTemplate"
-        title="Does your agency have a crisis and escalation framework that will hold up under scrutiny?"
-        description="Download the CRC Public Relations Crisis Communications Plan Template. It helps public sector leaders define ownership, escalation, and stakeholder sequencing before operational pressure, community concern, and media attention collide."
-      />
+      <LeadMagnetBanner magnet="crisisReadinessChecklist" />
 
       <FAQSection
         items={faqs}

@@ -37,6 +37,11 @@ export const siteConfig = {
   lyall: {
     fullName: "Lyall Mercer",
     title: "Co-founder & principal adviser",
+    /** Square/circle headshots — anchor to top of full-body portrait so the face stays in frame. */
+    portraitSrc: "/images/about/lyall-mercer-portrait.png",
+    portraitObjectClassName: "object-cover object-top",
+    /** Full-length portrait for homepage about sections (shown uncropped). */
+    featuredPortraitSrc: "/images/lyall-mercer-portrait.png",
     /** Lyall Mercer personal career tenure (not firm tenure). */
     yearsExperience: "25+",
     origin:
@@ -129,11 +134,11 @@ export const siteConfig = {
       available: true,
     },
     crisisPlanTemplate: {
-      title:
-        "Does your organisation have a crisis plan that has actually been tested?",
+      title: "The essential crisis readiness checklist",
+      headline: "Is your organisation prepared for a crisis?",
       description:
-        "Most organisations have a crisis plan they approved and filed. Very few have exercised it under simulated pressure with their actual team. Download the CRC Public Relations Crisis Communications Plan Template, the same framework we use with clients across Australia to build plans that work when everything else is under pressure.",
-      fileName: "crcpr-crisis-communications-plan-template.pdf",
+        "Help future-proof your organisation by identifying areas of vulnerability and risk that can lead to reputational damage. This is by no means an exhaustive list but it's a great start. Used by Australian communications teams, HR managers, and executive leaders. 30 questions to assess your organisation's real crisis readiness, with an action plan for every gap.",
+      fileName: "crcpr-crisis-readiness-checklist.pdf",
       available: true,
     },
     mediaInterviewGuide: {
@@ -179,9 +184,10 @@ export const siteConfig = {
       available: true,
     },
     crisisReadinessChecklist: {
-      title: "The Essential Crisis Readiness Checklist",
+      title: "The essential crisis readiness checklist",
+      headline: "Is your organisation prepared for a crisis?",
       description:
-        "Is your organisation prepared for a crisis? Help future-proof your organisation by identifying areas of vulnerability and risk that can lead to reputational damage. This is by no means an exhaustive list but it's a great start. Used by Australian communications teams, HR managers, and executive leaders. 30 questions to assess your organisation's real crisis readiness, with an action plan for every gap.",
+        "Help future-proof your organisation by identifying areas of vulnerability and risk that can lead to reputational damage. This is by no means an exhaustive list but it's a great start. Used by Australian communications teams, HR managers, and executive leaders. 30 questions to assess your organisation's real crisis readiness, with an action plan for every gap.",
       fileName: "crcpr-crisis-readiness-checklist.pdf",
       available: true,
     },

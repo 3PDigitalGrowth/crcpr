@@ -448,6 +448,7 @@ export default function IndustryAssociationsPage() {
 
       <LeadMagnetBanner
         magnet="associationsPRChecklist"
+        eyebrow="Free resource"
         title="Elevate your voice and build trust"
         description="Is your industry or professional association communicating in a way that builds member trust, supports your advocacy, and builds trust with stakeholders including government and regulators? Are you the voice the media seeks out for regular expert commentary? This checklist is created from 15+ years of association experience and is a great place to start."
         highlights={[

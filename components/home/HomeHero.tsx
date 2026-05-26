@@ -240,7 +240,12 @@ export function HomeHero() {
           </div>
 
           <div className="hidden lg:flex lg:col-span-5 items-center justify-center relative">
-            <PortraitPlaceholder size="lg" className="mx-auto" />
+            <PortraitPlaceholder
+              size="lg"
+              className="mx-auto"
+              imageSrc={siteConfig.lyall.portraitSrc}
+              imageAlt={siteConfig.lyall.fullName}
+            />
           </div>
         </div>
       </div>

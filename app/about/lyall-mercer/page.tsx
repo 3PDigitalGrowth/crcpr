@@ -94,8 +94,8 @@ export default function LyallMercerPage() {
             <PortraitPlaceholder
               size="lg"
               initials={undefined}
-              imageSrc="/images/about/lyall-mercer-portrait.png"
-              imageAlt="Lyall Mercer"
+              imageSrc={siteConfig.lyall.portraitSrc}
+              imageAlt={siteConfig.lyall.fullName}
             />
             <div className="mt-8">
               <h4 className="text-xs font-sans font-medium text-charcoal-mid mb-3">

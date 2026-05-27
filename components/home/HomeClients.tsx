@@ -130,9 +130,12 @@ export function HomeClients() {
                         <p className="font-sans font-medium text-navy text-sm group-hover:text-link-teal transition-colors">
                           {sector.title}
                         </p>
-                        <p className="text-charcoal-mid text-sm leading-relaxed mt-3">
+                        <p className="text-charcoal-mid text-sm leading-relaxed mt-3 flex-1">
                           {sector.description}
                         </p>
+                        <span className="inline-flex items-center gap-2 text-link-teal font-sans font-medium text-sm mt-5 group-hover:text-navy group-hover:gap-3 transition-all">
+                          Learn more <ArrowRight size={14} aria-hidden />
+                        </span>
                       </Link>
                     ) : (
                       <div className={cardClass}>

@@ -143,7 +143,7 @@ export function Footer() {
                 24/7 crisis support.
               </p>
               <a href={siteConfig.crisisCommsAuUrl} target="_blank" rel="noopener noreferrer" className="text-brand-teal text-xs font-medium hover:underline">
-                crisiscommunicationsaustralia.com.au →
+                crisiscommunications.com.au →
               </a>
             </div>
             <MyPRPartnerCTA

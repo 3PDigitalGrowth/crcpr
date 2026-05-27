@@ -19,7 +19,7 @@ export const siteConfig = {
   crcPrUrl: "https://crcpr.com.au",
   lyallMercerUrl: "https://lyallmercer.com",
   myPrPartnerUrl: "https://myprpartner.com",
-  crisisCommsAuUrl: "https://crisiscommunicationsaustralia.com.au",
+  crisisCommsAuUrl: "https://crisiscommunications.com.au",
   linkedInUrl: "https://www.linkedin.com/company/crc-public-relation/",
   lyallLinkedIn: "https://www.linkedin.com/in/lyallmercer/",
   lyallTwitter: "https://twitter.com/Lyall_Mercer",

@@ -157,13 +157,13 @@ const sectorCards = [
     title: "Companies & family businesses",
     description:
       "Direct personal counsel for owners, directors and executives seeking trust-building communications solutions, wanting to embrace opportunities for positive public exposure, and navigating reputation, media or stakeholder challenges.",
-    href: "/clients/corporate",
+    href: null,
   },
   {
     title: "Local government",
     description:
       "Working alongside the council\u2019s internal comms team, we provide objective expertise that brings clarity and understanding of their unique challenges.",
-    href: "/clients/government",
+    href: null,
   },
   {
     title: "Industry and professional associations, peak bodies",
@@ -175,19 +175,19 @@ const sectorCards = [
     title: "Independent and faith-based schools",
     description:
       "Parent, board, staff and media communications where trust, care and legal precision must work together. We have guided schools across Australia through every challenging issue unique to this sector, and protected reputations.",
-    href: "/clients/schools-faith",
+    href: null,
   },
   {
     title: "Legal & professional services",
     description:
       "Law firms and other professionals have a unique opportunity to become the public voice of authority in their area through strategic media engagement. This helps build trust in their brand and drive business.",
-    href: "/clients/corporate",
+    href: null,
   },
   {
     title: "Child care, aged care and health",
     description:
       "High stakes stakeholder and reputation advice, crisis planning and media representation in heavily scrutinised care environments where media exposure is intensifying and public confidence is everything.",
-    href: "/clients/corporate",
+    href: null,
   },
   {
     title: "Pacific islands",
@@ -199,21 +199,21 @@ const sectorCards = [
     title: "Faith-based organisations",
     description:
       "Faith-based ministries, churches and charities have unique challenges. We are the only Australian PR firm that provides reputation management and crisis planning, communications and management based on deep understanding of their needs, ethos and culture.",
-    href: "/clients/schools-faith",
+    href: null,
   },
   {
     title: "Hospitality",
     description:
       "In an industry extremely vulnerable to online and social media issues and crises, reputation advice, monitoring, media engagement and complaints escalation are essential.",
-    href: "/contact?source=hospitality",
+    href: null,
   },
   {
     title: "High profile individuals",
     description:
       "Celebrities, sportspeople, politicians and others in the spotlight require the right reputation and media guidance when things go wrong and crises arise.",
-    href: "/contact?source=high-profile",
+    href: null,
   },
-];
+] as const;
 
 function AlternativeHero() {
   return (
@@ -606,21 +606,40 @@ function AlternativeClients() {
 
           <div className="lg:col-span-7">
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-stretch">
-              {sectorCards.map((sector, i) => (
-                <AnimateIn key={sector.title} delay={i * 80} className="h-full">
-                  <Link
-                    href={sector.href}
-                    className="card-border-expand flex h-full flex-col bg-white border border-brand-border rounded-xl p-6 shadow-sm shadow-navy/5 hover:shadow-md transition-all duration-300 group"
-                  >
-                    <p className="font-sans font-medium text-navy text-sm group-hover:text-link-teal transition-colors">
-                      {sector.title}
-                    </p>
-                    <p className="text-charcoal-mid text-sm leading-relaxed mt-3">
-                      {sector.description}
-                    </p>
-                  </Link>
-                </AnimateIn>
-              ))}
+              {sectorCards.map((sector, i) => {
+                const cardClass =
+                  "flex h-full flex-col bg-white border border-brand-border rounded-xl p-6 shadow-sm shadow-navy/5";
+
+                return (
+                  <AnimateIn key={sector.title} delay={i * 80} className="h-full">
+                    {sector.href ? (
+                      <Link
+                        href={sector.href}
+                        className={`${cardClass} card-border-expand hover:shadow-md transition-all duration-300 group`}
+                      >
+                        <p className="font-sans font-medium text-navy text-sm group-hover:text-link-teal transition-colors">
+                          {sector.title}
+                        </p>
+                        <p className="text-charcoal-mid text-sm leading-relaxed mt-3 flex-1">
+                          {sector.description}
+                        </p>
+                        <span className="inline-flex items-center gap-2 text-link-teal font-sans font-medium text-sm mt-5 group-hover:text-navy group-hover:gap-3 transition-all">
+                          Learn more <ArrowRight size={14} aria-hidden />
+                        </span>
+                      </Link>
+                    ) : (
+                      <div className={cardClass}>
+                        <p className="font-sans font-medium text-navy text-sm">
+                          {sector.title}
+                        </p>
+                        <p className="text-charcoal-mid text-sm leading-relaxed mt-3">
+                          {sector.description}
+                        </p>
+                      </div>
+                    )}
+                  </AnimateIn>
+                );
+              })}
             </div>
           </div>
         </div>

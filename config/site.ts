@@ -148,6 +148,13 @@ export const siteConfig = {
       fileName: "crcpr-media-interview-guide.pdf",
       available: true,
     },
+    trustedVoiceGuide: {
+      title: "5 steps to becoming a trusted public voice",
+      description:
+        "Raise your public profile and become the trusted voice of authority for your area of expertise. Drive new clients and staff through the credibility this brings. Applies to companies, non-profits, governments, professional services firms, schools and associations.",
+      fileName: "crcpr-5-steps-trusted-public-voice.pdf",
+      available: true,
+    },
     associationCrisisGuide: {
       title: "Industry Association Crisis Guide",
       description:

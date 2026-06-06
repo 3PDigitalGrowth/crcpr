@@ -87,20 +87,22 @@ export function LeadMagnetBanner({
                 {description ?? meta.description}
               </p>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
-                {highlights.map((item) => (
-                  <div
-                    key={item}
-                    className={`rounded-md border px-4 py-4 ${
-                      isDark
-                        ? "border-white/15 bg-white/[0.06] text-white"
-                        : "border-brand-border bg-warm-white text-text-body"
-                    }`}
-                  >
-                    <p className="text-sm leading-relaxed">{item}</p>
-                  </div>
-                ))}
-              </div>
+              {highlights.length > 0 && (
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+                  {highlights.map((item) => (
+                    <div
+                      key={item}
+                      className={`rounded-md border px-4 py-4 ${
+                        isDark
+                          ? "border-white/15 bg-white/[0.06] text-white"
+                          : "border-brand-border bg-warm-white text-text-body"
+                      }`}
+                    >
+                      <p className="text-sm leading-relaxed">{item}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
             <div
               className={`p-8 md:p-10 ${

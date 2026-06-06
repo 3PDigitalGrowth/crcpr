@@ -497,15 +497,11 @@ export default function MediaStrategyPage() {
       </div>
 
       <LeadMagnetBanner
-        magnet="mediaInterviewGuide"
+        magnet="trustedVoiceGuide"
         variant="dark"
-        title="Is your spokesperson ready for the next meaningful interview?"
-        description="Download the CRC Public Relations Media Interview Preparation Guide, a practical briefing framework used by executives and communications leaders who need their message to hold up on camera, on radio, and on the record."
-        highlights={[
-          "Practical framework for print, radio, and broadcast",
-          "Useful before high-stakes interviews",
-          "Built for executives and spokespeople",
-        ]}
+        title="Are you ready to raise your public profile and be the trusted voice of authority for your area of expertise?"
+        description="Download the CRC Public Relations ‘5 steps to becoming a trusted public voice’, and drive new clients and staff through the credibility this brings. Applies to companies, non-profits, governments, professional services firms, schools and associations."
+        highlights={[]}
       />
 
       <FAQSection

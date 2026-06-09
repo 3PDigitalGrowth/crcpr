@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -15,6 +16,7 @@ import { AnimateIn } from "@/components/shared/AnimateIn";
 import { FAQSection } from "@/components/shared/FAQSection";
 import { CaseStudies } from "@/components/shared/CaseStudies";
 import { MediaReachSnapshot } from "@/components/shared/MediaReachSnapshot";
+import { ReputationAssessmentModal } from "@/components/shared/ReputationAssessmentModal";
 
 import { HomeTestimonials } from "@/components/home/HomeTestimonials";
 import { MediaOutletLogoLink } from "@/components/shared/MediaOutletLogoLink";
@@ -473,6 +475,7 @@ function AlternativePracticeAreas() {
 }
 
 function AlternativeAssessment() {
+  const [assessmentOpen, setAssessmentOpen] = useState(false);
   return (
     <section className="relative bg-navy py-24 md:py-32 overflow-hidden">
       <div className="absolute inset-0">
@@ -536,12 +539,13 @@ function AlternativeAssessment() {
                   </AnimateIn>
                 ))}
               </div>
-              <Link
-                href="/services/reputation-management#reputation-assessment"
+              <button
+                type="button"
+                onClick={() => setAssessmentOpen(true)}
                 className="btn-lift block bg-brand-teal text-white font-heading font-black text-sm w-full py-4 rounded-[4px] mt-6 hover:bg-link-teal transition text-center"
               >
                 Start the free assessment →
-              </Link>
+              </button>
               <p className="text-text-caption text-xs mt-3 text-center">
                 Three minutes. No commitment. Results delivered by email.
               </p>
@@ -549,6 +553,11 @@ function AlternativeAssessment() {
           </AnimateIn>
         </div>
       </div>
+
+      <ReputationAssessmentModal
+        isOpen={assessmentOpen}
+        onClose={() => setAssessmentOpen(false)}
+      />
     </section>
   );
 }

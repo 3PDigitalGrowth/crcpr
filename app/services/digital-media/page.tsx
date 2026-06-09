@@ -545,6 +545,7 @@ export default function DigitalMediaPage() {
 
       <LeadMagnetBanner
         magnet="reputationAssessment"
+        opensAssessment
         title="How exposed is your organisation's digital reputation?"
         description="Our Reputation Vulnerability Assessment includes a digital exposure lens covering monitoring, governance, escalation, and online trust risks. It is a fast way to identify where your organisation is currently overconfident or underprepared."
         highlights={[

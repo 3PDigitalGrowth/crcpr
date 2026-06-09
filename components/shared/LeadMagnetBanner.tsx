@@ -4,6 +4,7 @@ import { useState } from "react";
 import { siteConfig } from "@/config/site";
 import type { LeadMagnetKey } from "@/types";
 import { LeadMagnetModal } from "./LeadMagnetModal";
+import { ReputationAssessmentModal } from "./ReputationAssessmentModal";
 
 export interface LeadMagnetBannerProps {
   magnet: LeadMagnetKey;
@@ -16,6 +17,11 @@ export interface LeadMagnetBannerProps {
   whatYouGetBody?: string;
   buttonLabel?: string;
   footnote?: string;
+  /**
+   * When true, the call-to-action opens the interactive Reputation
+   * Vulnerability Assessment popup instead of the lead-magnet download form.
+   */
+  opensAssessment?: boolean;
 }
 
 export function LeadMagnetBanner({
@@ -33,6 +39,7 @@ export function LeadMagnetBanner({
   whatYouGetBody = "A practical resource designed to help leadership teams make a better decision sooner.",
   buttonLabel,
   footnote,
+  opensAssessment = false,
 }: LeadMagnetBannerProps) {
   const [modalOpen, setModalOpen] = useState(false);
   const meta = siteConfig.leadMagnets[magnet];
@@ -42,7 +49,11 @@ export function LeadMagnetBanner({
     eyebrow ?? (isComingSoon ? "Coming soon" : "Free resource");
   const resolvedButtonLabel =
     buttonLabel ??
-    (isComingSoon ? "Notify me when it is ready →" : "Download free resource →");
+    (opensAssessment
+      ? "Start the free assessment →"
+      : isComingSoon
+        ? "Notify me when it is ready →"
+        : "Download free resource →");
   const resolvedFootnote =
     footnote ??
     (isComingSoon
@@ -149,11 +160,18 @@ export function LeadMagnetBanner({
         </div>
       </section>
 
-      <LeadMagnetModal
-        magnet={magnet}
-        isOpen={modalOpen}
-        onClose={() => setModalOpen(false)}
-      />
+      {opensAssessment ? (
+        <ReputationAssessmentModal
+          isOpen={modalOpen}
+          onClose={() => setModalOpen(false)}
+        />
+      ) : (
+        <LeadMagnetModal
+          magnet={magnet}
+          isOpen={modalOpen}
+          onClose={() => setModalOpen(false)}
+        />
+      )}
     </>
   );
 }

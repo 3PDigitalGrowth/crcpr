@@ -88,3 +88,85 @@ html {
 .radial-glow {
   background: radial-gradient(ellipse at center, rgba(201, 168, 76, 0.06) 0%, transparent 70%);
 }
+
+/* ===================================================================== */
+/* Redesign V2 utilities (new-age homepage at /redesign-v2)              */
+/* Scoped, additive. Do not affect the live site or /redesign.           */
+/* ===================================================================== */
+
+/* Drifting aurora mesh — soft gold/teal blobs that breathe behind the
+   warm-cream canvas so sections bleed together with no hard seams. */
+@keyframes v2-aurora-drift {
+  0%   { transform: translate3d(0, 0, 0) scale(1); }
+  33%  { transform: translate3d(4%, -3%, 0) scale(1.08); }
+  66%  { transform: translate3d(-3%, 4%, 0) scale(0.96); }
+  100% { transform: translate3d(0, 0, 0) scale(1); }
+}
+.v2-aurora-blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(90px);
+  will-change: transform;
+  animation: v2-aurora-drift 26s ease-in-out infinite;
+}
+
+/* Fine film grain over the whole canvas — adds tactile, analogue depth. */
+.v2-grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.04;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Glassmorphism 2.0 card surface (over imagery / aurora). */
+.v2-glass {
+  background: rgba(250, 250, 248, 0.62);
+  backdrop-filter: blur(16px) saturate(1.15);
+  -webkit-backdrop-filter: blur(16px) saturate(1.15);
+  border: 1px solid rgba(250, 250, 248, 0.65);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.55) inset,
+    0 24px 60px -28px rgba(26, 43, 74, 0.35);
+}
+.v2-glass-dark {
+  background: rgba(26, 43, 74, 0.42);
+  backdrop-filter: blur(18px) saturate(1.1);
+  -webkit-backdrop-filter: blur(18px) saturate(1.1);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.12) inset,
+    0 24px 60px -28px rgba(0, 0, 0, 0.5);
+}
+
+/* Infinite marquee track (media-outlet ticker as a living seam). */
+@keyframes v2-marquee {
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-50%, 0, 0); }
+}
+.v2-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: v2-marquee 38s linear infinite;
+}
+.v2-marquee:hover .v2-marquee-track {
+  animation-play-state: paused;
+}
+
+/* Hide native scrollbar on the case-study rail. */
+.v2-no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.v2-no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .v2-aurora-blob,
+  .v2-marquee-track {
+    animation: none !important;
+  }
+}

@@ -39,3 +39,4 @@ COMMIT_MSG.tmp
 next-env.d.ts
 
 .vercel
+.gstack/

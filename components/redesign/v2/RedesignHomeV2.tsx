@@ -186,7 +186,28 @@ export function RedesignHomeV2() {
 
       {/* ============================== HERO ============================== */}
       <section className="relative">
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 pb-10 pt-14 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14 lg:pb-16 lg:pt-20">
+        <div className="relative overflow-hidden">
+          {/* Background video + cinematic overlay (scoped to the hero) */}
+          <video
+            className="absolute inset-0 size-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="/images/redesign-v2/hero-ambient.png"
+            aria-hidden
+          >
+            <source src="/images/redesign/hero.mp4" type="video/mp4" />
+          </video>
+          <div
+            aria-hidden
+            className="absolute inset-0 bg-[linear-gradient(105deg,rgba(16,28,52,0.94)_0%,rgba(16,28,52,0.82)_46%,rgba(16,28,52,0.5)_100%)]"
+          />
+          <div
+            aria-hidden
+            className="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-b from-transparent to-[#F5F2EC]"
+          />
+          <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 pb-20 pt-16 lg:grid-cols-[1.08fr_0.92fr] lg:gap-14 lg:pb-28 lg:pt-24">
           {/* Left: copy */}
           <div>
             <Reveal y={12}>
@@ -197,7 +218,7 @@ export function RedesignHomeV2() {
             </Reveal>
 
             <motion.h1
-              className={`${serif} mt-7 text-[3.25rem] font-normal leading-[0.95] tracking-[-0.02em] text-navy sm:text-6xl lg:text-[5.25rem]`}
+              className={`${serif} mt-7 text-[3.25rem] font-normal leading-[0.95] tracking-[-0.02em] text-white [text-shadow:0_2px_18px_rgba(0,0,0,0.35)] sm:text-6xl lg:text-[5.25rem]`}
               variants={reduce ? undefined : wordContainer}
               initial={reduce ? false : "hidden"}
               animate={reduce ? undefined : "show"}
@@ -220,11 +241,11 @@ export function RedesignHomeV2() {
             </motion.h1>
 
             <Reveal delay={0.5} y={16}>
-              <p className="mt-7 max-w-lg text-lg leading-relaxed text-charcoal-mid">
+              <p className="mt-7 max-w-lg text-lg leading-relaxed text-white/85">
                 Whatever your communications objectives, you need experienced
                 counsel you can trust.
               </p>
-              <p className={`${serif} mt-3 max-w-lg text-xl italic text-navy`}>
+              <p className={`${serif} mt-3 max-w-lg text-xl italic text-white`}>
                 We are your trusted adviser and advocate, and we believe in you.
               </p>
             </Reveal>
@@ -241,7 +262,7 @@ export function RedesignHomeV2() {
                 <button
                   type="button"
                   onClick={() => setAssessmentOpen(true)}
-                  className="group inline-flex items-center justify-center gap-2 rounded-full px-4 py-3.5 text-sm font-semibold text-navy transition hover:text-link-teal"
+                  className="group inline-flex items-center justify-center gap-2 rounded-full px-4 py-3.5 text-sm font-semibold text-white transition hover:text-brand-gold"
                 >
                   Start the free assessment
                   <ArrowRight
@@ -257,19 +278,20 @@ export function RedesignHomeV2() {
               <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
                 <a
                   href={siteConfig.phone.href}
-                  className="group inline-flex items-center gap-2.5 rounded-full border border-navy/15 bg-warm-white/70 px-4 py-2 text-sm font-medium text-navy backdrop-blur transition hover:border-brand-teal/50"
+                  className="group inline-flex items-center gap-2.5 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-medium text-white backdrop-blur transition hover:border-brand-teal/60"
                 >
                   <span className="relative flex size-2.5">
                     <span className="absolute inline-flex size-full animate-ping rounded-full bg-brand-teal/60" />
                     <span className="relative inline-flex size-2.5 rounded-full bg-brand-teal" />
                   </span>
                   24/7 confidential crisis line
-                  <span className="font-semibold text-link-teal">
+                  <span className="font-semibold text-brand-gold">
                     {siteConfig.phone.display}
                   </span>
                 </a>
-                <p className="text-sm text-text-secondary">
-                  You deal directly with Lyall Mercer, not an account manager.
+                <p className="text-sm text-white/65">
+                  You deal directly with an experienced adviser, not an account
+                  manager.
                 </p>
               </div>
             </Reveal>
@@ -277,27 +299,16 @@ export function RedesignHomeV2() {
 
           {/* Right: media + floating glass card */}
           <Reveal delay={0.25} y={28} className="relative">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-[1.75rem] shadow-2xl shadow-navy/25 sm:aspect-[4/3] lg:aspect-[4/5]">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[1.75rem] ring-1 ring-white/15 shadow-2xl shadow-navy/40 sm:aspect-[4/3] lg:aspect-[4/5]">
               <Image
-                src="/images/redesign-v2/hero-ambient.png"
-                alt="Boardroom high in a harbour-city tower at golden hour, the setting for trusted communications counsel"
+                src="/images/homepage/hero-founders-v2.png"
+                alt="Lyall Mercer and Barbara Gorogh, co-founders of CRC Public Relations"
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 48vw"
-                className="object-cover"
+                className="object-cover object-[68%_top]"
               />
-              {/* Ambient hero loop on md+; static image is the mobile fallback. */}
-              <video
-                className="absolute inset-0 hidden size-full object-cover md:block"
-                autoPlay
-                muted
-                loop
-                playsInline
-                poster="/images/redesign-v2/hero-ambient.png"
-              >
-                <source src="/images/redesign/hero.mp4" type="video/mp4" />
-              </video>
-              <div className="absolute inset-0 bg-gradient-to-t from-navy/45 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/35 via-transparent to-transparent" />
             </div>
 
             {/* Floating glass trust card */}
@@ -325,6 +336,7 @@ export function RedesignHomeV2() {
               </div>
             </div>
           </Reveal>
+          </div>
         </div>
 
         {/* Media marquee — living seam into the bento */}
@@ -333,17 +345,19 @@ export function RedesignHomeV2() {
             Expert commentary from our advisers, featured in
           </p>
           <Marquee>
-            {siteConfig.lyall.mediaLinks.map((link) => (
-              <span key={link.name} className="mx-9 inline-flex">
-                <MediaOutletLogoLink
-                  href={link.href}
-                  name={link.name}
-                  logoSrc={link.logoSrc}
-                  variant="onLight"
-                  tone={link.tone}
-                />
-              </span>
-            ))}
+            {Array.from({ length: 3 }).flatMap((_, rep) =>
+              siteConfig.lyall.mediaLinks.map((link) => (
+                <span key={`${rep}-${link.name}`} className="mx-9 inline-flex">
+                  <MediaOutletLogoLink
+                    href={link.href}
+                    name={link.name}
+                    logoSrc={link.logoSrc}
+                    variant="onLight"
+                    tone={link.tone}
+                  />
+                </span>
+              )),
+            )}
           </Marquee>
         </div>
       </section>
@@ -548,7 +562,7 @@ export function RedesignHomeV2() {
               {[
                 {
                   icon: UserRound,
-                  title: "Senior counsel, every time",
+                  title: "Experienced counsel, every time",
                   text: "No account managers, no junior hand-offs. You work directly with advisers who have managed the situations you are facing.",
                 },
                 {
@@ -762,14 +776,16 @@ export function RedesignHomeV2() {
                   {String(i + 1).padStart(2, "0")}
                 </span>
               </div>
-              <p
-                className={`${serif} mt-3 text-3xl font-normal leading-[1.05] text-navy`}
-              >
-                {study.outcome}
-              </p>
-              <p className="mt-3 text-sm italic leading-relaxed text-charcoal-mid">
-                {study.outcomeSub}
-              </p>
+              <div className="mt-3 sm:min-h-[8.5rem]">
+                <p
+                  className={`${serif} text-3xl font-normal leading-[1.05] text-navy`}
+                >
+                  {study.outcome}
+                </p>
+                <p className="mt-3 text-sm italic leading-relaxed text-charcoal-mid">
+                  {study.outcomeSub}
+                </p>
+              </div>
               <hr className="my-5 border-brand-border" />
               <div className="space-y-4">
                 <div>

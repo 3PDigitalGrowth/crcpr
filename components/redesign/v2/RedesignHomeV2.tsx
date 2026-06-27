@@ -28,6 +28,7 @@ import {
   UserRound,
 } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import { submitEnquiry, type FormState } from "@/lib/actions";
 import { MediaOutletLogoLink } from "@/components/shared/MediaOutletLogoLink";
 import { ReputationAssessmentModal } from "@/components/shared/ReputationAssessmentModal";
 import { AuroraCanvas } from "./AuroraCanvas";
@@ -39,6 +40,10 @@ import { FaqV2 } from "./FaqV2";
 
 const serif = "font-[family-name:var(--font-display)]";
 const body = "font-[family-name:var(--font-body)]";
+
+/* Glass field styling for the hero enquiry form (on the dark video hero). */
+const fieldCls =
+  "w-full rounded-xl border border-white/20 bg-white/10 px-4 py-3 text-sm text-white placeholder:text-white/45 backdrop-blur transition focus:border-brand-gold/60 focus:outline-none focus:ring-2 focus:ring-brand-gold/30";
 
 /* --------------------------------- data --------------------------------- */
 
@@ -164,6 +169,21 @@ function Reveal({
 export function RedesignHomeV2() {
   const [assessmentOpen, setAssessmentOpen] = useState(false);
   const reduce = useReducedMotion();
+
+  const [enquiry, setEnquiry] = useState<FormState>({
+    status: "idle",
+    message: "",
+  });
+  const [sending, setSending] = useState(false);
+
+  async function handleEnquiry(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setSending(true);
+    const data = new FormData(e.currentTarget);
+    const result = await submitEnquiry({ status: "idle", message: "" }, data);
+    setSending(false);
+    setEnquiry(result);
+  }
 
   const headWords = ["Strategic,", "proven"];
 
@@ -297,43 +317,86 @@ export function RedesignHomeV2() {
             </Reveal>
           </div>
 
-          {/* Right: media + floating glass card */}
+          {/* Right: hero enquiry form (glass card on the dark video) */}
           <Reveal delay={0.25} y={28} className="relative">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-[1.75rem] ring-1 ring-white/15 shadow-2xl shadow-navy/40 sm:aspect-[4/3] lg:aspect-[4/5]">
-              <Image
-                src="/images/homepage/hero-founders-v2.png"
-                alt="Lyall Mercer and Barbara Gorogh, co-founders of CRC Public Relations"
-                fill
-                priority
-                sizes="(max-width: 1024px) 100vw, 48vw"
-                className="object-cover object-[68%_top]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy/35 via-transparent to-transparent" />
-            </div>
-
-            {/* Floating glass trust card */}
-            <div className="v2-glass absolute -bottom-6 -left-4 w-[min(20rem,80%)] rounded-2xl p-5 sm:-left-6">
-              <div className="flex items-center gap-5">
-                <div>
-                  <p
-                    className={`${serif} text-3xl leading-none text-navy`}
+            <div className="v2-glass-dark rounded-[1.75rem] p-6 shadow-2xl shadow-navy/40 sm:p-8">
+              {enquiry.status === "success" ? (
+                <div className="py-6 text-center">
+                  <div className="mx-auto mb-4 flex size-12 items-center justify-center rounded-full bg-brand-gold/15 text-brand-gold">
+                    <Check size={24} strokeWidth={2.5} aria-hidden />
+                  </div>
+                  <p className={`${serif} text-2xl text-white`}>
+                    Message received.
+                  </p>
+                  <p className="mx-auto mt-3 max-w-xs text-sm leading-relaxed text-white/70">
+                    An experienced adviser will be in touch shortly, within the
+                    hour during business hours.
+                  </p>
+                  <a
+                    href={siteConfig.phone.href}
+                    className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-gold transition hover:text-gold-light"
                   >
-                    <Counter value={15} suffix="+" />
-                  </p>
-                  <p className="mt-1 text-[11px] uppercase tracking-[0.14em] text-text-secondary">
-                    years trading
-                  </p>
+                    <Phone size={14} aria-hidden /> Urgent? Call{" "}
+                    {siteConfig.phone.display}
+                  </a>
                 </div>
-                <div className="h-10 w-px bg-navy/15" aria-hidden />
-                <div>
-                  <p className={`${serif} text-3xl leading-none text-navy`}>
-                    <Counter value={100} suffix="%" />
+              ) : (
+                <form onSubmit={handleEnquiry} className="space-y-3.5">
+                  <div>
+                    <Eyebrow tone="gold">Book a consultation</Eyebrow>
+                    <p
+                      className={`${serif} mt-3 text-2xl leading-tight text-white`}
+                    >
+                      Start a conversation.
+                    </p>
+                  </div>
+                  {enquiry.status === "error" && (
+                    <p className="text-sm text-red-300" role="alert">
+                      {enquiry.message}
+                    </p>
+                  )}
+                  <input
+                    name="name"
+                    required
+                    autoComplete="name"
+                    placeholder="Full name"
+                    className={fieldCls}
+                  />
+                  <input
+                    name="email"
+                    type="email"
+                    required
+                    autoComplete="email"
+                    placeholder="Email"
+                    className={fieldCls}
+                  />
+                  <input
+                    name="phone"
+                    type="tel"
+                    required
+                    autoComplete="tel"
+                    placeholder="Phone"
+                    className={fieldCls}
+                  />
+                  <textarea
+                    name="message"
+                    rows={3}
+                    placeholder="How can we help?"
+                    className={`${fieldCls} min-h-[88px] resize-y`}
+                  />
+                  <button
+                    type="submit"
+                    disabled={sending}
+                    className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-gold px-7 py-3.5 text-sm font-semibold text-navy shadow-lg shadow-brand-gold/20 transition-colors hover:bg-gold-light disabled:cursor-not-allowed disabled:opacity-60"
+                  >
+                    {sending ? "Sending…" : "Send message"}
+                    {!sending && <ArrowRight size={15} aria-hidden />}
+                  </button>
+                  <p className="text-center text-xs text-white/45">
+                    For active crises, call {siteConfig.phone.display}.
                   </p>
-                  <p className="mt-1 text-[11px] uppercase tracking-[0.14em] text-text-secondary">
-                    client retention
-                  </p>
-                </div>
-              </div>
+                </form>
+              )}
             </div>
           </Reveal>
           </div>
@@ -788,7 +851,7 @@ export function RedesignHomeV2() {
               </div>
               <hr className="my-5 border-brand-border" />
               <div className="space-y-4">
-                <div>
+                <div className="sm:min-h-[6.5rem]">
                   <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-link-teal">
                     Challenge
                   </p>

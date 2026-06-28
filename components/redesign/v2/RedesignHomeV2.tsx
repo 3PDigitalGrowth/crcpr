@@ -825,7 +825,7 @@ export function RedesignHomeV2() {
         </div>
 
         {/* Horizontal rail */}
-        <div className="v2-no-scrollbar mt-10 flex snap-x snap-mandatory gap-5 overflow-x-auto px-6 pb-4 [scroll-padding-left:1.5rem]">
+        <div className="v2-no-scrollbar mx-auto mt-10 flex max-w-7xl snap-x snap-mandatory gap-5 overflow-x-auto px-6 pb-4 [scroll-padding-left:1.5rem]">
           {siteConfig.caseStudies.map((study, i) => (
             <article
               key={study.id}

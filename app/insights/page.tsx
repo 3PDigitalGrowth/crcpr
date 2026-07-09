@@ -17,7 +17,7 @@ export default function InsightsPage() {
 
   return (
     <>
-      <PageHero
+      <PageHero copyId="insights"
         asidePreset="editorialInsights"
         eyebrow="Insights"
         title="Insights. Commentary. Crisis thinking."
@@ -30,7 +30,7 @@ export default function InsightsPage() {
         }}
       />
 
-      <PageProofStrip
+      <PageProofStrip copyId="insights"
         title="Our insights exist to help leaders make better decisions under pressure."
         items={[
           {
@@ -217,7 +217,7 @@ export default function InsightsPage() {
 
       <LeadMagnetBanner magnet="crisisReadinessChecklist" variant="light" />
 
-      <PageClosingCTA
+      <PageClosingCTA copyId="insights"
         title="Need advice on a live issue, a crisis, or a reputation question?"
         body="If an article has raised a question about your organisation's exposure, the right next step is usually a confidential conversation with an experienced adviser."
       />

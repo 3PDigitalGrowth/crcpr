@@ -427,7 +427,7 @@ export default function IssuesManagementPage() {
         </div>
       </section>
 
-      <InlineEnquirySection
+      <InlineEnquirySection copyId="services-issues-management"
         title="Watching something develop?"
         body="If your team is seeing signals that a matter could escalate, engage early. The right response now can prevent unnecessary media, stakeholder, and regulatory pressure later."
         bullets={[
@@ -553,7 +553,7 @@ export default function IssuesManagementPage() {
         expandable={false}
       />
 
-      <PageClosingCTA
+      <PageClosingCTA copyId="services-issues-management"
         title="Watching an issue develop? Do not wait for public escalation."
         body="The organisations that handle issues best engage communications counsel while the situation is still shapeable. If you are seeing early warning signs, we can help you assess the exposure and decide what to do next."
       />

@@ -81,7 +81,7 @@ export default function MediaStrategyPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <PageHero
+      <PageHero copyId="services-media-strategy"
         asidePreset="mediaEditorial"
         eyebrow="Media strategy"
         title="A trusted media presence doesn't happen by accident."
@@ -237,7 +237,7 @@ export default function MediaStrategyPage() {
         </div>
       </section>
 
-      <InlineEnquirySection
+      <InlineEnquirySection copyId="services-media-strategy"
         title="Need a sharper media strategy?"
         body="If your organisation wants stronger editorial positioning, better spokesperson preparedness, or more deliberate thought leadership, CRC Public Relations can help design the strategy behind it."
         bullets={[
@@ -510,7 +510,7 @@ export default function MediaStrategyPage() {
         expandable={false}
       />
 
-      <PageClosingCTA
+      <PageClosingCTA copyId="services-media-strategy"
         title="Ready to build media presence that actually moves the needle?"
         body="Media strategy works when it is consistent, strategic, and built on genuine editorial judgment. We help you earn coverage that strengthens authority rather than just generating noise."
         primaryLabel="Book a media strategy consultation"

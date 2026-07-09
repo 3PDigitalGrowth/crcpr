@@ -12,7 +12,7 @@ export const metadata = {
 export default function TermsPage() {
   return (
     <>
-      <PageHero
+      <PageHero copyId="terms"
         asidePreset="legalNeutral"
         eyebrow="Legal"
         title="Terms of Use"
@@ -21,7 +21,7 @@ export default function TermsPage() {
         ctaHref="/contact"
       />
 
-      <PageProofStrip
+      <PageProofStrip copyId="terms"
         title="These terms are designed to be clear, practical, and consistent with a professional-services website."
         items={[
           {
@@ -167,7 +167,7 @@ export default function TermsPage() {
         </div>
       </section>
 
-      <PageClosingCTA
+      <PageClosingCTA copyId="terms"
         title="Need clarification on these terms?"
         body="If you have a question about how these terms apply to your use of the site or a potential engagement, contact us directly and we will clarify the appropriate position."
         primaryLabel="Contact CRC Public Relations"

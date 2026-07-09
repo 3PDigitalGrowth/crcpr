@@ -118,7 +118,7 @@ const faqs = [
 export default function ServicesPage() {
   return (
     <>
-      <PageHero
+      <PageHero copyId="services"
         asidePreset="strategicIntegrated"
         eyebrow="Full service offering"
         title="Corporate communications and PR services."
@@ -131,7 +131,7 @@ export default function ServicesPage() {
         }}
       />
 
-      <PageProofStrip
+      <PageProofStrip copyId="services"
         title="The service mix changes by client. The standard of counsel does not."
         items={[...proofItems]}
       />
@@ -209,7 +209,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <InlineEnquirySection
+      <InlineEnquirySection copyId="services"
         title="Not sure which service is the right starting point?"
         body="That is common. Many clients come to CRC Public Relations with a situation rather than a neatly labelled service category. We can help identify the right starting point and the right next step."
         bullets={[
@@ -272,7 +272,7 @@ export default function ServicesPage() {
         expandable={false}
       />
 
-      <PageClosingCTA
+      <PageClosingCTA copyId="services"
         title="Not sure which service is the right starting point?"
         body="That is common. Many clients come to us with a situation rather than a neatly labelled service category. We can help you identify the right starting point and the right next step."
       />

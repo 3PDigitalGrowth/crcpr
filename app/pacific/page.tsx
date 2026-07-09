@@ -130,7 +130,7 @@ export default function PacificPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <PageHero
+      <PageHero copyId="pacific"
         asidePreset="pacificRegional"
         eyebrow="Pacific advisory"
         title="The Pacific region demands communications expertise that most public relations firms don't have."
@@ -143,7 +143,7 @@ export default function PacificPage() {
         }}
       />
 
-      <PageProofStrip
+      <PageProofStrip copyId="pacific"
         title="Pacific advisory work succeeds when communication respects context, protocol, and relationship."
         items={[...proofItems]}
         testimonial={{
@@ -353,7 +353,7 @@ export default function PacificPage() {
         </div>
       </section>
 
-      <InlineEnquirySection
+      <InlineEnquirySection copyId="pacific"
         title="Need communications advice for a Pacific matter?"
         body="We work with Pacific governments, regional organisations, NGOs, development partners, and Australian organisations operating in the region. If the matter is culturally or politically sensitive, early advice matters."
         bullets={[
@@ -537,7 +537,7 @@ export default function PacificPage() {
         expandable={false}
       />
 
-      <PageClosingCTA
+      <PageClosingCTA copyId="pacific"
         title="Working in the Pacific? Talk to the firm that genuinely knows the region."
         body="Whether you are operating across multiple Pacific jurisdictions or preparing for a single sensitive engagement, we provide communications counsel grounded in regional experience."
         primaryLabel="Book a Pacific advisory consultation"

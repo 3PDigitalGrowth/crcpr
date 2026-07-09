@@ -360,7 +360,7 @@ export default function DigitalMediaPage() {
         </div>
       </section>
 
-      <InlineEnquirySection
+      <InlineEnquirySection copyId="services-digital-media"
         title="Need a digital reputation review?"
         body="If your organisation needs better monitoring, stronger governance, or a clearer response plan for online issues, CRC Public Relations can help you assess the exposure and tighten the system."
         bullets={[
@@ -561,7 +561,7 @@ export default function DigitalMediaPage() {
         expandable={false}
       />
 
-      <PageClosingCTA
+      <PageClosingCTA copyId="services-digital-media"
         title="Your organisation is being talked about online right now."
         body="The real question is whether you know where the pressure points are and whether your team is ready to respond with discipline. We help you manage digital reputation with the same rigour you expect in every other high-stakes communication setting."
         primaryLabel="Book a digital reputation review"

@@ -12,7 +12,7 @@ export const metadata = {
 export default function PrivacyPolicyPage() {
   return (
     <>
-      <PageHero
+      <PageHero copyId="privacy-policy"
         asidePreset="legalNeutral"
         eyebrow="Legal"
         title="Privacy Policy"
@@ -21,7 +21,7 @@ export default function PrivacyPolicyPage() {
         ctaHref="/contact"
       />
 
-      <PageProofStrip
+      <PageProofStrip copyId="privacy-policy"
         title="Privacy is treated as a trust issue, not an administrative afterthought."
         items={[
           {
@@ -156,7 +156,7 @@ export default function PrivacyPolicyPage() {
         </div>
       </section>
 
-      <PageClosingCTA
+      <PageClosingCTA copyId="privacy-policy"
         title="Need clarification on privacy or data handling?"
         body="If you have a privacy question, access request, or concern about how information is handled, contact us directly and we will point you to the right next step."
         primaryLabel="Contact CRC Public Relations"

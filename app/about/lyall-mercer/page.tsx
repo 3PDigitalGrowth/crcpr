@@ -20,7 +20,7 @@ export const metadata: Metadata = {
 export default function LyallMercerPage() {
   return (
     <>
-      <PageHero
+      <PageHero copyId="about-lyall-mercer"
         asidePreset="editorialInsights"
         eyebrow="co-founder & principal adviser"
         title="Lyall Mercer"
@@ -33,7 +33,7 @@ export default function LyallMercerPage() {
         }}
       />
 
-      <PageProofStrip
+      <PageProofStrip copyId="about-lyall-mercer"
         title="Lyall Mercer is trusted when the matter requires judgement, not performance."
         items={[
           {
@@ -220,7 +220,7 @@ export default function LyallMercerPage() {
         description="Download the CRC Public Relations '5 steps to becoming a trusted public voice', and drive new clients and staff through the credibility this brings. Applies to companies, non-profits, governments, professional services firms, schools and associations."
       />
 
-      <InlineEnquirySection
+      <InlineEnquirySection copyId="about-lyall-mercer"
         title="Need Lyall's advice on a high-stakes matter?"
         body="Use this form for confidential advisory, speaking, commentary, or specialist crisis and reputation enquiries involving Lyall Mercer."
         bullets={[
@@ -232,7 +232,7 @@ export default function LyallMercerPage() {
         variant="white"
       />
 
-      <PageClosingCTA
+      <PageClosingCTA copyId="about-lyall-mercer"
         title="Work directly with Lyall Mercer."
         body="For advisory, commentary, speaking, or high-stakes communications matters, get in touch and we will route the conversation appropriately."
         primaryLabel="Work with Lyall"

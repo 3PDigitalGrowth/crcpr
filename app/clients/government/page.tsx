@@ -65,7 +65,7 @@ const faqs = [
 export default function GovernmentClientsPage() {
   return (
     <>
-      <PageHero
+      <PageHero copyId="clients-government"
         asidePreset="clientsBreadth"
         eyebrow="Government"
         title="Government communications and stakeholder engagement"
@@ -78,7 +78,7 @@ export default function GovernmentClientsPage() {
         }}
       />
 
-      <PageProofStrip
+      <PageProofStrip copyId="clients-government"
         title="Government communications succeeds when authority, process, and public confidence remain aligned."
         items={[...proofItems]}
       />
@@ -148,7 +148,7 @@ export default function GovernmentClientsPage() {
         </div>
       </section>
 
-      <InlineEnquirySection
+      <InlineEnquirySection copyId="clients-government"
         eyebrow="Where it gets difficult"
         title="Need strategic communications support for a public sector matter?"
         body="Complexity rarely comes from the announcement itself. It comes from the number of interested audiences around it: ministers, agency leadership, delivery partners, local communities, media, and staff. The challenge is keeping the message accurate, coordinated, and defensible across all of them without losing pace."
@@ -168,7 +168,7 @@ export default function GovernmentClientsPage() {
         expandable={false}
       />
 
-      <PageClosingCTA
+      <PageClosingCTA copyId="clients-government"
         title="Discuss your government communications needs with an experienced adviser."
         body="We work with departments, agencies, and public sector organisations that need disciplined communication in environments where public trust and scrutiny matter."
       />

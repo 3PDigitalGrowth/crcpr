@@ -269,7 +269,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <InlineEnquirySection
+      <InlineEnquirySection copyId="about"
         title="Start a direct conversation"
         body="If your situation is sensitive or high-stakes, the first step is a short, confidential conversation. You will speak with an experienced adviser."
         bullets={[
@@ -352,7 +352,7 @@ export default function AboutPage() {
         <CapabilityDownload />
       </div>
 
-      <PageClosingCTA
+      <PageClosingCTA copyId="about"
         title="Considering engaging us?"
         body="If you have read this page and think CRC Public Relations may be the right partner for your organisation, the next step is a direct conversation. We will listen first, then come back with a clear view of whether we are the right fit and what that engagement could look like."
       />

@@ -359,7 +359,7 @@ export default function CrisisCommunicationsPage() {
         </div>
       </section>
 
-      <InlineEnquirySection
+      <InlineEnquirySection copyId="services-crisis-communications"
         eyebrow="Confidential enquiry"
         submitLabel="Send confidential enquiry"
         title="Need crisis communications support or preparedness advice?"
@@ -520,7 +520,7 @@ export default function CrisisCommunicationsPage() {
         expandable={false}
       />
 
-      <PageClosingCTA
+      <PageClosingCTA copyId="services-crisis-communications"
         title="Preparation now is worth far more than an ad hoc response later."
         body="A tested crisis communications capability costs a fraction of a poorly handled incident. If your organisation needs a plan, crisis simulation, or requires other support before the next high-pressure event, talk to us."
         primaryLabel="Book a crisis preparedness consultation"

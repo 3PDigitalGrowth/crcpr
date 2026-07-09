@@ -30,7 +30,7 @@ export default function FAQPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      <PageHero
+      <PageHero copyId="faq"
         asidePreset="editorialInsights"
         eyebrow="FAQ"
         title="Frequently asked questions."
@@ -43,7 +43,7 @@ export default function FAQPage() {
         }}
       />
 
-      <PageProofStrip
+      <PageProofStrip copyId="faq"
         title="Most buying decisions at this level depend on clarity, confidence, and fit."
         items={[
           {
@@ -128,7 +128,7 @@ export default function FAQPage() {
 
       <FAQSection titleText="Frequently asked questions" />
 
-      <InlineEnquirySection
+      <InlineEnquirySection copyId="faq"
         title="Still deciding whether CRC Public Relations is the right fit?"
         body="If your question is specific, sensitive, or difficult to reduce to a general FAQ, the best next step is a direct conversation with an experienced adviser."
         bullets={[
@@ -140,7 +140,7 @@ export default function FAQPage() {
         variant="white"
       />
 
-      <PageClosingCTA
+      <PageClosingCTA copyId="faq"
         title="Have a question not answered here?"
         body="If your situation is specific, sensitive, or difficult to fit into a general FAQ, the best next step is to get in touch directly and we will help."
         primaryLabel="Get in touch"

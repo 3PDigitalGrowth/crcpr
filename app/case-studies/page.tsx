@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function CaseStudiesPage() {
   return (
     <>
-      <PageHero
+      <PageHero copyId="case-studies"
         asidePreset="anonymisedOutcomes"
         eyebrow="Client outcomes"
         title="Results when the needs are great and the stakes are high."
@@ -28,7 +28,7 @@ export default function CaseStudiesPage() {
         }}
       />
 
-      <PageProofStrip
+      <PageProofStrip copyId="case-studies"
         title="These examples are anonymised, but they still show the outcomes our work is designed to deliver."
         items={[
           {
@@ -163,7 +163,7 @@ export default function CaseStudiesPage() {
         </div>
       </section>
 
-      <InlineEnquirySection
+      <InlineEnquirySection copyId="case-studies"
         title="Need counsel on a matter where the outcome genuinely matters?"
         body="Whatever your communications need, sensitive issue, or stakeholder engagement challenge with real consequences, we can help shape the result."
         bullets={[
@@ -175,7 +175,7 @@ export default function CaseStudiesPage() {
         variant="white"
       />
 
-      <PageClosingCTA
+      <PageClosingCTA copyId="case-studies"
         title="Outcomes matter more than headlines."
         body="The examples here are anonymised, but they reflect the kinds of policy, reputational, and organisational results clients engage us to pursue when the stakes are real."
       />

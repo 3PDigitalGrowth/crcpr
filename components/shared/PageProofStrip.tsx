@@ -1,3 +1,5 @@
+import { MT } from "@/components/editable";
+
 interface ProofItem {
   label: string;
   value: string;
@@ -21,6 +23,8 @@ interface PageProofStripProps {
   items: ProofItem[];
   variant?: "white" | "off-white" | "navy";
   testimonial?: ProofTestimonial;
+  /** Page-scoped id making this strip editable in /admin/editor. */
+  copyId?: string;
 }
 
 export function PageProofStrip({
@@ -30,7 +34,9 @@ export function PageProofStrip({
   items,
   variant = "off-white",
   testimonial,
+  copyId,
 }: PageProofStripProps) {
+  const cid = (suffix: string) => (copyId ? `${copyId}.proof.${suffix}` : undefined);
   const sectionClass =
     variant === "navy"
       ? "bg-navy"
@@ -61,14 +67,14 @@ export function PageProofStrip({
       <div className="max-w-7xl mx-auto px-6">
         <div className="max-w-3xl">
           <p className="text-brand-gold font-sans font-medium text-xs mb-4">
-            {eyebrow}
+            <MT id={cid("eyebrow")}>{eyebrow}</MT>
           </p>
           <h2 className={`font-heading font-black text-3xl ${titleClass}`}>
-            {title}
+            <MT id={cid("title")}>{title}</MT>
           </h2>
           {body ? (
             <p className={`mt-5 text-lg leading-relaxed ${bodyClass}`}>
-              {body}
+              <MT id={cid("body")}>{body}</MT>
             </p>
           ) : null}
         </div>
@@ -78,19 +84,19 @@ export function PageProofStrip({
             items.length >= 4 ? "lg:grid-cols-4" : "lg:grid-cols-3"
           } gap-6 mt-10`}
         >
-          {items.map((item) => (
+          {items.map((item, itemIndex) => (
             <div
               key={`${item.label}-${item.value}`}
               className={`border rounded-lg p-6 ${cardClass}`}
             >
               <p className="text-brand-gold text-xs font-medium mb-3">
-                {item.label}
+                <MT id={cid(`items.${itemIndex}.label`)}>{item.label}</MT>
               </p>
               <p className={`font-heading font-black text-2xl ${valueClass}`}>
-                {item.value}
+                <MT id={cid(`items.${itemIndex}.value`)}>{item.value}</MT>
               </p>
               <p className={`text-sm leading-relaxed mt-3 ${detailClass}`}>
-                {item.detail}
+                <MT id={cid(`items.${itemIndex}.detail`)}>{item.detail}</MT>
               </p>
             </div>
           ))}

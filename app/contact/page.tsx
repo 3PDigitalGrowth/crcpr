@@ -18,7 +18,7 @@ export default function ContactPage({
 }) {
   return (
     <>
-      <PageHero
+      <PageHero copyId="contact"
         asidePreset="practicalNextStep"
         eyebrow="Contact us"
         title="Let's discuss your needs."
@@ -31,7 +31,7 @@ export default function ContactPage({
         }}
       />
 
-      <PageProofStrip
+      <PageProofStrip copyId="contact"
         title="Why CRC Public Relations"
         body="When you contact CRC Public Relations, we will carefully consider your situation and unique needs with a commitment of confidentiality."
         items={[
@@ -136,7 +136,7 @@ export default function ContactPage({
 
       <FAQSection />
 
-      <PageClosingCTA
+      <PageClosingCTA copyId="contact"
         title="If the matter is sensitive, start the conversation now."
         body="We work best when leadership engages early enough for the response to be shaped properly. If the issue is already active, call first. If it is emerging, send a message and we will respond promptly."
         primaryLabel="Urgent crisis support"

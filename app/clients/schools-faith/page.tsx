@@ -77,7 +77,7 @@ export default function SchoolsFaithPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <PageHero
+      <PageHero copyId="clients-schools-faith"
         asidePreset="clientsBreadth"
         eyebrow="Independent schools & faith-based organisations"
         title="School crisis communications that protects students, staff, and the community's trust."
@@ -90,7 +90,7 @@ export default function SchoolsFaithPage() {
         }}
       />
 
-      <PageProofStrip
+      <PageProofStrip copyId="clients-schools-faith"
         title="In schools and faith-based organisations, confidence is built or lost through communication speed, care, and discipline."
         items={[...proofItems]}
       />
@@ -238,7 +238,7 @@ export default function SchoolsFaithPage() {
         </div>
       </section>
 
-      <InlineEnquirySection
+      <InlineEnquirySection copyId="clients-schools-faith"
         title="Need confidential advice for a school or faith-based matter?"
         body="CRC Public Relations advises school leaders, boards, and faith-based organisations facing parent concern, media attention, governance pressure, or a sensitive incident. If it is urgent, call us now."
         bullets={[
@@ -334,7 +334,7 @@ export default function SchoolsFaithPage() {
         expandable={false}
       />
 
-      <PageClosingCTA
+      <PageClosingCTA copyId="clients-schools-faith"
         title="School crises do not follow business hours."
         body="When a serious incident affects a school or faith-based organisation, the communication decisions made in the first hour shape trust for months. We are available 24/7 because the most sensitive matters rarely arrive at a convenient time."
       />

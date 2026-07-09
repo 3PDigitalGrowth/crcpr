@@ -83,7 +83,7 @@ const faqs = [
 export default function ClientsPage() {
   return (
     <>
-      <PageHero
+      <PageHero copyId="clients"
         asidePreset="clientsBreadth"
         eyebrow="Sector expertise"
         title="Deep expertise across every sector."
@@ -96,7 +96,7 @@ export default function ClientsPage() {
         }}
       />
 
-      <PageProofStrip
+      <PageProofStrip copyId="clients"
         title="The communications challenge changes by sector. The stakes do not."
         items={[...proofItems]}
       />
@@ -203,7 +203,7 @@ export default function ClientsPage() {
         </div>
       </section>
 
-      <InlineEnquirySection
+      <InlineEnquirySection copyId="clients"
         title="Need advice tailored to your sector?"
         body="If your situation is shaped by sector-specific governance, stakeholder, or community pressures, we can help you work out the right starting point and the right communication approach."
         bullets={[
@@ -223,7 +223,7 @@ export default function ClientsPage() {
         expandable={false}
       />
 
-      <PageClosingCTA
+      <PageClosingCTA copyId="clients"
         title="Ready to discuss your communications needs?"
         body="If you are working through a sector-specific issue, an emerging reputation risk, or a pressure point that needs experienced judgment, we can help you work out the right next step."
         secondaryLabel="Explore My PR Partner"

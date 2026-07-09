@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
+import { MT, T, copySrc, imgBind } from "@/components/editable";
 import {
   PAGE_HERO_ASIDES,
   type AsideHighlight,
@@ -37,6 +38,11 @@ export interface PageHeroProps {
    * section directly below the hero on the page.
    */
   proofStrip?: PageHeroProofStrip;
+  /**
+   * Page-scoped id (e.g. "faq") that makes this hero's copy editable in the
+   * /admin/editor visual editor. Overrides store under pageCopy.<copyId>.hero.*
+   */
+  copyId?: string;
 }
 
 export function PageHero({
@@ -49,7 +55,9 @@ export function PageHero({
   asidePreset = "seniorAccess",
   asideHighlight,
   proofStrip,
+  copyId,
 }: PageHeroProps) {
+  const cid = (suffix: string) => (copyId ? `${copyId}.${suffix}` : undefined);
   const aside =
     asideHighlight ?? PAGE_HERO_ASIDES[asidePreset];
 
@@ -63,7 +71,8 @@ export function PageHero({
       {heroImage ? (
         <>
           <Image
-            src={heroImage.src}
+            {...(copyId ? imgBind(`${copyId}.hero.image`) : {})}
+            src={copyId ? copySrc(`${copyId}.hero.image`, heroImage.src) : heroImage.src}
             alt={heroImage.alt}
             fill
             priority
@@ -82,11 +91,11 @@ export function PageHero({
           <div className="max-w-4xl">
             {eyebrow ? (
               <p className="text-brand-gold font-sans font-medium text-xs mb-4">
-                {eyebrow}
+                <MT id={cid("hero.eyebrow")}>{eyebrow}</MT>
               </p>
             ) : null}
             <h1 className="font-heading font-black text-white text-4xl md:text-[56px] leading-[1.02] max-w-4xl">
-              {title}
+              <MT id={cid("hero.title")}>{title}</MT>
             </h1>
             {description
               ? description
@@ -99,7 +108,7 @@ export function PageHero({
                         idx === 0 ? "mt-6" : "mt-4"
                       }`}
                     >
-                      {paragraph}
+                      <MT id={cid(`hero.desc.${idx}`)}>{paragraph}</MT>
                     </p>
                   ))
               : null}
@@ -109,7 +118,7 @@ export function PageHero({
                   href={ctaHref}
                   className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs rounded-[4px] px-8 py-4 hover:bg-gold-light transition"
                 >
-                  {ctaLabel}
+                  <MT id={cid("hero.ctaLabel")}>{ctaLabel}</MT>
                 </Link>
               ) : null}
               <a
@@ -129,16 +138,20 @@ export function PageHero({
                   {siteConfig.stats.yearsTrading}
                 </p>
                 <p className="text-white/60 text-sm">
-                  Years serving organisations across Australia and the Pacific
+                  <T id="global.heroAside.tenureLine">Years serving organisations across Australia and the Pacific</T>
                 </p>
               </div>
               <div className="h-px bg-white/10" />
               <div>
                 <p className="font-heading font-black text-white text-lg">
-                  {aside.title}
+                  <T id={`global.heroAside.${asideHighlight ? "custom" : asidePreset}.title`}>
+                    {aside.title}
+                  </T>
                 </p>
                 <p className="text-white/60 text-sm leading-relaxed mt-1">
-                  {aside.body}
+                  <T id={`global.heroAside.${asideHighlight ? "custom" : asidePreset}.body`}>
+                    {aside.body}
+                  </T>
                 </p>
               </div>
             </div>
@@ -153,12 +166,12 @@ export function PageHero({
               <div className="max-w-3xl mb-8">
                 {proofStrip.eyebrow ? (
                   <p className="font-sans font-medium tracking-[0.18em] uppercase text-brand-gold text-[10px] mb-3">
-                    {proofStrip.eyebrow}
+                    <MT id={cid("heroProof.eyebrow")}>{proofStrip.eyebrow}</MT>
                   </p>
                 ) : null}
                 {proofStrip.title ? (
                   <p className="font-heading font-black text-white text-xl md:text-2xl leading-snug">
-                    {proofStrip.title}
+                    <MT id={cid("heroProof.title")}>{proofStrip.title}</MT>
                   </p>
                 ) : null}
               </div>
@@ -168,20 +181,20 @@ export function PageHero({
               className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/[0.08]"
               role="list"
             >
-              {proofStrip.items.map((item) => (
+              {proofStrip.items.map((item, itemIndex) => (
                 <div
                   key={`${item.label}-${item.value}`}
                   role="listitem"
                   className="px-0 md:px-8 py-5 md:py-2 first:md:pl-0 last:md:pr-0"
                 >
                   <p className="text-brand-gold text-[11px] font-sans font-medium tracking-wider uppercase">
-                    {item.label}
+                    <MT id={cid(`heroProof.${itemIndex}.label`)}>{item.label}</MT>
                   </p>
                   <p className="font-heading font-black text-white text-lg md:text-xl mt-2">
-                    {item.value}
+                    <MT id={cid(`heroProof.${itemIndex}.value`)}>{item.value}</MT>
                   </p>
                   <p className="text-white/65 text-sm leading-relaxed mt-2">
-                    {item.detail}
+                    <MT id={cid(`heroProof.${itemIndex}.detail`)}>{item.detail}</MT>
                   </p>
                 </div>
               ))}

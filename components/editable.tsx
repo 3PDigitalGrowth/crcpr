@@ -45,6 +45,28 @@ export function T({
   );
 }
 
+/**
+ * Maybe-tagged copy: like T, but renders untagged plain text when no id is
+ * given. Lets shared components stay editable only when the page passes a
+ * copyId, without branching at every call site.
+ */
+export function MT({
+  id,
+  children,
+  className,
+}: {
+  id?: string | false;
+  children: string;
+  className?: string;
+}) {
+  if (!id) return <>{children}</>;
+  return (
+    <T id={id} className={className}>
+      {children}
+    </T>
+  );
+}
+
 /** Attribute spread for elements rendering an existing siteConfig path. */
 export function bind(path: string): { "data-ep": string } {
   return { "data-ep": path };

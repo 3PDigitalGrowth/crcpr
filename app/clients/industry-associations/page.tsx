@@ -341,7 +341,7 @@ export default function IndustryAssociationsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <PageHero
+      <PageHero copyId="clients-industry-associations"
         asidePreset="clientsBreadth"
         eyebrow="Industry associations"
         title="Industry and professional association communications have specific needs and objectives"
@@ -358,7 +358,7 @@ export default function IndustryAssociationsPage() {
         }}
       />
 
-      <PageProofStrip
+      <PageProofStrip copyId="clients-industry-associations"
         title="We create communications strategies that meet your specific and unique objectives."
         items={[...proofItems]}
       />
@@ -465,7 +465,7 @@ export default function IndustryAssociationsPage() {
         expandable={false}
       />
 
-      <PageClosingCTA
+      <PageClosingCTA copyId="clients-industry-associations"
         title="Association communications challenges are what we do best."
         body="We have spent many years helping associations elevate their public voice, achieve successful outcomes, build member trust and support, and deal with media scrutiny."
       />

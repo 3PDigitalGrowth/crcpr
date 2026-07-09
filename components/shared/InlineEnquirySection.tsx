@@ -5,6 +5,7 @@ import { CheckCircle } from "lucide-react";
 import { submitEnquiry } from "@/lib/actions";
 import type { FormState } from "@/types";
 import { siteConfig } from "@/config/site";
+import { MT } from "@/components/editable";
 
 const initialState: FormState = {
   status: "idle",
@@ -12,6 +13,8 @@ const initialState: FormState = {
 };
 
 interface InlineEnquirySectionProps {
+  /** Page-scoped id making this section's copy editable in /admin/editor. */
+  copyId?: string;
   eyebrow?: string;
   title: string;
   body: string;
@@ -31,7 +34,9 @@ export function InlineEnquirySection({
   submitLabel = "Send message",
   variant = "off-white",
   disclaimer = "Confidential and reviewed by an experienced adviser.",
+  copyId,
 }: InlineEnquirySectionProps) {
+  const cid = (suffix: string) => (copyId ? `${copyId}.enquiry.${suffix}` : undefined);
   const [formState, setFormState] = useState<FormState>(initialState);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -51,20 +56,20 @@ export function InlineEnquirySection({
         <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] border border-brand-border rounded-lg overflow-hidden bg-white shadow-sm shadow-navy/5">
           <div className="p-8 md:p-10 bg-navy text-white">
             <p className="text-brand-gold font-sans font-medium text-xs mb-4">
-              {eyebrow}
+              <MT id={cid("eyebrow")}>{eyebrow}</MT>
             </p>
-            <h2 className="font-heading font-black text-3xl max-w-xl">{title}</h2>
+            <h2 className="font-heading font-black text-3xl max-w-xl"><MT id={cid("title")}>{title}</MT></h2>
             <p className="text-white/72 text-base leading-relaxed mt-5 max-w-xl">
-              {body}
+              <MT id={cid("body")}>{body}</MT>
             </p>
 
             {bullets.length > 0 ? (
               <ul className="space-y-3 mt-8">
-                {bullets.map((bullet) => (
+                {bullets.map((bullet, bulletIndex) => (
                   <li key={bullet} className="flex items-start gap-3">
                     <span className="mt-1 h-2 w-2 rounded-full bg-brand-gold flex-shrink-0" />
                     <span className="text-white/78 text-sm leading-relaxed">
-                      {bullet}
+                      <MT id={cid(`bullets.${bulletIndex}`)}>{bullet}</MT>
                     </span>
                   </li>
                 ))}

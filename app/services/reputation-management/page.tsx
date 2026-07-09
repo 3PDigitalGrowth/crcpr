@@ -89,7 +89,7 @@ export default function ReputationManagementPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <PageHero
+      <PageHero copyId="services-reputation-management"
         asidePreset="proofLed"
         eyebrow="Reputation management"
         title="Your reputation is your most valuable asset. Protect it."
@@ -104,7 +104,7 @@ Your reputation is at the core of our communications strategies. This includes u
         }}
       />
 
-      <PageProofStrip
+      <PageProofStrip copyId="services-reputation-management"
         title="Strong reputations are never accidental. They are built by trust and managed deliberately."
         items={[...proofItems]}
       />
@@ -467,7 +467,7 @@ Your reputation is at the core of our communications strategies. This includes u
         </div>
       </section>
 
-      <InlineEnquirySection
+      <InlineEnquirySection copyId="services-reputation-management"
         title="Concerned about where your organisation is exposed?"
         body="If your board, executive team, or communications function needs a clearer view of reputation risk, we can help you assess the pressure points before they become a recovery project."
         bullets={[
@@ -484,7 +484,7 @@ Your reputation is at the core of our communications strategies. This includes u
         expandable={false}
       />
 
-      <PageClosingCTA
+      <PageClosingCTA copyId="services-reputation-management"
         title="Reputation damage is easier to prevent than to reverse."
         body="We work with organisations that want a realistic view of where they are exposed, what needs to be strengthened, and what your leadership team should do next."
         primaryLabel="Discuss your reputation management needs"

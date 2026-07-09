@@ -66,7 +66,7 @@ const faqs = [
 export default function CorporateClientsPage() {
   return (
     <>
-      <PageHero
+      <PageHero copyId="clients-corporate"
         asidePreset="clientsBreadth"
         eyebrow="Corporate"
         title="Corporate communications and reputation counsel"
@@ -79,7 +79,7 @@ export default function CorporateClientsPage() {
         }}
       />
 
-      <PageProofStrip
+      <PageProofStrip copyId="clients-corporate"
         title="Corporate clients need communications advice that understands governance pressure, not just publicity."
         items={[...proofItems]}
       />
@@ -148,7 +148,7 @@ export default function CorporateClientsPage() {
         </div>
       </section>
 
-      <InlineEnquirySection
+      <InlineEnquirySection copyId="clients-corporate"
         eyebrow="Typical situations"
         title="Need corporate communications advice?"
         body="We are often engaged when the stakes are commercial as well as reputational: a leadership transition, a sensitive market-facing announcement, investor or stakeholder concern building behind the scenes, or a legal and communications issue colliding at the same time. In those environments, speed matters, but so does judgement."
@@ -168,7 +168,7 @@ export default function CorporateClientsPage() {
         expandable={false}
       />
 
-      <PageClosingCTA
+      <PageClosingCTA copyId="clients-corporate"
         title="Discuss your corporate communications needs with an experienced adviser."
         body="We work with companies, family businesses, and professional services firms that need judgement, discretion, and direct access when the stakes are high."
       />

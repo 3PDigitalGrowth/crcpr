@@ -92,7 +92,7 @@ export default function CorporateCommunicationsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <PageHero
+      <PageHero copyId="services-corporate-communications"
         asidePreset="strategicIntegrated"
         eyebrow="Corporate communications"
         title="Corporate communications that build trust and protect value."
@@ -105,7 +105,7 @@ export default function CorporateCommunicationsPage() {
         }}
       />
 
-      <PageProofStrip
+      <PageProofStrip copyId="services-corporate-communications"
         title="Corporate communications is not content production. It is strategic control."
         items={[...proofItems]}
       />
@@ -250,7 +250,7 @@ export default function CorporateCommunicationsPage() {
         </div>
       </section>
 
-      <InlineEnquirySection
+      <InlineEnquirySection copyId="services-corporate-communications"
         title="Need communications counsel on a sensitive matter?"
         body="Use this form if you are preparing a significant announcement, managing a board or stakeholder issue, or want an experienced external adviser to review your communications posture before the pressure arrives."
         bullets={[
@@ -530,7 +530,7 @@ export default function CorporateCommunicationsPage() {
         expandable={false}
       />
 
-      <PageClosingCTA
+      <PageClosingCTA copyId="services-corporate-communications"
         title="Ready to build a communications strategy that holds up under pressure?"
         body="Whether you are preparing for a major announcement, navigating a sensitive stakeholder situation, or building long-term communications capability, CRC Public Relations provides direct access to experienced counsel from the first conversation."
       />

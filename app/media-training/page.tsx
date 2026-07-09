@@ -85,7 +85,7 @@ export default function MediaTrainingPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <PageHero
+      <PageHero copyId="media-training"
         asidePreset="mediaTraining"
         eyebrow="Media training"
         title="Media training from people who have sat on the other side of the camera."
@@ -98,7 +98,7 @@ export default function MediaTrainingPage() {
         }}
       />
 
-      <PageProofStrip
+      <PageProofStrip copyId="media-training"
         title="Good media training improves judgement, not just technique."
         items={[...proofItems]}
       />
@@ -239,7 +239,7 @@ export default function MediaTrainingPage() {
         </div>
       </section>
 
-      <InlineEnquirySection
+      <InlineEnquirySection copyId="media-training"
         title="Planning a training session for your executives or spokespersons?"
         body="We run one-to-one, small-group, crisis-specific, and board-level media training for organisations that want stronger performance before the next difficult interview."
         bullets={[
@@ -387,7 +387,7 @@ export default function MediaTrainingPage() {
         expandable={false}
       />
 
-      <PageClosingCTA
+      <PageClosingCTA copyId="media-training"
         title="Every spokesperson is a risk until they are prepared."
         body="Media training is an investment you make before the difficult interview, not the day after it. We prepare leaders for the questions they are actually likely to face."
         primaryLabel="Book a media training session"

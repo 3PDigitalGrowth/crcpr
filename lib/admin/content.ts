@@ -170,6 +170,92 @@ export async function saveLeadMagnets(
   await writeOverrides(overrides, "Lead magnets");
 }
 
+/**
+ * Saves changes from the inline page editor: a map of siteConfig dot-paths to
+ * new string values. Paths must be pageCopy ids or resolve to an existing
+ * string in the static defaults, so the editor can never write outside the
+ * content model.
+ */
+export async function saveInlineEdits(
+  changes: Record<string, string>
+): Promise<number> {
+  const entries = Object.entries(changes);
+  if (!entries.length) throw new ValidationError("Nothing to save yet.");
+  if (entries.length > 200) throw new ValidationError("Too many changes in one save.");
+
+  const overrides = await getOverrides();
+  const merged = mergeOverrides(siteDefaults, overrides);
+
+  for (const [path, raw] of entries) {
+    if (!/^[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)*$/.test(path)) {
+      throw new ValidationError(`Invalid content path: ${path}`);
+    }
+    const editable =
+      path.startsWith("pageCopy.") ||
+      typeof getPath(siteDefaults, path) === "string";
+    if (!editable) {
+      throw new ValidationError(`This content cannot be edited inline: ${path}`);
+    }
+    const value = String(raw ?? "").trim();
+    if (value.length > 5000) {
+      throw new ValidationError("One of the edits is too long to save.");
+    }
+    if (path.startsWith("pageCopy.")) {
+      // pageCopy is a FLAT map keyed by the full copy id (see copyText in
+      // components/editable.tsx) - do not split the id into nested objects.
+      const pageCopy = (overrides.pageCopy ?? {}) as Record<string, string>;
+      pageCopy[path.slice("pageCopy.".length)] = value;
+      overrides.pageCopy = pageCopy;
+    } else {
+      setPathArrayAware(overrides, merged, path, value);
+    }
+  }
+
+  await writeOverrides(
+    overrides,
+    `inline page edit (${entries.length} change${entries.length === 1 ? "" : "s"})`
+  );
+  return entries.length;
+}
+
+/**
+ * Like setPath, but when a segment crosses an array in the merged config
+ * (e.g. caseStudies.0.outcome) the full merged array is materialised into the
+ * overrides first, so the deep merge in config/site.ts (where an override
+ * replaces a default array wholesale) keeps every other item intact.
+ */
+function setPathArrayAware(
+  overrides: Record<string, unknown>,
+  merged: unknown,
+  dotPath: string,
+  value: string
+): void {
+  const keys = dotPath.split(".");
+  let target: Record<string, unknown> = overrides;
+  let reference: unknown = merged;
+  for (const key of keys.slice(0, -1)) {
+    const refNext =
+      typeof reference === "object" && reference !== null
+        ? (reference as Record<string, unknown>)[key]
+        : undefined;
+    const current = target[key];
+    if (Array.isArray(refNext)) {
+      if (!Array.isArray(current)) {
+        target[key] = JSON.parse(JSON.stringify(refNext));
+      }
+    } else if (
+      typeof current !== "object" ||
+      current === null ||
+      Array.isArray(current)
+    ) {
+      target[key] = {};
+    }
+    target = target[key] as Record<string, unknown>;
+    reference = refNext;
+  }
+  target[keys[keys.length - 1]] = value;
+}
+
 async function writeOverrides(
   overrides: Record<string, unknown>,
   sectionTitle: string

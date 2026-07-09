@@ -53,6 +53,12 @@ export default function AdminLayout({
 
       <div className="max-w-6xl mx-auto px-6 py-8 grid grid-cols-1 md:grid-cols-[220px_1fr] gap-8">
         <nav className="text-sm">
+          <Link
+            href="/admin/editor"
+            className="block rounded bg-navy text-white px-3 py-2 mb-4 font-medium hover:bg-navy/90"
+          >
+            Edit pages visually →
+          </Link>
           <p className="text-charcoal-mid text-xs font-medium uppercase tracking-wide mb-2">
             Content
           </p>

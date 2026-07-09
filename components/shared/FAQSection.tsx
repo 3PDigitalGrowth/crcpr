@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import { bind } from "@/components/editable";
 
 interface FAQItem {
   question: string;
@@ -32,6 +33,10 @@ export function FAQSection({
 
   const columnsClass = columns === 3 ? "lg:grid-cols-3" : "lg:grid-cols-2";
 
+  // Inline-editor binding is only valid when this section renders the full
+  // FAQ list from siteConfig (indexes must line up with the stored array).
+  const bindable = items === siteConfig.faqs;
+
   const grid = (
     <div className={`grid grid-cols-1 ${columnsClass} gap-6`}>
       {items.map((faq, i) => {
@@ -48,7 +53,11 @@ export function FAQSection({
           >
             <div className="flex items-start justify-between gap-4">
               <h3 className="font-heading font-black text-navy text-xl leading-snug">
-                {faq.question}
+                {bindable ? (
+                  <span {...bind(`faqs.${i}.question`)}>{faq.question}</span>
+                ) : (
+                  faq.question
+                )}
               </h3>
               {expandable && (
                 <ChevronDown
@@ -65,7 +74,11 @@ export function FAQSection({
                 expandable && !isOpen ? "line-clamp-3" : ""
               }`}
             >
-              {faq.answer}
+              {bindable ? (
+                <span {...bind(`faqs.${i}.answer`)}>{faq.answer}</span>
+              ) : (
+                faq.answer
+              )}
             </p>
 
             {expandable && (

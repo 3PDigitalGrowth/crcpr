@@ -1,4 +1,5 @@
 import { siteConfig } from "@/config/site";
+import { bind } from "@/components/editable";
 
 interface ExtraCaseStudy {
   id: string;
@@ -18,19 +19,19 @@ export function CaseStudies({
 }: CaseStudiesProps = {}) {
   return (
     <div className={`grid grid-cols-1 ${columnsClassName} gap-6`}>
-      {siteConfig.caseStudies.map((study) => (
+      {siteConfig.caseStudies.map((study, index) => (
         <div
           key={study.id}
           className="bg-white border-t-4 border-brand-gold border-x border-b border-brand-border rounded-b-lg p-6"
         >
           <p className="text-brand-gold text-xs font-medium mb-2">
-            {study.sector}
+            <span {...bind(`caseStudies.${index}.sector`)}>{study.sector}</span>
           </p>
           <p className="font-heading font-black text-navy text-2xl leading-tight mb-1">
-            {study.outcome}
+            <span {...bind(`caseStudies.${index}.outcome`)}>{study.outcome}</span>
           </p>
           <p className="text-charcoal-mid text-sm italic mb-5">
-            {study.outcomeSub}
+            <span {...bind(`caseStudies.${index}.outcomeSub`)}>{study.outcomeSub}</span>
           </p>
           <hr className="border-brand-border mb-5" />
           <div className="space-y-4">
@@ -39,7 +40,7 @@ export function CaseStudies({
                 Situation
               </p>
               <p className="text-charcoal text-sm leading-relaxed">
-                {study.context}
+                <span {...bind(`caseStudies.${index}.context`)}>{study.context}</span>
               </p>
             </div>
             <div>
@@ -47,7 +48,7 @@ export function CaseStudies({
                 Challenge
               </p>
               <p className="text-charcoal text-sm leading-relaxed">
-                {study.challenge}
+                <span {...bind(`caseStudies.${index}.challenge`)}>{study.challenge}</span>
               </p>
             </div>
             <div>
@@ -55,7 +56,7 @@ export function CaseStudies({
                 Our approach
               </p>
               <p className="text-charcoal text-sm leading-relaxed">
-                {study.approach}
+                <span {...bind(`caseStudies.${index}.approach`)}>{study.approach}</span>
               </p>
             </div>
           </div>

@@ -12,6 +12,7 @@ import {
   Shield,
 } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import { T, bind, copySrc, imgBind, imgBindPath } from "@/components/editable";
 import { AnimateIn } from "@/components/shared/AnimateIn";
 import { FAQSection } from "@/components/shared/FAQSection";
 import { CaseStudies } from "@/components/shared/CaseStudies";
@@ -20,16 +21,6 @@ import { ReputationAssessmentModal } from "@/components/shared/ReputationAssessm
 
 import { HomeTestimonials } from "@/components/home/HomeTestimonials";
 import { MediaOutletLogoLink } from "@/components/shared/MediaOutletLogoLink";
-
-interface FAQItem {
-  question: string;
-  answer: string;
-}
-
-interface AlternativeHomeProps {
-  faqItems: readonly FAQItem[];
-}
-
 
 const heroPillars = [
   {
@@ -227,9 +218,10 @@ function AlternativeHero() {
       {/* Image area fills whatever space the proof strip doesn't need */}
       <div className="relative w-full flex-1 flex">
         <img
-          src={HOMEPAGE_HERO_IMAGE}
+          {...imgBind("home.hero.image")}
+          src={copySrc("home.hero.image", HOMEPAGE_HERO_IMAGE)}
           alt=""
-          className="absolute inset-0 h-full w-full object-cover object-right pointer-events-none"
+          className="absolute inset-0 h-full w-full object-cover object-right"
           fetchPriority="high"
         />
         {/* Mobile: heavier, near-flat veil because text reflows full-width over the amber zone */}
@@ -248,36 +240,26 @@ function AlternativeHero() {
             <div className="relative z-10 [text-shadow:0_1px_3px_rgba(0,0,0,0.6),0_2px_14px_rgba(0,0,0,0.55)]">
               <AnimateIn>
                 <p className="inline-flex items-center rounded-full border border-white/10 bg-navy/55 px-3 py-1.5 font-sans font-semibold text-off-white text-xs backdrop-blur-sm">
-                  Boutique corporate PR · Australia · New Zealand · Pacific
+                  <T id="home.hero.eyebrow">Boutique corporate PR · Australia · New Zealand · Pacific</T>
                 </p>
               </AnimateIn>
 
               <AnimateIn delay={150}>
                 <h1 className="font-heading font-black text-white text-4xl md:text-6xl lg:text-[64px] leading-[0.95] mt-4">
-                  Strategic, proven communications advice.
+                  <T id="home.hero.title">Strategic, proven communications advice.</T>
                 </h1>
               </AnimateIn>
 
               <AnimateIn delay={300}>
                 <div className="mt-4 space-y-4">
                   <p className="text-white text-base lg:text-lg leading-relaxed w-full">
-                    Whatever your communications objectives, you need experienced
-                    counsel you can trust. CRC Public Relations is a boutique
-                    corporate PR firm where every client works directly with a
-                    senior adviser.
+                    <T id="home.hero.p1">Whatever your communications objectives, you need experienced counsel you can trust. CRC Public Relations is a boutique corporate PR firm where every client works directly with a senior adviser.</T>
                   </p>
                   <p className="text-white text-base lg:text-lg leading-relaxed w-full">
-                    We partner with CEOs, executives, and leaders within
-                    companies, industry associations, government, and the
-                    not-for-profit sector, assisting them to communicate
-                    effectively to key stakeholders, be the public voice of
-                    authority in their field through strategic media engagement,
-                    protect their reputation, deal with complex issues, and
-                    navigate crises with confidence.
+                    <T id="home.hero.p2">We partner with CEOs, executives, and leaders within companies, industry associations, government, and the not-for-profit sector, assisting them to communicate effectively to key stakeholders, be the public voice of authority in their field through strategic media engagement, protect their reputation, deal with complex issues, and navigate crises with confidence.</T>
                   </p>
                   <p className="text-white text-base lg:text-lg leading-relaxed w-full">
-                    We are your trusted adviser and advocate &ndash; and we
-                    believe in you.
+                    <T id="home.hero.p3">{"We are your trusted adviser and advocate – and we believe in you."}</T>
                   </p>
                 </div>
               </AnimateIn>
@@ -289,14 +271,14 @@ function AlternativeHero() {
                     className="btn-lift inline-flex items-center justify-center gap-2 bg-brand-gold text-navy font-sans font-semibold text-sm leading-snug rounded-[4px] px-6 py-3 shadow-sm hover:bg-gold-light transition antialiased"
                   >
                     <Phone className="size-4 shrink-0" strokeWidth={2} aria-hidden />
-                    Book a consultation
+                    <T id="home.hero.cta1">Book a consultation</T>
                   </Link>
                   <Link
                     href="/contact?source=capability-statement"
                     className="btn-lift inline-flex items-center justify-center gap-2 border border-navy/15 bg-white text-navy font-sans font-semibold text-sm leading-snug rounded-[4px] px-6 py-3 shadow-sm hover:bg-off-white hover:border-navy/25 transition antialiased"
                   >
                     <Download className="size-4" strokeWidth={2} aria-hidden />
-                    Request capability statement
+                    <T id="home.hero.cta2">Request capability statement</T>
                   </Link>
                 </div>
               </AnimateIn>
@@ -304,7 +286,7 @@ function AlternativeHero() {
               <AnimateIn delay={600}>
                 <div className="mt-6 border-t border-white/10 pt-4">
                   <p className="font-sans font-medium text-white text-[11px]">
-                    Expert comments from our advisers have been featured in:
+                    <T id="home.hero.mediaLine">Expert comments from our advisers have been featured in:</T>
                   </p>
                   <div className="flex flex-wrap gap-5 mt-2">
                     {siteConfig.lyall.mediaLinks.map((link, i) => (
@@ -341,7 +323,7 @@ function AlternativeHero() {
       >
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/[0.07]">
-            {heroPillars.map((pillar) => (
+            {heroPillars.map((pillar, pillarIndex) => (
               <Link
                 key={pillar.word}
                 href={pillar.href}
@@ -361,10 +343,10 @@ function AlternativeHero() {
 
                 <div className="min-w-0">
                   <p className="font-heading font-black text-white text-sm tracking-wide mb-1 group-hover:text-brand-gold transition-colors">
-                    {pillar.word}
+                    <T id={`home.pillars.${pillarIndex}.word`}>{pillar.word}</T>
                   </p>
                   <p className="text-white/35 text-xs leading-relaxed">
-                    {pillar.desc}
+                    <T id={`home.pillars.${pillarIndex}.desc`}>{pillar.desc}</T>
                   </p>
                 </div>
               </Link>
@@ -385,12 +367,12 @@ function AlternativePracticeAreas() {
       <div className="max-w-7xl mx-auto px-6">
         <AnimateIn>
           <p className="font-sans font-medium text-brand-gold text-xs text-left">
-            Our practice areas
+            <T id="home.practice.eyebrow">Our practice areas</T>
           </p>
           <h2 className="font-heading font-black text-navy text-3xl md:text-[42px] leading-[1.05] mt-3">
-            Corporate. Reputation.
+            <T id="home.practice.title1">Corporate. Reputation.</T>
             <br />
-            Crisis.
+            <T id="home.practice.title2">Crisis.</T>
           </h2>
         </AnimateIn>
 
@@ -410,7 +392,8 @@ function AlternativePracticeAreas() {
                     style={{ aspectRatio: "3 / 2" }}
                   >
                     <Image
-                      src={area.imageSrc}
+                      {...imgBind(`home.practice.${i}.image`)}
+                      src={copySrc(`home.practice.${i}.image`, area.imageSrc)}
                       alt={area.imageAlt}
                       fill
                       sizes="(max-width: 768px) 100vw, 50vw"
@@ -435,16 +418,17 @@ function AlternativePracticeAreas() {
                         aria-hidden
                       />
                       <h3 className="font-heading font-black text-navy text-2xl mt-5">
-                        {area.title}
+                        <T id={`home.practice.${i}.title`}>{area.title}</T>
                       </h3>
                       <p className="text-charcoal-mid text-base leading-relaxed mt-4">
-                        {area.description}
+                        <T id={`home.practice.${i}.desc`}>{area.description}</T>
                       </p>
                       <Link
                         href={area.href}
                         className="inline-flex items-center gap-2 text-link-teal font-sans font-medium text-sm mt-6 group-hover:text-navy group-hover:gap-3 transition-all"
                       >
-                        {area.linkLabel} <ArrowRight size={14} aria-hidden />
+                        <T id={`home.practice.${i}.link`}>{area.linkLabel}</T>{" "}
+                        <ArrowRight size={14} aria-hidden />
                       </Link>
                     </div>
                   </div>
@@ -458,13 +442,10 @@ function AlternativePracticeAreas() {
           <div className="mt-20 md:mt-28 mb-4 max-w-4xl mx-auto text-center">
             <div className="w-12 h-[2px] bg-brand-gold mx-auto mb-8" />
             <blockquote className="font-heading font-black text-navy text-xl md:text-[28px] leading-snug tracking-tight">
-              &ldquo;As a boutique PR firm, you deal directly with experienced
-              advisers who take a genuine, long-term interest in your
-              organisation. It&rsquo;s a partnership, and it makes a huge
-              difference to outcomes.&rdquo;
+              <T id="home.practice.quote">{"“As a boutique PR firm, you deal directly with experienced advisers who take a genuine, long-term interest in your organisation. It’s a partnership, and it makes a huge difference to outcomes.”"}</T>
             </blockquote>
             <p className="font-sans font-medium text-text-secondary text-sm mt-6 tracking-wide">
-              - Lyall Mercer, co-founder
+              <T id="home.practice.quoteBy">- Lyall Mercer, co-founder</T>
             </p>
             <div className="w-12 h-[2px] bg-brand-gold mx-auto mt-8" />
           </div>
@@ -495,25 +476,19 @@ function AlternativeAssessment() {
           <div className="lg:col-span-7">
             <AnimateIn>
               <p className="font-sans font-medium text-brand-gold text-xs">
-                Free assessment
+                <T id="home.assessment.eyebrow">Free assessment</T>
               </p>
               <h2 className="font-heading font-black text-white text-3xl md:text-[38px] leading-[1.1] mt-3">
-                How exposed is your organisation&apos;s reputation?
+                <T id="home.assessment.title">{"How exposed is your organisation’s reputation?"}</T>
               </h2>
             </AnimateIn>
             <AnimateIn delay={150}>
               <div className="space-y-4 mt-6">
                 <p className="text-white/80 text-base leading-relaxed">
-                  Most organisations do not discover their reputation
-                  vulnerabilities until a crisis is already underway. Our
-                  reputation vulnerability assessment takes three minutes and
-                  identifies areas where you are exposed across governance,
-                  media, social media, stakeholder communication and trust,
-                  and crisis preparedness.
+                  <T id="home.assessment.p1">Most organisations do not discover their reputation vulnerabilities until a crisis is already underway. Our reputation vulnerability assessment takes three minutes and identifies areas where you are exposed across governance, media, social media, stakeholder communication and trust, and crisis preparedness.</T>
                 </p>
                 <p className="text-white/80 text-base leading-relaxed">
-                  Used by CEOs, communications directors, and board chairs
-                  across Australia.
+                  <T id="home.assessment.p2">Used by CEOs, communications directors, and board chairs across Australia.</T>
                 </p>
               </div>
             </AnimateIn>
@@ -522,7 +497,7 @@ function AlternativeAssessment() {
           <AnimateIn delay={250} className="lg:col-span-5">
             <div className="relative bg-white border border-brand-border rounded-lg p-8 card-border-expand overflow-hidden shadow-sm shadow-navy/5">
               <h3 className="text-navy font-heading font-black text-lg">
-                Reputation vulnerability assessment
+                <T id="home.assessment.cardTitle">Reputation vulnerability assessment</T>
               </h3>
               <div className="mt-5 space-y-0">
                 {assessmentAreas.map((area, i) => (
@@ -534,7 +509,9 @@ function AlternativeAssessment() {
                         strokeWidth={2.5}
                         aria-hidden
                       />
-                      <span className="text-text-body text-sm">{area}</span>
+                      <span className="text-text-body text-sm">
+                        <T id={`home.assessment.areas.${i}`}>{area}</T>
+                      </span>
                     </div>
                   </AnimateIn>
                 ))}
@@ -544,10 +521,10 @@ function AlternativeAssessment() {
                 onClick={() => setAssessmentOpen(true)}
                 className="btn-lift block bg-brand-teal text-white font-heading font-black text-sm w-full py-4 rounded-[4px] mt-6 hover:bg-link-teal transition text-center"
               >
-                Start the free assessment →
+                <T id="home.assessment.cta">Start the free assessment →</T>
               </button>
               <p className="text-text-caption text-xs mt-3 text-center">
-                Three minutes. No commitment. Results delivered by email.
+                <T id="home.assessment.caption">Three minutes. No commitment. Results delivered by email.</T>
               </p>
             </div>
           </AnimateIn>
@@ -570,43 +547,34 @@ function AlternativeClients() {
           <div className="lg:col-span-5">
             <AnimateIn>
               <p className="font-sans font-medium text-brand-gold text-xs">
-                Who we work with
+                <T id="home.clients.eyebrow">Who we work with</T>
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-[42px] leading-[1.05] mt-3">
-                Trusted by leaders across every sector.
+                <T id="home.clients.title">Trusted by leaders across every sector.</T>
               </h2>
               <p className="text-charcoal-mid text-base leading-relaxed mt-6 max-w-xl">
-                We assist company and non-profit CEOs, managing directors,
-                board chairs, and executives, as well as high profile
-                individuals, who need experienced, direct advice to communicate
-                effectively, build trust with key stakeholders, elevate their
-                public voice and guide them when the stakes are highest. They
-                choose CRC Public Relations because we offer personal service
-                from an experienced, highly qualified team.
+                <T id="home.clients.p1">We assist company and non-profit CEOs, managing directors, board chairs, and executives, as well as high profile individuals, who need experienced, direct advice to communicate effectively, build trust with key stakeholders, elevate their public voice and guide them when the stakes are highest. They choose CRC Public Relations because we offer personal service from an experienced, highly qualified team.</T>
               </p>
               <p className="text-charcoal-mid text-base leading-relaxed mt-4 max-w-xl">
-                We stand with our clients around the clock, proactively helping
-                them grow their public presence and working alongside them
-                through challenging times. We take their success personally, and
-                we have their back.
+                <T id="home.clients.p2">We stand with our clients around the clock, proactively helping them grow their public presence and working alongside them through challenging times. We take their success personally, and we have their back.</T>
               </p>
               <div className="flex flex-col gap-3 mt-8">
                 <div className="rounded-xl border border-brand-border bg-navy p-5 text-left">
                   <p className="text-brand-gold text-xs font-medium mb-3">
-                    Work with CRC Public Relations
+                    <T id="home.clients.cardEyebrow">Work with CRC Public Relations</T>
                   </p>
                   <p className="font-heading font-black text-white text-lg leading-snug">
-                    Start a direct conversation with an adviser.
+                    <T id="home.clients.cardTitle">Start a direct conversation with an adviser.</T>
                   </p>
                   <p className="text-white/65 text-sm leading-relaxed mt-3">
-                    Tell us about your communications needs or challenges and
-                    we will help identify the right starting point.
+                    <T id="home.clients.cardBody">Tell us about your communications needs or challenges and we will help identify the right starting point.</T>
                   </p>
                   <Link
                     href="/contact"
                     className="inline-flex items-center justify-center gap-2 bg-brand-teal text-white font-heading font-black text-xs rounded-[4px] px-5 py-3 mt-4 hover:bg-link-teal transition"
                   >
-                    Work with us <ArrowRight size={14} aria-hidden />
+                    <T id="home.clients.cardCta">Work with us</T>{" "}
+                    <ArrowRight size={14} aria-hidden />
                   </Link>
                 </div>
               </div>
@@ -627,10 +595,10 @@ function AlternativeClients() {
                         className={`${cardClass} card-border-expand hover:shadow-md transition-all duration-300 group`}
                       >
                         <p className="font-sans font-medium text-navy text-sm group-hover:text-link-teal transition-colors">
-                          {sector.title}
+                          <T id={`home.sectors.${i}.title`}>{sector.title}</T>
                         </p>
                         <p className="text-charcoal-mid text-sm leading-relaxed mt-3 flex-1">
-                          {sector.description}
+                          <T id={`home.sectors.${i}.desc`}>{sector.description}</T>
                         </p>
                         <span className="inline-flex items-center gap-2 text-link-teal font-sans font-medium text-sm mt-5 group-hover:text-navy group-hover:gap-3 transition-all">
                           Learn more <ArrowRight size={14} aria-hidden />
@@ -639,10 +607,10 @@ function AlternativeClients() {
                     ) : (
                       <div className={cardClass}>
                         <p className="font-sans font-medium text-navy text-sm">
-                          {sector.title}
+                          <T id={`home.sectors.${i}.title`}>{sector.title}</T>
                         </p>
                         <p className="text-charcoal-mid text-sm leading-relaxed mt-3">
-                          {sector.description}
+                          <T id={`home.sectors.${i}.desc`}>{sector.description}</T>
                         </p>
                       </div>
                     )}
@@ -667,6 +635,7 @@ function AlternativeAbout() {
           <AnimateIn className="lg:col-span-5">
             <div className="relative mx-auto w-full max-w-[22rem] sm:max-w-[26rem] lg:-ml-4 lg:max-w-[28rem] xl:-ml-8 xl:max-w-[30rem]">
               <Image
+                {...imgBindPath("lyall.featuredPortraitSrc")}
                 src={siteConfig.lyall.featuredPortraitSrc}
                 alt="Lyall Mercer standing in a corridor"
                 width={682}
@@ -679,37 +648,23 @@ function AlternativeAbout() {
           <div className="lg:col-span-7">
             <AnimateIn delay={100}>
               <h2 className="font-heading font-black text-navy text-3xl md:text-[42px] leading-[1.05] mt-3">
-                Lyall Mercer
+                <span {...bind("lyall.fullName")}>{siteConfig.lyall.fullName}</span>
               </h2>
               <p className="text-brand-teal font-sans font-medium text-lg mt-2">
-                Co-founder &amp; principal adviser
+                <span {...bind("lyall.title")}>{siteConfig.lyall.title}</span>
               </p>
             </AnimateIn>
 
             <AnimateIn delay={200}>
               <div className="space-y-5 mt-8">
                 <p className="text-text-body text-base leading-relaxed">
-                  Lyall Mercer began his career as a journalist, writing for
-                  some of Australia&apos;s leading newspapers and magazines.
-                  That foundation, understanding exactly how media thinks,
-                  moves, and decides what becomes a story, led him into a 25
-                  year public relations career spanning every continent,
-                  delivering high-quality results in the areas of corporate
-                  communications and crisis advice.
+                  <T id="home.about.p1">{"Lyall Mercer began his career as a journalist, writing for some of Australia’s leading newspapers and magazines. That foundation, understanding exactly how media thinks, moves, and decides what becomes a story, led him into a 25 year public relations career spanning every continent, delivering high-quality results in the areas of corporate communications and crisis advice."}</T>
                 </p>
                 <p className="text-text-body text-base leading-relaxed">
-                  His clients include national and international companies,
-                  governments, industry associations, not-for-profit
-                  organisations, politicians, heads of state, celebrities, and
-                  sporting figures; and he has supported clients and dealt
-                  with media internationally, coordinating communications
-                  strategies and walking clients through issues that have
-                  generated intense national and global media exposure.
+                  <T id="home.about.p2">His clients include national and international companies, governments, industry associations, not-for-profit organisations, politicians, heads of state, celebrities, and sporting figures; and he has supported clients and dealt with media internationally, coordinating communications strategies and walking clients through issues that have generated intense national and global media exposure.</T>
                 </p>
                 <p className="text-text-body text-base leading-relaxed">
-                  When you choose CRC Public Relations, you&apos;ll deal with
-                  various members of our team but Lyall will always be available
-                  for you. This level of expertise is why our clients choose us.
+                  <T id="home.about.p3">{"When you choose CRC Public Relations, you’ll deal with various members of our team but Lyall will always be available for you. This level of expertise is why our clients choose us."}</T>
                 </p>
               </div>
             </AnimateIn>
@@ -722,7 +677,8 @@ function AlternativeAbout() {
                   rel="noopener noreferrer"
                   className="btn-lift inline-flex items-center gap-2 text-link-teal font-sans font-medium text-sm hover:text-navy hover:gap-3 transition-all"
                 >
-                  Read Lyall&apos;s full profile <ArrowRight size={14} />
+                  <T id="home.about.cta">{"Read Lyall’s full profile"}</T>{" "}
+                  <ArrowRight size={14} />
                 </a>
               </div>
             </AnimateIn>
@@ -744,22 +700,19 @@ function AlternativeCTA() {
           <div>
             <AnimateIn>
               <p className="font-sans font-medium text-brand-gold text-xs">
-                Ready to work with us
+                <T id="home.cta.eyebrow">Ready to work with us</T>
               </p>
             </AnimateIn>
 
             <AnimateIn delay={150}>
               <h2 className="text-white font-heading font-black text-3xl md:text-[42px] leading-[1.08] mt-4">
-                Trust is your most valuable asset. Let us help you build it.
+                <T id="home.cta.title">Trust is your most valuable asset. Let us help you build it.</T>
               </h2>
             </AnimateIn>
 
             <AnimateIn delay={300}>
               <p className="text-white/70 text-base leading-relaxed mt-6">
-                Whether you need experienced advice on a complex issue, help
-                building your public profile, a communications strategy for your
-                organisation, or trusted counsel during a crisis, we are your
-                adviser and advocate. We believe in you, and we have your back.
+                <T id="home.cta.body">Whether you need experienced advice on a complex issue, help building your public profile, a communications strategy for your organisation, or trusted counsel during a crisis, we are your adviser and advocate. We believe in you, and we have your back.</T>
               </p>
             </AnimateIn>
           </div>
@@ -770,7 +723,8 @@ function AlternativeCTA() {
                 href="/contact"
                 className="btn-lift bg-brand-gold text-navy font-heading font-black text-sm w-full py-4 rounded-[4px] hover:bg-gold-light transition inline-flex items-center justify-center gap-2"
               >
-                Book a consultation <ArrowRight size={14} aria-hidden />
+                <T id="home.cta.button">Book a consultation</T>{" "}
+                <ArrowRight size={14} aria-hidden />
               </Link>
             </AnimateIn>
 
@@ -791,7 +745,7 @@ function AlternativeCTA() {
   );
 }
 
-export function AlternativeHome({ faqItems }: AlternativeHomeProps) {
+export function AlternativeHome() {
   return (
     <>
       <AlternativeHero />
@@ -810,13 +764,13 @@ export function AlternativeHome({ faqItems }: AlternativeHomeProps) {
       <section className="py-20 md:py-28 bg-off-white">
         <div className="max-w-7xl mx-auto px-6">
           <p className="text-brand-gold text-xs font-medium mb-3">
-            Client outcomes
+            <T id="home.cases.eyebrow">Client outcomes</T>
           </p>
           <h2 className="font-heading font-black text-navy text-3xl md:text-4xl mb-4">
-            Results that speak for themselves.
+            <T id="home.cases.title">Results that speak for themselves.</T>
           </h2>
           <p className="text-charcoal-mid text-base max-w-2xl mb-12 leading-relaxed">
-            Four successful outcomes that show the kind of strategic work we do when policy, reputation, and stakeholder pressure converge.
+            <T id="home.cases.body">Four successful outcomes that show the kind of strategic work we do when policy, reputation, and stakeholder pressure converge.</T>
           </p>
           <CaseStudies columnsClassName="md:grid-cols-2" />
           <div className="mt-10 text-center">
@@ -824,7 +778,7 @@ export function AlternativeHome({ faqItems }: AlternativeHomeProps) {
               href="/case-studies"
               className="text-brand-gold font-medium text-sm hover:underline"
             >
-              Read more about how we work →
+              <T id="home.cases.link">Read more about how we work →</T>
             </Link>
           </div>
         </div>
@@ -833,18 +787,20 @@ export function AlternativeHome({ faqItems }: AlternativeHomeProps) {
       <section className="py-20 md:py-28 bg-off-white">
         <div className="max-w-7xl mx-auto px-6">
           <p className="text-brand-gold text-xs font-medium mb-3 text-center">
-            Common questions
+            <T id="home.faqs.eyebrow">Common questions</T>
           </p>
           <h2 className="font-heading font-black text-navy text-3xl md:text-4xl mb-10 text-center">
-            Frequently asked questions.
+            <T id="home.faqs.title">Frequently asked questions.</T>
           </h2>
-          <FAQSection title={false} embedded items={faqItems} />
+          {/* No items prop: the client-side default is the same full siteConfig
+              list and keeps the inline editor's index binding valid. */}
+          <FAQSection title={false} embedded />
           <div className="mt-8 text-center">
             <Link
               href="/faq"
               className="text-brand-teal text-sm font-medium hover:underline"
             >
-              View all questions →
+              <T id="home.faqs.link">View all questions →</T>
             </Link>
           </div>
         </div>

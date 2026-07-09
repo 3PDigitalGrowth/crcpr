@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { MobileCallBar } from "@/components/shared/MobileCallBar";
 import { DesktopStickyBar } from "@/components/layout/DesktopStickyBar";
 import { ScrollToTop } from "@/components/layout/ScrollToTop";
+import { EditModeBridge } from "@/components/admin/EditModeBridge";
 
 /**
  * Wraps every page in the site chrome, except the content editor at /admin
@@ -21,6 +22,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 
   return (
     <>
+      <EditModeBridge />
       <ScrollToTop />
       <Nav />
       <DesktopStickyBar />

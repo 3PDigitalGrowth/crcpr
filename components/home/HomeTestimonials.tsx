@@ -1,6 +1,7 @@
 "use client";
 
 import { AnimateIn } from "@/components/shared/AnimateIn";
+import { T } from "@/components/editable";
 
 const testimonials = [
   {
@@ -30,10 +31,10 @@ export function HomeTestimonials() {
         <AnimateIn>
           <div className="text-center mb-14">
             <p className="font-sans font-medium text-brand-gold text-xs tracking-wide">
-              Client endorsements
+              <T id="home.testimonials.eyebrow">Client endorsements</T>
             </p>
             <h2 className="font-heading font-black text-navy text-3xl md:text-[42px] leading-[1.05] mt-3">
-              What our clients say
+              <T id="home.testimonials.title">What our clients say</T>
             </h2>
           </div>
         </AnimateIn>
@@ -56,10 +57,12 @@ export function HomeTestimonials() {
                   />
                 </svg>
                 <p className="font-sans italic text-charcoal text-[15px] leading-relaxed flex-1">
-                  &ldquo;{t.quote}&rdquo;
+                  &ldquo;<T id={`home.testimonials.${i}.quote`}>{t.quote}</T>&rdquo;
                 </p>
                 <div className="mt-6 pt-5 border-t border-brand-border">
-                  <p className="text-charcoal-mid text-xs">{t.title}</p>
+                  <p className="text-charcoal-mid text-xs">
+                    <T id={`home.testimonials.${i}.title`}>{t.title}</T>
+                  </p>
                 </div>
               </div>
             </AnimateIn>
@@ -69,10 +72,9 @@ export function HomeTestimonials() {
         <AnimateIn delay={400}>
           <div className="mt-14 text-center">
             <p className="font-sans italic text-charcoal-mid text-base">
-              &ldquo;100% of our consulting clients would recommend CRC Public
-              Relations to a peer.&rdquo;
+              &ldquo;<T id="home.testimonials.summary">100% of our consulting clients would recommend CRC Public Relations to a peer.</T>&rdquo;
               <span className="not-italic font-medium text-charcoal-mid/60 text-sm ml-2">
-                CRC Public Relations Client Survey
+                <T id="home.testimonials.source">CRC Public Relations Client Survey</T>
               </span>
             </p>
           </div>

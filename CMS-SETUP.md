@@ -41,6 +41,25 @@ tokens → Generate new token:
 
 Add it to Vercel as `GITHUB_TOKEN` and redeploy.
 
+## Visual page editor (/admin/editor)
+
+"Edit pages visually" in the admin loads the live site in a frame. Every
+tagged text (dashed gold outline) is editable in place by clicking it; tagged
+images open an image picker fed from the uploads library. Save and publish
+commits all pending edits in one go; Undo all reverts unsaved edits.
+
+- Tagging: wrap copy in `<T id="page.section.key">Default</T>` from
+  `components/editable.tsx` (client or server components). Existing
+  siteConfig values use `bind("path.to.value")`; images use `imgBind(id)` /
+  `imgBindPath(path)`. Currently tagged: the full homepage, case study cards,
+  FAQ items (full-list renders) and testimonials. Other pages need the same
+  mechanical tagging to become inline-editable.
+- Overrides store in `content/cms/site.json` under `pageCopy` (flat map,
+  key = copy id) or at the bound siteConfig path (arrays are materialised in
+  full so unedited items survive the merge).
+- The in-page runtime (`components/admin/edit-runtime.ts`) only loads inside
+  the editor iframe; public visitors never download it.
+
 ## What the client can edit
 
 | Editor page | Drives |

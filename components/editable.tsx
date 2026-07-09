@@ -1,0 +1,61 @@
+import { siteConfig } from "@/config/site";
+
+/**
+ * Inline-edit binding helpers.
+ *
+ * <T id="home.hero.title">Default copy</T> renders the CMS override for that
+ * id (from siteConfig.pageCopy) or the default children, wrapped in a span
+ * carrying data-ep="pageCopy.<id>". The /admin/editor page loads the site in
+ * an iframe and turns every [data-ep] element into an in-place editor; on the
+ * public site the attribute is inert.
+ *
+ * bind(path) tags an element that renders an EXISTING siteConfig value (for
+ * example caseStudies.0.outcome) so the editor saves back to that same path.
+ *
+ * copySrc(id, fallback) is the image equivalent: returns the overridden image
+ * path and pairs with imgBind(id) which tags the element for the editor's
+ * image picker.
+ */
+
+function pageCopyMap(): Record<string, string> {
+  return (siteConfig as { pageCopy?: Record<string, string> }).pageCopy ?? {};
+}
+
+export function copyText(id: string, fallback: string): string {
+  return pageCopyMap()[id] ?? fallback;
+}
+
+export function copySrc(id: string, fallback: string): string {
+  return pageCopyMap()[id] ?? fallback;
+}
+
+export function T({
+  id,
+  children,
+  className,
+}: {
+  id: string;
+  children: string;
+  className?: string;
+}) {
+  return (
+    <span data-ep={`pageCopy.${id}`} className={className}>
+      {copyText(id, children)}
+    </span>
+  );
+}
+
+/** Attribute spread for elements rendering an existing siteConfig path. */
+export function bind(path: string): { "data-ep": string } {
+  return { "data-ep": path };
+}
+
+/** Attribute spread for images edited via the editor's image picker. */
+export function imgBind(id: string): { "data-epi": string } {
+  return { "data-epi": `pageCopy.${id}` };
+}
+
+/** Image bound to an existing siteConfig path (e.g. lyall.featuredPortraitSrc). */
+export function imgBindPath(path: string): { "data-epi": string } {
+  return { "data-epi": path };
+}

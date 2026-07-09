@@ -322,6 +322,12 @@ export const siteDefaults = {
     },
   ],
 
+  /**
+   * Inline page-editor overrides, keyed by copy id (see components/editable.tsx).
+   * Defaults live in the components as fallback text; only overrides are stored.
+   */
+  pageCopy: {} as Record<string, string>,
+
   faqs: [
     {
       question:

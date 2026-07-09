@@ -16,6 +16,7 @@ import {
   getInsight,
   isValidSlug,
   saveInsight,
+  saveInlineEdits,
   saveLeadMagnets,
   saveSection,
   slugify,
@@ -95,6 +96,21 @@ export async function saveLeadMagnetsAction(
     await saveLeadMagnets(leadMagnetFields, payload);
     revalidatePath("/admin/lead-magnets");
     return { ok: true, message: SAVED_MESSAGE };
+  } catch (err) {
+    return friendlyError(err);
+  }
+}
+
+export async function saveInlineEditsAction(
+  changes: Record<string, string>
+): Promise<ActionResult> {
+  requireAdmin();
+  try {
+    const count = await saveInlineEdits(changes);
+    return {
+      ok: true,
+      message: `Saved ${count} change${count === 1 ? "" : "s"}. Publishing now, live in about 2 minutes.`,
+    };
   } catch (err) {
     return friendlyError(err);
   }

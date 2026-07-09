@@ -25,6 +25,18 @@ export default async function AdminDashboard() {
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-3xl">
+        <Link
+          href="/admin/editor"
+          className="block bg-navy text-white rounded-lg p-5 hover:bg-navy/90 sm:col-span-2"
+        >
+          <p className="font-heading font-black text-lg mb-1">
+            Edit pages visually →
+          </p>
+          <p className="text-white/75 text-sm leading-relaxed">
+            View the live site and click any highlighted text or image to
+            change it in place, then press Save.
+          </p>
+        </Link>
         {adminSections.map((section) => (
           <Link
             key={section.slug}

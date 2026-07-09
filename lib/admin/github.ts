@@ -8,8 +8,15 @@ import path from "node:path";
  * which triggers the normal Vercel deploy, so edits go live in ~2 minutes and
  * every client change is version-controlled and revertable.
  *
- * Local development without a GITHUB_TOKEN falls back to writing the working
- * tree directly so the editor is testable offline.
+ * Local development (next dev) without a GITHUB_TOKEN falls back to writing
+ * the working tree directly so the editor is testable offline.
+ *
+ * IMPORTANT: every filesystem branch below is guarded INLINE by
+ * `process.env.NODE_ENV !== "production"`. Webpack replaces NODE_ENV at build
+ * time and eliminates the dead branches, so Vercel's file tracer never sees
+ * fs reads rooted at process.cwd(). Guarding via a helper function instead
+ * bloated each admin serverless function past the 250 MB limit (the tracer
+ * pulled in the entire project). Do not refactor the guards into a function.
  */
 
 const REPO = process.env.GITHUB_REPO ?? "3PDigitalGrowth/crcpr";
@@ -18,10 +25,6 @@ const API = "https://api.github.com";
 
 function token(): string | null {
   return process.env.GITHUB_TOKEN ?? null;
-}
-
-function localFsMode(): boolean {
-  return !token() && process.env.NODE_ENV !== "production";
 }
 
 function headers(): HeadersInit {
@@ -47,7 +50,7 @@ export interface RepoDirEntry {
 export class ContentStoreError extends Error {}
 
 function assertConfigured(): void {
-  if (!token() && !localFsMode()) {
+  if (!token()) {
     throw new ContentStoreError(
       "GITHUB_TOKEN is not configured, so content cannot be saved. Add it to the environment and redeploy."
     );
@@ -56,7 +59,7 @@ function assertConfigured(): void {
 
 /** Reads a file. Returns null when the file does not exist. */
 export async function getRepoFile(filePath: string): Promise<RepoFile | null> {
-  if (localFsMode()) {
+  if (process.env.NODE_ENV !== "production" && !token()) {
     const abs = path.join(process.cwd(), filePath);
     if (!fs.existsSync(abs)) return null;
     return { content: fs.readFileSync(abs, "utf-8"), sha: null };
@@ -83,7 +86,7 @@ export async function putRepoFile(
   content: string | Buffer,
   message: string
 ): Promise<void> {
-  if (localFsMode()) {
+  if (process.env.NODE_ENV !== "production" && !token()) {
     const abs = path.join(process.cwd(), filePath);
     fs.mkdirSync(path.dirname(abs), { recursive: true });
     fs.writeFileSync(abs, content);
@@ -113,7 +116,7 @@ export async function deleteRepoFile(
   filePath: string,
   message: string
 ): Promise<void> {
-  if (localFsMode()) {
+  if (process.env.NODE_ENV !== "production" && !token()) {
     const abs = path.join(process.cwd(), filePath);
     if (fs.existsSync(abs)) fs.rmSync(abs);
     return;
@@ -133,7 +136,7 @@ export async function deleteRepoFile(
 
 /** Lists a directory. Returns [] when the directory does not exist. */
 export async function listRepoDir(dirPath: string): Promise<RepoDirEntry[]> {
-  if (localFsMode()) {
+  if (process.env.NODE_ENV !== "production" && !token()) {
     const abs = path.join(process.cwd(), dirPath);
     if (!fs.existsSync(abs)) return [];
     return fs

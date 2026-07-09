@@ -1,1 +1,20 @@
-{}
+{
+  "phone": {
+    "display": "1300 182 186"
+  },
+  "address": {
+    "street": "320 Adelaide Street",
+    "city": "Brisbane",
+    "state": "QLD",
+    "postcode": "4000"
+  },
+  "email": {
+    "general": "info@crcpr.com.au",
+    "media": "media@crcpr.com.au",
+    "newBusiness": "hello@crcpr.com.au"
+  },
+  "abn": "",
+  "linkedInUrl": "https://www.linkedin.com/company/crc-public-relation/",
+  "lyallLinkedIn": "https://www.linkedin.com/in/lyallmercer/",
+  "lyallTwitter": "https://twitter.com/Lyall_Mercer"
+}

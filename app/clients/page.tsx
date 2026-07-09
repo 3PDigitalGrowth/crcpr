@@ -7,6 +7,7 @@ import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
 import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
 import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
 import { PageProofStrip } from "@/components/shared/PageProofStrip";
+import { T } from "@/components/editable";
 
 export const metadata: Metadata = {
   title: "Sector Expertise",
@@ -106,65 +107,89 @@ export default function ClientsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_360px] gap-10 items-start">
             <div className="max-w-3xl">
               <p className="text-brand-gold text-xs font-medium mb-4">
+                <T id="clients.t1">
                 Why sector context matters
+                </T>
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                <T id="clients.t2">
                 The communications challenge changes with the environment around it.
+                </T>
               </h2>
               <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
+                <T id="clients.t3">
                 Sector expertise matters because stakeholder expectations,
                 governance realities, and the likely points of reputational
                 pressure change dramatically between a company, a government
                 agency, a peak body, or a school.
+                </T>
               </p>
 
               <div className="space-y-6 mt-8">
                 <p className="text-charcoal-mid text-[15px] leading-relaxed">
+                  <T id="clients.t4">
                   A message that feels disciplined in one environment can be
                   tone-deaf in another.
+                  </T>
                 </p>
                 <p className="text-charcoal-mid text-[15px] leading-relaxed">
+                  <T id="clients.t5">
                   We work best in sectors where communication is inseparable
                   from trust, authority, and strategic judgement. That is why
                   the pages below are organised around leadership pressure
                   points rather than broad industry labels.
+                  </T>
                 </p>
               </div>
             </div>
 
             <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
               <p className="text-brand-teal text-xs font-medium mb-5">
+                <T id="clients.t6">
                 What changes by sector
+                </T>
               </p>
 
               <div className="space-y-4">
                 <div className="border-l-[3px] border-brand-gold pl-4">
                   <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    <T id="clients.t7">
                     Stakeholder expectations
+                    </T>
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
+                    <T id="clients.t8">
                     The audience that matters most, and what they need to hear,
                     differs sharply by sector.
+                    </T>
                   </p>
                 </div>
 
                 <div className="border-l-[3px] border-brand-gold pl-4">
                   <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    <T id="clients.t9">
                     Governance realities
+                    </T>
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
+                    <T id="clients.t10">
                     Listed, public, member-based, and community institutions all
                     carry different approval paths and accountability pressures.
+                    </T>
                   </p>
                 </div>
 
                 <div className="border-l-[3px] border-brand-gold pl-4">
                   <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    <T id="clients.t11">
                     Pressure points
+                    </T>
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
+                    <T id="clients.t12">
                     The reputational flashpoints are rarely identical, even when
                     the communication discipline required is equally high.
+                    </T>
                   </p>
                 </div>
               </div>
@@ -217,7 +242,7 @@ export default function ClientsPage() {
 
       <LeadMagnetBanner magnet="crisisReadinessChecklist" variant="light" />
 
-      <FAQSection
+      <FAQSection copyId="clients"
         items={faqs}
         titleText="Common questions about CRC Public Relations' sector expertise"
         expandable={false}

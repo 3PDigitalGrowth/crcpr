@@ -4,6 +4,7 @@ import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
 import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
 import { PageProofStrip } from "@/components/shared/PageProofStrip";
 import { getAllInsights } from "@/lib/mdx";
+import { T } from "@/components/editable";
 
 export const metadata = {
   title: "Insights",
@@ -59,61 +60,83 @@ export default function InsightsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_340px] gap-10 items-start">
             <div className="max-w-3xl">
               <p className="text-brand-gold text-xs font-medium mb-4">
+                <T id="insights.t1">
                 How to use these insights
+                </T>
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                <T id="insights.t2">
                 Our insights are written for leaders who need clearer judgement, not more commentary.
+                </T>
               </h2>
               <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
+                <T id="insights.t3">
                 The focus is practical: what matters, where organisations
                 usually misread the pressure, and what experienced advisers
                 would be watching before the situation escalates.
+                </T>
               </p>
 
               <div className="space-y-6 mt-8">
                 <p className="text-charcoal-mid text-[15px] leading-relaxed">
+                  <T id="insights.t4">
                   The themes are consistent with the firm&apos;s work across
                   crisis, reputation, media, and stakeholder communication.
                   Articles are designed to be useful on their own, then
                   naturally lead to the next step if your matter is live,
                   emerging, or strategically sensitive.
+                  </T>
                 </p>
               </div>
             </div>
 
             <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
               <p className="text-brand-teal text-xs font-medium mb-5">
+                <T id="insights.t5">
                 What you&apos;ll find here
+                </T>
               </p>
 
               <div className="space-y-4">
                 <div className="border-l-[3px] border-brand-gold pl-4">
                   <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    <T id="insights.t6">
                     What matters most
+                    </T>
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
+                    <T id="insights.t7">
                     Fast clarity on the issues, judgements, and signals that
                     usually shape the outcome.
+                    </T>
                   </p>
                 </div>
 
                 <div className="border-l-[3px] border-brand-gold pl-4">
                   <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    <T id="insights.t8">
                     Common leadership blind spots
+                    </T>
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
+                    <T id="insights.t9">
                     Where organisations often misread scrutiny, timing, and
                     stakeholder pressure.
+                    </T>
                   </p>
                 </div>
 
                 <div className="border-l-[3px] border-brand-gold pl-4">
                   <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    <T id="insights.t10">
                     Practical next steps
+                    </T>
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
+                    <T id="insights.t11">
                     Articles that stand on their own, but also point clearly to
                     the next decision when the matter is live.
+                    </T>
                   </p>
                 </div>
               </div>
@@ -126,7 +149,9 @@ export default function InsightsPage() {
         <div className="max-w-7xl mx-auto px-6">
           {posts.length === 0 ? (
             <p className="text-charcoal-mid text-center text-lg">
+              <T id="insights.t12">
               More insights coming soon.
+              </T>
             </p>
           ) : (
             <>
@@ -134,7 +159,9 @@ export default function InsightsPage() {
                 <article className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-10 rounded-lg border border-brand-border bg-off-white p-8 md:p-10 mb-10">
                   <div>
                     <p className="text-brand-gold text-xs font-medium">
+                      <T id="insights.t13">
                       Featured insight
+                      </T>
                     </p>
                     <h2 className="font-heading font-black text-navy text-3xl mt-4">
                       <Link href={`/insights/${featuredPost.slug}`} className="hover:text-brand-teal transition">
@@ -148,7 +175,9 @@ export default function InsightsPage() {
                       href={`/insights/${featuredPost.slug}`}
                       className="inline-block mt-6 text-brand-gold font-medium hover:underline"
                     >
+                      <T id="insights.t14">
                       Read the full article →
+                      </T>
                     </Link>
                   </div>
                   <div className="border-t lg:border-t-0 lg:border-l border-brand-border pt-6 lg:pt-0 lg:pl-8">
@@ -173,28 +202,28 @@ export default function InsightsPage() {
               ) : null}
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {otherPosts.map((post) => (
+                {otherPosts.map((post, __ti) => (
                   <article
                     key={post.slug}
                     className="bg-off-white border border-brand-border/50 rounded-lg p-6 hover:border-brand-gold/30 transition"
                   >
                     <p className="text-brand-teal text-xs font-medium">
-                      {post.category}
+                      <T id={`insights.otherPosts.${__ti}.category`}>{post.category}</T>
                     </p>
                     <h3 className="font-heading font-black text-navy text-lg mt-3">
                       <Link
                         href={`/insights/${post.slug}`}
                         className="hover:text-brand-teal transition"
                       >
-                        {post.title}
+                        <T id={`insights.otherPosts.${__ti}.title`}>{post.title}</T>
                       </Link>
                     </h3>
                     <p className="text-charcoal-mid text-sm leading-relaxed mt-2 line-clamp-3">
-                      {post.excerpt}
+                      <T id={`insights.otherPosts.${__ti}.excerpt`}>{post.excerpt}</T>
                     </p>
                     <footer className="flex justify-between items-center mt-4 pt-4 border-t border-brand-border">
                       <span className="text-charcoal text-xs font-medium">
-                        {post.author}
+                        <T id={`insights.otherPosts.${__ti}.author`}>{post.author}</T>
                       </span>
                       <time
                         dateTime={post.date}

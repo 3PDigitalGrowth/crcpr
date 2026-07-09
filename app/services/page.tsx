@@ -15,6 +15,7 @@ import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
 import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
 import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
 import { PageProofStrip } from "@/components/shared/PageProofStrip";
+import { T } from "@/components/editable";
 
 export const metadata: Metadata = {
   title: "Corporate PR Services",
@@ -141,66 +142,90 @@ export default function ServicesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_360px] gap-10 items-start">
             <div className="max-w-3xl">
               <p className="text-brand-gold text-xs font-medium mb-4">
+                <T id="services.t1">
                 How we think about services
+                </T>
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                <T id="services.t2">
                 Better judgement matters more than more activity.
+                </T>
               </h2>
               <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
+                <T id="services.t3">
                 Most organisations do not need more communications activity.
                 They need clearer judgement about what matters, which
                 stakeholders carry the greatest risk or influence, and what
                 sequence of communication will hold up under scrutiny.
+                </T>
               </p>
 
               <div className="space-y-6 mt-8">
                 <p className="text-charcoal-mid text-[15px] leading-relaxed">
+                  <T id="services.t4">
                   That is why CRC Public Relations&apos; services are designed around
                   pressure points, not agency departments.
+                  </T>
                 </p>
                 <p className="text-charcoal-mid text-[15px] leading-relaxed">
+                  <T id="services.t5">
                   Some clients come to us because a crisis is already active.
                   Others need a stronger media position, sharper executive
                   messaging, better reputation visibility, or earlier
                   intervention around an emerging issue. The right service is
                   usually the one that gives leadership more control sooner.
+                  </T>
                 </p>
               </div>
             </div>
 
             <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
               <p className="text-brand-teal text-xs font-medium mb-5">
+                <T id="services.t6">
                 What the right starting point solves
+                </T>
               </p>
 
               <div className="space-y-4">
                 <div className="border-l-[3px] border-brand-gold pl-4">
                   <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    <T id="services.t7">
                     Clearer priorities
+                    </T>
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
+                    <T id="services.t8">
                     Focus on what matters most rather than adding more
                     communication for its own sake.
+                    </T>
                   </p>
                 </div>
 
                 <div className="border-l-[3px] border-brand-gold pl-4">
                   <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    <T id="services.t9">
                     Better stakeholder sequencing
+                    </T>
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
+                    <T id="services.t10">
                     Decide who needs to hear what, and in what order, before
                     pressure compounds.
+                    </T>
                   </p>
                 </div>
 
                 <div className="border-l-[3px] border-brand-gold pl-4">
                   <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    <T id="services.t11">
                     Faster control
+                    </T>
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
+                    <T id="services.t12">
                     The right service is usually the one that gives leadership
                     more control sooner.
+                    </T>
                   </p>
                 </div>
               </div>
@@ -247,7 +272,9 @@ export default function ServicesPage() {
                     href={`/services/${service.slug}`}
                     className="text-brand-gold font-sans font-medium text-sm mt-5 inline-block hover:opacity-80 transition"
                   >
+                    <T id="services.t13">
                     Learn more →
+                    </T>
                   </Link>
                 </div>
               );
@@ -266,7 +293,7 @@ export default function ServicesPage() {
         <CapabilityDownload />
       </div>
 
-      <FAQSection
+      <FAQSection copyId="services"
         items={faqs}
         titleText="Common questions about CRC Public Relations services"
         expandable={false}

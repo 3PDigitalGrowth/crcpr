@@ -7,6 +7,7 @@ import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
 import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
 import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
 import { PageProofStrip } from "@/components/shared/PageProofStrip";
+import { T } from "@/components/editable";
 
 export const metadata: Metadata = {
   title:
@@ -105,20 +106,27 @@ export default function SchoolsFaithPage() {
           >
             <div className="max-w-3xl lg:max-w-none">
               <p className="text-brand-gold text-xs font-medium mb-4">
+                <T id="clients-schools-faith.t1">
                 Sector reality
+                </T>
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                <T id="clients-schools-faith.t2">
                 In this sector, communication is judged by care as much as
                 control.
+                </T>
               </h2>
               <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
+                <T id="clients-schools-faith.t3">
                 When your school or organisation faces a serious matter, the
                 real challenge is responding with accuracy, compassion, and
                 discipline while trust is already under pressure.
+                </T>
               </p>
 
               <div className="space-y-6 mt-8">
                 <p className="text-charcoal text-[15px] leading-relaxed">
+                  <T id="clients-schools-faith.t4">
                   Your communications challenges are unlike those of any other
                   sector. When an incident occurs, whether it is a safeguarding
                   matter, a staff conduct issue, a governance concern, or a
@@ -128,15 +136,19 @@ export default function SchoolsFaithPage() {
                   into the world, and a faith community that expects its values
                   to be reflected in how your organisation responds to
                   difficulty.
+                  </T>
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
+                  <T id="clients-schools-faith.t5">
                   The legal obligations are significant. The pastoral duty is
                   equally significant. The communications challenge is managing
                   both simultaneously, responding with the transparency that
                   parents demand, the discretion that legal obligations require,
                   and the compassion that your community deserves.
+                  </T>
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
+                  <T id="clients-schools-faith.t6">
                   CRC Public Relations works with independent schools, Catholic
                   school networks, and faith-based organisations across
                   Australia. Lyall Mercer has presented at the Australian
@@ -145,41 +157,56 @@ export default function SchoolsFaithPage() {
                   country. We understand the unique pressures of school and
                   faith-based communications, and the very high stakes of
                   getting them wrong.
+                  </T>
                 </p>
               </div>
               <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8 mt-8">
                 <p className="text-brand-teal text-xs font-medium mb-5">
+                  <T id="clients-schools-faith.t7">
                   What makes this different
+                  </T>
                 </p>
 
                 <div className="space-y-4">
                   <div className="border-l-[3px] border-brand-gold pl-4">
                     <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      <T id="clients-schools-faith.t8">
                       More than media pressure
+                      </T>
                     </p>
                     <p className="text-charcoal-mid text-sm leading-relaxed">
+                      <T id="clients-schools-faith.t9">
                       Parents, boards, alumni, parish communities, and regulators
                       all shape the response environment.
+                      </T>
                     </p>
                   </div>
 
                   <div className="border-l-[3px] border-brand-gold pl-4">
                     <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      <T id="clients-schools-faith.t10">
                       Pastoral and legal duties
+                      </T>
                     </p>
                     <p className="text-charcoal-mid text-sm leading-relaxed">
+                      <T id="clients-schools-faith.t11">
                       Leaders must show compassion without compromising legal,
                       safeguarding, or governance obligations.
+                      </T>
                     </p>
                   </div>
 
                   <div className="border-l-[3px] border-brand-gold pl-4">
                     <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      <T id="clients-schools-faith.t12">
                       Trust moves quickly
+                      </T>
                     </p>
                     <p className="text-charcoal-mid text-sm leading-relaxed">
+                      <T id="clients-schools-faith.t13">
                       The first messages often shape parent confidence and wider
                       community sentiment for much longer than expected.
+                      </T>
                     </p>
                   </div>
                 </div>
@@ -194,15 +221,21 @@ export default function SchoolsFaithPage() {
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_340px] gap-10 items-start">
             <div className="max-w-3xl">
               <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+                <T id="clients-schools-faith.t14">
                 First-hour judgment
+                </T>
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                <T id="clients-schools-faith.t15">
                 What schools usually need help deciding first
+                </T>
               </h2>
               <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
+                <T id="clients-schools-faith.t16">
                 The first questions are rarely about wording alone. They are
                 about sequence, disclosure, and how to communicate care without
                 creating unnecessary exposure.
+                </T>
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
@@ -226,12 +259,16 @@ export default function SchoolsFaithPage() {
 
             <aside className="rounded-lg border border-brand-border bg-white p-6 md:p-8">
               <p className="text-brand-teal text-xs font-medium mb-5">
+                <T id="clients-schools-faith.t17">
                 Why the first hour matters
+                </T>
               </p>
               <p className="text-charcoal-mid text-sm leading-relaxed">
+                <T id="clients-schools-faith.t18">
                 These are the decisions that shape trust in the first hour and
                 set the tone for every parent, staff, board, and community
                 communication that follows.
+                </T>
               </p>
             </aside>
           </div>
@@ -255,15 +292,21 @@ export default function SchoolsFaithPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl">
             <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+              <T id="clients-schools-faith.t19">
               How we support
+              </T>
             </p>
             <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+              <T id="clients-schools-faith.t20">
               How CRC Public Relations supports schools and faith-based organisations
+              </T>
             </h2>
             <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
+              <T id="clients-schools-faith.t21">
               The need is rarely just media advice. School leaders usually need
               a response model that protects students, reassures families, and
               keeps governance, legal, and public communication aligned.
+              </T>
             </p>
           </div>
 
@@ -291,7 +334,9 @@ export default function SchoolsFaithPage() {
                 className="rounded-[28px] border border-brand-border bg-white p-7 md:p-8 shadow-[0_10px_30px_rgba(15,23,42,0.04)]"
               >
                 <div className="inline-flex items-center rounded-full bg-off-white px-3 py-1 text-[11px] font-medium text-brand-teal">
+                  <T id="clients-schools-faith.t22">
                   Support area
+                  </T>
                 </div>
                 <h3 className="font-heading font-black text-navy text-xl leading-snug mt-4 mb-4">
                   {item.title}
@@ -310,13 +355,17 @@ export default function SchoolsFaithPage() {
         <div className="max-w-3xl mx-auto px-6">
           <blockquote className="border-l-4 border-brand-gold pl-6">
             <p className="text-charcoal text-[15px] leading-relaxed italic">
+              <T id="clients-schools-faith.t23">
               &ldquo;CRC Public Relations has developed a crisis
               communications plan for Christian schools and has assisted
               many of our member schools across Australia to effectively
               communicate when issues have arisen.&rdquo;
+              </T>
             </p>
             <footer className="mt-4 text-charcoal-mid text-sm">
+              <T id="clients-schools-faith.t24">
               Executive Officer, Christian schools sector
+              </T>
             </footer>
           </blockquote>
         </div>
@@ -328,7 +377,7 @@ export default function SchoolsFaithPage() {
         description="A practical guide for school leaders covering the crisis scenarios most likely to affect independent, Catholic, and faith-based schools, including parent communications, media response, and early leadership decisions."
       />
 
-      <FAQSection
+      <FAQSection copyId="clients-schools-faith"
         items={faqs}
         titleText="Common questions from school and faith-based leaders"
         expandable={false}

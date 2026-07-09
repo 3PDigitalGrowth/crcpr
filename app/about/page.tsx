@@ -6,6 +6,7 @@ import { CapabilityDownload } from "@/components/shared/CapabilityDownload";
 import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
 import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
 import { PortraitPlaceholder } from "@/components/shared/PortraitPlaceholder";
+import { T } from "@/components/editable";
 
 export const metadata: Metadata = {
   title: "About CRC Public Relations",
@@ -103,21 +104,29 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-12 items-end">
             <div className="max-w-4xl">
               <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+                <T id="about.t1">
                 About us
+                </T>
               </p>
               <h1 className="font-heading font-black text-white text-4xl md:text-[56px] leading-[1.02] max-w-4xl">
+                <T id="about.t2">
                 About CRC Public Relations
+                </T>
               </h1>
               <p className="text-white/75 text-lg leading-relaxed mt-6 max-w-2xl">
+                <T id="about.t3">
                 Boutique corporate PR. Trusted counsel for CEOs, directors, and
                 executives across Australia, the Pacific, and internationally.
+                </T>
               </p>
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mt-8">
                 <Link
                   href="/contact"
                   className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs rounded-[4px] px-8 py-4 hover:bg-gold-light transition"
                 >
+                  <T id="about.t4">
                   Book a consultation
+                  </T>
                 </Link>
                 <a
                   href={siteConfig.phone.href}
@@ -129,23 +138,29 @@ export default function AboutPage() {
             </div>
 
             <div className="border border-white/10 bg-white/[0.03] rounded-lg p-6 backdrop-blur-[2px]">
-              <p className="text-white/35 text-xs mb-4">Direct strategic counsel</p>
+              <p className="text-white/35 text-xs mb-4"><T id="about.t20">Direct strategic counsel</T></p>
               <div className="space-y-4">
                 <div>
                   <p className="font-heading font-black text-brand-gold text-2xl">
                     {siteConfig.stats.yearsTrading}
                   </p>
                   <p className="text-white/60 text-sm">
+                    <T id="about.t5">
                     Years serving organisations across Australia and the Pacific
+                    </T>
                   </p>
                 </div>
                 <div className="h-px bg-white/10" />
                 <div>
                   <p className="font-heading font-black text-white text-lg">
+                    <T id="about.t6">
                     Clear thinking, applied
+                    </T>
                   </p>
                   <p className="text-white/60 text-sm leading-relaxed mt-1">
+                    <T id="about.t7">
                     A perspective that brings clarity and results, valued by our clients.
+                    </T>
                   </p>
                 </div>
               </div>
@@ -160,28 +175,32 @@ export default function AboutPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-12 md:pt-14 pb-16 md:pb-20">
           <div className="max-w-3xl">
             <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+              <T id="about.t8">
               Why CRC Public Relations
+              </T>
             </p>
             <h2 className="font-heading font-black text-white text-3xl">
+              <T id="about.t9">
               CRC Public Relations exists to promote, protect and be advocates
               for our clients.
+              </T>
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
-            {proofItems.map((item) => (
+            {proofItems.map((item, __ti) => (
               <div
                 key={`${item.label}-${item.value}`}
                 className="border border-white/10 bg-white/[0.03] rounded-lg p-6"
               >
                 <p className="text-brand-gold text-xs font-medium mb-3">
-                  {item.label}
+                  <T id={`about.proofItems.${__ti}.label`}>{item.label}</T>
                 </p>
                 <p className="font-heading font-black text-white text-2xl">
-                  {item.value}
+                  <T id={`about.proofItems.${__ti}.value`}>{item.value}</T>
                 </p>
                 <p className="text-sm leading-relaxed mt-3 text-white/60">
-                  {item.detail}
+                  <T id={`about.proofItems.${__ti}.detail`}>{item.detail}</T>
                 </p>
               </div>
             ))}
@@ -193,35 +212,43 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
             <h2 className="font-heading font-black text-navy text-3xl">
+              <T id="about.t10">
               How we work
+              </T>
             </h2>
             <p className="text-charcoal-mid text-[15px] leading-relaxed mt-6">
+              <T id="about.t11">
               Being &apos;boutique and personal&apos; means that unlike many PR
               companies, at CRC Public Relations you&apos;ll deal directly with
               senior and experienced PR and crisis communications strategists who take a
               genuine, long-term interest in your organisation. We take your
               needs and your success personally, and we have your back.
+              </T>
             </p>
             <p className="text-charcoal-mid text-[15px] leading-relaxed mt-4">
+              <T id="about.t12">
               For over 15 years, CRC Public Relations has ensured that every
               client engagement is led by advisers with deep expertise in
               corporate communications, reputation management, and crisis
               response.
+              </T>
             </p>
             <p className="text-charcoal-mid text-[15px] leading-relaxed mt-4">
+              <T id="about.t13">
               Our clients include national and international companies,
               charities, industry associations, independent schools, faith-based
               organisations, high-profile sports people and celebrities, and
               Pacific governments and NGOs.
+              </T>
             </p>
           </div>
           <div className="grid grid-cols-2 gap-8">
-            {STATS.map((stat) => (
+            {STATS.map((stat, __ti) => (
               <div key={stat.label}>
                 <p className="font-heading font-black text-brand-gold text-4xl">
-                  {stat.value}
+                  <T id={`about.STATS.${__ti}.value`}>{stat.value}</T>
                 </p>
-                <p className="text-charcoal-mid text-sm mt-1">{stat.label}</p>
+                <p className="text-charcoal-mid text-sm mt-1"><T id={`about.STATS.${__ti}.label`}>{stat.label}</T></p>
               </div>
             ))}
           </div>
@@ -235,15 +262,21 @@ export default function AboutPage() {
               <div className="bg-navy p-8 md:p-12 flex flex-col justify-between gap-12">
                 <div>
                   <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+                    <T id="about.t14">
                     Our mission
+                    </T>
                   </p>
                   <h2 className="font-heading font-black text-white text-3xl md:text-4xl leading-tight">
+                    <T id="about.t15">
                     Promote, protect and advocate when reputation matters.
+                    </T>
                   </h2>
                 </div>
                 <p className="text-white/65 text-[15px] leading-relaxed max-w-md">
+                  <T id="about.t16">
                   The work is practical, direct and always tied to the client&apos;s
                   best interests.
+                  </T>
                 </p>
               </div>
 
@@ -285,20 +318,26 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl">
             <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+              <T id="about.t17">
               Leadership team
+              </T>
             </p>
             <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight">
+              <T id="about.t18">
               Our team
+              </T>
             </h2>
             <p className="text-charcoal-mid text-[15px] leading-relaxed mt-6">
+              <T id="about.t19">
               CRC Public Relations is intentionally principal-led. The people you
               meet are the people who shape the advice, lead the work, and stay
               close to the matter when judgement matters most.
+              </T>
             </p>
           </div>
 
           <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 mt-12">
-            {teamMembers.map((member) => (
+            {teamMembers.map((member, __ti) => (
               <div
                 key={member.name}
                 className="rounded-[28px] border border-brand-border bg-off-white p-8 md:p-10"
@@ -318,16 +357,16 @@ export default function AboutPage() {
 
                   <div className="flex-1">
                     <p className="text-brand-teal text-xs font-medium mb-3">
-                      {member.initials}
+                      <T id={`about.teamMembers.${__ti}.initials`}>{member.initials}</T>
                     </p>
                     <h3 className="font-heading font-black text-navy text-2xl leading-tight">
-                      {member.name}
+                      <T id={`about.teamMembers.${__ti}.name`}>{member.name}</T>
                     </h3>
                     <p className="text-brand-gold text-sm font-medium mt-2">
-                      {member.role}
+                      <T id={`about.teamMembers.${__ti}.role`}>{member.role}</T>
                     </p>
                     <p className="text-charcoal text-[15px] leading-relaxed mt-4">
-                      {member.summary}
+                      <T id={`about.teamMembers.${__ti}.summary`}>{member.summary}</T>
                     </p>
                   </div>
                 </div>

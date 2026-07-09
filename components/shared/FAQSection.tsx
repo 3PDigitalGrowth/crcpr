@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { siteConfig } from "@/config/site";
-import { bind } from "@/components/editable";
+import { bind, T } from "@/components/editable";
 
 interface FAQItem {
   question: string;
@@ -19,6 +19,8 @@ interface FAQSectionProps {
   expandable?: boolean;
   /** Number of columns on large screens. Defaults to 2. */
   columns?: 2 | 3;
+  /** Page-scoped id making page-local FAQ items editable in /admin/editor. */
+  copyId?: string;
 }
 
 export function FAQSection({
@@ -28,6 +30,7 @@ export function FAQSection({
   embedded = !title,
   expandable = true,
   columns = 2,
+  copyId,
 }: FAQSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -55,6 +58,8 @@ export function FAQSection({
               <h3 className="font-heading font-black text-navy text-xl leading-snug">
                 {bindable ? (
                   <span {...bind(`faqs.${i}.question`)}>{faq.question}</span>
+                ) : copyId ? (
+                  <T id={`${copyId}.faqs.${i}.question`}>{faq.question}</T>
                 ) : (
                   faq.question
                 )}
@@ -76,6 +81,8 @@ export function FAQSection({
             >
               {bindable ? (
                 <span {...bind(`faqs.${i}.answer`)}>{faq.answer}</span>
+              ) : copyId ? (
+                <T id={`${copyId}.faqs.${i}.answer`}>{faq.answer}</T>
               ) : (
                 faq.answer
               )}

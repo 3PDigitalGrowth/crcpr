@@ -8,6 +8,7 @@ import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
 import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
 import { PAGE_HERO_ASIDES } from "@/config/pageHeroAsides";
 import { siteConfig } from "@/config/site";
+import { T } from "@/components/editable";
 
 export const metadata: Metadata = {
   title: "Issues Management PR Australia | CRC Public Relations",
@@ -108,22 +109,30 @@ export default function IssuesManagementPage() {
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-12 items-end">
             <div className="max-w-4xl">
               <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+                <T id="services-issues-management.t1">
                 Issues management
+                </T>
               </p>
               <h1 className="font-heading font-black text-white text-4xl md:text-[56px] leading-[1.02] max-w-4xl">
+                <T id="services-issues-management.t2">
                 Get ahead of the issue before the media does.
+                </T>
               </h1>
               <p className="text-white/75 text-lg leading-relaxed mt-6 max-w-2xl">
+                <T id="services-issues-management.t3">
                 We help you identify, monitor, and strategically manage emerging
                 issues before they reach crisis point. Experienced counsel
                 available nationally.
+                </T>
               </p>
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mt-8">
                 <Link
                   href="/contact"
                   className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs rounded-[4px] px-8 py-4 hover:bg-gold-light transition"
                 >
+                  <T id="services-issues-management.t4">
                   Book a consultation
+                  </T>
                 </Link>
                 <a
                   href={siteConfig.phone.href}
@@ -135,14 +144,16 @@ export default function IssuesManagementPage() {
             </div>
 
             <div className="border border-white/10 bg-white/[0.03] rounded-lg p-6 backdrop-blur-[2px]">
-              <p className="text-white/35 text-xs mb-4">Direct strategic counsel</p>
+              <p className="text-white/35 text-xs mb-4"><T id="services-issues-management.t52">Direct strategic counsel</T></p>
               <div className="space-y-4">
                 <div>
                   <p className="font-heading font-black text-brand-gold text-2xl">
                     {siteConfig.stats.yearsTrading}
                   </p>
                   <p className="text-white/60 text-sm">
+                    <T id="services-issues-management.t5">
                     Years serving organisations across Australia and the Pacific
+                    </T>
                   </p>
                 </div>
                 <div className="h-px bg-white/10" />
@@ -166,28 +177,32 @@ export default function IssuesManagementPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-12 md:pt-14 pb-16 md:pb-20">
           <div className="max-w-3xl">
             <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+              <T id="services-issues-management.t6">
               Why CRC Public Relations
+              </T>
             </p>
             <h2 className="font-heading font-black text-white text-3xl">
+              <T id="services-issues-management.t7">
               The cost of delay is almost always higher than the cost of early
               action.
+              </T>
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
-            {proofItems.map((item) => (
+            {proofItems.map((item, __ti) => (
               <div
                 key={`${item.label}-${item.value}`}
                 className="border border-white/10 bg-white/[0.03] rounded-lg p-6"
               >
                 <p className="text-brand-gold text-xs font-medium mb-3">
-                  {item.label}
+                  <T id={`services-issues-management.proofItems.${__ti}.label`}>{item.label}</T>
                 </p>
                 <p className="font-heading font-black text-white text-2xl">
-                  {item.value}
+                  <T id={`services-issues-management.proofItems.${__ti}.value`}>{item.value}</T>
                 </p>
                 <p className="text-sm leading-relaxed mt-3 text-white/60">
-                  {item.detail}
+                  <T id={`services-issues-management.proofItems.${__ti}.detail`}>{item.detail}</T>
                 </p>
               </div>
             ))}
@@ -205,14 +220,19 @@ export default function IssuesManagementPage() {
           >
             <div className="max-w-3xl lg:max-w-none">
               <p className="text-brand-gold text-xs font-medium mb-4">
+                <T id="services-issues-management.t8">
                 Escalation window
+                </T>
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                <T id="services-issues-management.t9">
                 An issue is not a crisis. Strategic management ensures it
                 doesn&apos;t become one.
+                </T>
               </h2>
               <div className="space-y-6">
                 <p className="text-charcoal text-[15px] leading-relaxed">
+                  <T id="services-issues-management.t10">
                   Most organisational crises are not sudden events. They are
                   issues that were allowed to escalate: a complaint that
                   wasn&apos;t handled correctly, a management mistake, a missed
@@ -221,44 +241,61 @@ export default function IssuesManagementPage() {
                   complaint that became a media story. The difference between
                   an issue and a crisis is almost always time, and the strategic
                   choices made within that time.
+                  </T>
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
+                  <T id="services-issues-management.t11">
                   We work in the space between an emerging issue and a full
                   crisis, providing the counsel, monitoring capability, and
                   stakeholder management that can arrest an escalation before it
                   becomes unmanageable.
+                  </T>
                 </p>
               </div>
               <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8 mt-8">
                 <p className="text-brand-teal text-xs font-medium mb-5">
+                  <T id="services-issues-management.t12">
                   What changes the outcome
+                  </T>
                 </p>
                 <div className="space-y-4">
                   <div className="border-l-[3px] border-brand-gold pl-4">
                     <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      <T id="services-issues-management.t13">
                       Earlier recognition
+                      </T>
                     </p>
                     <p className="text-charcoal-mid text-sm leading-relaxed">
+                      <T id="services-issues-management.t14">
                       Spotting the reputational dimension before it becomes public
                       or formalised.
+                      </T>
                     </p>
                   </div>
                   <div className="border-l-[3px] border-brand-gold pl-4">
                     <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      <T id="services-issues-management.t15">
                       Better sequencing
+                      </T>
                     </p>
                     <p className="text-charcoal-mid text-sm leading-relaxed">
+                      <T id="services-issues-management.t16">
                       Engaging leadership, stakeholders, and external audiences in
                       the right order.
+                      </T>
                     </p>
                   </div>
                   <div className="border-l-[3px] border-brand-gold pl-4">
                     <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      <T id="services-issues-management.t17">
                       Judgement under pressure
+                      </T>
                     </p>
                     <p className="text-charcoal-mid text-sm leading-relaxed">
+                      <T id="services-issues-management.t18">
                       Making decisions that reduce escalation rather than amplify
                       it.
+                      </T>
                     </p>
                   </div>
                 </div>
@@ -273,44 +310,60 @@ export default function IssuesManagementPage() {
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-10 items-start">
             <div className="max-w-3xl">
               <p className="text-brand-gold text-xs font-medium mb-4">
+                <T id="services-issues-management.t19">
                 Common engagements
+                </T>
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl mb-6 leading-tight">
+                <T id="services-issues-management.t20">
                 What issues require our services?
+                </T>
               </h2>
               <div className="space-y-5">
                 <p className="text-charcoal text-[15px] leading-relaxed">
+                  <T id="services-issues-management.t21">
                   Any issue that can escalate into a crisis that stops business
                   as usual and threatens material impact on your operations,
                   reputation, and bottom line. These can be in any form.
+                  </T>
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
+                  <T id="services-issues-management.t22">
                   The best way to identify potential impact is to seek external
                   communications counsel. Internal management and staff are
                   often too close to the situation to clearly evaluate the
                   potential, and an outside perspective is vital.
+                  </T>
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
+                  <T id="services-issues-management.t23">
                   It is common to both over-estimate and under-estimate the
                   possible ramifications of an issue.
+                  </T>
                 </p>
               </div>
             </div>
 
             <aside className="rounded-lg border border-brand-border bg-white p-6 md:p-7">
               <p className="text-brand-teal text-xs font-medium mb-4">
+                <T id="services-issues-management.t24">
                 Why these matter
+                </T>
               </p>
               <p className="text-charcoal-mid text-sm leading-relaxed">
+                <T id="services-issues-management.t25">
                 Each of these issues can still be managed early, but once the tone,
                 visibility, or stakeholder coordination changes, the cost of
                 containment rises sharply.
+                </T>
               </p>
             </aside>
           </div>
 
           <p className="text-brand-gold text-xs font-medium mt-14 mb-5">
+            <T id="services-issues-management.t26">
             Common categories, in order
+            </T>
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -358,18 +411,25 @@ export default function IssuesManagementPage() {
       <section className="bg-off-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+            <T id="services-issues-management.t27">
             What happens next
+            </T>
           </p>
           <h2 className="font-heading font-black text-navy text-3xl mb-6">
+            <T id="services-issues-management.t28">
             What issues management looks like in practice
+            </T>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
             <div>
               <h3 className="font-heading font-black text-navy text-xl mb-3">
+                <T id="services-issues-management.t29">
                 Issue identification, evaluation, and monitoring
+                </T>
               </h3>
               <p className="text-charcoal text-[15px] leading-relaxed">
+                <T id="services-issues-management.t30">
                 The first step is for us to evaluate the possibility of both
                 escalation and containment, and the potential ramifications and
                 reputational damage. This requires detailed information and
@@ -377,14 +437,18 @@ export default function IssuesManagementPage() {
                 media and social media. Once we are aware of the situation,
                 stakeholder and media activity, and other relevant factors, we
                 can create an effective strategy to deal with the issue.
+                </T>
               </p>
             </div>
 
             <div>
               <h3 className="font-heading font-black text-navy text-xl mb-3">
+                <T id="services-issues-management.t31">
                 Stakeholder strategic engagement
+                </T>
               </h3>
               <p className="text-charcoal text-[15px] leading-relaxed">
+                <T id="services-issues-management.t32">
                 Every issue has a stakeholder landscape: the groups whose
                 reaction to the issue will determine its trajectory. We map
                 these stakeholders, assess their likely positions, and design
@@ -392,14 +456,18 @@ export default function IssuesManagementPage() {
                 the coalitions needed to manage it. Many issues can avoid
                 external media attention through effective stakeholder
                 communication, while others require media management.
+                </T>
               </p>
             </div>
 
             <div>
               <h3 className="font-heading font-black text-navy text-xl mb-3">
+                <T id="services-issues-management.t33">
                 Messaging development
+                </T>
               </h3>
               <p className="text-charcoal text-[15px] leading-relaxed">
+                <T id="services-issues-management.t34">
                 While you can&apos;t control what others say, you can take
                 control of your own narrative. While you deal with the
                 operational side of an issue, we create a consistent position
@@ -407,20 +475,25 @@ export default function IssuesManagementPage() {
                 escalation, with messaging that is authentic and able to be
                 held to scrutiny. We develop that position and, if needed,
                 prepare your spokespeople to deliver it with authority.
+                </T>
               </p>
             </div>
 
             <div>
               <h3 className="font-heading font-black text-navy text-xl mb-3">
+                <T id="services-issues-management.t35">
                 Escalation protocols and crisis readiness
+                </T>
               </h3>
               <p className="text-charcoal text-[15px] leading-relaxed">
+                <T id="services-issues-management.t36">
                 While the overwhelming majority of issues are contained,
                 we&apos;ve learnt by experience to expect the unexpected. We
                 create a strategy that prepares your leadership team for any
                 escalation, new information, or actions of others. This way,
                 if a situation escalates, your organisation responds with
                 discipline rather than improvisation.
+                </T>
               </p>
             </div>
           </div>
@@ -444,26 +517,35 @@ export default function IssuesManagementPage() {
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.1fr)_360px] gap-10 items-start">
             <div className="max-w-3xl">
               <p className="text-brand-gold text-xs font-medium mb-4">
+                <T id="services-issues-management.t37">
                 Predictability matters
+                </T>
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl mb-6 leading-tight">
+                <T id="services-issues-management.t38">
                 Most crises were predictable
+                </T>
               </h2>
               <div className="space-y-6">
                 <p className="text-charcoal text-[15px] leading-relaxed">
+                  <T id="services-issues-management.t39">
                   Drawing on extensive crisis communications experience, CRC
                   Public Relations co-founder Lyall Mercer has consistently
                   observed that many significant reputation events were
                   predictable, not in their exact form, but in their general
                   shape.
+                  </T>
                 </p>
               </div>
 
               <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8 mt-8">
                 <p className="text-brand-teal text-xs font-medium mb-4">
+                  <T id="services-issues-management.t40">
                   In Lyall Mercer&apos;s words
+                  </T>
                 </p>
                 <blockquote className="border-l-[3px] border-brand-gold pl-5 font-heading font-black text-navy text-lg md:text-xl leading-snug">
+                  <T id="services-issues-management.t41">
                   &ldquo;There have been multiple occasions when I have
                   predicted a crisis years before it happened, because I could
                   clearly recognise the risk, yet the client at the time
@@ -476,59 +558,80 @@ export default function IssuesManagementPage() {
                   them massive losses. In one case, I&apos;m talking about more
                   than one hundred million dollars in lost revenue and
                   extensive international reputational damage.&rdquo;
+                  </T>
                 </blockquote>
                 <p className="mt-4 pl-5 text-charcoal-mid text-sm font-sans font-medium">
+                  <T id="services-issues-management.t42">
                   Lyall Mercer, CRC Public Relations co-founder
+                  </T>
                 </p>
               </aside>
 
               <div className="space-y-6 mt-8">
                 <p className="text-charcoal text-[15px] leading-relaxed">
+                  <T id="services-issues-management.t43">
                   The organisations that manage issues successfully are not
                   lucky. They have invested in the right advice, monitoring
                   systems, stakeholder relationships, and a culture of seeking
                   communications counsel early, not after the story breaks.
+                  </T>
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
+                  <T id="services-issues-management.t44">
                   Retaining CRC Public Relations for issues management is not
                   an admission that your organisation has a problem. It is a
                   recognition that every organisation has potential issues, and
                   that the cost of managing them proactively is a fraction of
                   the cost of managing them once they have become crises.
+                  </T>
                 </p>
               </div>
             </div>
 
             <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
               <p className="text-brand-teal text-xs font-medium mb-5">
+                <T id="services-issues-management.t45">
                 Key distinction
+                </T>
               </p>
               <h3 className="font-heading font-black text-navy text-xl mb-4">
+                <T id="services-issues-management.t46">
                 Issues management is not the same as crisis communications
+                </T>
               </h3>
               <div className="space-y-4">
                 <div className="rounded-lg border border-brand-border bg-white p-5">
                   <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    <T id="services-issues-management.t47">
                     Issues management
+                    </T>
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
+                    <T id="services-issues-management.t48">
                     Proactive work while the matter is still developing and the
                     outcome is still shapeable.
+                    </T>
                   </p>
                 </div>
                 <div className="rounded-lg border border-brand-border bg-white p-5">
                   <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    <T id="services-issues-management.t49">
                     Crisis communications
+                    </T>
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
+                    <T id="services-issues-management.t50">
                     Reactive work once the event is public and the organisation
                     is under active pressure.
+                    </T>
                   </p>
                 </div>
                 <p className="text-charcoal text-[15px] leading-relaxed">
+                  <T id="services-issues-management.t51">
                   CRC Public Relations provides both. But the organisations that need crisis
                   communications least are the ones that have invested most in
                   issues management.
+                  </T>
                 </p>
               </div>
             </aside>
@@ -547,7 +650,7 @@ export default function IssuesManagementPage() {
         ]}
       />
 
-      <FAQSection
+      <FAQSection copyId="services-issues-management"
         items={faqs}
         titleText="Common questions about issues management"
         expandable={false}

@@ -7,6 +7,7 @@ import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
 import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
 import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
 import { PageProofStrip } from "@/components/shared/PageProofStrip";
+import { T } from "@/components/editable";
 
 export const metadata: Metadata = {
   title: "Corporate PR & Communications",
@@ -93,37 +94,49 @@ export default function CorporateClientsPage() {
           >
             <div className="max-w-3xl lg:max-w-none">
               <p className="text-brand-gold text-xs font-medium mb-4">
+                <T id="clients-corporate.t1">
                 Corporate communications
+                </T>
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                <T id="clients-corporate.t2">
                 Reputation is shaped where strategy, behaviour, and narrative meet.
+                </T>
               </h2>
               <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
+                <T id="clients-corporate.t3">
                 We work with owners, managing directors, and executives who need
                 communications counsel that understands regulatory exposure,
                 market expectations, and the pace at which issues move from
                 internal concern to public headline.
+                </T>
               </p>
 
               <div className="space-y-6 mt-8">
                 <p className="text-charcoal-mid text-[15px] leading-relaxed">
+                  <T id="clients-corporate.t4">
                   You deal directly with experienced advisers who align
                   messaging with governance, protect valuation during
                   turbulence, and prepare your leadership team for scrutiny
                   from investors, analysts, and media. We bring journalistic
                   judgment and crisis experience to every engagement, without
                   the overhead of a large agency model.
+                  </T>
                 </p>
                 <p className="text-charcoal-mid text-[15px] leading-relaxed">
+                  <T id="clients-corporate.t5">
                   Whether you are managing a live issue, strengthening
                   executive visibility, or building a communications capability
                   that matches your growth ambitions, we work directly with you
                   and take ownership of outcomes.
+                  </T>
                 </p>
               </div>
               <aside className="rounded-[28px] border border-brand-border bg-off-white p-6 md:p-8 mt-8">
                 <p className="text-brand-teal text-xs font-medium mb-5">
+                  <T id="clients-corporate.t6">
                   Typical support areas
+                  </T>
                 </p>
                 <div className="space-y-3">
                   {services.map((item) => (
@@ -162,7 +175,7 @@ export default function CorporateClientsPage() {
 
       <LeadMagnetBanner magnet="crisisReadinessChecklist" />
 
-      <FAQSection
+      <FAQSection copyId="clients-corporate"
         items={faqs}
         titleText="Common questions from corporate clients"
         expandable={false}

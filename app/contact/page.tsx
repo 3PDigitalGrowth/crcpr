@@ -4,6 +4,7 @@ import { ContactFormSection } from "@/components/contact/ContactFormSection";
 import { FAQSection } from "@/components/shared/FAQSection";
 import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
 import { PageProofStrip } from "@/components/shared/PageProofStrip";
+import { T } from "@/components/editable";
 
 export const metadata: Metadata = {
   title: "Contact CRC Public Relations",
@@ -62,16 +63,22 @@ export default function ContactPage({
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_340px] gap-10 items-start">
             <div className="max-w-3xl">
               <p className="text-brand-gold text-xs font-medium mb-4">
+                <T id="contact.t1">
                 How most enquiries start
+                </T>
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                <T id="contact.t2">
                 Most enquiries fall into one of three categories.
+                </T>
               </h2>
               <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
+                <T id="contact.t3">
                 A discussion about a specific communications need or an overall
                 media or public relations strategy; a decision to plan for
                 future issues or conduct crisis planning; or a live issue that
                 needs immediate advice.
+                </T>
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-10">
@@ -106,24 +113,34 @@ export default function ContactPage({
 
             <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
               <p className="text-brand-teal text-xs font-medium mb-5">
+                <T id="contact.t4">
                 Best first step
+                </T>
               </p>
               <div className="space-y-4">
                 <div className="border-l-[3px] border-brand-gold pl-4">
                   <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    <T id="contact.t5">
                     Use the form for strategy or planning matters
+                    </T>
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
+                    <T id="contact.t6">
                     The contact form is best for planned, non-urgent enquiries.
+                    </T>
                   </p>
                 </div>
                 <div className="border-l-[3px] border-brand-gold pl-4">
                   <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    <T id="contact.t7">
                     Call if the issue is moving
+                    </T>
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
+                    <T id="contact.t8">
                     If the matter is already active, phone is faster and
                     usually safer.
+                    </T>
                   </p>
                 </div>
               </div>
@@ -134,7 +151,7 @@ export default function ContactPage({
 
       <ContactFormSection source={searchParams.source} />
 
-      <FAQSection />
+      <FAQSection copyId="contact" />
 
       <PageClosingCTA copyId="contact"
         title="If the matter is sensitive, start the conversation now."

@@ -6,6 +6,7 @@ import { FAQSection } from "@/components/shared/FAQSection";
 import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
 import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
 import { PageProofStrip } from "@/components/shared/PageProofStrip";
+import { T } from "@/components/editable";
 
 export const metadata: Metadata = {
   title:
@@ -184,15 +185,20 @@ function AssociationOpening() {
     <section className="bg-off-white py-20">
       <div className="max-w-7xl mx-auto px-6">
         <p className="text-brand-teal font-sans font-medium text-xs mb-8">
+          <T id="clients-industry-associations.t1">
           Why associations need specialist communications counsel
+          </T>
         </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           <div>
             <h2 className="font-heading font-black text-navy text-3xl leading-tight mb-6">
+              <T id="clients-industry-associations.t2">
               Association communications is unlike any other.
+              </T>
             </h2>
             <p className="text-text-body text-base leading-relaxed mb-5">
+              <T id="clients-industry-associations.t3">
               Industry and professional associations are engaged on multiple
               fronts. While being over existing and new regulations, developing
               training, and engaging with multiple stakeholders including
@@ -201,38 +207,49 @@ function AssociationOpening() {
               some cases there is also government, regulatory or media scrutiny
               around their industry or members. No other type of organisation
               carries that load.
+              </T>
             </p>
             <p className="text-text-body text-base leading-relaxed mb-5">
+              <T id="clients-industry-associations.t4">
               CRC Public Relations has worked with Australian and New Zealand
               peak bodies, and industry and professional associations for 15
               years. We understand the needs of boards, executive management and
               members, and the continual quest to advocate for members and the
               industry. Our approach is always tailored to the specific character
               of your membership, your board, and your sector.
+              </T>
             </p>
             <p className="text-text-body text-base leading-relaxed mb-8">
+              <T id="clients-industry-associations.t5">
               Importantly, we also understand how to ensure that associations
               maximise their public and media voice to achieve their objectives,
               and how communications can attract new, and retain current,
               members.
+              </T>
             </p>
 
             <blockquote className="border-l-[3px] border-brand-gold pl-5">
               <p className="text-navy text-sm leading-relaxed italic mb-3">
+                <T id="clients-industry-associations.t6">
                 &ldquo;CRC Public Relations created national media coverage that energised our
                 member base, attracted new members and helped us advance important changes
                 for our sector.&rdquo;
+                </T>
               </p>
               <cite className="not-italic text-brand-gold text-xs font-medium">
+                <T id="clients-industry-associations.t7">
                 Martin Coote, President, Master Locksmiths Association of Australasia
+                </T>
               </cite>
             </blockquote>
           </div>
 
           <div className="bg-white border border-brand-border rounded-lg p-8 shadow-sm shadow-navy/5">
             <p className="font-heading font-black text-navy text-xl leading-snug mb-5">
+              <T id="clients-industry-associations.t8">
               CRC Public Relations can create a public relations strategy that
               will advance these objectives for your association:
+              </T>
             </p>
             <ul className="space-y-3">
               {associationObjectives.map((objective) => (
@@ -280,31 +297,37 @@ function SectorCards() {
         >
           <div>
             <p className="text-brand-gold font-sans font-medium text-xs mb-3">
+              <T id="clients-industry-associations.t9">
               Sectors we advise
+              </T>
             </p>
             <h2 className="font-heading font-black text-navy text-3xl md:text-4xl mb-4">
+              <T id="clients-industry-associations.t10">
               Sectors where we advise associations
+              </T>
             </h2>
             <p className="text-text-body text-base leading-relaxed max-w-xl">
+              <T id="clients-industry-associations.t11">
               We work directly with CEOs, executive officers, and boards of industry
               and professional associations and peak bodies across Australia and
               New Zealand. Every sector brings unique communications challenges.
               Here is how we help.
+              </T>
             </p>
           </div>
         </ImageTextRow>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12">
-          {sectorCards.map((card) => (
+          {sectorCards.map((card, __ti) => (
             <div
               key={card.title}
               className="bg-off-white border border-brand-border rounded-lg p-8 hover:shadow-md hover:shadow-navy/5 transition-shadow duration-200"
             >
               <h3 className="font-heading font-black text-navy text-lg mb-3">
-                {card.title}
+                <T id={`clients-industry-associations.sectorCards.${__ti}.title`}>{card.title}</T>
               </h3>
               <p className="text-charcoal-mid text-[15px] leading-relaxed">
-                {card.description}
+                <T id={`clients-industry-associations.sectorCards.${__ti}.description`}>{card.description}</T>
               </p>
             </div>
           ))}
@@ -313,19 +336,25 @@ function SectorCards() {
         <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4 bg-gold-light border border-brand-gold/30 rounded-lg p-6">
           <div className="flex-1 min-w-0">
             <p className="text-[#7B5A00] text-sm font-medium mb-1">
+              <T id="clients-industry-associations.t12">
               Sector not listed?
+              </T>
             </p>
             <p className="text-[#9A7200] text-xs leading-relaxed">
+              <T id="clients-industry-associations.t13">
               We work with associations across every industry. If your sector is
               not represented above, get in touch for a confidential conversation
               about how we can help.
+              </T>
             </p>
           </div>
           <Link
             href="/contact"
             className="bg-brand-gold text-navy font-heading font-black text-xs px-6 py-3 rounded flex-shrink-0 hover:bg-brand-gold/90 transition-colors whitespace-nowrap"
           >
+            <T id="clients-industry-associations.t14">
             Book a consultation
+            </T>
           </Link>
         </div>
       </div>
@@ -377,27 +406,31 @@ export default function IndustryAssociationsPage() {
           >
             <div>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl mb-4">
+                <T id="clients-industry-associations.t15">
                 How CRC Public Relations works with industry and professional associations
+                </T>
               </h2>
               <p className="text-charcoal-mid text-[15px] leading-relaxed max-w-xl">
+                <T id="clients-industry-associations.t16">
                 We help industry and professional associations and peak bodies
                 achieve their overall objectives through effective media and
                 communication strategies that consider all stakeholders.
+                </T>
               </p>
             </div>
           </ImageTextRow>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12 md:mt-16">
-            {associationServiceCards.map((card) => (
+            {associationServiceCards.map((card, __ti) => (
               <div
                 key={card.title}
                 className="bg-white border border-brand-border rounded-lg p-8"
               >
                 <h3 className="font-heading font-black text-navy text-lg mb-3">
-                  {card.title}
+                  <T id={`clients-industry-associations.associationServiceCards.${__ti}.title`}>{card.title}</T>
                 </h3>
                 <p className="text-charcoal-mid text-[15px] leading-relaxed">
-                  {card.description}
+                  <T id={`clients-industry-associations.associationServiceCards.${__ti}.description`}>{card.description}</T>
                 </p>
               </div>
             ))}
@@ -409,37 +442,51 @@ export default function IndustryAssociationsPage() {
       <section className="bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <p className="text-charcoal-mid text-sm italic mb-6">
+            <T id="clients-industry-associations.t17">
             CRC Public Relations has worked with member associations and peak bodies at the
             state and national level, across financial services, education,
             health, and community sectors.
+            </T>
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <figure className="border-l-[3px] border-brand-gold bg-off-white p-6 rounded-lg">
               <blockquote className="text-charcoal text-[15px] leading-relaxed">
+                <T id="clients-industry-associations.t18">
                 &ldquo;CRC Public Relations created national media coverage that
                 energised our member base, attracted new members and helped us
                 advance important changes for our sector.&rdquo;
+                </T>
               </blockquote>
               <figcaption className="mt-4 text-sm text-charcoal-mid">
                 <span className="font-sans font-semibold text-navy">
+                  <T id="clients-industry-associations.t19">
                   Martin Coote
+                  </T>
                 </span>
+                <T id="clients-industry-associations.t20">
                 , President, Master Locksmiths Association of Australasia
+                </T>
               </figcaption>
             </figure>
 
             <figure className="border-l-[3px] border-brand-gold bg-off-white p-6 rounded-lg">
               <blockquote className="text-charcoal text-[15px] leading-relaxed">
+                <T id="clients-industry-associations.t21">
                 &ldquo;CRC Public Relations has helped us generate major,
                 ongoing, national exposure and ensure that our message is widely
                 heard.&rdquo;
+                </T>
               </blockquote>
               <figcaption className="mt-4 text-sm text-charcoal-mid">
                 <span className="font-sans font-semibold text-navy">
+                  <T id="clients-industry-associations.t22">
                   Peter
+                  </T>
                 </span>
+                <T id="clients-industry-associations.t23">
                 , CEO, national industry association with 14,000 members
+                </T>
               </figcaption>
             </figure>
           </div>
@@ -459,7 +506,7 @@ export default function IndustryAssociationsPage() {
         whatYouGetBody="A practical PR and communications strategy checklist for industry and professional associations. Sign up now and we'll email it the moment it goes live."
       />
 
-      <FAQSection
+      <FAQSection copyId="clients-industry-associations"
         items={faqs}
         titleText="Common questions from association and peak-body leaders"
         expandable={false}

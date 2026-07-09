@@ -6,6 +6,7 @@ import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
 import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
 import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
 import { PageProofStrip } from "@/components/shared/PageProofStrip";
+import { T } from "@/components/editable";
 
 export const metadata: Metadata = {
   title:
@@ -109,26 +110,35 @@ export default function MediaTrainingPage() {
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_360px] gap-10 items-start">
             <div className="max-w-3xl">
               <p className="text-brand-gold text-xs font-medium mb-4">
+                <T id="media-training.t1">
                 What better training looks like
+                </T>
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                <T id="media-training.t2">
                 The real risk is not poor technique. It is poor preparation.
+                </T>
               </h2>
               <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
+                <T id="media-training.t3">
                 A spokesperson can look polished and still lose the interview.
                 The difference usually comes down to whether they are ready for
                 the real pressure points in the story.
+                </T>
               </p>
 
               <div className="space-y-6 mt-8">
                 <p className="text-charcoal text-[15px] leading-relaxed">
+                  <T id="media-training.t4">
                   Most media training focuses on technique: bridging phrases,
                   body language, staying on message. These things matter. But
                   the most common failure point in a media interview is not
                   technique. It is lack of preparation for the specific
                   questions a journalist is likely to ask.
+                  </T>
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
+                  <T id="media-training.t5">
                   Generic media training produces spokespeople who know how to
                   bridge but cannot answer the hardest question about their own
                   organisation. Our media training begins not with technique,
@@ -137,51 +147,68 @@ export default function MediaTrainingPage() {
                   the specific vulnerabilities in your organisation&apos;s
                   position that a skilled interviewer will find. Every session
                   is designed and reviewed by an experienced adviser.
+                  </T>
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
+                  <T id="media-training.t6">
                   Our training is delivered by former television and radio
                   journalists who have conducted the kinds of interviews your
                   executives need to be ready for. They know what interviewers
                   are looking for, how hostile interviews are constructed, and
                   what the difference looks like between a spokesperson who
                   holds their position and one who does not.
+                  </T>
                 </p>
               </div>
             </div>
 
             <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
               <p className="text-brand-teal text-xs font-medium mb-5">
+                <T id="media-training.t7">
                 Technique is not enough
+                </T>
               </p>
 
               <div className="space-y-4">
                 <div className="border-l-[3px] border-brand-gold pl-4">
                   <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    <T id="media-training.t8">
                     Bridging without substance
+                    </T>
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
+                    <T id="media-training.t9">
                     Executives can sound polished while still failing to answer
                     the real question being tested.
+                    </T>
                   </p>
                 </div>
 
                 <div className="border-l-[3px] border-brand-gold pl-4">
                   <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    <T id="media-training.t10">
                     Generic rehearsal
+                    </T>
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
+                    <T id="media-training.t11">
                     Practice is weak if it is not built around your actual
                     vulnerabilities, timing, and likely scrutiny.
+                    </T>
                   </p>
                 </div>
 
                 <div className="border-l-[3px] border-brand-gold pl-4">
                   <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    <T id="media-training.t12">
                     False confidence
+                    </T>
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
+                    <T id="media-training.t13">
                     A confident spokesperson can still lose control if the
                     preparation has not matched the pressure.
+                    </T>
                   </p>
                 </div>
               </div>
@@ -195,15 +222,21 @@ export default function MediaTrainingPage() {
           <div className="rounded-[28px] border border-brand-border bg-off-white p-8 md:p-10">
             <div className="max-w-3xl">
               <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+                <T id="media-training.t14">
                 Executive mistakes
+                </T>
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                <T id="media-training.t15">
                 What executives usually get wrong
+                </T>
               </h2>
               <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
+                <T id="media-training.t16">
                 The most common failure in a difficult interview is not saying
                 too little. It is assuming that confidence alone will carry the
                 day.
+                </T>
               </p>
             </div>
 
@@ -255,56 +288,73 @@ export default function MediaTrainingPage() {
       <section className="bg-off-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="font-heading font-black text-navy text-3xl mb-6">
+            <T id="media-training.t17">
             Training programmes for every situation
+            </T>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
             <div>
               <h3 className="font-heading font-black text-navy text-xl mb-3">
+                <T id="media-training.t18">
                 Spokesperson and on-camera training
+                </T>
               </h3>
               <p className="text-charcoal text-[15px] leading-relaxed">
+                <T id="media-training.t19">
                 Intensive one-on-one or small group sessions that prepare
                 executives, managers, and communications staff for
                 television, radio, and press conference appearances. Sessions
                 are conducted using real broadcast equipment and recorded for
                 review, because watching yourself on camera is the fastest path
                 to genuine improvement.
+                </T>
               </p>
               <p className="text-charcoal text-[15px] leading-relaxed mt-4">
+                <T id="media-training.t20">
                 Every session covers: message development and prioritisation,
                 bridging and refocusing techniques, body language and presence
                 on camera, handling off-topic questions, and managing the
                 emotional pressure of a live interview. We use real scenarios
                 from your sector, not generic examples.
+                </T>
               </p>
             </div>
 
             <div>
               <h3 className="font-heading font-black text-navy text-xl mb-3">
+                <T id="media-training.t21">
                 Hostile media and crisis interview preparation
+                </T>
               </h3>
               <p className="text-charcoal text-[15px] leading-relaxed">
+                <T id="media-training.t22">
                 For leaders who may face adversarial media questioning during a
                 regulatory inquiry, a crisis event, or a contentious public
                 debate, we run intensive workshops that simulate the specific
                 conditions they are likely to face.
+                </T>
               </p>
               <p className="text-charcoal text-[15px] leading-relaxed mt-4">
+                <T id="media-training.t23">
                 These sessions include: mock hostile interviews conducted by
                 former journalists, coaching on how to hold your position under
                 sustained pressure, training in recognising the techniques
                 journalists use to provoke unrehearsed responses, and the
                 development of a personal communications strategy for
                 high-stakes appearances.
+                </T>
               </p>
             </div>
 
             <div>
               <h3 className="font-heading font-black text-navy text-xl mb-3">
+                <T id="media-training.t24">
                 PR fundamentals: team workshops
+                </T>
               </h3>
               <p className="text-charcoal text-[15px] leading-relaxed">
+                <T id="media-training.t25">
                 For communications teams and new spokespeople who need a solid
                 foundation in media relations, we deliver practical workshops
                 that cover: how newsrooms work and how journalists make story
@@ -312,24 +362,31 @@ export default function MediaTrainingPage() {
                 mechanics of a media interview across print, broadcast, and
                 digital, and how to build and maintain productive media
                 relationships.
+                </T>
               </p>
             </div>
 
             <div>
               <h3 className="font-heading font-black text-navy text-xl mb-3">
+                <T id="media-training.t26">
                 Online and remote media training
+                </T>
               </h3>
               <p className="text-charcoal text-[15px] leading-relaxed">
+                <T id="media-training.t27">
                 Full media training programmes delivered via video conferencing
                 for organisations with distributed teams, interstate offices,
                 or Pacific Island locations. We use broadcast-quality recording
                 and playback to maintain the same rigour as in-person sessions.
+                </T>
               </p>
               <p className="text-charcoal text-[15px] leading-relaxed mt-4">
+                <T id="media-training.t28">
                 Remote delivery also allows us to work with multiple
                 participants across multiple locations simultaneously,
                 particularly useful for organisations preparing a leadership
                 team for a major announcement or issue.
+                </T>
               </p>
             </div>
           </div>
@@ -341,14 +398,20 @@ export default function MediaTrainingPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl">
             <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+              <T id="media-training.t29">
               Readiness check
+              </T>
             </p>
             <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+              <T id="media-training.t30">
               Who needs media training
+              </T>
             </h2>
             <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
+              <T id="media-training.t31">
               If several of these sound familiar, media training is no longer a
               nice-to-have. It is part of basic executive preparedness.
+              </T>
             </p>
           </div>
 
@@ -381,7 +444,7 @@ export default function MediaTrainingPage() {
         description="The pre-interview checklist and briefing framework we give to executives before meaningful media appearances. Covers hostile interview preparation, on-camera presence, message prioritisation, and the questions every spokesperson should be able to answer before walking in."
       />
 
-      <FAQSection
+      <FAQSection copyId="media-training"
         items={faqs}
         titleText="Common questions about media training"
         expandable={false}

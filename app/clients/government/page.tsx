@@ -6,6 +6,7 @@ import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
 import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
 import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
 import { PageProofStrip } from "@/components/shared/PageProofStrip";
+import { T } from "@/components/editable";
 
 export const metadata: Metadata = {
   title: "Government Communications & PR",
@@ -88,43 +89,57 @@ export default function GovernmentClientsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_380px] gap-10 items-start">
             <div className="max-w-3xl">
               <p className="text-brand-gold text-xs font-medium mb-4">
+                <T id="clients-government.t1">
                 Public sector communications
+                </T>
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                <T id="clients-government.t2">
                 Authority, process, and public confidence have to hold together.
+                </T>
               </h2>
               <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
+                <T id="clients-government.t3">
                 Your organisation must communicate with authority, accuracy,
                 and empathy while managing competing stakeholder interests,
                 statutory obligations, and intense media attention. We
                 understand that environment.
+                </T>
               </p>
 
               <div className="space-y-6 mt-8">
                 <p className="text-charcoal-mid text-[15px] leading-relaxed">
+                  <T id="clients-government.t4">
                   The public sector environment demands discipline: clear
                   accountabilities, defensible messaging, and readiness when
                   programmes or incidents attract scrutiny.
+                  </T>
                 </p>
                 <p className="text-charcoal-mid text-[15px] leading-relaxed">
+                  <T id="clients-government.t5">
                   We work with departments, agencies, and authorities on
                   communications strategy that respects
                   machinery-of-government realities. We help you anticipate
                   friction points, align internal and external narratives, and
                   engage communities and industry with clarity and respect.
+                  </T>
                 </p>
                 <p className="text-charcoal-mid text-[15px] leading-relaxed">
+                  <T id="clients-government.t6">
                   From ministerial announcements to operational incidents and
                   complex reform agendas, we provide experienced counsel,
                   including crisis response when confidence in public
                   institutions is on the line.
+                  </T>
                 </p>
               </div>
             </div>
 
             <aside className="rounded-[28px] border border-brand-border bg-off-white p-6 md:p-8">
               <p className="text-brand-teal text-xs font-medium mb-5">
+                <T id="clients-government.t7">
                 Typical support areas
+                </T>
               </p>
               <div className="space-y-3">
                 {services.map((item) => (
@@ -162,7 +177,7 @@ export default function GovernmentClientsPage() {
 
       <LeadMagnetBanner magnet="crisisReadinessChecklist" />
 
-      <FAQSection
+      <FAQSection copyId="clients-government"
         items={faqs}
         titleText="Common questions about government communications support"
         expandable={false}

@@ -7,6 +7,7 @@ import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
 import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
 import { PAGE_HERO_ASIDES } from "@/config/pageHeroAsides";
 import { siteConfig } from "@/config/site";
+import { T } from "@/components/editable";
 
 export const metadata: Metadata = {
   title:
@@ -108,22 +109,30 @@ export default function DigitalMediaPage() {
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-12 items-end">
             <div className="max-w-4xl">
               <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+                <T id="services-digital-media.t1">
                 Digital media and online reputation
+                </T>
               </p>
               <h1 className="font-heading font-black text-white text-4xl md:text-[56px] leading-[1.02] max-w-4xl">
+                <T id="services-digital-media.t2">
                 The digital media age puts more pressure on your reputation.
+                </T>
               </h1>
               <p className="text-white/75 text-lg leading-relaxed mt-6 max-w-2xl">
+                <T id="services-digital-media.t3">
                 Your &lsquo;owned media&rsquo; &mdash; digital and social media
                 channels &mdash; carries your messages and news. It&apos;s also
                 where reputations are increasingly won and lost.
+                </T>
               </p>
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mt-8">
                 <Link
                   href="/contact"
                   className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs rounded-[4px] px-8 py-4 hover:bg-gold-light transition"
                 >
+                  <T id="services-digital-media.t4">
                   Book a consultation
+                  </T>
                 </Link>
                 <a
                   href={siteConfig.phone.href}
@@ -135,14 +144,16 @@ export default function DigitalMediaPage() {
             </div>
 
             <div className="border border-white/10 bg-white/[0.03] rounded-lg p-6 backdrop-blur-[2px]">
-              <p className="text-white/35 text-xs mb-4">Direct strategic counsel</p>
+              <p className="text-white/35 text-xs mb-4"><T id="services-digital-media.t52">Direct strategic counsel</T></p>
               <div className="space-y-4">
                 <div>
                   <p className="font-heading font-black text-brand-gold text-2xl">
                     {siteConfig.stats.yearsTrading}
                   </p>
                   <p className="text-white/60 text-sm">
+                    <T id="services-digital-media.t5">
                     Years serving organisations across Australia and the Pacific
+                    </T>
                   </p>
                 </div>
                 <div className="h-px bg-white/10" />
@@ -166,27 +177,31 @@ export default function DigitalMediaPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-12 md:pt-14 pb-16 md:pb-20">
           <div className="max-w-3xl">
             <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+              <T id="services-digital-media.t6">
               Why CRC Public Relations
+              </T>
             </p>
             <h2 className="font-heading font-black text-white text-3xl">
+              <T id="services-digital-media.t7">
               Online reputation management has a shorter fuse.
+              </T>
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
-            {proofItems.map((item) => (
+            {proofItems.map((item, __ti) => (
               <div
                 key={`${item.label}-${item.value}`}
                 className="border border-white/10 bg-white/[0.03] rounded-lg p-6"
               >
                 <p className="text-brand-gold text-xs font-medium mb-3">
-                  {item.label}
+                  <T id={`services-digital-media.proofItems.${__ti}.label`}>{item.label}</T>
                 </p>
                 <p className="font-heading font-black text-white text-2xl">
-                  {item.value}
+                  <T id={`services-digital-media.proofItems.${__ti}.value`}>{item.value}</T>
                 </p>
                 <p className="text-sm leading-relaxed mt-3 text-white/60">
-                  {item.detail}
+                  <T id={`services-digital-media.proofItems.${__ti}.detail`}>{item.detail}</T>
                 </p>
               </div>
             ))}
@@ -200,27 +215,36 @@ export default function DigitalMediaPage() {
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_360px] gap-10 items-start">
             <div className="max-w-3xl">
               <p className="text-brand-gold text-xs font-medium mb-4">
+                <T id="services-digital-media.t8">
                 Digital reputation reality
+                </T>
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                <T id="services-digital-media.t9">
                 Issues that can damage your reputation often break online
                 first.
+                </T>
               </h2>
               <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
+                <T id="services-digital-media.t10">
                 The channel has changed, but the consequence has not. A digital
                 flare-up can move into mainstream coverage before leadership has
                 agreed what happened or who should respond.
+                </T>
               </p>
 
               <div className="space-y-6 mt-8">
                 <p className="text-charcoal text-[15px] leading-relaxed">
+                  <T id="services-digital-media.t11">
                   Ten years ago, a corporate reputation crisis typically began
                   with a phone call from a journalist. Today, it is more likely
                   to begin with a tweet, a LinkedIn post, or a one-star Google
                   review that gets picked up by a media outlet monitoring social
                   media for stories.
+                  </T>
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
+                  <T id="services-digital-media.t12">
                   The speed of the digital environment has not made traditional
                   PR expertise less relevant. It has made it more urgent. The
                   communications disciplines that determine how a reputation
@@ -229,52 +253,69 @@ export default function DigitalMediaPage() {
                   digital channels as they are in traditional media. What
                   changes is the timeframe. What used to take days now takes
                   minutes.
+                  </T>
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
+                  <T id="services-digital-media.t13">
                   When you engage us, you get corporate communications and
                   crisis expertise applied to digital channels, not as a social
                   media agency, but as communications advisers who understand
                   how digital and traditional media interact, and how to manage
                   your reputation across both simultaneously.
+                  </T>
                 </p>
               </div>
             </div>
 
             <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
               <p className="text-brand-teal text-xs font-medium mb-5">
+                <T id="services-digital-media.t14">
                 What changes online
+                </T>
               </p>
 
               <div className="space-y-4">
                 <div className="border-l-[3px] border-brand-gold pl-4">
                   <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    <T id="services-digital-media.t15">
                     Instant communication
+                    </T>
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
+                    <T id="services-digital-media.t16">
                     Everyone has access, and issues often start as negative
                     posts, reviews, screenshots, allegations, or comments.
+                    </T>
                   </p>
                 </div>
 
                 <div className="border-l-[3px] border-brand-gold pl-4">
                   <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    <T id="services-digital-media.t17">
                     Timing is reduced
+                    </T>
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
+                    <T id="services-digital-media.t18">
                     People can share posts or add comments in seconds, reducing
                     the time available to assess, evaluate, and respond
                     strategically.
+                    </T>
                   </p>
                 </div>
 
                 <div className="border-l-[3px] border-brand-gold pl-4">
                   <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    <T id="services-digital-media.t19">
                     Channels interact
+                    </T>
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
+                    <T id="services-digital-media.t20">
                     What starts online spreads not only online but can quickly
                     spill into mainstream media, resulting in stakeholder
                     concern.
+                    </T>
                   </p>
                 </div>
               </div>
@@ -288,16 +329,22 @@ export default function DigitalMediaPage() {
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_340px] gap-10 items-start">
             <div className="max-w-3xl">
               <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+                <T id="services-digital-media.t21">
                 Early warning signs
+                </T>
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                <T id="services-digital-media.t22">
                 How does it happen?
+                </T>
               </h2>
               <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
+                <T id="services-digital-media.t23">
                 Many organisations don&apos;t safeguard against the
                 vulnerabilities of digital and social media. They don&apos;t
                 have the right controls or policies, and don&apos;t respond
                 effectively.
+                </T>
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10">
@@ -336,22 +383,30 @@ export default function DigitalMediaPage() {
 
             <aside className="rounded-lg border border-brand-border bg-white p-6 md:p-8">
               <p className="text-brand-teal text-xs font-medium mb-5">
+                <T id="services-digital-media.t24">
                 Resilient organisations have
+                </T>
               </p>
               <div className="space-y-4">
                 <div className="border-l-[3px] border-brand-gold pl-4">
                   <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    <T id="services-digital-media.t25">
                     A clear communications posture
+                    </T>
                   </p>
                 </div>
                 <div className="border-l-[3px] border-brand-gold pl-4">
                   <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    <T id="services-digital-media.t26">
                     Active monitoring across key channels
+                    </T>
                   </p>
                 </div>
                 <div className="border-l-[3px] border-brand-gold pl-4">
                   <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    <T id="services-digital-media.t27">
                     An agreed digital escalation model
+                    </T>
                   </p>
                 </div>
               </div>
@@ -376,15 +431,20 @@ export default function DigitalMediaPage() {
       <section className="bg-off-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="font-heading font-black text-navy text-3xl mb-6">
+            <T id="services-digital-media.t28">
             Digital communications services
+            </T>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
             <div>
               <h3 className="font-heading font-black text-navy text-xl mb-3">
+                <T id="services-digital-media.t29">
                 Online and social media management and monitoring
+                </T>
               </h3>
               <p className="text-charcoal text-[15px] leading-relaxed">
+                <T id="services-digital-media.t30">
                 Communication is two way, speaking and listening. We listen to
                 what others are saying about you and to you, by monitoring your
                 online presence across news media, social platforms, and review
@@ -393,14 +453,18 @@ export default function DigitalMediaPage() {
                 media and review responses as part of an overall communications
                 strategy that positions you as a trusted voice while protecting
                 your reputation.
+                </T>
               </p>
             </div>
 
             <div>
               <h3 className="font-heading font-black text-navy text-xl mb-3">
+                <T id="services-digital-media.t31">
                 Social media strategy and policies
+                </T>
               </h3>
               <p className="text-charcoal text-[15px] leading-relaxed">
+                <T id="services-digital-media.t32">
                 Social media presents an opportunity to present your messaging
                 to stakeholders in a way that supports your overall objectives,
                 and a risk to your reputation if these platforms are not
@@ -410,14 +474,18 @@ export default function DigitalMediaPage() {
                 We also assist to create policies for staff behaviour on their
                 personal social media accounts that may impact your
                 organisation.
+                </T>
               </p>
             </div>
 
             <div>
               <h3 className="font-heading font-black text-navy text-xl mb-3">
+                <T id="services-digital-media.t33">
                 Digital crisis response
+                </T>
               </h3>
               <p className="text-charcoal text-[15px] leading-relaxed">
+                <T id="services-digital-media.t34">
                 If a social media issue arises, an immediate response and
                 strategy is required to contain the issue and prevent it from
                 escalating and causing damage to your reputation. While the
@@ -426,14 +494,18 @@ export default function DigitalMediaPage() {
                 more vitriolic nature of social media. We provide immediate
                 digital crisis counsel, and can manage the response across your
                 platforms in coordination with your communications team.
+                </T>
               </p>
             </div>
 
             <div>
               <h3 className="font-heading font-black text-navy text-xl mb-3">
+                <T id="services-digital-media.t35">
                 Content strategy
+                </T>
               </h3>
               <p className="text-charcoal text-[15px] leading-relaxed">
+                <T id="services-digital-media.t36">
                 Just as mainstream media presents an opportunity to become a
                 trusted voice of authority in your industry, so does your
                 &lsquo;owned media&rsquo;, including blogs, websites, and
@@ -442,6 +514,7 @@ export default function DigitalMediaPage() {
                 develop content strategies across all platforms that build this
                 authority over time, positioning you in a positive way and
                 ensuring your communication is heard by all stakeholders.
+                </T>
               </p>
             </div>
           </div>
@@ -454,30 +527,39 @@ export default function DigitalMediaPage() {
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.1fr)_360px] gap-10 items-start">
             <div className="max-w-3xl">
               <p className="text-brand-gold text-xs font-medium mb-4">
+                <T id="services-digital-media.t37">
                 The difference
+                </T>
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                <T id="services-digital-media.t38">
                 Reputation management for the digital age
+                </T>
               </h2>
               <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
+                <T id="services-digital-media.t39">
                 We live in a digital world and have now entered the world of
                 artificial intelligence. While technology and how we communicate
                 is changing, the need for organisations to build trust with
                 stakeholders, effectively communicate their message, and
                 protect their reputation is not. When issues arise and
                 reputations are impacted, people are hurt.
+                </T>
               </p>
 
               <div className="space-y-6 mt-8">
                 <p className="text-charcoal text-[15px] leading-relaxed">
+                  <T id="services-digital-media.t40">
                   The market is full of digital agencies and social media
                   managers who claim expertise in online reputation management.
                   Most of them understand platforms. Few understand
                   communications strategy. Almost none have walked business
                   leaders and owners through high-profile crises or understand
                   the impact these have.
+                  </T>
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
+                  <T id="services-digital-media.t41">
                   CRC Public Relations is not a digital agency. We are a
                   corporate communications and reputation firm that understands
                   our clients&apos; need to communicate authentically in the
@@ -485,57 +567,78 @@ export default function DigitalMediaPage() {
                   reputation management, you are retaining the same experienced
                   counsel and gaining the same crisis experience that we bring
                   to every other part of our work.
+                  </T>
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
+                  <T id="services-digital-media.t42">
                   The platforms are different. The expertise required is the
                   same.
+                  </T>
                 </p>
               </div>
             </div>
 
             <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
               <p className="text-brand-teal text-xs font-medium mb-5">
+                <T id="services-digital-media.t43">
                 What clients actually need
+                </T>
               </p>
 
               <div className="space-y-4">
                 <div className="border-l-[3px] border-brand-gold pl-4">
                   <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    <T id="services-digital-media.t44">
                     Effective communications counsel
+                    </T>
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
+                    <T id="services-digital-media.t45">
                     Advice that understands the potential and vulnerability of
                     digital media.
+                    </T>
                   </p>
                 </div>
 
                 <div className="border-l-[3px] border-brand-gold pl-4">
                   <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    <T id="services-digital-media.t46">
                     Journalistic judgment
+                    </T>
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
+                    <T id="services-digital-media.t47">
                     A realistic view on what becomes a story, how the media
                     operates, and what can escalate an issue.
+                    </T>
                   </p>
                 </div>
 
                 <div className="border-l-[3px] border-brand-gold pl-4">
                   <p className="font-sans font-semibold text-navy text-sm mb-1">
+                    <T id="services-digital-media.t48">
                     Crisis experience
+                    </T>
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
+                    <T id="services-digital-media.t49">
                     Proven results across a multitude of issues and industries
                     when the stakes are high.
+                    </T>
                   </p>
                 </div>
               </div>
 
               <div className="mt-6 pt-6 border-t border-brand-border">
                 <p className="text-brand-gold text-xs font-medium mb-3">
+                  <T id="services-digital-media.t50">
                   Bottom line
+                  </T>
                 </p>
                 <p className="text-navy font-sans font-semibold text-base leading-relaxed">
+                  <T id="services-digital-media.t51">
                   The platforms are different. The reputational stakes are not.
+                  </T>
                 </p>
               </div>
             </aside>
@@ -555,7 +658,7 @@ export default function DigitalMediaPage() {
         ]}
       />
 
-      <FAQSection
+      <FAQSection copyId="services-digital-media"
         items={faqs}
         titleText="Common questions about digital reputation management"
         expandable={false}

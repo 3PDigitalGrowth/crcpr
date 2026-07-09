@@ -8,6 +8,7 @@ import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
 import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
 import { PAGE_HERO_ASIDES } from "@/config/pageHeroAsides";
 import { siteConfig } from "@/config/site";
+import { T } from "@/components/editable";
 
 export const metadata: Metadata = {
   title: "Crisis Communications PR Australia | CRC Public Relations",
@@ -115,22 +116,30 @@ export default function CrisisCommunicationsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-12 items-end">
             <div className="max-w-4xl">
               <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+                <T id="services-crisis-communications.t1">
                 Crisis communications
+                </T>
               </p>
               <h1 className="font-heading font-black text-white text-4xl md:text-[56px] leading-[1.02] max-w-4xl">
+                <T id="services-crisis-communications.t2">
                 When a crisis breaks, experience is everything.
+                </T>
               </h1>
               <p className="text-white/75 text-lg leading-relaxed mt-6 max-w-2xl">
+                <T id="services-crisis-communications.t3">
                 24/7 crisis response, crisis communications planning, and
                 simulation exercises. When you need experienced counsel, we are
                 available immediately.
+                </T>
               </p>
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mt-8">
                 <Link
                   href="/contact"
                   className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs rounded-[4px] px-8 py-4 hover:bg-gold-light transition"
                 >
+                  <T id="services-crisis-communications.t4">
                   Book a consultation
+                  </T>
                 </Link>
                 <a
                   href={siteConfig.phone.href}
@@ -142,14 +151,16 @@ export default function CrisisCommunicationsPage() {
             </div>
 
             <div className="border border-white/10 bg-white/[0.03] rounded-lg p-6 backdrop-blur-[2px]">
-              <p className="text-white/35 text-xs mb-4">Direct strategic counsel</p>
+              <p className="text-white/35 text-xs mb-4"><T id="services-crisis-communications.t47">Direct strategic counsel</T></p>
               <div className="space-y-4">
                 <div>
                   <p className="font-heading font-black text-brand-gold text-2xl">
                     {siteConfig.stats.yearsTrading}
                   </p>
                   <p className="text-white/60 text-sm">
+                    <T id="services-crisis-communications.t5">
                     Years serving organisations across Australia and the Pacific
+                    </T>
                   </p>
                 </div>
                 <div className="h-px bg-white/10" />
@@ -175,27 +186,31 @@ export default function CrisisCommunicationsPage() {
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-12 md:pt-14 pb-16 md:pb-20">
           <div className="max-w-3xl">
             <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+              <T id="services-crisis-communications.t6">
               Why CRC Public Relations
+              </T>
             </p>
             <h2 className="font-heading font-black text-white text-3xl">
+              <T id="services-crisis-communications.t7">
               The first decisions in a crisis shape everything that follows.
+              </T>
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
-            {proofItems.map((item) => (
+            {proofItems.map((item, __ti) => (
               <div
                 key={`${item.label}-${item.value}`}
                 className="border border-white/10 bg-white/[0.03] rounded-lg p-6"
               >
                 <p className="text-brand-gold text-xs font-medium mb-3">
-                  {item.label}
+                  <T id={`services-crisis-communications.proofItems.${__ti}.label`}>{item.label}</T>
                 </p>
                 <p className="font-heading font-black text-white text-2xl">
-                  {item.value}
+                  <T id={`services-crisis-communications.proofItems.${__ti}.value`}>{item.value}</T>
                 </p>
                 <p className="text-sm leading-relaxed mt-3 text-white/60">
-                  {item.detail}
+                  <T id={`services-crisis-communications.proofItems.${__ti}.detail`}>{item.detail}</T>
                 </p>
               </div>
             ))}
@@ -214,66 +229,88 @@ export default function CrisisCommunicationsPage() {
           >
             <div className="max-w-3xl lg:max-w-none">
               <p className="text-brand-gold text-xs font-medium mb-4">
+                <T id="services-crisis-communications.t8">
                 Being crisis-ready
+                </T>
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                <T id="services-crisis-communications.t9">
                 What does it mean to be crisis-ready?
+                </T>
               </h2>
               <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
+                <T id="services-crisis-communications.t10">
                 Crisis planning is a mindset, not a document.
+                </T>
               </p>
 
               <div className="space-y-6 mt-8">
                 <p className="text-charcoal text-[15px] leading-relaxed">
+                  <T id="services-crisis-communications.t11">
                   A tailored and tested crisis communications plan is essential
                   for every organisation, but it must be accompanied by a
                   readiness &ndash; logistical and emotional &ndash; to respond
                   to any issue or crisis.
+                  </T>
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
+                  <T id="services-crisis-communications.t12">
                   CRC Public Relations believes that readiness means
                   understanding the value of effective, transparent
                   communication that connects with your stakeholders as soon as
                   a major issue or crisis hits, and backing this up with a
                   tested plan, prepared spokespeople, and the guidance of
                   outside crisis communications counsel.
+                  </T>
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
+                  <T id="services-crisis-communications.t13">
                   If you don&apos;t, there can be major ramifications. Melissa
                   Agnes, CEO of the Crisis Ready Institute in the USA (who we
                   partner with to present the Crisis Masterclass for crisis
                   leaders) defines these ramifications as the &ldquo;Crisis
                   Response Penalty&rdquo;.
+                  </T>
                 </p>
               </div>
 
               <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8 mt-8">
                 <p className="text-brand-teal text-xs font-medium mb-4">
+                  <T id="services-crisis-communications.t14">
                   The Crisis Response Penalty
+                  </T>
                 </p>
                 <blockquote className="border-l-[3px] border-brand-gold pl-5 font-heading font-black text-navy text-lg md:text-xl leading-snug">
+                  <T id="services-crisis-communications.t15">
                   &ldquo;When organisations fail to respond effectively in the
                   right timeline, the longer you wait, the more you lose
                   ownership of the narrative, the more trust erodes, and the
                   greater the material impact becomes.&rdquo;
+                  </T>
                 </blockquote>
                 <p className="mt-4 pl-5 text-charcoal-mid text-sm font-sans font-medium">
+                  <T id="services-crisis-communications.t16">
                   Melissa Agnes, CEO of the Crisis Ready Institute (presenter
                   of our Crisis Masterclass for crisis leaders)
+                  </T>
                 </p>
               </aside>
 
               <div className="space-y-6 mt-8">
                 <p className="text-charcoal text-[15px] leading-relaxed">
+                  <T id="services-crisis-communications.t17">
                   But as Melissa also notes: &ldquo;The Crisis Response Penalty
                   is preventable&hellip; when you have the right mindset,
                   skillset, and capabilities in place&rdquo;.
+                  </T>
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
+                  <T id="services-crisis-communications.t18">
                   In a crisis, hesitation and overreaction can be equally
                   costly. That&apos;s why preparation and the right guidance
                   not only helps to navigate through a crisis, but to turn them
                   into opportunities to build even greater trust.
+                  </T>
                 </p>
               </div>
             </div>
@@ -285,74 +322,102 @@ export default function CrisisCommunicationsPage() {
       <section className="bg-off-white py-16 md:py-24">
         <div className="max-w-4xl mx-auto px-6">
           <p className="text-brand-gold text-xs font-medium mb-4">
+            <T id="services-crisis-communications.t19">
             Urgent timeframe
+            </T>
           </p>
           <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+            <T id="services-crisis-communications.t20">
             The first 15 minutes
+            </T>
           </h2>
           <p className="text-navy text-lg md:text-xl leading-relaxed">
+            <T id="services-crisis-communications.t21">
             The best scenario when a crisis hits is to have the time to respond.
             But usually this isn&apos;t possible.
+            </T>
           </p>
 
           <div className="space-y-6 mt-8">
             <p className="text-charcoal text-[15px] leading-relaxed">
+              <T id="services-crisis-communications.t22">
               When a crisis becomes public, in this age of digital and social
               media, the first 15 minutes is a key timeframe. Too many
               organisations don&apos;t understand this and make predictable
               mistakes: they wait too long for more information, or respond
               through the wrong channel, or say more than they should before the
               facts are established. Each mistake compounds the one prior.
+              </T>
             </p>
             <p className="text-charcoal text-[15px] leading-relaxed">
+              <T id="services-crisis-communications.t23">
               We help prepare you to be crisis-ready.
+              </T>
             </p>
           </div>
 
           <aside className="rounded-lg border border-brand-border bg-white p-6 md:p-8 mt-10">
             <p className="text-brand-teal text-xs font-medium mb-5">
+              <T id="services-crisis-communications.t24">
               Common first-response failures
+              </T>
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="border-l-[3px] border-brand-gold pl-4">
                 <p className="font-sans font-semibold text-navy text-sm mb-1">
+                  <T id="services-crisis-communications.t25">
                   Waiting for certainty
+                  </T>
                 </p>
                 <p className="text-charcoal-mid text-sm leading-relaxed">
+                  <T id="services-crisis-communications.t26">
                   By the time every detail is confirmed, the narrative is often
                   already moving without you.
+                  </T>
                 </p>
               </div>
 
               <div className="border-l-[3px] border-brand-gold pl-4">
                 <p className="font-sans font-semibold text-navy text-sm mb-1">
+                  <T id="services-crisis-communications.t27">
                   Using the wrong channel
+                  </T>
                 </p>
                 <p className="text-charcoal-mid text-sm leading-relaxed">
+                  <T id="services-crisis-communications.t28">
                   Staff, stakeholders, regulators, and media rarely need the
                   same message in the same order.
+                  </T>
                 </p>
               </div>
 
               <div className="border-l-[3px] border-brand-gold pl-4">
                 <p className="font-sans font-semibold text-navy text-sm mb-1">
+                  <T id="services-crisis-communications.t29">
                   Saying too much too soon
+                  </T>
                 </p>
                 <p className="text-charcoal-mid text-sm leading-relaxed">
+                  <T id="services-crisis-communications.t30">
                   Early overstatement creates contradictions later and makes
                   recovery materially harder.
+                  </T>
                 </p>
               </div>
             </div>
 
             <div className="mt-6 pt-6 border-t border-brand-border">
               <p className="text-brand-gold text-xs font-medium mb-3">
+                <T id="services-crisis-communications.t31">
                 What better looks like
+                </T>
               </p>
               <p className="text-navy font-sans font-semibold text-base leading-relaxed">
+                <T id="services-crisis-communications.t32">
                 A tested plan, prepared spokespeople, and guidance from
                 experienced, external crisis communications counsel.
+                </T>
               </p>
             </div>
           </aside>
@@ -377,10 +442,14 @@ export default function CrisisCommunicationsPage() {
       <section className="bg-off-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+            <T id="services-crisis-communications.t33">
             What serious organisations expect
+            </T>
           </p>
           <h2 className="font-heading font-black text-navy text-3xl mb-6">
+            <T id="services-crisis-communications.t34">
             What serious organisations expect from crisis communications counsel
+            </T>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
             {[
@@ -417,15 +486,20 @@ export default function CrisisCommunicationsPage() {
       <section className="bg-off-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="font-heading font-black text-navy text-3xl mb-6">
+            <T id="services-crisis-communications.t35">
             Three ways we support you through crisis
+            </T>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10">
             <div>
               <h3 className="font-heading font-black text-navy text-xl mb-3">
+                <T id="services-crisis-communications.t36">
                 Crisis preparedness, before it happens
+                </T>
               </h3>
               <p className="text-charcoal text-[15px] leading-relaxed">
+                <T id="services-crisis-communications.t37">
                 The best crisis response begins well before the crisis occurs.
                 We work with organisations to develop crisis communications
                 plans, conduct vulnerability assessments that identify the
@@ -433,42 +507,54 @@ export default function CrisisCommunicationsPage() {
                 crisis simulation exercises that test your people and your
                 process under pressure, and train your spokespeople to perform
                 at their best when the stakes are highest.
+                </T>
               </p>
               <p className="text-charcoal text-[15px] leading-relaxed mt-4">
+                <T id="services-crisis-communications.t38">
                 Organisations whose people are emotionally prepared and have a
                 tested crisis plan respond faster, with greater discipline, and
                 with measurably better outcomes than those without one. This is
                 not an opinion. It is documented consistently across every major
                 crisis communications study and played out in real-life
                 situations.
+                </T>
               </p>
             </div>
 
             <div>
               <h3 className="font-heading font-black text-navy text-xl mb-3">
+                <T id="services-crisis-communications.t39">
                 Active crisis response, when it is happening now
+                </T>
               </h3>
               <p className="text-charcoal text-[15px] leading-relaxed">
+                <T id="services-crisis-communications.t40">
                 When a crisis is live, CRC Public Relations provides immediate
                 counsel that brings order to a chaotic situation. We join your
                 crisis team, establish media protocols, prepare spokespeople,
                 coordinate communications across stakeholder groups, manage
                 media enquiries, and provide the strategic direction that keeps
                 your organisation ahead of the story.
+                </T>
               </p>
               <p className="text-charcoal text-[15px] leading-relaxed mt-4">
+                <T id="services-crisis-communications.t41">
                 We are available 24 hours a day, seven days a week. We do not
                 pass crisis calls to juniors. Your situation is managed by
                 advisers with the experience and judgment to make difficult
                 calls under pressure.
+                </T>
               </p>
             </div>
 
             <div>
               <h3 className="font-heading font-black text-navy text-xl mb-3">
+                <T id="services-crisis-communications.t42">
                 Post-crisis recovery, rebuilding what matters
+                </T>
               </h3>
               <p className="text-charcoal text-[15px] leading-relaxed">
+                <T id="services-crisis-communications.t43">
                 The crisis itself is rarely the whole story. How an organisation
                 is perceived after a crisis, whether it is seen as having handled
                 itself with integrity, transparency, and accountability, shapes
@@ -476,6 +562,7 @@ export default function CrisisCommunicationsPage() {
                 strategy that rebuilds stakeholder trust, addresses the narrative
                 established during the event, and positions your organisation
                 for long-term recovery.
+                </T>
               </p>
             </div>
           </div>
@@ -484,19 +571,25 @@ export default function CrisisCommunicationsPage() {
           <div className="max-w-3xl mx-auto mt-16">
             <div className="bg-white border-2 border-brand-gold rounded-lg p-6">
               <h3 className="font-heading font-black text-navy text-xl mb-3">
+                <T id="services-crisis-communications.t44">
                 Facing a crisis right now?
+                </T>
               </h3>
               <p className="text-charcoal text-[15px] leading-relaxed mb-6">
+                <T id="services-crisis-communications.t45">
                 Call us directly, available 7
                 days. Every call is treated with absolute confidentiality. You
                 will speak to a CRC Public Relations adviser, not a
                 receptionist.
+                </T>
               </p>
               <a
                 href="tel:1300182186"
                 className="block w-full text-center bg-brand-gold text-navy font-heading font-black text-xs rounded-[4px] px-8 py-4 hover:bg-gold-light transition"
               >
+                <T id="services-crisis-communications.t46">
                 Call 1300 182 186 now
+                </T>
               </a>
             </div>
           </div>
@@ -513,7 +606,7 @@ export default function CrisisCommunicationsPage() {
         ]}
       />
 
-      <FAQSection
+      <FAQSection copyId="services-crisis-communications"
         items={faqs}
         titleText="Common questions about crisis communications support"
         columns={3}

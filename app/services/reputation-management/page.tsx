@@ -7,6 +7,7 @@ import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
 import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
 import { PageProofStrip } from "@/components/shared/PageProofStrip";
 import { ReputationAssessment } from "@/components/shared/ReputationAssessment";
+import { T } from "@/components/editable";
 
 export const metadata: Metadata = {
   title:
@@ -119,25 +120,34 @@ Your reputation is at the core of our communications strategies. This includes u
           >
             <div className="max-w-3xl lg:max-w-none">
               <p className="text-brand-gold text-xs font-medium mb-4">
+                <T id="services-reputation-management.t1">
                 Reputation reality
+                </T>
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                <T id="services-reputation-management.t2">
                 Reputation damage usually starts long before the headline.
+                </T>
               </h2>
               <div className="space-y-6">
                 <p className="text-charcoal text-base leading-relaxed">
+                  <T id="services-reputation-management.t3">
                   There isn&apos;t a year that passes without a major company
                   receiving hostile media coverage that brings with it major
                   ramifications, costs, revenue losses and severe ongoing
                   reputational damage. But while we hear about the high profile
                   companies, there are countless others also battling their own
                   issues because of a loss of trust by their stakeholders.
+                  </T>
                 </p>
                 <p className="text-charcoal text-base leading-relaxed">
+                  <T id="services-reputation-management.t4">
                   What will surprise many, is that in most cases, these issues
                   or crises could have been completely avoided.
+                  </T>
                 </p>
                 <p className="text-charcoal text-base leading-relaxed">
+                  <T id="services-reputation-management.t5">
                   Reputation damage is almost always predictable in hindsight.
                   Usually the reason for the issue can be traced back to one
                   point: a wrong decision, a missed vulnerability, an oversight,
@@ -145,44 +155,61 @@ Your reputation is at the core of our communications strategies. This includes u
                   was ignored, a regulatory relationship that was allowed to
                   deteriorate, an internal policy that was never communicated
                   clearly, a media enquiry that wasn&apos;t handled correctly.
+                  </T>
                 </p>
                 <p className="text-charcoal text-base leading-relaxed">
+                  <T id="services-reputation-management.t6">
                   We work with you to identify these vulnerabilities before
                   they become headlines, and to build the communications
                   frameworks and stakeholder relationships that protect your
                   reputation over the long term.
+                  </T>
                 </p>
               </div>
               <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8 mt-8">
                 <p className="text-brand-teal text-xs font-medium mb-5">
+                  <T id="services-reputation-management.t7">
                   Early warning signs
+                  </T>
                 </p>
                 <div className="space-y-4">
                   <div className="border-l-[3px] border-brand-gold pl-4">
                     <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      <T id="services-reputation-management.t8">
                       Stakeholder frustration is building
+                      </T>
                     </p>
                     <p className="text-charcoal-mid text-sm leading-relaxed">
+                      <T id="services-reputation-management.t9">
                       Complaints become more organised, more public, and harder to
                       contain.
+                      </T>
                     </p>
                   </div>
                   <div className="border-l-[3px] border-brand-gold pl-4">
                     <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      <T id="services-reputation-management.t10">
                       Media interest is changing shape
+                      </T>
                     </p>
                     <p className="text-charcoal-mid text-sm leading-relaxed">
+                      <T id="services-reputation-management.t11">
                       Journalists move from isolated enquiries to pattern
                       recognition and sustained scrutiny.
+                      </T>
                     </p>
                   </div>
                   <div className="border-l-[3px] border-brand-gold pl-4">
                     <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      <T id="services-reputation-management.t12">
                       Leadership confidence is slipping
+                      </T>
                     </p>
                     <p className="text-charcoal-mid text-sm leading-relaxed">
+                      <T id="services-reputation-management.t13">
                       Teams know a risk exists, but no one has yet aligned the
                       messages, relationships, and response plan around it.
+                      </T>
                     </p>
                   </div>
                 </div>
@@ -195,7 +222,9 @@ Your reputation is at the core of our communications strategies. This includes u
       <section className="bg-off-white py-20">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="font-heading font-black text-navy text-3xl mb-6">
+            <T id="services-reputation-management.t14">
             What reputation pressure looks like before it becomes public
+            </T>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
             {[
@@ -221,56 +250,78 @@ Your reputation is at the core of our communications strategies. This includes u
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] gap-10 items-start">
             <div className="lg:sticky lg:top-24">
               <p className="text-brand-gold text-xs font-medium mb-4">
+                <T id="services-reputation-management.t15">
                 Start here
+                </T>
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                <T id="services-reputation-management.t16">
                 Find out where your organisation is exposed
+                </T>
               </h2>
               <div className="space-y-6">
                 <p className="text-charcoal text-base leading-relaxed">
+                  <T id="services-reputation-management.t17">
                   Our Reputation Vulnerability Assessment evaluates your
                   organisation across five risk areas: media readiness, crisis
                   preparedness, stakeholder trust, digital exposure, and
                   governance. It is designed to give leadership a faster,
                   clearer view of where the next trust problem is most likely to
                   emerge.
+                  </T>
                 </p>
                 <p className="text-charcoal text-base leading-relaxed">
+                  <T id="services-reputation-management.t18">
                   This is the same framework we use in professional engagements,
                   distilled into a practical self-assessment you can complete
                   now.
+                  </T>
                 </p>
               </div>
 
               <div className="mt-8 rounded-lg border border-brand-border bg-off-white p-6">
                 <p className="text-brand-teal text-xs font-medium mb-4">
+                  <T id="services-reputation-management.t19">
                   What you get
+                  </T>
                 </p>
                 <div className="space-y-4">
                   <div className="border-l-[3px] border-brand-gold pl-4">
                     <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      <T id="services-reputation-management.t20">
                       20 questions
+                      </T>
                     </p>
                     <p className="text-charcoal-mid text-sm leading-relaxed">
+                      <T id="services-reputation-management.t21">
                       A fast, practical assessment designed for leadership teams.
+                      </T>
                     </p>
                   </div>
                   <div className="border-l-[3px] border-brand-gold pl-4">
                     <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      <T id="services-reputation-management.t22">
                       5 risk areas
+                      </T>
                     </p>
                     <p className="text-charcoal-mid text-sm leading-relaxed">
+                      <T id="services-reputation-management.t23">
                       Media readiness, crisis preparedness, stakeholder trust,
                       digital exposure, and governance.
+                      </T>
                     </p>
                   </div>
                   <div className="border-l-[3px] border-brand-gold pl-4">
                     <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      <T id="services-reputation-management.t24">
                       Clear next-step view
+                      </T>
                     </p>
                     <p className="text-charcoal-mid text-sm leading-relaxed">
+                      <T id="services-reputation-management.t25">
                       A quicker read on where reputation pressure is most likely
                       to emerge.
+                      </T>
                     </p>
                   </div>
                 </div>
@@ -288,21 +339,29 @@ Your reputation is at the core of our communications strategies. This includes u
         <div className="max-w-7xl mx-auto px-6">
           <div className="bg-navy rounded-lg p-8">
             <p className="text-brand-gold text-xs font-medium mb-3">
+              <T id="services-reputation-management.t26">
               Next step
+              </T>
             </p>
             <h3 className="font-heading font-black text-white text-2xl mb-3">
+              <T id="services-reputation-management.t27">
               Want to discuss your results?
+              </T>
             </h3>
             <p className="text-white/70 text-base mb-6">
+              <T id="services-reputation-management.t28">
               Once you have completed the assessment, our advisers can walk you
               through your score and what it means for your organisation in a
               private, no-obligation conversation.
+              </T>
             </p>
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs px-6 py-3 rounded-[4px] hover:bg-gold-light transition"
             >
+              <T id="services-reputation-management.t29">
               Book a consultation →
+              </T>
             </Link>
           </div>
         </div>
@@ -313,15 +372,21 @@ Your reputation is at the core of our communications strategies. This includes u
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl mb-12">
             <p className="text-brand-gold text-xs font-medium mb-4">
+              <T id="services-reputation-management.t30">
               Reputation framework
+              </T>
             </p>
             <h2 className="font-heading font-black text-navy text-3xl md:text-4xl mb-6 leading-tight">
+              <T id="services-reputation-management.t31">
               How CRC Public Relations approaches reputation management
+              </T>
             </h2>
             <p className="text-charcoal text-base leading-relaxed">
+              <T id="services-reputation-management.t32">
               Reputation management works best when leadership can see risk
               clearly, interpret signals early, and act through a disciplined
               communications framework rather than ad hoc reaction.
+              </T>
             </p>
           </div>
 
@@ -370,34 +435,46 @@ Your reputation is at the core of our communications strategies. This includes u
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl mb-10">
             <p className="text-brand-gold text-xs font-medium mb-4">
+              <T id="services-reputation-management.t33">
               Long-term discipline
+              </T>
             </p>
             <h2 className="font-heading font-black text-navy text-3xl md:text-4xl mb-6 leading-tight">
+              <T id="services-reputation-management.t34">
               Why most reputation management fails, and what to do differently
+              </T>
             </h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="rounded-lg border border-brand-border bg-off-white p-7 md:p-8">
               <p className="text-brand-teal text-xs font-medium mb-4">
+                <T id="services-reputation-management.t35">
                 What usually goes wrong
+                </T>
               </p>
               <div className="space-y-6">
                 <p className="text-charcoal text-base leading-relaxed">
+                  <T id="services-reputation-management.t36">
                   Most organisations approach reputation management as a
                   reactive discipline. They invest in communications capability
                   when something goes wrong and reduce that investment when
                   things are going well. The result is a cycle of crisis,
                   recovery, and complacency that leaves the organisation
                   permanently vulnerable.
+                  </T>
                 </p>
                 <div className="rounded-lg border border-brand-border bg-white p-5">
                   <p className="font-sans font-semibold text-navy text-sm mb-2">
+                    <T id="services-reputation-management.t37">
                     Reactive cycle
+                    </T>
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
+                    <T id="services-reputation-management.t38">
                     Crisis, recovery, and complacency repeats because the
                     underlying vulnerabilities are never managed systematically.
+                    </T>
                   </p>
                 </div>
               </div>
@@ -405,39 +482,55 @@ Your reputation is at the core of our communications strategies. This includes u
 
             <div className="rounded-lg border border-brand-border bg-white p-7 md:p-8 shadow-sm shadow-navy/5">
               <p className="text-brand-teal text-xs font-medium mb-4">
+                <T id="services-reputation-management.t39">
                 What stronger organisations do
+                </T>
               </p>
               <div className="space-y-6">
                 <p className="text-text-body text-base leading-relaxed">
+                  <T id="services-reputation-management.t40">
                   CRC Public Relations works as a long-term reputation partner
                   for organisations that have made this decision. While you can
                   call us when something goes wrong, the better option is to
                   retain us now, so that when something does go wrong (and it
                   will at some stage), you are already prepared.
+                  </T>
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   <div className="rounded-lg border border-brand-border bg-warm-white p-4">
                     <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      <T id="services-reputation-management.t41">
                       Ongoing assessment
+                      </T>
                     </p>
                     <p className="text-text-body text-xs leading-relaxed">
+                      <T id="services-reputation-management.t42">
                       Risks are reviewed before they become events.
+                      </T>
                     </p>
                   </div>
                   <div className="rounded-lg border border-brand-border bg-warm-white p-4">
                     <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      <T id="services-reputation-management.t43">
                       Prepared leadership
+                      </T>
                     </p>
                     <p className="text-text-body text-xs leading-relaxed">
+                      <T id="services-reputation-management.t44">
                       Plans, messages, and advisers are already in place.
+                      </T>
                     </p>
                   </div>
                   <div className="rounded-lg border border-brand-border bg-warm-white p-4">
                     <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      <T id="services-reputation-management.t45">
                       Deliberate trust-building
+                      </T>
                     </p>
                     <p className="text-text-body text-xs leading-relaxed">
+                      <T id="services-reputation-management.t46">
                       Reputation is managed as a standing leadership function.
+                      </T>
                     </p>
                   </div>
                 </div>
@@ -451,16 +544,18 @@ Your reputation is at the core of our communications strategies. This includes u
       <section className="bg-off-white py-16">
         <div className="max-w-7xl mx-auto px-6">
           <h3 className="font-heading font-black text-navy text-lg mb-4">
+            <T id="services-reputation-management.t47">
             Related sectors
+            </T>
           </h3>
           <div className="flex flex-wrap gap-3">
-            {sectorLinks.map((link) => (
+            {sectorLinks.map((link, __ti) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className="bg-white border border-brand-border rounded-[4px] px-3 py-1 text-sm text-charcoal-mid hover:text-link-teal hover:border-link-teal transition"
               >
-                {link.label}
+                <T id={`services-reputation-management.sectorLinks.${__ti}.label`}>{link.label}</T>
               </Link>
             ))}
           </div>
@@ -478,7 +573,7 @@ Your reputation is at the core of our communications strategies. This includes u
         defaultMessage="We would like confidential advice on our organisation's reputation risk and next steps."
       />
 
-      <FAQSection
+      <FAQSection copyId="services-reputation-management"
         items={faqs}
         titleText="Common questions about reputation management"
         expandable={false}

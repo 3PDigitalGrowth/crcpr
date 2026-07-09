@@ -10,6 +10,7 @@ import {
   type PacificCaseStudy,
 } from "@/components/shared/PacificCaseStudies";
 import { PacificFootprintMap } from "@/components/pacific/PacificFootprintMap";
+import { T } from "@/components/editable";
 
 export const metadata: Metadata = {
   title: "Pacific Communications & PR Advisory | CRC Public Relations",
@@ -172,77 +173,105 @@ export default function PacificPage() {
           >
             <div className="max-w-3xl lg:max-w-none">
               <p className="text-brand-gold text-xs font-medium mb-4">
+                <T id="pacific.t1">
                 Pacific context
+                </T>
               </p>
               <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+                <T id="pacific.t2">
                 The Pacific is not one communications market. It is a region of
                 distinct political, cultural, and media realities.
+                </T>
               </h2>
               <div className="space-y-6">
                 <p className="text-charcoal text-[15px] leading-relaxed">
+                  <T id="pacific.t3">
                   The Pacific region is made up of many nations, each with its
                   own people, culture, customs and history. It is a wonderfully
                   colourful region, and exceptionally important to the world in
                   the current geopolitical environment.
+                  </T>
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
+                  <T id="pacific.t4">
                   Each Pacific government is unique, but has a common goal to
                   meet the needs of its people. We help governments communicate
                   more effectively to the people of their nation, while also
                   elevating their international voice to help them build the
                   trust required to achieve national objectives.
+                  </T>
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
+                  <T id="pacific.t5">
                   We also assist companies that deal across the region, those
                   who are based in the region and others who interact through
                   business, trade, development, or the not-for-profit sector.
+                  </T>
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
+                  <T id="pacific.t6">
                   Our Pacific advisory work is built on 15 years of direct
                   engagement with Pacific Island governments, development
                   partners, regional organisations, private sector clients, and
                   media operating across the Pacific. We have worked in the
                   region long enough to understand what genuine cultural
                   sensitivity and relationship-based counsel means in practice.
+                  </T>
                 </p>
                 <p className="text-charcoal text-[15px] leading-relaxed">
+                  <T id="pacific.t7">
                   If your organisation operates within the Pacific, or is an
                   Australian or international company with Pacific operations,
                   international development organisation, Pacific government,
                   or NGO &mdash; we provide the communications and media
                   expertise the region demands.
+                  </T>
                 </p>
               </div>
               <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8 mt-8">
                 <p className="text-brand-teal text-xs font-medium mb-5">
+                  <T id="pacific.t8">
                   What serious Pacific work requires
+                  </T>
                 </p>
                 <div className="space-y-4">
                   <div className="border-l-[3px] border-brand-gold pl-4">
                     <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      <T id="pacific.t9">
                       Country-specific understanding
+                      </T>
                     </p>
                     <p className="text-charcoal-mid text-sm leading-relaxed">
+                      <T id="pacific.t10">
                       Advice must reflect an understanding of the realities of
                       each nation, and cannot be generic.
+                      </T>
                     </p>
                   </div>
                   <div className="border-l-[3px] border-brand-gold pl-4">
                     <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      <T id="pacific.t11">
                       Respect for sovereignty
+                      </T>
                     </p>
                     <p className="text-charcoal-mid text-sm leading-relaxed">
+                      <T id="pacific.t12">
                       Knowledge of the ways governments work and respect for
                       their sovereignty helps to shape trust.
+                      </T>
                     </p>
                   </div>
                   <div className="border-l-[3px] border-brand-gold pl-4">
                     <p className="font-sans font-semibold text-navy text-sm mb-1">
+                      <T id="pacific.t13">
                       Media knowledge
+                      </T>
                     </p>
                     <p className="text-charcoal-mid text-sm leading-relaxed">
+                      <T id="pacific.t14">
                       Being aware of how media outlets and journalists operate
                       in each nation creates maximum impact.
+                      </T>
                     </p>
                   </div>
                 </div>
@@ -258,37 +287,49 @@ export default function PacificPage() {
             <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_360px] gap-10 items-start">
               <div className="max-w-3xl">
                 <p className="text-brand-gold text-xs font-medium mb-4">
+                  <T id="pacific.t15">
                   The opportunities in and for the Pacific region
+                  </T>
                 </p>
                 <h2 className="font-heading font-black text-navy text-3xl md:text-4xl mb-6 leading-tight">
+                  <T id="pacific.t16">
                   The Pacific region has long been under-estimated and under-valued.
+                  </T>
                 </h2>
                 <p className="text-charcoal text-[15px] leading-relaxed font-medium mb-6">
+                  <T id="pacific.t17">
                   No longer. The issues that currently impact the world are
                   elevating the region&apos;s profile.
+                  </T>
                 </p>
                 <div className="space-y-6">
                   <p className="text-charcoal text-[15px] leading-relaxed">
+                    <T id="pacific.t18">
                     Security, trade, climate change, economic resilience,
                     foreign aid, and international partnerships are all
                     extremely important issues for every nation in the region,
                     yet their voices have been overpowered by louder voices
                     across the globe.
+                    </T>
                   </p>
                   <p className="text-charcoal text-[15px] leading-relaxed">
+                    <T id="pacific.t19">
                     CRC Public Relations is changing this by assisting Pacific
                     governments to understand the power of effective
                     communication that creates the domestic stability required
                     to govern effectively, and helps attract international
                     attention, development and financial support.
+                    </T>
                   </p>
                   <p className="text-charcoal text-[15px] leading-relaxed">
+                    <T id="pacific.t20">
                     The Pacific also provides unique opportunities for companies
                     and organisations investing, doing business and offering
                     services across the region. CRC Public Relations has worked
                     alongside many companies and organisations who grasped
                     these opportunities, resulting in benefits and growth for
                     them and the region.
+                    </T>
                   </p>
                 </div>
               </div>
@@ -296,31 +337,43 @@ export default function PacificPage() {
               <div className="grid grid-cols-1 gap-4">
                 <div className="rounded-lg bg-white border border-brand-border p-5">
                   <p className="font-sans font-semibold text-navy text-sm mb-2">
+                    <T id="pacific.t21">
                     Proactive governments
+                    </T>
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
+                    <T id="pacific.t22">
                     Pacific governments are embracing better communication
                     domestically and internationally to achieve their
                     objectives.
+                    </T>
                   </p>
                 </div>
                 <div className="rounded-lg bg-white border border-brand-border p-5">
                   <p className="font-sans font-semibold text-navy text-sm mb-2">
+                    <T id="pacific.t23">
                     Not-for-profits
+                    </T>
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
+                    <T id="pacific.t24">
                     NGOs across the Pacific do important work, yet effective
                     media engagement outside the region can increase support.
+                    </T>
                   </p>
                 </div>
                 <div className="rounded-lg bg-white border border-brand-border p-5">
                   <p className="font-sans font-semibold text-navy text-sm mb-2">
+                    <T id="pacific.t25">
                     Companies
+                    </T>
                   </p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">
+                    <T id="pacific.t26">
                     The opportunity for business across the Pacific region is
                     increased with Pacific-specific communications and media
                     strategies.
+                    </T>
                   </p>
                 </div>
               </div>
@@ -337,16 +390,22 @@ export default function PacificPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl mb-12">
             <p className="text-brand-gold text-xs font-medium mb-4">
+              <T id="pacific.t27">
               Successful outcomes
+              </T>
             </p>
             <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+              <T id="pacific.t28">
               Our Pacific experience
+              </T>
             </h2>
             <p className="text-charcoal text-[15px] leading-relaxed">
+              <T id="pacific.t29">
               While our work is confidential, here are three anonymised outcomes
               that showcase our Pacific region experience. All of these required
               both working from our Australian-based office and at times being
               onsite in various areas across the Pacific islands.
+              </T>
             </p>
           </div>
           <PacificCaseStudies items={pacificCaseStudies} />
@@ -375,18 +434,24 @@ export default function PacificPage() {
           >
             <div>
               <p className="text-brand-gold text-xs font-medium mb-3">
+                <T id="pacific.t30">
                 Trade, development, and daily life
+                </T>
               </p>
               <h2 className="font-heading font-black text-navy text-2xl md:text-3xl leading-tight mb-4">
+                <T id="pacific.t31">
                 Pacific communications sits at the intersection of tradition and
                 modern institutions.
+                </T>
               </h2>
               <p className="text-charcoal-mid text-[15px] leading-relaxed">
+                <T id="pacific.t32">
                 From ports and provincial centres to capitals and regional
                 forums, the audiences you need to influence are rarely reached
                 with a single channel or tone. Development programmes,
                 government initiatives, and private sector expansion each
                 require a focused communications strategy.
+                </T>
               </p>
             </div>
           </ImageTextRow>
@@ -399,11 +464,15 @@ export default function PacificPage() {
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_280px] gap-10 items-start">
             <div>
               <h2 className="font-heading font-black text-navy text-3xl">
+                <T id="pacific.t33">
                 Our Pacific footprint
+                </T>
               </h2>
               <p className="text-charcoal-mid text-base mt-4 max-w-2xl">
+                <T id="pacific.t34">
                 We have worked with clients, stakeholders and media across the
                 following Pacific Island nations and territories:
+                </T>
               </p>
             </div>
             <aside className="rounded-lg border border-brand-border bg-white p-6 lg:mt-2">
@@ -411,11 +480,15 @@ export default function PacificPage() {
                 17
               </p>
               <p className="text-navy font-sans font-semibold text-sm mt-2">
+                <T id="pacific.t35">
                 nations &amp; territories
+                </T>
               </p>
               <p className="text-charcoal-mid text-sm leading-relaxed mt-3">
+                <T id="pacific.t36">
                 Spanning Micronesia, Melanesia and Polynesia &mdash; with New
                 Zealand as a regional anchor.
+                </T>
               </p>
             </aside>
           </div>
@@ -430,15 +503,20 @@ export default function PacificPage() {
       <section className="bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="font-heading font-black text-navy text-3xl mb-12">
+            <T id="pacific.t37">
             Pacific communications services
+            </T>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-off-white border-l-[3px] border-brand-gold rounded-lg p-8">
               <h3 className="font-heading font-black text-navy text-xl mb-4">
+                <T id="pacific.t38">
                 Development communications
+                </T>
               </h3>
               <p className="text-charcoal text-[15px] leading-relaxed">
+                <T id="pacific.t39">
                 Australia, New Zealand, and international development partners
                 invest significantly in Pacific development programmes in
                 health, infrastructure, governance, and climate adaptation.
@@ -446,40 +524,52 @@ export default function PacificPage() {
                 relationships with government counterparts, communities, local
                 and regional media, and international stakeholders with cultural
                 precision and strategic clarity.
+                </T>
               </p>
               <p className="text-charcoal text-[15px] leading-relaxed mt-4">
+                <T id="pacific.t40">
                 We work with development organisations, NGOs, and donor agencies
                 to develop communications strategies that are culturally
                 appropriate, politically navigable, and effective in building
                 the community understanding and support that development
                 programmes require to succeed.
+                </T>
               </p>
             </div>
 
             <div className="bg-off-white border-l-[3px] border-brand-gold rounded-lg p-8">
               <h3 className="font-heading font-black text-navy text-xl mb-4">
+                <T id="pacific.t41">
                 Cross-cultural stakeholder engagement
+                </T>
               </h3>
               <p className="text-charcoal text-[15px] leading-relaxed">
+                <T id="pacific.t42">
                 In Pacific contexts, stakeholder engagement is not only about
                 communications, but relationships. In many areas, there is
                 shared responsibility and leadership between government,
                 community, traditional, and church leaders, and this must be
                 considered.
+                </T>
               </p>
               <p className="text-charcoal text-[15px] leading-relaxed mt-4">
+                <T id="pacific.t43">
                 When required, we harness the knowledge and understanding of
                 governments and other stakeholders in each country and local
                 community to ensure that messaging respects cultures and
                 protocols.
+                </T>
               </p>
             </div>
 
             <div className="bg-off-white border-l-[3px] border-brand-gold rounded-lg p-8">
               <h3 className="font-heading font-black text-navy text-xl mb-4">
+                <T id="pacific.t44">
                 Pacific crisis communications
+                </T>
               </h3>
               <p className="text-charcoal text-[15px] leading-relaxed">
+                <T id="pacific.t45">
                 Crisis communications in Pacific Island nations presents
                 challenges that do not exist in Australian or many other
                 international contexts. These include geography, scattered
@@ -488,13 +578,16 @@ export default function PacificPage() {
                 actions. There are also specific reputational risks for foreign
                 organisations that are perceived as having handled an incident
                 without cultural respect.
+                </T>
               </p>
               <p className="text-charcoal text-[15px] leading-relaxed mt-4">
+                <T id="pacific.t46">
                 We provide crisis communications counsel for organisations
                 operating in the Pacific, drawing on our direct knowledge of the
                 region&apos;s media environments, stakeholder landscapes, and
                 cultural expectations to develop responses that protect both
                 reputation and relationships.
+                </T>
               </p>
             </div>
           </div>
@@ -505,33 +598,41 @@ export default function PacificPage() {
       <section className="bg-off-white py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-6">
           <h2 className="font-heading font-black text-navy text-3xl mb-6">
+            <T id="pacific.t47">
             Communications that understands Pacific culture is not optional. It
             is essential.
+            </T>
           </h2>
           <p className="text-charcoal text-[15px] leading-relaxed">
+            <T id="pacific.t48">
             The Pacific region has a long history of external organisations
             &mdash; government, commercial, and philanthropic &mdash; arriving
             with good intentions and communications approaches designed for
             other contexts. The results have often been, at best, ineffective.
             At worst, they have damaged relationships and trust.
+            </T>
           </p>
           <p className="text-charcoal text-[15px] leading-relaxed mt-6">
+            <T id="pacific.t49">
             We approach Pacific communications with the same values that guide
             all of our work: that the most effective communications is always
             built on a genuine understanding of your audience. In Pacific
             contexts, this means respecting the sovereignty of Pacific nations
             and their intimate knowledge and understanding on their own region.
+            </T>
           </p>
           <p className="text-charcoal text-[15px] leading-relaxed mt-6">
+            <T id="pacific.t50">
             We do not offer a &apos;Pacific communications package.&apos; We
             offer the same specialist counsel, adapted to the specific
             cultural and political environment of the nation, community, and
             issue you are working in.
+            </T>
           </p>
         </div>
       </section>
 
-      <FAQSection
+      <FAQSection copyId="pacific"
         items={faqs}
         titleText="Common questions about Pacific advisory work"
         expandable={false}

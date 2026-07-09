@@ -3,43 +3,29 @@ import path from "path";
 import matter from "gray-matter";
 import type { InsightPost, InsightFrontmatter } from "@/types";
 
-/**
- * Insights come from two places. CMS-authored articles (pulled from Sanity at
- * build time into content/cms/insights) win over the static repo files in
- * content/insights when slugs collide.
- */
-const CONTENT_DIRS = [
-  path.join(process.cwd(), "content", "cms", "insights"),
-  path.join(process.cwd(), "content", "insights"),
-];
+const CONTENT_DIR = path.join(process.cwd(), "content", "insights");
 
 export function getInsightSlugs(): string[] {
-  const slugs = new Set<string>();
-  for (const dir of CONTENT_DIRS) {
-    if (!fs.existsSync(dir)) continue;
-    for (const file of fs.readdirSync(dir)) {
-      if (file.endsWith(".mdx")) slugs.add(file.replace(/\.mdx$/, ""));
-    }
-  }
-  return Array.from(slugs);
+  if (!fs.existsSync(CONTENT_DIR)) return [];
+  return fs
+    .readdirSync(CONTENT_DIR)
+    .filter((file) => file.endsWith(".mdx"))
+    .map((file) => file.replace(/\.mdx$/, ""));
 }
 
 export function getInsightBySlug(slug: string): InsightPost | null {
-  for (const dir of CONTENT_DIRS) {
-    const filePath = path.join(dir, `${slug}.mdx`);
-    if (!fs.existsSync(filePath)) continue;
+  const filePath = path.join(CONTENT_DIR, `${slug}.mdx`);
+  if (!fs.existsSync(filePath)) return null;
 
-    const raw = fs.readFileSync(filePath, "utf-8");
-    const { data, content } = matter(raw);
-    const frontmatter = data as InsightFrontmatter;
+  const raw = fs.readFileSync(filePath, "utf-8");
+  const { data, content } = matter(raw);
+  const frontmatter = data as InsightFrontmatter;
 
-    return {
-      slug,
-      content,
-      ...frontmatter,
-    };
-  }
-  return null;
+  return {
+    slug,
+    content,
+    ...frontmatter,
+  };
 }
 
 export function getAllInsights(): InsightPost[] {

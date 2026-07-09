@@ -1,10 +1,10 @@
 import cmsOverrides from "@/content/cms/site.json";
 
 /**
- * Static defaults for all site content. The CMS (Sanity) overrides these at
- * build time: scripts/pull-cms.mjs writes content/cms/site.json during
- * prebuild, and siteConfig below deep-merges it over these defaults. An empty
- * site.json ({}) means the site renders exactly this file.
+ * Static defaults for all site content. The /admin content editor commits
+ * overrides to content/cms/site.json, and siteConfig below deep-merges that
+ * file over these defaults at build time. An empty site.json ({}) means the
+ * site renders exactly this file.
  */
 export const siteDefaults = {
   phone: {
@@ -380,7 +380,7 @@ function isPlainObject(value: unknown): value is PlainObject {
  * undefined CMS values are ignored so a half-filled CMS document can never
  * blank out content.
  */
-function mergeOverrides(defaults: unknown, overrides: unknown): unknown {
+export function mergeOverrides(defaults: unknown, overrides: unknown): unknown {
   if (overrides === null || overrides === undefined) return defaults;
   if (isPlainObject(defaults) && isPlainObject(overrides)) {
     const result: PlainObject = { ...defaults };

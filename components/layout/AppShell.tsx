@@ -8,14 +8,14 @@ import { DesktopStickyBar } from "@/components/layout/DesktopStickyBar";
 import { ScrollToTop } from "@/components/layout/ScrollToTop";
 
 /**
- * Wraps every page in the site chrome, except the embedded Sanity Studio at
- * /studio which needs the full viewport to itself.
+ * Wraps every page in the site chrome, except the content editor at /admin
+ * which has its own shell.
  */
 export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const isStudio = pathname?.startsWith("/studio");
+  const isBare = pathname?.startsWith("/admin");
 
-  if (isStudio) {
+  if (isBare) {
     return <>{children}</>;
   }
 

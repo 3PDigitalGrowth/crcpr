@@ -1,4 +1,5 @@
 import matter from "gray-matter";
+import { compileMDX } from "next-mdx-remote/rsc";
 import { siteDefaults, mergeOverrides } from "@/config/site";
 import {
   getRepoFile,
@@ -289,7 +290,6 @@ export function slugify(title: string): string {
  */
 async function assertMdxCompiles(body: string): Promise<void> {
   try {
-    const { compileMDX } = await import("next-mdx-remote/rsc");
     await compileMDX({ source: body });
   } catch (err) {
     const detail = err instanceof Error ? err.message : String(err);

@@ -1,4 +1,12 @@
-export const siteConfig = {
+import cmsOverrides from "@/content/cms/site.json";
+
+/**
+ * Static defaults for all site content. The CMS (Sanity) overrides these at
+ * build time: scripts/pull-cms.mjs writes content/cms/site.json during
+ * prebuild, and siteConfig below deep-merges it over these defaults. An empty
+ * site.json ({}) means the site renders exactly this file.
+ */
+export const siteDefaults = {
   phone: {
     display: "1300 182 186",
     href: "tel:1300182186",
@@ -355,3 +363,36 @@ export const siteConfig = {
     },
   ],
 } as const;
+
+type PlainObject = Record<string, unknown>;
+
+function isPlainObject(value: unknown): value is PlainObject {
+  return (
+    typeof value === "object" &&
+    value !== null &&
+    !Array.isArray(value)
+  );
+}
+
+/**
+ * Merges CMS overrides over the static defaults. Objects merge recursively;
+ * arrays and primitives from the CMS replace the default wholesale. Null and
+ * undefined CMS values are ignored so a half-filled CMS document can never
+ * blank out content.
+ */
+function mergeOverrides(defaults: unknown, overrides: unknown): unknown {
+  if (overrides === null || overrides === undefined) return defaults;
+  if (isPlainObject(defaults) && isPlainObject(overrides)) {
+    const result: PlainObject = { ...defaults };
+    for (const key of Object.keys(overrides)) {
+      result[key] = mergeOverrides(defaults[key], overrides[key]);
+    }
+    return result;
+  }
+  return overrides;
+}
+
+export const siteConfig = mergeOverrides(
+  siteDefaults,
+  cmsOverrides
+) as typeof siteDefaults;

@@ -159,7 +159,8 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-white/10 flex justify-between items-center flex-wrap gap-4">
           <p className="text-xs text-white/30">
-            © {siteConfig.copyrightYear} CRC Public Relations. All rights reserved.
+            © {siteConfig.copyrightYear} CRC Public Relations. All rights reserved.{" "}
+            <a href="https://www.3pdigital.com.au" target="_blank" rel="noopener" className="hover:text-white/50 transition-colors">Proudly supported by 3P Digital</a>
           </p>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-white/30">
             <Link href={siteConfig.privacyPolicyUrl} className="hover:text-white/50 transition-colors">

@@ -375,7 +375,7 @@ export default function AboutPage() {
                       imageAlt={member.name}
                       imageObjectClassName={
                         member.initials === "BG"
-                          ? "object-[center_12%]"
+                          ? "object-cover object-[center_12%]"
                           : undefined
                       }
                       className="relative"

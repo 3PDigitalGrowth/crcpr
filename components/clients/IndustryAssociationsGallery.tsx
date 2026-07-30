@@ -149,7 +149,7 @@ export function IndustryAssociationsGallery() {
   return (
     <div ref={containerRef} className="w-full">
       <div
-        className="relative aspect-[3/2] md:aspect-[16/9] rounded-[1.5rem] overflow-hidden border border-brand-border bg-navy shadow-md shadow-navy/10"
+        className="relative aspect-[4/3] rounded-[1.5rem] overflow-hidden border border-brand-border bg-navy shadow-md shadow-navy/10"
         role="region"
         aria-roledescription="carousel"
         aria-label="Industry association events gallery"

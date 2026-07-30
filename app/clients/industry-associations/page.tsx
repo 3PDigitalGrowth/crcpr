@@ -384,8 +384,8 @@ export default function IndustryAssociationsPage() {
           body: "Documented, impacting and consistent results achieved for national and state associations across many sectors.",
         }}
         heroImage={{
-          src: "/images/clients/industry-associations/hero-conference.png",
-          alt: "Industry association conference auditorium with attendees standing before a large stage, screens, and stage lighting",
+          src: "/images/clients/industry-associations/editorial-auditorium.png",
+          alt: "Modern conference auditorium before an event with rows of empty seats and a lectern on stage",
         }}
       />
 
@@ -402,9 +402,10 @@ export default function IndustryAssociationsPage() {
       <section className="bg-off-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <ImageTextRow
-            imageSrc="/images/clients/industry-associations/mid-stage.png"
-            imageAlt="National industry conference 'Empower Excellence' with two speakers on stage and seated delegates in the audience"
+            imageSrc="/images/clients/industry-associations/mid-lectern.webp"
+            imageAlt="Empty timber lectern with microphones under a warm spotlight on a conference stage"
             imagePosition="left"
+            aspectClass="aspect-video"
           >
             <div>
               <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-4">

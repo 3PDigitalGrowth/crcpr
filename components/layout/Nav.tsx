@@ -17,10 +17,36 @@ import {
   Monitor,
   Globe,
   FileText,
+  Landmark,
+  Building2,
+  GraduationCap,
+  UserRound,
+  HelpCircle,
+  Newspaper,
+  Mail,
+  MapPin,
+  Mic,
 } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
-type PanelKey = "services" | null;
+/*
+ * Mega navigation. Every primary item opens a glass panel with helper text
+ * and an editorial still. All helper copy is reused from existing page copy
+ * (hero descriptions, section blurbs) — nothing invented. Stills only, no
+ * video in panels: dropdown videos cost LCP/interaction budget for no CRO
+ * gain at this size.
+ */
+
+type PanelKey =
+  | "services"
+  | "crisis"
+  | "pacific"
+  | "sectors"
+  | "cases"
+  | "about"
+  | "contact"
+  | "insights"
+  | null;
 
 interface MegaItemProps {
   href: string;
@@ -43,10 +69,10 @@ function MegaItem({
     <Link
       href={href}
       onClick={onClick}
-      className="flex items-start gap-3 px-3 py-2.5 rounded hover:bg-white/[0.04] transition-colors group"
+      className="flex items-start gap-3 px-3 py-2.5 rounded-xl hover:bg-white/[0.04] transition-colors group"
     >
       <div
-        className={`w-8 h-8 rounded flex items-center justify-center flex-shrink-0 mt-0.5 ${
+        className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${
           iconTeal ? "bg-brand-teal/10" : "bg-brand-gold/10"
         }`}
       >
@@ -61,7 +87,7 @@ function MegaItem({
         <p className="text-sm font-medium text-white/85 mb-0.5 leading-tight group-hover:text-brand-gold transition-colors">
           {title}
         </p>
-        <p className="text-xs text-white/30 leading-snug">{desc}</p>
+        <p className="text-xs text-white/35 leading-snug">{desc}</p>
       </div>
     </Link>
   );
@@ -69,13 +95,58 @@ function MegaItem({
 
 function ColumnHeader({ children }: { children: React.ReactNode }) {
   return (
-    <p className="text-xs text-white/30 mb-3 font-medium">
+    <p className="mb-3 inline-flex items-center gap-2 font-sans text-[10px] font-semibold uppercase tracking-[0.24em] text-brand-gold/70">
+      <span className="h-px w-5 bg-current opacity-50" aria-hidden />
       {children}
     </p>
   );
 }
 
-function CTAColumn() {
+/* Editorial still with caption linking through to the feature page. */
+function FeatureTile({
+  href,
+  src,
+  alt,
+  caption,
+  sub,
+  onClick,
+}: {
+  href: string;
+  src: string;
+  alt: string;
+  caption: string;
+  sub: string;
+  onClick?: () => void;
+}) {
+  return (
+    <Link href={href} onClick={onClick} className="group block px-4 py-5">
+      <div className="relative aspect-[16/10] overflow-hidden rounded-[1rem] border border-white/10">
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          sizes="280px"
+          className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent" />
+      </div>
+      <p className="mt-3 font-heading text-white text-base leading-snug group-hover:text-brand-gold transition-colors">
+        {caption}
+      </p>
+      <p className="mt-1 text-xs text-white/40 leading-snug">{sub}</p>
+    </Link>
+  );
+}
+
+function CTAColumn({
+  header = "Get in touch",
+  title = "Talk to an experienced adviser",
+  body = "You reach our advisers directly. Sensitive matters are handled with professional discretion.",
+}: {
+  header?: string;
+  title?: string;
+  body?: string;
+}) {
   return (
     <div
       className="flex flex-col py-5 px-5"
@@ -84,15 +155,10 @@ function CTAColumn() {
         borderLeft: "0.5px solid rgba(201,168,76,0.12)",
       }}
     >
-      <ColumnHeader>Get in touch</ColumnHeader>
-      <p className="text-sm font-heading text-white mb-2">
-        Talk to an experienced adviser
-      </p>
-      <p className="text-xs text-white/40 leading-relaxed">
-        You reach our advisers directly. Sensitive matters are handled with
-        professional discretion.
-      </p>
-      <div className="flex-1" />
+      <ColumnHeader>{header}</ColumnHeader>
+      <p className="text-sm font-heading text-white mb-2">{title}</p>
+      <p className="text-xs text-white/40 leading-relaxed">{body}</p>
+      <div className="flex-1 min-h-4" />
       <a
         href={siteConfig.phone.href}
         className="block font-heading text-brand-gold text-xl mb-2"
@@ -115,13 +181,23 @@ function CTAColumn() {
   );
 }
 
+function PanelShell({
+  label,
+  children,
+}: {
+  label: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <div role="dialog" aria-label={label} className="max-w-7xl mx-auto px-6">
+      {children}
+    </div>
+  );
+}
+
 function ServicesPanel({ onClose }: { onClose: () => void }) {
   return (
-    <div
-      role="dialog"
-      aria-label="Services menu"
-      className="max-w-7xl mx-auto px-6"
-    >
+    <PanelShell label="Services menu">
       <div className="grid grid-cols-[1fr_1fr_1fr_220px]">
         <div className="py-5 px-4 border-r border-white/[0.06]">
           <ColumnHeader>Core services</ColumnHeader>
@@ -144,6 +220,13 @@ function ServicesPanel({ onClose }: { onClose: () => void }) {
             icon={<Shield className="w-full h-full" />}
             title="Reputation management"
             desc="Vulnerability assessments and long-term protection"
+            onClick={onClose}
+          />
+          <MegaItem
+            href="/media-training"
+            icon={<Mic className="w-full h-full" />}
+            title="Media training"
+            desc="Delivered by former television and radio journalists"
             onClick={onClose}
           />
         </div>
@@ -181,13 +264,98 @@ function ServicesPanel({ onClose }: { onClose: () => void }) {
           </Link>
         </div>
 
+        <FeatureTile
+          href="/services"
+          src="/images/services/hero-poster.jpg"
+          alt=""
+          caption="Corporate communications and PR services."
+          sub="Every engagement is led by experienced advisers who work directly with you."
+          onClick={onClose}
+        />
+
+        <CTAColumn />
+      </div>
+    </PanelShell>
+  );
+}
+
+function CrisisPanel({ onClose }: { onClose: () => void }) {
+  return (
+    <PanelShell label="Crisis menu">
+      <div className="grid grid-cols-[1fr_1fr_1fr_220px]">
         <div className="py-5 px-4 border-r border-white/[0.06]">
-          <ColumnHeader>Also from CRC Public Relations</ColumnHeader>
+          <ColumnHeader>Crisis support</ColumnHeader>
+          <MegaItem
+            href="/services/crisis-communications"
+            icon={<Zap className="w-full h-full" />}
+            title="Crisis communications"
+            desc="24/7 crisis response, planning, and simulation exercises"
+            onClick={onClose}
+          />
+          <MegaItem
+            href="/services/issues-management"
+            icon={<AlertTriangle className="w-full h-full" />}
+            title="Issues management"
+            desc="Get ahead before issues become crises"
+            onClick={onClose}
+          />
+          <MegaItem
+            href="/media-training"
+            icon={<Mic className="w-full h-full" />}
+            title="Media training"
+            desc="Spokesperson training and hostile interview preparation"
+            onClick={onClose}
+          />
+          <div className="h-px bg-white/[0.06] my-2 mx-3" />
+          <ColumnHeader>Free resources</ColumnHeader>
+          <Link
+            href="/services/crisis-communications"
+            onClick={onClose}
+            className="block px-3 py-1 text-xs text-white/55 hover:text-white/80 transition-colors"
+          >
+            &rarr; Crisis readiness checklist
+          </Link>
+          <Link
+            href="/services/reputation-management#reputation-assessment"
+            onClick={onClose}
+            className="block px-3 py-1 text-xs text-white/55 hover:text-white/80 transition-colors"
+          >
+            &rarr; Reputation assessment
+          </Link>
+        </div>
+
+        <div className="col-span-2 border-r border-white/[0.06]">
+          <FeatureTile
+            href="/services/crisis-communications"
+            src="/images/services/crisis-communications/hero-poster.jpg"
+            alt=""
+            caption="When a crisis breaks, experience is everything."
+            sub="We help you prevent, prepare for and strategically manage crises. 24/7. Confidential. Decisive."
+            onClick={onClose}
+          />
+        </div>
+
+        <CTAColumn
+          header="Facing a crisis right now?"
+          title="You will speak to an adviser, not a receptionist"
+          body="Call us directly, available 7 days. Every call is treated with absolute confidentiality."
+        />
+      </div>
+    </PanelShell>
+  );
+}
+
+function PacificPanel({ onClose }: { onClose: () => void }) {
+  return (
+    <PanelShell label="Pacific menu">
+      <div className="grid grid-cols-[1fr_1fr_1fr_220px]">
+        <div className="py-5 px-4 border-r border-white/[0.06]">
+          <ColumnHeader>Pacific advisory</ColumnHeader>
           <MegaItem
             href="/pacific"
             icon={<Globe className="w-full h-full" />}
-            title="Pacific Advisory"
-            desc="The only Australian firm with Pacific expertise"
+            title="Pacific advisory"
+            desc="Deep, sustained expertise across Pacific Island nations"
             iconTeal
             onClick={onClose}
           />
@@ -199,35 +367,286 @@ function ServicesPanel({ onClose }: { onClose: () => void }) {
             iconTeal
             onClick={onClose}
           />
+        </div>
+
+        <div className="col-span-2 border-r border-white/[0.06]">
+          <FeatureTile
+            href="/pacific"
+            src="/images/pacific/hero-poster.jpg"
+            alt=""
+            caption="The Pacific region demands communications expertise that most public relations firms don't have."
+            sub="Assisting Pacific governments and companies to communicate effectively within their nation and internationally."
+            onClick={onClose}
+          />
+        </div>
+
+        <CTAColumn title="Work with us in the Pacific" />
+      </div>
+    </PanelShell>
+  );
+}
+
+function SectorsPanel({ onClose }: { onClose: () => void }) {
+  return (
+    <PanelShell label="Sectors menu">
+      <div className="grid grid-cols-[1fr_1fr_1fr_220px]">
+        <div className="py-5 px-4 border-r border-white/[0.06]">
+          <ColumnHeader>Who we work with</ColumnHeader>
+          <MegaItem
+            href="/clients/industry-associations"
+            icon={<Users className="w-full h-full" />}
+            title="Industry associations"
+            desc="Specialist counsel for peak bodies and professional associations"
+            onClick={onClose}
+          />
+          <MegaItem
+            href="/clients/corporate"
+            icon={<Building2 className="w-full h-full" />}
+            title="Corporate"
+            desc="Direct, personal counsel for owners, directors, and executives"
+            onClick={onClose}
+          />
+        </div>
+
+        <div className="py-5 px-4 border-r border-white/[0.06]">
+          <ColumnHeader>More sectors</ColumnHeader>
+          <MegaItem
+            href="/clients/government"
+            icon={<Landmark className="w-full h-full" />}
+            title="Government"
+            desc="Counsel that understands the unique pressures of government"
+            onClick={onClose}
+          />
+          <MegaItem
+            href="/clients/schools-faith"
+            icon={<GraduationCap className="w-full h-full" />}
+            title="Schools & faith-based organisations"
+            desc="Crisis response, parent communications, and media management"
+            onClick={onClose}
+          />
           <div className="h-px bg-white/[0.06] my-2 mx-3" />
-          <ColumnHeader>Free resources</ColumnHeader>
           <Link
-            href="/services/reputation-management#reputation-assessment"
+            href="/clients"
             onClick={onClose}
-            className="block px-3 py-1 text-xs text-white/55 hover:text-white/80 transition-colors"
+            className="block px-3 text-xs text-white/40 hover:text-white/70 transition-colors"
           >
-            &rarr; Reputation assessment
+            &rarr; Deep expertise across every sector
           </Link>
-          <Link
-            href="/services/crisis-communications"
+        </div>
+
+        <FeatureTile
+          href="/clients/industry-associations"
+          src="/images/clients/industry-associations/editorial-auditorium.png"
+          alt=""
+          caption="The voice of authority for your sector."
+          sub="Positions you as the voice of authority, elevates your advocacy, and builds stakeholder and member trust."
+          onClick={onClose}
+        />
+
+        <CTAColumn />
+      </div>
+    </PanelShell>
+  );
+}
+
+function CasesPanel({ onClose }: { onClose: () => void }) {
+  return (
+    <PanelShell label="Case studies menu">
+      <div className="grid grid-cols-[1.2fr_1fr_1fr_220px]">
+        <div className="py-5 px-4 border-r border-white/[0.06]">
+          <ColumnHeader>Client outcomes</ColumnHeader>
+          {siteConfig.caseStudies.slice(0, 4).map((study) => (
+            <Link
+              key={study.id}
+              href="/case-studies"
+              onClick={onClose}
+              className="block px-3 py-2 rounded-xl hover:bg-white/[0.04] transition-colors group"
+            >
+              <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-brand-gold/70">
+                {study.sector}
+              </p>
+              <p className="text-sm font-heading text-white/90 group-hover:text-brand-gold transition-colors">
+                {study.outcome}
+              </p>
+            </Link>
+          ))}
+        </div>
+
+        <div className="col-span-2 border-r border-white/[0.06]">
+          <FeatureTile
+            href="/case-studies"
+            src="/images/case-studies/editorial-podium.png"
+            alt=""
+            caption="Results when the needs are great and the stakes are high."
+            sub="Outcomes from when policy, reputation and stakeholder pressure converge."
             onClick={onClose}
-            className="block px-3 py-1 text-xs text-white/55 hover:text-white/80 transition-colors"
-          >
-            &rarr; Crisis readiness checklist
-          </Link>
+          />
         </div>
 
         <CTAColumn />
       </div>
-    </div>
+    </PanelShell>
   );
 }
 
-function MobileDrawer({
-  onClose,
-}: {
-  onClose: () => void;
-}) {
+function AboutPanel({ onClose }: { onClose: () => void }) {
+  return (
+    <PanelShell label="About menu">
+      <div className="grid grid-cols-[1fr_1fr_1fr_220px]">
+        <div className="py-5 px-4 border-r border-white/[0.06]">
+          <ColumnHeader>The firm</ColumnHeader>
+          <MegaItem
+            href="/about"
+            icon={<Users className="w-full h-full" />}
+            title="About CRC Public Relations"
+            desc="Boutique corporate PR firm trusted by CEOs, directors, and executives"
+            onClick={onClose}
+          />
+          <MegaItem
+            href="/about/lyall-mercer"
+            icon={<UserRound className="w-full h-full" />}
+            title="Lyall Mercer"
+            desc="Co-founder, former journalist and trusted crisis adviser"
+            onClick={onClose}
+          />
+          <MegaItem
+            href="/faq"
+            icon={<HelpCircle className="w-full h-full" />}
+            title="Frequently asked questions"
+            desc="Straight answers about how CRC Public Relations works"
+            onClick={onClose}
+          />
+        </div>
+
+        <div className="col-span-2 border-r border-white/[0.06]">
+          <FeatureTile
+            href="/about"
+            src="/images/about/editorial-advisory-chairs.png"
+            alt=""
+            caption="You deal directly with an experienced adviser, not an account manager."
+            sub="It is a partnership, and it makes a huge difference to outcomes."
+            onClick={onClose}
+          />
+        </div>
+
+        <CTAColumn />
+      </div>
+    </PanelShell>
+  );
+}
+
+function ContactPanel({ onClose }: { onClose: () => void }) {
+  const { street, city, state, postcode } = siteConfig.address;
+  return (
+    <PanelShell label="Contact menu">
+      <div className="grid grid-cols-[1fr_1fr_1fr_220px]">
+        <div className="py-5 px-4 border-r border-white/[0.06]">
+          <ColumnHeader>Reach us</ColumnHeader>
+          <a
+            href={siteConfig.phone.href}
+            className="flex items-start gap-3 px-3 py-2.5 rounded-xl hover:bg-white/[0.04] transition-colors group"
+          >
+            <div className="w-8 h-8 rounded-full bg-brand-gold/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <Phone className="w-4 h-4 text-brand-gold" />
+            </div>
+            <div>
+              <p className="text-sm font-medium text-white/85 group-hover:text-brand-gold transition-colors">
+                {siteConfig.phone.display}
+              </p>
+              <p className="text-xs text-white/35">24/7 confidential crisis line</p>
+            </div>
+          </a>
+          <a
+            href={`mailto:${siteConfig.email.general}`}
+            className="flex items-start gap-3 px-3 py-2.5 rounded-xl hover:bg-white/[0.04] transition-colors group"
+          >
+            <div className="w-8 h-8 rounded-full bg-brand-gold/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <Mail className="w-4 h-4 text-brand-gold" />
+            </div>
+            <div>
+              <p className="text-sm font-medium text-white/85 group-hover:text-brand-gold transition-colors">
+                {siteConfig.email.general}
+              </p>
+              <p className="text-xs text-white/35">We will respond promptly</p>
+            </div>
+          </a>
+          <div className="flex items-start gap-3 px-3 py-2.5">
+            <div className="w-8 h-8 rounded-full bg-brand-gold/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <MapPin className="w-4 h-4 text-brand-gold" />
+            </div>
+            <p className="text-xs text-white/45 leading-relaxed">
+              {street}
+              <br />
+              {city} {state} {postcode}
+            </p>
+          </div>
+        </div>
+
+        <div className="col-span-2 border-r border-white/[0.06]">
+          <FeatureTile
+            href="/contact"
+            src="/images/contact/editorial-desk.png"
+            alt=""
+            caption="Let's discuss your needs."
+            sub="Every conversation with CRC Public Relations begins with listening."
+            onClick={onClose}
+          />
+        </div>
+
+        <CTAColumn header="Next step" />
+      </div>
+    </PanelShell>
+  );
+}
+
+function InsightsPanel({ onClose }: { onClose: () => void }) {
+  return (
+    <PanelShell label="Insights menu">
+      <div className="grid grid-cols-[1.2fr_1fr_1fr_220px]">
+        <div className="py-5 px-4 border-r border-white/[0.06]">
+          <ColumnHeader>Latest thinking</ColumnHeader>
+          <MegaItem
+            href="/insights/the-15-minutes-principle"
+            icon={<Newspaper className="w-full h-full" />}
+            title="The 15 minutes principle"
+            desc="Why your first response defines everything"
+            onClick={onClose}
+          />
+          <MegaItem
+            href="/insights/what-your-board-needs-to-know-about-reputation-risk"
+            icon={<Shield className="w-full h-full" />}
+            title="What your board needs to know about reputation risk"
+            desc="From Lyall Mercer and the CRC Public Relations team"
+            onClick={onClose}
+          />
+          <div className="h-px bg-white/[0.06] my-2 mx-3" />
+          <Link
+            href="/insights"
+            onClick={onClose}
+            className="block px-3 text-xs text-white/40 hover:text-white/70 transition-colors"
+          >
+            &rarr; All insights
+          </Link>
+        </div>
+
+        <div className="col-span-2 border-r border-white/[0.06]">
+          <FeatureTile
+            href="/insights"
+            src="/images/insights/editorial-broadsheets.png"
+            alt=""
+            caption="Insights. Commentary. Crisis thinking."
+            sub="From Lyall Mercer and the CRC Public Relations team."
+            onClick={onClose}
+          />
+        </div>
+
+        <CTAColumn />
+      </div>
+    </PanelShell>
+  );
+}
+
+function MobileDrawer({ onClose }: { onClose: () => void }) {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
@@ -268,6 +687,7 @@ function MobileDrawer({
               },
               { label: "Issues management", href: "/services/issues-management" },
               { label: "Digital media", href: "/services/digital-media" },
+              { label: "Media training", href: "/media-training" },
             ].map((item) => (
               <Link
                 key={item.href}
@@ -322,15 +742,40 @@ function MobileDrawer({
   );
 }
 
-const directLinks = [
-  { label: "Crisis", href: "/services/crisis-communications" },
-  { label: "Pacific", href: "/pacific" },
-  { label: "Industry Associations", href: "/clients/industry-associations" },
-  { label: "Case studies", href: "/case-studies" },
-  { label: "About", href: "/about" },
-  { label: "Contact", href: "/contact" },
-  { label: "Insights", href: "/insights" },
+/* Primary items: every one is a real link (click navigates) that also opens
+   a mega panel on hover/focus. */
+const primaryItems: {
+  key: Exclude<PanelKey, null>;
+  label: string;
+  href: string;
+}[] = [
+  { key: "services", label: "Services", href: "/services" },
+  { key: "crisis", label: "Crisis", href: "/services/crisis-communications" },
+  { key: "pacific", label: "Pacific", href: "/pacific" },
+  {
+    key: "sectors",
+    label: "Industry Associations",
+    href: "/clients/industry-associations",
+  },
+  { key: "cases", label: "Case studies", href: "/case-studies" },
+  { key: "about", label: "About", href: "/about" },
+  { key: "contact", label: "Contact", href: "/contact" },
+  { key: "insights", label: "Insights", href: "/insights" },
 ];
+
+const PANELS: Record<
+  Exclude<PanelKey, null>,
+  (props: { onClose: () => void }) => React.ReactNode
+> = {
+  services: ServicesPanel,
+  crisis: CrisisPanel,
+  pacific: PacificPanel,
+  sectors: SectorsPanel,
+  cases: CasesPanel,
+  about: AboutPanel,
+  contact: ContactPanel,
+  insights: InsightsPanel,
+};
 
 export function Nav() {
   const pathname = usePathname();
@@ -374,14 +819,15 @@ export function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const handleMouseEnter = useCallback((panel: "services") => {
+  const handleMouseEnter = useCallback((panel: Exclude<PanelKey, null>) => {
     if (closeTimerRef.current) clearTimeout(closeTimerRef.current);
-    openTimerRef.current = setTimeout(() => setActivePanel(panel), 200);
+    if (openTimerRef.current) clearTimeout(openTimerRef.current);
+    openTimerRef.current = setTimeout(() => setActivePanel(panel), 180);
   }, []);
 
   const handleMouseLeave = useCallback(() => {
     if (openTimerRef.current) clearTimeout(openTimerRef.current);
-    closeTimerRef.current = setTimeout(() => setActivePanel(null), 300);
+    closeTimerRef.current = setTimeout(() => setActivePanel(null), 280);
   }, []);
 
   const cancelClose = useCallback(() => {
@@ -400,13 +846,13 @@ export function Nav() {
   const navItemActive = "text-white border-b-2 border-brand-gold";
   const navItemIdle = "text-white/70 hover:text-white";
 
+  const ActivePanelComponent = activePanel ? PANELS[activePanel] : null;
+
   return (
     <div
       ref={navRef}
       className={`sticky top-0 z-50 backdrop-blur-xl transition-all duration-300 ${
-        scrolled
-          ? "bg-navy/85 shadow-lg shadow-navy/20"
-          : "bg-navy/95"
+        scrolled ? "bg-navy/85 shadow-lg shadow-navy/20" : "bg-navy/95"
       }`}
     >
       {/* Desktop nav */}
@@ -424,52 +870,47 @@ export function Nav() {
           </Link>
 
           <nav
-            className="flex items-center gap-7 flex-1"
+            className="flex items-center gap-5 flex-1"
             aria-label="Main navigation"
           >
-            {/* Services mega panel trigger */}
-            <div
-              className="relative"
-              onMouseEnter={() => handleMouseEnter("services")}
-              onMouseLeave={handleMouseLeave}
-            >
-              <button
-                type="button"
-                className={`${navItemBase} ${isActive("/services") ? navItemActive : navItemIdle} flex items-center gap-1`}
-                aria-expanded={activePanel === "services"}
-                aria-haspopup="true"
-                onClick={() =>
-                  setActivePanel((p) => (p === "services" ? null : "services"))
-                }
+            {primaryItems.map(({ key, label, href }) => (
+              <div
+                key={key}
+                className="relative"
+                onMouseEnter={() => handleMouseEnter(key)}
+                onMouseLeave={handleMouseLeave}
               >
-                Services
-                <ChevronDown
-                  className={`w-3 h-3 transition-transform duration-150 ${activePanel === "services" ? "rotate-180" : ""}`}
-                />
-              </button>
-              {activePanel === "services" && (
-                <div
-                  className="absolute left-1/2 -translate-x-1/2 top-full"
-                  style={{
-                    width: 0,
-                    height: 0,
-                    borderLeft: "6px solid transparent",
-                    borderRight: "6px solid transparent",
-                    borderBottom: "6px solid #0F1F36",
-                  }}
-                />
-              )}
-            </div>
-
-            {/* Direct links */}
-            {directLinks.map(({ label, href }) => (
-              <Link
-                key={href}
-                href={href}
-                className={`${navItemBase} ${isActive(href) ? navItemActive : navItemIdle}`}
-              >
-                {label}
-              </Link>
+                <Link
+                  href={href}
+                  onFocus={() => handleMouseEnter(key)}
+                  className={`${navItemBase} ${
+                    isActive(href) ? navItemActive : navItemIdle
+                  } flex items-center gap-1 whitespace-nowrap`}
+                  aria-expanded={activePanel === key}
+                  aria-haspopup="true"
+                >
+                  {label}
+                  {key === "services" && (
+                    <ChevronDown
+                      className={`w-3 h-3 transition-transform duration-150 ${
+                        activePanel === key ? "rotate-180" : ""
+                      }`}
+                    />
+                  )}
+                </Link>
+                {activePanel === key && (
+                  <div
+                    className="absolute left-1/2 -translate-x-1/2 top-full"
+                    style={{
+                      width: 0,
+                      height: 0,
+                      borderLeft: "6px solid transparent",
+                      borderRight: "6px solid transparent",
+                      borderBottom: "6px solid #0F1F36",
+                    }}
+                  />
+                )}
+              </div>
             ))}
           </nav>
 
@@ -531,22 +972,18 @@ export function Nav() {
           </div>
         </div>
 
-        {mobileOpen && (
-          <MobileDrawer onClose={() => setMobileOpen(false)} />
-        )}
+        {mobileOpen && <MobileDrawer onClose={() => setMobileOpen(false)} />}
       </div>
 
       {/* Desktop mega panels */}
       <div
-        className={`hidden md:block absolute left-0 right-0 top-full bg-[#0F1F36]/95 backdrop-blur-xl border-t border-brand-gold/[0.15] z-50 transition-opacity duration-150 ${
-          activePanel === "services"
-            ? "opacity-100"
-            : "opacity-0 pointer-events-none"
+        className={`hidden md:block absolute left-0 right-0 top-full bg-[#0F1F36]/[0.97] backdrop-blur-xl border-t border-brand-gold/[0.15] shadow-2xl shadow-navy/40 z-50 transition-opacity duration-150 ${
+          ActivePanelComponent ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
         onMouseEnter={cancelClose}
         onMouseLeave={handleMouseLeave}
       >
-        <ServicesPanel onClose={closePanel} />
+        {ActivePanelComponent && <ActivePanelComponent onClose={closePanel} />}
       </div>
     </div>
   );

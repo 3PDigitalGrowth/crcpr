@@ -395,6 +395,7 @@ export default function MediaStrategyPage() {
             imageSrc="/images/services/media-strategy/media-experience.png"
             imageAlt="Cluster of broadcast microphones on a press conference podium with photojournalists and a television camera operator visible in the warm, softly lit background"
             imagePosition="right"
+            aspectClass="aspect-video"
           >
             <div className="max-w-3xl lg:max-w-none">
               <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">

@@ -49,7 +49,7 @@ export function PortraitPlaceholder({
   const frameClass =
     variant === "avatar"
       ? "flex-shrink-0 overflow-hidden"
-      : "bg-navy-mid rounded-lg flex items-center justify-center border border-white/10 flex-shrink-0 overflow-hidden";
+      : "bg-navy-mid rounded-[1.5rem] flex items-center justify-center border border-white/10 flex-shrink-0 overflow-hidden";
 
   return (
     <div className={`${sizes[size]} ${frameClass} ${className}`}>

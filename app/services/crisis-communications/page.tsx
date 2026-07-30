@@ -241,7 +241,7 @@ export default function CrisisCommunicationsPage() {
             imageSrc="/images/services/crisis-communications/first-fifteen-minutes.png"
             imageAlt="Overhead view of a composed executive desk in warm afternoon light showing a printed crisis communications plan, an analogue desk clock, a leather portfolio with a fountain pen, a face-down smartphone, and a cup of coffee, suggesting disciplined preparation rather than panic"
             imagePosition="left"
-            aspectClass="aspect-[4/3]"
+            aspectClass="aspect-video"
           >
             <div className="max-w-3xl lg:max-w-none">
               <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">

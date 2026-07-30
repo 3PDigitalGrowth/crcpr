@@ -219,6 +219,7 @@ export default function IssuesManagementPage() {
             imageSrc="/images/services/issues-management/escalation-window.png"
             imageAlt="Close-up of an executive's hands annotating a printed stakeholder briefing document at a walnut desk in warm afternoon light, with a stakeholder map diagram, analogue desk clock, laptop showing a muted dashboard, and coffee cup visible — suggesting calm strategic assessment during the escalation window before an issue becomes a crisis"
             imagePosition="left"
+            aspectClass="aspect-video"
           >
             <div className="max-w-3xl lg:max-w-none">
               <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">

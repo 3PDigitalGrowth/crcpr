@@ -174,6 +174,7 @@ export default function PacificPage() {
             imageSrc="/images/pacific/pacific-flags-parliament.png"
             imageAlt="Pacific Island nation flags flying outside a parliament building"
             imagePosition="left"
+            aspectClass="aspect-video"
           >
             <div className="max-w-3xl lg:max-w-none">
               <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
@@ -435,10 +436,10 @@ export default function PacificPage() {
       <section className="bg-off-white py-12 md:py-16">
         <div className="max-w-7xl mx-auto px-6">
           <ImageTextRow
-            imageSrc="/images/pacific/mid-harbour-yacht.png"
-            imageAlt="Aerial view of a superyacht docked at a Pacific port with containers and cranes"
+            imageSrc="/images/pacific/mid-harbour.webp"
+            imageAlt="Pacific island harbour at golden hour with wooden boats moored on calm turquoise water"
             imagePosition="right"
-            aspectClass="aspect-[4/3]"
+            aspectClass="aspect-video"
           >
             <div>
               <p className="mb-3 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">

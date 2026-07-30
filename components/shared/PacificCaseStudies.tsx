@@ -20,7 +20,7 @@ export function PacificCaseStudies({ items }: PacificCaseStudiesProps) {
           key={study.id}
           className="flex flex-col rounded-[1.5rem] border-t-4 border-brand-gold border-x border-b border-brand-border bg-warm-white/70 backdrop-blur overflow-hidden"
         >
-          <div className="relative w-full aspect-[4/3] overflow-hidden">
+          <div className="relative w-full aspect-[3/2] overflow-hidden">
             <Image
               src={study.image.src}
               alt={study.image.alt}

@@ -142,6 +142,10 @@ export default function PacificPage() {
           src: "/images/pacific/hero.webp",
           alt: "Pacific island coastline with turquoise water, palms, and settlement in golden hour light",
         }}
+        heroVideo={{
+          src: "/images/pacific/hero-ambient.mp4",
+          poster: "/images/pacific/hero-poster.jpg",
+        }}
       />
 
       <PageProofStrip copyId="pacific"
@@ -172,12 +176,13 @@ export default function PacificPage() {
             imagePosition="left"
           >
             <div className="max-w-3xl lg:max-w-none">
-              <p className="text-brand-gold text-xs font-medium mb-4">
+              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="pacific.t1">
                 Pacific context
                 </T>
               </p>
-              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+              <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
                 <T id="pacific.t2">
                 The Pacific is not one communications market. It is a region of
                 distinct political, cultural, and media realities.
@@ -228,8 +233,9 @@ export default function PacificPage() {
                   </T>
                 </p>
               </div>
-              <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8 mt-8">
-                <p className="text-brand-teal text-xs font-medium mb-5">
+              <aside className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6 md:p-8 mt-8">
+                <p className="mb-5 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
+                  <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                   <T id="pacific.t8">
                   What serious Pacific work requires
                   </T>
@@ -283,15 +289,16 @@ export default function PacificPage() {
 
       <section className="bg-white pb-16 md:pb-24">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="rounded-lg border border-brand-border bg-off-white p-8 md:p-10">
+          <div className="rounded-[1.5rem] border border-brand-border bg-off-white p-8 md:p-10">
             <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_360px] gap-10 items-start">
               <div className="max-w-3xl">
-                <p className="text-brand-gold text-xs font-medium mb-4">
+                <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+                  <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                   <T id="pacific.t15">
                   The opportunities in and for the Pacific region
                   </T>
                 </p>
-                <h2 className="font-heading font-black text-navy text-3xl md:text-4xl mb-6 leading-tight">
+                <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
                   <T id="pacific.t16">
                   The Pacific region has long been under-estimated and under-valued.
                   </T>
@@ -335,7 +342,7 @@ export default function PacificPage() {
               </div>
 
               <div className="grid grid-cols-1 gap-4">
-                <div className="rounded-lg bg-white border border-brand-border p-5">
+                <div className="rounded-[1.5rem] bg-warm-white/70 backdrop-blur border border-brand-border p-5">
                   <p className="font-sans font-semibold text-navy text-sm mb-2">
                     <T id="pacific.t21">
                     Proactive governments
@@ -349,7 +356,7 @@ export default function PacificPage() {
                     </T>
                   </p>
                 </div>
-                <div className="rounded-lg bg-white border border-brand-border p-5">
+                <div className="rounded-[1.5rem] bg-warm-white/70 backdrop-blur border border-brand-border p-5">
                   <p className="font-sans font-semibold text-navy text-sm mb-2">
                     <T id="pacific.t23">
                     Not-for-profits
@@ -362,7 +369,7 @@ export default function PacificPage() {
                     </T>
                   </p>
                 </div>
-                <div className="rounded-lg bg-white border border-brand-border p-5">
+                <div className="rounded-[1.5rem] bg-warm-white/70 backdrop-blur border border-brand-border p-5">
                   <p className="font-sans font-semibold text-navy text-sm mb-2">
                     <T id="pacific.t25">
                     Companies
@@ -389,12 +396,13 @@ export default function PacificPage() {
       >
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl mb-12">
-            <p className="text-brand-gold text-xs font-medium mb-4">
+            <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+              <span className="h-px w-8 bg-current opacity-50" aria-hidden />
               <T id="pacific.t27">
               Successful outcomes
               </T>
             </p>
-            <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+            <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
               <T id="pacific.t28">
               Our Pacific experience
               </T>
@@ -433,12 +441,13 @@ export default function PacificPage() {
             aspectClass="aspect-[4/3]"
           >
             <div>
-              <p className="text-brand-gold text-xs font-medium mb-3">
+              <p className="mb-3 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="pacific.t30">
                 Trade, development, and daily life
                 </T>
               </p>
-              <h2 className="font-heading font-black text-navy text-2xl md:text-3xl leading-tight mb-4">
+              <h2 className="font-heading text-navy text-3xl md:text-4xl leading-[1.05] tracking-[-0.02em] mb-4">
                 <T id="pacific.t31">
                 Pacific communications sits at the intersection of tradition and
                 modern institutions.
@@ -463,7 +472,7 @@ export default function PacificPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_280px] gap-10 items-start">
             <div>
-              <h2 className="font-heading font-black text-navy text-3xl">
+              <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em]">
                 <T id="pacific.t33">
                 Our Pacific footprint
                 </T>
@@ -475,8 +484,8 @@ export default function PacificPage() {
                 </T>
               </p>
             </div>
-            <aside className="rounded-lg border border-brand-border bg-white p-6 lg:mt-2">
-              <p className="font-heading font-black text-brand-gold text-5xl leading-none">
+            <aside className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6 lg:mt-2">
+              <p className="font-heading text-brand-gold text-5xl leading-none">
                 17
               </p>
               <p className="text-navy font-sans font-semibold text-sm mt-2">
@@ -502,15 +511,15 @@ export default function PacificPage() {
       {/* Pacific communications services */}
       <section className="bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="font-heading font-black text-navy text-3xl mb-12">
+          <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-12">
             <T id="pacific.t37">
             Pacific communications services
             </T>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-off-white border-l-[3px] border-brand-gold rounded-lg p-8">
-              <h3 className="font-heading font-black text-navy text-xl mb-4">
+            <div className="bg-off-white border-l-[3px] border-brand-gold rounded-[1.5rem] p-8">
+              <h3 className="font-heading text-navy text-2xl mb-4">
                 <T id="pacific.t38">
                 Development communications
                 </T>
@@ -537,8 +546,8 @@ export default function PacificPage() {
               </p>
             </div>
 
-            <div className="bg-off-white border-l-[3px] border-brand-gold rounded-lg p-8">
-              <h3 className="font-heading font-black text-navy text-xl mb-4">
+            <div className="bg-off-white border-l-[3px] border-brand-gold rounded-[1.5rem] p-8">
+              <h3 className="font-heading text-navy text-2xl mb-4">
                 <T id="pacific.t41">
                 Cross-cultural stakeholder engagement
                 </T>
@@ -562,8 +571,8 @@ export default function PacificPage() {
               </p>
             </div>
 
-            <div className="bg-off-white border-l-[3px] border-brand-gold rounded-lg p-8">
-              <h3 className="font-heading font-black text-navy text-xl mb-4">
+            <div className="bg-off-white border-l-[3px] border-brand-gold rounded-[1.5rem] p-8">
+              <h3 className="font-heading text-navy text-2xl mb-4">
                 <T id="pacific.t44">
                 Pacific crisis communications
                 </T>
@@ -597,7 +606,7 @@ export default function PacificPage() {
       {/* Culture section */}
       <section className="bg-off-white py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-6">
-          <h2 className="font-heading font-black text-navy text-3xl mb-6">
+          <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
             <T id="pacific.t47">
             Communications that understands Pacific culture is not optional. It
             is essential.

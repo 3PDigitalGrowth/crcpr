@@ -48,14 +48,14 @@ export function FAQSection({
         return (
           <article
             key={i}
-            className={`rounded-lg border p-6 transition-colors ${
+            className={`rounded-[1.5rem] border p-6 backdrop-blur transition-colors ${
               expandable && isOpen
-                ? "border-brand-teal/40 bg-white shadow-sm shadow-navy/5"
-                : "border-brand-border bg-white shadow-sm shadow-navy/5"
+                ? "border-brand-teal/40 bg-warm-white/70 shadow-sm shadow-navy/5"
+                : "border-brand-border bg-warm-white/70 shadow-sm shadow-navy/5"
             }`}
           >
             <div className="flex items-start justify-between gap-4">
-              <h3 className="font-heading font-black text-navy text-xl leading-snug">
+              <h3 className="font-heading text-navy text-2xl leading-snug">
                 {bindable ? (
                   <span {...bind(`faqs.${i}.question`)}>{faq.question}</span>
                 ) : copyId ? (
@@ -91,7 +91,7 @@ export function FAQSection({
             {expandable && (
               <button
                 type="button"
-                className="mt-5 text-link-teal text-sm font-medium hover:text-navy hover:underline underline-offset-2"
+                className="mt-5 text-link-teal text-sm font-sans font-semibold hover:text-navy hover:underline underline-offset-2"
                 onClick={() => setOpenIndex(isOpen ? null : i)}
                 aria-expanded={isOpen}
               >
@@ -113,7 +113,7 @@ export function FAQSection({
       <div className="max-w-7xl mx-auto px-6">
         {title && (
           <div className="max-w-3xl mx-auto text-center mb-10">
-            <h2 className="font-heading font-black text-navy text-3xl md:text-4xl">
+            <h2 className="font-heading text-navy text-4xl leading-[1.05] tracking-[-0.02em] md:text-5xl">
               {titleText}
             </h2>
           </div>

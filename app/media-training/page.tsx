@@ -97,6 +97,10 @@ export default function MediaTrainingPage() {
           src: "/images/media-training/hero.webp",
           alt: "Video camera on tripod in a training room with presentation screen and chairs set for practice interviews",
         }}
+        heroVideo={{
+          src: "/images/media-training/hero-ambient.mp4",
+          poster: "/images/media-training/hero-poster.jpg",
+        }}
       />
 
       <PageProofStrip copyId="media-training"
@@ -109,12 +113,13 @@ export default function MediaTrainingPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_360px] gap-10 items-start">
             <div className="max-w-3xl">
-              <p className="text-brand-gold text-xs font-medium mb-4">
+              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="media-training.t1">
                 What better training looks like
                 </T>
               </p>
-              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+              <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
                 <T id="media-training.t2">
                 The real risk is not poor technique. It is poor preparation.
                 </T>
@@ -162,8 +167,9 @@ export default function MediaTrainingPage() {
               </div>
             </div>
 
-            <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium mb-5">
+            <aside className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6 md:p-8">
+              <p className="mb-5 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="media-training.t7">
                 Technique is not enough
                 </T>
@@ -219,14 +225,15 @@ export default function MediaTrainingPage() {
 
       <section className="bg-white pb-16 md:pb-24">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="rounded-[28px] border border-brand-border bg-off-white p-8 md:p-10">
+          <div className="rounded-[1.5rem] border border-brand-border bg-off-white p-8 md:p-10">
             <div className="max-w-3xl">
-              <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="media-training.t14">
                 Executive mistakes
                 </T>
               </p>
-              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+              <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
                 <T id="media-training.t15">
                 What executives usually get wrong
                 </T>
@@ -257,7 +264,7 @@ export default function MediaTrainingPage() {
               ].map((item) => (
                 <div
                   key={item.title}
-                  className="rounded-xl border border-brand-border bg-white p-6"
+                  className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6"
                 >
                   <p className="font-sans font-semibold text-navy text-base mb-2">
                     {item.title}
@@ -287,7 +294,7 @@ export default function MediaTrainingPage() {
       {/* Training programmes */}
       <section className="bg-off-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="font-heading font-black text-navy text-3xl mb-6">
+          <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
             <T id="media-training.t17">
             Training programmes for every situation
             </T>
@@ -295,7 +302,7 @@ export default function MediaTrainingPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
             <div>
-              <h3 className="font-heading font-black text-navy text-xl mb-3">
+              <h3 className="font-heading text-navy text-2xl mb-3">
                 <T id="media-training.t18">
                 Spokesperson and on-camera training
                 </T>
@@ -322,7 +329,7 @@ export default function MediaTrainingPage() {
             </div>
 
             <div>
-              <h3 className="font-heading font-black text-navy text-xl mb-3">
+              <h3 className="font-heading text-navy text-2xl mb-3">
                 <T id="media-training.t21">
                 Hostile media and crisis interview preparation
                 </T>
@@ -348,7 +355,7 @@ export default function MediaTrainingPage() {
             </div>
 
             <div>
-              <h3 className="font-heading font-black text-navy text-xl mb-3">
+              <h3 className="font-heading text-navy text-2xl mb-3">
                 <T id="media-training.t24">
                 PR fundamentals: team workshops
                 </T>
@@ -367,7 +374,7 @@ export default function MediaTrainingPage() {
             </div>
 
             <div>
-              <h3 className="font-heading font-black text-navy text-xl mb-3">
+              <h3 className="font-heading text-navy text-2xl mb-3">
                 <T id="media-training.t26">
                 Online and remote media training
                 </T>
@@ -397,12 +404,13 @@ export default function MediaTrainingPage() {
       <section className="bg-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl">
-            <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+            <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+              <span className="h-px w-8 bg-current opacity-50" aria-hidden />
               <T id="media-training.t29">
               Readiness check
               </T>
             </p>
-            <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+            <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
               <T id="media-training.t30">
               Who needs media training
               </T>
@@ -419,7 +427,7 @@ export default function MediaTrainingPage() {
             {WHO_NEEDS_ITEMS.map((item) => (
               <div
                 key={item}
-                className="rounded-[24px] border border-brand-border bg-off-white p-6 md:p-7"
+                className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6 md:p-7"
               >
                 <div className="flex items-start gap-3">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white border border-brand-border">

@@ -149,7 +149,7 @@ export function IndustryAssociationsGallery() {
   return (
     <div ref={containerRef} className="w-full">
       <div
-        className="relative aspect-[3/2] md:aspect-[16/9] rounded-lg overflow-hidden border border-brand-border bg-navy shadow-md shadow-navy/10"
+        className="relative aspect-[3/2] md:aspect-[16/9] rounded-[1.5rem] overflow-hidden border border-brand-border bg-navy shadow-md shadow-navy/10"
         role="region"
         aria-roledescription="carousel"
         aria-label="Industry association events gallery"
@@ -236,7 +236,7 @@ export function IndustryAssociationsGallery() {
               aria-label={`Go to image ${idx + 1}: ${item.caption}`}
               data-thumb-index={idx}
               onClick={() => setActiveIndex(idx)}
-              className={`relative aspect-[3/2] w-20 md:w-24 flex-shrink-0 rounded overflow-hidden border transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold ${
+              className={`relative aspect-[3/2] w-20 md:w-24 flex-shrink-0 rounded-xl overflow-hidden border transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold ${
                 isActive
                   ? "border-brand-gold opacity-100 ring-2 ring-brand-gold/60"
                   : "border-brand-border opacity-55 hover:opacity-90"

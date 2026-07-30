@@ -101,7 +101,7 @@ export default function MediaStrategyPage() {
       />
 
       {/* Opening section */}
-      <section className="bg-white py-16 md:py-24">
+      <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <ImageTextRow
             imageSrc="/images/services/media-strategy/mid-prep.webp"
@@ -109,12 +109,13 @@ export default function MediaStrategyPage() {
             imagePosition="left"
           >
             <div className="max-w-3xl lg:max-w-none">
-              <p className="text-brand-gold text-xs font-medium mb-4">
+              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="services-media-strategy.t1">
                 Media strategy
                 </T>
               </p>
-              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+              <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
                 <T id="services-media-strategy.t2">
                 You don&apos;t need publicity. You need results.
                 </T>
@@ -175,8 +176,9 @@ export default function MediaStrategyPage() {
                   </T>
                 </p>
               </div>
-              <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8 mt-8">
-                <p className="text-brand-teal text-xs font-medium mb-5">
+              <aside className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6 md:p-8 mt-8">
+                <p className="mb-5 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
+                  <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                   <T id="services-media-strategy.t9">
                   What weak strategy looks like
                   </T>
@@ -227,7 +229,8 @@ export default function MediaStrategyPage() {
                 </div>
 
                 <div className="mt-6 pt-6 border-t border-brand-border">
-                  <p className="text-brand-gold text-xs font-medium mb-3">
+                  <p className="mb-3 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+                    <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                     <T id="services-media-strategy.t16">
                     Strategic aim
                     </T>
@@ -246,14 +249,15 @@ export default function MediaStrategyPage() {
         </div>
       </section>
 
-      <section className="bg-off-white py-16 md:py-24">
+      <section className="py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-6">
-          <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+          <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+            <span className="h-px w-8 bg-current opacity-50" aria-hidden />
             <T id="services-media-strategy.t18">
             An effective strategy
             </T>
           </p>
-          <h2 className="font-heading font-black text-navy text-3xl mb-6">
+          <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
             <T id="services-media-strategy.t19">
             What strong media strategy looks like in the market
             </T>
@@ -293,9 +297,9 @@ export default function MediaStrategyPage() {
       />
 
       {/* What a CRC Public Relations media strategy delivers */}
-      <section className="bg-off-white py-16 md:py-24">
+      <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="font-heading font-black text-navy text-3xl mb-6">
+          <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
             <T id="services-media-strategy.t22">
             What a CRC Public Relations media strategy delivers
             </T>
@@ -303,7 +307,7 @@ export default function MediaStrategyPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
             <div>
-              <h3 className="font-heading font-black text-navy text-xl mb-3">
+              <h3 className="font-heading text-navy text-2xl mb-3">
                 <T id="services-media-strategy.t23">
                 Media strategy development
                 </T>
@@ -322,7 +326,7 @@ export default function MediaStrategyPage() {
             </div>
 
             <div>
-              <h3 className="font-heading font-black text-navy text-xl mb-3">
+              <h3 className="font-heading text-navy text-2xl mb-3">
                 <T id="services-media-strategy.t25">
                 Journalist and editorial relationships
                 </T>
@@ -343,7 +347,7 @@ export default function MediaStrategyPage() {
             </div>
 
             <div>
-              <h3 className="font-heading font-black text-navy text-xl mb-3">
+              <h3 className="font-heading text-navy text-2xl mb-3">
                 <T id="services-media-strategy.t27">
                 Thought leadership and op-ed placement
                 </T>
@@ -363,7 +367,7 @@ export default function MediaStrategyPage() {
             </div>
 
             <div>
-              <h3 className="font-heading font-black text-navy text-xl mb-3">
+              <h3 className="font-heading text-navy text-2xl mb-3">
                 <T id="services-media-strategy.t29">
                 Spokesperson preparation and briefing
                 </T>
@@ -385,7 +389,7 @@ export default function MediaStrategyPage() {
       </section>
 
       {/* Our media experience */}
-      <section className="bg-warm-white py-16 md:py-24">
+      <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <ImageTextRow
             imageSrc="/images/services/media-strategy/media-experience.png"
@@ -393,12 +397,13 @@ export default function MediaStrategyPage() {
             imagePosition="right"
           >
             <div className="max-w-3xl lg:max-w-none">
-              <p className="text-brand-gold text-xs font-medium mb-4">
+              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="services-media-strategy.t31">
                 Our media experience
                 </T>
               </p>
-              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+              <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
                 <T id="services-media-strategy.t32">
                 The reach and relationships behind effective media strategy
                 </T>
@@ -443,13 +448,14 @@ export default function MediaStrategyPage() {
             </div>
           </ImageTextRow>
 
-          <aside className="mt-14 rounded-lg bg-navy p-7 md:p-10">
-            <p className="text-brand-gold text-xs font-medium mb-3">
+          <aside className="mt-14 rounded-[1.5rem] bg-navy p-7 md:p-10">
+            <p className="mb-3 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+              <span className="h-px w-8 bg-current opacity-50" aria-hidden />
               <T id="services-media-strategy.t35">
               International reach
               </T>
             </p>
-            <h3 className="font-heading font-black text-white text-xl md:text-2xl leading-tight mb-6">
+            <h3 className="font-heading text-white text-xl md:text-2xl leading-tight mb-6">
               <T id="services-media-strategy.t36">
               International media conferences hosted in
               </T>
@@ -471,7 +477,7 @@ export default function MediaStrategyPage() {
               ].map((item) => (
                 <li
                   key={item.location}
-                  className="rounded-lg border border-white/10 bg-white/[0.03] p-5"
+                  className="v2-glass-dark rounded-[1.5rem] p-5"
                 >
                   <p className="font-sans font-semibold text-white text-base mb-1">
                     {item.location}
@@ -487,11 +493,12 @@ export default function MediaStrategyPage() {
       </section>
 
       {/* We understand how newsrooms think */}
-      <section className="bg-white py-16 md:py-24">
+      <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[320px_minmax(0,1fr)] gap-10 items-start">
-            <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium mb-5">
+            <aside className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6 md:p-8">
+              <p className="mb-5 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="services-media-strategy.t37">
                 Why it matters
                 </T>
@@ -543,12 +550,13 @@ export default function MediaStrategyPage() {
             </aside>
 
             <div className="max-w-3xl">
-              <p className="text-brand-gold text-xs font-medium mb-4">
+              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="services-media-strategy.t44">
                 Newsroom perspective
                 </T>
               </p>
-              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+              <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
                 <T id="services-media-strategy.t45">
                 We understand how newsrooms think
                 </T>

@@ -38,19 +38,19 @@ export function ContactFormSection({ source }: ContactFormSectionProps) {
   }
 
   return (
-    <section className="bg-warm-white py-24">
+    <section className="bg-off-white py-24">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="bg-brand-gold rounded-lg p-4 flex items-center justify-between gap-4 mb-8">
+        <div className="bg-brand-gold rounded-[1.5rem] p-4 flex items-center justify-between gap-4 mb-8">
           <div className="flex items-center gap-3">
             <Zap className="text-navy w-5 h-5 flex-shrink-0" />
             <p className="text-navy font-medium text-sm">
-              <span className="font-black">Facing an active crisis?</span>{" "}
+              <span className="font-semibold">Facing an active crisis?</span>{" "}
               Call us now, available 24 hours, 7 days.
             </p>
           </div>
           <a
             href="tel:1300182186"
-            className="bg-navy text-white font-heading font-black text-xs px-4 py-2 rounded flex-shrink-0 hover:bg-navy-mid transition-colors"
+            className="bg-navy text-white font-sans font-semibold text-sm rounded-full px-5 py-2.5 flex-shrink-0 shadow-lg shadow-navy/20 hover:bg-navy-mid transition-colors"
           >
             1300 182 186
           </a>
@@ -58,12 +58,12 @@ export function ContactFormSection({ source }: ContactFormSectionProps) {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
-            <h2 className="font-heading font-black text-navy text-2xl">
+            <h2 className="font-heading text-3xl leading-[1.05] tracking-[-0.02em] text-navy">
               Send us a message
             </h2>
 
             {isCapabilityRequest && formState.status !== "success" && (
-              <div className="mt-6 rounded-lg border-2 border-brand-gold/60 bg-brand-gold/5 p-4">
+              <div className="mt-6 rounded-[1.5rem] border-2 border-brand-gold/60 bg-brand-gold/5 p-4">
                 <p className="text-text-body text-sm leading-relaxed">
                   You&apos;re requesting our Capability Statement. We&apos;ll
                   send it directly to your inbox.
@@ -72,10 +72,10 @@ export function ContactFormSection({ source }: ContactFormSectionProps) {
             )}
 
             {formState.status === "success" ? (
-              <div className="mt-8 bg-white border border-brand-border rounded-lg p-8 shadow-sm shadow-navy/5">
+              <div className="mt-8 rounded-[1.5rem] border border-brand-border bg-warm-white/70 p-8 shadow-sm shadow-navy/5 backdrop-blur">
                 <div className="flex items-center gap-3 mb-4">
                   <CheckCircle className="text-brand-gold w-7 h-7 flex-shrink-0" />
-                  <h3 className="font-heading font-black text-navy text-xl">
+                  <h3 className="font-heading text-2xl text-navy">
                     Message received.
                   </h3>
                 </div>
@@ -115,7 +115,7 @@ export function ContactFormSection({ source }: ContactFormSectionProps) {
                     type="text"
                     required
                     autoComplete="name"
-                    className="w-full rounded-[4px] border border-brand-border bg-white px-4 py-3 text-text-body placeholder:text-text-caption focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal"
+                    className="w-full rounded-xl border border-brand-border bg-white px-4 py-3 text-text-body placeholder:text-text-caption focus:outline-none focus:ring-2 focus:ring-brand-gold/30 focus:border-brand-gold/60"
                     placeholder="Your name"
                   />
                 </div>
@@ -131,7 +131,7 @@ export function ContactFormSection({ source }: ContactFormSectionProps) {
                     name="organisation"
                     type="text"
                     autoComplete="organization"
-                    className="w-full rounded-[4px] border border-brand-border bg-white px-4 py-3 text-text-body placeholder:text-text-caption focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal"
+                    className="w-full rounded-xl border border-brand-border bg-white px-4 py-3 text-text-body placeholder:text-text-caption focus:outline-none focus:ring-2 focus:ring-brand-gold/30 focus:border-brand-gold/60"
                     placeholder="Company or organisation"
                   />
                 </div>
@@ -148,7 +148,7 @@ export function ContactFormSection({ source }: ContactFormSectionProps) {
                     type="email"
                     required
                     autoComplete="email"
-                    className="w-full rounded-[4px] border border-brand-border bg-white px-4 py-3 text-text-body placeholder:text-text-caption focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal"
+                    className="w-full rounded-xl border border-brand-border bg-white px-4 py-3 text-text-body placeholder:text-text-caption focus:outline-none focus:ring-2 focus:ring-brand-gold/30 focus:border-brand-gold/60"
                     placeholder="you@example.com"
                   />
                 </div>
@@ -165,7 +165,7 @@ export function ContactFormSection({ source }: ContactFormSectionProps) {
                     type="tel"
                     required
                     autoComplete="tel"
-                    className="w-full rounded-[4px] border border-brand-border bg-white px-4 py-3 text-text-body placeholder:text-text-caption focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal"
+                    className="w-full rounded-xl border border-brand-border bg-white px-4 py-3 text-text-body placeholder:text-text-caption focus:outline-none focus:ring-2 focus:ring-brand-gold/30 focus:border-brand-gold/60"
                     placeholder="Including area code"
                   />
                 </div>
@@ -180,7 +180,7 @@ export function ContactFormSection({ source }: ContactFormSectionProps) {
                     id="contact-message"
                     name="message"
                     rows={5}
-                    className="w-full rounded-[4px] border border-brand-border bg-white px-4 py-3 text-text-body placeholder:text-text-caption focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal resize-y min-h-[120px]"
+                    className="w-full rounded-xl border border-brand-border bg-white px-4 py-3 text-text-body placeholder:text-text-caption focus:outline-none focus:ring-2 focus:ring-brand-gold/30 focus:border-brand-gold/60 resize-y min-h-[120px]"
                     placeholder="Briefly describe your situation or enquiry"
                     defaultValue={
                       isCapabilityRequest
@@ -192,11 +192,11 @@ export function ContactFormSection({ source }: ContactFormSectionProps) {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-brand-gold text-navy font-heading font-black text-xs rounded-[4px] py-4 hover:bg-gold-light transition disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="w-full rounded-full bg-brand-gold px-7 py-3.5 font-sans text-sm font-semibold text-navy shadow-lg shadow-brand-gold/20 transition-colors hover:bg-gold-light disabled:cursor-not-allowed disabled:opacity-60"
                 >
                   {isSubmitting ? "Sending…" : "Send message →"}
                 </button>
-                <p className="text-text-body text-sm italic">
+                <p className="text-text-body text-sm">
                   For general enquiries and new business conversations. For
                   active crises, please call.
                 </p>
@@ -205,7 +205,7 @@ export function ContactFormSection({ source }: ContactFormSectionProps) {
           </div>
 
           <div>
-            <h3 className="font-heading font-black text-navy text-xl">
+            <h3 className="font-heading text-2xl text-navy">
               Other ways to reach us
             </h3>
             <ul className="mt-6 space-y-4 text-text-body text-sm leading-relaxed">
@@ -238,7 +238,7 @@ export function ContactFormSection({ source }: ContactFormSectionProps) {
                 <span className="text-charcoal">{addressLine}</span>
               </li>
             </ul>
-            <p className="mt-6 rounded-lg border border-brand-border bg-white p-5 text-sm leading-relaxed text-charcoal-mid shadow-sm shadow-navy/5">
+            <p className="mt-6 rounded-[1.5rem] border border-brand-border bg-warm-white/70 p-5 text-sm leading-relaxed text-charcoal-mid shadow-sm shadow-navy/5 backdrop-blur">
               We operate Australia wide in every state, New Zealand and the
               Pacific region.
             </p>

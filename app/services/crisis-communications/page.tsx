@@ -84,7 +84,7 @@ export default function CrisisCommunicationsPage() {
       <div className="bg-brand-gold py-3 text-center relative z-20">
         <a
           href={siteConfig.phone.href}
-          className="block font-heading font-black text-navy text-[13px]"
+          className="block font-heading text-navy text-[13px]"
         >
           Need immediate crisis support? Call {siteConfig.phone.display} |
           Available 24/7
@@ -106,36 +106,51 @@ export default function CrisisCommunicationsPage() {
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center"
+            className="object-cover object-center md:hidden"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[rgba(26,43,74,0.72)] via-[rgba(26,43,74,0.92)] to-[#1A2B4A]" />
+          <video
+            className="absolute inset-0 hidden size-full object-cover md:block"
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="/images/services/crisis-communications/hero-poster.jpg"
+            aria-hidden
+          >
+            <source
+              src="/images/services/crisis-communications/hero-ambient.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-b from-[rgba(16,28,52,0.72)] via-[rgba(16,28,52,0.92)] to-[#1A2B4A]" />
         </div>
 
         {/* Top block: eyebrow, title, description, CTA, aside */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-20 md:pt-24 pb-12 md:pb-14">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-12 items-end">
             <div className="max-w-4xl">
-              <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+              <p className="mb-5 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="services-crisis-communications.t1">
                 Crisis communications
                 </T>
               </p>
-              <h1 className="font-heading font-black text-white text-4xl md:text-[56px] leading-[1.02] max-w-4xl">
+              <h1 className="font-heading text-[3rem] leading-[0.98] tracking-[-0.02em] text-white [text-shadow:0_2px_18px_rgba(0,0,0,0.35)] sm:text-6xl lg:text-[4.5rem] max-w-4xl">
                 <T id="services-crisis-communications.t2">
                 When a crisis breaks, experience is everything.
                 </T>
               </h1>
-              <p className="text-white/75 text-lg leading-relaxed mt-6 max-w-2xl">
+              <p className="mt-7 max-w-2xl text-lg leading-relaxed text-white/80">
                 <T id="services-crisis-communications.t3">
                 24/7 crisis response, crisis communications planning, and
                 simulation exercises. When you need experienced counsel, we are
                 available immediately.
                 </T>
               </p>
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mt-8">
+              <div className="mt-9 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs rounded-[4px] px-8 py-4 hover:bg-gold-light transition"
+                  className="inline-flex items-center gap-2 rounded-full bg-brand-gold px-7 py-3.5 font-sans text-sm font-semibold text-navy shadow-lg shadow-brand-gold/20 transition-colors hover:bg-gold-light"
                 >
                   <T id="services-crisis-communications.t4">
                   Book a consultation
@@ -143,21 +158,21 @@ export default function CrisisCommunicationsPage() {
                 </Link>
                 <a
                   href={siteConfig.phone.href}
-                  className="text-brand-gold text-sm font-heading font-black hover:text-gold-light transition-colors"
+                  className="font-sans text-sm font-semibold text-brand-gold transition-colors hover:text-gold-light"
                 >
                   Or call {siteConfig.phone.display}
                 </a>
               </div>
             </div>
 
-            <div className="border border-white/10 bg-white/[0.03] rounded-lg p-6 backdrop-blur-[2px]">
-              <p className="text-white/35 text-xs mb-4"><T id="services-crisis-communications.t47">Direct strategic counsel</T></p>
+            <div className="v2-glass-dark rounded-[1.75rem] p-6">
+              <p className="mb-4 text-xs text-white/45"><T id="services-crisis-communications.t47">Direct strategic counsel</T></p>
               <div className="space-y-4">
                 <div>
-                  <p className="font-heading font-black text-brand-gold text-2xl">
+                  <p className="font-heading text-4xl leading-none text-brand-gold">
                     {siteConfig.stats.yearsTrading}
                   </p>
-                  <p className="text-white/60 text-sm">
+                  <p className="mt-2 text-sm text-white/60">
                     <T id="services-crisis-communications.t5">
                     Years serving organisations across Australia and the Pacific
                     </T>
@@ -165,10 +180,10 @@ export default function CrisisCommunicationsPage() {
                 </div>
                 <div className="h-px bg-white/10" />
                 <div>
-                  <p className="font-heading font-black text-white text-lg">
+                  <p className="font-heading text-xl text-white">
                     {aside.title}
                   </p>
-                  <p className="text-white/60 text-sm leading-relaxed mt-1">
+                  <p className="mt-1 text-sm leading-relaxed text-white/60">
                     {aside.body}
                   </p>
                 </div>
@@ -185,12 +200,13 @@ export default function CrisisCommunicationsPage() {
         {/* Proof strip + urgent CTA, same navy backdrop */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-12 md:pt-14 pb-16 md:pb-20">
           <div className="max-w-3xl">
-            <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+            <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+              <span className="h-px w-8 bg-current opacity-50" aria-hidden />
               <T id="services-crisis-communications.t6">
               Why CRC Public Relations
               </T>
             </p>
-            <h2 className="font-heading font-black text-white text-3xl">
+            <h2 className="font-heading text-white text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em]">
               <T id="services-crisis-communications.t7">
               The first decisions in a crisis shape everything that follows.
               </T>
@@ -201,15 +217,15 @@ export default function CrisisCommunicationsPage() {
             {proofItems.map((item, __ti) => (
               <div
                 key={`${item.label}-${item.value}`}
-                className="border border-white/10 bg-white/[0.03] rounded-lg p-6"
+                className="v2-glass-dark rounded-[1.75rem] p-6"
               >
-                <p className="text-brand-gold text-xs font-medium mb-3">
+                <p className="mb-3 font-sans text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-gold">
                   <T id={`services-crisis-communications.proofItems.${__ti}.label`}>{item.label}</T>
                 </p>
-                <p className="font-heading font-black text-white text-2xl">
+                <p className="font-heading text-white text-2xl md:text-3xl">
                   <T id={`services-crisis-communications.proofItems.${__ti}.value`}>{item.value}</T>
                 </p>
-                <p className="text-sm leading-relaxed mt-3 text-white/60">
+                <p className="mt-2 text-sm leading-relaxed text-white/65">
                   <T id={`services-crisis-communications.proofItems.${__ti}.detail`}>{item.detail}</T>
                 </p>
               </div>
@@ -219,7 +235,7 @@ export default function CrisisCommunicationsPage() {
       </section>
 
       {/* Opening section */}
-      <section className="bg-white py-16 md:py-24">
+      <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <ImageTextRow
             imageSrc="/images/services/crisis-communications/first-fifteen-minutes.png"
@@ -228,12 +244,13 @@ export default function CrisisCommunicationsPage() {
             aspectClass="aspect-[4/3]"
           >
             <div className="max-w-3xl lg:max-w-none">
-              <p className="text-brand-gold text-xs font-medium mb-4">
+              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="services-crisis-communications.t8">
                 Being crisis-ready
                 </T>
               </p>
-              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+              <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
                 <T id="services-crisis-communications.t9">
                 What does it mean to be crisis-ready?
                 </T>
@@ -274,13 +291,14 @@ export default function CrisisCommunicationsPage() {
                 </p>
               </div>
 
-              <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8 mt-8">
-                <p className="text-brand-teal text-xs font-medium mb-4">
+              <aside className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6 md:p-8 mt-8">
+                <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
+                  <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                   <T id="services-crisis-communications.t14">
                   The Crisis Response Penalty
                   </T>
                 </p>
-                <blockquote className="border-l-[3px] border-brand-gold pl-5 font-heading font-black text-navy text-lg md:text-xl leading-snug">
+                <blockquote className="border-l-[3px] border-brand-gold pl-5 font-heading text-navy text-lg md:text-xl leading-snug">
                   <T id="services-crisis-communications.t15">
                   &ldquo;When organisations fail to respond effectively in the
                   right timeline, the longer you wait, the more you lose
@@ -319,14 +337,15 @@ export default function CrisisCommunicationsPage() {
       </section>
 
       {/* The first 15 minutes - single column section */}
-      <section className="bg-off-white py-16 md:py-24">
+      <section className="py-16 md:py-24">
         <div className="max-w-4xl mx-auto px-6">
-          <p className="text-brand-gold text-xs font-medium mb-4">
+          <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+            <span className="h-px w-8 bg-current opacity-50" aria-hidden />
             <T id="services-crisis-communications.t19">
             Urgent timeframe
             </T>
           </p>
-          <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+          <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
             <T id="services-crisis-communications.t20">
             The first 15 minutes
             </T>
@@ -356,8 +375,9 @@ export default function CrisisCommunicationsPage() {
             </p>
           </div>
 
-          <aside className="rounded-lg border border-brand-border bg-white p-6 md:p-8 mt-10">
-            <p className="text-brand-teal text-xs font-medium mb-5">
+          <aside className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6 md:p-8 mt-10">
+            <p className="mb-5 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
+              <span className="h-px w-8 bg-current opacity-50" aria-hidden />
               <T id="services-crisis-communications.t24">
               Common first-response failures
               </T>
@@ -408,7 +428,8 @@ export default function CrisisCommunicationsPage() {
             </div>
 
             <div className="mt-6 pt-6 border-t border-brand-border">
-              <p className="text-brand-gold text-xs font-medium mb-3">
+              <p className="mb-3 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="services-crisis-communications.t31">
                 What better looks like
                 </T>
@@ -439,14 +460,15 @@ export default function CrisisCommunicationsPage() {
         disclaimer="Confidential and reviewed by a crisis adviser."
       />
 
-      <section className="bg-off-white py-16 md:py-24">
+      <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+          <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+            <span className="h-px w-8 bg-current opacity-50" aria-hidden />
             <T id="services-crisis-communications.t33">
             What serious organisations expect
             </T>
           </p>
-          <h2 className="font-heading font-black text-navy text-3xl mb-6">
+          <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
             <T id="services-crisis-communications.t34">
             What serious organisations expect from crisis communications counsel
             </T>
@@ -468,9 +490,9 @@ export default function CrisisCommunicationsPage() {
             ].map((item) => (
               <div
                 key={item.title}
-                className="rounded-lg border border-brand-border bg-white p-6"
+                className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6"
               >
-                <h3 className="font-heading font-black text-navy text-xl mb-3">
+                <h3 className="font-heading text-navy text-2xl mb-3">
                   {item.title}
                 </h3>
                 <p className="text-charcoal text-[15px] leading-relaxed">
@@ -483,9 +505,9 @@ export default function CrisisCommunicationsPage() {
       </section>
 
       {/* Three ways CRC Public Relations supports organisations through crisis */}
-      <section className="bg-off-white py-16 md:py-24">
+      <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="font-heading font-black text-navy text-3xl mb-6">
+          <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
             <T id="services-crisis-communications.t35">
             Three ways we support you through crisis
             </T>
@@ -493,7 +515,7 @@ export default function CrisisCommunicationsPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-10">
             <div>
-              <h3 className="font-heading font-black text-navy text-xl mb-3">
+              <h3 className="font-heading text-navy text-2xl mb-3">
                 <T id="services-crisis-communications.t36">
                 Crisis preparedness, before it happens
                 </T>
@@ -522,7 +544,7 @@ export default function CrisisCommunicationsPage() {
             </div>
 
             <div>
-              <h3 className="font-heading font-black text-navy text-xl mb-3">
+              <h3 className="font-heading text-navy text-2xl mb-3">
                 <T id="services-crisis-communications.t39">
                 Active crisis response, when it is happening now
                 </T>
@@ -548,7 +570,7 @@ export default function CrisisCommunicationsPage() {
             </div>
 
             <div>
-              <h3 className="font-heading font-black text-navy text-xl mb-3">
+              <h3 className="font-heading text-navy text-2xl mb-3">
                 <T id="services-crisis-communications.t42">
                 Post-crisis recovery, rebuilding what matters
                 </T>
@@ -569,8 +591,8 @@ export default function CrisisCommunicationsPage() {
 
           {/* Urgent callout - below the three paragraphs */}
           <div className="max-w-3xl mx-auto mt-16">
-            <div className="bg-white border-2 border-brand-gold rounded-lg p-6">
-              <h3 className="font-heading font-black text-navy text-xl mb-3">
+            <div className="rounded-[1.5rem] border-2 border-brand-gold bg-warm-white/70 backdrop-blur p-6">
+              <h3 className="font-heading text-navy text-2xl mb-3">
                 <T id="services-crisis-communications.t44">
                 Facing a crisis right now?
                 </T>
@@ -585,7 +607,7 @@ export default function CrisisCommunicationsPage() {
               </p>
               <a
                 href="tel:1300182186"
-                className="block w-full text-center bg-brand-gold text-navy font-heading font-black text-xs rounded-[4px] px-8 py-4 hover:bg-gold-light transition"
+                className="block w-full rounded-full bg-brand-gold px-8 py-4 text-center font-sans text-sm font-semibold text-navy shadow-lg shadow-brand-gold/20 transition-colors hover:bg-gold-light"
               >
                 <T id="services-crisis-communications.t46">
                 Call 1300 182 186 now

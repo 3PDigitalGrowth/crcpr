@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Plus } from "lucide-react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { siteConfig } from "@/config/site";
+import { bind } from "@/components/editable";
 
 const serif = "font-[family-name:var(--font-display)]";
 
@@ -19,6 +20,10 @@ interface FaqV2Props {
 export function FaqV2({ items = siteConfig.faqs }: FaqV2Props) {
   const [open, setOpen] = useState<number | null>(0);
   const reduce = useReducedMotion();
+
+  // Inline-editor binding is only valid when this section renders the full
+  // FAQ list from siteConfig (indexes must line up with the stored array).
+  const bindable = items === siteConfig.faqs;
 
   return (
     <div className="border-t border-navy/12">
@@ -37,7 +42,11 @@ export function FaqV2({ items = siteConfig.faqs }: FaqV2Props) {
                   isOpen ? "text-link-teal" : ""
                 }`}
               >
-                {faq.question}
+                {bindable ? (
+                  <span {...bind(`faqs.${i}.question`)}>{faq.question}</span>
+                ) : (
+                  faq.question
+                )}
               </span>
               <span
                 className={`flex size-9 shrink-0 items-center justify-center rounded-full border transition-all duration-300 ${
@@ -61,7 +70,11 @@ export function FaqV2({ items = siteConfig.faqs }: FaqV2Props) {
                   className="overflow-hidden"
                 >
                   <p className="max-w-3xl pb-7 pr-12 text-[15px] leading-relaxed text-text-body">
-                    {faq.answer}
+                    {bindable ? (
+                      <span {...bind(`faqs.${i}.answer`)}>{faq.answer}</span>
+                    ) : (
+                      faq.answer
+                    )}
                   </p>
                 </motion.div>
               )}

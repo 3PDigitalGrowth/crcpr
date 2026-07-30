@@ -308,7 +308,7 @@ export function ReputationAssessment({ embedded = false }: { embedded?: boolean 
   if (phase === "results" || phase === "capture") {
     return (
       <section
-        className={embedded ? "scroll-mt-24" : "bg-white py-16 scroll-mt-24"}
+        className={embedded ? "scroll-mt-24" : "py-16 md:py-24 scroll-mt-24"}
         id="reputation-assessment"
       >
         <div className={embedded ? "max-w-none" : "max-w-3xl mx-auto px-6"}>
@@ -319,23 +319,24 @@ export function ReputationAssessment({ embedded = false }: { embedded?: boolean 
               }`}
               aria-hidden={!isUnlocked}
             >
-              <div className="rounded-[28px] border border-brand-border bg-off-white p-8 md:p-10">
+              <div className="rounded-[1.75rem] border border-brand-border bg-warm-white/70 backdrop-blur p-8 md:p-10">
                 <div className="text-center mb-12">
-                  <p className="text-brand-teal text-xs font-medium">
+                  <p className="font-sans inline-flex items-center justify-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
+                    <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                     Your results
                   </p>
-                  <h2 className="font-heading font-black text-navy text-3xl mt-3">
+                  <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mt-3">
                     Reputation Vulnerability Score
                   </h2>
                   <div
-                    className={`inline-flex items-center gap-3 mt-6 px-8 py-4 rounded-lg ${rating.bgColor}`}
+                    className={`inline-flex items-center gap-3 mt-6 px-8 py-4 rounded-full ${rating.bgColor}`}
                   >
-                    <span className="font-heading font-black text-5xl text-navy">
+                    <span className="font-heading text-5xl text-navy">
                       {totalScore}
                     </span>
                     <span className="text-charcoal-mid text-sm">/40</span>
                     <span
-                      className={`font-heading font-black text-lg ${rating.color}`}
+                      className={`font-heading text-lg ${rating.color}`}
                     >
                       {rating.label}
                     </span>
@@ -350,13 +351,13 @@ export function ReputationAssessment({ embedded = false }: { embedded?: boolean 
                     return (
                       <div
                         key={cat}
-                        className="rounded-xl border border-brand-border bg-white p-4"
+                        className="rounded-xl border border-brand-border bg-warm-white/70 backdrop-blur p-4"
                       >
                         <div className="flex items-center justify-between gap-4 mb-3">
                           <p className="text-[11px] sm:text-xs font-medium text-charcoal-mid">
                             {cat}
                           </p>
-                          <p className="text-sm font-heading font-black text-navy whitespace-nowrap">
+                          <p className="text-sm font-heading text-navy whitespace-nowrap">
                             {catScore}/{maxCatScore}
                           </p>
                         </div>
@@ -378,8 +379,8 @@ export function ReputationAssessment({ embedded = false }: { embedded?: boolean 
 
             {!isUnlocked ? (
               <div className="absolute inset-0 flex items-center justify-center p-4 md:p-8">
-                <div className="bg-white/95 backdrop-blur-md border border-brand-border rounded-[24px] p-8 max-w-md w-full shadow-[0_20px_60px_rgba(10,22,40,0.18)]">
-                  <h3 className="font-heading font-black text-navy text-xl text-center">
+                <div className="bg-warm-white/90 backdrop-blur-md border border-brand-border rounded-[1.75rem] p-8 max-w-md w-full shadow-[0_20px_60px_rgba(10,22,40,0.18)]">
+                  <h3 className="font-heading text-navy text-xl text-center">
                     Unlock your full report
                   </h3>
                   <p className="text-charcoal-mid text-sm text-center mt-2">
@@ -395,7 +396,7 @@ export function ReputationAssessment({ embedded = false }: { embedded?: boolean 
                       placeholder="First name"
                       value={firstName}
                       onChange={(e) => setFirstName(e.target.value)}
-                      className="w-full border border-brand-border rounded-[4px] px-4 py-3 text-sm font-sans text-charcoal placeholder:text-charcoal-mid/50 focus:outline-none focus:border-brand-gold transition mb-3"
+                      className="w-full rounded-xl border border-brand-border bg-white px-4 py-3 text-sm font-sans text-charcoal placeholder:text-charcoal-mid/50 focus:outline-none focus:ring-2 focus:ring-brand-gold/30 focus:border-brand-gold/60 transition mb-3"
                     />
                     <input
                       type="email"
@@ -404,7 +405,7 @@ export function ReputationAssessment({ embedded = false }: { embedded?: boolean 
                       placeholder="Work email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full border border-brand-border rounded-[4px] px-4 py-3 text-sm font-sans text-charcoal placeholder:text-charcoal-mid/50 focus:outline-none focus:border-brand-gold transition mb-3"
+                      className="w-full rounded-xl border border-brand-border bg-white px-4 py-3 text-sm font-sans text-charcoal placeholder:text-charcoal-mid/50 focus:outline-none focus:ring-2 focus:ring-brand-gold/30 focus:border-brand-gold/60 transition mb-3"
                     />
                     {formState.status === "error" && (
                       <p className="text-sm text-red-600 mb-3">
@@ -414,7 +415,7 @@ export function ReputationAssessment({ embedded = false }: { embedded?: boolean 
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="bg-brand-gold text-navy font-heading font-black text-sm w-full py-4 rounded-[4px] hover:bg-gold-light transition disabled:opacity-60"
+                      className="bg-brand-gold text-navy font-sans font-semibold text-sm w-full py-4 rounded-full shadow-lg shadow-brand-gold/20 transition-colors hover:bg-gold-light disabled:opacity-60"
                     >
                       {isSubmitting
                         ? "Unlocking..."
@@ -454,15 +455,16 @@ export function ReputationAssessment({ embedded = false }: { embedded?: boolean 
 
   return (
     <section
-      className={embedded ? "scroll-mt-24" : "bg-white py-16 scroll-mt-24"}
+      className={embedded ? "scroll-mt-24" : "py-16 md:py-24 scroll-mt-24"}
       id="reputation-assessment"
     >
       <div className={embedded ? "max-w-none" : "max-w-3xl mx-auto px-6"}>
         <div className="text-center mb-8">
-          <p className="text-brand-teal text-xs font-medium">
+          <p className="font-sans inline-flex items-center justify-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
+            <span className="h-px w-8 bg-current opacity-50" aria-hidden />
             Free assessment
           </p>
-          <h2 className="font-heading font-black text-navy text-3xl mt-3">
+          <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mt-3">
             Reputation Vulnerability Assessment
           </h2>
           <p className="text-charcoal-mid text-sm mt-2">
@@ -486,10 +488,11 @@ export function ReputationAssessment({ embedded = false }: { embedded?: boolean 
         </div>
 
         <div className="mb-4">
-          <p className="text-brand-teal text-xs font-medium mb-2">
+          <p className="mb-2 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
+            <span className="h-px w-8 bg-current opacity-50" aria-hidden />
             {currentQ.category}
           </p>
-          <h3 className="font-heading font-black text-navy text-xl">
+          <h3 className="font-heading text-navy text-2xl">
             {currentQ.text}
           </h3>
         </div>
@@ -502,10 +505,10 @@ export function ReputationAssessment({ embedded = false }: { embedded?: boolean 
                 key={oi}
                 type="button"
                 onClick={() => selectAnswer(currentIndex, opt.score)}
-                className={`w-full text-left px-6 py-4 rounded-lg border transition flex items-center justify-between gap-4 ${
+                className={`w-full text-left px-6 py-4 rounded-xl border transition flex items-center justify-between gap-4 ${
                   isSelected
                     ? "border-brand-gold bg-gold-light/50"
-                    : "border-brand-border hover:border-brand-gold/50 bg-white"
+                    : "border-brand-border bg-warm-white/60 backdrop-blur hover:border-brand-gold/50"
                 }`}
               >
                 <span className="text-charcoal text-[15px]">{opt.label}</span>
@@ -532,7 +535,7 @@ export function ReputationAssessment({ embedded = false }: { embedded?: boolean 
             <button
               type="button"
               onClick={() => setPhase("results")}
-              className="bg-brand-gold text-navy font-heading font-black text-sm rounded-[4px] px-8 py-3 hover:bg-gold-light transition"
+              className="bg-brand-gold text-navy font-sans font-semibold text-sm rounded-full px-8 py-3 shadow-lg shadow-brand-gold/20 transition-colors hover:bg-gold-light"
             >
               View results →
             </button>

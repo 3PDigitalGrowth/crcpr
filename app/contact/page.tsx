@@ -27,8 +27,8 @@ export default function ContactPage({
         ctaLabel="Urgent crisis support"
         ctaHref="/services/crisis-communications"
         heroImage={{
-          src: "/images/contact/hero.webp",
-          alt: "Welcoming entrance to a professional Brisbane office building in late afternoon light",
+          src: "/images/contact/editorial-desk.png",
+          alt: "Warm consulting desk with a classic telephone, notebook, and cup of tea in soft window light",
         }}
       />
 
@@ -58,16 +58,17 @@ export default function ContactPage({
         variant="off-white"
       />
 
-      <section className="bg-white py-16 md:py-20">
+      <section className="py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_340px] gap-10 items-start">
             <div className="max-w-3xl">
-              <p className="text-brand-gold text-xs font-medium mb-4">
+              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="contact.t1">
                 How most enquiries start
                 </T>
               </p>
-              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+              <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
                 <T id="contact.t2">
                 Most enquiries fall into one of three categories.
                 </T>
@@ -98,7 +99,7 @@ export default function ContactPage({
                 ].map((item) => (
                   <div
                     key={item.title}
-                    className="rounded-xl border border-brand-border bg-off-white p-6"
+                    className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6"
                   >
                     <p className="font-sans font-semibold text-navy text-base mb-2">
                       {item.title}
@@ -111,8 +112,9 @@ export default function ContactPage({
               </div>
             </div>
 
-            <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium mb-5">
+            <aside className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6 md:p-8">
+              <p className="mb-5 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="contact.t4">
                 Best first step
                 </T>

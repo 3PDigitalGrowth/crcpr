@@ -18,7 +18,7 @@ export function PacificCaseStudies({ items }: PacificCaseStudiesProps) {
       {items.map((study) => (
         <article
           key={study.id}
-          className="flex flex-col bg-white border-t-4 border-brand-gold border-x border-b border-brand-border rounded-b-lg overflow-hidden"
+          className="flex flex-col rounded-[1.5rem] border-t-4 border-brand-gold border-x border-b border-brand-border bg-warm-white/70 backdrop-blur overflow-hidden"
         >
           <div className="relative w-full aspect-[4/3] overflow-hidden">
             <Image
@@ -31,16 +31,17 @@ export function PacificCaseStudies({ items }: PacificCaseStudiesProps) {
             />
           </div>
           <div className="flex flex-col flex-1 p-6">
-            <p className="text-brand-gold text-xs font-medium mb-2">
+            <p className="mb-2 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+              <span className="h-px w-8 bg-current opacity-50" aria-hidden />
               {study.sector}
             </p>
-            <h3 className="font-heading font-black text-navy text-xl leading-tight mb-4">
+            <h3 className="font-heading text-navy text-2xl leading-tight mb-4">
               {study.headline}
             </h3>
             <p className="text-charcoal text-sm leading-relaxed">
               {study.body}
             </p>
-            <p className="text-charcoal-mid text-xs italic mt-5 pt-4 border-t border-brand-border">
+            <p className="text-charcoal-mid text-xs mt-5 pt-4 border-t border-brand-border">
               Anonymised to protect client confidentiality
             </p>
           </div>

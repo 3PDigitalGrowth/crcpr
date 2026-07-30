@@ -66,7 +66,7 @@ export default function LyallMercerPage() {
             imagePosition="left"
           >
             <div>
-              <h2 className="text-navy font-heading font-black text-2xl md:text-3xl">
+              <h2 className="text-navy font-heading text-3xl md:text-4xl leading-[1.05] tracking-[-0.02em]">
                 <T id="about-lyall-mercer.t1">
                 The journalist who became a trusted crisis communications
                 adviser
@@ -98,12 +98,19 @@ export default function LyallMercerPage() {
       <section className="bg-white py-24 border-t border-brand-border">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-16">
           <div className="lg:col-span-1">
-            <PortraitPlaceholder
-              size="lg"
-              initials={undefined}
-              imageSrc={siteConfig.lyall.portraitSrc}
-              imageAlt={siteConfig.lyall.fullName}
-            />
+            <div className="relative w-fit">
+              <div
+                className="absolute -inset-3 rounded-[2rem] border border-brand-gold/35"
+                aria-hidden
+              />
+              <PortraitPlaceholder
+                size="lg"
+                initials={undefined}
+                imageSrc={siteConfig.lyall.portraitSrc}
+                imageAlt={siteConfig.lyall.fullName}
+                className="relative"
+              />
+            </div>
             <div className="mt-8">
               <h4 className="text-xs font-sans font-medium text-charcoal-mid mb-3">
                 <T id="about-lyall-mercer.t4">
@@ -141,7 +148,7 @@ export default function LyallMercerPage() {
             </p>
 
             <blockquote className="border-l-[3px] border-brand-gold pl-6 py-4 mt-8 bg-off-white rounded-r-lg">
-              <p className="italic text-charcoal text-lg">
+              <p className="font-heading text-navy text-xl md:text-2xl leading-snug">
                 {siteConfig.lyall.quote}
               </p>
               <footer className="text-brand-gold font-medium text-sm mt-2">
@@ -156,19 +163,20 @@ export default function LyallMercerPage() {
 
       <section className="bg-warm-white py-16">
         <div className="max-w-3xl mx-auto px-6">
-          <div className="bg-white border border-brand-border rounded-lg p-8 my-10 shadow-sm shadow-navy/5">
-            <p className="text-brand-teal text-xs font-medium mb-3">
+          <div className="bg-white border border-brand-border rounded-[1.5rem] p-8 my-10 shadow-sm shadow-navy/5">
+            <p className="mb-3 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
+              <span className="h-px w-8 bg-current opacity-50" aria-hidden />
               <T id="about-lyall-mercer.t8">
               Lyall&apos;s signature framework
               </T>
             </p>
-            <h2 className="font-heading font-black text-navy text-3xl mb-4">
+            <h2 className="font-heading text-navy text-4xl mb-4 leading-[1.05] tracking-[-0.02em]">
               <T id="about-lyall-mercer.t9">
               The 15 Minutes Principle
               </T>
             </h2>
             <blockquote className="border-l-4 border-brand-gold pl-5 mb-5">
-              <p className="text-navy text-lg italic leading-relaxed">
+              <p className="font-heading text-navy text-xl md:text-2xl leading-snug">
                 <T id="about-lyall-mercer.t10">
                 &ldquo;You have 15 minutes to respond to an emerging crisis before you start to lose control of the message. After that window closes, you&apos;re no longer shaping the story; you&apos;re responding to it.&rdquo;
                 </T>
@@ -187,7 +195,7 @@ export default function LyallMercerPage() {
           </div>
 
           <div className="my-10">
-            <h2 className="font-heading font-black text-navy text-2xl mb-6"><T id="about-lyall-mercer.t15">Areas of specialist expertise</T></h2>
+            <h2 className="font-heading text-navy text-3xl mb-6"><T id="about-lyall-mercer.t15">Areas of specialist expertise</T></h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
                 { area: "Crisis Communications", desc: "Crisis counsel across every sector and severity level, from governance failures to safety incidents, media exposés, and social media firestorms." },
@@ -197,8 +205,8 @@ export default function LyallMercerPage() {
                 { area: "Pacific Communications", desc: "Cross-cultural communications, government relations, and crisis response across the Pacific Islands. The only Australian PR firm with sustained practice in this region." },
                 { area: "Media Training", desc: "Spokesperson preparation and hostile media workshops delivered in partnership with television and radio journalists. Clients include executives, politicians, and sporting figures." },
               ].map(({ area, desc }) => (
-                <div key={area} className="bg-off-white border border-brand-border rounded-lg p-5">
-                  <p className="font-heading font-black text-navy text-sm mb-2">{area}</p>
+                <div key={area} className="bg-off-white border border-brand-border rounded-[1.5rem] p-5">
+                  <p className="font-heading text-navy text-sm mb-2">{area}</p>
                   <p className="text-charcoal-mid text-sm leading-relaxed">{desc}</p>
                 </div>
               ))}
@@ -206,7 +214,7 @@ export default function LyallMercerPage() {
           </div>
 
           <div className="my-10">
-            <h2 className="font-heading font-black text-navy text-2xl mb-4"><T id="about-lyall-mercer.t16">Speaking and training</T></h2>
+            <h2 className="font-heading text-navy text-3xl mb-4"><T id="about-lyall-mercer.t16">Speaking and training</T></h2>
             <p className="text-charcoal text-base leading-relaxed mb-4">
               <T id="about-lyall-mercer.t13">
               Lyall is a sought-after keynote speaker and workshop facilitator on crisis communications, reputation management, and media strategy. He has delivered programmes across Australia, the USA, and Canada, including at the Australian Catholic Bishops Conference.

@@ -85,7 +85,7 @@ function CTAColumn() {
       }}
     >
       <ColumnHeader>Get in touch</ColumnHeader>
-      <p className="text-sm font-heading font-black text-white mb-2">
+      <p className="text-sm font-heading text-white mb-2">
         Talk to an experienced adviser
       </p>
       <p className="text-xs text-white/40 leading-relaxed">
@@ -95,13 +95,13 @@ function CTAColumn() {
       <div className="flex-1" />
       <a
         href={siteConfig.phone.href}
-        className="block font-heading font-black text-brand-gold text-lg mb-2"
+        className="block font-heading text-brand-gold text-xl mb-2"
       >
         {siteConfig.phone.display}
       </a>
       <Link
         href="/contact"
-        className="block w-full bg-brand-gold text-navy font-bold text-xs text-center py-2.5 rounded-[3px] hover:bg-gold-light transition-colors"
+        className="block w-full rounded-full bg-brand-gold px-4 py-3 text-center font-sans text-sm font-semibold text-navy shadow-lg shadow-brand-gold/20 transition-colors hover:bg-gold-light"
       >
         Book a consultation &rarr;
       </Link>
@@ -232,7 +232,7 @@ function MobileDrawer({
 
   return (
     <div
-      className="bg-[#0F1F36] overflow-y-auto"
+      className="bg-[#0F1F36]/95 backdrop-blur-xl overflow-y-auto"
       style={{ maxHeight: "calc(100vh - 56px)" }}
     >
       <div>
@@ -306,14 +306,14 @@ function MobileDrawer({
       <div className="px-4 py-5 border-t border-brand-gold/[0.15]">
         <a
           href={siteConfig.phone.href}
-          className="block font-heading font-black text-brand-gold text-xl mb-3"
+          className="block font-heading text-brand-gold text-xl mb-3"
         >
           {siteConfig.phone.display}
         </a>
         <Link
           href="/contact"
           onClick={onClose}
-          className="block w-full bg-brand-gold text-navy font-heading font-black text-xs text-center py-3 rounded"
+          className="block w-full rounded-full bg-brand-gold py-3.5 text-center font-sans text-sm font-semibold text-navy shadow-lg shadow-brand-gold/20 transition-colors hover:bg-gold-light"
         >
           Book a consultation &rarr;
         </Link>
@@ -396,17 +396,17 @@ export function Nav() {
   };
 
   const navItemBase =
-    "relative text-sm font-sans transition-colors duration-150 pb-1";
+    "relative text-sm font-sans font-semibold transition-colors duration-150 pb-1";
   const navItemActive = "text-white border-b-2 border-brand-gold";
   const navItemIdle = "text-white/70 hover:text-white";
 
   return (
     <div
       ref={navRef}
-      className={`sticky top-0 z-50 transition-all duration-300 ${
+      className={`sticky top-0 z-50 backdrop-blur-xl transition-all duration-300 ${
         scrolled
-          ? "bg-navy/80 backdrop-blur-xl shadow-lg shadow-navy/20"
-          : "bg-navy"
+          ? "bg-navy/85 shadow-lg shadow-navy/20"
+          : "bg-navy/95"
       }`}
     >
       {/* Desktop nav */}
@@ -476,13 +476,13 @@ export function Nav() {
           <div className="flex items-center gap-5 shrink-0">
             <a
               href={siteConfig.phone.href}
-              className="font-heading font-black text-brand-gold text-sm hover:opacity-90 transition-opacity"
+              className="font-heading text-brand-gold text-base hover:opacity-90 transition-opacity"
             >
               {siteConfig.phone.display}
             </a>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center bg-brand-gold text-navy font-heading font-black text-xs rounded-[4px] px-5 py-2.5 hover:bg-gold-light transition-colors"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-gold px-7 py-3.5 font-sans text-sm font-semibold text-navy shadow-lg shadow-brand-gold/20 transition-colors hover:bg-gold-light"
             >
               Book a consultation
             </Link>
@@ -511,7 +511,7 @@ export function Nav() {
           <div className="flex items-center gap-2">
             <a
               href={siteConfig.phone.href}
-              className="w-9 h-9 bg-brand-gold/10 rounded flex items-center justify-center"
+              className="w-9 h-9 bg-brand-gold/10 rounded-full flex items-center justify-center"
               aria-label={`Call ${siteConfig.phone.display}`}
             >
               <Phone className="w-4 h-4 text-brand-gold" />
@@ -538,7 +538,7 @@ export function Nav() {
 
       {/* Desktop mega panels */}
       <div
-        className={`hidden md:block absolute left-0 right-0 top-full bg-[#0F1F36] border-t border-brand-gold/[0.15] z-50 transition-opacity duration-150 ${
+        className={`hidden md:block absolute left-0 right-0 top-full bg-[#0F1F36]/95 backdrop-blur-xl border-t border-brand-gold/[0.15] z-50 transition-opacity duration-150 ${
           activePanel === "services"
             ? "opacity-100"
             : "opacity-0 pointer-events-none"

@@ -86,8 +86,8 @@ export default function SchoolsFaithPage() {
         ctaLabel="Book a consultation"
         ctaHref="/contact"
         heroImage={{
-          src: "/images/clients/schools-faith/hero.webp",
-          alt: "Australian independent school heritage building with courtyard and trees in dappled morning light, no people",
+          src: "/images/clients/schools-faith/editorial-campus.png",
+          alt: "Australian independent school heritage building with modern glass wing and gum trees in morning light",
         }}
       />
 
@@ -97,7 +97,7 @@ export default function SchoolsFaithPage() {
       />
 
       {/* Opening */}
-      <section className="bg-white py-16 md:py-24">
+      <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <ImageTextRow
             imageSrc="/images/clients/schools-faith/mid-chapel.webp"
@@ -105,12 +105,13 @@ export default function SchoolsFaithPage() {
             imagePosition="left"
           >
             <div className="max-w-3xl lg:max-w-none">
-              <p className="text-brand-gold text-xs font-medium mb-4">
+              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="clients-schools-faith.t1">
                 Sector reality
                 </T>
               </p>
-              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+              <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
                 <T id="clients-schools-faith.t2">
                 In this sector, communication is judged by care as much as
                 control.
@@ -160,8 +161,9 @@ export default function SchoolsFaithPage() {
                   </T>
                 </p>
               </div>
-              <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8 mt-8">
-                <p className="text-brand-teal text-xs font-medium mb-5">
+              <aside className="rounded-[1.5rem] border border-brand-border bg-off-white p-6 md:p-8 mt-8">
+                <p className="mb-5 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
+                  <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                   <T id="clients-schools-faith.t7">
                   What makes this different
                   </T>
@@ -220,12 +222,13 @@ export default function SchoolsFaithPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_340px] gap-10 items-start">
             <div className="max-w-3xl">
-              <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="clients-schools-faith.t14">
                 First-hour judgment
                 </T>
               </p>
-              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+              <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
                 <T id="clients-schools-faith.t15">
                 What schools usually need help deciding first
                 </T>
@@ -247,7 +250,7 @@ export default function SchoolsFaithPage() {
                 ].map((question) => (
                   <div
                     key={question}
-                    className="rounded-lg border border-brand-border bg-white p-6"
+                    className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6"
                   >
                     <p className="font-sans font-semibold text-navy text-base leading-relaxed">
                       {question}
@@ -257,8 +260,9 @@ export default function SchoolsFaithPage() {
               </div>
             </div>
 
-            <aside className="rounded-lg border border-brand-border bg-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium mb-5">
+            <aside className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6 md:p-8">
+              <p className="mb-5 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="clients-schools-faith.t17">
                 Why the first hour matters
                 </T>
@@ -291,12 +295,13 @@ export default function SchoolsFaithPage() {
       <section className="bg-off-white py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl">
-            <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+            <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+              <span className="h-px w-8 bg-current opacity-50" aria-hidden />
               <T id="clients-schools-faith.t19">
               How we support
               </T>
             </p>
-            <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+            <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
               <T id="clients-schools-faith.t20">
               How CRC Public Relations supports schools and faith-based organisations
               </T>
@@ -331,14 +336,14 @@ export default function SchoolsFaithPage() {
             ].map((item) => (
               <div
                 key={item.title}
-                className="rounded-[28px] border border-brand-border bg-white p-7 md:p-8 shadow-[0_10px_30px_rgba(15,23,42,0.04)]"
+                className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-7 md:p-8 shadow-[0_10px_30px_rgba(15,23,42,0.04)]"
               >
                 <div className="inline-flex items-center rounded-full bg-off-white px-3 py-1 text-[11px] font-medium text-brand-teal">
                   <T id="clients-schools-faith.t22">
                   Support area
                   </T>
                 </div>
-                <h3 className="font-heading font-black text-navy text-xl leading-snug mt-4 mb-4">
+                <h3 className="font-heading text-navy text-2xl leading-snug mt-4 mb-4">
                   {item.title}
                 </h3>
                 <p className="text-charcoal text-[15px] leading-relaxed">
@@ -351,10 +356,10 @@ export default function SchoolsFaithPage() {
       </section>
 
       {/* Testimonial */}
-      <section className="bg-white py-16 md:py-24">
+      <section className="py-16 md:py-24">
         <div className="max-w-3xl mx-auto px-6">
-          <blockquote className="border-l-4 border-brand-gold pl-6">
-            <p className="text-charcoal text-[15px] leading-relaxed italic">
+          <blockquote className="border-l-[3px] border-brand-gold pl-5">
+            <p className="font-heading text-navy text-xl md:text-2xl leading-snug">
               <T id="clients-schools-faith.t23">
               &ldquo;CRC Public Relations has developed a crisis
               communications plan for Christian schools and has assisted

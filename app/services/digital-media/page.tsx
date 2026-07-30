@@ -102,33 +102,34 @@ export default function DigitalMediaPage() {
             sizes="100vw"
             className="object-cover object-center"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[rgba(26,43,74,0.72)] via-[rgba(26,43,74,0.92)] to-[#1A2B4A]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[rgba(16,28,52,0.72)] via-[rgba(16,28,52,0.92)] to-[#1A2B4A]" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-20 md:pt-24 pb-12 md:pb-14">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-12 items-end">
             <div className="max-w-4xl">
-              <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+              <p className="mb-5 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="services-digital-media.t1">
                 Digital media and online reputation
                 </T>
               </p>
-              <h1 className="font-heading font-black text-white text-4xl md:text-[56px] leading-[1.02] max-w-4xl">
+              <h1 className="font-heading text-[3rem] leading-[0.98] tracking-[-0.02em] text-white [text-shadow:0_2px_18px_rgba(0,0,0,0.35)] sm:text-6xl lg:text-[4.5rem] max-w-4xl">
                 <T id="services-digital-media.t2">
                 The digital media age puts more pressure on your reputation.
                 </T>
               </h1>
-              <p className="text-white/75 text-lg leading-relaxed mt-6 max-w-2xl">
+              <p className="mt-7 max-w-2xl text-lg leading-relaxed text-white/80">
                 <T id="services-digital-media.t3">
                 Your &lsquo;owned media&rsquo; &mdash; digital and social media
                 channels &mdash; carries your messages and news. It&apos;s also
                 where reputations are increasingly won and lost.
                 </T>
               </p>
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mt-8">
+              <div className="mt-9 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs rounded-[4px] px-8 py-4 hover:bg-gold-light transition"
+                  className="inline-flex items-center gap-2 rounded-full bg-brand-gold px-7 py-3.5 font-sans text-sm font-semibold text-navy shadow-lg shadow-brand-gold/20 transition-colors hover:bg-gold-light"
                 >
                   <T id="services-digital-media.t4">
                   Book a consultation
@@ -136,21 +137,21 @@ export default function DigitalMediaPage() {
                 </Link>
                 <a
                   href={siteConfig.phone.href}
-                  className="text-brand-gold text-sm font-heading font-black hover:text-gold-light transition-colors"
+                  className="font-sans text-sm font-semibold text-brand-gold transition-colors hover:text-gold-light"
                 >
                   Or call {siteConfig.phone.display}
                 </a>
               </div>
             </div>
 
-            <div className="border border-white/10 bg-white/[0.03] rounded-lg p-6 backdrop-blur-[2px]">
-              <p className="text-white/35 text-xs mb-4"><T id="services-digital-media.t52">Direct strategic counsel</T></p>
+            <div className="v2-glass-dark rounded-[1.75rem] p-6">
+              <p className="mb-4 text-xs text-white/45"><T id="services-digital-media.t52">Direct strategic counsel</T></p>
               <div className="space-y-4">
                 <div>
-                  <p className="font-heading font-black text-brand-gold text-2xl">
+                  <p className="font-heading text-4xl leading-none text-brand-gold">
                     {siteConfig.stats.yearsTrading}
                   </p>
-                  <p className="text-white/60 text-sm">
+                  <p className="mt-2 text-sm text-white/60">
                     <T id="services-digital-media.t5">
                     Years serving organisations across Australia and the Pacific
                     </T>
@@ -158,10 +159,10 @@ export default function DigitalMediaPage() {
                 </div>
                 <div className="h-px bg-white/10" />
                 <div>
-                  <p className="font-heading font-black text-white text-lg">
+                  <p className="font-heading text-xl text-white">
                     {aside.title}
                   </p>
-                  <p className="text-white/60 text-sm leading-relaxed mt-1">
+                  <p className="mt-1 text-sm leading-relaxed text-white/60">
                     {aside.body}
                   </p>
                 </div>
@@ -176,12 +177,13 @@ export default function DigitalMediaPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-12 md:pt-14 pb-16 md:pb-20">
           <div className="max-w-3xl">
-            <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+            <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+              <span className="h-px w-8 bg-current opacity-50" aria-hidden />
               <T id="services-digital-media.t6">
               Why CRC Public Relations
               </T>
             </p>
-            <h2 className="font-heading font-black text-white text-3xl">
+            <h2 className="font-heading text-white text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em]">
               <T id="services-digital-media.t7">
               Online reputation management has a shorter fuse.
               </T>
@@ -192,15 +194,15 @@ export default function DigitalMediaPage() {
             {proofItems.map((item, __ti) => (
               <div
                 key={`${item.label}-${item.value}`}
-                className="border border-white/10 bg-white/[0.03] rounded-lg p-6"
+                className="v2-glass-dark rounded-[1.75rem] p-6"
               >
-                <p className="text-brand-gold text-xs font-medium mb-3">
+                <p className="mb-3 font-sans text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-gold">
                   <T id={`services-digital-media.proofItems.${__ti}.label`}>{item.label}</T>
                 </p>
-                <p className="font-heading font-black text-white text-2xl">
+                <p className="font-heading text-white text-2xl md:text-3xl">
                   <T id={`services-digital-media.proofItems.${__ti}.value`}>{item.value}</T>
                 </p>
-                <p className="text-sm leading-relaxed mt-3 text-white/60">
+                <p className="mt-2 text-sm leading-relaxed text-white/65">
                   <T id={`services-digital-media.proofItems.${__ti}.detail`}>{item.detail}</T>
                 </p>
               </div>
@@ -210,16 +212,17 @@ export default function DigitalMediaPage() {
       </section>
 
       {/* Opening section */}
-      <section className="bg-white py-16 md:py-24">
+      <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_360px] gap-10 items-start">
             <div className="max-w-3xl">
-              <p className="text-brand-gold text-xs font-medium mb-4">
+              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="services-digital-media.t8">
                 Digital reputation reality
                 </T>
               </p>
-              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+              <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
                 <T id="services-digital-media.t9">
                 Issues that can damage your reputation often break online
                 first.
@@ -267,8 +270,9 @@ export default function DigitalMediaPage() {
               </div>
             </div>
 
-            <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium mb-5">
+            <aside className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6 md:p-8">
+              <p className="mb-5 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="services-digital-media.t14">
                 What changes online
                 </T>
@@ -324,16 +328,17 @@ export default function DigitalMediaPage() {
         </div>
       </section>
 
-      <section className="bg-off-white py-16 md:py-24">
+      <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_340px] gap-10 items-start">
             <div className="max-w-3xl">
-              <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="services-digital-media.t21">
                 Early warning signs
                 </T>
               </p>
-              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+              <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
                 <T id="services-digital-media.t22">
                 How does it happen?
                 </T>
@@ -368,7 +373,7 @@ export default function DigitalMediaPage() {
                 ].map((item) => (
                   <div
                     key={item.title}
-                    className="rounded-lg border border-brand-border bg-white p-6"
+                    className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6"
                   >
                     <p className="font-sans font-semibold text-navy text-base mb-2">
                       {item.title}
@@ -381,8 +386,9 @@ export default function DigitalMediaPage() {
               </div>
             </div>
 
-            <aside className="rounded-lg border border-brand-border bg-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium mb-5">
+            <aside className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6 md:p-8">
+              <p className="mb-5 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="services-digital-media.t24">
                 Resilient organisations have
                 </T>
@@ -428,9 +434,9 @@ export default function DigitalMediaPage() {
       />
 
       {/* Digital communications services */}
-      <section className="bg-off-white py-16 md:py-24">
+      <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="font-heading font-black text-navy text-3xl mb-6">
+          <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
             <T id="services-digital-media.t28">
             Digital communications services
             </T>
@@ -438,7 +444,7 @@ export default function DigitalMediaPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
             <div>
-              <h3 className="font-heading font-black text-navy text-xl mb-3">
+              <h3 className="font-heading text-navy text-2xl mb-3">
                 <T id="services-digital-media.t29">
                 Online and social media management and monitoring
                 </T>
@@ -458,7 +464,7 @@ export default function DigitalMediaPage() {
             </div>
 
             <div>
-              <h3 className="font-heading font-black text-navy text-xl mb-3">
+              <h3 className="font-heading text-navy text-2xl mb-3">
                 <T id="services-digital-media.t31">
                 Social media strategy and policies
                 </T>
@@ -479,7 +485,7 @@ export default function DigitalMediaPage() {
             </div>
 
             <div>
-              <h3 className="font-heading font-black text-navy text-xl mb-3">
+              <h3 className="font-heading text-navy text-2xl mb-3">
                 <T id="services-digital-media.t33">
                 Digital crisis response
                 </T>
@@ -499,7 +505,7 @@ export default function DigitalMediaPage() {
             </div>
 
             <div>
-              <h3 className="font-heading font-black text-navy text-xl mb-3">
+              <h3 className="font-heading text-navy text-2xl mb-3">
                 <T id="services-digital-media.t35">
                 Content strategy
                 </T>
@@ -522,16 +528,17 @@ export default function DigitalMediaPage() {
       </section>
 
       {/* Digital reputation management is still reputation management */}
-      <section className="bg-white py-16 md:py-24">
+      <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.1fr)_360px] gap-10 items-start">
             <div className="max-w-3xl">
-              <p className="text-brand-gold text-xs font-medium mb-4">
+              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="services-digital-media.t37">
                 The difference
                 </T>
               </p>
-              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+              <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
                 <T id="services-digital-media.t38">
                 Reputation management for the digital age
                 </T>
@@ -578,8 +585,9 @@ export default function DigitalMediaPage() {
               </div>
             </div>
 
-            <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium mb-5">
+            <aside className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6 md:p-8">
+              <p className="mb-5 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="services-digital-media.t43">
                 What clients actually need
                 </T>
@@ -630,7 +638,8 @@ export default function DigitalMediaPage() {
               </div>
 
               <div className="mt-6 pt-6 border-t border-brand-border">
-                <p className="text-brand-gold text-xs font-medium mb-3">
+                <p className="mb-3 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+                  <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                   <T id="services-digital-media.t50">
                   Bottom line
                   </T>

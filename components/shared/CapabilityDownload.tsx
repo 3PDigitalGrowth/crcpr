@@ -6,7 +6,7 @@ export function CapabilityDownload() {
   const { available, fileName, requestUrl } = siteConfig.capabilityStatement;
 
   return (
-    <div className="bg-off-white border border-dashed border-brand-gold rounded-lg p-6 flex items-start gap-4">
+    <div className="rounded-[1.5rem] border border-dashed border-brand-gold bg-warm-white/70 p-6 backdrop-blur flex items-start gap-4">
       <FileText
         className="text-brand-gold shrink-0"
         size={28}
@@ -14,7 +14,7 @@ export function CapabilityDownload() {
         aria-hidden
       />
       <div>
-        <h4 className="font-heading font-black text-navy text-lg">
+        <h4 className="font-heading text-navy text-lg">
           {available
             ? "Download our Capability Statement"
             : "Request our Capability Statement"}
@@ -30,18 +30,18 @@ export function CapabilityDownload() {
               download
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs rounded-[4px] px-6 py-3 mt-4 hover:bg-gold-light transition"
+              className="inline-flex items-center gap-2 rounded-full bg-brand-gold px-7 py-3.5 font-sans text-sm font-semibold text-navy shadow-lg shadow-brand-gold/20 mt-4 transition-colors hover:bg-gold-light"
             >
               Download PDF →
             </a>
-            <p className="text-charcoal-mid text-xs italic mt-2">
+            <p className="text-charcoal-mid text-xs mt-2">
               No form required.
             </p>
           </>
         ) : (
           <Link
             href={requestUrl}
-            className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs rounded-[4px] px-6 py-3 mt-4 hover:bg-gold-light transition"
+            className="inline-flex items-center gap-2 rounded-full bg-brand-gold px-7 py-3.5 font-sans text-sm font-semibold text-navy shadow-lg shadow-brand-gold/20 mt-4 transition-colors hover:bg-gold-light"
           >
             Request capability statement →
           </Link>

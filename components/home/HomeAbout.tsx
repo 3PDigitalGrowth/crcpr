@@ -64,7 +64,7 @@ export function HomeAbout() {
 
             <AnimateIn delay={350}>
               <blockquote className="border-l-[3px] border-brand-gold pl-6 mt-8">
-                <p className="font-sans italic text-navy text-base leading-relaxed">
+                <p className="font-sans text-navy text-base leading-relaxed">
                   &ldquo;{siteConfig.lyall.quote}&rdquo;
                 </p>
                 <cite className="font-sans font-medium text-text-secondary text-sm mt-3 not-italic block">

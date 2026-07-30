@@ -130,6 +130,10 @@ export default function ServicesPage() {
           src: "/images/services/corporate-communications/hero.webp",
           alt: "Australian boardroom prepared for a leadership meeting in warm morning light",
         }}
+        heroVideo={{
+          src: "/images/services/hero-ambient.mp4",
+          poster: "/images/services/hero-poster.jpg",
+        }}
       />
 
       <PageProofStrip copyId="services"
@@ -137,16 +141,17 @@ export default function ServicesPage() {
         items={[...proofItems]}
       />
 
-      <section className="bg-white py-16 md:py-24">
+      <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_360px] gap-10 items-start">
             <div className="max-w-3xl">
-              <p className="text-brand-gold text-xs font-medium mb-4">
+              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="services.t1">
                 How we think about services
                 </T>
               </p>
-              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+              <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
                 <T id="services.t2">
                 Better judgement matters more than more activity.
                 </T>
@@ -179,8 +184,9 @@ export default function ServicesPage() {
               </div>
             </div>
 
-            <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium mb-5">
+            <aside className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6 md:p-8">
+              <p className="mb-5 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="services.t6">
                 What the right starting point solves
                 </T>
@@ -246,7 +252,7 @@ export default function ServicesPage() {
         variant="white"
       />
 
-      <section className="bg-white py-24">
+      <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => {
@@ -254,7 +260,7 @@ export default function ServicesPage() {
               return (
                 <div
                   key={service.slug}
-                  className="bg-off-white border border-brand-border/50 rounded-lg p-8"
+                  className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-8"
                 >
                   <Icon
                     className="text-brand-gold"
@@ -262,7 +268,7 @@ export default function ServicesPage() {
                     strokeWidth={1.75}
                     aria-hidden
                   />
-                  <h3 className="font-heading font-black text-navy text-xl mt-4">
+                  <h3 className="font-heading text-navy text-2xl mt-4">
                     {service.title}
                   </h3>
                   <p className="text-charcoal-mid text-sm leading-relaxed mt-3">
@@ -270,7 +276,7 @@ export default function ServicesPage() {
                   </p>
                   <Link
                     href={`/services/${service.slug}`}
-                    className="text-brand-gold font-sans font-medium text-sm mt-5 inline-block hover:opacity-80 transition"
+                    className="text-brand-gold font-sans font-semibold text-sm mt-5 inline-block hover:opacity-80 transition"
                   >
                     <T id="services.t13">
                     Learn more →

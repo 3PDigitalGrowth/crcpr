@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
-import { AlternativeHome } from "@/components/alternative/AlternativeHome";
+import { RedesignHomeV2 } from "@/components/redesign/v2/RedesignHomeV2";
 
 const homepageFaqs = siteConfig.faqs;
 
@@ -74,7 +74,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <AlternativeHome />
+      <RedesignHomeV2 />
     </>
   );
 }

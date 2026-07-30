@@ -20,6 +20,16 @@ html {
   }
 }
 
+/* Instrument Serif ships a single 400 roman face. Legacy markup still carries
+   font-black/font-bold on headings; force the true weight and forbid the
+   browser from synthesising bold or oblique (no faux-cursive, ever). */
+.font-heading {
+  font-weight: 400 !important;
+  font-style: normal !important;
+  font-synthesis: none;
+  letter-spacing: -0.01em;
+}
+
 /* Gradient seams between sections, eliminates hard colour edges */
 .seam-to-white {
   background: linear-gradient(to bottom, transparent 0%, #FAFAF8 100%);

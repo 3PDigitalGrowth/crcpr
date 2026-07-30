@@ -65,10 +65,11 @@ export function MediaReachSnapshot({
         {/* Header band */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-end">
           <div className="lg:col-span-7">
-            <p className="font-sans font-medium tracking-[0.18em] uppercase text-brand-gold text-[11px]">
+            <p className="font-sans inline-flex items-center gap-3 tracking-[0.24em] uppercase text-brand-gold text-[11px] font-semibold">
+              <span className="h-px w-8 bg-current opacity-50" aria-hidden />
               {data.intro.eyebrow}
             </p>
-            <h2 className="mt-5 font-heading font-black text-white text-[34px] md:text-[48px] lg:text-[56px] leading-[0.98] tracking-tight">
+            <h2 className="mt-5 font-heading text-white text-[34px] md:text-[48px] lg:text-[56px] leading-[0.98] tracking-[-0.02em]">
               {compact
                 ? "221 placements. One month. One client."
                 : data.intro.headline}
@@ -89,10 +90,10 @@ export function MediaReachSnapshot({
           {/* Hero stat — large editorial number, asymmetric */}
           <div className="lg:col-span-5">
             <div className="relative pl-6 md:pl-8 border-l border-brand-gold/40">
-              <p className="font-heading font-black text-brand-gold text-[88px] md:text-[120px] lg:text-[144px] leading-[0.85] tracking-tighter tabular-nums">
+              <p className="font-heading text-brand-gold text-[88px] md:text-[120px] lg:text-[144px] leading-[0.85] tracking-[-0.02em] tabular-nums">
                 {data.total}
               </p>
-              <p className="mt-3 font-heading font-black text-white text-lg md:text-xl tracking-tight">
+              <p className="mt-3 font-heading text-white text-lg md:text-xl tracking-tight">
                 media placements
               </p>
             </div>
@@ -101,7 +102,8 @@ export function MediaReachSnapshot({
 
         {/* Channel breakdown — horizontal newspaper-style row */}
         <div className="mt-14 md:mt-20 border-t border-white/10 pt-10">
-          <p className="font-sans font-medium tracking-[0.18em] uppercase text-white/50 text-[10px] mb-6">
+          <p className="font-sans inline-flex items-center gap-3 tracking-[0.24em] uppercase text-white/50 text-[10px] font-semibold mb-6">
+            <span className="h-px w-8 bg-current opacity-50" aria-hidden />
             How the 221 broke down
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 divide-y md:divide-y-0 md:divide-x divide-white/10 -mx-2 md:-mx-6">
@@ -110,7 +112,7 @@ export function MediaReachSnapshot({
                 key={item.label}
                 className="px-2 md:px-6 py-5 md:py-2 flex items-baseline gap-4 md:flex-col md:items-start md:gap-2"
               >
-                <p className="font-heading font-black text-white text-4xl md:text-5xl lg:text-6xl leading-none tabular-nums">
+                <p className="font-heading text-white text-4xl md:text-5xl lg:text-6xl leading-none tabular-nums">
                   {item.value}
                 </p>
                 <p className="text-white/65 text-[13px] leading-snug">
@@ -126,7 +128,8 @@ export function MediaReachSnapshot({
             {/* Second body paragraph + the proportional split */}
             <div className="mt-14 md:mt-20 grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
               <div className="lg:col-span-5">
-                <p className="font-sans font-medium tracking-[0.18em] uppercase text-brand-gold text-[10px] mb-4">
+                <p className="font-sans inline-flex items-center gap-3 tracking-[0.24em] uppercase text-brand-gold text-[10px] font-semibold mb-4">
+                  <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                   What this looked like for the client
                 </p>
                 <p className="text-white/80 text-base md:text-lg leading-relaxed">
@@ -150,7 +153,7 @@ export function MediaReachSnapshot({
                     style={{ width: `${expertPct}%` }}
                   />
                 </div>
-                <div className="mt-3 flex items-baseline justify-between font-heading font-black text-white">
+                <div className="mt-3 flex items-baseline justify-between font-heading text-white">
                   <span className="text-3xl md:text-4xl tabular-nums">
                     {data.clientLed.total}
                     <span className="text-white/45 text-sm font-sans font-medium ml-2">
@@ -178,7 +181,7 @@ export function MediaReachSnapshot({
                           className="flex items-baseline justify-between gap-4 py-2 text-white/85 text-sm"
                         >
                           <span>{item.label}</span>
-                          <span className="font-heading font-black text-white text-base tabular-nums">
+                          <span className="font-heading text-white text-base tabular-nums">
                             {item.value}
                           </span>
                         </li>

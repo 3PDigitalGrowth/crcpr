@@ -26,8 +26,8 @@ export default function InsightsPage() {
         ctaLabel="Book a consultation"
         ctaHref="/contact"
         heroImage={{
-          src: "/images/insights/hero.webp",
-          alt: "Hands holding a broadsheet newspaper at an outdoor cafe table in warm morning light, face not visible",
+          src: "/images/insights/editorial-broadsheets.png",
+          alt: "Reading glasses resting on a navy notebook beside an espresso in soft morning light",
         }}
       />
 
@@ -55,16 +55,17 @@ export default function InsightsPage() {
         ]}
       />
 
-      <section className="bg-white py-16 md:py-20">
+      <section className="py-16 md:py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_340px] gap-10 items-start">
             <div className="max-w-3xl">
-              <p className="text-brand-gold text-xs font-medium mb-4">
+              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="insights.t1">
                 How to use these insights
                 </T>
               </p>
-              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+              <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
                 <T id="insights.t2">
                 Our insights are written for leaders who need clearer judgement, not more commentary.
                 </T>
@@ -90,8 +91,9 @@ export default function InsightsPage() {
               </div>
             </div>
 
-            <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium mb-5">
+            <aside className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6 md:p-8">
+              <p className="mb-5 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="insights.t5">
                 What you&apos;ll find here
                 </T>
@@ -145,7 +147,7 @@ export default function InsightsPage() {
         </div>
       </section>
 
-      <section className="bg-white py-24">
+      <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           {posts.length === 0 ? (
             <p className="text-charcoal-mid text-center text-lg">
@@ -156,14 +158,15 @@ export default function InsightsPage() {
           ) : (
             <>
               {featuredPost ? (
-                <article className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-10 rounded-lg border border-brand-border bg-off-white p-8 md:p-10 mb-10">
+                <article className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-10 rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-8 md:p-10 mb-10">
                   <div>
-                    <p className="text-brand-gold text-xs font-medium">
+                    <p className="font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+                      <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                       <T id="insights.t13">
                       Featured insight
                       </T>
                     </p>
-                    <h2 className="font-heading font-black text-navy text-3xl mt-4">
+                    <h2 className="font-heading text-navy text-3xl leading-[1.05] tracking-[-0.02em] mt-4">
                       <Link href={`/insights/${featuredPost.slug}`} className="hover:text-brand-teal transition">
                         {featuredPost.title}
                       </Link>
@@ -173,7 +176,7 @@ export default function InsightsPage() {
                     </p>
                     <Link
                       href={`/insights/${featuredPost.slug}`}
-                      className="inline-block mt-6 text-brand-gold font-medium hover:underline"
+                      className="inline-block mt-6 text-brand-gold text-sm font-sans font-semibold transition hover:text-gold-light"
                     >
                       <T id="insights.t14">
                       Read the full article →
@@ -205,12 +208,12 @@ export default function InsightsPage() {
                 {otherPosts.map((post, __ti) => (
                   <article
                     key={post.slug}
-                    className="bg-off-white border border-brand-border/50 rounded-lg p-6 hover:border-brand-gold/30 transition"
+                    className="bg-warm-white/70 backdrop-blur border border-brand-border/50 rounded-[1.5rem] p-6 hover:border-brand-gold/30 transition"
                   >
                     <p className="text-brand-teal text-xs font-medium">
                       <T id={`insights.otherPosts.${__ti}.category`}>{post.category}</T>
                     </p>
-                    <h3 className="font-heading font-black text-navy text-lg mt-3">
+                    <h3 className="font-heading text-navy text-xl mt-3">
                       <Link
                         href={`/insights/${post.slug}`}
                         className="hover:text-brand-teal transition"

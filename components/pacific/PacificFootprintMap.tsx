@@ -69,7 +69,7 @@ export function PacificFootprintMap() {
       className="w-full"
       aria-label="CRC Public Relations footprint across Pacific Island regions"
     >
-      <div className="rounded-lg border border-brand-border bg-white overflow-hidden">
+      <div className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-brand-border">
           {REGIONS.map((region) => (
             <div key={region.id} className="p-6 md:p-8">
@@ -81,7 +81,7 @@ export function PacificFootprintMap() {
                   {region.label}
                 </p>
                 <p
-                  className="font-heading font-black text-2xl leading-none"
+                  className="font-heading text-4xl leading-none"
                   style={{ color: region.accent }}
                 >
                   {region.nations.length}
@@ -131,7 +131,7 @@ export function PacificFootprintMap() {
             >
               {REGIONAL_ANCHOR.label}
             </span>
-            <p className="font-heading font-black text-navy text-base">
+            <p className="font-heading text-navy text-lg">
               {REGIONAL_ANCHOR.nation}
             </p>
           </div>

@@ -20,7 +20,7 @@ export function DesktopStickyBar() {
 
   return (
     <div
-      className={`hidden md:flex fixed top-0 left-0 right-0 z-40 bg-navy/95 backdrop-blur-sm border-b border-white/10 items-center justify-between px-6 py-2 transition-transform duration-300 ${
+      className={`hidden md:flex fixed top-0 left-0 right-0 z-40 bg-navy/90 backdrop-blur-xl border-b border-white/10 items-center justify-between px-6 py-2 transition-transform duration-300 ${
         visible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
@@ -36,7 +36,7 @@ export function DesktopStickyBar() {
         </a>
         <Link
           href="/contact"
-          className="bg-brand-gold text-navy font-heading font-black text-xs px-4 py-2 rounded hover:bg-gold-light transition-colors"
+          className="rounded-full bg-brand-gold px-4 py-2 font-sans text-xs font-semibold text-navy shadow-lg shadow-brand-gold/20 transition-colors hover:bg-gold-light"
         >
           Book a consultation →
         </Link>

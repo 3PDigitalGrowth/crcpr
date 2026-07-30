@@ -19,7 +19,7 @@ export interface LeadMagnetModalProps {
 }
 
 const inputClassName =
-  "w-full border border-brand-border bg-white rounded-[4px] px-4 py-3 text-sm font-sans text-text-body placeholder:text-text-caption focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal transition mb-3";
+  "w-full rounded-xl border border-brand-border bg-white px-4 py-3 text-sm font-sans text-text-body placeholder:text-text-caption focus:outline-none focus:ring-2 focus:ring-brand-gold/30 focus:border-brand-gold/60 transition mb-3";
 
 export function LeadMagnetModal({
   magnet,
@@ -88,7 +88,7 @@ export function LeadMagnetModal({
       onClick={onClose}
     >
       <div
-        className="bg-warm-white rounded-lg max-w-md w-full p-8 relative shadow-sm shadow-navy/10"
+        className="bg-warm-white rounded-[1.75rem] max-w-md w-full p-8 relative shadow-2xl shadow-navy/20"
         role="dialog"
         aria-modal="true"
         aria-labelledby="lead-magnet-modal-title"
@@ -103,12 +103,13 @@ export function LeadMagnetModal({
           <X className="size-5" strokeWidth={2} />
         </button>
 
-        <p className="text-brand-teal text-xs font-medium">
+        <p className="font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
+          <span className="h-px w-8 bg-current opacity-50" aria-hidden />
           {eyebrowLabel}
         </p>
         <h3
           id="lead-magnet-modal-title"
-          className="font-heading font-black text-navy text-2xl mt-2"
+          className="font-heading text-navy text-2xl mt-2"
         >
           {meta.title}
         </h3>
@@ -125,7 +126,7 @@ export function LeadMagnetModal({
             <button
               type="button"
               onClick={onClose}
-              className="w-full bg-brand-teal text-white font-heading font-black text-sm py-3 rounded-[4px] hover:bg-link-teal transition"
+              className="w-full bg-brand-teal text-white font-sans font-semibold text-sm py-3 rounded-full shadow-lg shadow-brand-teal/20 transition-colors hover:bg-link-teal"
             >
               Close
             </button>
@@ -182,7 +183,7 @@ export function LeadMagnetModal({
             <button
               type="submit"
               disabled={isSubmitting}
-              className="bg-brand-teal text-white font-heading font-black text-sm w-full py-3 rounded-[4px] mt-4 hover:bg-link-teal transition disabled:opacity-60 disabled:cursor-not-allowed"
+              className="bg-brand-teal text-white font-sans font-semibold text-sm w-full py-3 rounded-full mt-4 shadow-lg shadow-brand-teal/20 transition-colors hover:bg-link-teal disabled:opacity-60 disabled:cursor-not-allowed"
             >
               {submitLabel}
             </button>
@@ -198,7 +199,7 @@ export function LeadMagnetModal({
             Privacy policy
           </Link>
         </p>
-        <p className="mt-2 text-xs text-text-caption italic">
+        <p className="mt-2 text-xs text-text-caption">
           Prepared by CRC Public Relations: specialist Australian PR expertise.
         </p>
       </div>

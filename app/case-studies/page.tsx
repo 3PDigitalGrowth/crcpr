@@ -24,8 +24,8 @@ export default function CaseStudiesPage() {
         ctaLabel="Book a consultation"
         ctaHref="/contact"
         heroImage={{
-          src: "/images/case-studies/hero.webp",
-          alt: "Australian Parliament House at dusk with warm interior light against a deep blue sky",
+          src: "/images/case-studies/editorial-podium.png",
+          alt: "Press conference podium with broadcast microphones under a warm spotlight before the event",
         }}
       />
 
@@ -59,12 +59,13 @@ export default function CaseStudiesPage() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_340px] gap-10 items-start">
             <div className="max-w-3xl">
-              <p className="text-brand-gold text-xs font-medium mb-4">
+              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="case-studies.t1">
                 Why we show these
                 </T>
               </p>
-              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+              <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
                 <T id="case-studies.t2">
                 Measurable outcomes based on expert counsel.
                 </T>
@@ -78,7 +79,7 @@ export default function CaseStudiesPage() {
                 </T>
               </p>
 
-              <p className="font-heading font-black text-brand-gold text-2xl md:text-3xl leading-tight mt-6">
+              <p className="font-heading text-brand-gold text-3xl md:text-4xl leading-tight mt-6">
                 <T id="case-studies.t4">
                 What matters are results!
                 </T>
@@ -132,8 +133,9 @@ export default function CaseStudiesPage() {
               </div>
             </div>
 
-            <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium mb-5">
+            <aside className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6 md:p-8">
+              <p className="mb-5 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="case-studies.t10">
                 What the outcomes show
                 </T>

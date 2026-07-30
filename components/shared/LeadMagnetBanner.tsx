@@ -62,25 +62,22 @@ export function LeadMagnetBanner({
 
   return (
     <>
-      <section
-        className={
-          isDark ? "py-16 md:py-20 bg-navy" : "py-16 md:py-20 bg-warm-white"
-        }
-      >
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="px-4 py-16 md:py-20">
+        <div className="mx-auto max-w-7xl">
           <div
-            className={`grid grid-cols-1 lg:grid-cols-[minmax(0,1.2fr)_320px] gap-10 items-stretch rounded-lg border ${
+            className={`grid grid-cols-1 lg:grid-cols-[minmax(0,1.2fr)_320px] gap-10 items-stretch overflow-hidden rounded-[2.5rem] ${
               isDark
-                ? "border-white/10 bg-white/[0.03]"
-                : "border-brand-border bg-white shadow-sm shadow-navy/5"
+                ? "v2-glass-dark"
+                : "border border-brand-border bg-warm-white/70 backdrop-blur shadow-sm shadow-navy/5"
             }`}
           >
             <div className="p-8 md:p-10">
-              <p className="text-brand-teal text-xs font-medium">
+              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 {resolvedEyebrow}
               </p>
               <h2
-                className={`text-3xl font-heading font-black mt-3 ${
+                className={`font-heading text-4xl leading-[1.05] tracking-[-0.02em] md:text-5xl ${
                   isDark ? "text-white" : "text-navy"
                 }`}
               >
@@ -103,10 +100,10 @@ export function LeadMagnetBanner({
                   {highlights.map((item) => (
                     <div
                       key={item}
-                      className={`rounded-md border px-4 py-4 ${
+                      className={`rounded-xl border px-4 py-4 ${
                         isDark
                           ? "border-white/15 bg-white/[0.06] text-white"
-                          : "border-brand-border bg-warm-white text-text-body"
+                          : "border-brand-border bg-warm-white/70 backdrop-blur text-text-body"
                       }`}
                     >
                       <p className="text-sm leading-relaxed">{item}</p>
@@ -143,7 +140,7 @@ export function LeadMagnetBanner({
                 <button
                   type="button"
                   onClick={() => setModalOpen(true)}
-                  className="bg-brand-teal text-white font-heading font-black text-sm w-full py-4 rounded-[4px] hover:bg-link-teal transition mt-8"
+                  className="bg-brand-teal text-white font-sans font-semibold text-sm w-full py-3.5 rounded-full shadow-lg shadow-brand-teal/20 hover:bg-link-teal transition-colors mt-8"
                 >
                   {resolvedButtonLabel}
                 </button>

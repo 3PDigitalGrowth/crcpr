@@ -46,8 +46,8 @@ export function PageProofStrip({
 
   const cardClass =
     variant === "navy"
-      ? "border-white/10 bg-white/[0.03]"
-      : "border-brand-border bg-white shadow-sm shadow-navy/5";
+      ? "v2-glass-dark"
+      : "border border-brand-border bg-warm-white/70 backdrop-blur shadow-sm shadow-navy/5";
 
   const titleClass = variant === "navy" ? "text-white" : "text-navy";
   const bodyClass = variant === "navy" ? "text-white/70" : "text-charcoal-mid";
@@ -66,10 +66,11 @@ export function PageProofStrip({
     <section className={`${sectionClass} py-16 md:py-20`}>
       <div className="max-w-7xl mx-auto px-6">
         <div className="max-w-3xl">
-          <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+          <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+            <span className="h-px w-8 bg-current opacity-50" aria-hidden />
             <MT id={cid("eyebrow")}>{eyebrow}</MT>
           </p>
-          <h2 className={`font-heading font-black text-3xl ${titleClass}`}>
+          <h2 className={`font-heading text-4xl leading-[1.05] tracking-[-0.02em] md:text-5xl ${titleClass}`}>
             <MT id={cid("title")}>{title}</MT>
           </h2>
           {body ? (
@@ -87,12 +88,12 @@ export function PageProofStrip({
           {items.map((item, itemIndex) => (
             <div
               key={`${item.label}-${item.value}`}
-              className={`border rounded-lg p-6 ${cardClass}`}
+              className={`rounded-[1.5rem] p-6 ${cardClass}`}
             >
-              <p className="text-brand-gold text-xs font-medium mb-3">
+              <p className="mb-3 font-sans text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-gold">
                 <MT id={cid(`items.${itemIndex}.label`)}>{item.label}</MT>
               </p>
-              <p className={`font-heading font-black text-2xl ${valueClass}`}>
+              <p className={`font-heading text-4xl leading-none ${valueClass}`}>
                 <MT id={cid(`items.${itemIndex}.value`)}>{item.value}</MT>
               </p>
               <p className={`text-sm leading-relaxed mt-3 ${detailClass}`}>
@@ -104,12 +105,12 @@ export function PageProofStrip({
 
         {testimonial ? (
           <figure
-            className={`mt-12 border-l-[3px] border-l-brand-gold rounded-lg p-6 ${
+            className={`mt-12 border-l-[3px] border-l-brand-gold rounded-[1.5rem] p-6 ${
               variant === "navy" ? "bg-white/[0.04]" : "bg-off-white"
             }`}
           >
             <blockquote
-              className={`font-sans italic text-[15px] leading-relaxed ${quoteClass}`}
+              className={`font-heading text-xl leading-snug md:text-2xl ${quoteClass}`}
             >
               &ldquo;{testimonial.quote}&rdquo;
             </blockquote>

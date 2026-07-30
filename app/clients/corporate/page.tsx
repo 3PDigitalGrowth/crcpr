@@ -75,8 +75,8 @@ export default function CorporateClientsPage() {
         ctaLabel="Book a consultation"
         ctaHref="/contact"
         heroImage={{
-          src: "/images/clients/corporate/hero.webp",
-          alt: "Exterior of an established Australian commercial building in warm morning light, no people",
+          src: "/images/clients/corporate/editorial-advisory-chairs.png",
+          alt: "Two leather chairs facing each other across a small table with water glasses in warm window light",
         }}
       />
 
@@ -85,7 +85,7 @@ export default function CorporateClientsPage() {
         items={[...proofItems]}
       />
 
-      <section className="bg-white py-24">
+      <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           <ImageTextRow
             imageSrc="/images/clients/corporate/mid-office.webp"
@@ -93,12 +93,13 @@ export default function CorporateClientsPage() {
             imagePosition="left"
           >
             <div className="max-w-3xl lg:max-w-none">
-              <p className="text-brand-gold text-xs font-medium mb-4">
+              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="clients-corporate.t1">
                 Corporate communications
                 </T>
               </p>
-              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+              <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
                 <T id="clients-corporate.t2">
                 Reputation is shaped where strategy, behaviour, and narrative meet.
                 </T>
@@ -132,8 +133,9 @@ export default function CorporateClientsPage() {
                   </T>
                 </p>
               </div>
-              <aside className="rounded-[28px] border border-brand-border bg-off-white p-6 md:p-8 mt-8">
-                <p className="text-brand-teal text-xs font-medium mb-5">
+              <aside className="rounded-[1.5rem] border border-brand-border bg-off-white p-6 md:p-8 mt-8">
+                <p className="mb-5 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
+                  <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                   <T id="clients-corporate.t6">
                   Typical support areas
                   </T>

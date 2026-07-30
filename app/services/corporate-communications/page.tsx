@@ -112,7 +112,7 @@ export default function CorporateCommunicationsPage() {
       />
 
       {/* High-clarity explainer */}
-      <section className="bg-white py-16 md:py-24">
+      <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <ImageTextRow
             imageSrc="/images/services/corporate-communications/mid-what-we-do.webp"
@@ -120,12 +120,13 @@ export default function CorporateCommunicationsPage() {
             imagePosition="left"
           >
             <div className="max-w-3xl lg:max-w-none">
-              <p className="text-brand-gold text-xs font-medium mb-4">
+              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="services-corporate-communications.t1">
                 Strategic clarity
                 </T>
               </p>
-              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+              <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
                 <T id="services-corporate-communications.t2">
                 Effective corporate communications supports your objectives with
                 strategy and consistency.
@@ -160,8 +161,9 @@ export default function CorporateCommunicationsPage() {
                   </T>
                 </p>
               </div>
-              <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8 mt-8">
-                <p className="text-brand-teal text-xs font-medium mb-5">
+              <aside className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6 md:p-8 mt-8">
+                <p className="mb-5 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
+                  <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                   <T id="services-corporate-communications.t6">
                   What strong corporate communications looks like
                   </T>
@@ -214,14 +216,15 @@ export default function CorporateCommunicationsPage() {
       </section>
 
       {/* Process section moved earlier to match crisis flow */}
-      <section className="bg-off-white py-16 md:py-24">
+      <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+          <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+            <span className="h-px w-8 bg-current opacity-50" aria-hidden />
             <T id="services-corporate-communications.t13">
             When you engage CRC Public Relations
             </T>
           </p>
-          <h2 className="font-heading font-black text-navy text-3xl mb-6">
+          <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
             <T id="services-corporate-communications.t14">
             How a corporate communications engagement begins
             </T>
@@ -236,11 +239,11 @@ export default function CorporateCommunicationsPage() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
-            <div className="bg-white border border-brand-border rounded-lg p-6">
-              <span className="text-brand-gold font-heading font-black text-2xl">
+            <div className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6">
+              <span className="font-heading text-2xl text-brand-gold/70 tabular-nums">
                 1
               </span>
-              <h3 className="font-heading font-black text-navy text-xl mb-3 mt-3">
+              <h3 className="font-heading text-navy text-2xl mb-3 mt-3">
                 <T id="services-corporate-communications.t16">
                 Situation assessment
                 </T>
@@ -254,11 +257,11 @@ export default function CorporateCommunicationsPage() {
               </p>
             </div>
 
-            <div className="bg-white border border-brand-border rounded-lg p-6">
-              <span className="text-brand-gold font-heading font-black text-2xl">
+            <div className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6">
+              <span className="font-heading text-2xl text-brand-gold/70 tabular-nums">
                 2
               </span>
-              <h3 className="font-heading font-black text-navy text-xl mb-3 mt-3">
+              <h3 className="font-heading text-navy text-2xl mb-3 mt-3">
                 <T id="services-corporate-communications.t18">
                 Message and stakeholder sequence
                 </T>
@@ -272,11 +275,11 @@ export default function CorporateCommunicationsPage() {
               </p>
             </div>
 
-            <div className="bg-white border border-brand-border rounded-lg p-6">
-              <span className="text-brand-gold font-heading font-black text-2xl">
+            <div className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6">
+              <span className="font-heading text-2xl text-brand-gold/70 tabular-nums">
                 3
               </span>
-              <h3 className="font-heading font-black text-navy text-xl mb-3 mt-3">
+              <h3 className="font-heading text-navy text-2xl mb-3 mt-3">
                 <T id="services-corporate-communications.t20">
                 Ongoing counsel
                 </T>
@@ -305,9 +308,9 @@ export default function CorporateCommunicationsPage() {
       />
 
       {/* Service detail */}
-      <section className="bg-off-white py-16 md:py-24">
+      <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="font-heading font-black text-navy text-3xl mb-6">
+          <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
             <T id="services-corporate-communications.t22">
             What corporate communications looks like in practice
             </T>
@@ -315,7 +318,7 @@ export default function CorporateCommunicationsPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
             <div>
-              <h3 className="font-heading font-black text-navy text-xl mb-3">
+              <h3 className="font-heading text-navy text-2xl mb-3">
                 <T id="services-corporate-communications.t23">
                 Corporate messaging and positioning
                 </T>
@@ -333,7 +336,7 @@ export default function CorporateCommunicationsPage() {
             </div>
 
             <div>
-              <h3 className="font-heading font-black text-navy text-xl mb-3">
+              <h3 className="font-heading text-navy text-2xl mb-3">
                 <T id="services-corporate-communications.t25">
                 Stakeholder engagement and communications strategy
                 </T>
@@ -351,7 +354,7 @@ export default function CorporateCommunicationsPage() {
             </div>
 
             <div>
-              <h3 className="font-heading font-black text-navy text-xl mb-3">
+              <h3 className="font-heading text-navy text-2xl mb-3">
                 <T id="services-corporate-communications.t27">
                 Internal communications and change management
                 </T>
@@ -368,7 +371,7 @@ export default function CorporateCommunicationsPage() {
             </div>
 
             <div>
-              <h3 className="font-heading font-black text-navy text-xl mb-3">
+              <h3 className="font-heading text-navy text-2xl mb-3">
                 <T id="services-corporate-communications.t29">
                 Executive communications and media positioning
                 </T>
@@ -388,16 +391,17 @@ export default function CorporateCommunicationsPage() {
         </div>
       </section>
 
-      <section className="bg-white py-16 md:py-24">
+      <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.1fr)_360px] gap-10 items-start">
             <div className="max-w-3xl">
-              <p className="text-brand-gold text-xs font-medium mb-4">
+              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="services-corporate-communications.t31">
                 Common failure point
                 </T>
               </p>
-              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl mb-6 leading-tight">
+              <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
                 <T id="services-corporate-communications.t32">
                 Where corporate communications usually breaks down
                 </T>
@@ -428,8 +432,9 @@ export default function CorporateCommunicationsPage() {
               </div>
             </div>
 
-            <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium mb-5">
+            <aside className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6 md:p-8">
+              <p className="mb-5 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="services-corporate-communications.t35">
                 Signs communication has fragmented
                 </T>
@@ -480,17 +485,18 @@ export default function CorporateCommunicationsPage() {
         </div>
       </section>
 
-      <section className="bg-white py-16 md:py-24">
+      <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="rounded-lg border border-brand-border bg-off-white p-8 md:p-10">
+          <div className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-8 md:p-10">
             <div className="grid grid-cols-1 lg:grid-cols-[320px_minmax(0,1fr)] gap-10 items-start">
-              <div className="rounded-lg bg-navy p-6 md:p-7">
-                <p className="text-brand-gold text-xs font-medium mb-4">
+              <div className="rounded-[1.5rem] bg-navy p-6 md:p-7">
+                <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+                  <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                   <T id="services-corporate-communications.t42">
                   CRC Public Relations model
                   </T>
                 </p>
-                <h2 className="font-heading font-black text-white text-2xl leading-tight mb-4">
+                <h2 className="font-heading text-white text-2xl leading-tight mb-4">
                   <T id="services-corporate-communications.t43">
                   Experienced counsel, not account management
                   </T>
@@ -537,7 +543,7 @@ export default function CorporateCommunicationsPage() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
-                  <div className="rounded-lg bg-white border border-brand-border p-5">
+                  <div className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-5">
                     <p className="font-sans font-semibold text-navy text-sm mb-1">
                       <T id="services-corporate-communications.t48">
                       Direct management access
@@ -549,7 +555,7 @@ export default function CorporateCommunicationsPage() {
                       </T>
                     </p>
                   </div>
-                  <div className="rounded-lg bg-white border border-brand-border p-5">
+                  <div className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-5">
                     <p className="font-sans font-semibold text-navy text-sm mb-1">
                       <T id="services-corporate-communications.t50">
                       Consistent judgement
@@ -562,7 +568,7 @@ export default function CorporateCommunicationsPage() {
                       </T>
                     </p>
                   </div>
-                  <div className="rounded-lg bg-white border border-brand-border p-5">
+                  <div className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-5">
                     <p className="font-sans font-semibold text-navy text-sm mb-1">
                       <T id="services-corporate-communications.t52">
                       Clear accountability
@@ -582,15 +588,16 @@ export default function CorporateCommunicationsPage() {
       </section>
 
       {/* Proof and next-step resource */}
-      <section className="bg-off-white py-16 md:py-24">
+      <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl">
-            <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+            <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+              <span className="h-px w-8 bg-current opacity-50" aria-hidden />
               <T id="services-corporate-communications.t54">
               Related sectors
               </T>
             </p>
-            <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+            <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
               <T id="services-corporate-communications.t55">
               Sector experience that shapes the advice.
               </T>
@@ -610,7 +617,7 @@ export default function CorporateCommunicationsPage() {
               <Link
                 key={sector.label}
                 href={sector.href}
-                className="rounded-xl border border-brand-border bg-white p-5 text-sm text-charcoal-mid hover:border-brand-gold hover:text-navy hover:-translate-y-0.5 transition"
+                className="rounded-xl border border-brand-border bg-warm-white/70 backdrop-blur p-5 text-sm text-charcoal-mid hover:border-brand-gold hover:text-navy hover:-translate-y-0.5 transition"
               >
                 <p className="font-sans font-semibold text-navy text-base leading-snug">
                   <T id={`services-corporate-communications.sectorLinks.${__ti}.label`}>{sector.label}</T>

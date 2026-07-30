@@ -1,18 +1,22 @@
 import type { Metadata } from "next";
-import { Inter, Roboto } from "next/font/google";
+import { Hanken_Grotesk, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 import { AppShell } from "@/components/layout/AppShell";
 
-const inter = Inter({
+/* Editorial display serif. Roman only — the italic face is deliberately not
+   loaded (client direction: no cursive anywhere on the site). */
+const display = Instrument_Serif({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: "400",
+  style: "normal",
+  variable: "--font-display",
   display: "swap",
 });
 
-const roboto = Roboto({
+const body = Hanken_Grotesk({
   subsets: ["latin"],
-  weight: ["900"],
-  variable: "--font-roboto",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-body",
   display: "swap",
 });
 
@@ -38,7 +42,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${roboto.variable}`}>
+    <html lang="en" className={`${display.variable} ${body.variable}`}>
       <body className="font-sans antialiased">
         <AppShell>{children}</AppShell>
       </body>

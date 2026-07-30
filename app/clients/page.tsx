@@ -95,6 +95,10 @@ export default function ClientsPage() {
           src: "/images/clients-index/hero.webp",
           alt: "Brisbane cityscape at golden hour showing mix of modern and heritage architecture",
         }}
+        heroVideo={{
+          src: "/images/clients-index/hero-ambient.mp4",
+          poster: "/images/clients-index/hero-poster.jpg",
+        }}
       />
 
       <PageProofStrip copyId="clients"
@@ -102,16 +106,17 @@ export default function ClientsPage() {
         items={[...proofItems]}
       />
 
-      <section className="bg-white py-16 md:py-24">
+      <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_360px] gap-10 items-start">
             <div className="max-w-3xl">
-              <p className="text-brand-gold text-xs font-medium mb-4">
+              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="clients.t1">
                 Why sector context matters
                 </T>
               </p>
-              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+              <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
                 <T id="clients.t2">
                 The communications challenge changes with the environment around it.
                 </T>
@@ -143,8 +148,9 @@ export default function ClientsPage() {
               </div>
             </div>
 
-            <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium mb-5">
+            <aside className="rounded-[1.5rem] border border-brand-border bg-off-white p-6 md:p-8">
+              <p className="mb-5 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="clients.t6">
                 What changes by sector
                 </T>
@@ -198,16 +204,16 @@ export default function ClientsPage() {
         </div>
       </section>
 
-      <section className="bg-white py-24">
+      <section className="py-24">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
           {sectors.map(({ title, body, href, magnetKey }) => {
             const magnet = siteConfig.leadMagnets[magnetKey];
             return (
               <article
                 key={href}
-                className="bg-off-white border border-brand-border/50 rounded-lg p-8"
+                className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-8"
               >
-                <h3 className="font-heading font-black text-navy text-xl">
+                <h3 className="font-heading text-navy text-2xl">
                   {title}
                 </h3>
                 <p className="text-charcoal-mid text-[15px] leading-relaxed mt-3">
@@ -215,7 +221,7 @@ export default function ClientsPage() {
                 </p>
                 <Link
                   href={href}
-                  className="text-brand-gold font-sans font-medium text-sm mt-6 inline-block hover:opacity-90 transition-opacity"
+                  className="text-brand-gold font-sans font-semibold text-sm mt-6 inline-block hover:text-gold-light transition-colors"
                 >
                   Explore {title.toLowerCase()} →
                 </Link>

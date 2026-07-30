@@ -65,12 +65,13 @@ export default function InsightPage({
 
   return (
     <>
-      <header id="hero-section" className="bg-navy py-24">
-        <div className="max-w-3xl mx-auto px-6">
-          <p className="text-brand-teal text-xs font-medium">
+      <header id="hero-section" className="relative overflow-hidden bg-navy py-24">
+        <div className="relative z-10 max-w-3xl mx-auto px-6">
+          <p className="font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
+            <span className="h-px w-8 bg-current opacity-50" aria-hidden />
             {post.category}
           </p>
-          <h1 className="text-white font-heading font-black text-3xl md:text-[42px] leading-[1.1] mt-4">
+          <h1 className="font-heading text-white text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mt-4 [text-shadow:0_2px_18px_rgba(0,0,0,0.35)]">
             {post.title}
           </h1>
           <p className="text-white/50 text-sm mt-4">
@@ -82,11 +83,15 @@ export default function InsightPage({
             })}
           </p>
         </div>
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 bottom-0 z-[1] h-24 bg-gradient-to-b from-transparent to-[#F5F2EC]"
+        />
       </header>
 
       <article className="bg-warm-white py-16">
         <div
-          className="max-w-3xl mx-auto px-6 prose prose-lg max-w-none prose-headings:font-heading prose-headings:font-black prose-headings:text-navy prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-p:text-text-body prose-p:leading-relaxed prose-ol:text-text-body prose-ul:text-text-body prose-li:text-text-body prose-li:leading-relaxed prose-blockquote:border-l-brand-gold prose-blockquote:bg-off-white prose-blockquote:py-4 prose-blockquote:px-6 prose-blockquote:not-italic prose-blockquote:text-charcoal prose-a:text-link-teal prose-a:no-underline hover:prose-a:text-navy prose-strong:text-navy"
+          className="max-w-3xl mx-auto px-6 prose prose-lg max-w-none prose-headings:font-heading prose-headings:font-normal prose-headings:text-navy prose-h3:text-xl prose-h3:mt-10 prose-h3:mb-4 prose-p:text-text-body prose-p:leading-relaxed prose-ol:text-text-body prose-ul:text-text-body prose-li:text-text-body prose-li:leading-relaxed prose-blockquote:border-l-brand-gold prose-blockquote:bg-off-white prose-blockquote:py-4 prose-blockquote:px-6 prose-blockquote:not-italic prose-blockquote:text-charcoal prose-a:text-link-teal prose-a:no-underline hover:prose-a:text-navy prose-strong:text-navy"
         >
           <MDXRemote
             source={post.content}
@@ -98,19 +103,19 @@ export default function InsightPage({
       {relatedPosts.length > 0 ? (
         <section className="bg-off-white py-16">
           <div className="max-w-7xl mx-auto px-6">
-            <h2 className="font-heading font-black text-navy text-2xl mb-8">
+            <h2 className="font-heading text-navy text-3xl leading-tight tracking-[-0.01em] mb-8">
               Related insights
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {relatedPosts.map((related) => (
                 <article
                   key={related.slug}
-                  className="rounded-lg border border-brand-border bg-off-white p-6"
+                  className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6"
                 >
                   <p className="text-brand-teal text-xs font-medium">
                     {related.category}
                   </p>
-                  <h3 className="font-heading font-black text-navy text-lg mt-3">
+                  <h3 className="font-heading text-navy text-xl mt-3">
                     <Link href={`/insights/${related.slug}`}>
                       {related.title}
                     </Link>
@@ -136,7 +141,7 @@ export default function InsightPage({
               imageAlt={siteConfig.lyall.fullName}
             />
             <div>
-              <p className="font-heading font-black text-navy text-lg">
+              <p className="font-heading text-navy text-xl">
                 {siteConfig.lyall.fullName}
               </p>
               <p className="text-brand-teal text-sm font-medium mt-1">
@@ -147,7 +152,7 @@ export default function InsightPage({
               </p>
               <Link
                 href="/insights"
-                className="inline-block text-link-teal text-sm font-medium mt-4 hover:text-navy hover:underline"
+                className="inline-block text-link-teal text-sm font-medium mt-4 transition hover:text-navy"
               >
                 Read more from Lyall →
               </Link>

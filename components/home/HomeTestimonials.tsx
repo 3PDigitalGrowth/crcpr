@@ -56,7 +56,7 @@ export function HomeTestimonials() {
                     fill="currentColor"
                   />
                 </svg>
-                <p className="font-sans italic text-charcoal text-[15px] leading-relaxed flex-1">
+                <p className="font-sans text-charcoal text-[15px] leading-relaxed flex-1">
                   &ldquo;<T id={`home.testimonials.${i}.quote`}>{t.quote}</T>&rdquo;
                 </p>
                 <div className="mt-6 pt-5 border-t border-brand-border">
@@ -71,7 +71,7 @@ export function HomeTestimonials() {
 
         <AnimateIn delay={400}>
           <div className="mt-14 text-center">
-            <p className="font-sans italic text-charcoal-mid text-base">
+            <p className="font-sans text-charcoal-mid text-base">
               &ldquo;<T id="home.testimonials.summary">100% of our consulting clients would recommend CRC Public Relations to a peer.</T>&rdquo;
               <span className="not-italic font-medium text-charcoal-mid/60 text-sm ml-2">
                 <T id="home.testimonials.source">CRC Public Relations Client Survey</T>

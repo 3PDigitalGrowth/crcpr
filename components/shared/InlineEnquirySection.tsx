@@ -37,6 +37,7 @@ export function InlineEnquirySection({
   copyId,
 }: InlineEnquirySectionProps) {
   const cid = (suffix: string) => (copyId ? `${copyId}.enquiry.${suffix}` : undefined);
+  const cardSurfaceClass = variant === "white" ? "bg-warm-white/70" : "bg-off-white/80";
   const [formState, setFormState] = useState<FormState>(initialState);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -51,14 +52,17 @@ export function InlineEnquirySection({
   }
 
   return (
-    <section className={variant === "white" ? "bg-warm-white py-16 md:py-20" : "bg-off-white py-16 md:py-20"}>
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] border border-brand-border rounded-lg overflow-hidden bg-white shadow-sm shadow-navy/5">
+    <section className="px-4 py-16 md:py-20">
+      <div className="mx-auto max-w-7xl">
+        <div
+          className={`grid grid-cols-1 overflow-hidden rounded-[2.5rem] border border-brand-border shadow-sm shadow-navy/5 backdrop-blur lg:grid-cols-[1.1fr_1fr] ${cardSurfaceClass}`}
+        >
           <div className="p-8 md:p-10 bg-navy text-white">
-            <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+            <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+              <span className="h-px w-8 bg-current opacity-50" aria-hidden />
               <MT id={cid("eyebrow")}>{eyebrow}</MT>
             </p>
-            <h2 className="font-heading font-black text-3xl max-w-xl"><MT id={cid("title")}>{title}</MT></h2>
+            <h2 className="font-heading text-4xl leading-[1.05] tracking-[-0.02em] md:text-5xl max-w-xl"><MT id={cid("title")}>{title}</MT></h2>
             <p className="text-white/72 text-base leading-relaxed mt-5 max-w-xl">
               <MT id={cid("body")}>{body}</MT>
             </p>
@@ -79,7 +83,7 @@ export function InlineEnquirySection({
             <div className="border-t border-white/10 mt-8 pt-6">
               <a
                 href={siteConfig.phone.href}
-                className="block font-heading font-black text-brand-gold text-2xl hover:text-gold-light transition-colors"
+                className="block font-heading text-brand-gold text-3xl hover:text-gold-light transition-colors"
               >
                 {siteConfig.phone.display}
               </a>
@@ -92,10 +96,10 @@ export function InlineEnquirySection({
 
           <div className="p-8 md:p-10">
             {formState.status === "success" ? (
-              <div className="bg-warm-white border border-brand-border rounded-lg p-8 h-full flex flex-col justify-center">
+              <div className="bg-warm-white border border-brand-border rounded-[1.5rem] p-8 h-full flex flex-col justify-center">
                 <div className="flex items-center gap-3 mb-4">
                   <CheckCircle className="text-brand-gold w-7 h-7 flex-shrink-0" />
-                  <h3 className="font-heading font-black text-navy text-xl">
+                  <h3 className="font-heading text-navy text-2xl">
                     Message received.
                   </h3>
                 </div>
@@ -124,7 +128,7 @@ export function InlineEnquirySection({
                       type="text"
                       required
                       autoComplete="name"
-                      className="w-full rounded-[4px] border border-brand-border bg-white px-4 py-3 text-text-body placeholder:text-text-caption focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal"
+                      className="w-full rounded-xl border border-brand-border bg-white px-4 py-3 text-text-body placeholder:text-text-caption focus:outline-none focus:ring-2 focus:ring-brand-gold/30 focus:border-brand-gold/60"
                       placeholder="Your name"
                     />
                   </div>
@@ -140,7 +144,7 @@ export function InlineEnquirySection({
                       name="organisation"
                       type="text"
                       autoComplete="organization"
-                      className="w-full rounded-[4px] border border-brand-border bg-white px-4 py-3 text-text-body placeholder:text-text-caption focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal"
+                      className="w-full rounded-xl border border-brand-border bg-white px-4 py-3 text-text-body placeholder:text-text-caption focus:outline-none focus:ring-2 focus:ring-brand-gold/30 focus:border-brand-gold/60"
                       placeholder="Organisation"
                     />
                   </div>
@@ -157,7 +161,7 @@ export function InlineEnquirySection({
                       type="email"
                       required
                       autoComplete="email"
-                      className="w-full rounded-[4px] border border-brand-border bg-white px-4 py-3 text-text-body placeholder:text-text-caption focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal"
+                      className="w-full rounded-xl border border-brand-border bg-white px-4 py-3 text-text-body placeholder:text-text-caption focus:outline-none focus:ring-2 focus:ring-brand-gold/30 focus:border-brand-gold/60"
                       placeholder="you@example.com"
                     />
                   </div>
@@ -174,7 +178,7 @@ export function InlineEnquirySection({
                       type="tel"
                       required
                       autoComplete="tel"
-                      className="w-full rounded-[4px] border border-brand-border bg-white px-4 py-3 text-text-body placeholder:text-text-caption focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal"
+                      className="w-full rounded-xl border border-brand-border bg-white px-4 py-3 text-text-body placeholder:text-text-caption focus:outline-none focus:ring-2 focus:ring-brand-gold/30 focus:border-brand-gold/60"
                       placeholder="Best number"
                     />
                   </div>
@@ -192,7 +196,7 @@ export function InlineEnquirySection({
                     name="message"
                     rows={5}
                     defaultValue={defaultMessage}
-                    className="w-full rounded-[4px] border border-brand-border bg-white px-4 py-3 text-text-body placeholder:text-text-caption focus:outline-none focus:ring-2 focus:ring-brand-teal/40 focus:border-brand-teal resize-y min-h-[120px]"
+                    className="w-full rounded-xl border border-brand-border bg-white px-4 py-3 text-text-body placeholder:text-text-caption focus:outline-none focus:ring-2 focus:ring-brand-gold/30 focus:border-brand-gold/60 resize-y min-h-[120px]"
                     placeholder="Tell us what is happening and what you need help with."
                   />
                 </div>
@@ -200,7 +204,7 @@ export function InlineEnquirySection({
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-brand-gold text-navy font-heading font-black text-xs rounded-[4px] py-4 hover:bg-gold-light transition disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="w-full bg-brand-gold text-navy font-sans font-semibold text-sm rounded-full py-3.5 shadow-lg shadow-brand-gold/20 hover:bg-gold-light transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? "Sending…" : `${submitLabel} →`}
                 </button>

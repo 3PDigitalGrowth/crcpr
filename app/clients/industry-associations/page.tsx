@@ -184,7 +184,8 @@ function AssociationOpening() {
   return (
     <section className="bg-off-white py-20">
       <div className="max-w-7xl mx-auto px-6">
-        <p className="text-brand-teal font-sans font-medium text-xs mb-8">
+        <p className="mb-8 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
+          <span className="h-px w-8 bg-current opacity-50" aria-hidden />
           <T id="clients-industry-associations.t1">
           Why associations need specialist communications counsel
           </T>
@@ -192,7 +193,7 @@ function AssociationOpening() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           <div>
-            <h2 className="font-heading font-black text-navy text-3xl leading-tight mb-6">
+            <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
               <T id="clients-industry-associations.t2">
               Association communications is unlike any other.
               </T>
@@ -229,7 +230,7 @@ function AssociationOpening() {
             </p>
 
             <blockquote className="border-l-[3px] border-brand-gold pl-5">
-              <p className="text-navy text-sm leading-relaxed italic mb-3">
+              <p className="font-heading text-navy text-xl md:text-2xl leading-snug mb-3">
                 <T id="clients-industry-associations.t6">
                 &ldquo;CRC Public Relations created national media coverage that energised our
                 member base, attracted new members and helped us advance important changes
@@ -244,8 +245,8 @@ function AssociationOpening() {
             </blockquote>
           </div>
 
-          <div className="bg-white border border-brand-border rounded-lg p-8 shadow-sm shadow-navy/5">
-            <p className="font-heading font-black text-navy text-xl leading-snug mb-5">
+          <div className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-8 shadow-sm shadow-navy/5">
+            <p className="font-heading text-navy text-2xl leading-snug mb-5">
               <T id="clients-industry-associations.t8">
               CRC Public Relations can create a public relations strategy that
               will advance these objectives for your association:
@@ -272,7 +273,7 @@ function AssociationOpening() {
             { num: "100%", label: "Client satisfaction rate" },
           ].map(({ num, label }) => (
             <div key={label} className="text-center px-6">
-              <p className="font-heading font-black text-brand-gold text-4xl leading-none mb-2">
+              <p className="font-heading text-brand-gold text-4xl leading-none mb-2">
                 {num}
               </p>
               <p className="text-text-caption text-[10px] leading-snug">
@@ -288,7 +289,7 @@ function AssociationOpening() {
 
 function SectorCards() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20">
       <div className="max-w-7xl mx-auto px-6">
         <ImageTextRow
           imageSrc="/images/clients/industry-associations/gallery/03-mcgrathlocks.png"
@@ -296,12 +297,13 @@ function SectorCards() {
           imagePosition="right"
         >
           <div>
-            <p className="text-brand-gold font-sans font-medium text-xs mb-3">
+            <p className="mb-3 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+              <span className="h-px w-8 bg-current opacity-50" aria-hidden />
               <T id="clients-industry-associations.t9">
               Sectors we advise
               </T>
             </p>
-            <h2 className="font-heading font-black text-navy text-3xl md:text-4xl mb-4">
+            <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-4">
               <T id="clients-industry-associations.t10">
               Sectors where we advise associations
               </T>
@@ -321,9 +323,9 @@ function SectorCards() {
           {sectorCards.map((card, __ti) => (
             <div
               key={card.title}
-              className="bg-off-white border border-brand-border rounded-lg p-8 hover:shadow-md hover:shadow-navy/5 transition-shadow duration-200"
+              className="rounded-[1.5rem] border border-brand-border bg-off-white p-8 hover:shadow-md hover:shadow-navy/5 transition-shadow duration-200"
             >
-              <h3 className="font-heading font-black text-navy text-lg mb-3">
+              <h3 className="font-heading text-navy text-xl mb-3">
                 <T id={`clients-industry-associations.sectorCards.${__ti}.title`}>{card.title}</T>
               </h3>
               <p className="text-charcoal-mid text-[15px] leading-relaxed">
@@ -333,7 +335,7 @@ function SectorCards() {
           ))}
         </div>
 
-        <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4 bg-gold-light border border-brand-gold/30 rounded-lg p-6">
+        <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-4 bg-gold-light border border-brand-gold/30 rounded-[1.5rem] p-6">
           <div className="flex-1 min-w-0">
             <p className="text-[#7B5A00] text-sm font-medium mb-1">
               <T id="clients-industry-associations.t12">
@@ -350,7 +352,7 @@ function SectorCards() {
           </div>
           <Link
             href="/contact"
-            className="bg-brand-gold text-navy font-heading font-black text-xs px-6 py-3 rounded flex-shrink-0 hover:bg-brand-gold/90 transition-colors whitespace-nowrap"
+            className="inline-flex items-center gap-2 rounded-full bg-brand-gold px-7 py-3.5 font-sans text-sm font-semibold text-navy shadow-lg shadow-brand-gold/20 transition-colors hover:bg-brand-gold/90 flex-shrink-0 whitespace-nowrap"
           >
             <T id="clients-industry-associations.t14">
             Book a consultation
@@ -405,7 +407,7 @@ export default function IndustryAssociationsPage() {
             imagePosition="left"
           >
             <div>
-              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl mb-4">
+              <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-4">
                 <T id="clients-industry-associations.t15">
                 How CRC Public Relations works with industry and professional associations
                 </T>
@@ -424,9 +426,9 @@ export default function IndustryAssociationsPage() {
             {associationServiceCards.map((card, __ti) => (
               <div
                 key={card.title}
-                className="bg-white border border-brand-border rounded-lg p-8"
+                className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-8"
               >
-                <h3 className="font-heading font-black text-navy text-lg mb-3">
+                <h3 className="font-heading text-navy text-xl mb-3">
                   <T id={`clients-industry-associations.associationServiceCards.${__ti}.title`}>{card.title}</T>
                 </h3>
                 <p className="text-charcoal-mid text-[15px] leading-relaxed">
@@ -439,9 +441,9 @@ export default function IndustryAssociationsPage() {
       </section>
 
       {/* Testimonials */}
-      <section className="bg-white py-16 md:py-24">
+      <section className="py-16 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <p className="text-charcoal-mid text-sm italic mb-6">
+          <p className="text-charcoal-mid text-sm mb-6">
             <T id="clients-industry-associations.t17">
             CRC Public Relations has worked with member associations and peak bodies at the
             state and national level, across financial services, education,
@@ -450,7 +452,7 @@ export default function IndustryAssociationsPage() {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <figure className="border-l-[3px] border-brand-gold bg-off-white p-6 rounded-lg">
+            <figure className="border-l-[3px] border-brand-gold bg-off-white p-6 rounded-[1.5rem]">
               <blockquote className="text-charcoal text-[15px] leading-relaxed">
                 <T id="clients-industry-associations.t18">
                 &ldquo;CRC Public Relations created national media coverage that
@@ -470,7 +472,7 @@ export default function IndustryAssociationsPage() {
               </figcaption>
             </figure>
 
-            <figure className="border-l-[3px] border-brand-gold bg-off-white p-6 rounded-lg">
+            <figure className="border-l-[3px] border-brand-gold bg-off-white p-6 rounded-[1.5rem]">
               <blockquote className="text-charcoal text-[15px] leading-relaxed">
                 <T id="clients-industry-associations.t21">
                 &ldquo;CRC Public Relations has helped us generate major,

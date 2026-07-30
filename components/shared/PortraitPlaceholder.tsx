@@ -65,7 +65,7 @@ export function PortraitPlaceholder({
         />
       ) : (
         <span
-          className="font-heading font-black text-brand-gold select-none flex h-full w-full items-center justify-center"
+          className="font-heading text-brand-gold select-none flex h-full w-full items-center justify-center"
           aria-label={initials === "LM" ? "Lyall Mercer" : initials}
         >
           {initials}

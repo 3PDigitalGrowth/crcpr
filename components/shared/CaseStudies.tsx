@@ -22,21 +22,22 @@ export function CaseStudies({
       {siteConfig.caseStudies.map((study, index) => (
         <div
           key={study.id}
-          className="bg-white border-t-4 border-brand-gold border-x border-b border-brand-border rounded-b-lg p-6"
+          className="rounded-[1.5rem] border-t-4 border-brand-gold border-x border-b border-brand-border bg-warm-white/70 p-6 backdrop-blur"
         >
-          <p className="text-brand-gold text-xs font-medium mb-2">
+          <p className="mb-2 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+            <span className="h-px w-8 bg-current opacity-50" aria-hidden />
             <span {...bind(`caseStudies.${index}.sector`)}>{study.sector}</span>
           </p>
-          <p className="font-heading font-black text-navy text-2xl leading-tight mb-1">
+          <p className="font-heading text-navy text-2xl leading-tight mb-1">
             <span {...bind(`caseStudies.${index}.outcome`)}>{study.outcome}</span>
           </p>
-          <p className="text-charcoal-mid text-sm italic mb-5">
+          <p className="text-charcoal-mid text-sm mb-5">
             <span {...bind(`caseStudies.${index}.outcomeSub`)}>{study.outcomeSub}</span>
           </p>
           <hr className="border-brand-border mb-5" />
           <div className="space-y-4">
             <div>
-              <p className="text-navy text-xs font-medium mb-1">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-link-teal mb-1">
                 Situation
               </p>
               <p className="text-charcoal text-sm leading-relaxed">
@@ -44,7 +45,7 @@ export function CaseStudies({
               </p>
             </div>
             <div>
-              <p className="text-navy text-xs font-medium mb-1">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-link-teal mb-1">
                 Challenge
               </p>
               <p className="text-charcoal text-sm leading-relaxed">
@@ -52,7 +53,7 @@ export function CaseStudies({
               </p>
             </div>
             <div>
-              <p className="text-navy text-xs font-medium mb-1">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-link-teal mb-1">
                 Our approach
               </p>
               <p className="text-charcoal text-sm leading-relaxed">
@@ -66,15 +67,16 @@ export function CaseStudies({
       {extra?.map((study) => (
         <div
           key={study.id}
-          className="bg-white border-t-4 border-brand-gold border-x border-b border-brand-border rounded-b-lg p-6"
+          className="rounded-[1.5rem] border-t-4 border-brand-gold border-x border-b border-brand-border bg-warm-white/70 p-6 backdrop-blur"
         >
-          <p className="text-brand-gold text-xs font-medium mb-2">
+          <p className="mb-2 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+            <span className="h-px w-8 bg-current opacity-50" aria-hidden />
             {study.sector}
           </p>
-          <p className="font-heading font-black text-navy text-2xl leading-tight mb-1">
+          <p className="font-heading text-navy text-2xl leading-tight mb-1">
             {study.outcome}
           </p>
-          <p className="text-charcoal-mid text-sm italic">
+          <p className="text-charcoal-mid text-sm">
             {study.outcomeSub}
           </p>
         </div>

@@ -30,8 +30,8 @@ const config: Config = {
         "brand-border": "#E8E4DE",
       },
       fontFamily: {
-        sans: ["Inter", "sans-serif"],
-        heading: ["Roboto", "sans-serif"],
+        sans: ["var(--font-body)", "sans-serif"],
+        heading: ["var(--font-display)", "Georgia", "serif"],
       },
     },
   },

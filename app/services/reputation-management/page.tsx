@@ -111,7 +111,7 @@ Your reputation is at the core of our communications strategies. This includes u
       />
 
       {/* Opening section */}
-      <section className="bg-warm-white py-24">
+      <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           <ImageTextRow
             imageSrc="/images/services/reputation-management/mid-strategy.webp"
@@ -119,12 +119,13 @@ Your reputation is at the core of our communications strategies. This includes u
             imagePosition="left"
           >
             <div className="max-w-3xl lg:max-w-none">
-              <p className="text-brand-gold text-xs font-medium mb-4">
+              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="services-reputation-management.t1">
                 Reputation reality
                 </T>
               </p>
-              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+              <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
                 <T id="services-reputation-management.t2">
                 Reputation damage usually starts long before the headline.
                 </T>
@@ -166,8 +167,9 @@ Your reputation is at the core of our communications strategies. This includes u
                   </T>
                 </p>
               </div>
-              <aside className="rounded-lg border border-brand-border bg-off-white p-6 md:p-8 mt-8">
-                <p className="text-brand-teal text-xs font-medium mb-5">
+              <aside className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6 md:p-8 mt-8">
+                <p className="mb-5 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
+                  <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                   <T id="services-reputation-management.t7">
                   Early warning signs
                   </T>
@@ -219,9 +221,9 @@ Your reputation is at the core of our communications strategies. This includes u
         </div>
       </section>
 
-      <section className="bg-off-white py-20">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
-          <h2 className="font-heading font-black text-navy text-3xl mb-6">
+          <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
             <T id="services-reputation-management.t14">
             What reputation pressure looks like before it becomes public
             </T>
@@ -235,7 +237,7 @@ Your reputation is at the core of our communications strategies. This includes u
             ].map((item) => (
               <div
                 key={item}
-                className="rounded-lg border border-brand-border bg-white p-6"
+                className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6"
               >
                 <p className="text-charcoal text-base leading-relaxed">{item}</p>
               </div>
@@ -245,16 +247,17 @@ Your reputation is at the core of our communications strategies. This includes u
       </section>
 
       {/* Primary conversion moved earlier in the flow */}
-      <section className="bg-warm-white py-20">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] gap-10 items-start">
             <div className="lg:sticky lg:top-24">
-              <p className="text-brand-gold text-xs font-medium mb-4">
+              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="services-reputation-management.t15">
                 Start here
                 </T>
               </p>
-              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+              <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
                 <T id="services-reputation-management.t16">
                 Find out where your organisation is exposed
                 </T>
@@ -279,8 +282,9 @@ Your reputation is at the core of our communications strategies. This includes u
                 </p>
               </div>
 
-              <div className="mt-8 rounded-lg border border-brand-border bg-off-white p-6">
-                <p className="text-brand-teal text-xs font-medium mb-4">
+              <div className="mt-8 rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6">
+                <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
+                  <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                   <T id="services-reputation-management.t19">
                   What you get
                   </T>
@@ -328,22 +332,23 @@ Your reputation is at the core of our communications strategies. This includes u
               </div>
             </div>
 
-            <div className="rounded-lg border border-brand-border bg-white p-6 md:p-8 shadow-sm shadow-navy/5">
+            <div className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6 md:p-8 shadow-sm shadow-navy/5">
               <ReputationAssessment embedded />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-12 bg-off-white">
+      <section className="py-12">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="bg-navy rounded-lg p-8">
-            <p className="text-brand-gold text-xs font-medium mb-3">
+          <div className="rounded-[1.5rem] bg-navy p-8">
+            <p className="mb-3 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+              <span className="h-px w-8 bg-current opacity-50" aria-hidden />
               <T id="services-reputation-management.t26">
               Next step
               </T>
             </p>
-            <h3 className="font-heading font-black text-white text-2xl mb-3">
+            <h3 className="font-heading text-white text-2xl mb-3">
               <T id="services-reputation-management.t27">
               Want to discuss your results?
               </T>
@@ -357,7 +362,7 @@ Your reputation is at the core of our communications strategies. This includes u
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs px-6 py-3 rounded-[4px] hover:bg-gold-light transition"
+              className="inline-flex items-center gap-2 rounded-full bg-brand-gold px-7 py-3.5 font-sans text-sm font-semibold text-navy shadow-lg shadow-brand-gold/20 transition-colors hover:bg-gold-light"
             >
               <T id="services-reputation-management.t29">
               Book a consultation →
@@ -368,15 +373,16 @@ Your reputation is at the core of our communications strategies. This includes u
       </section>
 
       {/* Service detail */}
-      <section className="bg-off-white py-24">
+      <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl mb-12">
-            <p className="text-brand-gold text-xs font-medium mb-4">
+            <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+              <span className="h-px w-8 bg-current opacity-50" aria-hidden />
               <T id="services-reputation-management.t30">
               Reputation framework
               </T>
             </p>
-            <h2 className="font-heading font-black text-navy text-3xl md:text-4xl mb-6 leading-tight">
+            <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
               <T id="services-reputation-management.t31">
               How CRC Public Relations approaches reputation management
               </T>
@@ -413,12 +419,12 @@ Your reputation is at the core of our communications strategies. This includes u
             ].map((item) => (
               <article
                 key={item.title}
-                className="rounded-lg border border-brand-border bg-white p-7 md:p-8"
+                className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-7 md:p-8"
               >
-                <p className="text-brand-gold font-heading font-black text-sm mb-4">
+                <p className="mb-4 font-heading text-brand-gold/70 tabular-nums text-sm">
                   {item.num}
                 </p>
-                <h3 className="font-heading font-black text-navy text-xl mb-4 leading-snug">
+                <h3 className="font-heading text-navy text-2xl mb-4 leading-snug">
                   {item.title}
                 </h3>
                 <p className="text-charcoal text-base leading-relaxed">
@@ -431,15 +437,16 @@ Your reputation is at the core of our communications strategies. This includes u
       </section>
 
       {/* Why most reputation management fails */}
-      <section className="bg-warm-white py-24">
+      <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl mb-10">
-            <p className="text-brand-gold text-xs font-medium mb-4">
+            <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+              <span className="h-px w-8 bg-current opacity-50" aria-hidden />
               <T id="services-reputation-management.t33">
               Long-term discipline
               </T>
             </p>
-            <h2 className="font-heading font-black text-navy text-3xl md:text-4xl mb-6 leading-tight">
+            <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
               <T id="services-reputation-management.t34">
               Why most reputation management fails, and what to do differently
               </T>
@@ -447,8 +454,9 @@ Your reputation is at the core of our communications strategies. This includes u
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            <div className="rounded-lg border border-brand-border bg-off-white p-7 md:p-8">
-              <p className="text-brand-teal text-xs font-medium mb-4">
+            <div className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-7 md:p-8">
+              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="services-reputation-management.t35">
                 What usually goes wrong
                 </T>
@@ -464,7 +472,7 @@ Your reputation is at the core of our communications strategies. This includes u
                   permanently vulnerable.
                   </T>
                 </p>
-                <div className="rounded-lg border border-brand-border bg-white p-5">
+                <div className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-5">
                   <p className="font-sans font-semibold text-navy text-sm mb-2">
                     <T id="services-reputation-management.t37">
                     Reactive cycle
@@ -480,8 +488,9 @@ Your reputation is at the core of our communications strategies. This includes u
               </div>
             </div>
 
-            <div className="rounded-lg border border-brand-border bg-white p-7 md:p-8 shadow-sm shadow-navy/5">
-              <p className="text-brand-teal text-xs font-medium mb-4">
+            <div className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-7 md:p-8 shadow-sm shadow-navy/5">
+              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="services-reputation-management.t39">
                 What stronger organisations do
                 </T>
@@ -497,7 +506,7 @@ Your reputation is at the core of our communications strategies. This includes u
                   </T>
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                  <div className="rounded-lg border border-brand-border bg-warm-white p-4">
+                  <div className="rounded-xl border border-brand-border bg-warm-white/70 backdrop-blur p-4">
                     <p className="font-sans font-semibold text-navy text-sm mb-1">
                       <T id="services-reputation-management.t41">
                       Ongoing assessment
@@ -509,7 +518,7 @@ Your reputation is at the core of our communications strategies. This includes u
                       </T>
                     </p>
                   </div>
-                  <div className="rounded-lg border border-brand-border bg-warm-white p-4">
+                  <div className="rounded-xl border border-brand-border bg-warm-white/70 backdrop-blur p-4">
                     <p className="font-sans font-semibold text-navy text-sm mb-1">
                       <T id="services-reputation-management.t43">
                       Prepared leadership
@@ -521,7 +530,7 @@ Your reputation is at the core of our communications strategies. This includes u
                       </T>
                     </p>
                   </div>
-                  <div className="rounded-lg border border-brand-border bg-warm-white p-4">
+                  <div className="rounded-xl border border-brand-border bg-warm-white/70 backdrop-blur p-4">
                     <p className="font-sans font-semibold text-navy text-sm mb-1">
                       <T id="services-reputation-management.t45">
                       Deliberate trust-building
@@ -541,9 +550,9 @@ Your reputation is at the core of our communications strategies. This includes u
       </section>
 
       {/* Related sectors */}
-      <section className="bg-off-white py-16">
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-6">
-          <h3 className="font-heading font-black text-navy text-lg mb-4">
+          <h3 className="font-heading text-navy text-lg mb-4">
             <T id="services-reputation-management.t47">
             Related sectors
             </T>
@@ -553,7 +562,7 @@ Your reputation is at the core of our communications strategies. This includes u
               <Link
                 key={link.href}
                 href={link.href}
-                className="bg-white border border-brand-border rounded-[4px] px-3 py-1 text-sm text-charcoal-mid hover:text-link-teal hover:border-link-teal transition"
+                className="rounded-xl border border-brand-border bg-warm-white/70 backdrop-blur px-3 py-1 text-sm text-charcoal-mid hover:text-link-teal hover:border-link-teal transition"
               >
                 <T id={`services-reputation-management.sectorLinks.${__ti}.label`}>{link.label}</T>
               </Link>

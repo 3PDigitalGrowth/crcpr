@@ -95,20 +95,32 @@ export default function AboutPage() {
             fill
             priority
             sizes="100vw"
-            className="object-cover object-center"
+            className="object-cover object-center md:hidden"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[rgba(26,43,74,0.72)] via-[rgba(26,43,74,0.92)] to-[#1A2B4A]" />
+          <video
+            className="absolute inset-0 hidden size-full object-cover md:block"
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="/images/about/hero-poster.jpg"
+            aria-hidden
+          >
+            <source src="/images/about/hero-ambient.mp4" type="video/mp4" />
+          </video>
+          <div className="absolute inset-0 bg-[linear-gradient(105deg,rgba(16,28,52,0.94)_0%,rgba(16,28,52,0.84)_46%,rgba(16,28,52,0.55)_100%)]" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-20 md:pt-24 pb-12 md:pb-14">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-12 items-end">
             <div className="max-w-4xl">
-              <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="about.t1">
                 About us
                 </T>
               </p>
-              <h1 className="font-heading font-black text-white text-4xl md:text-[56px] leading-[1.02] max-w-4xl">
+              <h1 className="font-heading text-white text-[3.25rem] sm:text-6xl lg:text-[4.5rem] leading-[0.98] tracking-[-0.02em] [text-shadow:0_2px_18px_rgba(0,0,0,0.35)] max-w-4xl">
                 <T id="about.t2">
                 About CRC Public Relations
                 </T>
@@ -122,7 +134,7 @@ export default function AboutPage() {
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mt-8">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 bg-brand-gold text-navy font-heading font-black text-xs rounded-[4px] px-8 py-4 hover:bg-gold-light transition"
+                  className="inline-flex items-center gap-2 rounded-full bg-brand-gold px-7 py-3.5 font-sans text-sm font-semibold text-navy shadow-lg shadow-brand-gold/20 transition-colors hover:bg-gold-light"
                 >
                   <T id="about.t4">
                   Book a consultation
@@ -130,21 +142,21 @@ export default function AboutPage() {
                 </Link>
                 <a
                   href={siteConfig.phone.href}
-                  className="text-brand-gold text-sm font-heading font-black hover:text-gold-light transition-colors"
+                  className="font-sans text-sm font-semibold text-brand-gold transition-colors hover:text-gold-light"
                 >
                   Or call {siteConfig.phone.display}
                 </a>
               </div>
             </div>
 
-            <div className="border border-white/10 bg-white/[0.03] rounded-lg p-6 backdrop-blur-[2px]">
-              <p className="text-white/35 text-xs mb-4"><T id="about.t20">Direct strategic counsel</T></p>
+            <div className="v2-glass-dark rounded-[1.75rem] p-6">
+              <p className="text-white/45 text-xs mb-4"><T id="about.t20">Direct strategic counsel</T></p>
               <div className="space-y-4">
                 <div>
-                  <p className="font-heading font-black text-brand-gold text-2xl">
+                  <p className="font-heading text-brand-gold text-4xl leading-none">
                     {siteConfig.stats.yearsTrading}
                   </p>
-                  <p className="text-white/60 text-sm">
+                  <p className="text-white/60 text-sm mt-2">
                     <T id="about.t5">
                     Years serving organisations across Australia and the Pacific
                     </T>
@@ -152,7 +164,7 @@ export default function AboutPage() {
                 </div>
                 <div className="h-px bg-white/10" />
                 <div>
-                  <p className="font-heading font-black text-white text-lg">
+                  <p className="font-heading text-white text-xl">
                     <T id="about.t6">
                     Clear thinking, applied
                     </T>
@@ -174,12 +186,13 @@ export default function AboutPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 pt-12 md:pt-14 pb-16 md:pb-20">
           <div className="max-w-3xl">
-            <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+            <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+              <span className="h-px w-8 bg-current opacity-50" aria-hidden />
               <T id="about.t8">
               Why CRC Public Relations
               </T>
             </p>
-            <h2 className="font-heading font-black text-white text-3xl">
+            <h2 className="font-heading text-white text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em]">
               <T id="about.t9">
               CRC Public Relations exists to promote, protect and be advocates
               for our clients.
@@ -191,12 +204,12 @@ export default function AboutPage() {
             {proofItems.map((item, __ti) => (
               <div
                 key={`${item.label}-${item.value}`}
-                className="border border-white/10 bg-white/[0.03] rounded-lg p-6"
+                className="v2-glass-dark rounded-[1.75rem] p-6"
               >
                 <p className="text-brand-gold text-xs font-medium mb-3">
                   <T id={`about.proofItems.${__ti}.label`}>{item.label}</T>
                 </p>
-                <p className="font-heading font-black text-white text-2xl">
+                <p className="font-heading text-white text-2xl">
                   <T id={`about.proofItems.${__ti}.value`}>{item.value}</T>
                 </p>
                 <p className="text-sm leading-relaxed mt-3 text-white/60">
@@ -206,12 +219,17 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
+
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-36 bg-gradient-to-b from-transparent to-[#F5F2EC]"
+        />
       </section>
 
       <section className="bg-white py-24">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div>
-            <h2 className="font-heading font-black text-navy text-3xl">
+            <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em]">
               <T id="about.t10">
               How we work
               </T>
@@ -245,10 +263,10 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 gap-8">
             {STATS.map((stat, __ti) => (
               <div key={stat.label}>
-                <p className="font-heading font-black text-brand-gold text-4xl">
+                <p className="font-heading text-brand-gold text-4xl leading-none">
                   <T id={`about.STATS.${__ti}.value`}>{stat.value}</T>
                 </p>
-                <p className="text-charcoal-mid text-sm mt-1"><T id={`about.STATS.${__ti}.label`}>{stat.label}</T></p>
+                <p className="text-charcoal-mid text-sm mt-2"><T id={`about.STATS.${__ti}.label`}>{stat.label}</T></p>
               </div>
             ))}
           </div>
@@ -257,16 +275,17 @@ export default function AboutPage() {
 
       <section className="bg-off-white py-20 md:py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="rounded-[28px] border border-brand-border bg-white shadow-sm overflow-hidden">
+          <div className="rounded-[2.5rem] border border-brand-border bg-white shadow-sm overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-[0.75fr_1.25fr]">
               <div className="bg-navy p-8 md:p-12 flex flex-col justify-between gap-12">
                 <div>
-                  <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+                  <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+                    <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                     <T id="about.t14">
                     Our mission
                     </T>
                   </p>
-                  <h2 className="font-heading font-black text-white text-3xl md:text-4xl leading-tight">
+                  <h2 className="font-heading text-white text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em]">
                     <T id="about.t15">
                     Promote, protect and advocate when reputation matters.
                     </T>
@@ -285,9 +304,9 @@ export default function AboutPage() {
                   {missionItems.map((item, index) => (
                     <div
                       key={item}
-                      className="relative rounded-2xl border border-brand-border bg-off-white p-6"
+                      className="relative rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6"
                     >
-                      <p className="font-heading font-black text-brand-gold text-sm mb-5">
+                      <p className="font-heading text-brand-gold/70 tabular-nums text-sm mb-5">
                         0{index + 1}
                       </p>
                       <p className="text-charcoal text-[15px] leading-relaxed">
@@ -317,12 +336,13 @@ export default function AboutPage() {
       <section className="bg-white py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-3xl">
-            <p className="text-brand-gold font-sans font-medium text-xs mb-4">
+            <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+              <span className="h-px w-8 bg-current opacity-50" aria-hidden />
               <T id="about.t17">
               Leadership team
               </T>
             </p>
-            <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight">
+            <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em]">
               <T id="about.t18">
               Our team
               </T>
@@ -340,26 +360,33 @@ export default function AboutPage() {
             {teamMembers.map((member, __ti) => (
               <div
                 key={member.name}
-                className="rounded-[28px] border border-brand-border bg-off-white p-8 md:p-10"
+                className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-8 md:p-10"
               >
                 <div className="flex flex-col sm:flex-row gap-6 items-start">
-                  <PortraitPlaceholder
-                    size={member.size}
-                    initials={undefined}
-                    imageSrc={member.portraitSrc}
-                    imageAlt={member.name}
-                    imageObjectClassName={
-                      member.initials === "BG"
-                        ? "object-[center_12%]"
-                        : undefined
-                    }
-                  />
+                  <div className="relative shrink-0">
+                    <div
+                      className="absolute -inset-3 rounded-[2rem] border border-brand-gold/35"
+                      aria-hidden
+                    />
+                    <PortraitPlaceholder
+                      size={member.size}
+                      initials={undefined}
+                      imageSrc={member.portraitSrc}
+                      imageAlt={member.name}
+                      imageObjectClassName={
+                        member.initials === "BG"
+                          ? "object-[center_12%]"
+                          : undefined
+                      }
+                      className="relative"
+                    />
+                  </div>
 
                   <div className="flex-1">
                     <p className="text-brand-teal text-xs font-medium mb-3">
                       <T id={`about.teamMembers.${__ti}.initials`}>{member.initials}</T>
                     </p>
-                    <h3 className="font-heading font-black text-navy text-2xl leading-tight">
+                    <h3 className="font-heading text-navy text-2xl leading-tight">
                       <T id={`about.teamMembers.${__ti}.name`}>{member.name}</T>
                     </h3>
                     <p className="text-brand-gold text-sm font-medium mt-2">

@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import { T, bind } from "@/components/editable";
 import { Counter } from "./Counter";
 
 const serif = "font-[family-name:var(--font-display)]";
@@ -40,18 +41,30 @@ export function ReachSnapshotV2() {
             <p
               className={`text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold`}
             >
-              {data.intro.eyebrow}
+              <span {...bind("mediaReachSnapshot.intro.eyebrow")}>
+                {data.intro.eyebrow}
+              </span>
             </p>
             <h2
               className={`${serif} mt-5 max-w-2xl text-4xl font-normal leading-[1.02] tracking-[-0.02em] text-white md:text-[3.25rem]`}
             >
-              What proactive media relations produces in a{" "}
-              <span className="italic text-brand-gold">single month.</span>
+              <T id="home2.reach.title1">
+                What proactive media relations produces in a
+              </T>{" "}
+              <span className="text-brand-gold">
+                <T id="home2.reach.title2">single month.</T>
+              </span>
             </h2>
             <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-white/70">
-              For a {data.clientDescriptor}, four media stories generated 221
-              placements nationally across television, radio, print and digital,
-              in a single month.
+              <T id="home2.reach.bodyPre">For a</T>{" "}
+              <span {...bind("mediaReachSnapshot.clientDescriptor")}>
+                {data.clientDescriptor}
+              </span>
+              <T id="home2.reach.bodyPost">
+                , four media stories generated 221
+                placements nationally across television, radio, print and digital,
+                in a single month.
+              </T>
             </p>
           </div>
 
@@ -62,14 +75,14 @@ export function ReachSnapshotV2() {
               <Counter value={data.total} />
             </p>
             <p className="mt-3 text-sm uppercase tracking-[0.18em] text-white/70">
-              media placements
+              <T id="home2.reach.placementsLabel">media placements</T>
             </p>
           </div>
         </div>
 
         {/* Channel breakdown as glass tiles */}
         <div className="mt-12 grid grid-cols-2 gap-3 md:grid-cols-4 md:gap-4">
-          {data.breakdown.map((item) => (
+          {data.breakdown.map((item, i) => (
             <div
               key={item.label}
               className="v2-glass-dark rounded-2xl p-5"
@@ -78,7 +91,9 @@ export function ReachSnapshotV2() {
                 <Counter value={item.value} />
               </p>
               <p className="mt-2 text-[13px] leading-snug text-white/60">
-                {item.label}
+                <span {...bind(`mediaReachSnapshot.breakdown.${i}.label`)}>
+                  {item.label}
+                </span>
               </p>
             </div>
           ))}
@@ -87,8 +102,12 @@ export function ReachSnapshotV2() {
         {/* Client-led vs expert-comment split */}
         <div className="mt-10 max-w-3xl">
           <div className="flex items-baseline justify-between text-[11px] uppercase tracking-[0.15em] text-white/55">
-            <span>Led by the client ({clientLedPct}%)</span>
-            <span>Expert commentary ({expertPct}%)</span>
+            <span>
+              <T id="home2.reach.splitClientLabel">Led by the client</T> ({clientLedPct}%)
+            </span>
+            <span>
+              <T id="home2.reach.splitExpertLabel">Expert commentary</T> ({expertPct}%)
+            </span>
           </div>
           <div className="mt-3 flex h-2.5 w-full overflow-hidden rounded-full bg-white/10">
             <div className="bg-brand-gold" style={{ width: `${clientLedPct}%` }} />
@@ -100,16 +119,20 @@ export function ReachSnapshotV2() {
         <div className="mt-12 grid gap-4 border-t border-white/10 pt-6 md:grid-cols-[1fr_auto] md:items-end md:gap-10">
           <div>
             <p className="max-w-2xl text-[13px] leading-relaxed text-white/55">
-              <span className="font-semibold text-white/85">Source.</span>{" "}
-              {data.source}
+              <span className="font-semibold text-white/85">
+                <T id="home2.reach.sourceLabel">Source.</T>
+              </span>{" "}
+              <span {...bind("mediaReachSnapshot.source")}>{data.source}</span>
             </p>
-            <p className="mt-2 text-[12px] text-white/40">{data.caveat}</p>
+            <p className="mt-2 text-[12px] text-white/40">
+              <span {...bind("mediaReachSnapshot.caveat")}>{data.caveat}</span>
+            </p>
           </div>
           <Link
             href="/services/media-strategy#media-reach-snapshot"
             className="group inline-flex items-center gap-2 text-sm font-semibold text-brand-gold transition hover:text-gold-light"
           >
-            See the full breakdown
+            <T id="home2.reach.breakdownLink">See the full breakdown</T>
             <ArrowRight
               size={15}
               aria-hidden

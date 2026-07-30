@@ -64,7 +64,8 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-xs font-sans font-medium text-brand-gold mb-4">
+            <h4 className="mb-4 inline-flex items-center gap-3 font-sans text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+              <span className="h-px w-8 bg-current opacity-50" aria-hidden />
               Services
             </h4>
             <ul>
@@ -82,7 +83,8 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-xs font-sans font-medium text-brand-gold mb-4">
+            <h4 className="mb-4 inline-flex items-center gap-3 font-sans text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+              <span className="h-px w-8 bg-current opacity-50" aria-hidden />
               Quick links
             </h4>
             <ul>
@@ -100,12 +102,13 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="text-xs font-sans font-medium text-brand-gold mb-4">
+            <h4 className="mb-4 inline-flex items-center gap-3 font-sans text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+              <span className="h-px w-8 bg-current opacity-50" aria-hidden />
               Contact
             </h4>
             <a
               href={siteConfig.phone.href}
-              className="text-brand-gold font-heading font-black text-lg block hover:opacity-90 transition-opacity"
+              className="text-brand-gold font-heading text-xl block hover:opacity-90 transition-opacity"
             >
               {siteConfig.phone.display}
             </a>
@@ -130,15 +133,15 @@ export function Footer() {
             The CRC Public Relations group ecosystem
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div className="bg-white/5 rounded-lg p-4">
-              <p className="text-white font-heading font-black text-sm mb-1">CRC Public Relations</p>
+            <div className="v2-glass-dark rounded-[1.5rem] p-4">
+              <p className="text-white font-heading text-sm mb-1">CRC Public Relations</p>
               <p className="text-white/50 text-xs leading-relaxed mb-2">
                 Boutique corporate PR, reputation management and crisis communications.
               </p>
               <span className="text-brand-gold text-xs font-medium">You are here</span>
             </div>
-            <div className="bg-white/5 rounded-lg p-4">
-              <p className="text-white font-heading font-black text-sm mb-1">Crisis Communications Australia</p>
+            <div className="v2-glass-dark rounded-[1.5rem] p-4">
+              <p className="text-white font-heading text-sm mb-1">Crisis Communications Australia</p>
               <p className="text-white/50 text-xs leading-relaxed mb-2">
                 24/7 crisis support.
               </p>
@@ -160,7 +163,17 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-white/10 flex justify-between items-center flex-wrap gap-4">
           <p className="text-xs text-white/30">
             © {siteConfig.copyrightYear} CRC Public Relations. All rights reserved.{" "}
-            <a href="https://www.3pdigital.com.au" target="_blank" rel="noopener" className="hover:text-white/50 transition-colors">Proudly supported by 3P Digital</a>
+            <span className="whitespace-nowrap">
+              Proudly supported by{" "}
+              <a
+                href="https://www.3pdigital.com.au"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white/50 transition-colors"
+              >
+                3P Digital
+              </a>
+            </span>
           </p>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-white/30">
             <Link href={siteConfig.privacyPolicyUrl} className="hover:text-white/50 transition-colors">

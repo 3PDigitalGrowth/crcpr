@@ -26,21 +26,18 @@ export function MyPRPartnerCTA({
 
   return (
     <div
-      className={`rounded-xl border p-5 ${
+      className={`rounded-[1.5rem] p-5 ${
         isDark
-          ? "border-white/10 bg-white/[0.04]"
-          : "border-brand-border bg-white shadow-sm shadow-navy/5"
+          ? "v2-glass-dark"
+          : "border border-brand-border bg-warm-white/70 backdrop-blur shadow-sm shadow-navy/5"
       } ${className}`}
     >
-      <p
-        className={`text-xs font-medium mb-3 ${
-          isDark ? "text-brand-teal" : "text-brand-teal"
-        }`}
-      >
+      <p className="mb-3 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
+        <span className="h-px w-8 bg-current opacity-50" aria-hidden />
         {eyebrow}
       </p>
       <p
-        className={`font-heading font-black ${
+        className={`font-heading ${
           compact ? "text-base" : "text-lg"
         } leading-snug ${isDark ? "text-white" : "text-navy"}`}
       >
@@ -57,10 +54,10 @@ export function MyPRPartnerCTA({
         href={siteConfig.myPrPartnerUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className={`inline-flex items-center justify-center gap-2 font-heading font-black text-xs rounded-[4px] px-5 py-3 mt-4 transition ${
+        className={`inline-flex items-center justify-center gap-2 rounded-full font-sans text-sm font-semibold px-5 py-3 mt-4 transition ${
           isDark
-            ? "border border-white/20 bg-white/[0.04] text-white hover:bg-white/[0.08]"
-            : "bg-brand-teal text-white hover:bg-link-teal"
+            ? "border border-white/25 text-white hover:bg-white/10"
+            : "bg-brand-teal text-white shadow-lg shadow-brand-teal/20 transition-colors hover:bg-link-teal"
         }`}
       >
         {buttonLabel}

@@ -26,7 +26,7 @@ export function ImageTextRow({
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
       <div
-        className={`relative w-full overflow-hidden rounded-lg shadow-sm shadow-navy/10 ${aspectClass} ${imageOrder}`}
+        className={`relative w-full overflow-hidden rounded-[1.5rem] shadow-sm shadow-navy/10 ${aspectClass} ${imageOrder}`}
       >
         <Image
           src={imageSrc}

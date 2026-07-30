@@ -28,6 +28,7 @@ import {
   UserRound,
 } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import { T, bind, imgBindPath } from "@/components/editable";
 import { submitEnquiry, type FormState } from "@/lib/actions";
 import { MediaOutletLogoLink } from "@/components/shared/MediaOutletLogoLink";
 import { ReputationAssessmentModal } from "@/components/shared/ReputationAssessmentModal";
@@ -207,9 +208,17 @@ export function RedesignHomeV2() {
       {/* ============================== HERO ============================== */}
       <section className="relative">
         <div className="relative overflow-hidden">
-          {/* Background video + cinematic overlay (scoped to the hero) */}
+          {/* Background video + cinematic overlay (scoped to the hero).
+              Static image below md per house rules; video is desktop-only. */}
+          <div
+            className="absolute inset-0 bg-cover bg-center md:hidden"
+            style={{
+              backgroundImage: "url(/images/redesign-v2/hero-ambient.png)",
+            }}
+            aria-hidden
+          />
           <video
-            className="absolute inset-0 size-full object-cover"
+            className="absolute inset-0 hidden size-full object-cover md:block"
             autoPlay
             muted
             loop
@@ -232,8 +241,10 @@ export function RedesignHomeV2() {
           <div>
             <Reveal y={12}>
               <Eyebrow>
-                Boutique corporate PR &middot; Australia &middot; New Zealand
-                &middot; Pacific
+                <T id="home2.hero.eyebrow">
+                  Boutique corporate PR &middot; Australia &middot; New Zealand
+                  &middot; Pacific
+                </T>
               </Eyebrow>
             </Reveal>
 
@@ -243,30 +254,36 @@ export function RedesignHomeV2() {
               initial={reduce ? false : "hidden"}
               animate={reduce ? undefined : "show"}
             >
-              {headWords.map((w) => (
+              {headWords.map((w, i) => (
                 <motion.span
                   key={w}
                   variants={wordItem}
                   className="inline-block"
                 >
-                  {w}&nbsp;
+                  <T id={`home2.hero.title.word${i}`}>{w}</T>&nbsp;
                 </motion.span>
               ))}
               <motion.span variants={wordItem} className="inline-block">
-                <span className="italic text-brand-gold">communications</span>
+                <span className="text-brand-gold">
+                  <T id="home2.hero.title.word2">communications</T>
+                </span>
               </motion.span>{" "}
               <motion.span variants={wordItem} className="inline-block">
-                advice.
+                <T id="home2.hero.title.word3">advice.</T>
               </motion.span>
             </motion.h1>
 
             <Reveal delay={0.5} y={16}>
               <p className="mt-7 max-w-lg text-lg leading-relaxed text-white/85">
-                Whatever your communications objectives, you need experienced
-                counsel you can trust.
+                <T id="home2.hero.sub1">
+                  Whatever your communications objectives, you need experienced
+                  counsel you can trust.
+                </T>
               </p>
-              <p className={`${serif} mt-3 max-w-lg text-xl italic text-white`}>
-                We are your trusted adviser and advocate, and we believe in you.
+              <p className={`${serif} mt-3 max-w-lg text-xl text-white`}>
+                <T id="home2.hero.sub2">
+                  We are your trusted adviser and advocate, and we believe in you.
+                </T>
               </p>
             </Reveal>
 
@@ -277,14 +294,14 @@ export function RedesignHomeV2() {
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-gold px-7 py-3.5 text-sm font-semibold text-navy shadow-lg shadow-brand-gold/20 transition-colors hover:bg-gold-light"
                 >
                   <Phone className="size-4" strokeWidth={2} aria-hidden />
-                  Book a consultation
+                  <T id="home2.hero.cta1">Book a consultation</T>
                 </MagneticButton>
                 <button
                   type="button"
                   onClick={() => setAssessmentOpen(true)}
                   className="group inline-flex items-center justify-center gap-2 rounded-full px-4 py-3.5 text-sm font-semibold text-white transition hover:text-brand-gold"
                 >
-                  Start the free assessment
+                  <T id="home2.hero.cta2">Start the free assessment</T>
                   <ArrowRight
                     size={15}
                     aria-hidden
@@ -304,14 +321,16 @@ export function RedesignHomeV2() {
                     <span className="absolute inline-flex size-full animate-ping rounded-full bg-brand-teal/60" />
                     <span className="relative inline-flex size-2.5 rounded-full bg-brand-teal" />
                   </span>
-                  24/7 confidential crisis line
+                  <T id="home2.hero.crisisLine">24/7 confidential crisis line</T>
                   <span className="font-semibold text-brand-gold">
                     {siteConfig.phone.display}
                   </span>
                 </a>
                 <p className="text-sm text-white/65">
-                  You deal directly with an experienced adviser, not an account
-                  manager.
+                  <T id="home2.hero.adviserNote">
+                    You deal directly with an experienced adviser, not an account
+                    manager.
+                  </T>
                 </p>
               </div>
             </Reveal>
@@ -326,28 +345,33 @@ export function RedesignHomeV2() {
                     <Check size={24} strokeWidth={2.5} aria-hidden />
                   </div>
                   <p className={`${serif} text-2xl text-white`}>
-                    Message received.
+                    <T id="home2.hero.form.successTitle">Message received.</T>
                   </p>
                   <p className="mx-auto mt-3 max-w-xs text-sm leading-relaxed text-white/70">
-                    An experienced adviser will be in touch shortly, within the
-                    hour during business hours.
+                    <T id="home2.hero.form.successBody">
+                      An experienced adviser will be in touch shortly, within the
+                      hour during business hours.
+                    </T>
                   </p>
                   <a
                     href={siteConfig.phone.href}
                     className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-gold transition hover:text-gold-light"
                   >
-                    <Phone size={14} aria-hidden /> Urgent? Call{" "}
+                    <Phone size={14} aria-hidden />{" "}
+                    <T id="home2.hero.form.urgentCall">Urgent? Call</T>{" "}
                     {siteConfig.phone.display}
                   </a>
                 </div>
               ) : (
                 <form onSubmit={handleEnquiry} className="space-y-3.5">
                   <div>
-                    <Eyebrow tone="gold">Book a consultation</Eyebrow>
+                    <Eyebrow tone="gold">
+                      <T id="home2.hero.form.eyebrow">Book a consultation</T>
+                    </Eyebrow>
                     <p
                       className={`${serif} mt-3 text-2xl leading-tight text-white`}
                     >
-                      Start a conversation.
+                      <T id="home2.hero.form.title">Start a conversation.</T>
                     </p>
                   </div>
                   {enquiry.status === "error" && (
@@ -389,11 +413,16 @@ export function RedesignHomeV2() {
                     disabled={sending}
                     className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-gold px-7 py-3.5 text-sm font-semibold text-navy shadow-lg shadow-brand-gold/20 transition-colors hover:bg-gold-light disabled:cursor-not-allowed disabled:opacity-60"
                   >
-                    {sending ? "Sending…" : "Send message"}
+                    {sending ? (
+                      <T id="home2.hero.form.sending">Sending…</T>
+                    ) : (
+                      <T id="home2.hero.form.submit">Send message</T>
+                    )}
                     {!sending && <ArrowRight size={15} aria-hidden />}
                   </button>
                   <p className="text-center text-xs text-white/45">
-                    For active crises, call {siteConfig.phone.display}.
+                    <T id="home2.hero.form.crisisNote">For active crises, call</T>{" "}
+                    {siteConfig.phone.display}.
                   </p>
                 </form>
               )}
@@ -405,7 +434,9 @@ export function RedesignHomeV2() {
         {/* Media marquee — living seam into the bento */}
         <div className="mt-10">
           <p className="mb-4 text-center text-[11px] font-medium uppercase tracking-[0.2em] text-text-caption">
-            Expert commentary from our advisers, featured in
+            <T id="home2.marquee.caption">
+              Expert commentary from our advisers, featured in
+            </T>
           </p>
           <Marquee>
             {Array.from({ length: 3 }).flatMap((_, rep) =>
@@ -430,19 +461,23 @@ export function RedesignHomeV2() {
         <Reveal>
           <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
-              <Eyebrow>Our practice areas</Eyebrow>
+              <Eyebrow>
+                <T id="home2.bento.eyebrow">Our practice areas</T>
+              </Eyebrow>
               <h2
                 className={`${serif} mt-5 max-w-2xl text-4xl font-normal leading-[1.0] tracking-[-0.02em] text-navy md:text-6xl`}
               >
-                Corporate. Reputation.{" "}
-                <span className="italic text-brand-gold">Crisis.</span>
+                <T id="home2.bento.title1">Corporate. Reputation.</T>{" "}
+                <span className="text-brand-gold">
+                  <T id="home2.bento.title2">Crisis.</T>
+                </span>
               </h2>
             </div>
             <Link
               href="/services"
               className="group inline-flex items-center gap-2 text-sm font-semibold text-link-teal transition hover:text-navy"
             >
-              View all services
+              <T id="home2.bento.viewAll">View all services</T>
               <ArrowRight
                 size={15}
                 aria-hidden
@@ -469,21 +504,23 @@ export function RedesignHomeV2() {
               <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/55 to-navy/10" />
               <div className="absolute inset-0 flex flex-col justify-end p-7 md:p-9">
                 <span
-                  className={`${serif} text-2xl italic text-brand-gold`}
+                  className={`${serif} text-2xl text-brand-gold`}
                 >
-                  03
+                  <T id="home2.bento.crisis.number">03</T>
                 </span>
                 <h3
                   className={`${serif} mt-1 text-3xl font-normal text-white md:text-4xl`}
                 >
-                  Crisis Communications
+                  <T id="home2.bento.crisis.title">Crisis Communications</T>
                 </h3>
                 <p className="mt-3 max-w-md text-[15px] leading-relaxed text-white/80">
-                  We help you prevent, prepare for and strategically manage
-                  crises. 24/7. Confidential. Decisive.
+                  <T id="home2.bento.crisis.body">
+                    We help you prevent, prepare for and strategically manage
+                    crises. 24/7. Confidential. Decisive.
+                  </T>
                 </p>
                 <span className="mt-5 inline-flex items-center gap-2 text-[13px] font-semibold uppercase tracking-[0.08em] text-brand-gold transition-all group-hover:gap-3">
-                  Explore crisis communications
+                  <T id="home2.bento.crisis.cta">Explore crisis communications</T>
                   <ArrowRight size={14} aria-hidden />
                 </span>
               </div>
@@ -504,10 +541,11 @@ export function RedesignHomeV2() {
               <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/40 to-transparent" />
               <div className="absolute inset-0 flex flex-col justify-end p-6">
                 <h3 className={`${serif} text-2xl font-normal text-white`}>
-                  Corporate Communications
+                  <T id="home2.bento.corporate.title">Corporate Communications</T>
                 </h3>
                 <span className="mt-3 inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.08em] text-brand-gold transition-all group-hover:gap-3">
-                  Explore <ArrowRight size={13} aria-hidden />
+                  <T id="home2.bento.corporate.cta">Explore</T>{" "}
+                  <ArrowRight size={13} aria-hidden />
                 </span>
               </div>
             </Link>
@@ -527,10 +565,11 @@ export function RedesignHomeV2() {
               <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/40 to-transparent" />
               <div className="absolute inset-0 flex flex-col justify-end p-6">
                 <h3 className={`${serif} text-2xl font-normal text-white`}>
-                  Reputation Management
+                  <T id="home2.bento.reputation.title">Reputation Management</T>
                 </h3>
                 <span className="mt-3 inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.08em] text-brand-gold transition-all group-hover:gap-3">
-                  Explore <ArrowRight size={13} aria-hidden />
+                  <T id="home2.bento.reputation.cta">Explore</T>{" "}
+                  <ArrowRight size={13} aria-hidden />
                 </span>
               </div>
             </Link>
@@ -541,18 +580,22 @@ export function RedesignHomeV2() {
                 <Counter value={500} suffix="+" />
               </p>
               <p className="mt-2 text-sm leading-snug text-text-secondary">
-                professionals trained in media and crisis readiness.
+                <T id="home2.bento.stat.caption">
+                  professionals trained in media and crisis readiness.
+                </T>
               </p>
             </div>
 
             {/* Quote tile */}
             <div className="col-span-1 row-span-1 flex flex-col justify-center rounded-[1.5rem] bg-navy p-6 md:col-span-1 lg:col-span-2">
-              <p className={`${serif} text-lg italic leading-snug text-white`}>
-                &ldquo;You have 15 minutes to respond before you start to lose
-                control of the message.&rdquo;
+              <p className={`${serif} text-lg leading-snug text-white`}>
+                <T id="home2.bento.quote.text">
+                  &ldquo;You have 15 minutes to respond before you start to lose
+                  control of the message.&rdquo;
+                </T>
               </p>
               <p className="mt-3 text-[11px] uppercase tracking-[0.16em] text-brand-gold">
-                Lyall Mercer
+                <T id="home2.bento.quote.attribution">Lyall Mercer</T>
               </p>
             </div>
 
@@ -565,10 +608,13 @@ export function RedesignHomeV2() {
               <ShieldCheck size={26} strokeWidth={1.75} aria-hidden />
               <div>
                 <p className={`${serif} text-xl leading-snug`}>
-                  How exposed is your reputation?
+                  <T id="home2.bento.assessmentCta.title">
+                    How exposed is your reputation?
+                  </T>
                 </p>
                 <span className="mt-2 inline-flex items-center gap-2 text-[12px] font-semibold uppercase tracking-[0.08em] transition-all group-hover:gap-3">
-                  Free 3-minute assessment <ArrowRight size={13} aria-hidden />
+                  <T id="home2.bento.assessmentCta.cta">Free 3-minute assessment</T>{" "}
+                  <ArrowRight size={13} aria-hidden />
                 </span>
               </div>
             </button>
@@ -578,7 +624,7 @@ export function RedesignHomeV2() {
         {/* Specialist services — thin row */}
         <Reveal delay={0.1}>
           <div className="mt-4 grid gap-4 sm:grid-cols-3">
-            {specialistServices.map((s) => (
+            {specialistServices.map((s, i) => (
               <Link
                 key={s.title}
                 href={s.href}
@@ -586,9 +632,11 @@ export function RedesignHomeV2() {
               >
                 <div>
                   <p className="text-[15px] font-semibold text-navy group-hover:text-link-teal">
-                    {s.title}
+                    <T id={`home2.bento.services.${i}.title`}>{s.title}</T>
                   </p>
-                  <p className="mt-1 text-sm text-text-secondary">{s.blurb}</p>
+                  <p className="mt-1 text-sm text-text-secondary">
+                    <T id={`home2.bento.services.${i}.blurb`}>{s.blurb}</T>
+                  </p>
                 </div>
                 <ArrowUpRight
                   className="shrink-0 text-brand-gold opacity-60 transition group-hover:opacity-100"
@@ -605,18 +653,26 @@ export function RedesignHomeV2() {
       <section className="mx-auto max-w-7xl px-6 pt-20 md:pt-32">
         <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
           <Reveal>
-            <Eyebrow tone="teal">Why a boutique firm</Eyebrow>
+            <Eyebrow tone="teal">
+              <T id="home2.why.eyebrow">Why a boutique firm</T>
+            </Eyebrow>
             <blockquote
               className={`${serif} mt-6 text-3xl font-normal leading-[1.18] tracking-[-0.01em] text-navy md:text-[2.75rem]`}
             >
-              As a boutique PR firm, you deal directly with experienced advisers
-              who take a genuine,{" "}
-              <span className="italic text-brand-gold">long-term interest</span>{" "}
-              in your organisation. It is a partnership, and it makes a huge
-              difference to outcomes.
+              <T id="home2.why.quote1">
+                As a boutique PR firm, you deal directly with experienced advisers
+                who take a genuine,
+              </T>{" "}
+              <span className="text-brand-gold">
+                <T id="home2.why.quote2">long-term interest</T>
+              </span>{" "}
+              <T id="home2.why.quote3">
+                in your organisation. It is a partnership, and it makes a huge
+                difference to outcomes.
+              </T>
             </blockquote>
             <p className="mt-7 text-sm font-medium uppercase tracking-[0.18em] text-text-secondary">
-              Lyall Mercer, co-founder
+              <T id="home2.why.attribution">Lyall Mercer, co-founder</T>
             </p>
           </Reveal>
 
@@ -638,7 +694,7 @@ export function RedesignHomeV2() {
                   title: "There when it matters",
                   text: "Available 24/7 and strictly confidential. When an issue emerges, decisive counsel is one call away.",
                 },
-              ].map((p) => {
+              ].map((p, i) => {
                 const Icon = p.icon;
                 return (
                   <div
@@ -650,10 +706,10 @@ export function RedesignHomeV2() {
                     </span>
                     <div>
                       <p className="text-base font-semibold text-navy">
-                        {p.title}
+                        <T id={`home2.why.points.${i}.title`}>{p.title}</T>
                       </p>
                       <p className="mt-1.5 text-sm leading-relaxed text-text-secondary">
-                        {p.text}
+                        <T id={`home2.why.points.${i}.text`}>{p.text}</T>
                       </p>
                     </div>
                   </div>
@@ -679,18 +735,24 @@ export function RedesignHomeV2() {
             <div className="relative grid items-center gap-10 p-8 md:p-14 lg:grid-cols-2 lg:gap-16">
               {/* Glass form card */}
               <div className="v2-glass-dark rounded-[1.5rem] p-7 md:p-9">
-                <Eyebrow tone="gold">Free assessment</Eyebrow>
+                <Eyebrow tone="gold">
+                  <T id="home2.assessment.eyebrow">Free assessment</T>
+                </Eyebrow>
                 <h2
                   className={`${serif} mt-5 text-3xl font-normal leading-[1.05] tracking-[-0.02em] text-white md:text-4xl`}
                 >
-                  How exposed is your organisation&rsquo;s reputation?
+                  <T id="home2.assessment.title">
+                    How exposed is your organisation&rsquo;s reputation?
+                  </T>
                 </h2>
                 <p className="mt-4 max-w-md text-[15px] leading-relaxed text-white/70">
-                  Used by CEOs, communications directors and board chairs across
-                  Australia. 20 questions across 5 risk areas.
+                  <T id="home2.assessment.body">
+                    Used by CEOs, communications directors and board chairs across
+                    Australia. 20 questions across 5 risk areas.
+                  </T>
                 </p>
                 <div className="mt-6 grid grid-cols-1 gap-x-8 sm:grid-cols-2">
-                  {assessmentAreas.map((area) => (
+                  {assessmentAreas.map((area, i) => (
                     <div
                       key={area}
                       className="flex items-center gap-3 border-b border-white/10 py-2.5"
@@ -701,7 +763,9 @@ export function RedesignHomeV2() {
                         strokeWidth={2.5}
                         aria-hidden
                       />
-                      <span className="text-sm text-white/85">{area}</span>
+                      <span className="text-sm text-white/85">
+                        <T id={`home2.assessment.areas.${i}`}>{area}</T>
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -709,10 +773,13 @@ export function RedesignHomeV2() {
                   onClick={() => setAssessmentOpen(true)}
                   className="mt-7 inline-flex items-center justify-center gap-2 rounded-full bg-brand-gold px-7 py-3.5 text-sm font-semibold text-navy transition-colors hover:bg-gold-light"
                 >
-                  Start the free assessment <ArrowRight size={15} aria-hidden />
+                  <T id="home2.assessment.cta">Start the free assessment</T>{" "}
+                  <ArrowRight size={15} aria-hidden />
                 </MagneticButton>
                 <p className="mt-3 text-xs text-white/45">
-                  Three minutes. No commitment. Results delivered by email.
+                  <T id="home2.assessment.caption">
+                    Three minutes. No commitment. Results delivered by email.
+                  </T>
                 </p>
               </div>
 
@@ -723,7 +790,7 @@ export function RedesignHomeV2() {
                   { v: 100, s: "%", label: "client retention" },
                   { v: 500, s: "+", label: "professionals trained" },
                   { v: 221, s: "", label: "placements in one month" },
-                ].map((stat) => (
+                ].map((stat, i) => (
                   <div key={stat.label}>
                     <p
                       className={`${serif} text-5xl leading-none text-brand-gold md:text-6xl`}
@@ -731,7 +798,7 @@ export function RedesignHomeV2() {
                       <Counter value={stat.v} suffix={stat.s} />
                     </p>
                     <p className="mt-2 text-sm leading-snug text-white/65">
-                      {stat.label}
+                      <T id={`home2.assessment.stats.${i}.label`}>{stat.label}</T>
                     </p>
                   </div>
                 ))}
@@ -752,12 +819,16 @@ export function RedesignHomeV2() {
       <section className="mx-auto max-w-7xl px-6 pt-20 md:pt-28">
         <Reveal>
           <div className="max-w-3xl">
-            <Eyebrow>Who we work with</Eyebrow>
+            <Eyebrow>
+              <T id="home2.sectors.eyebrow">Who we work with</T>
+            </Eyebrow>
             <h2
               className={`${serif} mt-5 text-4xl font-normal leading-[1.0] tracking-[-0.02em] text-navy md:text-6xl`}
             >
-              Trusted by leaders across{" "}
-              <span className="italic text-brand-gold">every sector.</span>
+              <T id="home2.sectors.title1">Trusted by leaders across</T>{" "}
+              <span className="text-brand-gold">
+                <T id="home2.sectors.title2">every sector.</T>
+              </span>
             </h2>
           </div>
         </Reveal>
@@ -777,7 +848,7 @@ export function RedesignHomeV2() {
                     <Icon size={18} strokeWidth={1.75} aria-hidden />
                   </span>
                   <span className="flex-1 text-[15px] font-medium text-navy transition-colors group-hover:text-link-teal">
-                    {sector.title}
+                    <T id={`home2.sectors.${i}.title`}>{sector.title}</T>
                   </span>
                   {sector.href && (
                     <ArrowUpRight
@@ -806,19 +877,23 @@ export function RedesignHomeV2() {
           <Reveal>
             <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
               <div>
-                <Eyebrow>Client outcomes</Eyebrow>
+                <Eyebrow>
+                  <T id="home2.caseStudies.eyebrow">Client outcomes</T>
+                </Eyebrow>
                 <h2
                   className={`${serif} mt-5 text-4xl font-normal leading-[1.0] tracking-[-0.02em] text-navy md:text-6xl`}
                 >
-                  Results that speak{" "}
-                  <span className="italic text-brand-gold">
-                    for themselves.
+                  <T id="home2.caseStudies.title1">Results that speak</T>{" "}
+                  <span className="text-brand-gold">
+                    <T id="home2.caseStudies.title2">for themselves.</T>
                   </span>
                 </h2>
               </div>
               <p className="max-w-xs text-sm text-text-secondary">
-                Drag or scroll to move through the work. Outcomes from when
-                policy, reputation and stakeholder pressure converge.
+                <T id="home2.caseStudies.intro">
+                  Drag or scroll to move through the work. Outcomes from when
+                  policy, reputation and stakeholder pressure converge.
+                </T>
               </p>
             </div>
           </Reveal>
@@ -833,7 +908,7 @@ export function RedesignHomeV2() {
             >
               <div className="flex items-center justify-between">
                 <p className="text-xs font-semibold uppercase tracking-[0.14em] text-brand-gold">
-                  {study.sector}
+                  <span {...bind(`caseStudies.${i}.sector`)}>{study.sector}</span>
                 </p>
                 <span className={`${serif} text-base tabular-nums text-navy/30`}>
                   {String(i + 1).padStart(2, "0")}
@@ -843,28 +918,28 @@ export function RedesignHomeV2() {
                 <p
                   className={`${serif} text-3xl font-normal leading-[1.05] text-navy`}
                 >
-                  {study.outcome}
+                  <span {...bind(`caseStudies.${i}.outcome`)}>{study.outcome}</span>
                 </p>
-                <p className="mt-3 text-sm italic leading-relaxed text-charcoal-mid">
-                  {study.outcomeSub}
+                <p className="mt-3 text-sm leading-relaxed text-charcoal-mid">
+                  <span {...bind(`caseStudies.${i}.outcomeSub`)}>{study.outcomeSub}</span>
                 </p>
               </div>
               <hr className="my-5 border-brand-border" />
               <div className="space-y-4">
                 <div className="sm:min-h-[6.5rem]">
                   <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-link-teal">
-                    Challenge
+                    <T id="home2.caseStudies.challengeLabel">Challenge</T>
                   </p>
                   <p className="mt-1 text-sm leading-relaxed text-text-body">
-                    {study.challenge}
+                    <span {...bind(`caseStudies.${i}.challenge`)}>{study.challenge}</span>
                   </p>
                 </div>
                 <div>
                   <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-link-teal">
-                    Our approach
+                    <T id="home2.caseStudies.approachLabel">Our approach</T>
                   </p>
                   <p className="mt-1 text-sm leading-relaxed text-text-body">
-                    {study.approach}
+                    <span {...bind(`caseStudies.${i}.approach`)}>{study.approach}</span>
                   </p>
                 </div>
               </div>
@@ -877,12 +952,16 @@ export function RedesignHomeV2() {
       {/* =========================== TESTIMONIALS ====================== */}
       <section className="mx-auto max-w-7xl px-6 pt-20 md:pt-28">
         <Reveal>
-          <Eyebrow tone="teal">Client endorsements</Eyebrow>
+          <Eyebrow tone="teal">
+            <T id="home2.testimonials.eyebrow">Client endorsements</T>
+          </Eyebrow>
           <h2
             className={`${serif} mt-5 max-w-3xl text-4xl font-normal leading-[1.0] tracking-[-0.02em] text-navy md:text-5xl`}
           >
-            Partnerships our clients{" "}
-            <span className="italic text-brand-gold">stand behind.</span>
+            <T id="home2.testimonials.title1">Partnerships our clients</T>{" "}
+            <span className="text-brand-gold">
+              <T id="home2.testimonials.title2">stand behind.</T>
+            </span>
           </h2>
         </Reveal>
 
@@ -891,12 +970,12 @@ export function RedesignHomeV2() {
           <Reveal className="lg:col-span-2">
             <figure className="flex h-full flex-col justify-between rounded-[1.5rem] bg-navy p-8 md:p-10">
               <blockquote
-                className={`${serif} text-2xl italic leading-[1.3] text-white md:text-[2rem]`}
+                className={`${serif} text-2xl leading-[1.3] text-white md:text-[2rem]`}
               >
-                &ldquo;{testimonials[0].quote}&rdquo;
+                &ldquo;<T id="home2.testimonials.0.quote">{testimonials[0].quote}</T>&rdquo;
               </blockquote>
               <figcaption className="mt-8 text-sm uppercase tracking-[0.16em] text-brand-gold">
-                {testimonials[0].title}
+                <T id="home2.testimonials.0.title">{testimonials[0].title}</T>
               </figcaption>
             </figure>
           </Reveal>
@@ -911,11 +990,11 @@ export function RedesignHomeV2() {
                 >
                   &ldquo;
                 </span>
-                <blockquote className="-mt-2 flex-1 text-[14px] italic leading-relaxed text-charcoal">
-                  {t.quote}
+                <blockquote className="-mt-2 flex-1 text-[14px] leading-relaxed text-charcoal">
+                  <T id={`home2.testimonials.${i + 1}.quote`}>{t.quote}</T>
                 </blockquote>
                 <figcaption className="mt-5 border-t border-brand-border pt-4 text-xs text-text-secondary">
-                  {t.title}
+                  <T id={`home2.testimonials.${i + 1}.title`}>{t.title}</T>
                 </figcaption>
               </figure>
             </Reveal>
@@ -928,11 +1007,15 @@ export function RedesignHomeV2() {
                 <Counter value={100} suffix="%" />
               </p>
               <p className="mt-3 text-[15px] font-medium leading-snug">
-                of our consulting clients would recommend CRC Public Relations
-                to a peer.
+                <T id="home2.testimonials.surveyStat.caption">
+                  of our consulting clients would recommend CRC Public Relations
+                  to a peer.
+                </T>
               </p>
               <p className="mt-3 text-[11px] uppercase tracking-[0.14em] text-navy/55">
-                CRC Public Relations Client Survey
+                <T id="home2.testimonials.surveyStat.source">
+                  CRC Public Relations Client Survey
+                </T>
               </p>
             </div>
           </Reveal>
@@ -949,6 +1032,7 @@ export function RedesignHomeV2() {
                 aria-hidden
               />
               <Image
+                {...imgBindPath("lyall.featuredPortraitSrc")}
                 src={siteConfig.lyall.featuredPortraitSrc}
                 alt="Lyall Mercer, co-founder and principal adviser"
                 width={682}
@@ -959,24 +1043,30 @@ export function RedesignHomeV2() {
           </Reveal>
 
           <Reveal delay={0.12} className="lg:col-span-7">
-            <Eyebrow tone="teal">Co-founder &amp; principal adviser</Eyebrow>
+            <Eyebrow tone="teal">
+              <T id="home2.founder.eyebrow">Co-founder &amp; principal adviser</T>
+            </Eyebrow>
             <h2
               className={`${serif} mt-5 text-5xl font-normal tracking-[-0.02em] text-navy md:text-6xl`}
             >
-              Lyall Mercer
+              <T id="home2.founder.name">Lyall Mercer</T>
             </h2>
             <div className="mt-7 space-y-5">
               <p className="text-base leading-relaxed text-text-body">
-                Lyall began his career as a journalist, writing for some of
-                Australia&apos;s leading newspapers and magazines. That
-                foundation, understanding exactly how media thinks, moves and
-                decides what becomes a story, led him into a 25 year public
-                relations career spanning every continent.
+                <T id="home2.founder.bio1">
+                  Lyall began his career as a journalist, writing for some of
+                  Australia&apos;s leading newspapers and magazines. That
+                  foundation, understanding exactly how media thinks, moves and
+                  decides what becomes a story, led him into a 25 year public
+                  relations career spanning every continent.
+                </T>
               </p>
               <p className="text-base leading-relaxed text-text-body">
-                When you choose CRC Public Relations, you will deal with various
-                members of our team, but Lyall will always be available for you.
-                This level of expertise is why our clients choose us.
+                <T id="home2.founder.bio2">
+                  When you choose CRC Public Relations, you will deal with various
+                  members of our team, but Lyall will always be available for you.
+                  This level of expertise is why our clients choose us.
+                </T>
               </p>
             </div>
             <a
@@ -985,7 +1075,7 @@ export function RedesignHomeV2() {
               rel="noopener noreferrer"
               className="group mt-8 inline-flex items-center gap-2 text-sm font-semibold text-link-teal transition hover:text-navy"
             >
-              Read Lyall&apos;s full profile
+              <T id="home2.founder.cta">Read Lyall&apos;s full profile</T>
               <ArrowRight
                 size={15}
                 aria-hidden
@@ -1001,11 +1091,13 @@ export function RedesignHomeV2() {
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
             <div className="mb-10 max-w-2xl">
-              <Eyebrow>Good to know</Eyebrow>
+              <Eyebrow>
+                <T id="home2.faq.eyebrow">Good to know</T>
+              </Eyebrow>
               <h2
                 className={`${serif} mt-5 text-4xl font-normal leading-[1.0] tracking-[-0.02em] text-navy md:text-5xl`}
               >
-                Common questions.
+                <T id="home2.faq.title">Common questions.</T>
               </h2>
             </div>
           </Reveal>
@@ -1026,27 +1118,32 @@ export function RedesignHomeV2() {
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(26,43,74,0.6),rgba(16,28,52,0.97))]" />
           <div className="relative mx-auto max-w-3xl px-6 py-20 text-center md:py-28">
             <Reveal>
-              <Eyebrow tone="gold">Ready to work with us</Eyebrow>
+              <Eyebrow tone="gold">
+                <T id="home2.finalCta.eyebrow">Ready to work with us</T>
+              </Eyebrow>
               <h2
                 className={`${serif} mx-auto mt-6 text-4xl font-normal leading-[1.06] tracking-[-0.02em] text-white md:text-7xl`}
               >
-                Trust is your most valuable asset.{" "}
-                <span className="italic text-brand-gold">
-                  Let us help you build it.
+                <T id="home2.finalCta.title1">Trust is your most valuable asset.</T>{" "}
+                <span className="text-brand-gold">
+                  <T id="home2.finalCta.title2">Let us help you build it.</T>
                 </span>
               </h2>
               <p className="mx-auto mt-7 max-w-2xl text-base leading-relaxed text-white/70">
-                Whether you need experienced advice on a complex issue, help
-                building your public profile, a communications strategy, or
-                trusted counsel during a crisis, we are your adviser and
-                advocate. We believe in you, and we have your back.
+                <T id="home2.finalCta.body">
+                  Whether you need experienced advice on a complex issue, help
+                  building your public profile, a communications strategy, or
+                  trusted counsel during a crisis, we are your adviser and
+                  advocate. We believe in you, and we have your back.
+                </T>
               </p>
               <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <MagneticButton
                   href="/contact"
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-gold px-8 py-4 text-sm font-semibold text-navy transition-colors hover:bg-gold-light"
                 >
-                  Book a consultation <ArrowRight size={15} aria-hidden />
+                  <T id="home2.finalCta.cta1">Book a consultation</T>{" "}
+                  <ArrowRight size={15} aria-hidden />
                 </MagneticButton>
                 <a
                   href={siteConfig.phone.href}

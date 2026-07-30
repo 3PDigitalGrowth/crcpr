@@ -38,13 +38,13 @@ export function ReputationAssessmentModal({
       onClick={onClose}
     >
       <div
-        className="bg-white rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto relative shadow-sm shadow-navy/10 my-auto"
+        className="bg-warm-white rounded-[1.75rem] max-w-2xl w-full max-h-[90vh] overflow-y-auto relative shadow-2xl shadow-navy/20 my-auto"
         role="dialog"
         aria-modal="true"
         aria-label="Reputation Vulnerability Assessment"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="sticky top-0 z-10 flex justify-end bg-white/95 backdrop-blur px-4 pt-4">
+        <div className="sticky top-0 z-10 flex justify-end bg-warm-white/95 backdrop-blur px-4 pt-4">
           <button
             type="button"
             className="text-text-caption hover:text-text-body transition"

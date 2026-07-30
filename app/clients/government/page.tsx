@@ -74,8 +74,8 @@ export default function GovernmentClientsPage() {
         ctaLabel="Book a consultation"
         ctaHref="/contact"
         heroImage={{
-          src: "/images/clients/government/hero.webp",
-          alt: "Australian government building with sandstone facade and flag in late afternoon light, no people",
+          src: "/images/clients/government/editorial-civic.png",
+          alt: "Stately sandstone civic colonnade in late afternoon light with long shadows across the forecourt",
         }}
       />
 
@@ -84,16 +84,17 @@ export default function GovernmentClientsPage() {
         items={[...proofItems]}
       />
 
-      <section className="bg-white py-24">
+      <section className="py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_380px] gap-10 items-start">
             <div className="max-w-3xl">
-              <p className="text-brand-gold text-xs font-medium mb-4">
+              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="clients-government.t1">
                 Public sector communications
                 </T>
               </p>
-              <h2 className="font-heading font-black text-navy text-3xl md:text-4xl leading-tight mb-6">
+              <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
                 <T id="clients-government.t2">
                 Authority, process, and public confidence have to hold together.
                 </T>
@@ -135,8 +136,9 @@ export default function GovernmentClientsPage() {
               </div>
             </div>
 
-            <aside className="rounded-[28px] border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="text-brand-teal text-xs font-medium mb-5">
+            <aside className="rounded-[1.5rem] border border-brand-border bg-off-white p-6 md:p-8">
+              <p className="mb-5 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
+                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
                 <T id="clients-government.t7">
                 Typical support areas
                 </T>

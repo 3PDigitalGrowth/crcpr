@@ -27,8 +27,8 @@ export default function ContactPage({
         ctaLabel="Urgent crisis support"
         ctaHref="/services/crisis-communications"
         heroImage={{
-          src: "/images/contact/editorial-desk.png",
-          alt: "Warm consulting desk with a classic telephone, notebook, and cup of tea in soft window light",
+          src: "/images/contact/hero.webp",
+          alt: "Welcoming entrance to a professional Brisbane office building in late afternoon light",
         }}
       />
 

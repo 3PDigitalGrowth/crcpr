@@ -198,7 +198,7 @@ function PanelShell({
 function ServicesPanel({ onClose }: { onClose: () => void }) {
   return (
     <PanelShell label="Services menu">
-      <div className="grid grid-cols-[1fr_1fr_1fr_220px]">
+      <div className="grid grid-cols-[1fr_1fr_300px_220px]">
         <div className="py-5 px-4 border-r border-white/[0.06]">
           <ColumnHeader>Core services</ColumnHeader>
           <MegaItem
@@ -282,7 +282,7 @@ function ServicesPanel({ onClose }: { onClose: () => void }) {
 function CrisisPanel({ onClose }: { onClose: () => void }) {
   return (
     <PanelShell label="Crisis menu">
-      <div className="grid grid-cols-[1fr_1fr_1fr_220px]">
+      <div className="mx-auto grid max-w-4xl grid-cols-[1.2fr_300px_220px]">
         <div className="py-5 px-4 border-r border-white/[0.06]">
           <ColumnHeader>Crisis support</ColumnHeader>
           <MegaItem
@@ -324,13 +324,13 @@ function CrisisPanel({ onClose }: { onClose: () => void }) {
           </Link>
         </div>
 
-        <div className="col-span-2 border-r border-white/[0.06]">
+        <div className="border-r border-white/[0.06]">
           <FeatureTile
             href="/services/crisis-communications"
             src="/images/services/crisis-communications/hero-poster.jpg"
             alt=""
             caption="When a crisis breaks, experience is everything."
-            sub="We help you prevent, prepare for and strategically manage crises. 24/7. Confidential. Decisive."
+            sub="24/7. Confidential. Decisive."
             onClick={onClose}
           />
         </div>
@@ -348,7 +348,7 @@ function CrisisPanel({ onClose }: { onClose: () => void }) {
 function PacificPanel({ onClose }: { onClose: () => void }) {
   return (
     <PanelShell label="Pacific menu">
-      <div className="grid grid-cols-[1fr_1fr_1fr_220px]">
+      <div className="mx-auto grid max-w-4xl grid-cols-[1.2fr_300px_220px]">
         <div className="py-5 px-4 border-r border-white/[0.06]">
           <ColumnHeader>Pacific advisory</ColumnHeader>
           <MegaItem
@@ -369,13 +369,13 @@ function PacificPanel({ onClose }: { onClose: () => void }) {
           />
         </div>
 
-        <div className="col-span-2 border-r border-white/[0.06]">
+        <div className="border-r border-white/[0.06]">
           <FeatureTile
             href="/pacific"
             src="/images/pacific/hero-poster.jpg"
             alt=""
-            caption="The Pacific region demands communications expertise that most public relations firms don't have."
-            sub="Assisting Pacific governments and companies to communicate effectively within their nation and internationally."
+            caption="Deep, sustained Pacific expertise."
+            sub="Assisting Pacific governments and companies to communicate effectively."
             onClick={onClose}
           />
         </div>
@@ -389,7 +389,7 @@ function PacificPanel({ onClose }: { onClose: () => void }) {
 function SectorsPanel({ onClose }: { onClose: () => void }) {
   return (
     <PanelShell label="Sectors menu">
-      <div className="grid grid-cols-[1fr_1fr_1fr_220px]">
+      <div className="grid grid-cols-[1fr_1fr_300px_220px]">
         <div className="py-5 px-4 border-r border-white/[0.06]">
           <ColumnHeader>Who we work with</ColumnHeader>
           <MegaItem
@@ -452,7 +452,7 @@ function SectorsPanel({ onClose }: { onClose: () => void }) {
 function CasesPanel({ onClose }: { onClose: () => void }) {
   return (
     <PanelShell label="Case studies menu">
-      <div className="grid grid-cols-[1.2fr_1fr_1fr_220px]">
+      <div className="mx-auto grid max-w-4xl grid-cols-[1.3fr_300px_220px]">
         <div className="py-5 px-4 border-r border-white/[0.06]">
           <ColumnHeader>Client outcomes</ColumnHeader>
           {siteConfig.caseStudies.slice(0, 4).map((study) => (
@@ -472,13 +472,13 @@ function CasesPanel({ onClose }: { onClose: () => void }) {
           ))}
         </div>
 
-        <div className="col-span-2 border-r border-white/[0.06]">
+        <div className="border-r border-white/[0.06]">
           <FeatureTile
             href="/case-studies"
             src="/images/case-studies/editorial-podium.png"
             alt=""
-            caption="Results when the needs are great and the stakes are high."
-            sub="Outcomes from when policy, reputation and stakeholder pressure converge."
+            caption="Results that speak for themselves."
+            sub="When policy, reputation and stakeholder pressure converge."
             onClick={onClose}
           />
         </div>
@@ -492,7 +492,7 @@ function CasesPanel({ onClose }: { onClose: () => void }) {
 function AboutPanel({ onClose }: { onClose: () => void }) {
   return (
     <PanelShell label="About menu">
-      <div className="grid grid-cols-[1fr_1fr_1fr_220px]">
+      <div className="mx-auto grid max-w-4xl grid-cols-[1.2fr_300px_220px]">
         <div className="py-5 px-4 border-r border-white/[0.06]">
           <ColumnHeader>The firm</ColumnHeader>
           <MegaItem
@@ -518,13 +518,13 @@ function AboutPanel({ onClose }: { onClose: () => void }) {
           />
         </div>
 
-        <div className="col-span-2 border-r border-white/[0.06]">
+        <div className="border-r border-white/[0.06]">
           <FeatureTile
             href="/about"
             src="/images/about/editorial-advisory-chairs.png"
             alt=""
-            caption="You deal directly with an experienced adviser, not an account manager."
-            sub="It is a partnership, and it makes a huge difference to outcomes."
+            caption="It is a partnership."
+            sub="You deal directly with an experienced adviser, not an account manager."
             onClick={onClose}
           />
         </div>
@@ -539,7 +539,7 @@ function ContactPanel({ onClose }: { onClose: () => void }) {
   const { street, city, state, postcode } = siteConfig.address;
   return (
     <PanelShell label="Contact menu">
-      <div className="grid grid-cols-[1fr_1fr_1fr_220px]">
+      <div className="mx-auto grid max-w-4xl grid-cols-[1.2fr_300px_220px]">
         <div className="py-5 px-4 border-r border-white/[0.06]">
           <ColumnHeader>Reach us</ColumnHeader>
           <a
@@ -582,13 +582,13 @@ function ContactPanel({ onClose }: { onClose: () => void }) {
           </div>
         </div>
 
-        <div className="col-span-2 border-r border-white/[0.06]">
+        <div className="border-r border-white/[0.06]">
           <FeatureTile
             href="/contact"
-            src="/images/contact/editorial-desk.png"
+            src="/images/clients/corporate/mid-office.webp"
             alt=""
             caption="Let's discuss your needs."
-            sub="Every conversation with CRC Public Relations begins with listening."
+            sub="Every conversation begins with listening."
             onClick={onClose}
           />
         </div>
@@ -602,7 +602,7 @@ function ContactPanel({ onClose }: { onClose: () => void }) {
 function InsightsPanel({ onClose }: { onClose: () => void }) {
   return (
     <PanelShell label="Insights menu">
-      <div className="grid grid-cols-[1.2fr_1fr_1fr_220px]">
+      <div className="mx-auto grid max-w-4xl grid-cols-[1.3fr_300px_220px]">
         <div className="py-5 px-4 border-r border-white/[0.06]">
           <ColumnHeader>Latest thinking</ColumnHeader>
           <MegaItem
@@ -629,7 +629,7 @@ function InsightsPanel({ onClose }: { onClose: () => void }) {
           </Link>
         </div>
 
-        <div className="col-span-2 border-r border-white/[0.06]">
+        <div className="border-r border-white/[0.06]">
           <FeatureTile
             href="/insights"
             src="/images/insights/editorial-broadsheets.png"
@@ -977,7 +977,7 @@ export function Nav() {
 
       {/* Desktop mega panels */}
       <div
-        className={`hidden md:block absolute left-0 right-0 top-full bg-[#0F1F36]/[0.97] backdrop-blur-xl border-t border-brand-gold/[0.15] shadow-2xl shadow-navy/40 z-50 transition-opacity duration-150 ${
+        className={`hidden md:block absolute left-0 right-0 top-full bg-[#0F1F36] border-t border-brand-gold/[0.15] shadow-2xl shadow-navy/40 z-50 transition-opacity duration-150 ${
           ActivePanelComponent ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
         onMouseEnter={cancelClose}

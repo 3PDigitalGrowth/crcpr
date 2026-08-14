@@ -1,0 +1,67 @@
+{
+  "_comment": "Tender Scout config. Edit keywords/categories/sources here. Zero-dep JSON so it runs on Windows and the VPS unchanged.",
+
+  "sources": [
+    {
+      "name": "VendorPanel (all public tenders)",
+      "type": "vendorpanel_rss",
+      "url": "https://www.vendorpanel.com.au/PublicTendersRssV2.aspx?mode=all"
+    }
+  ],
+
+  "_note_qld": "QLD detection uses (a) 'Brisbane time' in the closing-date line and (b) the issuer name matching a QLD gov/council pattern. Set require_qld=false to see the whole country.",
+  "require_qld": true,
+  "qld_issuer_patterns": [
+    "queensland", "qld", "brisbane", "gold coast", "sunshine coast", "logan",
+    "ipswich", "toowoomba", "townsville", "cairns", "mackay", "rockhampton",
+    "gladstone", "bundaberg", "fraser coast", "gympie", "noosa", "moreton bay",
+    "redland", "scenic rim", "lockyer", "somerset", "southern downs", "goondiwindi",
+    "western downs", "south burnett", "cassowary", "douglas", "mareeba", "tablelands",
+    "whitsunday", "isaac", "livingstone", "central highlands", "banana", "maranoa",
+    "charters towers", "burdekin", "hinchinbrook", "cook shire", "torres",
+    "energy queensland", "seqwater", "urban utilities", "unitywater", "powerlink",
+    "sunwater", "translink", "qbuild", "hpw", "tmr", "transport and main roads"
+  ],
+
+  "_note_relevance": "A tender scores on category hits + keyword hits (title weighted heavier than body) + buyer type + closing runway. Tune weights below.",
+  "relevant_categories": [
+    "advertising, marketing",
+    "marketing & communication",
+    "communication",
+    "media",
+    "management advisory services",
+    "training & development",
+    "graphic design",
+    "printing, publishing",
+    "photographic, av"
+  ],
+  "keywords": {
+    "strong": [
+      "communication", "communications", "public relations", "media relations",
+      "media buying", "marketing", "advertising", "campaign", "brand", "branding",
+      "public relations", "publicity", "digital marketing", "social media",
+      "content creation", "creative services", "website design", "web development",
+      "graphic design", "video production", "photography", "advertising agency",
+      "communications strategy", "community engagement", "stakeholder engagement",
+      "media and communication", "crisis communication", "reputation"
+    ],
+    "weak": [
+      "engagement", "digital", "website", "web", "content", "creative",
+      "promotion", "publicity", "publication", "newsletter", "video",
+      "photography", "graphic", "signage", "event management"
+    ]
+  },
+
+  "weights": {
+    "category_hit": 25,
+    "keyword_strong_title": 30,
+    "keyword_strong_body": 12,
+    "keyword_weak_title": 8,
+    "keyword_weak_body": 3,
+    "is_council": 10,
+    "is_qld": 8,
+    "healthy_runway": 6
+  },
+  "min_score": 45,
+  "healthy_runway_days": 10
+}

@@ -10,4 +10,5 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 set -a; . /opt/data/.hermes/.env 2>/dev/null || true; set +a
+export TENDER_SCOUT_TO="lyall@crcpr.com.au,alex@3pdigital.com.au"
 exec python3 notify.py

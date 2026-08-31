@@ -118,8 +118,7 @@ function Reveal({
     <motion.div
       className={className}
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-80px" }}
+      animate="visible"
       variants={fadeUp}
       transition={{ delay }}
     >
@@ -222,7 +221,7 @@ function RotatingBadge() {
     <Link
       href="/contact"
       aria-label="Book a consultation"
-      className="absolute -right-3 -top-3 z-20 flex size-24 items-center justify-center rounded-full shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 sm:-right-6 sm:-top-6 sm:size-32"
+      className="absolute right-2 top-2 z-20 flex size-24 items-center justify-center rounded-full shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 sm:-right-6 sm:-top-6 sm:size-32"
       style={{ outlineColor: WHITE }}
     >
       <style>{`
@@ -305,7 +304,7 @@ export function Alt9() {
       <section className="px-5 pb-4 pt-16 sm:px-8 lg:px-12 lg:pt-24">
         <Reveal className="mx-auto max-w-5xl text-center">
           <h1
-            className="font-[var(--font-alt9-display)] font-light uppercase leading-[1.02] tracking-[0.01em] text-[11vw] sm:text-[7.5vw] lg:text-[4.6vw]"
+            className="font-[var(--font-alt9-display)] font-light uppercase leading-[1.02] tracking-[0.01em] text-[9.2vw] sm:text-[7.5vw] lg:text-[4.6vw]"
             style={{ color: INK }}
           >
             Strategic, proven

@@ -119,7 +119,7 @@ function GlowPanel({
 }) {
   return (
     <div
-      className={`group relative flex h-full flex-col overflow-hidden rounded-t-[1.75rem] border border-white/10 transition-colors duration-300 hover:border-white/25 ${className}`}
+      className={`group relative flex flex-col overflow-hidden rounded-t-[1.75rem] border border-white/10 transition-colors duration-300 hover:border-white/25 ${className}`}
       style={{ backgroundColor: PANEL }}
     >
       <div
@@ -149,8 +149,7 @@ export function Alt5() {
     ? {}
     : {
         initial: { opacity: 0, y: 24 },
-        whileInView: { opacity: 1, y: 0 },
-        viewport: { once: true, margin: "-80px" },
+        animate: { opacity: 1, y: 0 },
         transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const },
       };
 

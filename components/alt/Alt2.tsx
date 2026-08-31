@@ -112,8 +112,7 @@ function Reveal({
     <motion.div
       className={className}
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-80px" }}
+      animate="visible"
       variants={fadeUp}
       transition={{ delay }}
     >
@@ -238,7 +237,7 @@ export function Alt2() {
                 Boutique corporate PR · Australia · New Zealand · Pacific
               </SectionEyebrow>
               <h1
-                className="mt-4 font-[var(--font-alt2-display)] font-bold uppercase leading-[0.94] tracking-[-0.01em] text-[13vw] sm:text-[10vw] md:text-[6.4vw] lg:text-[5.4vw]"
+                className="mt-4 font-[var(--font-alt2-display)] font-bold uppercase leading-[0.94] tracking-[-0.01em] text-[8.4vw] md:text-[6.4vw] lg:text-[5.4vw]"
                 style={{ color: INK }}
               >
                 Strategic,
@@ -308,7 +307,7 @@ export function Alt2() {
                         {area.n}.
                       </span>
                       <span
-                        className="font-[var(--font-alt2-display)] font-bold uppercase leading-[0.92] tracking-tight text-[10vw] transition-transform duration-300 group-hover:translate-x-2 sm:text-[7vw] md:text-[4.4vw] lg:text-[3.6vw]"
+                        className="font-[var(--font-alt2-display)] font-bold uppercase leading-[0.92] tracking-tight text-[7.6vw] transition-transform duration-300 group-hover:translate-x-2 sm:text-[7vw] md:text-[4.4vw] lg:text-[3.6vw]"
                         style={{ color: INK }}
                       >
                         {area.name}

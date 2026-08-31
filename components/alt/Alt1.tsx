@@ -183,8 +183,7 @@ export function Alt1() {
     ? {}
     : {
         initial: { opacity: 0, y: 24 },
-        whileInView: { opacity: 1, y: 0 },
-        viewport: { once: true, margin: "-80px" },
+        animate: { opacity: 1, y: 0 },
         transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] as const },
       };
 
@@ -286,7 +285,7 @@ export function Alt1() {
               className="mt-8 leading-[0.98]"
               style={{
                 fontFamily: displayFont.style.fontFamily,
-                fontSize: "clamp(2.75rem, 8vw, 6.75rem)",
+                fontSize: "clamp(2rem, 8vw, 6.75rem)",
                 textTransform: "uppercase",
               }}
             >

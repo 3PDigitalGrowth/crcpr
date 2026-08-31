@@ -112,8 +112,7 @@ function Reveal({
     <motion.div
       className={className}
       initial={{ opacity: 0, y: 22 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay, ease: "easeOut" }}
     >
       {children}
@@ -273,7 +272,7 @@ export function Alt7() {
             </div>
           </div>
 
-          <Reveal className="relative z-10 mx-auto -mt-2 max-w-2xl pb-16 text-center md:-mt-4 md:pb-24">
+          <Reveal className="relative z-20 mx-auto mt-6 max-w-2xl pb-16 text-center md:mt-8 md:pb-24">
             <p className="text-sm leading-relaxed sm:text-base" style={{ color: "#3A3A3A" }}>
               Trust is your most valuable asset. Let us help you build it.
             </p>

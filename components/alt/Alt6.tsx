@@ -160,8 +160,7 @@ function Reveal({
       className={className}
       style={style}
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-80px" }}
+      animate="visible"
       variants={fadeUp}
       transition={{ delay }}
     >
@@ -305,7 +304,7 @@ export function Alt6() {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <Reveal>
             <Eyebrow>Boutique corporate PR · Australia · New Zealand · Pacific</Eyebrow>
-            <h1 className="mt-5 font-[var(--font-alt6-display)] text-[13vw] font-semibold leading-[1.03] tracking-tight sm:text-[8vw] lg:text-[3.6vw]">
+            <h1 className="mt-5 font-[var(--font-alt6-display)] text-[12.4vw] font-semibold leading-[1.03] tracking-tight sm:text-[8vw] lg:text-[3.6vw]">
               Strategic, proven communications advice.
             </h1>
             <p className="mt-6 max-w-md text-[16px] leading-relaxed" style={{ color: `${INK}b3` }}>

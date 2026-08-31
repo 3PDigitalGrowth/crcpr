@@ -101,8 +101,7 @@ function Reveal({
       className={className}
       variants={revealVariants}
       initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, margin: "-80px" }}
+      animate="show"
       transition={{ delay }}
     >
       {children}

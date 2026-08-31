@@ -126,8 +126,7 @@ function Reveal({
     <motion.div
       className={className}
       initial={{ opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay, ease: "easeOut" }}
     >
       {children}
@@ -245,7 +244,7 @@ export function Alt4() {
               </p>
               <h1
                 className="alt4-display uppercase leading-[0.98] text-white"
-                style={{ fontSize: "clamp(2.5rem, 5.4vw, 4.4rem)", letterSpacing: "-0.01em" }}
+                style={{ fontSize: "clamp(2rem, 5.4vw, 4.4rem)", letterSpacing: "-0.01em" }}
               >
                 Strategic,
                 <br className="hidden md:block" /> proven

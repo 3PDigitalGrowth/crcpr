@@ -320,9 +320,9 @@ export function Alt12() {
   const reduceMotion = useReducedMotion();
 
   return (
-    <div style={{ backgroundColor: OUTER }} className="min-h-screen">
+    <div style={{ backgroundColor: OUTER }} className="min-h-screen md:py-6 lg:py-10">
       <div
-        className={`${display.variable} ${mono.variable} ${body.variable} mx-auto max-w-[1600px] overflow-hidden md:my-6 md:rounded-[32px] lg:my-10`}
+        className={`${display.variable} ${mono.variable} ${body.variable} mx-auto max-w-[1600px] overflow-hidden md:rounded-[32px]`}
         style={{
           backgroundColor: PANEL,
           border: `1px solid ${BORDER}`,
@@ -530,7 +530,7 @@ export function Alt12() {
 
             <Link
               href="/case-studies"
-              className="group flex flex-col items-start justify-center gap-4 p-7 transition-colors hover:bg-white/[0.03] focus-visible:outline-2 focus-visible:outline-offset-[-4px] md:p-8"
+              className="group flex flex-col items-start justify-center gap-4 p-7 transition-colors hover:bg-white/[0.03] focus-visible:outline-2 focus-visible:outline-offset-[-4px] sm:col-span-2 md:p-8"
               style={{ backgroundColor: PANEL }}
             >
               <span

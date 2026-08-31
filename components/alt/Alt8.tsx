@@ -277,31 +277,33 @@ export function Alt8() {
               TRUST
             </h1>
 
-            {/* Desktop: thin photo band crossing the middle of the word, letters
-                stay visible above and below (the reference's signature move). */}
+            {/* Desktop: photo band over the lower half of the word (the
+                reference's signature move). Needs an image that fills a wide
+                crop edge to edge; the studio team shot is too empty for this
+                and lives in its own card below the statement instead. */}
             <div
-              className="absolute left-1/2 top-1/2 z-10 hidden w-[86%] max-w-3xl -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-2xl shadow-xl md:block"
-              style={{ height: "clamp(4rem, 8vw, 6.5rem)" }}
+              className="absolute left-1/2 top-[66%] z-10 hidden w-[86%] max-w-3xl -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-2xl shadow-xl md:block"
+              style={{ height: "clamp(4.5rem, 7vw, 6.25rem)" }}
             >
               <Image
-                src="/images/homepage/MyPrPartnerHeadshots2025-14.jpg"
-                alt="The CRC Public Relations advisory team"
+                src="/images/redesign-v2/bento-corporate.png"
+                alt="CRC Public Relations advisers working through strategy documents"
                 fill
                 sizes="700px"
-                className="object-cover object-[50%_30%]"
-                style={{ filter: "grayscale(0.25) contrast(1.05)" }}
+                className="object-cover object-center"
+                style={{ filter: "grayscale(0.2) contrast(1.05)" }}
                 priority
               />
             </div>
             {/* Mobile: photo sits under the word instead of over it. */}
             <div className="relative mx-auto mt-4 h-44 w-full max-w-md overflow-hidden rounded-2xl shadow-xl md:hidden">
               <Image
-                src="/images/homepage/MyPrPartnerHeadshots2025-14.jpg"
-                alt="The CRC Public Relations advisory team"
+                src="/images/redesign-v2/bento-corporate.png"
+                alt="CRC Public Relations advisers working through strategy documents"
                 fill
                 sizes="90vw"
-                className="object-cover object-[50%_30%]"
-                style={{ filter: "grayscale(0.25) contrast(1.05)" }}
+                className="object-cover object-center"
+                style={{ filter: "grayscale(0.2) contrast(1.05)" }}
                 priority
               />
             </div>
@@ -398,6 +400,21 @@ export function Alt8() {
         >
           We are your trusted adviser and advocate, and we believe in you.
         </motion.h2>
+
+        {/* The team, given room: the studio shot needs a tall frame, not a
+            letterbox crop. */}
+        <motion.div
+          {...fadeUp(0.1)}
+          className="relative mx-auto mt-12 aspect-[3/2] w-full max-w-3xl overflow-hidden rounded-3xl shadow-xl sm:aspect-[16/9]"
+        >
+          <Image
+            src="/images/homepage/MyPrPartnerHeadshots2025-14.jpg"
+            alt="Lyall Mercer and Barbara Gorogh of CRC Public Relations"
+            fill
+            sizes="(min-width: 768px) 768px, 92vw"
+            className="object-cover object-[50%_25%]"
+          />
+        </motion.div>
       </section>
 
       {/* ---------- Stats row (the one proof moment) ---------- */}

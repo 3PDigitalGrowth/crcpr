@@ -283,7 +283,7 @@ export function Alt5() {
               <div className="mt-6 grid gap-4 md:grid-cols-3">
                 {PRACTICE_PANELS.map((p) => (
                   <motion.div key={p.n} {...fadeUp}>
-                    <GlowPanel className="h-[20rem] md:h-[24rem]">
+                    <GlowPanel className="h-[13rem] md:h-[15rem]">
                       <Link
                         href={p.href}
                         className="flex h-full flex-col justify-between p-7 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[#C8102E]"

@@ -244,7 +244,7 @@ export function Alt4() {
               </p>
               <h1
                 className="alt4-display uppercase leading-[0.98] text-white"
-                style={{ fontSize: "clamp(2rem, 5.4vw, 4.4rem)", letterSpacing: "-0.01em" }}
+                style={{ fontSize: "clamp(2rem, 4.9vw, 4rem)", letterSpacing: "-0.01em" }}
               >
                 Strategic,
                 <br className="hidden md:block" /> proven

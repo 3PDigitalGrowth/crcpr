@@ -274,7 +274,7 @@ export function Alt2() {
               alt="The CRC Public Relations advisory team"
               fill
               sizes="(max-width: 768px) 100vw, 90vw"
-              className="object-cover"
+              className="object-cover object-[50%_12%]"
               style={{ filter: "sepia(0.08) saturate(1.05)" }}
               priority
             />
@@ -410,10 +410,10 @@ export function Alt2() {
 
             <Reveal delay={0.2}>
               <div
-                className="h-full overflow-hidden rounded-2xl"
+                className="flex h-full flex-col overflow-hidden rounded-2xl"
                 style={{ background: "#fff", border: `1px solid ${INK}1f` }}
               >
-                <div className="relative aspect-[4/5] w-full">
+                <div className="relative min-h-[20rem] w-full flex-1">
                   <Image
                     src="/images/about/barbara-gorogh-portrait.png"
                     alt="Barbara Gorogh"

@@ -387,8 +387,8 @@ export function Alt6() {
           </Reveal>
           <Reveal delay={0.1} className="order-1 lg:order-2">
             <ArchImage
-              src="/images/about/mid-journalism.webp"
-              alt="Lyall Mercer at work"
+              src="/images/about/editorial-advisory-chairs.png"
+              alt="The CRC Public Relations advisory setting"
               className="mx-auto aspect-[4/5] w-full max-w-sm"
             />
           </Reveal>

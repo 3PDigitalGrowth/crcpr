@@ -1,11 +1,10 @@
-import type { Metadata } from "next";
-import { Alt8 } from "@/components/alt/Alt8";
+import { redirect } from "next/navigation";
 
-export const metadata: Metadata = {
-  robots: { index: false, follow: false },
-  title: "Alt 8 | CRC PR homepage concepts",
-};
-
-export default function Alt8Page() {
-  return <Alt8 />;
+/**
+ * Concept 8 "Amplitude" was withdrawn from the client review set
+ * (Alex, 7 Sep 2026). The component survives at components/alt/Alt8.tsx;
+ * restore the original page.tsx from git history to bring it back.
+ */
+export default function Alt8Redirect() {
+  redirect("/alt");
 }

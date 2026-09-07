@@ -1,11 +1,10 @@
-import type { Metadata } from "next";
-import { Alt7 } from "@/components/alt/Alt7";
+import { redirect } from "next/navigation";
 
-export const metadata: Metadata = {
-  robots: { index: false, follow: false },
-  title: "Alt 7 | CRC PR homepage concepts",
-};
-
-export default function Alt7Page() {
-  return <Alt7 />;
+/**
+ * Concept 7 "Monochrome" was withdrawn from the client review set
+ * (Alex, 7 Sep 2026). The component survives at components/alt/Alt7.tsx;
+ * restore the original page.tsx from git history to bring it back.
+ */
+export default function Alt7Redirect() {
+  redirect("/alt");
 }

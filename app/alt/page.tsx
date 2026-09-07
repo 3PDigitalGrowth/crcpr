@@ -31,7 +31,7 @@ const concepts: Concept[] = [
     name: "Chambers",
     mood: "Warm gallery calm",
     description:
-      "The whole page sits inside a dark espresso frame like a mounted print. Giant capital headlines, a numbered practice stack, and a four card team row put the people and the flow of who you are front and centre. The quietest, most considered read of the twelve.",
+      "The whole page sits inside a dark espresso frame like a mounted print. Giant capital headlines, a numbered practice stack, and a four card team row put the people and the flow of who you are front and centre. The quietest, most considered read of the set.",
     fonts: "Archivo headings, Hanken Grotesk body",
     palette: ["#191512", "#EDE8DF", "#7A2E22"],
   },
@@ -70,24 +70,6 @@ const concepts: Concept[] = [
       "Soft cream, bronze accents and arched photo frames, led by a large portrait and a refined serif. The closest cousin to the My PR Partner site: warm, personal and unmistakably professional, with the people carrying the story.",
     fonts: "Fraunces headings, Hanken Grotesk body",
     palette: ["#F6F1EA", "#2B211A", "#8C6A4A"],
-  },
-  {
-    n: 7,
-    name: "Monochrome",
-    mood: "Fashion editorial",
-    description:
-      "A giant TRUST wordmark stands behind a full length portrait of Lyall, in the manner of a premium fashion house. Greige, ink and white only, tracked out capitals, square buttons. Distinctive and confident while staying strictly monochrome.",
-    fonts: "Space Grotesk headings, Hanken Grotesk body",
-    palette: ["#E9E7E2", "#111111", "#6E6B66"],
-  },
-  {
-    n: 8,
-    name: "Amplitude",
-    mood: "Big type agency",
-    description:
-      "A massive TRUST headline with the team photograph cutting through the middle of the letters, practice names floating as chips around it, and a giant CRC PR wordmark closing the footer. Off white and ink with a single persimmon underline.",
-    fonts: "Bricolage Grotesque headings, Hanken Grotesk body",
-    palette: ["#F4F3F0", "#131313", "#E8552F"],
   },
   {
     n: 9,
@@ -136,7 +118,7 @@ export default function AltIndex() {
             CRC Public Relations
           </p>
           <h1 className="mt-3 text-4xl font-bold tracking-tight sm:text-5xl">
-            Twelve homepage directions.
+            Ten homepage directions.
           </h1>
           <p className="mt-4 text-[15px] leading-relaxed text-[#57534A]">
             Each concept below is a complete, working homepage built with your

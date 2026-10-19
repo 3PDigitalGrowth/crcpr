@@ -40,3 +40,8 @@ next-env.d.ts
 
 .vercel
 .gstack/
+
+southern_tender_docs/
+
+# forward planner local data (dev only)
+.planner-data/

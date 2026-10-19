@@ -32,6 +32,18 @@ const config: Config = {
       fontFamily: {
         sans: ["var(--font-body)", "sans-serif"],
         heading: ["var(--font-display)", "Georgia", "serif"],
+        // IBM Plex Mono inside /plan (its layout sets --font-mono); everywhere
+        // else the var falls back so this matches Tailwind's default stack.
+        mono: [
+          "var(--font-mono, ui-monospace)",
+          "SFMono-Regular",
+          "Menlo",
+          "Monaco",
+          "Consolas",
+          '"Liberation Mono"',
+          '"Courier New"',
+          "monospace",
+        ],
       },
     },
   },

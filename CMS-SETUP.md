@@ -29,6 +29,7 @@ commit that can be reviewed or reverted.
 | `GITHUB_REPO` | no | Defaults to `3PDigitalGrowth/crcpr`. |
 | `GITHUB_BRANCH` | no | Defaults to `main`. |
 | `ADMIN_SESSION_SECRET` | no | Set only if you want sessions to survive password rotation. |
+| `PLANNER_KEY` | for /plan | Encryption key for the forward planner's data. Never rotate it without re-encrypting the file. |
 
 ### Creating the GitHub token
 
@@ -82,6 +83,37 @@ phase 2 if wanted.
 1. Go to crcpr.com.au/admin and log in with the shared password.
 2. Edit, press "Save and publish".
 3. Live in about 2 minutes.
+
+## Forward planner (/plan)
+
+A shared monthly marketing plan for CRC and My PR Partner, at `/plan`. Same
+login as the editor. After logging in, each person picks their name (Lyall,
+Barbara, Alex, Hannah); the name only labels notes and sign-offs.
+
+- **Direction:** per month and channel (Blog articles, Cold email, Email
+  nurture, Social), CRC and 3P each write their view in their own column.
+  One agreed line per channel counts as agreed once someone from each side
+  ticks it. Editing the line clears the ticks.
+- **Calendar:** every piece sits on the day it goes out, with a status stamp:
+  Idea, Drafting, With CRC, Cleared, Out, Pulled. CRC says go ahead and
+  clears; 3P sends for sign-off (after ticking the red-lines check) and marks
+  pieces out. CRC pieces are Lyall's to clear and never clear on silence.
+  Changing the wording of a cleared piece sends it back to CRC.
+- **Ground rules:** the red lines plus the My PR Partner sign-off settings
+  (approver, and whether a piece clears after five business days of
+  silence). Only CRC can change the settings.
+
+Storage: `planner.enc.json` on the `planner-data` branch, written through
+the GitHub contents API with the same `GITHUB_TOKEN`. This repo is public,
+so the file is encrypted (AES-256-GCM) with `PLANNER_KEY`, a 32-byte base64
+key held in Vercel (production) and in 3P's local env file, never in the
+repo. Commit messages on the branch are generic for the same reason; the
+who-did-what history lives inside the encrypted file. `vercel.json` stops
+the branch from deploying, so planner saves never rebuild the site. Saves
+retry when two people save at once. Locally without a token it uses plain
+`.planner-data/planner.json` (gitignored). Rules and permissions live in
+`lib/planner/model.ts`. Losing `PLANNER_KEY` means losing the plan, so keep
+the local copy.
 
 ## Notes for developers
 

@@ -5,7 +5,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: ["/api/", "/email-preview/"],
+      disallow: ["/api/", "/email-preview/", "/plan"],
     },
     sitemap: "https://crcpr.com.au/sitemap.xml",
   };

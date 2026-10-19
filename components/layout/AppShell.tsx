@@ -10,13 +10,15 @@ import { EditModeBridge } from "@/components/admin/EditModeBridge";
 
 /**
  * Wraps every page in the site chrome, except the content editor at /admin
- * which has its own shell, and the /alt homepage design explorations which
- * each carry their own themed nav and footer.
+ * which has its own shell, the /alt homepage design explorations which
+ * each carry their own themed nav and footer, and the /plan forward planner.
  */
 export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const isBare =
-    pathname?.startsWith("/admin") || pathname?.startsWith("/alt");
+    pathname?.startsWith("/admin") ||
+    pathname?.startsWith("/alt") ||
+    pathname?.startsWith("/plan");
 
   if (isBare) {
     return <>{children}</>;

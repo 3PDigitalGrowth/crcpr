@@ -422,7 +422,7 @@ export default function Alt1CrisisPage() {
           <Reveal className="relative min-h-[22rem] overflow-hidden rounded-[28px]">
             <Image
               src={PHOTOS.barbaraBrownClose}
-              alt="Barbara Gorogh, co-founder and director"
+              alt="Barbara Gorogh, Director of Operations"
               fill
               sizes="(min-width: 1024px) 36vw, 100vw"
               className="object-cover object-[50%_20%]"

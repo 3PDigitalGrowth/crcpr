@@ -86,7 +86,7 @@ export function Home({ posts }: { posts: A1Post[] }) {
           <div className="relative aspect-[4/3] md:aspect-auto md:h-[min(52vw,660px)]">
             <Image
               src={PHOTOS.foundersStudio}
-              alt="Lyall Mercer and Barbara Gorogh, co-founders of CRC Public Relations"
+              alt="Lyall Mercer and Barbara Gorogh of CRC Public Relations"
               fill
               priority
               sizes="(min-width: 768px) 54vw, 100vw"
@@ -95,7 +95,7 @@ export function Home({ posts }: { posts: A1Post[] }) {
             <PhotoChip
               className="absolute bottom-4 left-4 md:bottom-6 md:left-6"
               title="Lyall Mercer & Barbara Gorogh"
-              sub="Co-founders, CRC Public Relations"
+              sub="CRC Public Relations"
             />
           </div>
           <div className="relative aspect-[4/3] md:aspect-auto md:h-[min(52vw,660px)]">
@@ -395,18 +395,10 @@ export function Home({ posts }: { posts: A1Post[] }) {
                 ))}
               </div>
               {i === 0 ? (
-                <>
-                  <div className="mt-8 flex items-center gap-3 border-t border-line pt-6">
-                    <BlueRule width="2rem" />
-                    <p className="text-sm text-muted">
-                      &quot;You have 15 minutes to respond before you start to lose control of the message.&quot;
-                    </p>
-                  </div>
-                  <Link href="/about" className="group mt-8 inline-flex items-center gap-2 text-sm font-semibold">
-                    Read Lyall&apos;s full profile
-                    <ArrowRight className="h-4 w-4 text-accent transition-transform group-hover:translate-x-1" aria-hidden />
-                  </Link>
-                </>
+                <Link href="/about" className="group mt-8 inline-flex items-center gap-2 text-sm font-semibold">
+                  Read Lyall&apos;s full profile
+                  <ArrowRight className="h-4 w-4 text-accent transition-transform group-hover:translate-x-1" aria-hidden />
+                </Link>
               ) : null}
             </Reveal>
           ))}

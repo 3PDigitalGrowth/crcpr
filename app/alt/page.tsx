@@ -157,8 +157,8 @@ export default function AltIndex() {
                   { label: "Insights hub", href: "/alt1/insights", white: "/alt1/insights?theme=white" },
                   {
                     label: "Article template",
-                    href: "/alt1/insights/the-15-minutes-principle",
-                    white: "/alt1/insights/the-15-minutes-principle?theme=white",
+                    href: "/alt1/insights/what-your-board-needs-to-know-about-reputation-risk",
+                    white: "/alt1/insights/what-your-board-needs-to-know-about-reputation-risk?theme=white",
                   },
                   {
                     label: "Crisis communications",

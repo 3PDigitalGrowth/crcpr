@@ -181,7 +181,8 @@ export const FOUNDERS = {
   },
   barbara: {
     name: "Barbara Gorogh",
-    role: "Co-founder and director",
+    // Lyall, 20 Oct 2026: Barbara's role is Director of Operations.
+    role: "Director of Operations",
     photo: PHOTOS.barbaraBrown,
     bio: [
       "Barbara has worked across Australia and the Pacific region for more than a decade, dealing with companies, organisations and governments in the area of corporate communications and reputation management.",

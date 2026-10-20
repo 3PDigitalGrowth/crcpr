@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Alt1 } from "@/components/alt/Alt1";
+import { Home } from "@/components/alt1/Home";
+import { getA1Posts } from "@/components/alt1/insights";
 
 export const metadata: Metadata = {
   robots: { index: false, follow: false },
@@ -7,5 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function Alt1Page() {
-  return <Alt1 />;
+  return <Home posts={getA1Posts()} />;
 }

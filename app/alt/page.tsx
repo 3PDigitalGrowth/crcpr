@@ -20,11 +20,11 @@ const concepts: Concept[] = [
   {
     n: 1,
     name: "Signal",
-    mood: "Bold editorial",
+    mood: "Selected direction",
     description:
-      "Black and white with one disciplined red accent. Oversized ghost words (TRUST, RESULTS, ADVISERS) sit behind each section, greyscale photography and a scrolling media strip give it newsroom energy while the layout stays strict and corporate.",
+      "Ink and white with CRC blue from your logo as the one accent. Oversized outlined words (TRUST, RESULTS, ADVISERS) sit behind each section, frosted glass panels sit over your new photography and video, and a scrolling media strip keeps the newsroom energy.",
     fonts: "Archivo Black headings, Hanken Grotesk body",
-    palette: ["#0A0A0A", "#F7F6F3", "#E02B20"],
+    palette: ["#0B1220", "#FFFFFF", "#1C74BC"],
   },
   {
     n: 2,
@@ -131,7 +131,66 @@ export default function AltIndex() {
           </p>
         </header>
 
-        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <section className="mt-12 overflow-hidden rounded-2xl border border-[#1C74BC]/30 bg-white shadow-sm">
+          <div className="grid md:grid-cols-[1.1fr,1fr]">
+            <div className="relative aspect-[16/10] bg-[#0B1220] md:aspect-auto">
+              <Image
+                src="/images/alt1/photos/founders-studio.jpg"
+                alt="Lyall Mercer and Barbara Gorogh, CRC Public Relations"
+                fill
+                sizes="(min-width: 768px) 560px, 90vw"
+                className="object-cover object-[50%_22%]"
+              />
+            </div>
+            <div className="p-6 sm:p-8">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#1C74BC]">
+                Selected direction
+              </p>
+              <h2 className="mt-3 text-2xl font-bold tracking-tight sm:text-3xl">Signal, in CRC blue.</h2>
+              <p className="mt-3 text-[14.5px] leading-relaxed text-[#57534A]">
+                Your chosen concept, built out with the new photography, your logo colours and four working pages.
+                Every page has a Dark and White switch in the bottom corner so you can compare both backgrounds.
+              </p>
+              <ul className="mt-6 divide-y divide-[#EEEBE5] border-y border-[#EEEBE5] text-[14px]">
+                {[
+                  { label: "Home page", href: "/alt1", white: "/alt1?theme=white" },
+                  { label: "Insights hub", href: "/alt1/insights", white: "/alt1/insights?theme=white" },
+                  {
+                    label: "Article template",
+                    href: "/alt1/insights/the-15-minutes-principle",
+                    white: "/alt1/insights/the-15-minutes-principle?theme=white",
+                  },
+                  {
+                    label: "Crisis communications",
+                    href: "/alt1/services/crisis-communications",
+                    white: "/alt1/services/crisis-communications?theme=white",
+                  },
+                ].map((p) => (
+                  <li key={p.href} className="flex items-center justify-between gap-4 py-3">
+                    <span className="font-semibold">{p.label}</span>
+                    <span className="flex gap-2">
+                      <Link
+                        href={`${p.href}${p.href.includes("?") ? "&" : "?"}theme=dark`}
+                        className="rounded-full bg-[#0B1220] px-3 py-1 text-[12px] font-semibold text-white"
+                      >
+                        Dark
+                      </Link>
+                      <Link
+                        href={p.white}
+                        className="rounded-full border border-[#1C74BC] px-3 py-1 text-[12px] font-semibold text-[#1C74BC]"
+                      >
+                        White
+                      </Link>
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <h2 className="mt-16 text-sm font-semibold uppercase tracking-[0.2em] text-[#8A8478]">All concepts</h2>
+        <div className="mt-6 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {concepts.map((c) => (
             <Link
               key={c.n}

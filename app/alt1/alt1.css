@@ -1,0 +1,442 @@
+/*
+ * Alt 1 "Signal", CRC blue edition.
+ * Every colour on the /alt1 pages resolves through the tone variables below,
+ * so the same markup renders in both the dark (ink) and white background
+ * versions. Sections pick a tone class; the theme on #a1-root decides what
+ * that tone looks like.
+ */
+
+.a1 {
+  --a1-blue: #1c74bc; /* sampled from the CRC logo */
+  --a1-blue-deep: #155e9a;
+  --a1-blue-lift: #62aeea;
+  --a1-ink: #0b1220;
+  --a1-ink-2: #121b2c;
+  --a1-cloud: #f1f5fa;
+  --a1-radius: 22px;
+  font-family: var(--a1-body), system-ui, sans-serif;
+  background: var(--page-bg);
+  color: var(--a1-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+.a1[data-theme="dark"] {
+  --page-bg: #0b1220;
+}
+.a1[data-theme="white"] {
+  --page-bg: #ffffff;
+}
+
+.a1 .font-display {
+  font-family: var(--a1-display), system-ui, sans-serif;
+  font-weight: 400;
+}
+
+/* ---------- tones ---------- */
+
+.a1 .tone-base,
+.a1[data-theme="white"] .tone-deep {
+  --bg: #ffffff;
+  --fg: #0b1220;
+  --muted: #536074;
+  --line: rgba(11, 18, 32, 0.12);
+  --accent: #1c74bc;
+  --ghost-stroke: rgba(28, 116, 188, 0.2);
+  --glass: rgba(255, 255, 255, 0.6);
+  --glass-strong: rgba(255, 255, 255, 0.82);
+  --glass-line: rgba(11, 18, 32, 0.09);
+  --glass-shadow: 0 24px 60px -28px rgba(11, 18, 32, 0.35);
+  --card: #f4f7fb;
+  --btn-bg: #1c74bc;
+  --btn-bg-hover: #155e9a;
+  --btn-fg: #ffffff;
+  --orb: rgba(28, 116, 188, 0.18);
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.a1[data-theme="white"] .tone-deep {
+  --bg: #f1f5fa;
+  --card: #ffffff;
+}
+
+.a1[data-theme="dark"] .tone-deep {
+  --bg: #0b1220;
+  --fg: #f4f7fb;
+  --muted: rgba(244, 247, 251, 0.72);
+  --line: rgba(255, 255, 255, 0.13);
+  --accent: #62aeea;
+  --ghost-stroke: rgba(98, 174, 234, 0.2);
+  --glass: rgba(255, 255, 255, 0.06);
+  --glass-strong: rgba(18, 27, 44, 0.78);
+  --glass-line: rgba(255, 255, 255, 0.15);
+  --glass-shadow: 0 30px 70px -30px rgba(0, 0, 0, 0.7);
+  --card: #121b2c;
+  --btn-bg: #1c74bc;
+  --btn-bg-hover: #2a86d0;
+  --btn-fg: #ffffff;
+  --orb: rgba(28, 116, 188, 0.4);
+  background: var(--bg);
+  color: var(--fg);
+}
+
+/* The closing invitation: ink in the dark version, CRC blue in the white. */
+.a1 .tone-cta {
+  background: var(--bg);
+  color: var(--fg);
+}
+.a1[data-theme="dark"] .tone-cta {
+  --bg: #0b1220;
+  --fg: #f4f7fb;
+  --muted: rgba(244, 247, 251, 0.78);
+  --line: rgba(255, 255, 255, 0.14);
+  --accent: #62aeea;
+  --glass: rgba(11, 18, 32, 0.42);
+  --glass-strong: rgba(11, 18, 32, 0.7);
+  --glass-line: rgba(255, 255, 255, 0.18);
+  --glass-shadow: 0 30px 70px -30px rgba(0, 0, 0, 0.7);
+  --btn-bg: #1c74bc;
+  --btn-bg-hover: #2a86d0;
+  --btn-fg: #ffffff;
+  --orb: rgba(28, 116, 188, 0.45);
+}
+.a1[data-theme="white"] .tone-cta {
+  --bg: #1c74bc;
+  --fg: #ffffff;
+  --muted: rgba(255, 255, 255, 0.86);
+  --line: rgba(255, 255, 255, 0.28);
+  --accent: #ffffff;
+  --glass: rgba(255, 255, 255, 0.14);
+  --glass-strong: rgba(17, 75, 125, 0.62);
+  --glass-line: rgba(255, 255, 255, 0.32);
+  --glass-shadow: 0 30px 70px -30px rgba(8, 40, 70, 0.6);
+  --btn-bg: #ffffff;
+  --btn-bg-hover: #e8f1fa;
+  --btn-fg: #0b1220;
+  --orb: rgba(255, 255, 255, 0.25);
+}
+
+.a1 .tone-footer {
+  background: var(--bg);
+  color: var(--fg);
+}
+.a1[data-theme="dark"] .tone-footer {
+  --bg: #070c16;
+  --fg: #f4f7fb;
+  --muted: rgba(244, 247, 251, 0.62);
+  --line: rgba(255, 255, 255, 0.1);
+  --accent: #62aeea;
+}
+.a1[data-theme="white"] .tone-footer {
+  --bg: #f1f5fa;
+  --fg: #0b1220;
+  --muted: #536074;
+  --line: rgba(11, 18, 32, 0.1);
+  --accent: #1c74bc;
+}
+
+/* ---------- logo swap ---------- */
+
+.a1 .logo-for-dark,
+.a1 .logo-for-light {
+  display: none;
+}
+.a1[data-theme="dark"] .tone-deep .logo-for-dark,
+.a1[data-theme="dark"] .tone-footer .logo-for-dark,
+.a1[data-theme="dark"] .a1-header .logo-for-dark,
+.a1[data-theme="white"] .logo-for-light {
+  display: block;
+}
+
+/* ---------- glass ---------- */
+
+.a1 .glass {
+  background: var(--glass);
+  border: 1px solid var(--glass-line);
+  box-shadow: var(--glass-shadow);
+  -webkit-backdrop-filter: blur(18px) saturate(150%);
+  backdrop-filter: blur(18px) saturate(150%);
+}
+.a1 .glass-strong {
+  background: var(--glass-strong);
+  border: 1px solid var(--glass-line);
+  box-shadow: var(--glass-shadow);
+  -webkit-backdrop-filter: blur(22px) saturate(160%);
+  backdrop-filter: blur(22px) saturate(160%);
+}
+
+/* Glass that sits directly on photography or video. */
+.a1 .glass-photo {
+  color: #ffffff;
+  background: rgba(11, 18, 32, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  backdrop-filter: blur(16px) saturate(150%);
+}
+.a1[data-theme="white"] .glass-photo {
+  color: #0b1220;
+  background: rgba(255, 255, 255, 0.68);
+  border-color: rgba(255, 255, 255, 0.75);
+}
+.a1 .glass-photo .on-photo-muted {
+  color: rgba(255, 255, 255, 0.78);
+}
+.a1[data-theme="white"] .glass-photo .on-photo-muted {
+  color: #536074;
+}
+
+.a1 .glass-photo .stat-num {
+  color: #8cc4f0;
+}
+.a1[data-theme="white"] .glass-photo .stat-num {
+  color: #1c74bc;
+}
+
+/* Soft brand-blue light behind glass so the blur has something to bend. */
+.a1 .orb {
+  position: absolute;
+  border-radius: 9999px;
+  background: radial-gradient(circle at center, var(--orb), transparent 68%);
+  pointer-events: none;
+}
+
+/* ---------- header ---------- */
+
+.a1 .a1-header {
+  color: var(--fg);
+  border-bottom: 1px solid var(--line);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  backdrop-filter: blur(18px) saturate(160%);
+}
+.a1[data-theme="dark"] .a1-header {
+  --fg: #f4f7fb;
+  --muted: rgba(244, 247, 251, 0.72);
+  --line: rgba(255, 255, 255, 0.1);
+  --accent: #62aeea;
+  --glass: rgba(18, 27, 44, 0.86);
+  --glass-line: rgba(255, 255, 255, 0.14);
+  --glass-shadow: 0 30px 70px -30px rgba(0, 0, 0, 0.7);
+  --btn-bg: #1c74bc;
+  --btn-bg-hover: #2a86d0;
+  --btn-fg: #ffffff;
+  background: rgba(11, 18, 32, 0.72);
+}
+.a1[data-theme="white"] .a1-header {
+  --fg: #0b1220;
+  --muted: #536074;
+  --line: rgba(11, 18, 32, 0.08);
+  --accent: #1c74bc;
+  --glass: rgba(255, 255, 255, 0.9);
+  --glass-line: rgba(11, 18, 32, 0.08);
+  --glass-shadow: 0 30px 70px -30px rgba(11, 18, 32, 0.3);
+  --btn-bg: #1c74bc;
+  --btn-bg-hover: #155e9a;
+  --btn-fg: #ffffff;
+  background: rgba(255, 255, 255, 0.74);
+}
+
+/* ---------- type helpers ---------- */
+
+.a1 .text-fg {
+  color: var(--fg);
+}
+.a1 .text-muted {
+  color: var(--muted);
+}
+.a1 .text-accent {
+  color: var(--accent);
+}
+.a1 .border-line {
+  border-color: var(--line);
+}
+.a1 .bg-card {
+  background: var(--card);
+}
+
+.a1 .ghost-word {
+  font-family: var(--a1-display), system-ui, sans-serif;
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--ghost-stroke);
+  letter-spacing: -0.02em;
+  line-height: 0.85;
+  white-space: nowrap;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* ---------- buttons ---------- */
+
+.a1 .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1;
+  padding: 0.95rem 1.6rem;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+.a1 .btn-primary {
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+}
+.a1 .btn-primary:hover {
+  background: var(--btn-bg-hover);
+}
+.a1 .btn-quiet {
+  color: var(--fg);
+  border: 1px solid var(--line);
+}
+.a1 .btn-quiet:hover {
+  border-color: var(--accent);
+}
+
+.a1 a:focus-visible,
+.a1 button:focus-visible,
+.a1 input:focus-visible,
+.a1 textarea:focus-visible,
+.a1 summary:focus-visible {
+  outline: 2px solid var(--accent, #1c74bc);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* ---------- forms ---------- */
+
+.a1 .field {
+  width: 100%;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: var(--glass);
+  color: var(--fg);
+  padding: 0.85rem 1rem;
+  font-size: 0.95rem;
+}
+.a1 .field::placeholder {
+  color: var(--muted);
+  opacity: 0.8;
+}
+
+/* ---------- media marquee ---------- */
+
+@keyframes a1-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.a1 .marquee-track {
+  animation: a1-marquee 36s linear infinite;
+}
+.a1 .logo-mono {
+  filter: grayscale(1) contrast(1.1);
+  opacity: 0.7;
+}
+.a1[data-theme="dark"] .tone-deep .logo-mono,
+.a1[data-theme="dark"] .tone-cta .logo-mono {
+  filter: invert(1) brightness(1.8);
+}
+
+/* ---------- reading progress ---------- */
+
+.a1 .progress-bar {
+  transform-origin: 0 50%;
+  background: var(--a1-blue);
+}
+
+/* ---------- article prose ---------- */
+
+.a1 .a1-prose {
+  color: var(--fg);
+  font-size: 1.125rem;
+  line-height: 1.75;
+}
+.a1 .a1-prose > * + * {
+  margin-top: 1.35em;
+}
+.a1 .a1-prose h2 {
+  font-family: var(--a1-display), system-ui, sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.15rem);
+  line-height: 1.08;
+  margin-top: 2.4em;
+  scroll-margin-top: 7rem;
+}
+.a1 .a1-prose h3 {
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.3;
+  margin-top: 2em;
+  scroll-margin-top: 7rem;
+}
+.a1 .a1-prose p,
+.a1 .a1-prose li {
+  color: var(--muted);
+}
+.a1 .a1-prose strong {
+  color: var(--fg);
+  font-weight: 700;
+}
+.a1 .a1-prose a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+}
+.a1 .a1-prose a:hover {
+  text-decoration-thickness: 2.5px;
+}
+.a1 .a1-prose ul,
+.a1 .a1-prose ol {
+  padding-left: 1.4em;
+}
+.a1 .a1-prose ul {
+  list-style: disc;
+}
+.a1 .a1-prose ol {
+  list-style: decimal;
+}
+.a1 .a1-prose li + li {
+  margin-top: 0.7em;
+}
+.a1 .a1-prose li::marker {
+  color: var(--accent);
+  font-weight: 700;
+}
+.a1 .a1-prose blockquote {
+  position: relative;
+  border-left: 3px solid var(--a1-blue);
+  padding: 1.4rem 1.6rem;
+  border-radius: 0 var(--a1-radius) var(--a1-radius) 0;
+  background: var(--card);
+  font-family: var(--a1-display), system-ui, sans-serif;
+  font-size: 1.3rem;
+  line-height: 1.35;
+}
+.a1 .a1-prose blockquote p {
+  color: var(--fg);
+}
+.a1 .a1-prose hr {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 2.5em 0;
+}
+.a1 .a1-prose em {
+  font-style: normal;
+  color: var(--muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .a1 .marquee-track {
+    animation: none;
+  }
+  .a1 * {
+    scroll-behavior: auto !important;
+  }
+}

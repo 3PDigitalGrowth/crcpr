@@ -1,0 +1,592 @@
+/*
+ * Concept-site kit (/alt1, /alt2, /alt3, /alt9).
+ *
+ * Every colour resolves through tone variables, so one set of markup renders
+ * four concepts in two backgrounds. The root carries data-concept and
+ * data-theme; each concept only defines its primitives (--k-*); the tone
+ * blocks below turn those into --bg/--fg/--accent etc. for each section.
+ *
+ * Scale (Lyall, 1 Nov 2026: "everything is huge"): content width 1200px,
+ * headings roughly 40% smaller than the first Signal build.
+ */
+
+.kit {
+  --k-blue: #1c74bc; /* sampled from the CRC logo */
+  --k-blue-deep: #155e9a;
+  --k-blue-lift: #62aeea;
+  --k-radius: 20px;
+  --k-display-weight: 400;
+  --k-display-tracking: -0.01em;
+  --k-h1-size: clamp(2rem, 4.2vw, 3.6rem);
+  --k-h1-leading: 1;
+  --k-h1-case: none;
+  --k-h2-size: clamp(1.55rem, 2.5vw, 2.25rem);
+  --k-h2-case: none;
+  --k-nav-case: none;
+  --k-nav-tracking: 0;
+  --k-nav-size: 0.875rem;
+  --k-btn-case: none;
+  --k-btn-tracking: 0;
+  --k-btn-size: 0.875rem;
+  --k-eyebrow-dot: none;
+  --k-ghost: none;
+  font-family: var(--kit-body), system-ui, sans-serif;
+  background: var(--k-page);
+  color: var(--k-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- concept primitives ---------- */
+
+/* Signal: ink and white, heavy caps, outlined ghost words. */
+.kit[data-concept="alt1"] {
+  --k-light: #ffffff;
+  --k-light-2: #f1f5fa;
+  --k-light-card: #f4f7fb;
+  --k-ink: #0b1220;
+  --k-ink-muted: #536074;
+  --k-ink-line: rgba(11, 18, 32, 0.12);
+  --k-dark: #0b1220;
+  --k-dark-2: #0b1220;
+  --k-dark-card: #121b2c;
+  --k-dark-footer: #070c16;
+  --k-dark-fg: #f4f7fb;
+  --k-dark-muted: rgba(244, 247, 251, 0.72);
+  --k-dark-line: rgba(255, 255, 255, 0.13);
+  --k-page: var(--k-light);
+  --k-radius: 20px;
+  --k-h1-size: clamp(2rem, 4.6vw, 4.1rem);
+  --k-h1-leading: 0.96;
+  --k-h1-case: uppercase;
+  --k-eyebrow-dot: inline-block;
+  --k-ghost: block;
+}
+
+/* Chambers: a mounted print, the page sits inside a frame. */
+.kit[data-concept="alt2"] {
+  --k-light: #f5f3ef;
+  --k-light-2: #ebeef2;
+  --k-light-card: #ffffff;
+  --k-ink: #1b222c;
+  --k-ink-muted: #5a6370;
+  --k-ink-line: rgba(27, 34, 44, 0.14);
+  --k-dark: #0f1b2d;
+  --k-dark-2: #0f1b2d;
+  --k-dark-card: #16253b;
+  --k-dark-footer: #0f1b2d;
+  --k-dark-fg: #f2f4f7;
+  --k-dark-muted: rgba(242, 244, 247, 0.74);
+  --k-dark-line: rgba(255, 255, 255, 0.14);
+  --k-frame: #0f1b2d;
+  --k-page: var(--k-frame);
+  --k-radius: 18px;
+  --k-display-weight: 700;
+  --k-display-tracking: -0.005em;
+  --k-h1-size: clamp(1.9rem, 4.2vw, 3.5rem);
+  --k-h1-leading: 0.96;
+  --k-h1-case: uppercase;
+  --k-h2-size: clamp(1.35rem, 2.1vw, 1.85rem);
+  --k-h2-case: uppercase;
+  --k-nav-case: uppercase;
+  --k-nav-tracking: 0.1em;
+  --k-nav-size: 0.78rem;
+  --k-btn-case: uppercase;
+  --k-btn-tracking: 0.1em;
+  --k-btn-size: 0.75rem;
+}
+.kit[data-concept="alt2"][data-theme="white"] {
+  --k-light: #ffffff;
+  --k-frame: #e3e9f0;
+}
+
+/* Ember: dark rounded panels, warm-to-cool, Sora headlines. */
+.kit[data-concept="alt3"] {
+  --k-light: #ffffff;
+  --k-light-2: #f3f6f9;
+  --k-light-card: #f3f6f9;
+  --k-ink: #10151c;
+  --k-ink-muted: #56606d;
+  --k-ink-line: rgba(16, 21, 28, 0.12);
+  --k-dark: #0e1218;
+  --k-dark-2: #121821;
+  --k-dark-card: #171e28;
+  --k-dark-footer: #0b0f14;
+  --k-dark-fg: #f3f5f8;
+  --k-dark-muted: rgba(243, 245, 248, 0.7);
+  --k-dark-line: rgba(255, 255, 255, 0.09);
+  --k-page: var(--k-dark);
+  --k-radius: 24px;
+  --k-display-weight: 700;
+  --k-display-tracking: -0.025em;
+  --k-h1-size: clamp(2rem, 4.1vw, 3.45rem);
+  --k-h1-leading: 1.02;
+}
+.kit[data-concept="alt3"][data-theme="white"] {
+  --k-page: var(--k-light);
+}
+
+/* Gallery: white and pale blue bands, light tracked capitals. */
+.kit[data-concept="alt9"] {
+  --k-light: #ffffff;
+  --k-light-2: #eef3f8;
+  --k-light-card: #e6eef6;
+  --k-ink: #141414;
+  --k-ink-muted: #5c6066;
+  --k-ink-line: rgba(20, 20, 20, 0.12);
+  --k-dark: #101720;
+  --k-dark-2: #101720;
+  --k-dark-card: #18212d;
+  --k-dark-footer: #0b1118;
+  --k-dark-fg: #f4f6f9;
+  --k-dark-muted: rgba(244, 246, 249, 0.72);
+  --k-dark-line: rgba(255, 255, 255, 0.12);
+  --k-page: var(--k-light);
+  --k-radius: 16px;
+  --k-display-weight: 300;
+  --k-display-tracking: 0.005em;
+  --k-h1-size: clamp(1.85rem, 3.8vw, 3.2rem);
+  --k-h1-leading: 1.06;
+  --k-h1-case: uppercase;
+  --k-h2-size: clamp(1.4rem, 2.2vw, 1.95rem);
+  --k-h2-case: uppercase;
+  --k-nav-case: uppercase;
+  --k-nav-tracking: 0.1em;
+  --k-nav-size: 0.75rem;
+  --k-btn-case: uppercase;
+  --k-btn-tracking: 0.1em;
+  --k-btn-size: 0.72rem;
+}
+
+/* ---------- tones ---------- */
+
+/* Light surfaces. */
+.kit .tone-base,
+.kit[data-theme="white"] :is(.tone-deep, .tone-footer, .kit-header),
+.kit[data-light-chrome] :is(.tone-footer, .kit-header) {
+  --bg: var(--k-light);
+  --fg: var(--k-ink);
+  --muted: var(--k-ink-muted);
+  --line: var(--k-ink-line);
+  --accent: var(--k-blue);
+  --card: var(--k-light-card);
+  --glass: rgba(255, 255, 255, 0.62);
+  --glass-strong: rgba(255, 255, 255, 0.86);
+  --glass-line: rgba(11, 18, 32, 0.09);
+  --glass-shadow: 0 20px 50px -28px rgba(11, 18, 32, 0.32);
+  --btn-bg: var(--k-blue);
+  --btn-bg-hover: var(--k-blue-deep);
+  --btn-fg: #ffffff;
+  --orb: rgba(28, 116, 188, 0.15);
+  --ghost-stroke: rgba(28, 116, 188, 0.17);
+}
+.kit[data-theme="white"] :is(.tone-deep, .tone-footer) {
+  --bg: var(--k-light-2);
+  --card: var(--k-light);
+}
+
+/* Dark surfaces. */
+.kit[data-theme="dark"] :is(.tone-deep, .tone-cta),
+.kit[data-theme="dark"]:not([data-light-chrome]) :is(.tone-footer, .kit-header),
+.kit[data-theme="dark"][data-dark-base] .tone-base {
+  --bg: var(--k-dark);
+  --fg: var(--k-dark-fg);
+  --muted: var(--k-dark-muted);
+  --line: var(--k-dark-line);
+  --accent: var(--k-blue-lift);
+  --card: var(--k-dark-card);
+  --glass: rgba(255, 255, 255, 0.05);
+  --glass-strong: color-mix(in srgb, var(--k-dark-card) 84%, transparent);
+  --glass-line: rgba(255, 255, 255, 0.13);
+  --glass-shadow: 0 28px 64px -30px rgba(0, 0, 0, 0.7);
+  --btn-bg: var(--k-blue);
+  --btn-bg-hover: #2a86d0;
+  --btn-fg: #ffffff;
+  --orb: rgba(28, 116, 188, 0.34);
+  --ghost-stroke: rgba(98, 174, 234, 0.15);
+}
+.kit[data-theme="dark"][data-dark-base] .tone-deep {
+  --bg: var(--k-dark-2);
+}
+/* On an all-dark page the closing panel needs its own surface. */
+.kit[data-theme="dark"][data-dark-base] .kit-cta-panel {
+  --bg: var(--k-dark-card);
+  border: 1px solid var(--k-dark-line);
+}
+.kit[data-theme="dark"]:not([data-light-chrome]) .tone-footer {
+  --bg: var(--k-dark-footer);
+}
+
+/* The closing invitation turns CRC blue on the white background. */
+.kit[data-theme="white"] .tone-cta {
+  --bg: var(--k-blue);
+  --fg: #ffffff;
+  --muted: rgba(255, 255, 255, 0.86);
+  --line: rgba(255, 255, 255, 0.28);
+  --accent: #ffffff;
+  --card: rgba(255, 255, 255, 0.1);
+  --glass: rgba(255, 255, 255, 0.12);
+  --glass-strong: rgba(17, 75, 125, 0.55);
+  --glass-line: rgba(255, 255, 255, 0.3);
+  --glass-shadow: 0 28px 64px -30px rgba(8, 40, 70, 0.6);
+  --btn-bg: #ffffff;
+  --btn-bg-hover: #e8f1fa;
+  --btn-fg: #0b1220;
+  --orb: rgba(255, 255, 255, 0.22);
+}
+
+.kit :is(.tone-base, .tone-deep, .tone-cta, .tone-footer) {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+/* ---------- frame (Chambers) ---------- */
+
+.kit .kit-canvas {
+  background: var(--k-light);
+}
+.kit[data-concept="alt2"] {
+  padding: 10px;
+}
+.kit[data-concept="alt2"] .kit-canvas {
+  border-radius: 22px;
+  overflow: clip;
+}
+@media (min-width: 768px) {
+  .kit[data-concept="alt2"] {
+    padding: 22px;
+  }
+  .kit[data-concept="alt2"] .kit-canvas {
+    border-radius: 30px;
+  }
+}
+@media (min-width: 1280px) {
+  .kit[data-concept="alt2"] {
+    padding: 32px;
+  }
+}
+.kit[data-concept="alt3"] .kit-canvas {
+  background: var(--k-page);
+}
+
+/* ---------- header ---------- */
+
+.kit .kit-header {
+  color: var(--fg);
+  border-bottom: 1px solid var(--line);
+  background: color-mix(in srgb, var(--bg) 84%, transparent);
+  -webkit-backdrop-filter: blur(18px) saturate(160%);
+  backdrop-filter: blur(18px) saturate(160%);
+}
+.kit .kit-nav-link {
+  font-size: var(--k-nav-size);
+  text-transform: var(--k-nav-case);
+  letter-spacing: var(--k-nav-tracking);
+}
+
+/* ---------- logo swap ---------- */
+
+.kit .logo-for-dark,
+.kit .logo-for-light {
+  display: none;
+}
+.kit[data-theme="dark"]:not([data-light-chrome]) :is(.kit-header, .tone-footer) .logo-for-dark,
+.kit[data-theme="dark"] :is(.tone-deep, .tone-cta) .logo-for-dark,
+.kit[data-theme="dark"][data-dark-base] .logo-for-dark {
+  display: block;
+}
+.kit[data-theme="white"] .logo-for-light,
+.kit[data-light-chrome] :is(.kit-header, .tone-footer) .logo-for-light,
+.kit[data-theme="dark"]:not([data-dark-base]) .tone-base .logo-for-light {
+  display: block;
+}
+
+/* ---------- type ---------- */
+
+.kit .kit-display {
+  font-family: var(--kit-display), system-ui, sans-serif;
+  font-weight: var(--k-display-weight);
+  letter-spacing: var(--k-display-tracking);
+}
+.kit .kit-h1 {
+  font-size: var(--k-h1-size);
+  line-height: var(--k-h1-leading);
+  text-transform: var(--k-h1-case);
+}
+.kit .kit-h2 {
+  font-size: var(--k-h2-size);
+  line-height: 1.1;
+  text-transform: var(--k-h2-case);
+}
+.kit .text-fg {
+  color: var(--fg);
+}
+.kit .text-muted {
+  color: var(--muted);
+}
+.kit .text-accent {
+  color: var(--accent);
+}
+.kit .border-line {
+  border-color: var(--line);
+}
+.kit .bg-card {
+  background: var(--card);
+}
+.kit .kit-r {
+  border-radius: var(--k-radius);
+}
+.kit .kit-r-sm {
+  border-radius: calc(var(--k-radius) * 0.7);
+}
+.kit .kit-eyebrow {
+  color: var(--muted);
+}
+.kit:is([data-concept="alt2"], [data-concept="alt3"]) .kit-eyebrow {
+  color: var(--accent);
+}
+.kit .kit-eyebrow-dot {
+  display: var(--k-eyebrow-dot);
+}
+
+.kit .ghost-word {
+  display: var(--k-ghost);
+  font-family: var(--kit-display), system-ui, sans-serif;
+  color: transparent;
+  -webkit-text-stroke: 1.25px var(--ghost-stroke);
+  letter-spacing: -0.02em;
+  line-height: 0.85;
+  white-space: nowrap;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* ---------- glass ---------- */
+
+.kit .glass {
+  background: var(--glass);
+  border: 1px solid var(--glass-line);
+  box-shadow: var(--glass-shadow);
+  -webkit-backdrop-filter: blur(18px) saturate(150%);
+  backdrop-filter: blur(18px) saturate(150%);
+}
+.kit .glass-strong {
+  background: var(--glass-strong);
+  border: 1px solid var(--glass-line);
+  box-shadow: var(--glass-shadow);
+  -webkit-backdrop-filter: blur(22px) saturate(160%);
+  backdrop-filter: blur(22px) saturate(160%);
+}
+/* Glass that sits directly on a photograph. */
+.kit .glass-photo {
+  color: #ffffff;
+  background: rgba(11, 18, 32, 0.42);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  backdrop-filter: blur(16px) saturate(150%);
+}
+.kit[data-theme="white"] .glass-photo {
+  color: #0b1220;
+  background: rgba(255, 255, 255, 0.72);
+  border-color: rgba(255, 255, 255, 0.8);
+}
+.kit .glass-photo .on-photo-muted {
+  color: rgba(255, 255, 255, 0.8);
+}
+.kit[data-theme="white"] .glass-photo .on-photo-muted {
+  color: #536074;
+}
+
+/* Soft brand-blue light behind glass so the blur has something to bend. */
+.kit .orb {
+  position: absolute;
+  border-radius: 9999px;
+  background: radial-gradient(circle at center, var(--orb), transparent 68%);
+  pointer-events: none;
+}
+
+/* ---------- buttons ---------- */
+
+.kit .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: var(--k-btn-size);
+  text-transform: var(--k-btn-case);
+  letter-spacing: var(--k-btn-tracking);
+  line-height: 1;
+  padding: 0.85rem 1.45rem;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+.kit .btn-primary {
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+}
+.kit .btn-primary:hover {
+  background: var(--btn-bg-hover);
+}
+.kit .btn-quiet {
+  color: var(--fg);
+  border: 1px solid var(--line);
+}
+.kit .btn-quiet:hover {
+  border-color: var(--accent);
+}
+
+.kit a:focus-visible,
+.kit button:focus-visible,
+.kit input:focus-visible,
+.kit textarea:focus-visible,
+.kit summary:focus-visible {
+  outline: 2px solid var(--accent, #1c74bc);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* ---------- forms ---------- */
+
+.kit .field {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--glass);
+  color: var(--fg);
+  padding: 0.8rem 1rem;
+  font-size: 0.95rem;
+}
+.kit .field::placeholder {
+  color: var(--muted);
+  opacity: 0.8;
+}
+
+/* ---------- media marquee ---------- */
+
+@keyframes kit-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.kit .marquee-track {
+  animation: kit-marquee 38s linear infinite;
+}
+.kit .logo-mono {
+  filter: grayscale(1) contrast(1.1);
+  opacity: 0.7;
+}
+.kit[data-theme="dark"] :is(.tone-deep, .tone-cta) .logo-mono,
+.kit[data-theme="dark"][data-dark-base] .logo-mono {
+  filter: invert(1) brightness(1.8);
+}
+
+@keyframes kit-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.kit .spin-slow {
+  animation: kit-spin 22s linear infinite;
+}
+
+/* ---------- reading progress ---------- */
+
+.kit .progress-bar {
+  transform-origin: 0 50%;
+  background: var(--k-blue);
+}
+
+/* ---------- article prose ---------- */
+
+.kit .kit-prose {
+  color: var(--fg);
+  font-size: 1.0625rem;
+  line-height: 1.75;
+}
+.kit .kit-prose > * + * {
+  margin-top: 1.3em;
+}
+.kit .kit-prose h2 {
+  font-family: var(--kit-display), system-ui, sans-serif;
+  font-weight: var(--k-display-weight);
+  letter-spacing: var(--k-display-tracking);
+  text-transform: var(--k-h2-case);
+  font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+  line-height: 1.15;
+  margin-top: 2.2em;
+  scroll-margin-top: 7rem;
+}
+.kit .kit-prose h3 {
+  font-weight: 700;
+  font-size: 1.15rem;
+  line-height: 1.3;
+  margin-top: 1.9em;
+  scroll-margin-top: 7rem;
+}
+.kit .kit-prose p,
+.kit .kit-prose li {
+  color: var(--muted);
+}
+.kit .kit-prose strong {
+  color: var(--fg);
+  font-weight: 700;
+}
+.kit .kit-prose a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+}
+.kit .kit-prose a:hover {
+  text-decoration-thickness: 2.5px;
+}
+.kit .kit-prose ul,
+.kit .kit-prose ol {
+  padding-left: 1.4em;
+}
+.kit .kit-prose ul {
+  list-style: disc;
+}
+.kit .kit-prose ol {
+  list-style: decimal;
+}
+.kit .kit-prose li + li {
+  margin-top: 0.65em;
+}
+.kit .kit-prose li::marker {
+  color: var(--accent);
+  font-weight: 700;
+}
+.kit .kit-prose blockquote {
+  border-left: 3px solid var(--k-blue);
+  padding: 1.2rem 1.4rem;
+  border-radius: 0 var(--k-radius) var(--k-radius) 0;
+  background: var(--card);
+  font-size: 1.15rem;
+  line-height: 1.45;
+  font-weight: 600;
+}
+.kit .kit-prose blockquote p {
+  color: var(--fg);
+}
+.kit .kit-prose hr {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 2.4em 0;
+}
+.kit .kit-prose em {
+  font-style: normal;
+  color: var(--muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kit .marquee-track,
+  .kit .spin-slow {
+    animation: none;
+  }
+}

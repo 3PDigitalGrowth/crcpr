@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
-import { Alt2 } from "@/components/alt/Alt2";
+import { Alt2Home } from "@/components/altkit/Alt2Home";
+import { CONCEPTS } from "@/components/altkit/concepts";
+import { getA1Posts, toCard } from "@/components/altkit/insights";
 
 export const metadata: Metadata = {
   robots: { index: false, follow: false },
-  title: "Alt 2 | CRC PR homepage concepts",
+  title: "Alt 2 Chambers | CRC PR homepage concepts",
 };
 
-export default function Alt2Page() {
-  return <Alt2 />;
+export default function ChambersPage() {
+  return <Alt2Home posts={getA1Posts(CONCEPTS.alt2.base).map(toCard)} />;
 }

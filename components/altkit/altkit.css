@@ -1,5 +1,5 @@
 /*
- * Concept-site kit (/alt1, /alt2, /alt3, /alt9).
+ * Concept-site kit (/alt1, /alt2, /alt3, /alt9, and round three /alt13-15).
  *
  * Every colour resolves through tone variables, so one set of markup renders
  * four concepts in two backgrounds. The root carries data-concept and
@@ -28,6 +28,8 @@
   --k-btn-case: none;
   --k-btn-tracking: 0;
   --k-btn-size: 0.875rem;
+  --k-btn-radius: 9999px;
+  --k-field-radius: 12px;
   --k-eyebrow-dot: none;
   --k-ghost: none;
   font-family: var(--kit-body), system-ui, sans-serif;
@@ -155,6 +157,119 @@
   --k-btn-case: uppercase;
   --k-btn-tracking: 0.1em;
   --k-btn-size: 0.72rem;
+}
+
+/*
+ * Round three (5 Nov 2026), from docs/design-refs/2026-11-05-design-refs.md.
+ * All three keep the type modest and the photography to a minimum.
+ */
+
+/* Letterhead: paper canvas, navy ink, centred serif statements, hairlines. */
+.kit[data-concept="alt13"] {
+  --k-light: #f6f5f0;
+  --k-light-2: #ecebe4;
+  --k-light-card: #fbfaf7;
+  --k-ink: #13233a;
+  --k-ink-muted: #586171;
+  --k-ink-line: rgba(19, 35, 58, 0.15);
+  --k-dark: #13233a;
+  --k-dark-2: #13233a;
+  --k-dark-card: #1b2e49;
+  --k-dark-footer: #0e1b2d;
+  --k-dark-fg: #f4f2eb;
+  --k-dark-muted: rgba(244, 242, 235, 0.74);
+  --k-dark-line: rgba(244, 242, 235, 0.16);
+  --k-page: var(--k-light);
+  --k-radius: 3px;
+  --k-btn-radius: 2px;
+  --k-field-radius: 2px;
+  --k-display-weight: 400;
+  --k-display-tracking: -0.012em;
+  --k-h1-size: clamp(2rem, 3.6vw, 3.1rem);
+  --k-h1-leading: 1.1;
+  --k-h2-size: clamp(1.5rem, 2.3vw, 2.05rem);
+  --k-nav-case: uppercase;
+  --k-nav-tracking: 0.14em;
+  --k-nav-size: 0.72rem;
+  --k-btn-case: uppercase;
+  --k-btn-tracking: 0.14em;
+  --k-btn-size: 0.72rem;
+}
+
+/* Private Office: split navy panel, light tracked capitals, square edges. */
+.kit[data-concept="alt14"] {
+  --k-light: #ffffff;
+  --k-light-2: #f1f4f7;
+  --k-light-card: #f6f7f9;
+  --k-ink: #111a27;
+  --k-ink-muted: #586373;
+  --k-ink-line: rgba(17, 26, 39, 0.13);
+  --k-dark: #0c2340;
+  --k-dark-2: #0c2340;
+  --k-dark-card: #123056;
+  --k-dark-footer: #0a1d36;
+  --k-dark-fg: #f2f5f9;
+  --k-dark-muted: rgba(242, 245, 249, 0.76);
+  --k-dark-line: rgba(255, 255, 255, 0.17);
+  --k-page: var(--k-light);
+  --k-radius: 0px;
+  --k-btn-radius: 0px;
+  --k-field-radius: 0px;
+  --k-display-weight: 300;
+  --k-display-tracking: 0.05em;
+  --k-h1-size: clamp(1.7rem, 3vw, 2.6rem);
+  --k-h1-leading: 1.18;
+  --k-h1-case: uppercase;
+  --k-h2-size: clamp(1.25rem, 1.9vw, 1.7rem);
+  --k-h2-case: uppercase;
+  --k-nav-case: uppercase;
+  --k-nav-tracking: 0.12em;
+  --k-nav-size: 0.72rem;
+  --k-btn-case: uppercase;
+  --k-btn-tracking: 0.16em;
+  --k-btn-size: 0.7rem;
+}
+
+/* Linework: navy and logo blue, fine blue lines in place of photography. */
+.kit[data-concept="alt15"] {
+  --k-light: #ffffff;
+  --k-light-2: #eef4fa;
+  --k-light-card: #f3f7fb;
+  --k-ink: #0a1a30;
+  --k-ink-muted: #55627a;
+  --k-ink-line: rgba(10, 26, 48, 0.12);
+  --k-dark: #071a33;
+  --k-dark-2: #0a2140;
+  --k-dark-card: #0f2a4d;
+  --k-dark-footer: #05142a;
+  --k-dark-fg: #f1f5fa;
+  --k-dark-muted: rgba(241, 245, 250, 0.74);
+  --k-dark-line: rgba(255, 255, 255, 0.13);
+  --k-page: var(--k-light);
+  --k-radius: 8px;
+  --k-btn-radius: 4px;
+  --k-field-radius: 4px;
+  --k-display-weight: 500;
+  --k-display-tracking: -0.02em;
+  --k-h1-size: clamp(2rem, 3.8vw, 3.25rem);
+  --k-h1-leading: 1.05;
+  --k-h2-size: clamp(1.45rem, 2.3vw, 2.05rem);
+}
+
+/* Letterhead and Private Office are flat: no blurred glass, no blue light. */
+.kit:is([data-concept="alt13"], [data-concept="alt14"]) .orb {
+  display: none;
+}
+.kit:is([data-concept="alt13"], [data-concept="alt14"]) :is(.glass, .glass-strong) {
+  background: var(--card);
+  box-shadow: none;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+.kit:is([data-concept="alt13"], [data-concept="alt14"]) .kit-header {
+  background: var(--bg);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
 }
 
 /* ---------- tones ---------- */
@@ -341,7 +456,7 @@
 .kit .kit-eyebrow {
   color: var(--muted);
 }
-.kit:is([data-concept="alt2"], [data-concept="alt3"]) .kit-eyebrow {
+.kit:is([data-concept="alt2"], [data-concept="alt3"], [data-concept="alt15"]) .kit-eyebrow {
   color: var(--accent);
 }
 .kit .kit-eyebrow-dot {
@@ -411,7 +526,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  border-radius: 9999px;
+  border-radius: var(--k-btn-radius);
   font-weight: 600;
   font-size: var(--k-btn-size);
   text-transform: var(--k-btn-case);
@@ -451,7 +566,7 @@
 
 .kit .field {
   width: 100%;
-  border-radius: 12px;
+  border-radius: var(--k-field-radius);
   border: 1px solid var(--line);
   background: var(--glass);
   color: var(--fg);

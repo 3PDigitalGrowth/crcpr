@@ -51,7 +51,11 @@ const shortlist: Direction[] = [
   },
 ];
 
-/* Round three (5 Nov 2026): researched against Lyall's feedback on the four. */
+/* Round three (5 Nov 2026): researched against Lyall's feedback on the four.
+   Hidden from the hub for the 10 Nov pick (Alex: the four shortlisted are the right four).
+   /alt13, /alt14 and /alt15 stay reachable by direct link. Flip to true to list them again. */
+const SHOW_ROUND_THREE = false;
+
 const roundThree: Direction[] = [
   {
     n: 13,
@@ -165,6 +169,8 @@ export default function AltIndex() {
           ))}
         </div>
 
+        {SHOW_ROUND_THREE && (
+        <>
         <header className="mt-20 max-w-2xl">
           <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[#8A8478]">New for review</p>
           <h2 className="mt-3 text-2xl font-bold tracking-tight sm:text-3xl">Three new directions.</h2>
@@ -179,6 +185,8 @@ export default function AltIndex() {
             <DirectionCard key={c.n} c={c} />
           ))}
         </div>
+        </>
+        )}
 
         <h2 className="mt-16 text-sm font-semibold uppercase tracking-[0.2em] text-[#8A8478]">Earlier concepts</h2>
         <div className="mt-5 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

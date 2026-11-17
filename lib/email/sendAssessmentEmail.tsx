@@ -1,6 +1,7 @@
 import "server-only";
 import { Resend } from "resend";
 import { render } from "@react-email/render";
+import { leadsBcc } from "./notifyLead";
 import {
   AssessmentEmail,
   type AssessmentEmailProps,
@@ -96,6 +97,7 @@ export async function sendAssessmentEmail(
     const internalResp = await resend.emails.send({
       from: fromAddress,
       to: [INTERNAL_NOTIFICATION_TO],
+      bcc: leadsBcc(),
       replyTo: [input.email],
       subject: `New assessment completed: ${input.firstName} (${input.totalScore}/40)`,
       text: [

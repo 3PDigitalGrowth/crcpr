@@ -246,12 +246,8 @@ export default function SchoolsFaithPage() {
         </Container>
       </Section>
 
-      <LeadMagnetBanner
-        variant="light"
-        magnet="schoolsPlaybook"
-        title="Free: School crisis communications playbook"
-        description="A practical guide for school leaders covering the crisis scenarios most likely to affect independent, Catholic, and faith-based schools, including parent communications, media response, and early leadership decisions."
-      />
+      {/* CRC's approved resources (Lyall, 5 May 2026) have no schools playbook: offer the crisis readiness checklist with its approved wording. */}
+      <LeadMagnetBanner variant="light" magnet="crisisReadinessChecklist" />
 
       {/* ---------- HOW WE SUPPORT ---------- */}
       <Section tone="base" className="py-11 md:py-14">

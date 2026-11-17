@@ -220,11 +220,12 @@ export default function MediaTrainingPage() {
         </Container>
       </Section>
 
+      {/* CRC's approved resources (Lyall, 5 May 2026) have no media interview guide: offer the 5 steps guide with its approved wording. */}
       <LeadMagnetBanner
-        magnet="mediaInterviewGuide"
+        magnet="publicVoiceSteps"
         variant="light"
-        title="Download the Media Interview Preparation Guide"
-        description="The pre-interview checklist and briefing framework we give to executives before meaningful media appearances. Covers hostile interview preparation, on-camera presence, message prioritisation, and the questions every spokesperson should be able to answer before walking in."
+        title="Are you ready to raise your public profile and be the trusted voice of authority for your area of expertise?"
+        description="Download the CRC Public Relations '5 steps to becoming a trusted public voice', and drive new clients and staff through the credibility this brings. Applies to companies, non-profits, governments, professional services firms, schools and associations."
       />
 
       {/* ---------- TRAINING PROGRAMMES ---------- */}

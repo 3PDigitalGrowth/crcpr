@@ -12,12 +12,21 @@ import { Resend } from "resend";
  * Env:
  *   RESEND_API_KEY      required to send
  *   LEADS_NOTIFY_TO     comma-separated recipients (default info@crcpr.com.au)
+ *   LEADS_NOTIFY_BCC    comma-separated bcc (default alex@3pdigital.com.au)
  *   LEADS_FROM_EMAIL    sender on a Resend-verified domain
  *                       (falls back to ASSESSMENT_FROM_EMAIL, then Resend's test sender)
  */
 
 const FALLBACK_FROM = "CRC Public Relations <onboarding@resend.dev>";
 const DEFAULT_TO = "info@crcpr.com.au";
+export const DEFAULT_LEADS_BCC = "alex@3pdigital.com.au";
+
+export function leadsBcc(): string[] {
+  return (process.env.LEADS_NOTIFY_BCC ?? DEFAULT_LEADS_BCC)
+    .split(",")
+    .map((s) => s.trim())
+    .filter(Boolean);
+}
 
 export type LeadKind = "enquiry" | "resource";
 
@@ -75,6 +84,7 @@ export async function notifyLead(lead: LeadNotice): Promise<void> {
     const { error } = await resend.emails.send({
       from,
       to,
+      bcc: leadsBcc(),
       replyTo: clean(lead.email),
       subject,
       text: lines.join("\n"),

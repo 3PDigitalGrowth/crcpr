@@ -129,57 +129,60 @@ export default function IssuesManagementPage() {
 
       {/* ---------- ESCALATION WINDOW ---------- */}
       <Section tone="base" className="py-11 md:py-14">
-        <Container className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:gap-14">
-          <div>
-            <Eyebrow>
-              <T id={`${P}.t8`}>Escalation window</T>
-            </Eyebrow>
-            <H2 className="mt-3">
-              <T id={`${P}.t9`}>An issue is not a crisis. Strategic management ensures it doesn&apos;t become one.</T>
-            </H2>
-            <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted">
-              <p>
-                <T id={`${P}.t10`}>
-                  Most organisational crises are not sudden events. They are issues that were allowed to escalate: a
-                  complaint that wasn&apos;t handled correctly, a management mistake, a missed vulnerability, an
-                  oversight, a client who became a public critic, a social media post that was ignored, a staff
-                  complaint that became a media story. The difference between an issue and a crisis is almost always
-                  time, and the strategic choices made within that time.
-                </T>
-              </p>
-              <p>
-                <T id={`${P}.t11`}>
-                  We work in the space between an emerging issue and a full crisis, providing the counsel, monitoring
-                  capability, and stakeholder management that can arrest an escalation before it becomes
-                  unmanageable.
-                </T>
-              </p>
-            </div>
-          </div>
-          <Reveal className="lg:pt-10">
-            <FramedPhoto src={MEDIA.newsOnPhone} alt="A news site open on a phone in a busy street" className="mb-6" />
-            <aside className="kit-r border border-line p-6 md:p-8">
+        <Container>
+          <div className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:gap-14">
+            <div>
               <Eyebrow>
-                <T id={`${P}.t12`}>What changes the outcome</T>
+                <T id={`${P}.t8`}>Escalation window</T>
               </Eyebrow>
-              <div className="mt-5 divide-y divide-[var(--line)]">
-                {[
-                  ["t13", "Earlier recognition", "t14", "Spotting the reputational dimension before it becomes public or formalised."],
-                  ["t15", "Better sequencing", "t16", "Engaging leadership, stakeholders, and external audiences in the right order."],
-                  ["t17", "Judgement under pressure", "t18", "Making decisions that reduce escalation rather than amplify it."],
-                ].map(([tid, title, bid, body]) => (
-                  <div key={tid} className="py-4 first:pt-0 last:pb-0">
-                    <p className="kit-display text-[15px] uppercase">
-                      <T id={`${P}.${tid}`}>{title}</T>
-                    </p>
-                    <p className="mt-1.5 text-sm leading-relaxed text-muted">
-                      <T id={`${P}.${bid}`}>{body}</T>
-                    </p>
-                  </div>
-                ))}
+              <H2 className="mt-3">
+                <T id={`${P}.t9`}>An issue is not a crisis. Strategic management ensures it doesn&apos;t become one.</T>
+              </H2>
+              <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted">
+                <p>
+                  <T id={`${P}.t10`}>
+                    Most organisational crises are not sudden events. They are issues that were allowed to escalate: a
+                    complaint that wasn&apos;t handled correctly, a management mistake, a missed vulnerability, an
+                    oversight, a client who became a public critic, a social media post that was ignored, a staff
+                    complaint that became a media story. The difference between an issue and a crisis is almost always
+                    time, and the strategic choices made within that time.
+                  </T>
+                </p>
+                <p>
+                  <T id={`${P}.t11`}>
+                    We work in the space between an emerging issue and a full crisis, providing the counsel, monitoring
+                    capability, and stakeholder management that can arrest an escalation before it becomes
+                    unmanageable.
+                  </T>
+                </p>
               </div>
-            </aside>
-          </Reveal>
+            </div>
+            <Reveal className="lg:pt-10">
+              <FramedPhoto src={MEDIA.newsOnPhone} alt="A news site open on a phone in a busy street" ratio="aspect-[3/2] lg:aspect-auto" className="lg:h-full lg:min-h-[18rem]" />
+            </Reveal>
+          </div>
+        {/* Full width below the two columns, points side by side: in the right column it left a gap beside the text. */}
+          <aside className="kit-r mt-10 border border-line p-6 md:p-8">
+            <Eyebrow>
+              <T id={`${P}.t12`}>What changes the outcome</T>
+            </Eyebrow>
+            <div className="mt-5 divide-y divide-[var(--line)] md:grid md:grid-cols-3 md:divide-x md:divide-y-0">
+              {[
+                ["t13", "Earlier recognition", "t14", "Spotting the reputational dimension before it becomes public or formalised."],
+                ["t15", "Better sequencing", "t16", "Engaging leadership, stakeholders, and external audiences in the right order."],
+                ["t17", "Judgement under pressure", "t18", "Making decisions that reduce escalation rather than amplify it."],
+              ].map(([tid, title, bid, body]) => (
+                <div key={tid} className="py-4 first:pt-0 last:pb-0 md:px-6 md:py-0 md:first:pl-0 md:last:pr-0">
+                  <p className="kit-display text-[15px] uppercase">
+                    <T id={`${P}.${tid}`}>{title}</T>
+                  </p>
+                  <p className="mt-1.5 text-sm leading-relaxed text-muted">
+                    <T id={`${P}.${bid}`}>{body}</T>
+                  </p>
+                </div>
+              ))}
+            </div>
+          </aside>
         </Container>
       </Section>
 

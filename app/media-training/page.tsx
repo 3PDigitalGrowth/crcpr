@@ -113,71 +113,74 @@ export default function MediaTrainingPage() {
 
       {/* ---------- WHAT BETTER TRAINING LOOKS LIKE ---------- */}
       <Section tone="base" className="py-11 md:py-14">
-        <Container className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:gap-14">
-          <div>
-            <Eyebrow>
-              <T id={`${P}.t1`}>What better training looks like</T>
-            </Eyebrow>
-            <H2 className="mt-3">
-              <T id={`${P}.t2`}>The real risk is not poor technique. It is poor preparation.</T>
-            </H2>
-            <p className="mt-5 text-[clamp(1.05rem,1.5vw,1.2rem)] font-medium leading-[1.45]">
-              <T id={`${P}.t3`}>
-                A spokesperson can look polished and still lose the interview. The difference usually comes down to
-                whether they are ready for the real pressure points in the story.
-              </T>
-            </p>
-            <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted">
-              <p>
-                <T id={`${P}.t4`}>
-                  Most media training focuses on technique: bridging phrases, body language, staying on message.
-                  These things matter. But the most common failure point in a media interview is not technique. It
-                  is lack of preparation for the specific questions a journalist is likely to ask.
-                </T>
-              </p>
-              <p>
-                <T id={`${P}.t5`}>
-                  Generic media training produces spokespeople who know how to bridge but cannot answer the hardest
-                  question about their own organisation. Our media training begins not with technique, but with
-                  intelligence: understanding the story the journalist is building, the questions they are most
-                  likely to ask, and the specific vulnerabilities in your organisation&apos;s position that a
-                  skilled interviewer will find. Every session is designed and reviewed by an experienced adviser.
-                </T>
-              </p>
-              <p>
-                <T id={`${P}.t6`}>
-                  Our training is delivered by former television and radio journalists who have conducted the kinds
-                  of interviews your executives need to be ready for. They know what interviewers are looking for,
-                  how hostile interviews are constructed, and what the difference looks like between a spokesperson
-                  who holds their position and one who does not.
-                </T>
-              </p>
-            </div>
-          </div>
-          <Reveal className="lg:pt-10">
-            <FramedPhoto src={MEDIA.mediaTrainingInterview} alt="A spokesperson in a filmed interview set-up" className="mb-6" />
-            <aside className="kit-r border border-line p-6 md:p-8">
+        <Container>
+          <div className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:gap-14">
+            <div>
               <Eyebrow>
-                <T id={`${P}.t7`}>Technique is not enough</T>
+                <T id={`${P}.t1`}>What better training looks like</T>
               </Eyebrow>
-              <div className="mt-5 divide-y divide-[var(--line)]">
-                {[
-                  ["t8", "Bridging without substance", "t9", "Executives can sound polished while still failing to answer the real question being tested."],
-                  ["t10", "Generic rehearsal", "t11", "Practice is weak if it is not built around your actual vulnerabilities, timing, and likely scrutiny."],
-                  ["t12", "False confidence", "t13", "A confident spokesperson can still lose control if the preparation has not matched the pressure."],
-                ].map(([tid, title, bid, body]) => (
-                  <div key={tid} className="py-4 first:pt-0 last:pb-0">
-                    <p className="kit-display text-[15px] uppercase">
-                      <T id={`${P}.${tid}`}>{title}</T>
-                    </p>
-                    <p className="mt-1.5 text-sm leading-relaxed text-muted">
-                      <T id={`${P}.${bid}`}>{body}</T>
-                    </p>
-                  </div>
-                ))}
+              <H2 className="mt-3">
+                <T id={`${P}.t2`}>The real risk is not poor technique. It is poor preparation.</T>
+              </H2>
+              <p className="mt-5 text-[clamp(1.05rem,1.5vw,1.2rem)] font-medium leading-[1.45]">
+                <T id={`${P}.t3`}>
+                  A spokesperson can look polished and still lose the interview. The difference usually comes down to
+                  whether they are ready for the real pressure points in the story.
+                </T>
+              </p>
+              <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted">
+                <p>
+                  <T id={`${P}.t4`}>
+                    Most media training focuses on technique: bridging phrases, body language, staying on message.
+                    These things matter. But the most common failure point in a media interview is not technique. It
+                    is lack of preparation for the specific questions a journalist is likely to ask.
+                  </T>
+                </p>
+                <p>
+                  <T id={`${P}.t5`}>
+                    Generic media training produces spokespeople who know how to bridge but cannot answer the hardest
+                    question about their own organisation. Our media training begins not with technique, but with
+                    intelligence: understanding the story the journalist is building, the questions they are most
+                    likely to ask, and the specific vulnerabilities in your organisation&apos;s position that a
+                    skilled interviewer will find. Every session is designed and reviewed by an experienced adviser.
+                  </T>
+                </p>
+                <p>
+                  <T id={`${P}.t6`}>
+                    Our training is delivered by former television and radio journalists who have conducted the kinds
+                    of interviews your executives need to be ready for. They know what interviewers are looking for,
+                    how hostile interviews are constructed, and what the difference looks like between a spokesperson
+                    who holds their position and one who does not.
+                  </T>
+                </p>
               </div>
-            </aside>
-          </Reveal>
+            </div>
+            <Reveal className="lg:pt-10">
+              <FramedPhoto src={MEDIA.mediaTrainingInterview} alt="A spokesperson in a filmed interview set-up" ratio="aspect-[3/2] lg:aspect-auto" className="lg:h-full lg:min-h-[18rem]" />
+            </Reveal>
+          </div>
+        {/* Full width below the two columns, points side by side: in the right column it left a gap beside the text. */}
+          <aside className="kit-r mt-10 border border-line p-6 md:p-8">
+            <Eyebrow>
+              <T id={`${P}.t7`}>Technique is not enough</T>
+            </Eyebrow>
+            <div className="mt-5 divide-y divide-[var(--line)] md:grid md:grid-cols-3 md:divide-x md:divide-y-0">
+              {[
+                ["t8", "Bridging without substance", "t9", "Executives can sound polished while still failing to answer the real question being tested."],
+                ["t10", "Generic rehearsal", "t11", "Practice is weak if it is not built around your actual vulnerabilities, timing, and likely scrutiny."],
+                ["t12", "False confidence", "t13", "A confident spokesperson can still lose control if the preparation has not matched the pressure."],
+              ].map(([tid, title, bid, body]) => (
+                <div key={tid} className="py-4 first:pt-0 last:pb-0 md:px-6 md:py-0 md:first:pl-0 md:last:pr-0">
+                  <p className="kit-display text-[15px] uppercase">
+                    <T id={`${P}.${tid}`}>{title}</T>
+                  </p>
+                  <p className="mt-1.5 text-sm leading-relaxed text-muted">
+                    <T id={`${P}.${bid}`}>{body}</T>
+                  </p>
+                </div>
+              ))}
+            </div>
+          </aside>
         </Container>
       </Section>
 

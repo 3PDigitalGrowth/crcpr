@@ -143,71 +143,74 @@ Your reputation is at the core of our communications strategies. This includes u
 
       {/* ---------- REPUTATION REALITY ---------- */}
       <Section tone="base" className="py-11 md:py-14">
-        <Container className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:gap-14">
-          <div>
-            <Eyebrow>
-              <T id={`${P}.t1`}>Reputation reality</T>
-            </Eyebrow>
-            <H2 className="mt-3">
-              <T id={`${P}.t2`}>Reputation damage usually starts long before the headline.</T>
-            </H2>
-            <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted">
-              <p>
-                <T id={`${P}.t3`}>
-                  There isn&apos;t a year that passes without a major company receiving hostile media coverage that
-                  brings with it major ramifications, costs, revenue losses and severe ongoing reputational damage. But
-                  while we hear about the high profile companies, there are countless others also battling their own
-                  issues because of a loss of trust by their stakeholders.
-                </T>
-              </p>
-              <p>
-                <T id={`${P}.t4`}>
-                  What will surprise many, is that in most cases, these issues or crises could have been completely
-                  avoided.
-                </T>
-              </p>
-              <p>
-                <T id={`${P}.t5`}>
-                  Reputation damage is almost always predictable in hindsight. Usually the reason for the issue can be
-                  traced back to one point: a wrong decision, a missed vulnerability, an oversight, a client who became
-                  a public critic, a social media post that was ignored, a regulatory relationship that was allowed to
-                  deteriorate, an internal policy that was never communicated clearly, a media enquiry that
-                  wasn&apos;t handled correctly.
-                </T>
-              </p>
-              <p>
-                <T id={`${P}.t6`}>
-                  We work with you to identify these vulnerabilities before they become headlines, and to build the
-                  communications frameworks and stakeholder relationships that protect your reputation over the long
-                  term.
-                </T>
-              </p>
-            </div>
-          </div>
-          <Reveal className="lg:pt-10">
-            <FramedPhoto src={MEDIA.businessNewspapers} alt="A stack of business newspapers" className="mb-6" />
-            <aside className="kit-r border border-line p-6 md:p-8">
+        <Container>
+          <div className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:gap-14">
+            <div>
               <Eyebrow>
-                <T id={`${P}.t7`}>Early warning signs</T>
+                <T id={`${P}.t1`}>Reputation reality</T>
               </Eyebrow>
-              <div className="mt-5 divide-y divide-[var(--line)]">
-                {[
-                  ["t8", "Stakeholder frustration is building", "t9", "Complaints become more organised, more public, and harder to contain."],
-                  ["t10", "Media interest is changing shape", "t11", "Journalists move from isolated enquiries to pattern recognition and sustained scrutiny."],
-                  ["t12", "Leadership confidence is slipping", "t13", "Teams know a risk exists, but no one has yet aligned the messages, relationships, and response plan around it."],
-                ].map(([tid, title, bid, body]) => (
-                  <div key={tid} className="py-4 first:pt-0 last:pb-0">
-                    <p className="kit-display text-[15px] uppercase">
-                      <T id={`${P}.${tid}`}>{title}</T>
-                    </p>
-                    <p className="mt-1.5 text-sm leading-relaxed text-muted">
-                      <T id={`${P}.${bid}`}>{body}</T>
-                    </p>
-                  </div>
-                ))}
+              <H2 className="mt-3">
+                <T id={`${P}.t2`}>Reputation damage usually starts long before the headline.</T>
+              </H2>
+              <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted">
+                <p>
+                  <T id={`${P}.t3`}>
+                    There isn&apos;t a year that passes without a major company receiving hostile media coverage that
+                    brings with it major ramifications, costs, revenue losses and severe ongoing reputational damage. But
+                    while we hear about the high profile companies, there are countless others also battling their own
+                    issues because of a loss of trust by their stakeholders.
+                  </T>
+                </p>
+                <p>
+                  <T id={`${P}.t4`}>
+                    What will surprise many, is that in most cases, these issues or crises could have been completely
+                    avoided.
+                  </T>
+                </p>
+                <p>
+                  <T id={`${P}.t5`}>
+                    Reputation damage is almost always predictable in hindsight. Usually the reason for the issue can be
+                    traced back to one point: a wrong decision, a missed vulnerability, an oversight, a client who became
+                    a public critic, a social media post that was ignored, a regulatory relationship that was allowed to
+                    deteriorate, an internal policy that was never communicated clearly, a media enquiry that
+                    wasn&apos;t handled correctly.
+                  </T>
+                </p>
+                <p>
+                  <T id={`${P}.t6`}>
+                    We work with you to identify these vulnerabilities before they become headlines, and to build the
+                    communications frameworks and stakeholder relationships that protect your reputation over the long
+                    term.
+                  </T>
+                </p>
               </div>
-            </aside>
-          </Reveal>
+            </div>
+            <Reveal className="lg:pt-10">
+              <FramedPhoto src={MEDIA.businessNewspapers} alt="A stack of business newspapers" ratio="aspect-[3/2] lg:aspect-auto" className="lg:h-full lg:min-h-[18rem]" />
+            </Reveal>
+          </div>
+        {/* Full width below the two columns, points side by side: in the right column it left a gap beside the text. */}
+          <aside className="kit-r mt-10 border border-line p-6 md:p-8">
+            <Eyebrow>
+              <T id={`${P}.t7`}>Early warning signs</T>
+            </Eyebrow>
+            <div className="mt-5 divide-y divide-[var(--line)] md:grid md:grid-cols-3 md:divide-x md:divide-y-0">
+              {[
+                ["t8", "Stakeholder frustration is building", "t9", "Complaints become more organised, more public, and harder to contain."],
+                ["t10", "Media interest is changing shape", "t11", "Journalists move from isolated enquiries to pattern recognition and sustained scrutiny."],
+                ["t12", "Leadership confidence is slipping", "t13", "Teams know a risk exists, but no one has yet aligned the messages, relationships, and response plan around it."],
+              ].map(([tid, title, bid, body]) => (
+                <div key={tid} className="py-4 first:pt-0 last:pb-0 md:px-6 md:py-0 md:first:pl-0 md:last:pr-0">
+                  <p className="kit-display text-[15px] uppercase">
+                    <T id={`${P}.${tid}`}>{title}</T>
+                  </p>
+                  <p className="mt-1.5 text-sm leading-relaxed text-muted">
+                    <T id={`${P}.${bid}`}>{body}</T>
+                  </p>
+                </div>
+              ))}
+            </div>
+          </aside>
         </Container>
       </Section>
 

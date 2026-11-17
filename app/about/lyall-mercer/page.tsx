@@ -211,58 +211,68 @@ export default function LyallMercerPage() {
 
       {/* ---------- SPEAKING AND TRAINING ---------- */}
       <Section tone="base" className="pb-11 md:pb-14">
-        <Container className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:gap-14">
-          <div>
-            <H2>
-              <T id="about-lyall-mercer.t16">Speaking and training</T>
-            </H2>
-            <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted">
-              <p>
-                <T id="about-lyall-mercer.t13">
-                  Lyall is a sought-after keynote speaker and workshop facilitator on crisis communications,
-                  reputation management, and media strategy. He has delivered programmes across Australia, the USA, and
-                  Canada, including at the Australian Catholic Bishops Conference.
-                </T>
-              </p>
-              <p>
-                For speaking enquiries, visit{" "}
-                <a
-                  href={siteConfig.lyallMercerUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-accent underline-offset-4 hover:underline"
-                >
-                  <T id="about-lyall-mercer.t17">lyallmercer.com</T>
-                </a>
-                . For crisis communications training and masterclasses, visit{" "}
-                <a
-                  href={siteConfig.myPrPartnerUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-accent underline-offset-4 hover:underline"
-                >
-                  <T id="about-lyall-mercer.t18">myprpartner.com</T>
-                </a>
-                .
-              </p>
+        <Container>
+          <div className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:gap-14">
+            <div>
+              <H2>
+                <T id="about-lyall-mercer.t16">Speaking and training</T>
+              </H2>
+              <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted">
+                <p>
+                  <T id="about-lyall-mercer.t13">
+                    Lyall is a sought-after keynote speaker and workshop facilitator on crisis communications,
+                    reputation management, and media strategy. He has delivered programmes across Australia, the USA, and
+                    Canada, including at the Australian Catholic Bishops Conference.
+                  </T>
+                </p>
+                <p>
+                  For speaking enquiries, visit{" "}
+                  <a
+                    href={siteConfig.lyallMercerUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-accent underline-offset-4 hover:underline"
+                  >
+                    <T id="about-lyall-mercer.t17">lyallmercer.com</T>
+                  </a>
+                  . For crisis communications training and masterclasses, visit{" "}
+                  <a
+                    href={siteConfig.myPrPartnerUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-accent underline-offset-4 hover:underline"
+                  >
+                    <T id="about-lyall-mercer.t18">myprpartner.com</T>
+                  </a>
+                  .
+                </p>
+              </div>
+              <a
+                href={siteConfig.lyallMercerUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-accent"
+              >
+                <T id="about-lyall-mercer.t14">→ Visit lyallmercer.com for the full profile</T>
+              </a>
             </div>
-            <a
-              href={siteConfig.lyallMercerUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-accent"
-            >
-              <T id="about-lyall-mercer.t14">→ Visit lyallmercer.com for the full profile</T>
-            </a>
+            <Reveal className="lg:pt-2">
+              <FramedPhoto
+                src={MEDIA.conferenceAudience}
+                alt="A conference audience during a speaking session"
+                ratio="aspect-[3/2] lg:aspect-auto"
+                className="lg:h-full lg:min-h-[18rem]"
+              />
+            </Reveal>
           </div>
-          <Reveal className="lg:pt-2">
-            <FramedPhoto src={MEDIA.conferenceAudience} alt="A conference audience during a speaking session" className="mb-6" />
-            <MyPRPartnerCTA
-              title="Need training, workshops, or practical communications development?"
-              description="My PR Partner is CRC Public Relations' training platform for communications practitioners, spokesperson development, crisis workshops, and practical support between major advisory engagements."
-              buttonLabel="Explore My PR Partner"
-            />
-          </Reveal>
+          {/* Full width below the two columns: under the photo it left a gap beside the text. */}
+          <MyPRPartnerCTA
+            title="Need training, workshops, or practical communications development?"
+            description="My PR Partner is CRC Public Relations' training platform for communications practitioners, spokesperson development, crisis workshops, and practical support between major advisory engagements."
+            buttonLabel="Explore My PR Partner"
+            wide
+            className="mt-10"
+          />
         </Container>
       </Section>
 

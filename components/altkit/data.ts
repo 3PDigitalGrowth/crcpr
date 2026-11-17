@@ -59,7 +59,7 @@ export const MEDIA = {
   officeMeetingRoom: `${O}/meeting-room.jpg`,
   officePlants: `${O}/plants-meeting.jpg`,
   mediaDoorstop: `${L}/media-doorstop.jpg`,
-  emergencyLights: `${L}/emergency-lights.jpg`,
+  mediaScrum: `${L}/media-scrum.jpg`,
   handsInLight: `${L}/hands-in-light.jpg`,
   tvStudioRunSheet: `${L}/tv-studio-run-sheet.jpg`,
   // Hero bands, one per inner page.

@@ -135,93 +135,96 @@ export default function MediaStrategyPage() {
 
       {/* ---------- OPENING ---------- */}
       <Section tone="base" className="py-11 md:py-14">
-        <Container className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:gap-14">
-          <div>
-            <Eyebrow>
-              <T id={`${P}.t1`}>Media strategy</T>
-            </Eyebrow>
-            <H2 className="mt-3">
-              <T id={`${P}.t2`}>You don&apos;t need publicity. You need results.</T>
-            </H2>
-            <p className="mt-5 text-[clamp(1.05rem,1.5vw,1.2rem)] font-medium leading-[1.45]">
-              <T id={`${P}.t3`}>
-                An impacting and sustained media presence is a major part of an effective communications strategy as
-                it helps to build trust with those important to your success. It builds credibility, positions you as
-                the expert, and separates you from the crowd.
-              </T>
-            </p>
-            <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted">
-              <p>
-                <T id={`${P}.t4`}>
-                  But many confuse media relations with publicity or promotion. Yet visibility is not the same thing
-                  as positioning, and the saying that &apos;all publicity is good publicity&apos; can&apos;t be
-                  further from the truth, as many companies, organisations and people have sadly discovered.
-                </T>
-              </p>
-              <p>
-                <T id={`${P}.t5`}>
-                  That&apos;s why we partner with you to achieve the right coverage. We create media strategies that
-                  hit the right market with the right messaging, and achieve maximum results. And we know how to
-                  respond to media enquiries that won&apos;t benefit you, or worse, could work against you.
-                </T>
-              </p>
-              <p>
-                <T id={`${P}.t6`}>
-                  Strong media strategy is not a sequence of isolated media moments. It is a disciplined decision
-                  about what your organisation should be known for, who should hear it, and why journalists should
-                  keep coming back to you.
-                </T>
-              </p>
-              <p>
-                <T id={`${P}.t7`}>
-                  We build media strategies that go beyond press releases and reactive enquiry handling. If your
-                  current approach only generates coverage when you have something to announce, and measures success
-                  by whether that coverage was positive or negative, you are managing media, not leading it.
-                </T>
-              </p>
-              <p>
-                <T id={`${P}.t8`}>
-                  We help you move from reactive media management to proactive positioning, because the difference
-                  between being covered and being credible is the difference that protects your reputation.
-                </T>
-              </p>
-            </div>
-          </div>
-          <Reveal className="lg:pt-10">
-            <FramedPhoto src={MEDIA.mediaInterview} alt="A reporter interviewing an executive" position="70% 40%" className="mb-6" />
-            <aside className="kit-r border border-line p-6 md:p-8">
+        <Container>
+          <div className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:gap-14">
+            <div>
               <Eyebrow>
-                <T id={`${P}.t9`}>What weak strategy looks like</T>
+                <T id={`${P}.t1`}>Media strategy</T>
               </Eyebrow>
-              <div className="mt-5 divide-y divide-[var(--line)]">
-                {[
-                  ["t10", "Press release dependence", "t11", "Media activity only appears when the organisation has something to announce."],
-                  ["t12", "Reactive enquiry handling", "t13", "Journalists drive the agenda because there is no settled editorial position behind the response."],
-                  ["t14", "Shallow success measures", "t15", "Coverage is judged as positive or negative, rather than by whether it builds durable authority."],
-                ].map(([tid, title, bid, body]) => (
-                  <div key={tid} className="py-4 first:pt-0">
-                    <p className="kit-display text-[15px] uppercase">
-                      <T id={`${P}.${tid}`}>{title}</T>
-                    </p>
-                    <p className="mt-1.5 text-sm leading-relaxed text-muted">
-                      <T id={`${P}.${bid}`}>{body}</T>
-                    </p>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-2 border-t border-line pt-5">
-                <Eyebrow>
-                  <T id={`${P}.t16`}>Strategic aim</T>
-                </Eyebrow>
-                <p className="mt-3 text-base font-semibold leading-snug">
-                  <T id={`${P}.t17`}>
-                    Move from reactive media management to sustained, credible market positioning that directly
-                    supports your organisational objectives.
+              <H2 className="mt-3">
+                <T id={`${P}.t2`}>You don&apos;t need publicity. You need results.</T>
+              </H2>
+              <p className="mt-5 text-[clamp(1.05rem,1.5vw,1.2rem)] font-medium leading-[1.45]">
+                <T id={`${P}.t3`}>
+                  An impacting and sustained media presence is a major part of an effective communications strategy as
+                  it helps to build trust with those important to your success. It builds credibility, positions you as
+                  the expert, and separates you from the crowd.
+                </T>
+              </p>
+              <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted">
+                <p>
+                  <T id={`${P}.t4`}>
+                    But many confuse media relations with publicity or promotion. Yet visibility is not the same thing
+                    as positioning, and the saying that &apos;all publicity is good publicity&apos; can&apos;t be
+                    further from the truth, as many companies, organisations and people have sadly discovered.
+                  </T>
+                </p>
+                <p>
+                  <T id={`${P}.t5`}>
+                    That&apos;s why we partner with you to achieve the right coverage. We create media strategies that
+                    hit the right market with the right messaging, and achieve maximum results. And we know how to
+                    respond to media enquiries that won&apos;t benefit you, or worse, could work against you.
+                  </T>
+                </p>
+                <p>
+                  <T id={`${P}.t6`}>
+                    Strong media strategy is not a sequence of isolated media moments. It is a disciplined decision
+                    about what your organisation should be known for, who should hear it, and why journalists should
+                    keep coming back to you.
+                  </T>
+                </p>
+                <p>
+                  <T id={`${P}.t7`}>
+                    We build media strategies that go beyond press releases and reactive enquiry handling. If your
+                    current approach only generates coverage when you have something to announce, and measures success
+                    by whether that coverage was positive or negative, you are managing media, not leading it.
+                  </T>
+                </p>
+                <p>
+                  <T id={`${P}.t8`}>
+                    We help you move from reactive media management to proactive positioning, because the difference
+                    between being covered and being credible is the difference that protects your reputation.
                   </T>
                 </p>
               </div>
-            </aside>
-          </Reveal>
+            </div>
+            <Reveal className="lg:pt-10">
+              <FramedPhoto src={MEDIA.mediaInterview} alt="A reporter interviewing an executive" position="70% 40%" ratio="aspect-[3/2] lg:aspect-auto" className="lg:h-full lg:min-h-[18rem]" />
+            </Reveal>
+          </div>
+        {/* Full width below the two columns, points side by side: in the right column it left a gap beside the text. */}
+          <aside className="kit-r mt-10 border border-line p-6 md:p-8">
+            <Eyebrow>
+              <T id={`${P}.t9`}>What weak strategy looks like</T>
+            </Eyebrow>
+            <div className="mt-5 divide-y divide-[var(--line)] md:grid md:grid-cols-3 md:divide-x md:divide-y-0">
+              {[
+                ["t10", "Press release dependence", "t11", "Media activity only appears when the organisation has something to announce."],
+                ["t12", "Reactive enquiry handling", "t13", "Journalists drive the agenda because there is no settled editorial position behind the response."],
+                ["t14", "Shallow success measures", "t15", "Coverage is judged as positive or negative, rather than by whether it builds durable authority."],
+              ].map(([tid, title, bid, body]) => (
+                <div key={tid} className="py-4 first:pt-0 md:px-6 md:py-0 md:first:pl-0 md:last:pr-0">
+                  <p className="kit-display text-[15px] uppercase">
+                    <T id={`${P}.${tid}`}>{title}</T>
+                  </p>
+                  <p className="mt-1.5 text-sm leading-relaxed text-muted">
+                    <T id={`${P}.${bid}`}>{body}</T>
+                  </p>
+                </div>
+              ))}
+            </div>
+            <div className="mt-2 border-t border-line pt-5 md:mt-6">
+              <Eyebrow>
+                <T id={`${P}.t16`}>Strategic aim</T>
+              </Eyebrow>
+              <p className="mt-3 text-base font-semibold leading-snug">
+                <T id={`${P}.t17`}>
+                  Move from reactive media management to sustained, credible market positioning that directly
+                  supports your organisational objectives.
+                </T>
+              </p>
+            </div>
+          </aside>
         </Container>
       </Section>
 

@@ -324,9 +324,7 @@ export default function AboutPage() {
 
       <Section tone="base" className="pb-11 md:pb-14">
         <Container>
-          <div className="max-w-3xl">
-            <CapabilityDownload />
-          </div>
+          <CapabilityDownload />
         </Container>
       </Section>
 

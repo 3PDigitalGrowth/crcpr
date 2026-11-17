@@ -86,54 +86,57 @@ export default function CorporateClientsPage() {
       />
 
       <Section tone="base" className="py-11 md:py-14">
-        <Container className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:gap-14">
-          <div>
-            <Eyebrow>
-              <T id={`${P}.t1`}>Corporate communications</T>
-            </Eyebrow>
-            <H2 className="mt-3">
-              <T id={`${P}.t2`}>Reputation is shaped where strategy, behaviour, and narrative meet.</T>
-            </H2>
-            <p className="mt-5 text-[clamp(1.05rem,1.5vw,1.2rem)] font-medium leading-[1.45]">
-              <T id={`${P}.t3`}>
-                We work with owners, managing directors, and executives who need communications counsel that
-                understands regulatory exposure, market expectations, and the pace at which issues move from internal
-                concern to public headline.
-              </T>
-            </p>
-            <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted">
-              <p>
-                <T id={`${P}.t4`}>
-                  You deal directly with experienced advisers who align messaging with governance, protect valuation
-                  during turbulence, and prepare your leadership team for scrutiny from investors, analysts, and
-                  media. We bring journalistic judgment and crisis experience to every engagement, without the
-                  overhead of a large agency model.
-                </T>
-              </p>
-              <p>
-                <T id={`${P}.t5`}>
-                  Whether you are managing a live issue, strengthening executive visibility, or building a
-                  communications capability that matches your growth ambitions, we work directly with you and take
-                  ownership of outcomes.
-                </T>
-              </p>
-            </div>
-          </div>
-          <Reveal className="lg:pt-10">
-            <FramedPhoto src={MEDIA.officePlants} alt="Plants beside the meeting tables at the CRC Public Relations office" position="60% 50%" className="mb-6" />
-            <aside className="kit-r border border-line p-6 md:p-8">
+        <Container>
+          <div className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:gap-14">
+            <div>
               <Eyebrow>
-                <T id={`${P}.t6`}>Typical support areas</T>
+                <T id={`${P}.t1`}>Corporate communications</T>
               </Eyebrow>
-              <ul className="mt-5 divide-y divide-[var(--line)]">
-                {services.map((item) => (
-                  <li key={item} className="py-3.5 text-[15px] leading-snug first:pt-0 last:pb-0">
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </aside>
-          </Reveal>
+              <H2 className="mt-3">
+                <T id={`${P}.t2`}>Reputation is shaped where strategy, behaviour, and narrative meet.</T>
+              </H2>
+              <p className="mt-5 text-[clamp(1.05rem,1.5vw,1.2rem)] font-medium leading-[1.45]">
+                <T id={`${P}.t3`}>
+                  We work with owners, managing directors, and executives who need communications counsel that
+                  understands regulatory exposure, market expectations, and the pace at which issues move from internal
+                  concern to public headline.
+                </T>
+              </p>
+              <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted">
+                <p>
+                  <T id={`${P}.t4`}>
+                    You deal directly with experienced advisers who align messaging with governance, protect valuation
+                    during turbulence, and prepare your leadership team for scrutiny from investors, analysts, and
+                    media. We bring journalistic judgment and crisis experience to every engagement, without the
+                    overhead of a large agency model.
+                  </T>
+                </p>
+                <p>
+                  <T id={`${P}.t5`}>
+                    Whether you are managing a live issue, strengthening executive visibility, or building a
+                    communications capability that matches your growth ambitions, we work directly with you and take
+                    ownership of outcomes.
+                  </T>
+                </p>
+              </div>
+            </div>
+            <Reveal className="lg:pt-10">
+              <FramedPhoto src={MEDIA.officePlants} alt="Plants beside the meeting tables at the CRC Public Relations office" position="60% 50%" ratio="aspect-[3/2] lg:aspect-auto" className="lg:h-full lg:min-h-[18rem]" />
+            </Reveal>
+          </div>
+        {/* Full width below the two columns, points side by side: in the right column it left a gap beside the text. */}
+          <aside className="kit-r mt-10 border border-line p-6 md:p-8">
+            <Eyebrow>
+              <T id={`${P}.t6`}>Typical support areas</T>
+            </Eyebrow>
+            <ul className="mt-3 grid gap-x-8 sm:grid-cols-2 lg:grid-cols-4">
+              {services.map((item) => (
+                <li key={item} className="border-t border-line py-3.5 text-[15px] leading-snug">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </aside>
         </Container>
       </Section>
 

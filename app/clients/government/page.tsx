@@ -85,59 +85,62 @@ export default function GovernmentClientsPage() {
       />
 
       <Section tone="base" className="py-11 md:py-14">
-        <Container className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:gap-14">
-          <div>
-            <Eyebrow>
-              <T id={`${P}.t1`}>Public sector communications</T>
-            </Eyebrow>
-            <H2 className="mt-3">
-              <T id={`${P}.t2`}>Authority, process, and public confidence have to hold together.</T>
-            </H2>
-            <p className="mt-5 text-[clamp(1.05rem,1.5vw,1.2rem)] font-medium leading-[1.45]">
-              <T id={`${P}.t3`}>
-                Your organisation must communicate with authority, accuracy, and empathy while managing competing
-                stakeholder interests, statutory obligations, and intense media attention. We understand that
-                environment.
-              </T>
-            </p>
-            <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted">
-              <p>
-                <T id={`${P}.t4`}>
-                  The public sector environment demands discipline: clear accountabilities, defensible messaging, and
-                  readiness when programmes or incidents attract scrutiny.
-                </T>
-              </p>
-              <p>
-                <T id={`${P}.t5`}>
-                  We work with departments, agencies, and authorities on communications strategy that respects
-                  machinery-of-government realities. We help you anticipate friction points, align internal and
-                  external narratives, and engage communities and industry with clarity and respect.
-                </T>
-              </p>
-              <p>
-                <T id={`${P}.t6`}>
-                  From ministerial announcements to operational incidents and complex reform agendas, we provide
-                  experienced counsel, including crisis response when confidence in public institutions is on the
-                  line.
-                </T>
-              </p>
-            </div>
-          </div>
-          <Reveal className="lg:pt-10">
-            <FramedPhoto src={MEDIA.pressConference} alt="Microphones on the table at a press conference" className="mb-6" />
-            <aside className="kit-r border border-line p-6 md:p-8">
+        <Container>
+          <div className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:gap-14">
+            <div>
               <Eyebrow>
-                <T id={`${P}.t7`}>Typical support areas</T>
+                <T id={`${P}.t1`}>Public sector communications</T>
               </Eyebrow>
-              <ul className="mt-5 divide-y divide-[var(--line)]">
-                {services.map((item) => (
-                  <li key={item} className="py-3.5 text-[15px] leading-snug first:pt-0 last:pb-0">
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </aside>
-          </Reveal>
+              <H2 className="mt-3">
+                <T id={`${P}.t2`}>Authority, process, and public confidence have to hold together.</T>
+              </H2>
+              <p className="mt-5 text-[clamp(1.05rem,1.5vw,1.2rem)] font-medium leading-[1.45]">
+                <T id={`${P}.t3`}>
+                  Your organisation must communicate with authority, accuracy, and empathy while managing competing
+                  stakeholder interests, statutory obligations, and intense media attention. We understand that
+                  environment.
+                </T>
+              </p>
+              <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted">
+                <p>
+                  <T id={`${P}.t4`}>
+                    The public sector environment demands discipline: clear accountabilities, defensible messaging, and
+                    readiness when programmes or incidents attract scrutiny.
+                  </T>
+                </p>
+                <p>
+                  <T id={`${P}.t5`}>
+                    We work with departments, agencies, and authorities on communications strategy that respects
+                    machinery-of-government realities. We help you anticipate friction points, align internal and
+                    external narratives, and engage communities and industry with clarity and respect.
+                  </T>
+                </p>
+                <p>
+                  <T id={`${P}.t6`}>
+                    From ministerial announcements to operational incidents and complex reform agendas, we provide
+                    experienced counsel, including crisis response when confidence in public institutions is on the
+                    line.
+                  </T>
+                </p>
+              </div>
+            </div>
+            <Reveal className="lg:pt-10">
+              <FramedPhoto src={MEDIA.pressConference} alt="Microphones on the table at a press conference" ratio="aspect-[3/2] lg:aspect-auto" className="lg:h-full lg:min-h-[18rem]" />
+            </Reveal>
+          </div>
+        {/* Full width below the two columns, points side by side: in the right column it left a gap beside the text. */}
+          <aside className="kit-r mt-10 border border-line p-6 md:p-8">
+            <Eyebrow>
+              <T id={`${P}.t7`}>Typical support areas</T>
+            </Eyebrow>
+            <ul className="mt-3 grid gap-x-8 sm:grid-cols-2 lg:grid-cols-4">
+              {services.map((item) => (
+                <li key={item} className="border-t border-line py-3.5 text-[15px] leading-snug">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </aside>
         </Container>
       </Section>
 

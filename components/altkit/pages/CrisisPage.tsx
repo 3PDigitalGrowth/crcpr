@@ -130,6 +130,18 @@ export function CrisisPage({ id }: { id: ConceptId }) {
   // Live site: a media photo from CRC's past work, not another photo of Lyall
   // (Lyall, 18 Nov 2026). The concept pages keep the version they were shown with.
   const site = id === "site";
+  // "The first 15 minutes" body copy: beside the heading on the review concepts, under it on the live site.
+  const firstFifteenBody = (
+    <div className="space-y-5 text-base leading-relaxed text-muted">
+      <p>
+        When a crisis becomes public, in this age of digital and social media, the first 15 minutes is a key
+        timeframe. Too many organisations don&apos;t understand this and make predictable mistakes: they wait too
+        long for more information, or respond through the wrong channel, or say more than they should before the
+        facts are established. Each mistake compounds the one prior.
+      </p>
+      <p>We help prepare you to be crisis-ready.</p>
+    </div>
+  );
   const aside = PAGE_HERO_ASIDES.crisisTrust;
   const readingFor = getA1Posts(CONCEPTS[id].base)
     .filter((p) => p.category === "Crisis Communications")
@@ -273,19 +285,20 @@ export function CrisisPage({ id }: { id: ConceptId }) {
               <p className="mt-5 text-lg leading-relaxed">
                 The best scenario when a crisis hits is to have the time to respond. But usually this isn&apos;t possible.
               </p>
+              {site ? <div className="mt-6">{firstFifteenBody}</div> : null}
             </div>
-            <div className="space-y-5 text-base leading-relaxed text-muted lg:pt-10">
-              <p>
-                When a crisis becomes public, in this age of digital and social media, the first 15 minutes is a key
-                timeframe. Too many organisations don&apos;t understand this and make predictable mistakes: they wait too
-                long for more information, or respond through the wrong channel, or say more than they should before the
-                facts are established. Each mistake compounds the one prior.
-              </p>
-              <p>We help prepare you to be crisis-ready.</p>
-              {site ? (
-                <FramedPhoto src={MEDIA.emergencyLights} alt="Emergency lights seen through rain on a windscreen at night" />
-              ) : null}
-            </div>
+            {site ? (
+              // Live site: text left, the media scrum right, stretched to the text block's height.
+              <FramedPhoto
+                src={MEDIA.mediaScrum}
+                alt="Reporters and camera crews pressing microphones towards a spokesperson"
+                ratio="aspect-[3/2] lg:aspect-auto"
+                position="30% 50%"
+                className="lg:h-full lg:min-h-[20rem]"
+              />
+            ) : (
+              <div className="lg:pt-10">{firstFifteenBody}</div>
+            )}
           </div>
           <p className="mt-14 text-[11px] font-semibold uppercase tracking-[0.22em] text-muted">
             Common first-response failures
@@ -382,13 +395,23 @@ export function CrisisPage({ id }: { id: ConceptId }) {
             ))}
           </div>
 
-          <div className="glass kit-r mx-auto mt-14 max-w-2xl border-2 !border-[#1c74bc] p-7 text-center md:p-8">
-            <h3 className="kit-display text-2xl">Facing a crisis right now?</h3>
-            <p className="mx-auto mt-3 max-w-xl text-[15px] leading-relaxed text-muted">
-              Call us directly, available 7 days. Every call is treated with absolute confidentiality. You will speak to a
-              CRC Public Relations adviser, not a receptionist.
-            </p>
-            <a href={siteConfig.phone.href} className="btn btn-primary mt-6 w-full sm:w-auto">
+          {/* Live site: full width, text left and the call button right (centred and narrow, it sat alone in white space). */}
+          <div
+            className={`glass kit-r mt-14 border-2 !border-[#1c74bc] p-7 md:p-8 ${
+              site ? "flex flex-col gap-6 md:flex-row md:items-center md:justify-between" : "mx-auto max-w-2xl text-center"
+            }`}
+          >
+            <div>
+              <h3 className="kit-display text-2xl">Facing a crisis right now?</h3>
+              <p className={`mt-3 text-[15px] leading-relaxed text-muted ${site ? "max-w-2xl" : "mx-auto max-w-xl"}`}>
+                Call us directly, available 7 days. Every call is treated with absolute confidentiality. You will speak to
+                a CRC Public Relations adviser, not a receptionist.
+              </p>
+            </div>
+            <a
+              href={siteConfig.phone.href}
+              className={`btn btn-primary w-full shrink-0 sm:w-auto ${site ? "self-start md:self-center" : "mt-6"}`}
+            >
               <Phone className="h-4 w-4" aria-hidden />
               Call {siteConfig.phone.display} now
             </a>

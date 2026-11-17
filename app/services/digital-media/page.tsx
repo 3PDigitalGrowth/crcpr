@@ -130,70 +130,73 @@ export default function DigitalMediaPage() {
 
       {/* ---------- DIGITAL REPUTATION REALITY ---------- */}
       <Section tone="base" className="py-11 md:py-14">
-        <Container className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:gap-14">
-          <div>
-            <Eyebrow>
-              <T id={`${P}.t8`}>Digital reputation reality</T>
-            </Eyebrow>
-            <H2 className="mt-3">
-              <T id={`${P}.t9`}>Issues that can damage your reputation often break online first.</T>
-            </H2>
-            <p className="mt-6 text-[clamp(1.05rem,1.5vw,1.2rem)] font-medium leading-[1.45]">
-              <T id={`${P}.t10`}>
-                The channel has changed, but the consequence has not. A digital flare-up can move into mainstream
-                coverage before leadership has agreed what happened or who should respond.
-              </T>
-            </p>
-            <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted">
-              <p>
-                <T id={`${P}.t11`}>
-                  Ten years ago, a corporate reputation crisis typically began with a phone call from a journalist.
-                  Today, it is more likely to begin with a tweet, a LinkedIn post, or a one-star Google review that
-                  gets picked up by a media outlet monitoring social media for stories.
-                </T>
-              </p>
-              <p>
-                <T id={`${P}.t12`}>
-                  The speed of the digital environment has not made traditional PR expertise less relevant. It has made
-                  it more urgent. The communications disciplines that determine how a reputation crisis unfolds,
-                  message clarity, stakeholder management, spokesperson preparation, narrative control, are the same in
-                  digital channels as they are in traditional media. What changes is the timeframe. What used to take
-                  days now takes minutes.
-                </T>
-              </p>
-              <p>
-                <T id={`${P}.t13`}>
-                  When you engage us, you get corporate communications and crisis expertise applied to digital
-                  channels, not as a social media agency, but as communications advisers who understand how digital and
-                  traditional media interact, and how to manage your reputation across both simultaneously.
-                </T>
-              </p>
-            </div>
-          </div>
-          <Reveal className="lg:pt-10">
-            <FramedPhoto src={MEDIA.socialMediaPhone} alt="Social media apps open on a phone" className="mb-6" />
-            <aside className="kit-r border border-line p-6 md:p-8">
+        <Container>
+          <div className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:gap-14">
+            <div>
               <Eyebrow>
-                <T id={`${P}.t14`}>What changes online</T>
+                <T id={`${P}.t8`}>Digital reputation reality</T>
               </Eyebrow>
-              <div className="mt-5 divide-y divide-[var(--line)]">
-                {[
-                  ["t15", "Instant communication", "t16", "Everyone has access, and issues often start as negative posts, reviews, screenshots, allegations, or comments."],
-                  ["t17", "Timing is reduced", "t18", "People can share posts or add comments in seconds, reducing the time available to assess, evaluate, and respond strategically."],
-                  ["t19", "Channels interact", "t20", "What starts online spreads not only online but can quickly spill into mainstream media, resulting in stakeholder concern."],
-                ].map(([tid, title, bid, body]) => (
-                  <div key={tid} className="py-4 first:pt-0 last:pb-0">
-                    <p className="kit-display text-[15px] uppercase">
-                      <T id={`${P}.${tid}`}>{title}</T>
-                    </p>
-                    <p className="mt-1.5 text-sm leading-relaxed text-muted">
-                      <T id={`${P}.${bid}`}>{body}</T>
-                    </p>
-                  </div>
-                ))}
+              <H2 className="mt-3">
+                <T id={`${P}.t9`}>Issues that can damage your reputation often break online first.</T>
+              </H2>
+              <p className="mt-6 text-[clamp(1.05rem,1.5vw,1.2rem)] font-medium leading-[1.45]">
+                <T id={`${P}.t10`}>
+                  The channel has changed, but the consequence has not. A digital flare-up can move into mainstream
+                  coverage before leadership has agreed what happened or who should respond.
+                </T>
+              </p>
+              <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted">
+                <p>
+                  <T id={`${P}.t11`}>
+                    Ten years ago, a corporate reputation crisis typically began with a phone call from a journalist.
+                    Today, it is more likely to begin with a tweet, a LinkedIn post, or a one-star Google review that
+                    gets picked up by a media outlet monitoring social media for stories.
+                  </T>
+                </p>
+                <p>
+                  <T id={`${P}.t12`}>
+                    The speed of the digital environment has not made traditional PR expertise less relevant. It has made
+                    it more urgent. The communications disciplines that determine how a reputation crisis unfolds,
+                    message clarity, stakeholder management, spokesperson preparation, narrative control, are the same in
+                    digital channels as they are in traditional media. What changes is the timeframe. What used to take
+                    days now takes minutes.
+                  </T>
+                </p>
+                <p>
+                  <T id={`${P}.t13`}>
+                    When you engage us, you get corporate communications and crisis expertise applied to digital
+                    channels, not as a social media agency, but as communications advisers who understand how digital and
+                    traditional media interact, and how to manage your reputation across both simultaneously.
+                  </T>
+                </p>
               </div>
-            </aside>
-          </Reveal>
+            </div>
+            <Reveal className="lg:pt-10">
+              <FramedPhoto src={MEDIA.socialMediaPhone} alt="Social media apps open on a phone" ratio="aspect-[3/2] lg:aspect-auto" className="lg:h-full lg:min-h-[18rem]" />
+            </Reveal>
+          </div>
+        {/* Full width below the two columns, points side by side: in the right column it left a gap beside the text. */}
+          <aside className="kit-r mt-10 border border-line p-6 md:p-8">
+            <Eyebrow>
+              <T id={`${P}.t14`}>What changes online</T>
+            </Eyebrow>
+            <div className="mt-5 divide-y divide-[var(--line)] md:grid md:grid-cols-3 md:divide-x md:divide-y-0">
+              {[
+                ["t15", "Instant communication", "t16", "Everyone has access, and issues often start as negative posts, reviews, screenshots, allegations, or comments."],
+                ["t17", "Timing is reduced", "t18", "People can share posts or add comments in seconds, reducing the time available to assess, evaluate, and respond strategically."],
+                ["t19", "Channels interact", "t20", "What starts online spreads not only online but can quickly spill into mainstream media, resulting in stakeholder concern."],
+              ].map(([tid, title, bid, body]) => (
+                <div key={tid} className="py-4 first:pt-0 last:pb-0 md:px-6 md:py-0 md:first:pl-0 md:last:pr-0">
+                  <p className="kit-display text-[15px] uppercase">
+                    <T id={`${P}.${tid}`}>{title}</T>
+                  </p>
+                  <p className="mt-1.5 text-sm leading-relaxed text-muted">
+                    <T id={`${P}.${bid}`}>{body}</T>
+                  </p>
+                </div>
+              ))}
+            </div>
+          </aside>
         </Container>
       </Section>
 

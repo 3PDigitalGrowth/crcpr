@@ -149,61 +149,64 @@ export default function ServicesPage() {
 
       {/* ---------- HOW WE THINK ---------- */}
       <Section tone="base" className="py-11 md:py-14">
-        <Container className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:gap-14">
-          <div>
-            <Eyebrow>
-              <T id="services.t1">How we think about services</T>
-            </Eyebrow>
-            <H2 className="mt-3">
-              <T id="services.t2">Better judgement matters more than more activity.</T>
-            </H2>
-            <p className="mt-5 text-[clamp(1.05rem,1.5vw,1.2rem)] font-medium leading-[1.45]">
-              <T id="services.t3">
-                Most organisations do not need more communications activity. They need clearer judgement about what
-                matters, which stakeholders carry the greatest risk or influence, and what sequence of communication
-                will hold up under scrutiny.
-              </T>
-            </p>
-            <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted">
-              <p>
-                <T id="services.t4">
-                  That is why CRC Public Relations&apos; services are designed around pressure points, not agency
-                  departments.
-                </T>
-              </p>
-              <p>
-                <T id="services.t5">
-                  Some clients come to us because a crisis is already active. Others need a stronger media position,
-                  sharper executive messaging, better reputation visibility, or earlier intervention around an
-                  emerging issue. The right service is usually the one that gives leadership more control sooner.
-                </T>
-              </p>
-            </div>
-          </div>
-          <Reveal className="lg:pt-10">
-            <FramedPhoto src={MEDIA.officeOrangeChair} alt="An orange chair against the book wallpaper in the CRC Public Relations office" className="mb-6" />
-            <aside className="kit-r border border-line p-6 md:p-8">
+        <Container>
+          <div className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:gap-14">
+            <div>
               <Eyebrow>
-                <T id="services.t6">What the right starting point solves</T>
+                <T id="services.t1">How we think about services</T>
               </Eyebrow>
-              <div className="mt-5 divide-y divide-[var(--line)]">
-                {[
-                  ["t7", "Clearer priorities", "t8", "Focus on what matters most rather than adding more communication for its own sake."],
-                  ["t9", "Better stakeholder sequencing", "t10", "Decide who needs to hear what, and in what order, before pressure compounds."],
-                  ["t11", "Faster control", "t12", "The right service is usually the one that gives leadership more control sooner."],
-                ].map(([tid, title, bid, body]) => (
-                  <div key={tid} className="py-4 first:pt-0 last:pb-0">
-                    <p className="kit-display text-[15px] uppercase">
-                      <T id={`services.${tid}`}>{title}</T>
-                    </p>
-                    <p className="mt-1.5 text-sm leading-relaxed text-muted">
-                      <T id={`services.${bid}`}>{body}</T>
-                    </p>
-                  </div>
-                ))}
+              <H2 className="mt-3">
+                <T id="services.t2">Better judgement matters more than more activity.</T>
+              </H2>
+              <p className="mt-5 text-[clamp(1.05rem,1.5vw,1.2rem)] font-medium leading-[1.45]">
+                <T id="services.t3">
+                  Most organisations do not need more communications activity. They need clearer judgement about what
+                  matters, which stakeholders carry the greatest risk or influence, and what sequence of communication
+                  will hold up under scrutiny.
+                </T>
+              </p>
+              <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted">
+                <p>
+                  <T id="services.t4">
+                    That is why CRC Public Relations&apos; services are designed around pressure points, not agency
+                    departments.
+                  </T>
+                </p>
+                <p>
+                  <T id="services.t5">
+                    Some clients come to us because a crisis is already active. Others need a stronger media position,
+                    sharper executive messaging, better reputation visibility, or earlier intervention around an
+                    emerging issue. The right service is usually the one that gives leadership more control sooner.
+                  </T>
+                </p>
               </div>
-            </aside>
-          </Reveal>
+            </div>
+            <Reveal className="lg:pt-10">
+              <FramedPhoto src={MEDIA.officeOrangeChair} alt="An orange chair against the book wallpaper in the CRC Public Relations office" ratio="aspect-[3/2] lg:aspect-auto" className="lg:h-full lg:min-h-[18rem]" />
+            </Reveal>
+          </div>
+        {/* Full width below the two columns, points side by side: in the right column it left a gap beside the text. */}
+          <aside className="kit-r mt-10 border border-line p-6 md:p-8">
+            <Eyebrow>
+              <T id="services.t6">What the right starting point solves</T>
+            </Eyebrow>
+            <div className="mt-5 divide-y divide-[var(--line)] md:grid md:grid-cols-3 md:divide-x md:divide-y-0">
+              {[
+                ["t7", "Clearer priorities", "t8", "Focus on what matters most rather than adding more communication for its own sake."],
+                ["t9", "Better stakeholder sequencing", "t10", "Decide who needs to hear what, and in what order, before pressure compounds."],
+                ["t11", "Faster control", "t12", "The right service is usually the one that gives leadership more control sooner."],
+              ].map(([tid, title, bid, body]) => (
+                <div key={tid} className="py-4 first:pt-0 last:pb-0 md:px-6 md:py-0 md:first:pl-0 md:last:pr-0">
+                  <p className="kit-display text-[15px] uppercase">
+                    <T id={`services.${tid}`}>{title}</T>
+                  </p>
+                  <p className="mt-1.5 text-sm leading-relaxed text-muted">
+                    <T id={`services.${bid}`}>{body}</T>
+                  </p>
+                </div>
+              ))}
+            </div>
+          </aside>
         </Container>
       </Section>
 
@@ -226,7 +229,7 @@ export default function ServicesPage() {
       />
 
       <Section tone="base" className="py-11 md:py-14">
-        <Container className="max-w-3xl">
+        <Container>
           <CapabilityDownload />
         </Container>
       </Section>

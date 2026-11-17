@@ -73,8 +73,16 @@ export function Alt2Home({ posts, base = CONCEPTS.alt2.base }: { posts: A1Card[]
       {/* ---------- WHAT WE DO ---------- */}
       <Section tone="base" className="py-11 md:py-14">
         <Container>
-          <Eyebrow>Our practice areas</Eyebrow>
-          <H2 className="mt-3">Corporate. Reputation. Crisis.</H2>
+          {base === "" ? (
+            // Live site (Alex, 18 Nov 2026): the practice areas label becomes the
+            // heading, in CRC blue at heading size. The /alt2 concept keeps its version.
+            <H2 className="text-accent">Our practice areas</H2>
+          ) : (
+            <>
+              <Eyebrow>Our practice areas</Eyebrow>
+              <H2 className="mt-3">Corporate. Reputation. Crisis.</H2>
+            </>
+          )}
           <div className="mt-8 border-t border-line">
             {practices(base).map((p, i) => (
               <Reveal key={p.href} delay={i * 0.05}>

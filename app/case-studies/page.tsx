@@ -8,6 +8,7 @@ import { PageProofStrip } from "@/components/shared/PageProofStrip";
 import { Reveal } from "@/components/altkit/motion";
 import { Container, Eyebrow, H2, Section } from "@/components/altkit/primitives";
 import { T } from "@/components/editable";
+import { MEDIA } from "@/components/altkit/data";
 
 export const metadata: Metadata = {
   title: "Client Outcomes | CRC Public Relations",
@@ -19,6 +20,7 @@ export default function CaseStudiesPage() {
   return (
     <>
       <PageHero
+        photo={{ src: MEDIA.bandTvCameraCrowd, alt: "A television camera operator filming in a crowd" }}
         copyId="case-studies"
         asidePreset="anonymisedOutcomes"
         eyebrow="Client outcomes"

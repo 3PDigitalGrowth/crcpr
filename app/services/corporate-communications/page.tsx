@@ -103,6 +103,7 @@ export default function CorporateCommunicationsPage() {
       />
 
       <PageHero
+        photo={{ src: MEDIA.bandCorporateTowers, alt: "Glass corporate office towers" }}
         copyId={P}
         asidePreset="strategicIntegrated"
         eyebrow="Corporate communications"

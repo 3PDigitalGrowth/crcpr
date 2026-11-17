@@ -152,6 +152,11 @@ export default function LyallMercerPage() {
             <H2 className="mt-3">
               <T id="about-lyall-mercer.t9">The 15 Minutes Principle</T>
             </H2>
+            <FramedPhoto
+              src={MEDIA.tvStudioRunSheet}
+              alt="A television studio camera with the show's run sheet clipped to it"
+              className="mt-8"
+            />
           </div>
           <div>
             <blockquote className="border-l-[3px] border-[var(--k-blue)] pl-5">

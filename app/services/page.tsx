@@ -107,7 +107,8 @@ const faqs = [
 export default function ServicesPage() {
   return (
     <>
-      <PageHero copyId="services"
+      <PageHero
+        photo={{ src: MEDIA.bandOfficeBooth, alt: "A booth and lounge at the CRC Public Relations office" }} copyId="services"
         asidePreset="strategicIntegrated"
         eyebrow="Full service offering"
         title="Corporate communications and PR services."

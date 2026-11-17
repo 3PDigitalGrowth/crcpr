@@ -11,6 +11,7 @@ import { PageProofStrip } from "@/components/shared/PageProofStrip";
 import { Reveal } from "@/components/altkit/motion";
 import { Container, Eyebrow, H2, Section } from "@/components/altkit/primitives";
 import { T } from "@/components/editable";
+import { MEDIA } from "@/components/altkit/data";
 
 export const metadata: Metadata = {
   title: "Sector Expertise",
@@ -89,6 +90,7 @@ export default function ClientsPage() {
   return (
     <>
       <PageHero
+        photo={{ src: MEDIA.bandSydneyHarbour, alt: "Sydney Harbour and the city skyline" }}
         copyId={P}
         asidePreset="clientsBreadth"
         eyebrow="Sector expertise"

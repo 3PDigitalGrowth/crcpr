@@ -9,7 +9,7 @@ import { PageProofStrip } from "@/components/shared/PageProofStrip";
 import { Reveal } from "@/components/altkit/motion";
 import { Container, Eyebrow, H2, Section } from "@/components/altkit/primitives";
 import { T } from "@/components/editable";
-import { FramedVideo } from "@/components/altkit/media";
+import { FramedPhoto, FramedVideo } from "@/components/altkit/media";
 import { MEDIA } from "@/components/altkit/data";
 
 export const metadata: Metadata = {
@@ -113,6 +113,7 @@ export default function SchoolsFaithPage() {
       />
 
       <PageHero
+        photo={{ src: MEDIA.bandSchoolGate, alt: "Two students walking through a school gate" }}
         copyId={P}
         asidePreset="clientsBreadth"
         eyebrow="Independent schools & faith-based organisations"
@@ -286,7 +287,8 @@ export default function SchoolsFaithPage() {
             ))}
           </div>
 
-          <blockquote className="mt-12 max-w-3xl border-l-[3px] border-[var(--k-blue)] pl-5">
+          <div className="mt-12 grid items-center gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:gap-14">
+          <blockquote className="max-w-3xl border-l-[3px] border-[var(--k-blue)] pl-5">
             <p className="text-lg font-semibold leading-snug">
               <T id={`${P}.t23`}>
                 &quot;CRC Public Relations has developed a crisis communications plan for Christian schools and has
@@ -298,6 +300,8 @@ export default function SchoolsFaithPage() {
               <T id={`${P}.t24`}>Executive Officer, Christian schools sector</T>
             </footer>
           </blockquote>
+          <FramedPhoto src={MEDIA.handsInLight} alt="Hands raised in light at a faith gathering" />
+          </div>
         </Container>
       </Section>
 

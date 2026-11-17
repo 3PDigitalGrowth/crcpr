@@ -111,6 +111,7 @@ export default function DigitalMediaPage() {
       />
 
       <PageHero
+        photo={{ src: MEDIA.bandTabletPhone, alt: "A tablet and a phone on a desk" }}
         copyId={P}
         asidePreset="mediaEditorial"
         eyebrow="Digital media and online reputation"

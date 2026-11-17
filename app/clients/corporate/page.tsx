@@ -75,6 +75,7 @@ export default function CorporateClientsPage() {
   return (
     <>
       <PageHero
+        photo={{ src: MEDIA.bandBoardroomChairs, alt: "Leather chairs around a boardroom table" }}
         copyId={P}
         asidePreset="clientsBreadth"
         eyebrow="Corporate"

@@ -50,6 +50,7 @@ export const PHOTOS = {
 const W = "/images/crc-2026/work";
 const O = "/images/crc-2026/office";
 const L = "/images/crc-2026/library";
+const B = "/images/crc-2026/bands";
 
 export const MEDIA = {
   teamAtTable: `${W}/team-at-table.jpg`,
@@ -58,6 +59,24 @@ export const MEDIA = {
   officeMeetingRoom: `${O}/meeting-room.jpg`,
   officePlants: `${O}/plants-meeting.jpg`,
   mediaDoorstop: `${L}/media-doorstop.jpg`,
+  emergencyLights: `${L}/emergency-lights.jpg`,
+  handsInLight: `${L}/hands-in-light.jpg`,
+  tvStudioRunSheet: `${L}/tv-studio-run-sheet.jpg`,
+  // Hero bands, one per inner page.
+  bandOfficeBooth: `${B}/office-lounge-booth.jpg`,
+  bandCorporateTowers: `${B}/corporate-towers.jpg`,
+  bandPressPhotographers: `${B}/press-photographers.jpg`,
+  bandInterviewMicrophones: `${B}/interview-microphones.jpg`,
+  bandTvCrews: `${B}/tv-crews.jpg`,
+  bandTabletPhone: `${B}/tablet-phone.jpg`,
+  bandCameraMonitor: `${B}/camera-monitor.jpg`,
+  bandSydneyHarbour: `${B}/sydney-harbour.jpg`,
+  bandBoardroomChairs: `${B}/boardroom-chairs.jpg`,
+  bandConferenceStage: `${B}/industry-conference.jpg`,
+  bandSchoolGate: `${B}/school-gate.jpg`,
+  bandPacificForum: `${B}/pacific-forum-banner.jpg`,
+  bandTvCameraCrowd: `${B}/tv-camera-crowd.jpg`,
+  bandOfficeBoothTable: `${B}/office-booth-table.jpg`,
   conferenceAudience: `${L}/conference-audience.jpg`,
   mediaTrainingInterview: `${L}/media-training-interview.jpg`,
   mediaInterview: `${L}/media-interview.jpg`,

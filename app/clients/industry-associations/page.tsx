@@ -197,6 +197,7 @@ export default function IndustryAssociationsPage() {
       />
 
       <PageHero
+        photo={{ src: MEDIA.bandConferenceStage, alt: "A large industry conference audience in front of the stage" }}
         copyId={P}
         asidePreset="clientsBreadth"
         eyebrow="Industry associations"

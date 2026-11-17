@@ -164,7 +164,8 @@ export default function PacificPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <PageHero copyId="pacific"
+      <PageHero
+        photo={{ src: MEDIA.bandPacificForum, alt: "A session at the Pacific Islands Forum" }} copyId="pacific"
         asidePreset="pacificRegional"
         eyebrow="Pacific advisory"
         title="The Pacific region demands communications expertise that most public relations firms don't have."

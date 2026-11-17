@@ -8,6 +8,7 @@ import { Reveal } from "@/components/altkit/motion";
 import { Container, Eyebrow, H2, Section } from "@/components/altkit/primitives";
 import { siteConfig } from "@/config/site";
 import { T } from "@/components/editable";
+import { MEDIA } from "@/components/altkit/data";
 
 export const metadata: Metadata = {
   title: "FAQ | CRC Public Relations",
@@ -34,6 +35,7 @@ export default function FAQPage() {
       />
 
       <PageHero
+        photo={{ src: MEDIA.bandOfficeBoothTable, alt: "A quiet booth table at the CRC Public Relations office" }}
         copyId="faq"
         asidePreset="editorialInsights"
         eyebrow="FAQ"

@@ -118,7 +118,8 @@ export default function MediaStrategyPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <PageHero copyId={P}
+      <PageHero
+        photo={{ src: MEDIA.bandTvCrews, alt: "Television crews setting up for an outdoor media conference" }} copyId={P}
         asidePreset="mediaEditorial"
         eyebrow="Media strategy"
         title="A trusted media presence doesn't happen by accident."

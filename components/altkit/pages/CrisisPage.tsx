@@ -6,6 +6,7 @@ import { PAGE_HERO_ASIDES } from "@/config/pageHeroAsides";
 import { ClosingCTA } from "../blocks";
 import { CONCEPTS, type ConceptId } from "../concepts";
 import { MEDIA, PHOTOS } from "../data";
+import { FramedPhoto } from "../media";
 import { EnquiryForm } from "../forms";
 import { getA1Posts, toCard } from "../insights";
 import { Reveal } from "../motion";
@@ -281,6 +282,9 @@ export function CrisisPage({ id }: { id: ConceptId }) {
                 facts are established. Each mistake compounds the one prior.
               </p>
               <p>We help prepare you to be crisis-ready.</p>
+              {site ? (
+                <FramedPhoto src={MEDIA.emergencyLights} alt="Emergency lights seen through rain on a windscreen at night" />
+              ) : null}
             </div>
           </div>
           <p className="mt-14 text-[11px] font-semibold uppercase tracking-[0.22em] text-muted">

@@ -96,7 +96,8 @@ export default function MediaTrainingPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <PageHero copyId={P}
+      <PageHero
+        photo={{ src: MEDIA.bandCameraMonitor, alt: "A camera operator and director watching a monitor during filming" }} copyId={P}
         asidePreset="mediaTraining"
         eyebrow="Media training"
         title="Media training from people who have sat on the other side of the camera."

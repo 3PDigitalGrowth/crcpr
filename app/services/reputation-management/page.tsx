@@ -122,6 +122,7 @@ export default function ReputationManagementPage() {
       />
 
       <PageHero
+        photo={{ src: MEDIA.bandPressPhotographers, alt: "Press photographers and camera crews facing a man at a media conference" }}
         copyId={P}
         asidePreset="proofLed"
         eyebrow="Reputation management"

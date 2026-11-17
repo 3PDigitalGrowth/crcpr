@@ -110,6 +110,7 @@ export default function IssuesManagementPage() {
       />
 
       <PageHero
+        photo={{ src: MEDIA.bandInterviewMicrophones, alt: "A reporter holding a microphone out for an interview" }}
         copyId={P}
         asidePreset="strategicIntegrated"
         eyebrow="Issues management"

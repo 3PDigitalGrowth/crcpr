@@ -35,7 +35,7 @@ export interface PageHeroProps {
    */
   heroImage?: { src: string; alt: string };
   heroVideo?: { src: string; poster?: string };
-  /** A real photograph from the CRC 2026 shoot, shown as a wide strip under the hero. */
+  /** One of CRC's own photographs, shown as a band under the hero (4:1 desktop, 2:1 phones). */
   photo?: { src: string; alt: string; position?: string };
   /** Right-rail message variant (below firm tenure stat). Defaults to seniorAccess. */
   asidePreset?: PageHeroAsidePreset;
@@ -122,15 +122,16 @@ export function PageHero({
         </div>
 
         {photo ? (
-          <div className="kit-r relative mt-10 aspect-[16/9] overflow-hidden md:aspect-[3/1]">
+          <div className="kit-r relative mt-10 aspect-[2/1] overflow-hidden md:aspect-[4/1]">
             <Image
               src={photo.src}
               alt={photo.alt}
               fill
               priority
+              quality={85}
               sizes="(min-width: 1200px) 1140px, 100vw"
               className="object-cover"
-              style={{ objectPosition: photo.position ?? "50% 40%" }}
+              style={{ objectPosition: photo.position ?? "50% 50%" }}
             />
           </div>
         ) : null}

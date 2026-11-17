@@ -6,14 +6,15 @@
  * know about "which site am I on" comes from here.
  */
 
-export type ConceptId = "alt1" | "alt2" | "alt3" | "alt9" | "alt13" | "alt14" | "alt15";
+/** "site" is the live site itself, built in the approved Chambers (alt2) white design. */
+export type ConceptId = "alt1" | "alt2" | "alt3" | "alt9" | "alt13" | "alt14" | "alt15" | "site";
 export type Theme = "dark" | "white";
 
 export type Concept = {
   id: ConceptId;
   name: string;
   /** Route prefix every internal link on the concept is built from. */
-  base: `/${ConceptId}`;
+  base: string;
   defaultTheme: Theme;
   /** Whole page renders dark in the dark theme (not just the deep bands). */
   darkBase?: boolean;
@@ -29,6 +30,8 @@ export const CONCEPTS: Record<ConceptId, Concept> = {
   alt13: { id: "alt13", name: "Letterhead", base: "/alt13", defaultTheme: "white" },
   alt14: { id: "alt14", name: "Private Office", base: "/alt14", defaultTheme: "dark", lightChrome: true },
   alt15: { id: "alt15", name: "Linework", base: "/alt15", defaultTheme: "dark" },
+  /* Client approval 17 Nov 2026: "Please create the whole site in this version (white option)". */
+  site: { id: "site", name: "CRC Public Relations", base: "", defaultTheme: "white", lightChrome: true },
 };
 
 /** localStorage key for a concept's remembered background. */
@@ -50,7 +53,7 @@ export type Routes = {
 
 export function routesFor(base: string): Routes {
   return {
-    home: base,
+    home: base || "/",
     insights: `${base}/insights`,
     crisis: `${base}/services/crisis-communications`,
     article: (slug) => `${base}/insights/${slug}`,

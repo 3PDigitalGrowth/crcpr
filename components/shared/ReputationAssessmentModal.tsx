@@ -33,28 +33,28 @@ export function ReputationAssessmentModal({
 
   return (
     <div
-      className="fixed inset-0 z-50 bg-black/60 flex items-start sm:items-center justify-center p-4 overflow-y-auto"
+      className="fixed inset-0 z-[100] flex items-start justify-center overflow-y-auto bg-[rgba(11,18,32,0.62)] p-4 sm:items-center"
       role="presentation"
       onClick={onClose}
     >
       <div
-        className="bg-warm-white rounded-[1.75rem] max-w-2xl w-full max-h-[90vh] overflow-y-auto relative shadow-2xl shadow-navy/20 my-auto"
+        className="tone-base kit-r relative my-auto max-h-[90vh] w-full max-w-2xl overflow-y-auto border border-line shadow-2xl"
         role="dialog"
         aria-modal="true"
         aria-label="Reputation Vulnerability Assessment"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="sticky top-0 z-10 flex justify-end bg-warm-white/95 backdrop-blur px-4 pt-4">
+        <div className="tone-base sticky top-0 z-10 flex justify-end px-4 pt-4">
           <button
             type="button"
-            className="text-text-caption hover:text-text-body transition"
+            className="text-muted transition hover:text-[var(--fg)]"
             onClick={onClose}
             aria-label="Close"
           >
             <X className="size-5" strokeWidth={2} />
           </button>
         </div>
-        <div className="px-6 md:px-8 pb-8">
+        <div className="px-6 pb-8 md:px-8">
           <ReputationAssessment embedded />
         </div>
       </div>

@@ -1,4 +1,5 @@
 import { MT } from "@/components/editable";
+import { Container, Eyebrow, H2 } from "@/components/altkit/primitives";
 
 interface ProofItem {
   label: string;
@@ -10,6 +11,7 @@ interface ProofTestimonial {
   quote: string;
   attribution: string[];
   highlightLastLine?: boolean;
+  /** Kept for call-site compatibility; the Chambers design runs no portrait here. */
   portrait?: {
     src: string;
     alt: string;
@@ -21,12 +23,14 @@ interface PageProofStripProps {
   title: string;
   body?: string;
   items: ProofItem[];
+  /** "navy" renders on the pale band; the others on the white canvas. */
   variant?: "white" | "off-white" | "navy";
   testimonial?: ProofTestimonial;
   /** Page-scoped id making this strip editable in /admin/editor. */
   copyId?: string;
 }
 
+/** Chambers proof ledger: heading, then hairline columns of label, value and detail. */
 export function PageProofStrip({
   eyebrow = "Why CRC Public Relations",
   title,
@@ -37,66 +41,36 @@ export function PageProofStrip({
   copyId,
 }: PageProofStripProps) {
   const cid = (suffix: string) => (copyId ? `${copyId}.proof.${suffix}` : undefined);
-  const sectionClass =
-    variant === "navy"
-      ? "bg-navy"
-      : variant === "white"
-        ? "bg-warm-white"
-        : "bg-off-white";
-
-  const cardClass =
-    variant === "navy"
-      ? "v2-glass-dark"
-      : "border border-brand-border bg-warm-white/70 backdrop-blur shadow-sm shadow-navy/5";
-
-  const titleClass = variant === "navy" ? "text-white" : "text-navy";
-  const bodyClass = variant === "navy" ? "text-white/70" : "text-charcoal-mid";
-  const valueClass = variant === "navy" ? "text-white" : "text-navy";
-  const detailClass =
-    variant === "navy" ? "text-white/60" : "text-body";
-
-  const quoteClass =
-    variant === "navy" ? "text-white/85" : "text-charcoal";
-  const attributionPrimaryClass =
-    variant === "navy" ? "text-white" : "text-navy";
-  const attributionSecondaryClass =
-    variant === "navy" ? "text-white/60" : "text-charcoal-mid";
 
   return (
-    <section className={`${sectionClass} py-16 md:py-20`}>
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="max-w-3xl">
-          <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
-            <span className="h-px w-8 bg-current opacity-50" aria-hidden />
-            <MT id={cid("eyebrow")}>{eyebrow}</MT>
-          </p>
-          <h2 className={`font-heading text-4xl leading-[1.05] tracking-[-0.02em] md:text-5xl ${titleClass}`}>
-            <MT id={cid("title")}>{title}</MT>
-          </h2>
+    <section className={`${variant === "navy" ? "tone-deep" : "tone-base"} relative py-11 md:py-14`}>
+      <Container>
+        <div className="grid gap-5 lg:grid-cols-[1.1fr,0.9fr] lg:items-end lg:gap-14">
+          <div>
+            <Eyebrow>
+              <MT id={cid("eyebrow")}>{eyebrow}</MT>
+            </Eyebrow>
+            <H2 className="mt-3 max-w-3xl">
+              <MT id={cid("title")}>{title}</MT>
+            </H2>
+          </div>
           {body ? (
-            <p className={`mt-5 text-lg leading-relaxed ${bodyClass}`}>
+            <p className="max-w-xl text-[15px] leading-relaxed text-muted lg:pb-1">
               <MT id={cid("body")}>{body}</MT>
             </p>
           ) : null}
         </div>
 
-        <div
-          className={`grid grid-cols-1 md:grid-cols-2 ${
-            items.length >= 4 ? "lg:grid-cols-4" : "lg:grid-cols-3"
-          } gap-6 mt-10`}
-        >
+        <div className={`ledger mt-8 ${items.length > 3 ? "ledger-wide" : ""}`}>
           {items.map((item, itemIndex) => (
-            <div
-              key={`${item.label}-${item.value}`}
-              className={`rounded-[1.5rem] p-6 ${cardClass}`}
-            >
-              <p className="mb-3 font-sans text-[11px] font-semibold uppercase tracking-[0.18em] text-brand-gold">
+            <div key={`${item.label}-${item.value}`}>
+              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-accent">
                 <MT id={cid(`items.${itemIndex}.label`)}>{item.label}</MT>
               </p>
-              <p className={`font-heading text-4xl leading-none ${valueClass}`}>
+              <p className="kit-display mt-2 text-[clamp(1.2rem,1.9vw,1.5rem)] uppercase leading-tight">
                 <MT id={cid(`items.${itemIndex}.value`)}>{item.value}</MT>
               </p>
-              <p className={`text-sm leading-relaxed mt-3 ${detailClass}`}>
+              <p className="mt-2 text-sm leading-relaxed text-muted">
                 <MT id={cid(`items.${itemIndex}.detail`)}>{item.detail}</MT>
               </p>
             </div>
@@ -104,36 +78,16 @@ export function PageProofStrip({
         </div>
 
         {testimonial ? (
-          <figure
-            className={`mt-12 border-l-[3px] border-l-brand-gold rounded-[1.5rem] p-6 ${
-              variant === "navy" ? "bg-white/[0.04]" : "bg-off-white"
-            }`}
-          >
-            <blockquote
-              className={`font-heading text-xl leading-snug md:text-2xl ${quoteClass}`}
-            >
-              &ldquo;{testimonial.quote}&rdquo;
+          <figure className="mt-10 max-w-3xl border-l-[3px] border-[var(--k-blue)] pl-5 md:pl-6">
+            <blockquote className="text-[clamp(1.05rem,1.6vw,1.3rem)] font-medium leading-[1.45]">
+              &quot;{testimonial.quote}&quot;
             </blockquote>
             <figcaption className="mt-4 space-y-0.5">
               {testimonial.attribution.map((line, idx) => {
                 const isLast = idx === testimonial.attribution.length - 1;
-                const emphasised = testimonial.highlightLastLine && isLast;
                 if (idx === 0) {
                   return (
-                    <p
-                      key={line}
-                      className={`font-sans font-semibold text-sm ${attributionPrimaryClass}`}
-                    >
-                      {line}
-                    </p>
-                  );
-                }
-                if (emphasised) {
-                  return (
-                    <p
-                      key={line}
-                      className="font-sans font-semibold text-brand-gold text-xs"
-                    >
+                    <p key={line} className="text-sm font-semibold">
                       {line}
                     </p>
                   );
@@ -141,7 +95,11 @@ export function PageProofStrip({
                 return (
                   <p
                     key={line}
-                    className={`text-xs ${attributionSecondaryClass}`}
+                    className={
+                      testimonial.highlightLastLine && isLast
+                        ? "text-[11px] font-semibold uppercase tracking-[0.14em] text-accent"
+                        : "text-xs text-muted"
+                    }
                   >
                     {line}
                   </p>
@@ -150,7 +108,7 @@ export function PageProofStrip({
             </figcaption>
           </figure>
         ) : null}
-      </div>
+      </Container>
     </section>
   );
 }

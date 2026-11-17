@@ -223,6 +223,7 @@ export function ArticlePage({ id, slug }: { id: ConceptId; slug: string }) {
       </Section>
 
       <ClosingCTA
+        site={id === "site"}
         title="Need advice on a crisis, issue, or reputation matter?"
         body="Our articles are designed to clarify the issue. If you need to apply that thinking to a live situation, the next step is a confidential conversation."
         primaryLabel="Get in touch"

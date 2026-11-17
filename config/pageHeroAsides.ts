@@ -25,7 +25,7 @@ export type AsideHighlight = {
 export const PAGE_HERO_ASIDES: Record<PageHeroAsidePreset, AsideHighlight> = {
   seniorAccess: {
     title: "Direct to experienced advisers",
-    body: "Every engagement is led by experienced principals—you are not handed off to junior staff or a generic account team.",
+    body: "Every engagement is led by experienced principals: you are not handed off to junior staff or a generic account team.",
   },
   proofLed: {
     title: "Advice clients stay for",
@@ -37,7 +37,7 @@ export const PAGE_HERO_ASIDES: Record<PageHeroAsidePreset, AsideHighlight> = {
   },
   mediaEditorial: {
     title: "Editorial judgement",
-    body: "We understand how stories are shaped and what makes commentary worth running—so your public voice earns attention, not noise.",
+    body: "We understand how stories are shaped and what makes commentary worth running, so your public voice earns attention, not noise.",
   },
   crisisTrust: {
     title: "Discretion when stakes are high",
@@ -45,11 +45,11 @@ export const PAGE_HERO_ASIDES: Record<PageHeroAsidePreset, AsideHighlight> = {
   },
   editorialInsights: {
     title: "Clear thinking, applied",
-    body: "Perspective grounded in our team's experience advising boards and executives—practical counsel, not generic industry filler.",
+    body: "Perspective grounded in our team's experience advising boards and executives: practical counsel, not generic industry filler.",
   },
   practicalNextStep: {
     title: "A direct response",
-    body: "Tell us what you are navigating. An experienced adviser will come back with clear next steps—not a generic pitch.",
+    body: "Tell us what you are navigating. An experienced adviser will come back with clear next steps, not a generic pitch.",
   },
   anonymisedOutcomes: {
     title: "Outcomes without names",
@@ -57,7 +57,7 @@ export const PAGE_HERO_ASIDES: Record<PageHeroAsidePreset, AsideHighlight> = {
   },
   clientsBreadth: {
     title: "Depth across sectors",
-    body: "From companies and peak bodies to government and schools—we tailor counsel to the accountability you face.",
+    body: "From companies and peak bodies to government and schools, we tailor counsel to the accountability you face.",
   },
   pacificRegional: {
     title: "Regional judgement",
@@ -69,6 +69,6 @@ export const PAGE_HERO_ASIDES: Record<PageHeroAsidePreset, AsideHighlight> = {
   },
   mediaTraining: {
     title: "Broadcast-ready preparation",
-    body: "Training draws on experienced journalists and coaches who replicate real interviews—camera, print, and radio.",
+    body: "Training draws on experienced journalists and coaches who replicate real interviews: camera, print, and radio.",
   },
 };

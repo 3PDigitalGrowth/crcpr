@@ -2,26 +2,20 @@ import Link from "next/link";
 import { FileText } from "lucide-react";
 import { siteConfig } from "@/config/site";
 
+/** Chambers capability statement card: hairline frame, one action. */
 export function CapabilityDownload() {
   const { available, fileName, requestUrl } = siteConfig.capabilityStatement;
 
   return (
-    <div className="rounded-[1.5rem] border border-dashed border-brand-gold bg-warm-white/70 p-6 backdrop-blur flex items-start gap-4">
-      <FileText
-        className="text-brand-gold shrink-0"
-        size={28}
-        strokeWidth={1.75}
-        aria-hidden
-      />
+    <div className="kit-r flex items-start gap-4 border border-line p-6">
+      <FileText className="h-7 w-7 shrink-0 text-accent" strokeWidth={1.75} aria-hidden />
       <div>
-        <h4 className="font-heading text-navy text-lg">
-          {available
-            ? "Download our Capability Statement"
-            : "Request our Capability Statement"}
-        </h4>
-        <p className="text-charcoal-mid text-sm mt-1">
-          A comprehensive overview of CRC Public Relations&apos; services, team, and approach
-          for procurement teams, boards, and executive evaluation.
+        <h3 className="kit-display text-[15px] uppercase leading-snug">
+          {available ? "Download our Capability Statement" : "Request our Capability Statement"}
+        </h3>
+        <p className="mt-1.5 text-sm leading-relaxed text-muted">
+          A comprehensive overview of CRC Public Relations&apos; services, team, and approach for procurement teams,
+          boards, and executive evaluation.
         </p>
         {available ? (
           <>
@@ -30,20 +24,15 @@ export function CapabilityDownload() {
               download
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-brand-gold px-7 py-3.5 font-sans text-sm font-semibold text-navy shadow-lg shadow-brand-gold/20 mt-4 transition-colors hover:bg-gold-light"
+              className="btn btn-primary mt-4"
             >
-              Download PDF →
+              Download PDF
             </a>
-            <p className="text-charcoal-mid text-xs mt-2">
-              No form required.
-            </p>
+            <p className="mt-2 text-xs text-muted">No form required.</p>
           </>
         ) : (
-          <Link
-            href={requestUrl}
-            className="inline-flex items-center gap-2 rounded-full bg-brand-gold px-7 py-3.5 font-sans text-sm font-semibold text-navy shadow-lg shadow-brand-gold/20 mt-4 transition-colors hover:bg-gold-light"
-          >
-            Request capability statement →
+          <Link href={requestUrl} className="btn btn-primary mt-4">
+            Request capability statement
           </Link>
         )}
       </div>

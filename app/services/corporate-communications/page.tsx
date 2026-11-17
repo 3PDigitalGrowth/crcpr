@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ImageTextRow } from "@/components/layout/ImageTextRow";
+import { ArrowUpRight } from "lucide-react";
 import { PageHero } from "@/components/layout/PageHero";
 import { FAQSection } from "@/components/shared/FAQSection";
 import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
 import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
 import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
 import { PageProofStrip } from "@/components/shared/PageProofStrip";
+import { Reveal } from "@/components/altkit/motion";
+import { Container, Eyebrow, H2, Section } from "@/components/altkit/primitives";
 import { T } from "@/components/editable";
 
 export const metadata: Metadata = {
@@ -85,6 +87,11 @@ const faqs = [
   },
 ];
 
+/* Chambers port (17 Nov 2026). Copy is unchanged from the previous page; the
+   generated imagery and the repeated sector-card line were dropped. */
+
+const P = "services-corporate-communications";
+
 export default function CorporateCommunicationsPage() {
   return (
     <>
@@ -93,210 +100,127 @@ export default function CorporateCommunicationsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <PageHero copyId="services-corporate-communications"
+      <PageHero
+        copyId={P}
         asidePreset="strategicIntegrated"
         eyebrow="Corporate communications"
         title="Corporate communications that build trust and protect value."
         description="As partners in your success, we work directly with your leadership team to ensure every message, whether to important stakeholders – internal and external – or media, is precise, credible, and effective. You deal with experienced advisers, not account managers."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
-        heroImage={{
-          src: "/images/services/corporate-communications/hero.webp",
-          alt: "Empty Australian boardroom with warm morning light and city skyline beyond floor-to-ceiling windows",
-        }}
       />
 
-      <PageProofStrip copyId="services-corporate-communications"
+      <PageProofStrip
+        copyId={P}
+        variant="navy"
         title="Corporate communications is not content production. It is strategic control."
         items={[...proofItems]}
       />
 
-      {/* High-clarity explainer */}
-      <section className="py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <ImageTextRow
-            imageSrc="/images/services/corporate-communications/mid-what-we-do.webp"
-            imageAlt="Senior professional reviewing a printed communications brief at a desk in warm window light"
-            imagePosition="left"
-          >
-            <div className="max-w-3xl lg:max-w-none">
-              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
-                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
-                <T id="services-corporate-communications.t1">
-                Strategic clarity
+      {/* ---------- STRATEGIC CLARITY ---------- */}
+      <Section tone="base" className="py-11 md:py-14">
+        <Container className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:gap-14">
+          <div>
+            <Eyebrow>
+              <T id={`${P}.t1`}>Strategic clarity</T>
+            </Eyebrow>
+            <H2 className="mt-3">
+              <T id={`${P}.t2`}>
+                Effective corporate communications supports your objectives with strategy and consistency.
+              </T>
+            </H2>
+            <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted">
+              <p>
+                <T id={`${P}.t3`}>
+                  Effective corporate communications is based on clarity, consistency, and strategic intent, ensuring
+                  that every message, from every channel, reinforces your organisation&apos;s authority and the
+                  confidence your stakeholders place in your leadership.
                 </T>
               </p>
-              <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
-                <T id="services-corporate-communications.t2">
-                Effective corporate communications supports your objectives with
-                strategy and consistency.
-                </T>
-              </h2>
-              <div className="space-y-6">
-                <p className="text-charcoal text-[15px] leading-relaxed">
-                  <T id="services-corporate-communications.t3">
-                  Effective corporate communications is based on clarity,
-                  consistency, and strategic intent, ensuring that every message,
-                  from every channel, reinforces your organisation&apos;s authority
-                  and the confidence your stakeholders place in your leadership.
-                  </T>
-                </p>
-                <p className="text-charcoal text-[15px] leading-relaxed">
-                  <T id="services-corporate-communications.t4">
-                  The challenge for many organisations is that corporate
-                  communications becomes reactive. Announcements are drafted in a
-                  hurry. Media enquiries are handled without a strategy.
-                  Stakeholder relationships are maintained informally, without
-                  structure. The result is a communications function that
-                  responds to events rather than shapes them.
-                  </T>
-                </p>
-                <p className="text-charcoal text-[15px] leading-relaxed">
-                  <T id="services-corporate-communications.t5">
-                  We work with your leadership team to build the systems,
-                  strategies, and capabilities that shift communications from
-                  reactive to proactive, ensuring every significant communication
-                  is considered, consistent, and designed to achieve a specific
-                  outcome.
-                  </T>
-                </p>
-              </div>
-              <aside className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6 md:p-8 mt-8">
-                <p className="mb-5 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
-                  <span className="h-px w-8 bg-current opacity-50" aria-hidden />
-                  <T id="services-corporate-communications.t6">
-                  What strong corporate communications looks like
-                  </T>
-                </p>
-                <div className="space-y-4">
-                  <div className="border-l-[3px] border-brand-gold pl-4">
-                    <p className="font-sans font-semibold text-navy text-sm mb-1">
-                      <T id="services-corporate-communications.t7">
-                      Message discipline
-                      </T>
-                    </p>
-                    <p className="text-charcoal-mid text-sm leading-relaxed">
-                      <T id="services-corporate-communications.t8">
-                      Leadership, media, staff, and stakeholder communications all
-                      support the same strategic position.
-                      </T>
-                    </p>
-                  </div>
-                  <div className="border-l-[3px] border-brand-gold pl-4">
-                    <p className="font-sans font-semibold text-navy text-sm mb-1">
-                      <T id="services-corporate-communications.t9">
-                      Planned sequencing
-                      </T>
-                    </p>
-                    <p className="text-charcoal-mid text-sm leading-relaxed">
-                      <T id="services-corporate-communications.t10">
-                      The right audiences hear the right message in the right
-                      order, before pressure starts to define the narrative.
-                      </T>
-                    </p>
-                  </div>
-                  <div className="border-l-[3px] border-brand-gold pl-4">
-                    <p className="font-sans font-semibold text-navy text-sm mb-1">
-                      <T id="services-corporate-communications.t11">
-                      Expert oversight
-                      </T>
-                    </p>
-                    <p className="text-charcoal-mid text-sm leading-relaxed">
-                      <T id="services-corporate-communications.t12">
-                      Important communications are shaped with judgement, not
-                      improvised under time pressure.
-                      </T>
-                    </p>
-                  </div>
-                </div>
-              </aside>
-            </div>
-          </ImageTextRow>
-        </div>
-      </section>
-
-      {/* Process section moved earlier to match crisis flow */}
-      <section className="py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
-            <span className="h-px w-8 bg-current opacity-50" aria-hidden />
-            <T id="services-corporate-communications.t13">
-            When you engage CRC Public Relations
-            </T>
-          </p>
-          <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
-            <T id="services-corporate-communications.t14">
-            How a corporate communications engagement begins
-            </T>
-          </h2>
-          <p className="max-w-2xl text-charcoal text-[15px] leading-relaxed">
-            <T id="services-corporate-communications.t15">
-            The immediate objective is not more communications activity. It is a clearer
-            picture of what your organisation needs to say, to whom, in what order, and
-            under what level of scrutiny. That discipline is what prevents sensitive
-            communications work from becoming reactive, inconsistent, or unnecessarily exposed.
-            </T>
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
-            <div className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6">
-              <span className="font-heading text-2xl text-brand-gold/70 tabular-nums">
-                1
-              </span>
-              <h3 className="font-heading text-navy text-2xl mb-3 mt-3">
-                <T id="services-corporate-communications.t16">
-                Situation assessment
-                </T>
-              </h3>
-              <p className="text-charcoal text-[15px] leading-relaxed">
-                <T id="services-corporate-communications.t17">
-                We assess your communications posture, stakeholder landscape, current
-                messages, and the specific decision or pressure point your leadership
-                team is navigating.
+              <p>
+                <T id={`${P}.t4`}>
+                  The challenge for many organisations is that corporate communications becomes reactive.
+                  Announcements are drafted in a hurry. Media enquiries are handled without a strategy. Stakeholder
+                  relationships are maintained informally, without structure. The result is a communications function
+                  that responds to events rather than shapes them.
                 </T>
               </p>
-            </div>
-
-            <div className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6">
-              <span className="font-heading text-2xl text-brand-gold/70 tabular-nums">
-                2
-              </span>
-              <h3 className="font-heading text-navy text-2xl mb-3 mt-3">
-                <T id="services-corporate-communications.t18">
-                Message and stakeholder sequence
-                </T>
-              </h3>
-              <p className="text-charcoal text-[15px] leading-relaxed">
-                <T id="services-corporate-communications.t19">
-                We define the messages that need to hold across leadership, staff,
-                media, regulators, and other critical stakeholders, then sequence those
-                communications so confidence is built rather than diluted.
-                </T>
-              </p>
-            </div>
-
-            <div className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6">
-              <span className="font-heading text-2xl text-brand-gold/70 tabular-nums">
-                3
-              </span>
-              <h3 className="font-heading text-navy text-2xl mb-3 mt-3">
-                <T id="services-corporate-communications.t20">
-                Ongoing counsel
-                </T>
-              </h3>
-              <p className="text-charcoal text-[15px] leading-relaxed">
-                <T id="services-corporate-communications.t21">
-                We stay close to the matter, reviewing drafts, preparing spokespeople,
-                pressure-testing language, and advising leadership as the situation
-                evolves.
+              <p>
+                <T id={`${P}.t5`}>
+                  We work with your leadership team to build the systems, strategies, and capabilities that shift
+                  communications from reactive to proactive, ensuring every significant communication is considered,
+                  consistent, and designed to achieve a specific outcome.
                 </T>
               </p>
             </div>
           </div>
-        </div>
-      </section>
+          <Reveal className="lg:pt-10">
+            <aside className="kit-r border border-line p-6 md:p-8">
+              <Eyebrow>
+                <T id={`${P}.t6`}>What strong corporate communications looks like</T>
+              </Eyebrow>
+              <div className="mt-5 divide-y divide-[var(--line)]">
+                {[
+                  ["t7", "Message discipline", "t8", "Leadership, media, staff, and stakeholder communications all support the same strategic position."],
+                  ["t9", "Planned sequencing", "t10", "The right audiences hear the right message in the right order, before pressure starts to define the narrative."],
+                  ["t11", "Expert oversight", "t12", "Important communications are shaped with judgement, not improvised under time pressure."],
+                ].map(([tid, title, bid, body]) => (
+                  <div key={tid} className="py-4 first:pt-0 last:pb-0">
+                    <p className="kit-display text-[15px] uppercase">
+                      <T id={`${P}.${tid}`}>{title}</T>
+                    </p>
+                    <p className="mt-1.5 text-sm leading-relaxed text-muted">
+                      <T id={`${P}.${bid}`}>{body}</T>
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </aside>
+          </Reveal>
+        </Container>
+      </Section>
 
-      <InlineEnquirySection copyId="services-corporate-communications"
+      {/* ---------- HOW AN ENGAGEMENT BEGINS ---------- */}
+      <Section tone="base" className="py-11 md:py-14">
+        <Container>
+          <Eyebrow>
+            <T id={`${P}.t13`}>When you engage CRC Public Relations</T>
+          </Eyebrow>
+          <H2 className="mt-3 max-w-3xl">
+            <T id={`${P}.t14`}>How a corporate communications engagement begins</T>
+          </H2>
+          <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-muted">
+            <T id={`${P}.t15`}>
+              The immediate objective is not more communications activity. It is a clearer picture of what your
+              organisation needs to say, to whom, in what order, and under what level of scrutiny. That discipline is
+              what prevents sensitive communications work from becoming reactive, inconsistent, or unnecessarily
+              exposed.
+            </T>
+          </p>
+          <div className="mt-8 border-t border-line">
+            {[
+              ["t16", "Situation assessment", "t17", "We assess your communications posture, stakeholder landscape, current messages, and the specific decision or pressure point your leadership team is navigating."],
+              ["t18", "Message and stakeholder sequence", "t19", "We define the messages that need to hold across leadership, staff, media, regulators, and other critical stakeholders, then sequence those communications so confidence is built rather than diluted."],
+              ["t20", "Ongoing counsel", "t21", "We stay close to the matter, reviewing drafts, preparing spokespeople, pressure-testing language, and advising leadership as the situation evolves."],
+            ].map(([tid, title, bid, body], i) => (
+              <Reveal key={tid} delay={i * 0.05}>
+                <div className="grid gap-2 border-b border-line py-6 md:grid-cols-[3rem,1fr,1.5fr] md:items-baseline md:gap-8">
+                  <span className="kit-display text-sm text-accent">{`0${i + 1}.`}</span>
+                  <h3 className="kit-display text-[clamp(1.1rem,1.7vw,1.35rem)] uppercase leading-tight">
+                    <T id={`${P}.${tid}`}>{title}</T>
+                  </h3>
+                  <p className="text-[15px] leading-relaxed text-muted">
+                    <T id={`${P}.${bid}`}>{body}</T>
+                  </p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </Container>
+      </Section>
+
+      <InlineEnquirySection
+        copyId={P}
         title="Need communications counsel on a sensitive matter?"
         body="Use this form if you are preparing a significant announcement, managing a board or stakeholder issue, or want an experienced external adviser to review your communications posture before the pressure arrives."
         bullets={[
@@ -307,331 +231,187 @@ export default function CorporateCommunicationsPage() {
         defaultMessage="We need corporate communications support for an upcoming matter."
       />
 
-      {/* Service detail */}
-      <section className="py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
-            <T id="services-corporate-communications.t22">
-            What corporate communications looks like in practice
-            </T>
-          </h2>
+      {/* ---------- IN PRACTICE ---------- */}
+      <Section tone="base" className="py-11 md:py-14">
+        <Container>
+          <H2 className="max-w-3xl">
+            <T id={`${P}.t22`}>What corporate communications looks like in practice</T>
+          </H2>
+          <div className="mt-8 grid gap-x-14 md:grid-cols-2">
+            {[
+              ["t23", "Corporate messaging and positioning", "t24", "When your organisation needs to communicate, whether to the market, to government, to the community, or to its own people, the message must be clear, credible, and aligned with your strategic objectives. We develop messaging frameworks that give your leadership team a consistent, defensible position on every issue that matters."],
+              ["t25", "Stakeholder engagement and communications strategy", "t26", "Are your stakeholders advocates or adversaries? Every organisation has stakeholders who can either support or obstruct its objectives. We map your stakeholder landscape, identify the relationships that matter most, and design engagement strategies that build trust and maintain it through major change programmes, regulatory processes, and periods of uncertainty."],
+              ["t27", "Internal communications and change management", "t28", "How an organisation communicates with its own people during change, crisis, or transition determines whether that process builds or erodes confidence. We develop internal communications programmes that keep your workforce informed, aligned, and engaged, from board announcements to all-staff responses."],
+              ["t29", "Executive communications and media positioning", "t30", "Leaders are the face of the organisations they run. We help executives develop their communications voice, prepare for media and stakeholder appearances, and build a public profile that reflects the quality of their leadership. This includes speechwriting, talking points development, and sustained media relationship management."],
+            ].map(([tid, title, bid, body]) => (
+              <div key={tid} className="border-t border-line py-6">
+                <h3 className="kit-display text-[15px] uppercase leading-snug">
+                  <T id={`${P}.${tid}`}>{title}</T>
+                </h3>
+                <p className="mt-2.5 text-[15px] leading-relaxed text-muted">
+                  <T id={`${P}.${bid}`}>{body}</T>
+                </p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </Section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
-            <div>
-              <h3 className="font-heading text-navy text-2xl mb-3">
-                <T id="services-corporate-communications.t23">
-                Corporate messaging and positioning
-                </T>
-              </h3>
-              <p className="text-charcoal text-[15px] leading-relaxed">
-                <T id="services-corporate-communications.t24">
-                When your organisation needs to communicate, whether to the
-                market, to government, to the community, or to its own people,
-                the message must be clear, credible, and aligned with your
-                strategic objectives. We develop messaging frameworks that give
-                your leadership team a consistent, defensible position on every
-                issue that matters.
+      {/* ---------- WHERE IT BREAKS DOWN ---------- */}
+      <Section tone="base" className="py-11 md:py-14">
+        <Container className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:gap-14">
+          <div>
+            <Eyebrow>
+              <T id={`${P}.t31`}>Common failure point</T>
+            </Eyebrow>
+            <H2 className="mt-3">
+              <T id={`${P}.t32`}>Where corporate communications usually breaks down</T>
+            </H2>
+            <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted">
+              <p>
+                <T id={`${P}.t33`}>
+                  Most organisations do not suffer from a complete lack of communication activity. They suffer from
+                  fragmentation. The board is briefed one way. Staff hear something slightly different. External
+                  stakeholders receive a message shaped by operational convenience rather than strategic intent. Media
+                  responses are drafted under time pressure and end up sounding defensive or incomplete.
                 </T>
               </p>
-            </div>
-
-            <div>
-              <h3 className="font-heading text-navy text-2xl mb-3">
-                <T id="services-corporate-communications.t25">
-                Stakeholder engagement and communications strategy
-                </T>
-              </h3>
-              <p className="text-charcoal text-[15px] leading-relaxed">
-                <T id="services-corporate-communications.t26">
-                Are your stakeholders advocates or adversaries? Every organisation
-                has stakeholders who can either support or obstruct its objectives.
-                We map your stakeholder landscape, identify the relationships that
-                matter most, and design engagement strategies that build trust and
-                maintain it through major change programmes, regulatory processes,
-                and periods of uncertainty.
-                </T>
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-heading text-navy text-2xl mb-3">
-                <T id="services-corporate-communications.t27">
-                Internal communications and change management
-                </T>
-              </h3>
-              <p className="text-charcoal text-[15px] leading-relaxed">
-                <T id="services-corporate-communications.t28">
-                How an organisation communicates with its own people during
-                change, crisis, or transition determines whether that process
-                builds or erodes confidence. We develop internal communications
-                programmes that keep your workforce informed, aligned, and
-                engaged, from board announcements to all-staff responses.
-                </T>
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-heading text-navy text-2xl mb-3">
-                <T id="services-corporate-communications.t29">
-                Executive communications and media positioning
-                </T>
-              </h3>
-              <p className="text-charcoal text-[15px] leading-relaxed">
-                <T id="services-corporate-communications.t30">
-                Leaders are the face of the organisations they run. We
-                help executives develop their communications voice, prepare for
-                media and stakeholder appearances, and build a public profile
-                that reflects the quality of their leadership. This includes
-                speechwriting, talking points development, and sustained media
-                relationship management.
+              <p>
+                <T id={`${P}.t34`}>
+                  That fragmentation is expensive. It weakens confidence, complicates leadership decision-making, and
+                  creates avoidable risk around major announcements, disputes, restructures, and sensitive governance
+                  matters. The firms winning trust in difficult environments are the ones that treat corporate
+                  communications as a disciplined leadership function, not an afterthought once the decision has
+                  already been made.
                 </T>
               </p>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.1fr)_360px] gap-10 items-start">
-            <div className="max-w-3xl">
-              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
-                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
-                <T id="services-corporate-communications.t31">
-                Common failure point
-                </T>
-              </p>
-              <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
-                <T id="services-corporate-communications.t32">
-                Where corporate communications usually breaks down
-                </T>
-              </h2>
-              <div className="space-y-6">
-                <p className="text-charcoal text-[15px] leading-relaxed">
-                  <T id="services-corporate-communications.t33">
-                  Most organisations do not suffer from a complete lack of
-                  communication activity. They suffer from fragmentation. The
-                  board is briefed one way. Staff hear something slightly
-                  different. External stakeholders receive a message shaped by
-                  operational convenience rather than strategic intent. Media
-                  responses are drafted under time pressure and end up sounding
-                  defensive or incomplete.
-                  </T>
-                </p>
-                <p className="text-charcoal text-[15px] leading-relaxed">
-                  <T id="services-corporate-communications.t34">
-                  That fragmentation is expensive. It weakens confidence,
-                  complicates leadership decision-making, and creates avoidable
-                  risk around major announcements, disputes, restructures, and
-                  sensitive governance matters. The firms winning trust in
-                  difficult environments are the ones that treat corporate
-                  communications as a disciplined leadership function, not an
-                  afterthought once the decision has already been made.
-                  </T>
-                </p>
-              </div>
-            </div>
-
-            <aside className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6 md:p-8">
-              <p className="mb-5 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
-                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
-                <T id="services-corporate-communications.t35">
-                Signs communication has fragmented
-                </T>
-              </p>
-              <div className="space-y-4">
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    <T id="services-corporate-communications.t36">
-                    Inconsistent internal and external messaging
-                    </T>
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    <T id="services-corporate-communications.t37">
-                    Different audiences hear different versions of the same
-                    decision, which weakens trust quickly.
-                    </T>
-                  </p>
-                </div>
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    <T id="services-corporate-communications.t38">
-                    Reactive media handling
-                    </T>
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    <T id="services-corporate-communications.t39">
-                    Responses are shaped by urgency and exposure, not by a clear
-                    strategic position.
-                    </T>
-                  </p>
-                </div>
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    <T id="services-corporate-communications.t40">
-                    Leadership decisions lose force
-                    </T>
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    <T id="services-corporate-communications.t41">
-                    Good decisions still underperform when the communications
-                    discipline behind them is weak.
-                    </T>
-                  </p>
-                </div>
+          <Reveal className="lg:pt-10">
+            <aside className="kit-r border border-line p-6 md:p-8">
+              <Eyebrow>
+                <T id={`${P}.t35`}>Signs communication has fragmented</T>
+              </Eyebrow>
+              <div className="mt-5 divide-y divide-[var(--line)]">
+                {[
+                  ["t36", "Inconsistent internal and external messaging", "t37", "Different audiences hear different versions of the same decision, which weakens trust quickly."],
+                  ["t38", "Reactive media handling", "t39", "Responses are shaped by urgency and exposure, not by a clear strategic position."],
+                  ["t40", "Leadership decisions lose force", "t41", "Good decisions still underperform when the communications discipline behind them is weak."],
+                ].map(([tid, title, bid, body]) => (
+                  <div key={tid} className="py-4 first:pt-0 last:pb-0">
+                    <p className="kit-display text-[15px] uppercase">
+                      <T id={`${P}.${tid}`}>{title}</T>
+                    </p>
+                    <p className="mt-1.5 text-sm leading-relaxed text-muted">
+                      <T id={`${P}.${bid}`}>{body}</T>
+                    </p>
+                  </div>
+                ))}
               </div>
             </aside>
+          </Reveal>
+        </Container>
+      </Section>
+
+      {/* ---------- THE CRC MODEL ---------- */}
+      <Section tone="deep" className="py-11 md:py-14">
+        <Container className="grid gap-10 lg:grid-cols-[0.8fr,1.2fr] lg:gap-14">
+          <div>
+            <Eyebrow>
+              <T id={`${P}.t42`}>CRC Public Relations model</T>
+            </Eyebrow>
+            <H2 className="mt-3">
+              <T id={`${P}.t43`}>Experienced counsel, not account management</T>
+            </H2>
+            <p className="mt-5 text-[clamp(1.05rem,1.5vw,1.2rem)] font-medium leading-[1.45]">
+              <T id={`${P}.t44`}>
+                Sensitive communications work needs direct access to judgement, accountability, and experienced
+                strategic advice.
+              </T>
+            </p>
           </div>
-        </div>
-      </section>
-
-      <section className="py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-8 md:p-10">
-            <div className="grid grid-cols-1 lg:grid-cols-[320px_minmax(0,1fr)] gap-10 items-start">
-              <div className="rounded-[1.5rem] bg-navy p-6 md:p-7">
-                <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
-                  <span className="h-px w-8 bg-current opacity-50" aria-hidden />
-                  <T id="services-corporate-communications.t42">
-                  CRC Public Relations model
-                  </T>
-                </p>
-                <h2 className="font-heading text-white text-2xl leading-tight mb-4">
-                  <T id="services-corporate-communications.t43">
-                  Experienced counsel, not account management
-                  </T>
-                </h2>
-                <p className="text-white/70 text-sm leading-relaxed">
-                  <T id="services-corporate-communications.t44">
-                  Sensitive communications work needs direct access to judgement,
-                  accountability, and experienced strategic advice.
-                  </T>
-                </p>
-              </div>
-
-              <div className="max-w-3xl">
-                <div className="space-y-6">
-                  <p className="text-charcoal text-[15px] leading-relaxed">
-                    <T id="services-corporate-communications.t45">
-                    The difference between CRC Public Relations and a larger
-                    agency is not size. It is access. At many PR firms,
-                    you&apos;ll brief a manager or director, and are then handed
-                    to a team of account managers and more junior staff who
-                    execute the work. Your initial contact becomes a figurehead
-                    rather than an adviser.
-                    </T>
+          <div>
+            <div className="space-y-4 text-[15px] leading-relaxed text-muted">
+              <p>
+                <T id={`${P}.t45`}>
+                  The difference between CRC Public Relations and a larger agency is not size. It is access. At many
+                  PR firms, you&apos;ll brief a manager or director, and are then handed to a team of account managers
+                  and more junior staff who execute the work. Your initial contact becomes a figurehead rather than an
+                  adviser.
+                </T>
+              </p>
+              <p>
+                <T id={`${P}.t46`}>
+                  At CRC Public Relations, every engagement is led by an experienced adviser from start to finish. You
+                  work directly with the person who has the expertise, the judgment, and the accountability for the
+                  outcome. This is not a service model we stumbled into. It is a deliberate choice. It is why our
+                  client satisfaction rate is 100%.
+                </T>
+              </p>
+              <p>
+                <T id={`${P}.t47`}>
+                  For organisations dealing with sensitive communications challenges, whether a board transition, a
+                  difficult stakeholder relationship, or a market-sensitive announcement, this direct access is not a
+                  preference. It is a requirement.
+                </T>
+              </p>
+            </div>
+            <div className="ledger mt-8">
+              {[
+                ["t48", "Direct management access", "t49", "The adviser you brief is the adviser shaping the work."],
+                ["t50", "Consistent judgement", "t51", "Strategic direction does not get diluted through layers of delegation."],
+                ["t52", "Clear accountability", "t53", "Our team owns the thinking, the advice, and the outcome."],
+              ].map(([tid, title, bid, body]) => (
+                <div key={tid}>
+                  <p className="text-sm font-bold">
+                    <T id={`${P}.${tid}`}>{title}</T>
                   </p>
-                  <p className="text-charcoal text-[15px] leading-relaxed">
-                    <T id="services-corporate-communications.t46">
-                    At CRC Public Relations, every engagement is led by an
-                    experienced adviser from start to finish. You work directly
-                    with the person who has the expertise, the judgment, and the
-                    accountability for the outcome. This is not a service model
-                    we stumbled into. It is a deliberate choice. It is why our
-                    client satisfaction rate is 100%.
-                    </T>
-                  </p>
-                  <p className="text-charcoal text-[15px] leading-relaxed">
-                    <T id="services-corporate-communications.t47">
-                    For organisations dealing with sensitive communications
-                    challenges, whether a board transition, a difficult
-                    stakeholder relationship, or a market-sensitive
-                    announcement, this direct access is not a preference. It is
-                    a requirement.
-                    </T>
+                  <p className="mt-1.5 text-sm leading-relaxed text-muted">
+                    <T id={`${P}.${bid}`}>{body}</T>
                   </p>
                 </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
-                  <div className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-5">
-                    <p className="font-sans font-semibold text-navy text-sm mb-1">
-                      <T id="services-corporate-communications.t48">
-                      Direct management access
-                      </T>
-                    </p>
-                    <p className="text-charcoal-mid text-sm leading-relaxed">
-                      <T id="services-corporate-communications.t49">
-                      The adviser you brief is the adviser shaping the work.
-                      </T>
-                    </p>
-                  </div>
-                  <div className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-5">
-                    <p className="font-sans font-semibold text-navy text-sm mb-1">
-                      <T id="services-corporate-communications.t50">
-                      Consistent judgement
-                      </T>
-                    </p>
-                    <p className="text-charcoal-mid text-sm leading-relaxed">
-                      <T id="services-corporate-communications.t51">
-                      Strategic direction does not get diluted through layers of
-                      delegation.
-                      </T>
-                    </p>
-                  </div>
-                  <div className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-5">
-                    <p className="font-sans font-semibold text-navy text-sm mb-1">
-                      <T id="services-corporate-communications.t52">
-                      Clear accountability
-                      </T>
-                    </p>
-                    <p className="text-charcoal-mid text-sm leading-relaxed">
-                      <T id="services-corporate-communications.t53">
-                      Our team owns the thinking, the advice, and the outcome.
-                      </T>
-                    </p>
-                  </div>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
-      {/* Proof and next-step resource */}
-      <section className="py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="max-w-3xl">
-            <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
-              <span className="h-px w-8 bg-current opacity-50" aria-hidden />
-              <T id="services-corporate-communications.t54">
-              Related sectors
-              </T>
-            </p>
-            <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
-              <T id="services-corporate-communications.t55">
-              Sector experience that shapes the advice.
-              </T>
-            </h2>
-            <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
-              <T id="services-corporate-communications.t56">
-              CRC Public Relations has delivered corporate communications programmes across a
-              range of high-stakes sectors. Explore the pages below to see how
-              our approach changes when the operating environment, stakeholder
-              pressure, and communications risks are different.
+      {/* ---------- RELATED SECTORS ---------- */}
+      <Section tone="base" className="py-11 md:py-14">
+        <Container>
+          <div className="grid gap-5 lg:grid-cols-[1fr,1fr] lg:items-end lg:gap-14">
+            <div>
+              <Eyebrow>
+                <T id={`${P}.t54`}>Related sectors</T>
+              </Eyebrow>
+              <H2 className="mt-3">
+                <T id={`${P}.t55`}>Sector experience that shapes the advice.</T>
+              </H2>
+            </div>
+            <p className="text-[15px] leading-relaxed text-muted lg:pb-1">
+              <T id={`${P}.t56`}>
+                CRC Public Relations has delivered corporate communications programmes across a range of high-stakes
+                sectors. Explore the pages below to see how our approach changes when the operating environment,
+                stakeholder pressure, and communications risks are different.
               </T>
             </p>
           </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-10">
+          <div className="mt-8 border-t border-line">
             {sectorLinks.map((sector, __ti) => (
               <Link
                 key={sector.label}
                 href={sector.href}
-                className="rounded-xl border border-brand-border bg-warm-white/70 backdrop-blur p-5 text-sm text-charcoal-mid hover:border-brand-gold hover:text-navy hover:-translate-y-0.5 transition"
+                className="group flex items-center justify-between gap-6 border-b border-line py-5"
               >
-                <p className="font-sans font-semibold text-navy text-base leading-snug">
-                  <T id={`services-corporate-communications.sectorLinks.${__ti}.label`}>{sector.label}</T>
-                </p>
-                <p className="text-charcoal-mid text-sm mt-2">
-                  <T id="services-corporate-communications.t57">
-                  Explore CRC Public Relations&apos; sector-specific communications approach.
-                  </T>
-                </p>
+                <span className="kit-display text-[clamp(1.05rem,1.8vw,1.4rem)] uppercase leading-tight transition-transform duration-300 group-hover:translate-x-1.5">
+                  <T id={`${P}.sectorLinks.${__ti}.label`}>{sector.label}</T>
+                </span>
+                <ArrowUpRight className="h-5 w-5 shrink-0 text-accent" aria-hidden />
               </Link>
             ))}
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       <LeadMagnetBanner
         magnet="corpCommsChecklist"
@@ -646,13 +426,15 @@ export default function CorporateCommunicationsPage() {
         whatYouGetBody="A 10 point checklist that helps your team identify whether your communications strategy is strategically planned to build ongoing stakeholder trust, or leaving you exposed."
       />
 
-      <FAQSection copyId="services-corporate-communications"
+      <FAQSection
+        copyId={P}
         items={faqs}
         titleText="Common questions about corporate communications support"
         expandable={false}
       />
 
-      <PageClosingCTA copyId="services-corporate-communications"
+      <PageClosingCTA
+        copyId={P}
         title="Ready to build a communications strategy that holds up under pressure?"
         body="Whether you are preparing for a major announcement, navigating a sensitive stakeholder situation, or building long-term communications capability, CRC Public Relations provides direct access to experienced counsel from the first conversation."
       />

@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Check } from "lucide-react";
 import { PageHero } from "@/components/layout/PageHero";
 import { FAQSection } from "@/components/shared/FAQSection";
 import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
 import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
 import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
 import { PageProofStrip } from "@/components/shared/PageProofStrip";
+import { Reveal } from "@/components/altkit/motion";
+import { Container, Eyebrow, H2, Section } from "@/components/altkit/primitives";
 import { T } from "@/components/editable";
 
 export const metadata: Metadata = {
@@ -63,109 +64,89 @@ const faqs = [
   },
 ];
 
+/* Chambers port (17 Nov 2026). Copy is unchanged from the previous page; the
+   generated imagery was dropped and the support list became a ruled aside. */
+
+const P = "clients-government";
+
 export default function GovernmentClientsPage() {
   return (
     <>
-      <PageHero copyId="clients-government"
+      <PageHero
+        copyId={P}
         asidePreset="clientsBreadth"
         eyebrow="Government"
         title="Government communications and stakeholder engagement"
         description="We work directly with department heads, agency leaders, and public sector leaders who need experienced communications counsel that understands the unique pressures of government."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
-        heroImage={{
-          src: "/images/clients/government/editorial-civic.png",
-          alt: "Stately sandstone civic colonnade in late afternoon light with long shadows across the forecourt",
-        }}
       />
 
-      <PageProofStrip copyId="clients-government"
+      <PageProofStrip
+        copyId={P}
+        variant="navy"
         title="Government communications succeeds when authority, process, and public confidence remain aligned."
         items={[...proofItems]}
       />
 
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_380px] gap-10 items-start">
-            <div className="max-w-3xl">
-              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
-                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
-                <T id="clients-government.t1">
-                Public sector communications
+      <Section tone="base" className="py-11 md:py-14">
+        <Container className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:gap-14">
+          <div>
+            <Eyebrow>
+              <T id={`${P}.t1`}>Public sector communications</T>
+            </Eyebrow>
+            <H2 className="mt-3">
+              <T id={`${P}.t2`}>Authority, process, and public confidence have to hold together.</T>
+            </H2>
+            <p className="mt-5 text-[clamp(1.05rem,1.5vw,1.2rem)] font-medium leading-[1.45]">
+              <T id={`${P}.t3`}>
+                Your organisation must communicate with authority, accuracy, and empathy while managing competing
+                stakeholder interests, statutory obligations, and intense media attention. We understand that
+                environment.
+              </T>
+            </p>
+            <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted">
+              <p>
+                <T id={`${P}.t4`}>
+                  The public sector environment demands discipline: clear accountabilities, defensible messaging, and
+                  readiness when programmes or incidents attract scrutiny.
                 </T>
               </p>
-              <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
-                <T id="clients-government.t2">
-                Authority, process, and public confidence have to hold together.
-                </T>
-              </h2>
-              <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
-                <T id="clients-government.t3">
-                Your organisation must communicate with authority, accuracy,
-                and empathy while managing competing stakeholder interests,
-                statutory obligations, and intense media attention. We
-                understand that environment.
+              <p>
+                <T id={`${P}.t5`}>
+                  We work with departments, agencies, and authorities on communications strategy that respects
+                  machinery-of-government realities. We help you anticipate friction points, align internal and
+                  external narratives, and engage communities and industry with clarity and respect.
                 </T>
               </p>
-
-              <div className="space-y-6 mt-8">
-                <p className="text-charcoal-mid text-[15px] leading-relaxed">
-                  <T id="clients-government.t4">
-                  The public sector environment demands discipline: clear
-                  accountabilities, defensible messaging, and readiness when
-                  programmes or incidents attract scrutiny.
-                  </T>
-                </p>
-                <p className="text-charcoal-mid text-[15px] leading-relaxed">
-                  <T id="clients-government.t5">
-                  We work with departments, agencies, and authorities on
-                  communications strategy that respects
-                  machinery-of-government realities. We help you anticipate
-                  friction points, align internal and external narratives, and
-                  engage communities and industry with clarity and respect.
-                  </T>
-                </p>
-                <p className="text-charcoal-mid text-[15px] leading-relaxed">
-                  <T id="clients-government.t6">
-                  From ministerial announcements to operational incidents and
-                  complex reform agendas, we provide experienced counsel,
-                  including crisis response when confidence in public
-                  institutions is on the line.
-                  </T>
-                </p>
-              </div>
+              <p>
+                <T id={`${P}.t6`}>
+                  From ministerial announcements to operational incidents and complex reform agendas, we provide
+                  experienced counsel, including crisis response when confidence in public institutions is on the
+                  line.
+                </T>
+              </p>
             </div>
-
-            <aside className="rounded-[1.5rem] border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="mb-5 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
-                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
-                <T id="clients-government.t7">
-                Typical support areas
-                </T>
-              </p>
-              <div className="space-y-3">
-                {services.map((item) => (
-                  <div
-                    key={item}
-                    className="flex gap-3 rounded-xl border border-brand-border bg-white px-4 py-4"
-                  >
-                    <Check
-                      className="size-5 shrink-0 text-brand-gold mt-0.5"
-                      strokeWidth={2.5}
-                      aria-hidden
-                    />
-                    <span className="text-charcoal-mid text-[15px] leading-snug">
-                      {item}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </aside>
           </div>
-        </div>
-      </section>
+          <Reveal className="lg:pt-10">
+            <aside className="kit-r border border-line p-6 md:p-8">
+              <Eyebrow>
+                <T id={`${P}.t7`}>Typical support areas</T>
+              </Eyebrow>
+              <ul className="mt-5 divide-y divide-[var(--line)]">
+                {services.map((item) => (
+                  <li key={item} className="py-3.5 text-[15px] leading-snug first:pt-0 last:pb-0">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </aside>
+          </Reveal>
+        </Container>
+      </Section>
 
-      <InlineEnquirySection copyId="clients-government"
+      <InlineEnquirySection
+        copyId={P}
         eyebrow="Where it gets difficult"
         title="Need strategic communications support for a public sector matter?"
         body="Complexity rarely comes from the announcement itself. It comes from the number of interested audiences around it: ministers, agency leadership, delivery partners, local communities, media, and staff. The challenge is keeping the message accurate, coordinated, and defensible across all of them without losing pace."
@@ -179,13 +160,15 @@ export default function GovernmentClientsPage() {
 
       <LeadMagnetBanner magnet="crisisReadinessChecklist" />
 
-      <FAQSection copyId="clients-government"
+      <FAQSection
+        copyId={P}
         items={faqs}
         titleText="Common questions about government communications support"
         expandable={false}
       />
 
-      <PageClosingCTA copyId="clients-government"
+      <PageClosingCTA
+        copyId={P}
         title="Discuss your government communications needs with an experienced adviser."
         body="We work with departments, agencies, and public sector organisations that need disciplined communication in environments where public trust and scrutiny matter."
       />

@@ -7,7 +7,7 @@ interface MediaOutletLogoLinkProps {
   href: string;
   name: string;
   logoSrc: string;
-  /** onDark: rendered over navy / dark photo. onLight: rendered over white / off-white. */
+  /** onDark: rendered over a dark photo. onLight: rendered over the white canvas or pale band. */
   variant?: MediaOutletLogoVariant;
   /**
    * mono: monochrome silhouette (works for logos that read as a clear text/mark shape).
@@ -53,7 +53,7 @@ export function MediaOutletLogoLink({
       target="_blank"
       rel="noopener noreferrer"
       aria-label={name}
-      className={`inline-flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal/60 rounded-sm ${className}`}
+      className={`inline-flex items-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--k-blue)] rounded-sm ${className}`}
     >
       <Image
         src={logoSrc}

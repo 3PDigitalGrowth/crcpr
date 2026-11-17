@@ -36,7 +36,38 @@ export const PHOTOS = {
 
 export const FOUNDERS_ALT = "Lyall Mercer and Barbara Gorogh of CRC Public Relations";
 
-export type NavItem = { label: string; href: string };
+export type NavItem = { label: string; href: string; menu?: "services" | "about" | "clients" };
+
+export type MenuItem = { title: string; blurb: string; href: string };
+
+/* Dropdown wording is carried over from the live site's mega menus (components/layout/Nav.tsx). */
+export const ABOUT_MENU: MenuItem[] = [
+  {
+    title: "About CRC Public Relations",
+    blurb: "Boutique corporate PR firm trusted by CEOs, directors, and executives",
+    href: "/about",
+  },
+  { title: "Lyall Mercer", blurb: "Co-founder, former journalist and trusted crisis adviser", href: "/about/lyall-mercer" },
+  { title: "Frequently asked questions", blurb: "Straight answers about how CRC Public Relations works", href: "/faq" },
+];
+
+export const CLIENTS_MENU: MenuItem[] = [
+  {
+    title: "Industry associations",
+    blurb: "Specialist counsel for peak bodies and professional associations",
+    href: "/clients/industry-associations",
+  },
+  { title: "Corporate", blurb: "Direct, personal counsel for owners, directors, and executives", href: "/clients/corporate" },
+  { title: "Government", blurb: "Counsel that understands the unique pressures of government", href: "/clients/government" },
+  {
+    title: "Schools & faith-based organisations",
+    blurb: "Crisis response, parent communications, and media management",
+    href: "/clients/schools-faith",
+  },
+  { title: "Pacific advisory", blurb: "Deep, sustained expertise across Pacific Island nations", href: "/pacific" },
+];
+
+export const CLIENTS_ALL = { label: "Deep expertise across every sector", href: "/clients" };
 
 export function practices(base: string) {
   return [
@@ -83,9 +114,19 @@ export const SPECIALIST = [
 ] as const;
 
 export function navLinks(base: string): NavItem[] {
+  if (base === "") {
+    return [
+      { label: "About", href: "/about", menu: "about" },
+      { label: "Services", href: "/services", menu: "services" },
+      { label: "Clients", href: "/clients", menu: "clients" },
+      { label: "Case Studies", href: "/case-studies" },
+      { label: "Insights", href: "/insights" },
+      { label: "Contact", href: "/contact" },
+    ];
+  }
   return [
     { label: "About", href: "/about" },
-    { label: "Services", href: "/services" },
+    { label: "Services", href: "/services", menu: "services" },
     { label: "Insights", href: routesFor(base).insights },
     { label: "Case Studies", href: "/case-studies" },
     { label: "Contact", href: "/contact" },

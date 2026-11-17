@@ -435,6 +435,7 @@ export function CrisisPage({ id }: { id: ConceptId }) {
       </Section>
 
       <ClosingCTA
+        site={id === "site"}
         title="Preparation now is worth far more than an ad hoc response later."
         body="A tested crisis communications capability costs a fraction of a poorly handled incident. If your organisation needs a plan, crisis simulation, or requires other support before the next high-pressure event, talk to us."
         primaryLabel="Book a crisis preparedness consultation"

@@ -11,6 +11,14 @@ export interface ImageTextRowProps {
   children: ReactNode;
 }
 
+/** Real photography from the CRC 2026 shoot. Everything else is generated imagery. */
+const REAL_PHOTO = "/images/crc-2026/";
+
+/**
+ * Text beside an image. In the Chambers design only real CRC photographs are
+ * shown (Lyall, 1 Nov 2026: far fewer photos); any other image is dropped and
+ * the text runs on its own.
+ */
 export function ImageTextRow({
   imageSrc,
   imageAlt,
@@ -18,24 +26,17 @@ export function ImageTextRow({
   aspectClass = "aspect-[3/2]",
   children,
 }: ImageTextRowProps) {
-  const imageOrder =
-    imagePosition === "left" ? "order-1 md:order-1" : "order-1 md:order-2";
-  const textOrder =
-    imagePosition === "left" ? "order-2 md:order-2" : "order-2 md:order-1";
+  if (!imageSrc.startsWith(REAL_PHOTO)) {
+    return <div className="max-w-3xl">{children}</div>;
+  }
+
+  const imageOrder = imagePosition === "left" ? "order-1 md:order-1" : "order-1 md:order-2";
+  const textOrder = imagePosition === "left" ? "order-2 md:order-2" : "order-2 md:order-1";
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-      <div
-        className={`relative w-full overflow-hidden rounded-[1.5rem] shadow-sm shadow-navy/10 ${aspectClass} ${imageOrder}`}
-      >
-        <Image
-          src={imageSrc}
-          alt={imageAlt}
-          fill
-          sizes="(max-width: 768px) 100vw, 50vw"
-          className="object-cover"
-          loading="lazy"
-        />
+    <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-12">
+      <div className={`kit-r relative w-full overflow-hidden ${aspectClass} ${imageOrder}`}>
+        <Image src={imageSrc} alt={imageAlt} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" loading="lazy" />
       </div>
       <div className={textOrder}>{children}</div>
     </div>

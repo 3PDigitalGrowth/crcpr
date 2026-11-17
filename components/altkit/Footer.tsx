@@ -9,7 +9,7 @@ export function Footer({ base }: { base: string }) {
       <div className="mx-auto max-w-[1200px] px-4 py-14 sm:px-6 md:px-8">
         <div className="grid gap-10 md:grid-cols-[1.3fr,1fr,1fr,1fr]">
           <div>
-            <Link href={base} aria-label="CRC Public Relations home" className="inline-block">
+            <Link href={base || "/"} aria-label="CRC Public Relations home" className="inline-block">
               <Logo className="h-9" />
             </Link>
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-muted">
@@ -32,7 +32,7 @@ export function Footer({ base }: { base: string }) {
           <div>
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-muted">Services</p>
             <ul className="mt-4 space-y-2">
-              {[...practices(base), ...SPECIALIST].map((p) => (
+              {[...practices(base), ...SPECIALIST, ...(base === "" ? [{ title: "Media Training", href: "/media-training" }] : [])].map((p) => (
                 <li key={p.href}>
                   <Link href={p.href} className="text-sm text-muted hover:text-fg">
                     {p.title}
@@ -54,6 +54,13 @@ export function Footer({ base }: { base: string }) {
                     </Link>
                   </li>
                 ))}
+              {base === "" ? (
+                <li>
+                  <Link href="/pacific" className="text-sm text-muted hover:text-fg">
+                    Pacific
+                  </Link>
+                </li>
+              ) : null}
               <li>
                 <Link href="/faq" className="text-sm text-muted hover:text-fg">
                   FAQ

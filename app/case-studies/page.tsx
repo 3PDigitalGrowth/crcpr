@@ -5,6 +5,8 @@ import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
 import { MediaReachSnapshot } from "@/components/shared/MediaReachSnapshot";
 import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
 import { PageProofStrip } from "@/components/shared/PageProofStrip";
+import { Reveal } from "@/components/altkit/motion";
+import { Container, Eyebrow, H2, Section } from "@/components/altkit/primitives";
 import { T } from "@/components/editable";
 
 export const metadata: Metadata = {
@@ -16,20 +18,19 @@ export const metadata: Metadata = {
 export default function CaseStudiesPage() {
   return (
     <>
-      <PageHero copyId="case-studies"
+      <PageHero
+        copyId="case-studies"
         asidePreset="anonymisedOutcomes"
         eyebrow="Client outcomes"
         title="Results when the needs are great and the stakes are high."
         description="Four successful outcomes that show the kind of strategic work we do when policy, reputation, and stakeholder pressure converge."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
-        heroImage={{
-          src: "/images/case-studies/editorial-podium.png",
-          alt: "Press conference podium with broadcast microphones under a warm spotlight before the event",
-        }}
       />
 
-      <PageProofStrip copyId="case-studies"
+      <PageProofStrip
+        copyId="case-studies"
+        variant="white"
         title="These examples are anonymised, but they still show the outcomes our work is designed to deliver."
         items={[
           {
@@ -55,150 +56,91 @@ export default function CaseStudiesPage() {
 
       <MediaReachSnapshot />
 
-      <section className="bg-white py-16 md:py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_340px] gap-10 items-start">
-            <div className="max-w-3xl">
-              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
-                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
-                <T id="case-studies.t1">
-                Why we show these
+      <Section tone="base" className="py-11 md:py-14">
+        <Container className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:gap-14">
+          <div>
+            <Eyebrow>
+              <T id="case-studies.t1">Why we show these</T>
+            </Eyebrow>
+            <H2 className="mt-3">
+              <T id="case-studies.t2">Measurable outcomes based on expert counsel.</T>
+            </H2>
+            <p className="mt-6 max-w-2xl text-[clamp(1.05rem,1.5vw,1.2rem)] font-medium leading-[1.45]">
+              <T id="case-studies.t3">
+                Because we prioritise the confidentiality of our clients, we don&apos;t publicise their details. While
+                we can point to countless examples of successful outcomes, we have outlined four here. We list them to
+                make one important point:
+              </T>
+            </p>
+            <p className="mt-6 border-l-[3px] border-[var(--k-blue)] pl-5 text-lg font-semibold leading-snug">
+              <T id="case-studies.t4">What matters are results!</T>
+            </p>
+            <div className="mt-8 space-y-4 text-[15px] leading-relaxed text-muted">
+              <p>
+                <T id="case-studies.t5">
+                  Many of our clients have been working with us for more than a decade, some from the time we commenced
+                  in 2010. They stay with us because we bring results, and through results we have built strong
+                  relationships and are now part of their team. We are proud of our record but we are always striving
+                  to be better, more creative and more proactive.
                 </T>
               </p>
-              <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
-                <T id="case-studies.t2">
-                Measurable outcomes based on expert counsel.
-                </T>
-              </h2>
-              <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
-                <T id="case-studies.t3">
-                Because we prioritise the confidentiality of our clients, we
-                don&rsquo;t publicise their details. While we can point to
-                countless examples of successful outcomes, we have outlined
-                four here. We list them to make one important point:
+              <p>
+                <T id="case-studies.t6">
+                  Results mean different things to each client. To some it&apos;s generating public profile that
+                  builds enormous trust with their clients, potential clients and other stakeholders who are vital to
+                  their success. To others, it&apos;s using media engagement to help them achieve other objectives.
                 </T>
               </p>
-
-              <p className="font-heading text-brand-gold text-3xl md:text-4xl leading-tight mt-6">
-                <T id="case-studies.t4">
-                What matters are results!
+              <p>
+                <T id="case-studies.t7">
+                  Of course sometimes media isn&apos;t even part of the strategy. They may need to build trust with
+                  their &apos;publics&apos; (stakeholders) through direct engagement, or to be guided through a
+                  challenging issue and ensure it doesn&apos;t escalate.
                 </T>
               </p>
-
-              <div className="space-y-6 mt-8">
-                <p className="text-charcoal-mid text-[15px] leading-relaxed">
-                  <T id="case-studies.t5">
-                  Many of our clients have been working with us for more than
-                  a decade, some from the time we commenced in 2010. They stay
-                  with us because we bring results, and through results we have
-                  built strong relationships and are now part of their team.
-                  We are proud of our record but we are always striving to be
-                  better, more creative and more proactive.
-                  </T>
-                </p>
-                <p className="text-charcoal-mid text-[15px] leading-relaxed">
-                  <T id="case-studies.t6">
-                  Results mean different things to each client. To some
-                  it&rsquo;s generating public profile that builds enormous
-                  trust with their clients, potential clients and other
-                  stakeholders who are vital to their success. To others,
-                  it&rsquo;s using media engagement to help them achieve other
-                  objectives.
-                  </T>
-                </p>
-                <p className="text-charcoal-mid text-[15px] leading-relaxed">
-                  <T id="case-studies.t7">
-                  Of course sometimes media isn&rsquo;t even part of the
-                  strategy. They may need to build trust with their
-                  &lsquo;publics&rsquo; (stakeholders) through direct
-                  engagement, or to be guided through a challenging issue and
-                  ensure it doesn&rsquo;t escalate.
-                  </T>
-                </p>
-                <p className="text-charcoal-mid text-[15px] leading-relaxed">
-                  <T id="case-studies.t8">
-                  Others may need to navigate through a major issue or crisis
-                  and deal with adversarial stakeholders, social media
-                  warriors, or media. Every time, no matter the need, we stand
-                  beside you.
-                  </T>
-                </p>
-                <p className="text-charcoal-mid text-[15px] leading-relaxed">
-                  <T id="case-studies.t9">
-                  These are anonymised snapshots of the kind of work clients
-                  engage us to do when the matter is commercially, politically,
-                  or reputationally significant.
-                  </T>
-                </p>
-              </div>
+              <p>
+                <T id="case-studies.t8">
+                  Others may need to navigate through a major issue or crisis and deal with adversarial stakeholders,
+                  social media warriors, or media. Every time, no matter the need, we stand beside you.
+                </T>
+              </p>
             </div>
+          </div>
 
-            <aside className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6 md:p-8">
-              <p className="mb-5 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
-                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
-                <T id="case-studies.t10">
-                What the outcomes show
-                </T>
-              </p>
-
-              <div className="space-y-4">
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    <T id="case-studies.t11">
-                    Strategic communication moves outcomes
-                    </T>
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    <T id="case-studies.t12">
-                    The value is not noise or visibility. It is what changed
-                    because of the communication strategy adopted.
-                    </T>
-                  </p>
-                </div>
-
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    <T id="case-studies.t13">
-                    Not all PR agencies are the same
-                    </T>
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    <T id="case-studies.t14">
-                    Choosing a PR agency isn&rsquo;t about how slick their
-                    marketing is, or their promises. It&rsquo;s about
-                    relationship and results.
-                    </T>
-                  </p>
-                </div>
-
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    <T id="case-studies.t15">
-                    Stakes are real
-                    </T>
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    <T id="case-studies.t16">
-                    The matters shown here involve real people and policy,
-                    reputational, and organisational consequences.
-                    </T>
-                  </p>
-                </div>
+          <Reveal className="lg:pt-10">
+            <aside className="kit-r border border-line p-6 md:p-8">
+              <Eyebrow>
+                <T id="case-studies.t10">What the outcomes show</T>
+              </Eyebrow>
+              <div className="mt-5 divide-y divide-[var(--line)]">
+                {[
+                  ["t11", "Strategic communication moves outcomes", "t12", "The value is not noise or visibility. It is what changed because of the communication strategy adopted."],
+                  ["t13", "Not all PR agencies are the same", "t14", "Choosing a PR agency isn't about how slick their marketing is, or their promises. It's about relationship and results."],
+                  ["t15", "Stakes are real", "t16", "The matters shown here involve real people and policy, reputational, and organisational consequences."],
+                ].map(([tid, title, bid, body]) => (
+                  <div key={tid} className="py-4 first:pt-0 last:pb-0">
+                    <p className="kit-display text-[15px] uppercase">
+                      <T id={`case-studies.${tid}`}>{title}</T>
+                    </p>
+                    <p className="mt-1.5 text-sm leading-relaxed text-muted">
+                      <T id={`case-studies.${bid}`}>{body}</T>
+                    </p>
+                  </div>
+                ))}
               </div>
             </aside>
-          </div>
-        </div>
-      </section>
+          </Reveal>
+        </Container>
+      </Section>
 
-      <section className="bg-off-white py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <CaseStudies
-            columnsClassName="md:grid-cols-2 xl:grid-cols-4"
-          />
-        </div>
-      </section>
+      <Section tone="deep" className="py-11 md:py-14">
+        <Container>
+          <CaseStudies />
+        </Container>
+      </Section>
 
-      <InlineEnquirySection copyId="case-studies"
+      <InlineEnquirySection
+        copyId="case-studies"
         title="Need counsel on a matter where the outcome genuinely matters?"
         body="Whatever your communications need, sensitive issue, or stakeholder engagement challenge with real consequences, we can help shape the result."
         bullets={[
@@ -210,7 +152,8 @@ export default function CaseStudiesPage() {
         variant="white"
       />
 
-      <PageClosingCTA copyId="case-studies"
+      <PageClosingCTA
+        copyId="case-studies"
         title="Outcomes matter more than headlines."
         body="The examples here are anonymised, but they reflect the kinds of policy, reputational, and organisational results clients engage us to pursue when the stakes are real."
       />

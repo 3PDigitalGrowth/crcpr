@@ -3,8 +3,6 @@ interface RegionPanel {
   label: string;
   description: string;
   nations: string[];
-  accent: string;
-  accentSoft: string;
 }
 
 const REGIONS: RegionPanel[] = [
@@ -20,8 +18,6 @@ const REGIONS: RegionPanel[] = [
       "Nauru",
       "Kiribati",
     ],
-    accent: "#C9A961",
-    accentSoft: "rgba(201, 169, 97, 0.12)",
   },
   {
     id: "melanesia",
@@ -35,8 +31,6 @@ const REGIONS: RegionPanel[] = [
       "New Caledonia",
       "Fiji",
     ],
-    accent: "#1A2B4A",
-    accentSoft: "rgba(26, 43, 74, 0.08)",
   },
   {
     id: "polynesia",
@@ -51,8 +45,6 @@ const REGIONS: RegionPanel[] = [
       "Cook Islands",
       "French Polynesia",
     ],
-    accent: "#2D6A6F",
-    accentSoft: "rgba(45, 106, 111, 0.12)",
   },
 ];
 
@@ -63,53 +55,39 @@ const REGIONAL_ANCHOR = {
     "A regional partner that shapes Pacific media, policy, and diaspora communications.",
 };
 
+/** Chambers footprint: three hairline columns by region, then the regional anchor row. */
 export function PacificFootprintMap() {
   return (
     <figure
       className="w-full"
       aria-label="CRC Public Relations footprint across Pacific Island regions"
     >
-      <div className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur overflow-hidden">
-        <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-brand-border">
+      <div className="kit-r overflow-hidden border border-line bg-[var(--bg)]">
+        <div className="grid grid-cols-1 divide-y divide-[var(--line)] md:grid-cols-3 md:divide-x md:divide-y-0">
           {REGIONS.map((region) => (
             <div key={region.id} className="p-6 md:p-8">
               <div className="flex items-baseline justify-between gap-4">
-                <p
-                  className="font-sans font-semibold text-xs tracking-[0.18em] uppercase"
-                  style={{ color: region.accent }}
-                >
+                <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-accent">
                   {region.label}
                 </p>
-                <p
-                  className="font-heading text-4xl leading-none"
-                  style={{ color: region.accent }}
-                >
+                <p className="kit-display text-4xl leading-none text-accent">
                   {region.nations.length}
                 </p>
               </div>
 
               <div
-                className="mt-4 h-[3px] rounded-full"
-                style={{ backgroundColor: region.accent, opacity: 0.6 }}
+                className="mt-4 h-[3px] w-full bg-[var(--k-blue)]"
                 aria-hidden
               />
 
-              <p className="text-charcoal-mid text-sm leading-relaxed mt-4">
+              <p className="mt-4 text-sm leading-relaxed text-muted">
                 {region.description}
               </p>
 
-              <ul className="mt-5 space-y-2">
+              <ul className="mt-5 divide-y divide-[var(--line)] border-y border-line">
                 {region.nations.map((nation) => (
-                  <li
-                    key={nation}
-                    className="flex items-start gap-2 text-navy text-sm font-sans"
-                  >
-                    <span
-                      className="inline-block w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0"
-                      style={{ backgroundColor: region.accent }}
-                      aria-hidden
-                    />
-                    <span>{nation}</span>
+                  <li key={nation} className="py-2.5 text-sm font-semibold">
+                    {nation}
                   </li>
                 ))}
               </ul>
@@ -117,25 +95,16 @@ export function PacificFootprintMap() {
           ))}
         </div>
 
-        <div
-          className="border-t border-brand-border px-6 md:px-8 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3"
-          style={{ backgroundColor: "rgba(26, 43, 74, 0.03)" }}
-        >
-          <div className="flex items-center gap-3">
-            <span
-              className="inline-flex items-center justify-center rounded-full text-[11px] font-sans font-semibold tracking-[0.16em] uppercase px-3 py-1"
-              style={{
-                color: "#1A2B4A",
-                backgroundColor: "rgba(26, 43, 74, 0.08)",
-              }}
-            >
+        <div className="flex flex-col gap-3 border-t border-line px-6 py-5 sm:flex-row sm:items-center sm:justify-between md:px-8">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-1">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-accent">
               {REGIONAL_ANCHOR.label}
             </span>
-            <p className="font-heading text-navy text-lg">
+            <p className="kit-display text-lg uppercase">
               {REGIONAL_ANCHOR.nation}
             </p>
           </div>
-          <p className="text-charcoal-mid text-sm leading-relaxed sm:max-w-md">
+          <p className="text-sm leading-relaxed text-muted sm:max-w-md">
             {REGIONAL_ANCHOR.description}
           </p>
         </div>

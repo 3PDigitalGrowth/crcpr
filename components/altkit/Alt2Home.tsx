@@ -24,8 +24,7 @@ import { Container, Eyebrow, H2, MediaMarquee, Section } from "./primitives";
  * Chambers (concept 2): the page is a mounted print inside a frame. Numbered
  * practice stack, editorial ledgers, three photographs in total.
  */
-export function Alt2Home({ posts }: { posts: A1Card[] }) {
-  const base = CONCEPTS.alt2.base;
+export function Alt2Home({ posts, base = CONCEPTS.alt2.base }: { posts: A1Card[]; base?: string }) {
 
   return (
     <>
@@ -140,7 +139,7 @@ export function Alt2Home({ posts }: { posts: A1Card[] }) {
             <Reveal delay={0.05} className="order-3 col-span-2 h-full lg:order-2 lg:col-span-1">
               <div className="kit-r flex h-full flex-col justify-center gap-4 border border-line p-5">
                 <p className="text-sm leading-relaxed text-muted">{FOUNDERS.lyall.bio[0]}</p>
-                <Link href="/about" className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-accent">
+                <Link href="/about/lyall-mercer" className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-accent">
                   Read Lyall&apos;s full profile
                   <ArrowUpRight className="h-3.5 w-3.5" aria-hidden />
                 </Link>

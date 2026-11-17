@@ -1,24 +1,25 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { Nav } from "@/components/layout/Nav";
-import { Footer } from "@/components/layout/Footer";
-import { MobileCallBar } from "@/components/shared/MobileCallBar";
-import { DesktopStickyBar } from "@/components/layout/DesktopStickyBar";
+import { SiteShell } from "@/components/altkit/SiteShell";
 import { ScrollToTop } from "@/components/layout/ScrollToTop";
 import { EditModeBridge } from "@/components/admin/EditModeBridge";
 
 /**
- * Wraps every page in the site chrome, except the content editor at /admin
- * which has its own shell, the /alt homepage design explorations which
- * each carry their own themed nav and footer, and the /plan forward planner.
+ * Wraps every public page in the site chrome: the approved Chambers design
+ * (white option) from the concept kit. The content editor at /admin, the /alt
+ * design explorations (each carries its own themed nav and footer), the /plan
+ * forward planner, the email preview and the archived /redesign homepage
+ * render bare.
  */
 export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
   const isBare =
     pathname?.startsWith("/admin") ||
     pathname?.startsWith("/alt") ||
-    pathname?.startsWith("/plan");
+    pathname?.startsWith("/plan") ||
+    pathname?.startsWith("/email-preview") ||
+    pathname?.startsWith("/redesign");
 
   if (isBare) {
     return <>{children}</>;
@@ -28,11 +29,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
     <>
       <EditModeBridge />
       <ScrollToTop />
-      <Nav />
-      <DesktopStickyBar />
-      <main>{children}</main>
-      <Footer />
-      <MobileCallBar />
+      <SiteShell>{children}</SiteShell>
     </>
   );
 }

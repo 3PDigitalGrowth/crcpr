@@ -1,13 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import {
-  Building2,
-  Shield,
-  AlertTriangle,
-  Zap,
-  Radio,
-  Globe,
-} from "lucide-react";
 import { PageHero } from "@/components/layout/PageHero";
 import { CapabilityDownload } from "@/components/shared/CapabilityDownload";
 import { FAQSection } from "@/components/shared/FAQSection";
@@ -15,6 +7,8 @@ import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
 import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
 import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
 import { PageProofStrip } from "@/components/shared/PageProofStrip";
+import { Reveal } from "@/components/altkit/motion";
+import { Container, Eyebrow, H2, Section } from "@/components/altkit/primitives";
 import { T } from "@/components/editable";
 
 export const metadata: Metadata = {
@@ -23,53 +17,42 @@ export const metadata: Metadata = {
     "Full-service corporate communications, reputation management, crisis response, issues management, media strategy, and digital media services.",
 };
 
-const iconMap = { Building2, Shield, AlertTriangle, Zap, Radio, Globe } as const;
-
-type IconKey = keyof typeof iconMap;
-
 const services: {
-  icon: IconKey;
   title: string;
   slug: string;
   description: string;
 }[] = [
   {
-    icon: "Building2",
     title: "Corporate communications",
     slug: "corporate-communications",
     description:
       "Strategic counsel for internal and external messaging. We help organisations communicate with clarity, consistency, and authority across stakeholders, media, and the public.",
   },
   {
-    icon: "Shield",
     title: "Reputation management",
     slug: "reputation-management",
     description:
       "Your reputation is your most valuable asset. We assess vulnerabilities, monitor threats, and build strategies that protect what matters most, before and after issues surface.",
   },
   {
-    icon: "AlertTriangle",
     title: "Issues management",
     slug: "issues-management",
     description:
       "Proactive identification and management of emerging issues. We help organisations get ahead of potential crises with early intervention, stakeholder mapping, and strategic messaging.",
   },
   {
-    icon: "Zap",
     title: "Crisis communications",
     slug: "crisis-communications",
     description:
       "24/7 crisis response, media management, and communications coordination. We have been in the room when it matters most, guiding organisations through the most significant challenges.",
   },
   {
-    icon: "Radio",
     title: "Media strategy",
     slug: "media-strategy",
     description:
       "Proactive media engagement, spokesperson preparation, and sustained media presence. We help organisations build and maintain relationships with journalists and editors.",
   },
   {
-    icon: "Globe",
     title: "Digital media",
     slug: "digital-media",
     description:
@@ -116,6 +99,9 @@ const faqs = [
   },
 ];
 
+/* Chambers port (17 Nov 2026). Copy unchanged; service icons and generated
+   imagery dropped, the six services now read as a numbered ledger. */
+
 export default function ServicesPage() {
   return (
     <>
@@ -126,14 +112,6 @@ export default function ServicesPage() {
         description="We provide specialist counsel across the full spectrum of corporate communications. Every engagement is led by experienced advisers who work directly with you, not through an account management layer."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
-        heroImage={{
-          src: "/images/services/corporate-communications/hero.webp",
-          alt: "Australian boardroom prepared for a leadership meeting in warm morning light",
-        }}
-        heroVideo={{
-          src: "/images/services/hero-ambient.mp4",
-          poster: "/images/services/hero-poster.jpg",
-        }}
       />
 
       <PageProofStrip copyId="services"
@@ -141,104 +119,64 @@ export default function ServicesPage() {
         items={[...proofItems]}
       />
 
-      <section className="py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_360px] gap-10 items-start">
-            <div className="max-w-3xl">
-              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
-                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
-                <T id="services.t1">
-                How we think about services
+      {/* ---------- HOW WE THINK ---------- */}
+      <Section tone="base" className="py-11 md:py-14">
+        <Container className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:gap-14">
+          <div>
+            <Eyebrow>
+              <T id="services.t1">How we think about services</T>
+            </Eyebrow>
+            <H2 className="mt-3">
+              <T id="services.t2">Better judgement matters more than more activity.</T>
+            </H2>
+            <p className="mt-5 text-[clamp(1.05rem,1.5vw,1.2rem)] font-medium leading-[1.45]">
+              <T id="services.t3">
+                Most organisations do not need more communications activity. They need clearer judgement about what
+                matters, which stakeholders carry the greatest risk or influence, and what sequence of communication
+                will hold up under scrutiny.
+              </T>
+            </p>
+            <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted">
+              <p>
+                <T id="services.t4">
+                  That is why CRC Public Relations&apos; services are designed around pressure points, not agency
+                  departments.
                 </T>
               </p>
-              <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
-                <T id="services.t2">
-                Better judgement matters more than more activity.
-                </T>
-              </h2>
-              <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
-                <T id="services.t3">
-                Most organisations do not need more communications activity.
-                They need clearer judgement about what matters, which
-                stakeholders carry the greatest risk or influence, and what
-                sequence of communication will hold up under scrutiny.
+              <p>
+                <T id="services.t5">
+                  Some clients come to us because a crisis is already active. Others need a stronger media position,
+                  sharper executive messaging, better reputation visibility, or earlier intervention around an
+                  emerging issue. The right service is usually the one that gives leadership more control sooner.
                 </T>
               </p>
-
-              <div className="space-y-6 mt-8">
-                <p className="text-charcoal-mid text-[15px] leading-relaxed">
-                  <T id="services.t4">
-                  That is why CRC Public Relations&apos; services are designed around
-                  pressure points, not agency departments.
-                  </T>
-                </p>
-                <p className="text-charcoal-mid text-[15px] leading-relaxed">
-                  <T id="services.t5">
-                  Some clients come to us because a crisis is already active.
-                  Others need a stronger media position, sharper executive
-                  messaging, better reputation visibility, or earlier
-                  intervention around an emerging issue. The right service is
-                  usually the one that gives leadership more control sooner.
-                  </T>
-                </p>
-              </div>
             </div>
-
-            <aside className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6 md:p-8">
-              <p className="mb-5 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
-                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
-                <T id="services.t6">
-                What the right starting point solves
-                </T>
-              </p>
-
-              <div className="space-y-4">
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    <T id="services.t7">
-                    Clearer priorities
-                    </T>
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    <T id="services.t8">
-                    Focus on what matters most rather than adding more
-                    communication for its own sake.
-                    </T>
-                  </p>
-                </div>
-
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    <T id="services.t9">
-                    Better stakeholder sequencing
-                    </T>
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    <T id="services.t10">
-                    Decide who needs to hear what, and in what order, before
-                    pressure compounds.
-                    </T>
-                  </p>
-                </div>
-
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    <T id="services.t11">
-                    Faster control
-                    </T>
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    <T id="services.t12">
-                    The right service is usually the one that gives leadership
-                    more control sooner.
-                    </T>
-                  </p>
-                </div>
+          </div>
+          <Reveal className="lg:pt-10">
+            <aside className="kit-r border border-line p-6 md:p-8">
+              <Eyebrow>
+                <T id="services.t6">What the right starting point solves</T>
+              </Eyebrow>
+              <div className="mt-5 divide-y divide-[var(--line)]">
+                {[
+                  ["t7", "Clearer priorities", "t8", "Focus on what matters most rather than adding more communication for its own sake."],
+                  ["t9", "Better stakeholder sequencing", "t10", "Decide who needs to hear what, and in what order, before pressure compounds."],
+                  ["t11", "Faster control", "t12", "The right service is usually the one that gives leadership more control sooner."],
+                ].map(([tid, title, bid, body]) => (
+                  <div key={tid} className="py-4 first:pt-0 last:pb-0">
+                    <p className="kit-display text-[15px] uppercase">
+                      <T id={`services.${tid}`}>{title}</T>
+                    </p>
+                    <p className="mt-1.5 text-sm leading-relaxed text-muted">
+                      <T id={`services.${bid}`}>{body}</T>
+                    </p>
+                  </div>
+                ))}
               </div>
             </aside>
-          </div>
-        </div>
-      </section>
+          </Reveal>
+        </Container>
+      </Section>
 
       <InlineEnquirySection copyId="services"
         title="Not sure which service is the right starting point?"
@@ -252,42 +190,30 @@ export default function ServicesPage() {
         variant="white"
       />
 
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service) => {
-              const Icon = iconMap[service.icon];
-              return (
-                <div
-                  key={service.slug}
-                  className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-8"
+      {/* ---------- THE SERVICES ---------- */}
+      <Section tone="base" className="py-11 md:py-14">
+        <Container>
+          <div className="border-t border-line">
+            {services.map((service, i) => (
+              <Reveal key={service.slug} delay={i * 0.04}>
+                <Link
+                  href={`/services/${service.slug}`}
+                  className="group grid gap-2 border-b border-line py-6 md:grid-cols-[3rem,1fr,1.5fr,auto] md:items-baseline md:gap-8"
                 >
-                  <Icon
-                    className="text-brand-gold"
-                    size={28}
-                    strokeWidth={1.75}
-                    aria-hidden
-                  />
-                  <h3 className="font-heading text-navy text-2xl mt-4">
+                  <span className="kit-display text-sm text-accent">{`0${i + 1}.`}</span>
+                  <h3 className="kit-display text-[clamp(1.1rem,1.7vw,1.35rem)] uppercase leading-tight">
                     {service.title}
                   </h3>
-                  <p className="text-charcoal-mid text-sm leading-relaxed mt-3">
-                    {service.description}
-                  </p>
-                  <Link
-                    href={`/services/${service.slug}`}
-                    className="text-brand-gold font-sans font-semibold text-sm mt-5 inline-block hover:opacity-80 transition"
-                  >
-                    <T id="services.t13">
-                    Learn more →
-                    </T>
-                  </Link>
-                </div>
-              );
-            })}
+                  <p className="text-[15px] leading-relaxed text-muted">{service.description}</p>
+                  <span className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-accent">
+                    <T id="services.t13">Learn more →</T>
+                  </span>
+                </Link>
+              </Reveal>
+            ))}
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       <LeadMagnetBanner
         magnet="reputationAssessment"
@@ -295,9 +221,11 @@ export default function ServicesPage() {
         description="Start with the CRC Public Relations Reputation Vulnerability Assessment. It gives leadership a fast view of media, stakeholder, governance, crisis, and digital exposure so the next decision is based on evidence rather than instinct."
       />
 
-      <div className="max-w-3xl mx-auto px-6 py-16">
-        <CapabilityDownload />
-      </div>
+      <Section tone="base" className="py-11 md:py-14">
+        <Container className="max-w-3xl">
+          <CapabilityDownload />
+        </Container>
+      </Section>
 
       <FAQSection copyId="services"
         items={faqs}

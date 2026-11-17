@@ -1,9 +1,7 @@
-"use client";
-
-import { useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { Plus } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { bind, T } from "@/components/editable";
+import { Container, H2 } from "@/components/altkit/primitives";
 
 interface FAQItem {
   question: string;
@@ -15,111 +13,78 @@ interface FAQSectionProps {
   titleText?: string;
   items?: readonly FAQItem[];
   embedded?: boolean;
-  /** When false, answers are shown in full with no "View more" toggle. */
+  /** When false, answers are shown in full instead of opening on request. */
   expandable?: boolean;
-  /** Number of columns on large screens. Defaults to 2. */
+  /** Kept for call-site compatibility; the Chambers FAQ is a single ledger. */
   columns?: 2 | 3;
   /** Page-scoped id making page-local FAQ items editable in /admin/editor. */
   copyId?: string;
 }
 
+/** Chambers FAQ: hairline ledger of questions, answers open in place. */
 export function FAQSection({
   title = true,
   titleText = "Frequently asked questions",
   items = siteConfig.faqs,
   embedded = !title,
   expandable = true,
-  columns = 2,
   copyId,
 }: FAQSectionProps) {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const columnsClass = columns === 3 ? "lg:grid-cols-3" : "lg:grid-cols-2";
-
   // Inline-editor binding is only valid when this section renders the full
   // FAQ list from siteConfig (indexes must line up with the stored array).
   const bindable = items === siteConfig.faqs;
 
-  const grid = (
-    <div className={`grid grid-cols-1 ${columnsClass} gap-6`}>
-      {items.map((faq, i) => {
-        const isOpen = openIndex === i;
+  const question = (faq: FAQItem, i: number) =>
+    bindable ? (
+      <span {...bind(`faqs.${i}.question`)}>{faq.question}</span>
+    ) : copyId ? (
+      <T id={`${copyId}.faqs.${i}.question`}>{faq.question}</T>
+    ) : (
+      faq.question
+    );
 
-        return (
-          <article
-            key={i}
-            className={`rounded-[1.5rem] border p-6 backdrop-blur transition-colors ${
-              expandable && isOpen
-                ? "border-brand-teal/40 bg-warm-white/70 shadow-sm shadow-navy/5"
-                : "border-brand-border bg-warm-white/70 shadow-sm shadow-navy/5"
-            }`}
-          >
-            <div className="flex items-start justify-between gap-4">
-              <h3 className="font-heading text-navy text-2xl leading-snug">
-                {bindable ? (
-                  <span {...bind(`faqs.${i}.question`)}>{faq.question}</span>
-                ) : copyId ? (
-                  <T id={`${copyId}.faqs.${i}.question`}>{faq.question}</T>
-                ) : (
-                  faq.question
-                )}
-              </h3>
-              {expandable && (
-                <ChevronDown
-                  className={`size-5 shrink-0 text-brand-teal transition-transform duration-300 ${
-                    isOpen ? "rotate-180" : ""
-                  }`}
-                  aria-hidden
-                />
-              )}
-            </div>
+  const answer = (faq: FAQItem, i: number) =>
+    bindable ? (
+      <span {...bind(`faqs.${i}.answer`)}>{faq.answer}</span>
+    ) : copyId ? (
+      <T id={`${copyId}.faqs.${i}.answer`}>{faq.answer}</T>
+    ) : (
+      faq.answer
+    );
 
-            <p
-              className={`mt-4 font-sans text-charcoal-mid text-[15px] leading-relaxed ${
-                expandable && !isOpen ? "line-clamp-3" : ""
-              }`}
-            >
-              {bindable ? (
-                <span {...bind(`faqs.${i}.answer`)}>{faq.answer}</span>
-              ) : copyId ? (
-                <T id={`${copyId}.faqs.${i}.answer`}>{faq.answer}</T>
-              ) : (
-                faq.answer
-              )}
-            </p>
-
-            {expandable && (
-              <button
-                type="button"
-                className="mt-5 text-link-teal text-sm font-sans font-semibold hover:text-navy hover:underline underline-offset-2"
-                onClick={() => setOpenIndex(isOpen ? null : i)}
-                aria-expanded={isOpen}
-              >
-                {isOpen ? "View less" : "View more"}
-              </button>
-            )}
-          </article>
-        );
-      })}
+  const list = (
+    <div className="border-t border-line">
+      {items.map((faq, i) =>
+        expandable ? (
+          <details key={i} className="group border-b border-line">
+            <summary className="flex cursor-pointer list-none items-start justify-between gap-6 py-5 text-base font-bold leading-snug [&::-webkit-details-marker]:hidden">
+              <span>{question(faq, i)}</span>
+              <Plus className="mt-0.5 h-5 w-5 shrink-0 text-accent transition-transform group-open:rotate-45" aria-hidden />
+            </summary>
+            <p className="-mt-1 max-w-3xl pb-5 text-[15px] leading-relaxed text-muted">{answer(faq, i)}</p>
+          </details>
+        ) : (
+          <div key={i} className="border-b border-line py-5">
+            <h3 className="text-base font-bold leading-snug">{question(faq, i)}</h3>
+            <p className="mt-2 max-w-3xl text-[15px] leading-relaxed text-muted">{answer(faq, i)}</p>
+          </div>
+        ),
+      )}
     </div>
   );
 
   if (embedded) {
-    return grid;
+    return list;
   }
 
   return (
-    <section className="bg-off-white py-16 md:py-20">
-      <div className="max-w-7xl mx-auto px-6">
-        {title && (
-          <div className="max-w-3xl mx-auto text-center mb-10">
-            <h2 className="font-heading text-navy text-4xl leading-[1.05] tracking-[-0.02em] md:text-5xl">
-              {titleText}
-            </h2>
-          </div>
-        )}
-        {grid}
-      </div>
+    <section className="tone-base relative py-11 md:py-14">
+      <Container>
+        <div className="grid gap-8 lg:grid-cols-[0.8fr,1.2fr] lg:gap-14">
+          {title ? <H2 className="max-w-md self-start lg:sticky lg:top-28">{titleText}</H2> : <span />}
+          {list}
+        </div>
+      </Container>
     </section>
   );
 }

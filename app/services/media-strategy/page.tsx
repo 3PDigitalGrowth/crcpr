@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { ImageTextRow } from "@/components/layout/ImageTextRow";
 import { PageHero } from "@/components/layout/PageHero";
 import { FAQSection } from "@/components/shared/FAQSection";
 import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
 import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
 import { MediaReachSnapshot } from "@/components/shared/MediaReachSnapshot";
 import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
+import { Reveal } from "@/components/altkit/motion";
+import { Container, Eyebrow, H2, Section } from "@/components/altkit/primitives";
 import { T } from "@/components/editable";
 
 export const metadata: Metadata = {
@@ -74,6 +75,39 @@ const faqs = [
   },
 ];
 
+const P = "services-media-strategy";
+
+const reachPoints = [
+  "Media outlets in every city and state across Australia and New Zealand, and most rural and regional centres",
+  "Media across the Pacific region",
+  "International media markets, including major news outlets across the USA, UK, Europe and Asia",
+  "International outlets and news wires like CNN, Bloomberg, AFP, and Associated Press",
+  "Remote and rural Australian media",
+  "Niche industry publications",
+  "Major Australian TV, radio and digital publications",
+  "Podcasts and new media",
+];
+
+const conferences = [
+  {
+    location: "The Pacific Islands",
+    detail: "Forum with 18 national leaders and heads of state",
+  },
+  {
+    location: "Los Angeles",
+    detail: "Global news story",
+  },
+  {
+    location: "France",
+    detail: "Global news story",
+  },
+];
+
+/* Chambers port (17 Nov 2026). Copy is unchanged from the previous page; the
+   generated imagery was dropped, the dark international-reach panel became a
+   hairline ledger, and the lead magnet uses the light variant so it does
+   not sit against the pale reach snapshot band. */
+
 export default function MediaStrategyPage() {
   return (
     <>
@@ -82,17 +116,13 @@ export default function MediaStrategyPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <PageHero copyId="services-media-strategy"
+      <PageHero copyId={P}
         asidePreset="mediaEditorial"
         eyebrow="Media strategy"
         title="A trusted media presence doesn't happen by accident."
-        description="We help you build a strong public presence that positions you as the trusted voice in your sector. You work directly with advisers who not only understand how the media works, but how media coverage supports - or in some cases doesn’t support - your overall objectives."
+        description="We help you build a strong public presence that positions you as the trusted voice in your sector. You work directly with advisers who not only understand how the media works, but how media coverage supports - or in some cases doesn't support - your overall objectives."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
-        heroImage={{
-          src: "/images/services/media-strategy/hero.webp",
-          alt: "Broadcast studio or media room viewed from behind camera with microphone and warm lighting",
-        }}
         proofStrip={{
           eyebrow: "Why CRC Public Relations",
           title: "Being quoted is not the goal. Being trusted is.",
@@ -100,191 +130,130 @@ export default function MediaStrategyPage() {
         }}
       />
 
-      {/* Opening section */}
-      <section className="py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <ImageTextRow
-            imageSrc="/images/services/media-strategy/mid-prep.webp"
-            imageAlt="Media strategy workshop: presenter leading colleagues through an integrated launch plan shown on screen in a conference room"
-            imagePosition="left"
-          >
-            <div className="max-w-3xl lg:max-w-none">
-              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
-                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
-                <T id="services-media-strategy.t1">
-                Media strategy
+      {/* ---------- OPENING ---------- */}
+      <Section tone="base" className="py-11 md:py-14">
+        <Container className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:gap-14">
+          <div>
+            <Eyebrow>
+              <T id={`${P}.t1`}>Media strategy</T>
+            </Eyebrow>
+            <H2 className="mt-3">
+              <T id={`${P}.t2`}>You don&apos;t need publicity. You need results.</T>
+            </H2>
+            <p className="mt-5 text-[clamp(1.05rem,1.5vw,1.2rem)] font-medium leading-[1.45]">
+              <T id={`${P}.t3`}>
+                An impacting and sustained media presence is a major part of an effective communications strategy as
+                it helps to build trust with those important to your success. It builds credibility, positions you as
+                the expert, and separates you from the crowd.
+              </T>
+            </p>
+            <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted">
+              <p>
+                <T id={`${P}.t4`}>
+                  But many confuse media relations with publicity or promotion. Yet visibility is not the same thing
+                  as positioning, and the saying that &apos;all publicity is good publicity&apos; can&apos;t be
+                  further from the truth, as many companies, organisations and people have sadly discovered.
                 </T>
               </p>
-              <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
-                <T id="services-media-strategy.t2">
-                You don&apos;t need publicity. You need results.
-                </T>
-              </h2>
-              <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
-                <T id="services-media-strategy.t3">
-                An impacting and sustained media presence is a major part of
-                an effective communications strategy as it helps to build
-                trust with those important to your success. It builds
-                credibility, positions you as the expert, and separates you
-                from the crowd.
+              <p>
+                <T id={`${P}.t5`}>
+                  That&apos;s why we partner with you to achieve the right coverage. We create media strategies that
+                  hit the right market with the right messaging, and achieve maximum results. And we know how to
+                  respond to media enquiries that won&apos;t benefit you, or worse, could work against you.
                 </T>
               </p>
-
-              <div className="space-y-6 mt-8">
-                <p className="text-charcoal text-[15px] leading-relaxed">
-                  <T id="services-media-strategy.t4">
-                  But many confuse media relations with publicity or
-                  promotion. Yet visibility is not the same thing as
-                  positioning, and the saying that &lsquo;all publicity is
-                  good publicity&rsquo; can&apos;t be further from the truth,
-                  as many companies, organisations and people have sadly
-                  discovered.
-                  </T>
-                </p>
-                <p className="text-charcoal text-[15px] leading-relaxed">
-                  <T id="services-media-strategy.t5">
-                  That&apos;s why we partner with you to achieve the right
-                  coverage. We create media strategies that hit the right
-                  market with the right messaging, and achieve maximum
-                  results. And we know how to respond to media enquiries that
-                  won&apos;t benefit you, or worse, could work against you.
-                  </T>
-                </p>
-                <p className="text-charcoal text-[15px] leading-relaxed">
-                  <T id="services-media-strategy.t6">
-                  Strong media strategy is not a sequence of isolated media
-                  moments. It is a disciplined decision about what your
-                  organisation should be known for, who should hear it, and
-                  why journalists should keep coming back to you.
-                  </T>
-                </p>
-                <p className="text-charcoal text-[15px] leading-relaxed">
-                  <T id="services-media-strategy.t7">
-                  We build media strategies that go beyond press releases and
-                  reactive enquiry handling. If your current approach only
-                  generates coverage when you have something to announce, and
-                  measures success by whether that coverage was positive or
-                  negative, you are managing media, not leading it.
-                  </T>
-                </p>
-                <p className="text-charcoal text-[15px] leading-relaxed">
-                  <T id="services-media-strategy.t8">
-                  We help you move from reactive media management to proactive
-                  positioning, because the difference between being covered
-                  and being credible is the difference that protects your
-                  reputation.
+              <p>
+                <T id={`${P}.t6`}>
+                  Strong media strategy is not a sequence of isolated media moments. It is a disciplined decision
+                  about what your organisation should be known for, who should hear it, and why journalists should
+                  keep coming back to you.
+                </T>
+              </p>
+              <p>
+                <T id={`${P}.t7`}>
+                  We build media strategies that go beyond press releases and reactive enquiry handling. If your
+                  current approach only generates coverage when you have something to announce, and measures success
+                  by whether that coverage was positive or negative, you are managing media, not leading it.
+                </T>
+              </p>
+              <p>
+                <T id={`${P}.t8`}>
+                  We help you move from reactive media management to proactive positioning, because the difference
+                  between being covered and being credible is the difference that protects your reputation.
+                </T>
+              </p>
+            </div>
+          </div>
+          <Reveal className="lg:pt-10">
+            <aside className="kit-r border border-line p-6 md:p-8">
+              <Eyebrow>
+                <T id={`${P}.t9`}>What weak strategy looks like</T>
+              </Eyebrow>
+              <div className="mt-5 divide-y divide-[var(--line)]">
+                {[
+                  ["t10", "Press release dependence", "t11", "Media activity only appears when the organisation has something to announce."],
+                  ["t12", "Reactive enquiry handling", "t13", "Journalists drive the agenda because there is no settled editorial position behind the response."],
+                  ["t14", "Shallow success measures", "t15", "Coverage is judged as positive or negative, rather than by whether it builds durable authority."],
+                ].map(([tid, title, bid, body]) => (
+                  <div key={tid} className="py-4 first:pt-0">
+                    <p className="kit-display text-[15px] uppercase">
+                      <T id={`${P}.${tid}`}>{title}</T>
+                    </p>
+                    <p className="mt-1.5 text-sm leading-relaxed text-muted">
+                      <T id={`${P}.${bid}`}>{body}</T>
+                    </p>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-2 border-t border-line pt-5">
+                <Eyebrow>
+                  <T id={`${P}.t16`}>Strategic aim</T>
+                </Eyebrow>
+                <p className="mt-3 text-base font-semibold leading-snug">
+                  <T id={`${P}.t17`}>
+                    Move from reactive media management to sustained, credible market positioning that directly
+                    supports your organisational objectives.
                   </T>
                 </p>
               </div>
-              <aside className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6 md:p-8 mt-8">
-                <p className="mb-5 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
-                  <span className="h-px w-8 bg-current opacity-50" aria-hidden />
-                  <T id="services-media-strategy.t9">
-                  What weak strategy looks like
-                  </T>
-                </p>
+            </aside>
+          </Reveal>
+        </Container>
+      </Section>
 
-                <div className="space-y-4">
-                  <div className="border-l-[3px] border-brand-gold pl-4">
-                    <p className="font-sans font-semibold text-navy text-sm mb-1">
-                      <T id="services-media-strategy.t10">
-                      Press release dependence
-                      </T>
-                    </p>
-                    <p className="text-charcoal-mid text-sm leading-relaxed">
-                      <T id="services-media-strategy.t11">
-                      Media activity only appears when the organisation has
-                      something to announce.
-                      </T>
-                    </p>
-                  </div>
+      {/* ---------- AN EFFECTIVE STRATEGY ---------- */}
+      <Section tone="deep" className="py-11 md:py-14">
+        <Container className="grid gap-10 lg:grid-cols-[0.8fr,1.2fr] lg:gap-14">
+          <div>
+            <Eyebrow>
+              <T id={`${P}.t18`}>An effective strategy</T>
+            </Eyebrow>
+            <H2 className="mt-3">
+              <T id={`${P}.t19`}>What strong media strategy looks like in the market</T>
+            </H2>
+          </div>
+          <div className="space-y-4 text-[15px] leading-relaxed text-muted">
+            <p>
+              <T id={`${P}.t20`}>
+                A strong media strategy is based on an understanding that a public voice is essential to your overall
+                objectives. You become a credible source of authority in your sector. Trust is built with key
+                stakeholders &ndash; internal and external. Journalists understand what you stand for. Executives
+                sound like informed authorities rather than corporate placeholders. Commentary appears in the right
+                places, at the right times, with a message that can survive scrutiny.
+              </T>
+            </p>
+            <p>
+              <T id={`${P}.t21`}>
+                That outcome requires more than media activity. It requires message discipline, editorial judgment,
+                and the ability to discern when media exposure is not beneficial. Premium media strategy is as much
+                about restraint as visibility.
+              </T>
+            </p>
+          </div>
+        </Container>
+      </Section>
 
-                  <div className="border-l-[3px] border-brand-gold pl-4">
-                    <p className="font-sans font-semibold text-navy text-sm mb-1">
-                      <T id="services-media-strategy.t12">
-                      Reactive enquiry handling
-                      </T>
-                    </p>
-                    <p className="text-charcoal-mid text-sm leading-relaxed">
-                      <T id="services-media-strategy.t13">
-                      Journalists drive the agenda because there is no settled
-                      editorial position behind the response.
-                      </T>
-                    </p>
-                  </div>
-
-                  <div className="border-l-[3px] border-brand-gold pl-4">
-                    <p className="font-sans font-semibold text-navy text-sm mb-1">
-                      <T id="services-media-strategy.t14">
-                      Shallow success measures
-                      </T>
-                    </p>
-                    <p className="text-charcoal-mid text-sm leading-relaxed">
-                      <T id="services-media-strategy.t15">
-                      Coverage is judged as positive or negative, rather than by
-                      whether it builds durable authority.
-                      </T>
-                    </p>
-                  </div>
-                </div>
-
-                <div className="mt-6 pt-6 border-t border-brand-border">
-                  <p className="mb-3 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
-                    <span className="h-px w-8 bg-current opacity-50" aria-hidden />
-                    <T id="services-media-strategy.t16">
-                    Strategic aim
-                    </T>
-                  </p>
-                  <p className="text-navy font-sans font-semibold text-base leading-relaxed">
-                    <T id="services-media-strategy.t17">
-                    Move from reactive media management to sustained, credible
-                    market positioning that directly supports your organisational
-                    objectives.
-                    </T>
-                  </p>
-                </div>
-              </aside>
-            </div>
-          </ImageTextRow>
-        </div>
-      </section>
-
-      <section className="py-16 md:py-24">
-        <div className="max-w-3xl mx-auto px-6">
-          <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
-            <span className="h-px w-8 bg-current opacity-50" aria-hidden />
-            <T id="services-media-strategy.t18">
-            An effective strategy
-            </T>
-          </p>
-          <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
-            <T id="services-media-strategy.t19">
-            What strong media strategy looks like in the market
-            </T>
-          </h2>
-          <p className="text-charcoal text-[15px] leading-relaxed">
-            <T id="services-media-strategy.t20">
-            A strong media strategy is based on an understanding that a public
-            voice is essential to your overall objectives. You become a credible
-            source of authority in your sector. Trust is built with key
-            stakeholders &ndash; internal and external. Journalists understand
-            what you stand for. Executives sound like informed authorities rather
-            than corporate placeholders. Commentary appears in the right places,
-            at the right times, with a message that can survive scrutiny.
-            </T>
-          </p>
-          <p className="text-charcoal text-[15px] leading-relaxed mt-6">
-            <T id="services-media-strategy.t21">
-            That outcome requires more than media activity. It requires message
-            discipline, editorial judgment, and the ability to discern when media
-            exposure is not beneficial. Premium media strategy is as much about
-            restraint as visibility.
-            </T>
-          </p>
-        </div>
-      </section>
-
-      <InlineEnquirySection copyId="services-media-strategy"
+      <InlineEnquirySection copyId={P}
         title="Need a sharper media strategy?"
         body="If your organisation wants stronger editorial positioning, better spokesperson preparedness, or more deliberate thought leadership, CRC Public Relations can help design the strategy behind it."
         bullets={[
@@ -296,309 +265,150 @@ export default function MediaStrategyPage() {
         variant="white"
       />
 
-      {/* What a CRC Public Relations media strategy delivers */}
-      <section className="py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
-            <T id="services-media-strategy.t22">
-            What a CRC Public Relations media strategy delivers
-            </T>
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
-            <div>
-              <h3 className="font-heading text-navy text-2xl mb-3">
-                <T id="services-media-strategy.t23">
-                Media strategy development
-                </T>
-              </h3>
-              <p className="text-charcoal text-[15px] leading-relaxed">
-                <T id="services-media-strategy.t24">
-                Every organisation has a story to tell and issues it cares
-                about. Not all of them are media-ready. We work with your
-                leadership team to identify the angles that journalists will
-                actually pursue, the platforms that reach your most important
-                audiences, and the strategy that will work best for you. The
-                result is a media strategy with specific objectives, specific
-                targets, and specific metrics.
-                </T>
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-heading text-navy text-2xl mb-3">
-                <T id="services-media-strategy.t25">
-                Journalist and editorial relationships
-                </T>
-              </h3>
-              <p className="text-charcoal text-[15px] leading-relaxed">
-                <T id="services-media-strategy.t26">
-                Media coverage is built on relationships with specific
-                journalists, editors, and producers who cover your sector.
-                CRC Public Relations brings corporate PR and journalism
-                practice to the way we build and manage media relationships. We
-                understand what editors and producers need, how stories are
-                commissioned and developed, and how to present your organisation
-                as a source that is worth coming back to. We introduce your
-                organisation to the right people and build the ongoing
-                relationships that generate sustained coverage.
-                </T>
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-heading text-navy text-2xl mb-3">
-                <T id="services-media-strategy.t27">
-                Thought leadership and op-ed placement
-                </T>
-              </h3>
-              <p className="text-charcoal text-[15px] leading-relaxed">
-                <T id="services-media-strategy.t28">
-                The most credible media presence is earned through consistent,
-                substantive commentary on the issues that matter in your
-                sector. We work with your leaders to develop thought
-                leadership positions, draft op-ed pieces and expert
-                commentary, and place that content with the publications and
-                broadcasters most relevant to your audiences. Over time, this
-                builds an authority profile that no single press release can
-                create.
-                </T>
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-heading text-navy text-2xl mb-3">
-                <T id="services-media-strategy.t29">
-                Spokesperson preparation and briefing
-                </T>
-              </h3>
-              <p className="text-charcoal text-[15px] leading-relaxed">
-                <T id="services-media-strategy.t30">
-                Every media engagement is a risk if your spokesperson is not
-                prepared. We prepare your executives and subject matter experts
-                for interviews, developing their key messages, anticipating
-                difficult questions, building their confidence on camera and on
-                the record. We also provide pre-interview briefings that ensure
-                your spokesperson walks into every media interaction with a
-                clear plan.
-                </T>
-              </p>
-            </div>
+      {/* ---------- WHAT IT DELIVERS ---------- */}
+      <Section tone="base" className="py-11 md:py-14">
+        <Container>
+          <H2 className="max-w-3xl">
+            <T id={`${P}.t22`}>What a CRC Public Relations media strategy delivers</T>
+          </H2>
+          <div className="mt-8 grid gap-x-14 md:grid-cols-2">
+            {[
+              ["t23", "Media strategy development", "t24", "Every organisation has a story to tell and issues it cares about. Not all of them are media-ready. We work with your leadership team to identify the angles that journalists will actually pursue, the platforms that reach your most important audiences, and the strategy that will work best for you. The result is a media strategy with specific objectives, specific targets, and specific metrics."],
+              ["t25", "Journalist and editorial relationships", "t26", "Media coverage is built on relationships with specific journalists, editors, and producers who cover your sector. CRC Public Relations brings corporate PR and journalism practice to the way we build and manage media relationships. We understand what editors and producers need, how stories are commissioned and developed, and how to present your organisation as a source that is worth coming back to. We introduce your organisation to the right people and build the ongoing relationships that generate sustained coverage."],
+              ["t27", "Thought leadership and op-ed placement", "t28", "The most credible media presence is earned through consistent, substantive commentary on the issues that matter in your sector. We work with your leaders to develop thought leadership positions, draft op-ed pieces and expert commentary, and place that content with the publications and broadcasters most relevant to your audiences. Over time, this builds an authority profile that no single press release can create."],
+              ["t29", "Spokesperson preparation and briefing", "t30", "Every media engagement is a risk if your spokesperson is not prepared. We prepare your executives and subject matter experts for interviews, developing their key messages, anticipating difficult questions, building their confidence on camera and on the record. We also provide pre-interview briefings that ensure your spokesperson walks into every media interaction with a clear plan."],
+            ].map(([tid, title, bid, body]) => (
+              <div key={tid} className="border-t border-line py-6">
+                <h3 className="kit-display text-[15px] uppercase leading-snug">
+                  <T id={`${P}.${tid}`}>{title}</T>
+                </h3>
+                <p className="mt-2.5 text-[15px] leading-relaxed text-muted">
+                  <T id={`${P}.${bid}`}>{body}</T>
+                </p>
+              </div>
+            ))}
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
-      {/* Our media experience */}
-      <section className="py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <ImageTextRow
-            imageSrc="/images/services/media-strategy/media-experience.png"
-            imageAlt="Cluster of broadcast microphones on a press conference podium with photojournalists and a television camera operator visible in the warm, softly lit background"
-            imagePosition="right"
-            aspectClass="aspect-video"
-          >
-            <div className="max-w-3xl lg:max-w-none">
-              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
-                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
-                <T id="services-media-strategy.t31">
-                Our media experience
+      {/* ---------- OUR MEDIA EXPERIENCE ---------- */}
+      <Section tone="base" className="py-11 md:py-14">
+        <Container>
+          <div className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:gap-14">
+            <div>
+              <Eyebrow>
+                <T id={`${P}.t31`}>Our media experience</T>
+              </Eyebrow>
+              <H2 className="mt-3">
+                <T id={`${P}.t32`}>The reach and relationships behind effective media strategy</T>
+              </H2>
+              <p className="mt-5 text-[clamp(1.05rem,1.5vw,1.2rem)] font-medium leading-[1.45]">
+                <T id={`${P}.t33`}>
+                  The CRC Public Relations difference is our vast experience dealing with journalists across so many
+                  regions and media outlets, from the smallest to the largest. This allows us to assist clients of all
+                  sizes in all regions.
                 </T>
               </p>
-              <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
-                <T id="services-media-strategy.t32">
-                The reach and relationships behind effective media strategy
-                </T>
-              </h2>
-              <p className="text-charcoal text-lg leading-relaxed mb-6">
-                <T id="services-media-strategy.t33">
-                The CRC Public Relations difference is our vast experience
-                dealing with journalists across so many regions and media
-                outlets, from the smallest to the largest. This allows us to
-                assist clients of all sizes in all regions.
+              <p className="mt-6 text-[15px] leading-relaxed text-muted">
+                <T id={`${P}.t34`}>
+                  Our team has coordinated strategic media coverage, publicity, interviews, comments and responses for
+                  clients with:
                 </T>
               </p>
-              <p className="text-charcoal text-[15px] leading-relaxed">
-                <T id="services-media-strategy.t34">
-                Our team has coordinated strategic media coverage, publicity,
-                interviews, comments and responses for clients with:
-                </T>
-              </p>
-              <ul className="mt-5 space-y-3">
-                {[
-                  "Media outlets in every city and state across Australia and New Zealand, and most rural and regional centres",
-                  "Media across the Pacific region",
-                  "International media markets, including major news outlets across the USA, UK, Europe and Asia",
-                  "International outlets and news wires like CNN, Bloomberg, AFP, and Associated Press",
-                  "Remote and rural Australian media",
-                  "Niche industry publications",
-                  "Major Australian TV, radio and digital publications",
-                  "Podcasts and new media",
-                ].map((item) => (
-                  <li
-                    key={item}
-                    className="flex gap-3 text-charcoal text-[15px] leading-relaxed"
-                  >
-                    <span
-                      className="mt-[9px] size-1.5 shrink-0 rounded-full bg-brand-gold"
-                      aria-hidden
-                    />
-                    <span>{item}</span>
+            </div>
+            <Reveal className="lg:pt-10">
+              <ul className="divide-y divide-[var(--line)] border-y border-line">
+                {reachPoints.map((item) => (
+                  <li key={item} className="py-3.5 text-[15px] leading-relaxed">
+                    {item}
                   </li>
                 ))}
               </ul>
-            </div>
-          </ImageTextRow>
+            </Reveal>
+          </div>
 
-          <aside className="mt-14 rounded-[1.5rem] bg-navy p-7 md:p-10">
-            <p className="mb-3 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
-              <span className="h-px w-8 bg-current opacity-50" aria-hidden />
-              <T id="services-media-strategy.t35">
-              International reach
-              </T>
-            </p>
-            <h3 className="font-heading text-white text-xl md:text-2xl leading-tight mb-6">
-              <T id="services-media-strategy.t36">
-              International media conferences hosted in
-              </T>
+          <div className="mt-12 border-t border-line pt-10">
+            <Eyebrow>
+              <T id={`${P}.t35`}>International reach</T>
+            </Eyebrow>
+            <h3 className="kit-display mt-3 text-[clamp(1.1rem,1.7vw,1.35rem)] uppercase leading-tight">
+              <T id={`${P}.t36`}>International media conferences hosted in</T>
             </h3>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {[
-                {
-                  location: "The Pacific Islands",
-                  detail: "Forum with 18 national leaders and heads of state",
-                },
-                {
-                  location: "Los Angeles",
-                  detail: "Global news story",
-                },
-                {
-                  location: "France",
-                  detail: "Global news story",
-                },
-              ].map((item) => (
-                <li
-                  key={item.location}
-                  className="v2-glass-dark rounded-[1.5rem] p-5"
-                >
-                  <p className="font-sans font-semibold text-white text-base mb-1">
-                    {item.location}
-                  </p>
-                  <p className="text-white/65 text-sm leading-relaxed">
-                    {item.detail}
-                  </p>
-                </li>
+            <div className="ledger mt-6">
+              {conferences.map((item) => (
+                <div key={item.location}>
+                  <p className="text-sm font-bold">{item.location}</p>
+                  <p className="mt-1.5 text-sm leading-relaxed text-muted">{item.detail}</p>
+                </div>
               ))}
-            </ul>
-          </aside>
-        </div>
-      </section>
-
-      {/* We understand how newsrooms think */}
-      <section className="py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-[320px_minmax(0,1fr)] gap-10 items-start">
-            <aside className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6 md:p-8">
-              <p className="mb-5 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
-                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
-                <T id="services-media-strategy.t37">
-                Why it matters
-                </T>
-              </p>
-
-              <div className="space-y-4">
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    <T id="services-media-strategy.t38">
-                    Real editorial judgment
-                    </T>
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    <T id="services-media-strategy.t39">
-                    We know the difference between a genuine angle and a
-                    self-interested pitch.
-                    </T>
-                  </p>
-                </div>
-
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    <T id="services-media-strategy.t40">
-                    Better reporter fit
-                    </T>
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    <T id="services-media-strategy.t41">
-                    The right story still fails if it is sent to the wrong
-                    journalist, desk, or format.
-                    </T>
-                  </p>
-                </div>
-
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    <T id="services-media-strategy.t42">
-                    Smarter timing
-                    </T>
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    <T id="services-media-strategy.t43">
-                    Knowing when to hold back is often as valuable as knowing
-                    when to push forward.
-                    </T>
-                  </p>
-                </div>
-              </div>
-            </aside>
-
-            <div className="max-w-3xl">
-              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
-                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
-                <T id="services-media-strategy.t44">
-                Newsroom perspective
-                </T>
-              </p>
-              <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
-                <T id="services-media-strategy.t45">
-                We understand how newsrooms think
-                </T>
-              </h2>
-
-              <div className="space-y-6 mt-8">
-                <p className="text-charcoal text-[15px] leading-relaxed">
-                  <T id="services-media-strategy.t46">
-                  The CRC Public Relations team has a wide range of public
-                  relations and journalism experience, including newsroom
-                  backgrounds, so we know how the media works.
-                  </T>
-                </p>
-                <p className="text-charcoal text-[15px] leading-relaxed">
-                  <T id="services-media-strategy.t47">
-                  We value the role journalists play and understand what they
-                  require to prepare a great story and what makes it worth
-                  covering.
-                  </T>
-                </p>
-                <p className="text-charcoal text-[15px] leading-relaxed">
-                  <T id="services-media-strategy.t48">
-                  We know how to frame a media angle so it is genuinely
-                  newsworthy, not just self-promotional, and we understand the
-                  news cycle and timing required that will make a story most
-                  beneficial to the media.
-                  </T>
-                </p>
-                <p className="text-charcoal text-[15px] leading-relaxed">
-                  <T id="services-media-strategy.t49">
-                  Media training at CRC Public Relations is delivered in
-                  partnership with television and radio journalists with decades
-                  of broadcast experience, people who have conducted the kinds of
-                  interviews your spokespeople need to be ready for.
-                  </T>
-                </p>
-              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
+
+      {/* ---------- NEWSROOM PERSPECTIVE ---------- */}
+      <Section tone="base" className="py-11 md:py-14">
+        <Container className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:gap-14">
+          <div>
+            <Eyebrow>
+              <T id={`${P}.t44`}>Newsroom perspective</T>
+            </Eyebrow>
+            <H2 className="mt-3">
+              <T id={`${P}.t45`}>We understand how newsrooms think</T>
+            </H2>
+            <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted">
+              <p>
+                <T id={`${P}.t46`}>
+                  The CRC Public Relations team has a wide range of public relations and journalism experience,
+                  including newsroom backgrounds, so we know how the media works.
+                </T>
+              </p>
+              <p>
+                <T id={`${P}.t47`}>
+                  We value the role journalists play and understand what they require to prepare a great story and
+                  what makes it worth covering.
+                </T>
+              </p>
+              <p>
+                <T id={`${P}.t48`}>
+                  We know how to frame a media angle so it is genuinely newsworthy, not just self-promotional, and we
+                  understand the news cycle and timing required that will make a story most beneficial to the media.
+                </T>
+              </p>
+              <p>
+                <T id={`${P}.t49`}>
+                  Media training at CRC Public Relations is delivered in partnership with television and radio
+                  journalists with decades of broadcast experience, people who have conducted the kinds of interviews
+                  your spokespeople need to be ready for.
+                </T>
+              </p>
+            </div>
+          </div>
+          <Reveal className="lg:pt-10">
+            <aside className="kit-r border border-line p-6 md:p-8">
+              <Eyebrow>
+                <T id={`${P}.t37`}>Why it matters</T>
+              </Eyebrow>
+              <div className="mt-5 divide-y divide-[var(--line)]">
+                {[
+                  ["t38", "Real editorial judgment", "t39", "We know the difference between a genuine angle and a self-interested pitch."],
+                  ["t40", "Better reporter fit", "t41", "The right story still fails if it is sent to the wrong journalist, desk, or format."],
+                  ["t42", "Smarter timing", "t43", "Knowing when to hold back is often as valuable as knowing when to push forward."],
+                ].map(([tid, title, bid, body]) => (
+                  <div key={tid} className="py-4 first:pt-0 last:pb-0">
+                    <p className="kit-display text-[15px] uppercase">
+                      <T id={`${P}.${tid}`}>{title}</T>
+                    </p>
+                    <p className="mt-1.5 text-sm leading-relaxed text-muted">
+                      <T id={`${P}.${bid}`}>{body}</T>
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </aside>
+          </Reveal>
+        </Container>
+      </Section>
 
       <div id="media-reach-snapshot">
         <MediaReachSnapshot />
@@ -606,19 +416,19 @@ export default function MediaStrategyPage() {
 
       <LeadMagnetBanner
         magnet="trustedVoiceGuide"
-        variant="dark"
+        variant="light"
         title="Are you ready to raise your public profile and be the trusted voice of authority for your area of expertise?"
-        description="Download the CRC Public Relations ‘5 steps to becoming a trusted public voice’, and drive new clients and staff through the credibility this brings. Applies to companies, non-profits, governments, professional services firms, schools and associations."
+        description="Download the CRC Public Relations '5 steps to becoming a trusted public voice', and drive new clients and staff through the credibility this brings. Applies to companies, non-profits, governments, professional services firms, schools and associations."
         highlights={[]}
       />
 
-      <FAQSection copyId="services-media-strategy"
+      <FAQSection copyId={P}
         items={faqs}
         titleText="Common questions about media strategy"
         expandable={false}
       />
 
-      <PageClosingCTA copyId="services-media-strategy"
+      <PageClosingCTA copyId={P}
         title="Ready to build media presence that actually moves the needle?"
         body="Media strategy works when it is consistent, strategic, and built on genuine editorial judgment. We help you earn coverage that strengthens authority rather than just generating noise."
         primaryLabel="Book a media strategy consultation"

@@ -47,6 +47,7 @@ const DISPLAY: Record<ConceptId, string> = {
   alt13: letterhead.variable,
   alt14: privateOffice.variable,
   alt15: linework.variable,
+  site: chambers.variable,
 };
 
 export function fontClasses(id: ConceptId) {

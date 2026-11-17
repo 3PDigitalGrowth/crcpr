@@ -255,7 +255,7 @@ export const siteDefaults = {
       headline:
         "What proactive media relations can produce in a single month.",
       body: [
-        "For a mid-sized, Brisbane-based professional services firm with national reach, four media stories developed across April generated 221 placements nationally — across television, radio, print and digital.",
+        "For a mid-sized, Brisbane-based professional services firm with national reach, four media stories developed across April generated 221 placements nationally, across television, radio, print and digital.",
         "Reach of this scale is not the standard outcome of every campaign. Coverage depends on the story, the strategy, and the news cycle. It is shown here as evidence of what disciplined media relations is capable of producing when those elements align.",
       ],
     },

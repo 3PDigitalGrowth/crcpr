@@ -6,6 +6,8 @@ import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
 import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
 import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
 import { PageProofStrip } from "@/components/shared/PageProofStrip";
+import { Reveal } from "@/components/altkit/motion";
+import { Container, Eyebrow, H2, Section } from "@/components/altkit/primitives";
 import { T } from "@/components/editable";
 
 export const metadata: Metadata = {
@@ -78,6 +80,12 @@ const faqs = [
   },
 ];
 
+const P = "media-training";
+
+/* Chambers port (17 Nov 2026). Copy is unchanged from the previous page; the
+   generated hero imagery and video were dropped and the boxed cards became
+   hairline ledgers. */
+
 export default function MediaTrainingPage() {
   return (
     <>
@@ -86,200 +94,129 @@ export default function MediaTrainingPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <PageHero copyId="media-training"
+      <PageHero copyId={P}
         asidePreset="mediaTraining"
         eyebrow="Media training"
         title="Media training from people who have sat on the other side of the camera."
         description="Spokesperson training, hostile interview preparation, and on-camera coaching delivered by former television and radio journalists with decades of broadcast experience."
         ctaLabel="Book a media training session"
         ctaHref="/contact"
-        heroImage={{
-          src: "/images/media-training/hero.webp",
-          alt: "Video camera on tripod in a training room with presentation screen and chairs set for practice interviews",
-        }}
-        heroVideo={{
-          src: "/images/media-training/hero-ambient.mp4",
-          poster: "/images/media-training/hero-poster.jpg",
-        }}
       />
 
-      <PageProofStrip copyId="media-training"
+      <PageProofStrip copyId={P}
         title="Good media training improves judgement, not just technique."
         items={[...proofItems]}
       />
 
-      {/* Opening section */}
-      <section className="bg-white py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_360px] gap-10 items-start">
-            <div className="max-w-3xl">
-              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
-                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
-                <T id="media-training.t1">
-                What better training looks like
+      {/* ---------- WHAT BETTER TRAINING LOOKS LIKE ---------- */}
+      <Section tone="base" className="py-11 md:py-14">
+        <Container className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:gap-14">
+          <div>
+            <Eyebrow>
+              <T id={`${P}.t1`}>What better training looks like</T>
+            </Eyebrow>
+            <H2 className="mt-3">
+              <T id={`${P}.t2`}>The real risk is not poor technique. It is poor preparation.</T>
+            </H2>
+            <p className="mt-5 text-[clamp(1.05rem,1.5vw,1.2rem)] font-medium leading-[1.45]">
+              <T id={`${P}.t3`}>
+                A spokesperson can look polished and still lose the interview. The difference usually comes down to
+                whether they are ready for the real pressure points in the story.
+              </T>
+            </p>
+            <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted">
+              <p>
+                <T id={`${P}.t4`}>
+                  Most media training focuses on technique: bridging phrases, body language, staying on message.
+                  These things matter. But the most common failure point in a media interview is not technique. It
+                  is lack of preparation for the specific questions a journalist is likely to ask.
                 </T>
               </p>
-              <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
-                <T id="media-training.t2">
-                The real risk is not poor technique. It is poor preparation.
-                </T>
-              </h2>
-              <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
-                <T id="media-training.t3">
-                A spokesperson can look polished and still lose the interview.
-                The difference usually comes down to whether they are ready for
-                the real pressure points in the story.
+              <p>
+                <T id={`${P}.t5`}>
+                  Generic media training produces spokespeople who know how to bridge but cannot answer the hardest
+                  question about their own organisation. Our media training begins not with technique, but with
+                  intelligence: understanding the story the journalist is building, the questions they are most
+                  likely to ask, and the specific vulnerabilities in your organisation&apos;s position that a
+                  skilled interviewer will find. Every session is designed and reviewed by an experienced adviser.
                 </T>
               </p>
-
-              <div className="space-y-6 mt-8">
-                <p className="text-charcoal text-[15px] leading-relaxed">
-                  <T id="media-training.t4">
-                  Most media training focuses on technique: bridging phrases,
-                  body language, staying on message. These things matter. But
-                  the most common failure point in a media interview is not
-                  technique. It is lack of preparation for the specific
-                  questions a journalist is likely to ask.
-                  </T>
-                </p>
-                <p className="text-charcoal text-[15px] leading-relaxed">
-                  <T id="media-training.t5">
-                  Generic media training produces spokespeople who know how to
-                  bridge but cannot answer the hardest question about their own
-                  organisation. Our media training begins not with technique,
-                  but with intelligence: understanding the story the journalist
-                  is building, the questions they are most likely to ask, and
-                  the specific vulnerabilities in your organisation&apos;s
-                  position that a skilled interviewer will find. Every session
-                  is designed and reviewed by an experienced adviser.
-                  </T>
-                </p>
-                <p className="text-charcoal text-[15px] leading-relaxed">
-                  <T id="media-training.t6">
-                  Our training is delivered by former television and radio
-                  journalists who have conducted the kinds of interviews your
-                  executives need to be ready for. They know what interviewers
-                  are looking for, how hostile interviews are constructed, and
-                  what the difference looks like between a spokesperson who
-                  holds their position and one who does not.
-                  </T>
-                </p>
-              </div>
+              <p>
+                <T id={`${P}.t6`}>
+                  Our training is delivered by former television and radio journalists who have conducted the kinds
+                  of interviews your executives need to be ready for. They know what interviewers are looking for,
+                  how hostile interviews are constructed, and what the difference looks like between a spokesperson
+                  who holds their position and one who does not.
+                </T>
+              </p>
             </div>
-
-            <aside className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6 md:p-8">
-              <p className="mb-5 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
-                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
-                <T id="media-training.t7">
-                Technique is not enough
-                </T>
-              </p>
-
-              <div className="space-y-4">
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    <T id="media-training.t8">
-                    Bridging without substance
-                    </T>
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    <T id="media-training.t9">
-                    Executives can sound polished while still failing to answer
-                    the real question being tested.
-                    </T>
-                  </p>
-                </div>
-
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    <T id="media-training.t10">
-                    Generic rehearsal
-                    </T>
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    <T id="media-training.t11">
-                    Practice is weak if it is not built around your actual
-                    vulnerabilities, timing, and likely scrutiny.
-                    </T>
-                  </p>
-                </div>
-
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    <T id="media-training.t12">
-                    False confidence
-                    </T>
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    <T id="media-training.t13">
-                    A confident spokesperson can still lose control if the
-                    preparation has not matched the pressure.
-                    </T>
-                  </p>
-                </div>
+          </div>
+          <Reveal className="lg:pt-10">
+            <aside className="kit-r border border-line p-6 md:p-8">
+              <Eyebrow>
+                <T id={`${P}.t7`}>Technique is not enough</T>
+              </Eyebrow>
+              <div className="mt-5 divide-y divide-[var(--line)]">
+                {[
+                  ["t8", "Bridging without substance", "t9", "Executives can sound polished while still failing to answer the real question being tested."],
+                  ["t10", "Generic rehearsal", "t11", "Practice is weak if it is not built around your actual vulnerabilities, timing, and likely scrutiny."],
+                  ["t12", "False confidence", "t13", "A confident spokesperson can still lose control if the preparation has not matched the pressure."],
+                ].map(([tid, title, bid, body]) => (
+                  <div key={tid} className="py-4 first:pt-0 last:pb-0">
+                    <p className="kit-display text-[15px] uppercase">
+                      <T id={`${P}.${tid}`}>{title}</T>
+                    </p>
+                    <p className="mt-1.5 text-sm leading-relaxed text-muted">
+                      <T id={`${P}.${bid}`}>{body}</T>
+                    </p>
+                  </div>
+                ))}
               </div>
             </aside>
+          </Reveal>
+        </Container>
+      </Section>
+
+      {/* ---------- WHAT EXECUTIVES GET WRONG ---------- */}
+      <Section tone="deep" className="py-11 md:py-14">
+        <Container>
+          <Eyebrow>
+            <T id={`${P}.t14`}>Executive mistakes</T>
+          </Eyebrow>
+          <H2 className="mt-3 max-w-3xl">
+            <T id={`${P}.t15`}>What executives usually get wrong</T>
+          </H2>
+          <p className="mt-5 max-w-2xl text-[clamp(1.05rem,1.5vw,1.2rem)] font-medium leading-[1.45]">
+            <T id={`${P}.t16`}>
+              The most common failure in a difficult interview is not saying too little. It is assuming that
+              confidence alone will carry the day.
+            </T>
+          </p>
+          <div className="ledger mt-8">
+            {[
+              {
+                title: "Confidence without structure",
+                body: "A polished executive can still lose control if their answers are not built around the real pressure points in the story.",
+              },
+              {
+                title: "Style before substance",
+                body: "Strong delivery does not help if the underlying answer is vague, evasive, or strategically weak.",
+              },
+              {
+                title: "Missing the real question",
+                body: "Our training prepares for the question behind the question, so responses stay credible under pressure rather than merely rehearsed.",
+              },
+            ].map((item) => (
+              <div key={item.title}>
+                <p className="text-sm font-bold">{item.title}</p>
+                <p className="mt-1.5 text-sm leading-relaxed text-muted">{item.body}</p>
+              </div>
+            ))}
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
-      <section className="bg-white pb-16 md:pb-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="rounded-[1.5rem] border border-brand-border bg-off-white p-8 md:p-10">
-            <div className="max-w-3xl">
-              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
-                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
-                <T id="media-training.t14">
-                Executive mistakes
-                </T>
-              </p>
-              <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
-                <T id="media-training.t15">
-                What executives usually get wrong
-                </T>
-              </h2>
-              <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
-                <T id="media-training.t16">
-                The most common failure in a difficult interview is not saying
-                too little. It is assuming that confidence alone will carry the
-                day.
-                </T>
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-10">
-              {[
-                {
-                  title: "Confidence without structure",
-                  body: "A polished executive can still lose control if their answers are not built around the real pressure points in the story.",
-                },
-                {
-                  title: "Style before substance",
-                  body: "Strong delivery does not help if the underlying answer is vague, evasive, or strategically weak.",
-                },
-                {
-                  title: "Missing the real question",
-                  body: "Our training prepares for the question behind the question, so responses stay credible under pressure rather than merely rehearsed.",
-                },
-              ].map((item) => (
-                <div
-                  key={item.title}
-                  className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6"
-                >
-                  <p className="font-sans font-semibold text-navy text-base mb-2">
-                    {item.title}
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    {item.body}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <InlineEnquirySection copyId="media-training"
+      <InlineEnquirySection copyId={P}
         title="Planning a training session for your executives or spokespersons?"
         body="We run one-to-one, small-group, crisis-specific, and board-level media training for organisations that want stronger performance before the next difficult interview."
         bullets={[
@@ -291,174 +228,132 @@ export default function MediaTrainingPage() {
         variant="white"
       />
 
-      {/* Training programmes */}
-      <section className="bg-off-white py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
-            <T id="media-training.t17">
-            Training programmes for every situation
-            </T>
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
-            <div>
-              <h3 className="font-heading text-navy text-2xl mb-3">
-                <T id="media-training.t18">
-                Spokesperson and on-camera training
-                </T>
+      {/* ---------- TRAINING PROGRAMMES ---------- */}
+      <Section tone="base" className="py-11 md:py-14">
+        <Container>
+          <H2 className="max-w-3xl">
+            <T id={`${P}.t17`}>Training programmes for every situation</T>
+          </H2>
+          <div className="mt-8 grid gap-x-14 md:grid-cols-2">
+            <div className="border-t border-line py-6">
+              <h3 className="kit-display text-[15px] uppercase leading-snug">
+                <T id={`${P}.t18`}>Spokesperson and on-camera training</T>
               </h3>
-              <p className="text-charcoal text-[15px] leading-relaxed">
-                <T id="media-training.t19">
-                Intensive one-on-one or small group sessions that prepare
-                executives, managers, and communications staff for
-                television, radio, and press conference appearances. Sessions
-                are conducted using real broadcast equipment and recorded for
-                review, because watching yourself on camera is the fastest path
-                to genuine improvement.
+              <p className="mt-2.5 text-[15px] leading-relaxed text-muted">
+                <T id={`${P}.t19`}>
+                  Intensive one-on-one or small group sessions that prepare executives, managers, and communications
+                  staff for television, radio, and press conference appearances. Sessions are conducted using real
+                  broadcast equipment and recorded for review, because watching yourself on camera is the fastest
+                  path to genuine improvement.
                 </T>
               </p>
-              <p className="text-charcoal text-[15px] leading-relaxed mt-4">
-                <T id="media-training.t20">
-                Every session covers: message development and prioritisation,
-                bridging and refocusing techniques, body language and presence
-                on camera, handling off-topic questions, and managing the
-                emotional pressure of a live interview. We use real scenarios
-                from your sector, not generic examples.
+              <p className="mt-4 text-[15px] leading-relaxed text-muted">
+                <T id={`${P}.t20`}>
+                  Every session covers: message development and prioritisation, bridging and refocusing techniques,
+                  body language and presence on camera, handling off-topic questions, and managing the emotional
+                  pressure of a live interview. We use real scenarios from your sector, not generic examples.
                 </T>
               </p>
             </div>
-
-            <div>
-              <h3 className="font-heading text-navy text-2xl mb-3">
-                <T id="media-training.t21">
-                Hostile media and crisis interview preparation
-                </T>
+            <div className="border-t border-line py-6">
+              <h3 className="kit-display text-[15px] uppercase leading-snug">
+                <T id={`${P}.t21`}>Hostile media and crisis interview preparation</T>
               </h3>
-              <p className="text-charcoal text-[15px] leading-relaxed">
-                <T id="media-training.t22">
-                For leaders who may face adversarial media questioning during a
-                regulatory inquiry, a crisis event, or a contentious public
-                debate, we run intensive workshops that simulate the specific
-                conditions they are likely to face.
+              <p className="mt-2.5 text-[15px] leading-relaxed text-muted">
+                <T id={`${P}.t22`}>
+                  For leaders who may face adversarial media questioning during a regulatory inquiry, a crisis
+                  event, or a contentious public debate, we run intensive workshops that simulate the specific
+                  conditions they are likely to face.
                 </T>
               </p>
-              <p className="text-charcoal text-[15px] leading-relaxed mt-4">
-                <T id="media-training.t23">
-                These sessions include: mock hostile interviews conducted by
-                former journalists, coaching on how to hold your position under
-                sustained pressure, training in recognising the techniques
-                journalists use to provoke unrehearsed responses, and the
-                development of a personal communications strategy for
-                high-stakes appearances.
+              <p className="mt-4 text-[15px] leading-relaxed text-muted">
+                <T id={`${P}.t23`}>
+                  These sessions include: mock hostile interviews conducted by former journalists, coaching on how
+                  to hold your position under sustained pressure, training in recognising the techniques journalists
+                  use to provoke unrehearsed responses, and the development of a personal communications strategy
+                  for high-stakes appearances.
                 </T>
               </p>
             </div>
-
-            <div>
-              <h3 className="font-heading text-navy text-2xl mb-3">
-                <T id="media-training.t24">
-                PR fundamentals: team workshops
-                </T>
+            <div className="border-t border-line py-6">
+              <h3 className="kit-display text-[15px] uppercase leading-snug">
+                <T id={`${P}.t24`}>PR fundamentals: team workshops</T>
               </h3>
-              <p className="text-charcoal text-[15px] leading-relaxed">
-                <T id="media-training.t25">
-                For communications teams and new spokespeople who need a solid
-                foundation in media relations, we deliver practical workshops
-                that cover: how newsrooms work and how journalists make story
-                decisions, how to develop and hold a key message position, the
-                mechanics of a media interview across print, broadcast, and
-                digital, and how to build and maintain productive media
-                relationships.
+              <p className="mt-2.5 text-[15px] leading-relaxed text-muted">
+                <T id={`${P}.t25`}>
+                  For communications teams and new spokespeople who need a solid foundation in media relations, we
+                  deliver practical workshops that cover: how newsrooms work and how journalists make story
+                  decisions, how to develop and hold a key message position, the mechanics of a media interview
+                  across print, broadcast, and digital, and how to build and maintain productive media
+                  relationships.
                 </T>
               </p>
             </div>
-
-            <div>
-              <h3 className="font-heading text-navy text-2xl mb-3">
-                <T id="media-training.t26">
-                Online and remote media training
-                </T>
+            <div className="border-t border-line py-6">
+              <h3 className="kit-display text-[15px] uppercase leading-snug">
+                <T id={`${P}.t26`}>Online and remote media training</T>
               </h3>
-              <p className="text-charcoal text-[15px] leading-relaxed">
-                <T id="media-training.t27">
-                Full media training programmes delivered via video conferencing
-                for organisations with distributed teams, interstate offices,
-                or Pacific Island locations. We use broadcast-quality recording
-                and playback to maintain the same rigour as in-person sessions.
+              <p className="mt-2.5 text-[15px] leading-relaxed text-muted">
+                <T id={`${P}.t27`}>
+                  Full media training programmes delivered via video conferencing for organisations with distributed
+                  teams, interstate offices, or Pacific Island locations. We use broadcast-quality recording and
+                  playback to maintain the same rigour as in-person sessions.
                 </T>
               </p>
-              <p className="text-charcoal text-[15px] leading-relaxed mt-4">
-                <T id="media-training.t28">
-                Remote delivery also allows us to work with multiple
-                participants across multiple locations simultaneously,
-                particularly useful for organisations preparing a leadership
-                team for a major announcement or issue.
+              <p className="mt-4 text-[15px] leading-relaxed text-muted">
+                <T id={`${P}.t28`}>
+                  Remote delivery also allows us to work with multiple participants across multiple locations
+                  simultaneously, particularly useful for organisations preparing a leadership team for a major
+                  announcement or issue.
                 </T>
               </p>
             </div>
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
-      {/* Who needs media training */}
-      <section className="bg-white py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="max-w-3xl">
-            <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
-              <span className="h-px w-8 bg-current opacity-50" aria-hidden />
-              <T id="media-training.t29">
-              Readiness check
-              </T>
-            </p>
-            <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
-              <T id="media-training.t30">
-              Who needs media training
-              </T>
-            </h2>
-            <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
-              <T id="media-training.t31">
-              If several of these sound familiar, media training is no longer a
-              nice-to-have. It is part of basic executive preparedness.
+      {/* ---------- WHO NEEDS MEDIA TRAINING ---------- */}
+      <Section tone="deep" className="py-11 md:py-14">
+        <Container className="grid gap-10 lg:grid-cols-[0.8fr,1.2fr] lg:gap-14">
+          <div>
+            <Eyebrow>
+              <T id={`${P}.t29`}>Readiness check</T>
+            </Eyebrow>
+            <H2 className="mt-3">
+              <T id={`${P}.t30`}>Who needs media training</T>
+            </H2>
+            <p className="mt-5 text-[clamp(1.05rem,1.5vw,1.2rem)] font-medium leading-[1.45]">
+              <T id={`${P}.t31`}>
+                If several of these sound familiar, media training is no longer a nice-to-have. It is part of basic
+                executive preparedness.
               </T>
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 mt-12">
+          <ul className="divide-y divide-[var(--line)] border-y border-line">
             {WHO_NEEDS_ITEMS.map((item) => (
-              <div
-                key={item}
-                className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6 md:p-7"
-              >
-                <div className="flex items-start gap-3">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white border border-brand-border">
-                    <Check
-                      className="h-4 w-4 text-brand-gold"
-                      strokeWidth={2.5}
-                    />
-                  </div>
-                  <p className="text-charcoal text-[15px] leading-relaxed">
-                    {item}
-                  </p>
-                </div>
-              </div>
+              <li key={item} className="flex items-start gap-3.5 py-4">
+                <Check className="mt-1 h-4 w-4 shrink-0 text-accent" strokeWidth={2.5} aria-hidden />
+                <span className="text-[15px] leading-relaxed">{item}</span>
+              </li>
             ))}
-          </div>
-        </div>
-      </section>
+          </ul>
+        </Container>
+      </Section>
 
       <LeadMagnetBanner
         magnet="mediaInterviewGuide"
+        variant="light"
         title="Download the Media Interview Preparation Guide"
         description="The pre-interview checklist and briefing framework we give to executives before meaningful media appearances. Covers hostile interview preparation, on-camera presence, message prioritisation, and the questions every spokesperson should be able to answer before walking in."
       />
 
-      <FAQSection copyId="media-training"
+      <FAQSection copyId={P}
         items={faqs}
         titleText="Common questions about media training"
         expandable={false}
       />
 
-      <PageClosingCTA copyId="media-training"
+      <PageClosingCTA copyId={P}
         title="Every spokesperson is a risk until they are prepared."
         body="Media training is an investment you make before the difficult interview, not the day after it. We prepare leaders for the questions they are actually likely to face."
         primaryLabel="Book a media training session"

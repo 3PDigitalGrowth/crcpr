@@ -427,6 +427,12 @@
   line-height: var(--k-h1-leading);
   text-transform: var(--k-h1-case);
 }
+/* Inner-page headline: the Chambers capitals, a step down from the homepage H1. */
+.kit .kit-h1-page {
+  font-size: clamp(1.75rem, 3.5vw, 2.9rem);
+  line-height: 1.02;
+  text-transform: var(--k-h1-case);
+}
 .kit .kit-h2 {
   font-size: var(--k-h2-size);
   line-height: 1.1;
@@ -703,5 +709,60 @@
   .kit .marquee-track,
   .kit .spin-slow {
     animation: none;
+  }
+}
+
+/* ---------- ledger (Chambers hairline columns) ---------- */
+
+/* Stacked rows on phones; side-by-side cells divided by hairlines from md
+   (from lg with .ledger-wide, for four or more cells). */
+.kit .ledger {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.kit .ledger > * {
+  padding-block: 1.5rem;
+}
+.kit .ledger > * + * {
+  border-top: 1px solid var(--line);
+}
+@media (min-width: 768px) {
+  .kit .ledger:not(.ledger-wide) {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+  }
+  .kit .ledger:not(.ledger-wide) > * {
+    padding-inline: 1.5rem;
+  }
+  .kit .ledger:not(.ledger-wide) > *:first-child {
+    padding-left: 0;
+  }
+  .kit .ledger:not(.ledger-wide) > *:last-child {
+    padding-right: 0;
+  }
+  .kit .ledger:not(.ledger-wide) > * + * {
+    border-top: 0;
+    border-left: 1px solid var(--line);
+  }
+}
+@media (min-width: 1024px) {
+  .kit .ledger.ledger-wide {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+  }
+  .kit .ledger.ledger-wide > * {
+    padding-inline: 1.5rem;
+  }
+  .kit .ledger.ledger-wide > *:first-child {
+    padding-left: 0;
+  }
+  .kit .ledger.ledger-wide > *:last-child {
+    padding-right: 0;
+  }
+  .kit .ledger.ledger-wide > * + * {
+    border-top: 0;
+    border-left: 1px solid var(--line);
   }
 }

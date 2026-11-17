@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { PageHero } from "@/components/layout/PageHero";
 import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
-import { PageProofStrip } from "@/components/shared/PageProofStrip";
+import { Container, Section } from "@/components/altkit/primitives";
 import { siteConfig } from "@/config/site";
 import { T } from "@/components/editable";
 
@@ -22,45 +22,19 @@ export default function TermsPage() {
         ctaHref="/contact"
       />
 
-      <PageProofStrip copyId="terms"
-        title="These terms are designed to be clear, practical, and consistent with a professional-services website."
-        items={[
-          {
-            label: "Use",
-            value: "General information",
-            detail:
-              "Site content is intended as general information and does not create a professional relationship by itself.",
-          },
-          {
-            label: "Rights",
-            value: "Protected content",
-            detail:
-              "CRC Public Relations content, branding, and materials remain protected by copyright and other applicable rights.",
-          },
-          {
-            label: "Contact",
-            value: "Ask directly",
-            detail:
-              "If a term is unclear, contact CRC Public Relations directly rather than making assumptions about its application.",
-          },
-        ]}
-      />
 
-      <section className="bg-white py-16 md:py-20">
-        <div className="max-w-3xl mx-auto px-6">
-          <p className="text-charcoal-mid text-[15px] leading-relaxed">
+      <Section tone="base" className="pb-14 pt-2 md:pb-20">
+        <Container>
+        <div className="kit-prose max-w-3xl">
+          <p className="!font-medium !text-[var(--fg)]">
             <T id="terms.t1">
             These terms explain how the CRC Public Relations website may be used and the basis on
             which its content is provided. They are written to be readable, not merely
             comprehensive, so users can understand the practical boundaries quickly.
             </T>
           </p>
-        </div>
-      </section>
 
-      <section className="bg-white py-24">
-        <div className="max-w-3xl mx-auto px-6 prose prose-lg max-w-none prose-headings:font-heading prose-headings:font-normal prose-headings:text-navy prose-p:text-charcoal prose-p:leading-relaxed prose-a:text-brand-gold prose-strong:text-charcoal prose-li:text-charcoal">
-          <p className="lead text-charcoal-mid">
+          <p>
             These terms govern your use of the CRC Public Relations website
             located at{" "}
             <a
@@ -184,13 +158,14 @@ export default function TermsPage() {
             .
           </p>
 
-          <p className="text-sm text-charcoal-mid">
+          <p className="!text-sm">
             <T id="terms.t12">
             Effective: March 2026.
             </T>
           </p>
         </div>
-      </section>
+        </Container>
+      </Section>
 
       <PageClosingCTA copyId="terms"
         title="Need clarification on these terms?"

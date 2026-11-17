@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Phone } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
 import { Reveal } from "./motion";
 import { Container, Eyebrow } from "./primitives";
 
@@ -11,13 +12,19 @@ export function ClosingCTA({
   body,
   primaryLabel = "Book a consultation",
   center = false,
+  site = false,
 }: {
   eyebrow?: string;
   title: string;
   body: string;
   primaryLabel?: string;
   center?: boolean;
+  /** On the live site every page closes with the homepage's inset invitation panel. */
+  site?: boolean;
 }) {
+  if (site) {
+    return <PageClosingCTA eyebrow={eyebrow} title={title} body={body} primaryLabel={primaryLabel} />;
+  }
   return (
     <section className="tone-cta relative overflow-hidden py-20 md:py-24" aria-label={title}>
       <div className="orb -right-40 -top-48 h-[36rem] w-[36rem]" aria-hidden />

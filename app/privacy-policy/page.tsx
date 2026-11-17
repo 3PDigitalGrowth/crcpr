@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { PageHero } from "@/components/layout/PageHero";
 import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
-import { PageProofStrip } from "@/components/shared/PageProofStrip";
+import { Container, Section } from "@/components/altkit/primitives";
 import { siteConfig } from "@/config/site";
 import { T } from "@/components/editable";
 
@@ -22,33 +22,11 @@ export default function PrivacyPolicyPage() {
         ctaHref="/contact"
       />
 
-      <PageProofStrip copyId="privacy-policy"
-        title="Privacy is treated as a trust issue, not an administrative afterthought."
-        items={[
-          {
-            label: "Purpose",
-            value: "Clear handling",
-            detail:
-              "This policy explains what information we collect, why we collect it, and how it is used.",
-          },
-          {
-            label: "Standard",
-            value: "Australian context",
-            detail:
-              "Our approach is framed around the Australian Privacy Principles and our wider duty of professional discretion.",
-          },
-          {
-            label: "Action",
-            value: "Questions welcome",
-            detail:
-              "If you need clarification, the right next step is to contact CRC Public Relations directly.",
-          },
-        ]}
-      />
 
-      <section className="bg-white py-16 md:py-20">
-        <div className="max-w-3xl mx-auto px-6">
-          <p className="text-charcoal-mid text-[15px] leading-relaxed">
+      <Section tone="base" className="pb-14 pt-2 md:pb-20">
+        <Container>
+        <div className="kit-prose max-w-3xl">
+          <p className="!font-medium !text-[var(--fg)]">
             <T id="privacy-policy.t1">
             CRC Public Relations works in environments where confidentiality, discretion, and trust
             are central to the relationship. This page sets out how personal
@@ -56,12 +34,8 @@ export default function PrivacyPolicyPage() {
             with those expectations.
             </T>
           </p>
-        </div>
-      </section>
 
-      <section className="bg-white py-24">
-        <div className="max-w-3xl mx-auto px-6 prose prose-lg max-w-none prose-headings:font-heading prose-headings:font-normal prose-headings:text-navy prose-p:text-charcoal prose-p:leading-relaxed prose-a:text-brand-gold prose-strong:text-charcoal prose-li:text-charcoal">
-          <p className="lead text-charcoal-mid">
+          <p>
             This privacy policy describes how CRC Public Relations (&quot;CRC
             PR&quot;, &quot;we&quot;, &quot;us&quot;) collects, uses, and
             protects personal information in connection with this website and
@@ -170,14 +144,15 @@ export default function PrivacyPolicyPage() {
             </T>
           </p>
 
-          <p className="text-sm text-charcoal-mid">
+          <p className="!text-sm">
             <T id="privacy-policy.t11">
             Last updated: March 2026. We may update this policy from time to
             time; the current version will always be published on this page.
             </T>
           </p>
         </div>
-      </section>
+        </Container>
+      </Section>
 
       <PageClosingCTA copyId="privacy-policy"
         title="Need clarification on privacy or data handling?"

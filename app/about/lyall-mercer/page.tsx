@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { siteConfig } from "@/config/site";
-import { ImageTextRow } from "@/components/layout/ImageTextRow";
 import { PageHero } from "@/components/layout/PageHero";
 import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
 import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
@@ -10,6 +8,10 @@ import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
 import { PageProofStrip } from "@/components/shared/PageProofStrip";
 import { PortraitPlaceholder } from "@/components/shared/PortraitPlaceholder";
 import { MediaOutletLogoLink } from "@/components/shared/MediaOutletLogoLink";
+import Link from "next/link";
+import { Reveal } from "@/components/altkit/motion";
+import { Container, Eyebrow, H2, Section } from "@/components/altkit/primitives";
+import { PHOTOS } from "@/components/altkit/data";
 import { T } from "@/components/editable";
 
 export const metadata: Metadata = {
@@ -18,23 +20,35 @@ export const metadata: Metadata = {
     "Lyall Mercer is the co-founder of CRC Public Relations. Former journalist and trusted crisis communications adviser with a career spanning media, PR, and high-stakes communications.",
 };
 
+const expertiseAreas = [
+  { area: "Crisis Communications", desc: "Crisis counsel across every sector and severity level, from governance failures to safety incidents, media exposés, and social media firestorms." },
+  { area: "Reputation Management", desc: "Vulnerability assessments, reputation monitoring, and long-term reputation protection strategies for organisations under scrutiny or at risk." },
+  { area: "Industry Associations", desc: "Deep experience with peak bodies, member organisations, and regulatory engagement, including some of Australia's most prominent national associations." },
+  { area: "Schools & Faith-Based Organisations", desc: "Specialist crisis communications for independent schools, Catholic systems, and faith-based organisations navigating sensitive disclosures and media attention." },
+  { area: "Pacific Communications", desc: "Cross-cultural communications, government relations, and crisis response across the Pacific Islands. The only Australian PR firm with sustained practice in this region." },
+  { area: "Media Training", desc: "Spokesperson preparation and hostile media workshops delivered in partnership with television and radio journalists. Clients include executives, politicians, and sporting figures." },
+];
+
+/* Chambers port (17 Nov 2026). Copy is unchanged from the previous page. The
+   generated hero and journalist images were dropped; the portrait is the one
+   real photograph of Lyall on the page. */
+
 export default function LyallMercerPage() {
   return (
     <>
-      <PageHero copyId="about-lyall-mercer"
+      <PageHero
+        copyId="about-lyall-mercer"
         asidePreset="editorialInsights"
         eyebrow="co-founder & principal adviser"
         title="Lyall Mercer"
         description="Co-founder of CRC Public Relations. Former journalist and trusted crisis adviser to leaders facing scrutiny, pressure, and reputational risk."
         ctaLabel="Work with Lyall"
         ctaHref="/contact"
-        heroImage={{
-          src: "/images/about/hero.webp",
-          alt: "Brisbane CBD and Story Bridge at golden hour from riverside with warm reflections",
-        }}
       />
 
-      <PageProofStrip copyId="about-lyall-mercer"
+      <PageProofStrip
+        copyId="about-lyall-mercer"
+        variant="navy"
         title="Lyall Mercer is trusted when the matter requires judgement, not performance."
         items={[
           {
@@ -58,66 +72,24 @@ export default function LyallMercerPage() {
         ]}
       />
 
-      <section className="bg-white py-16 md:py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <ImageTextRow
-            imageSrc="/images/about/mid-journalism.webp"
-            imageAlt="Vintage journalist desk with broadsheets, notepad, and warm lamp light suggesting a newsroom heritage"
-            imagePosition="left"
-          >
-            <div>
-              <h2 className="text-navy font-heading text-3xl md:text-4xl leading-[1.05] tracking-[-0.02em]">
-                <T id="about-lyall-mercer.t1">
-                The journalist who became a trusted crisis communications
-                adviser
-                </T>
-              </h2>
-              <p className="text-charcoal-mid text-[15px] leading-relaxed mt-6">
-                <T id="about-lyall-mercer.t2">
-                Lyall Mercer began his career as a journalist, writing for some of
-                Australia&apos;s leading newspapers. That foundation,
-                understanding exactly how media thinks, moves, and decides what
-                becomes a story, is what makes his approach to corporate
-                communications and crisis advice unlike any other.
-                </T>
-              </p>
-              <p className="text-charcoal-mid text-[15px] leading-relaxed mt-4">
-                <T id="about-lyall-mercer.t3">
-                His clients include national and international companies,
-                governments, industry associations, not-for-profit organisations,
-                politicians, celebrities, and sporting figures, and he has worked
-                with clients and media across Australia, the Pacific, North
-                America, Europe, Asia, and other international markets.
-                </T>
-              </p>
-            </div>
-          </ImageTextRow>
-        </div>
-      </section>
-
-      <section className="bg-white py-24 border-t border-brand-border">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-16">
-          <div className="lg:col-span-1">
-            <div className="relative w-fit">
-              <div
-                className="absolute -inset-3 rounded-[2rem] border border-brand-gold/35"
-                aria-hidden
-              />
+      {/* ---------- THE JOURNALIST, THE PORTRAIT ---------- */}
+      <Section tone="base" className="py-11 md:py-14">
+        <Container className="grid gap-10 lg:grid-cols-[minmax(0,340px),1fr] lg:gap-14">
+          <div>
+            <Reveal>
               <PortraitPlaceholder
-                size="lg"
+                size="fluid"
                 initials={undefined}
-                imageSrc={siteConfig.lyall.portraitSrc}
+                imageSrc={PHOTOS.lyallNavyClose}
                 imageAlt={siteConfig.lyall.fullName}
-                className="relative"
+                className="max-w-[18rem] lg:max-w-sm"
               />
-            </div>
+            </Reveal>
             <div className="mt-8">
-              <h4 className="text-xs font-sans font-medium text-charcoal-mid mb-3">
-                <T id="about-lyall-mercer.t4">
-                As seen in
-                </T>
-              </h4>
-              <div className="flex flex-wrap gap-4 items-center">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.26em] text-muted">
+                <T id="about-lyall-mercer.t4">As seen in</T>
+              </p>
+              <div className="mt-4 flex flex-wrap items-center gap-x-7 gap-y-4">
                 {siteConfig.lyall.mediaLinks.map((item) => (
                   <MediaOutletLogoLink
                     key={item.name}
@@ -131,124 +103,154 @@ export default function LyallMercerPage() {
               </div>
             </div>
           </div>
-          <div className="lg:col-span-2">
-            <p className="text-charcoal-mid text-[15px] leading-relaxed">
-              <T id="about-lyall-mercer.t5">
-              Clients choose to work with Lyall because they deal directly with
-              him. While you&apos;ll get to know other members of our team, he
-              is always involved.
-              </T>
-            </p>
-            <p className="text-charcoal-mid text-[15px] leading-relaxed mt-4">
-              <T id="about-lyall-mercer.t6">
-              Lyall is a sought-after conference speaker, delivering keynotes and
-              workshops on crisis communications, reputation management, and media
-              strategy across Australia and the Pacific.
-              </T>
-            </p>
 
-            <blockquote className="border-l-[3px] border-brand-gold pl-6 py-4 mt-8 bg-off-white rounded-r-lg">
-              <p className="font-heading text-navy text-xl md:text-2xl leading-snug">
-                {siteConfig.lyall.quote}
-              </p>
-              <footer className="text-brand-gold font-medium text-sm mt-2">
-                <T id="about-lyall-mercer.t7">
-                Lyall Mercer
-                </T>
-              </footer>
-            </blockquote>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-warm-white py-16">
-        <div className="max-w-3xl mx-auto px-6">
-          <div className="bg-white border border-brand-border rounded-[1.5rem] p-8 my-10 shadow-sm shadow-navy/5">
-            <p className="mb-3 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
-              <span className="h-px w-8 bg-current opacity-50" aria-hidden />
-              <T id="about-lyall-mercer.t8">
-              Lyall&apos;s signature framework
-              </T>
-            </p>
-            <h2 className="font-heading text-navy text-4xl mb-4 leading-[1.05] tracking-[-0.02em]">
-              <T id="about-lyall-mercer.t9">
-              The 15 Minutes Principle
-              </T>
-            </h2>
-            <blockquote className="border-l-4 border-brand-gold pl-5 mb-5">
-              <p className="font-heading text-navy text-xl md:text-2xl leading-snug">
-                <T id="about-lyall-mercer.t10">
-                &ldquo;You have 15 minutes to respond to an emerging crisis before you start to lose control of the message. After that window closes, you&apos;re no longer shaping the story; you&apos;re responding to it.&rdquo;
+          <div>
+            <H2>
+              <T id="about-lyall-mercer.t1">The journalist who became a trusted crisis communications adviser</T>
+            </H2>
+            <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted">
+              <p>
+                <T id="about-lyall-mercer.t2">
+                  Lyall Mercer began his career as a journalist, writing for some of Australia&apos;s leading
+                  newspapers. That foundation, understanding exactly how media thinks, moves, and decides what becomes
+                  a story, is what makes his approach to corporate communications and crisis advice unlike any other.
                 </T>
               </p>
-            </blockquote>
-            <p className="text-text-body text-base leading-relaxed mb-5">
-              <T id="about-lyall-mercer.t11">
-              Developed through Lyall&apos;s crisis communications practice across Australia and internationally, the 15 Minutes Principle is his framework for crisis response discipline. It has been shared with executives, boards, and communications teams across Australia, the USA, and Canada.
-              </T>
-            </p>
-            <Link href="/insights/the-15-minutes-principle" className="text-link-teal text-sm font-medium hover:text-navy hover:underline">
-              <T id="about-lyall-mercer.t12">
-              Read the full 15 Minutes Principle article →
-              </T>
-            </Link>
-          </div>
-
-          <div className="my-10">
-            <h2 className="font-heading text-navy text-3xl mb-6"><T id="about-lyall-mercer.t15">Areas of specialist expertise</T></h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {[
-                { area: "Crisis Communications", desc: "Crisis counsel across every sector and severity level, from governance failures to safety incidents, media exposés, and social media firestorms." },
-                { area: "Reputation Management", desc: "Vulnerability assessments, reputation monitoring, and long-term reputation protection strategies for organisations under scrutiny or at risk." },
-                { area: "Industry Associations", desc: "Deep experience with peak bodies, member organisations, and regulatory engagement, including some of Australia's most prominent national associations." },
-                { area: "Schools & Faith-Based Organisations", desc: "Specialist crisis communications for independent schools, Catholic systems, and faith-based organisations navigating sensitive disclosures and media attention." },
-                { area: "Pacific Communications", desc: "Cross-cultural communications, government relations, and crisis response across the Pacific Islands. The only Australian PR firm with sustained practice in this region." },
-                { area: "Media Training", desc: "Spokesperson preparation and hostile media workshops delivered in partnership with television and radio journalists. Clients include executives, politicians, and sporting figures." },
-              ].map(({ area, desc }) => (
-                <div key={area} className="bg-off-white border border-brand-border rounded-[1.5rem] p-5">
-                  <p className="font-heading text-navy text-sm mb-2">{area}</p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">{desc}</p>
-                </div>
-              ))}
+              <p>
+                <T id="about-lyall-mercer.t3">
+                  His clients include national and international companies, governments, industry associations,
+                  not-for-profit organisations, politicians, celebrities, and sporting figures, and he has worked with
+                  clients and media across Australia, the Pacific, North America, Europe, Asia, and other international
+                  markets.
+                </T>
+              </p>
+              <p>
+                <T id="about-lyall-mercer.t5">
+                  Clients choose to work with Lyall because they deal directly with him. While you&apos;ll get to know
+                  other members of our team, he is always involved.
+                </T>
+              </p>
+              <p>
+                <T id="about-lyall-mercer.t6">
+                  Lyall is a sought-after conference speaker, delivering keynotes and workshops on crisis
+                  communications, reputation management, and media strategy across Australia and the Pacific.
+                </T>
+              </p>
             </div>
           </div>
+        </Container>
+      </Section>
 
-          <div className="my-10">
-            <h2 className="font-heading text-navy text-3xl mb-4"><T id="about-lyall-mercer.t16">Speaking and training</T></h2>
-            <p className="text-charcoal text-base leading-relaxed mb-4">
-              <T id="about-lyall-mercer.t13">
-              Lyall is a sought-after keynote speaker and workshop facilitator on crisis communications, reputation management, and media strategy. He has delivered programmes across Australia, the USA, and Canada, including at the Australian Catholic Bishops Conference.
+      {/* ---------- THE 15 MINUTES PRINCIPLE ---------- */}
+      <Section tone="deep" className="py-11 md:py-14">
+        <Container className="grid gap-10 lg:grid-cols-[0.8fr,1.2fr] lg:gap-14">
+          <div>
+            <Eyebrow>
+              <T id="about-lyall-mercer.t8">Lyall&apos;s signature framework</T>
+            </Eyebrow>
+            <H2 className="mt-3">
+              <T id="about-lyall-mercer.t9">The 15 Minutes Principle</T>
+            </H2>
+          </div>
+          <div>
+            <blockquote className="border-l-[3px] border-[var(--k-blue)] pl-5">
+              <p className="text-lg font-semibold leading-snug">
+                <T id="about-lyall-mercer.t10">
+                  &quot;You have 15 minutes to respond to an emerging crisis before you start to lose control of the
+                  message. After that window closes, you&apos;re no longer shaping the story; you&apos;re responding to
+                  it.&quot;
+                </T>
+              </p>
+            </blockquote>
+            <p className="mt-6 text-[15px] leading-relaxed text-muted">
+              <T id="about-lyall-mercer.t11">
+                Developed through Lyall&apos;s crisis communications practice across Australia and internationally, the
+                15 Minutes Principle is his framework for crisis response discipline. It has been shared with
+                executives, boards, and communications teams across Australia, the USA, and Canada.
               </T>
             </p>
-            <p className="text-charcoal text-base leading-relaxed mb-6">
-              For speaking enquiries, visit{" "}
-              <a href={siteConfig.lyallMercerUrl} target="_blank" rel="noopener noreferrer" className="text-link-teal hover:text-navy hover:underline"><T id="about-lyall-mercer.t17">lyallmercer.com</T></a>
-              . For crisis communications training and masterclasses, visit{" "}
-              <a href={siteConfig.myPrPartnerUrl} target="_blank" rel="noopener noreferrer" className="text-link-teal hover:text-navy hover:underline"><T id="about-lyall-mercer.t18">myprpartner.com</T></a>.
-            </p>
+            <Link
+              href="/insights/the-15-minutes-principle"
+              className="mt-5 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-accent"
+            >
+              <T id="about-lyall-mercer.t12">Read the full 15 Minutes Principle article →</T>
+            </Link>
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
-      <section className="bg-off-white py-16">
-        <div className="max-w-3xl mx-auto px-6 flex flex-col gap-4">
-          <a
-            href={siteConfig.lyallMercerUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-link-teal hover:text-navy hover:underline font-medium"
-          >
-            <T id="about-lyall-mercer.t14">
-            → Visit lyallmercer.com for the full profile
-            </T>
-          </a>
-          <MyPRPartnerCTA
-            title="Need training, workshops, or practical communications development?"
-            description="My PR Partner is CRC Public Relations' training platform for communications practitioners, spokesperson development, crisis workshops, and practical support between major advisory engagements."
-            buttonLabel="Explore My PR Partner"
-          />
-        </div>
-      </section>
+      {/* ---------- AREAS OF EXPERTISE ---------- */}
+      <Section tone="base" className="py-11 md:py-14">
+        <Container>
+          <H2 className="max-w-3xl">
+            <T id="about-lyall-mercer.t15">Areas of specialist expertise</T>
+          </H2>
+          <div className="mt-8 grid gap-x-14 md:grid-cols-2">
+            {expertiseAreas.map(({ area, desc }) => (
+              <div key={area} className="border-t border-line py-6">
+                <h3 className="kit-display text-[15px] uppercase leading-snug">{area}</h3>
+                <p className="mt-2.5 text-[15px] leading-relaxed text-muted">{desc}</p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </Section>
+
+      {/* ---------- SPEAKING AND TRAINING ---------- */}
+      <Section tone="base" className="pb-11 md:pb-14">
+        <Container className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:gap-14">
+          <div>
+            <H2>
+              <T id="about-lyall-mercer.t16">Speaking and training</T>
+            </H2>
+            <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted">
+              <p>
+                <T id="about-lyall-mercer.t13">
+                  Lyall is a sought-after keynote speaker and workshop facilitator on crisis communications,
+                  reputation management, and media strategy. He has delivered programmes across Australia, the USA, and
+                  Canada, including at the Australian Catholic Bishops Conference.
+                </T>
+              </p>
+              <p>
+                For speaking enquiries, visit{" "}
+                <a
+                  href={siteConfig.lyallMercerUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent underline-offset-4 hover:underline"
+                >
+                  <T id="about-lyall-mercer.t17">lyallmercer.com</T>
+                </a>
+                . For crisis communications training and masterclasses, visit{" "}
+                <a
+                  href={siteConfig.myPrPartnerUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent underline-offset-4 hover:underline"
+                >
+                  <T id="about-lyall-mercer.t18">myprpartner.com</T>
+                </a>
+                .
+              </p>
+            </div>
+            <a
+              href={siteConfig.lyallMercerUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-accent"
+            >
+              <T id="about-lyall-mercer.t14">→ Visit lyallmercer.com for the full profile</T>
+            </a>
+          </div>
+          <Reveal className="lg:pt-2">
+            <MyPRPartnerCTA
+              title="Need training, workshops, or practical communications development?"
+              description="My PR Partner is CRC Public Relations' training platform for communications practitioners, spokesperson development, crisis workshops, and practical support between major advisory engagements."
+              buttonLabel="Explore My PR Partner"
+            />
+          </Reveal>
+        </Container>
+      </Section>
 
       <LeadMagnetBanner
         magnet="publicVoiceSteps"
@@ -257,7 +259,8 @@ export default function LyallMercerPage() {
         description="Download the CRC Public Relations '5 steps to becoming a trusted public voice', and drive new clients and staff through the credibility this brings. Applies to companies, non-profits, governments, professional services firms, schools and associations."
       />
 
-      <InlineEnquirySection copyId="about-lyall-mercer"
+      <InlineEnquirySection
+        copyId="about-lyall-mercer"
         title="Need Lyall's advice on a high-stakes matter?"
         body="Use this form for confidential advisory, speaking, commentary, or specialist crisis and reputation enquiries involving Lyall Mercer."
         bullets={[
@@ -269,7 +272,8 @@ export default function LyallMercerPage() {
         variant="white"
       />
 
-      <PageClosingCTA copyId="about-lyall-mercer"
+      <PageClosingCTA
+        copyId="about-lyall-mercer"
         title="Work directly with Lyall Mercer."
         body="For advisory, commentary, speaking, or high-stakes communications matters, get in touch and we will route the conversation appropriately."
         primaryLabel="Work with Lyall"

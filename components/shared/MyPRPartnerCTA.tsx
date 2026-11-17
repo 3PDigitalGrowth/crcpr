@@ -1,7 +1,8 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import { Eyebrow } from "@/components/altkit/primitives";
 
 interface MyPRPartnerCTAProps {
   variant?: "light" | "dark";
@@ -13,8 +14,8 @@ interface MyPRPartnerCTAProps {
   className?: string;
 }
 
+/** Chambers framed aside: eyebrow, capitals title, one quiet action. */
 export function MyPRPartnerCTA({
-  variant = "light",
   compact = false,
   eyebrow = "My PR Partner",
   title = "Training, tools, and practical support between major advisory moments.",
@@ -22,46 +23,19 @@ export function MyPRPartnerCTA({
   buttonLabel = "Explore My PR Partner",
   className = "",
 }: MyPRPartnerCTAProps) {
-  const isDark = variant === "dark";
-
   return (
-    <div
-      className={`rounded-[1.5rem] p-5 ${
-        isDark
-          ? "v2-glass-dark"
-          : "border border-brand-border bg-warm-white/70 backdrop-blur shadow-sm shadow-navy/5"
-      } ${className}`}
-    >
-      <p className="mb-3 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
-        <span className="h-px w-8 bg-current opacity-50" aria-hidden />
-        {eyebrow}
-      </p>
-      <p
-        className={`font-heading ${
-          compact ? "text-base" : "text-lg"
-        } leading-snug ${isDark ? "text-white" : "text-navy"}`}
-      >
-        {title}
-      </p>
-      <p
-        className={`${
-          compact ? "text-xs" : "text-sm"
-        } leading-relaxed mt-3 ${isDark ? "text-white/65" : "text-charcoal-mid"}`}
-      >
-        {description}
-      </p>
+    <div className={`kit-r border border-line p-6 md:p-8 ${className}`}>
+      <Eyebrow>{eyebrow}</Eyebrow>
+      <p className={`kit-display mt-4 uppercase leading-snug ${compact ? "text-[15px]" : "text-lg"}`}>{title}</p>
+      <p className={`mt-3 leading-relaxed text-muted ${compact ? "text-xs" : "text-sm"}`}>{description}</p>
       <a
         href={siteConfig.myPrPartnerUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className={`inline-flex items-center justify-center gap-2 rounded-full font-sans text-sm font-semibold px-5 py-3 mt-4 transition ${
-          isDark
-            ? "border border-white/25 text-white hover:bg-white/10"
-            : "bg-brand-teal text-white shadow-lg shadow-brand-teal/20 transition-colors hover:bg-link-teal"
-        }`}
+        className="btn btn-quiet mt-5 inline-flex items-center gap-2"
       >
         {buttonLabel}
-        <ArrowRight size={14} aria-hidden />
+        <ArrowUpRight className="h-4 w-4" aria-hidden />
       </a>
     </div>
   );

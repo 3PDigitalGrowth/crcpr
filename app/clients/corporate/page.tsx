@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Check } from "lucide-react";
-import { ImageTextRow } from "@/components/layout/ImageTextRow";
 import { PageHero } from "@/components/layout/PageHero";
 import { FAQSection } from "@/components/shared/FAQSection";
 import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
 import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
 import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
 import { PageProofStrip } from "@/components/shared/PageProofStrip";
+import { Reveal } from "@/components/altkit/motion";
+import { Container, Eyebrow, H2, Section } from "@/components/altkit/primitives";
 import { T } from "@/components/editable";
 
 export const metadata: Metadata = {
@@ -64,106 +64,84 @@ const faqs = [
   },
 ];
 
+/* Chambers port (17 Nov 2026). Copy is unchanged from the previous page; the
+   generated imagery was dropped and the support list became a ruled aside. */
+
+const P = "clients-corporate";
+
 export default function CorporateClientsPage() {
   return (
     <>
-      <PageHero copyId="clients-corporate"
+      <PageHero
+        copyId={P}
         asidePreset="clientsBreadth"
         eyebrow="Corporate"
         title="Corporate communications and reputation counsel"
         description="Direct, personal counsel for owners, directors, and executives. You work with experienced advisers who understand board scrutiny, market sensitivity, and stakeholder risk."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
-        heroImage={{
-          src: "/images/clients/corporate/editorial-advisory-chairs.png",
-          alt: "Two leather chairs facing each other across a small table with water glasses in warm window light",
-        }}
       />
 
-      <PageProofStrip copyId="clients-corporate"
+      <PageProofStrip
+        copyId={P}
+        variant="navy"
         title="Corporate clients need communications advice that understands governance pressure, not just publicity."
         items={[...proofItems]}
       />
 
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <ImageTextRow
-            imageSrc="/images/clients/corporate/mid-office.webp"
-            imageAlt="Managing director office with leather chair, timber desk, and warm afternoon light"
-            imagePosition="left"
-          >
-            <div className="max-w-3xl lg:max-w-none">
-              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
-                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
-                <T id="clients-corporate.t1">
-                Corporate communications
+      <Section tone="base" className="py-11 md:py-14">
+        <Container className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:gap-14">
+          <div>
+            <Eyebrow>
+              <T id={`${P}.t1`}>Corporate communications</T>
+            </Eyebrow>
+            <H2 className="mt-3">
+              <T id={`${P}.t2`}>Reputation is shaped where strategy, behaviour, and narrative meet.</T>
+            </H2>
+            <p className="mt-5 text-[clamp(1.05rem,1.5vw,1.2rem)] font-medium leading-[1.45]">
+              <T id={`${P}.t3`}>
+                We work with owners, managing directors, and executives who need communications counsel that
+                understands regulatory exposure, market expectations, and the pace at which issues move from internal
+                concern to public headline.
+              </T>
+            </p>
+            <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted">
+              <p>
+                <T id={`${P}.t4`}>
+                  You deal directly with experienced advisers who align messaging with governance, protect valuation
+                  during turbulence, and prepare your leadership team for scrutiny from investors, analysts, and
+                  media. We bring journalistic judgment and crisis experience to every engagement, without the
+                  overhead of a large agency model.
                 </T>
               </p>
-              <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
-                <T id="clients-corporate.t2">
-                Reputation is shaped where strategy, behaviour, and narrative meet.
-                </T>
-              </h2>
-              <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
-                <T id="clients-corporate.t3">
-                We work with owners, managing directors, and executives who need
-                communications counsel that understands regulatory exposure,
-                market expectations, and the pace at which issues move from
-                internal concern to public headline.
+              <p>
+                <T id={`${P}.t5`}>
+                  Whether you are managing a live issue, strengthening executive visibility, or building a
+                  communications capability that matches your growth ambitions, we work directly with you and take
+                  ownership of outcomes.
                 </T>
               </p>
-
-              <div className="space-y-6 mt-8">
-                <p className="text-charcoal-mid text-[15px] leading-relaxed">
-                  <T id="clients-corporate.t4">
-                  You deal directly with experienced advisers who align
-                  messaging with governance, protect valuation during
-                  turbulence, and prepare your leadership team for scrutiny
-                  from investors, analysts, and media. We bring journalistic
-                  judgment and crisis experience to every engagement, without
-                  the overhead of a large agency model.
-                  </T>
-                </p>
-                <p className="text-charcoal-mid text-[15px] leading-relaxed">
-                  <T id="clients-corporate.t5">
-                  Whether you are managing a live issue, strengthening
-                  executive visibility, or building a communications capability
-                  that matches your growth ambitions, we work directly with you
-                  and take ownership of outcomes.
-                  </T>
-                </p>
-              </div>
-              <aside className="rounded-[1.5rem] border border-brand-border bg-off-white p-6 md:p-8 mt-8">
-                <p className="mb-5 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
-                  <span className="h-px w-8 bg-current opacity-50" aria-hidden />
-                  <T id="clients-corporate.t6">
-                  Typical support areas
-                  </T>
-                </p>
-                <div className="space-y-3">
-                  {services.map((item) => (
-                    <div
-                      key={item}
-                      className="flex gap-3 rounded-xl border border-brand-border bg-white px-4 py-4"
-                    >
-                      <Check
-                        className="size-5 shrink-0 text-brand-gold mt-0.5"
-                        strokeWidth={2.5}
-                        aria-hidden
-                      />
-                      <span className="text-charcoal-mid text-[15px] leading-snug">
-                        {item}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </aside>
             </div>
-          </ImageTextRow>
-        </div>
-      </section>
+          </div>
+          <Reveal className="lg:pt-10">
+            <aside className="kit-r border border-line p-6 md:p-8">
+              <Eyebrow>
+                <T id={`${P}.t6`}>Typical support areas</T>
+              </Eyebrow>
+              <ul className="mt-5 divide-y divide-[var(--line)]">
+                {services.map((item) => (
+                  <li key={item} className="py-3.5 text-[15px] leading-snug first:pt-0 last:pb-0">
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </aside>
+          </Reveal>
+        </Container>
+      </Section>
 
-      <InlineEnquirySection copyId="clients-corporate"
+      <InlineEnquirySection
+        copyId={P}
         eyebrow="Typical situations"
         title="Need corporate communications advice?"
         body="We are often engaged when the stakes are commercial as well as reputational: a leadership transition, a sensitive market-facing announcement, investor or stakeholder concern building behind the scenes, or a legal and communications issue colliding at the same time. In those environments, speed matters, but so does judgement."
@@ -177,13 +155,15 @@ export default function CorporateClientsPage() {
 
       <LeadMagnetBanner magnet="crisisReadinessChecklist" />
 
-      <FAQSection copyId="clients-corporate"
+      <FAQSection
+        copyId={P}
         items={faqs}
         titleText="Common questions from corporate clients"
         expandable={false}
       />
 
-      <PageClosingCTA copyId="clients-corporate"
+      <PageClosingCTA
+        copyId={P}
         title="Discuss your corporate communications needs with an experienced adviser."
         body="We work with companies, family businesses, and professional services firms that need judgement, discretion, and direct access when the stakes are high."
       />

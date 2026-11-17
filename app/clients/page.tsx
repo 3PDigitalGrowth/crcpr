@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { PageHero } from "@/components/layout/PageHero";
 import { FAQSection } from "@/components/shared/FAQSection";
@@ -7,6 +8,8 @@ import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
 import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
 import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
 import { PageProofStrip } from "@/components/shared/PageProofStrip";
+import { Reveal } from "@/components/altkit/motion";
+import { Container, Eyebrow, H2, Section } from "@/components/altkit/primitives";
 import { T } from "@/components/editable";
 
 export const metadata: Metadata = {
@@ -20,25 +23,21 @@ const sectors = [
     title: "Industry associations",
     body: "Regulatory crisis, member communications, board governance, public affairs, and advocacy campaigns for Australia's peak bodies and associations.",
     href: "/clients/industry-associations",
-    magnetKey: "associationCrisisGuide" as const,
   },
   {
     title: "Schools & faith-based organisations",
     body: "Parent communications, media management, governance support, and crisis response for independent schools, Catholic schools, and faith-based organisations.",
     href: "/clients/schools-faith",
-    magnetKey: "schoolsPlaybook" as const,
   },
   {
     title: "Companies & family businesses",
     body: "Direct communications counsel and reputation management for owners, directors, and executives of companies, family businesses, and professional services firms.",
     href: "/clients/corporate",
-    magnetKey: "crisisReadinessChecklist" as const,
   },
   {
     title: "Government",
     body: "Federal and state government departments, statutory authorities, and public sector organisations requiring strategic communications and stakeholder engagement.",
     href: "/clients/government",
-    magnetKey: "crisisReadinessChecklist" as const,
   },
 ];
 
@@ -81,160 +80,116 @@ const faqs = [
   },
 ];
 
+/* Chambers port (17 Nov 2026). Copy is unchanged from the previous page; the
+   generated imagery, video and the per-sector "free resource" lines were dropped. */
+
+const P = "clients";
+
 export default function ClientsPage() {
   return (
     <>
-      <PageHero copyId="clients"
+      <PageHero
+        copyId={P}
         asidePreset="clientsBreadth"
         eyebrow="Sector expertise"
         title="Deep expertise across every sector."
         description="We work directly with CEOs, directors, and executives who recognise the value of experienced counsel and treat reputation as a strategic asset."
         ctaLabel="Book a consultation"
         ctaHref="/contact"
-        heroImage={{
-          src: "/images/clients-index/hero.webp",
-          alt: "Brisbane cityscape at golden hour showing mix of modern and heritage architecture",
-        }}
-        heroVideo={{
-          src: "/images/clients-index/hero-ambient.mp4",
-          poster: "/images/clients-index/hero-poster.jpg",
-        }}
       />
 
-      <PageProofStrip copyId="clients"
+      <PageProofStrip
+        copyId={P}
+        variant="navy"
         title="The communications challenge changes by sector. The stakes do not."
         items={[...proofItems]}
       />
 
-      <section className="py-16 md:py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_360px] gap-10 items-start">
-            <div className="max-w-3xl">
-              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
-                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
-                <T id="clients.t1">
-                Why sector context matters
-                </T>
-              </p>
-              <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
-                <T id="clients.t2">
+      {/* ---------- WHY SECTOR CONTEXT MATTERS ---------- */}
+      <Section tone="base" className="py-11 md:py-14">
+        <Container className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:gap-14">
+          <div>
+            <Eyebrow>
+              <T id={`${P}.t1`}>Why sector context matters</T>
+            </Eyebrow>
+            <H2 className="mt-3">
+              <T id={`${P}.t2`}>
                 The communications challenge changes with the environment around it.
-                </T>
-              </h2>
-              <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
-                <T id="clients.t3">
-                Sector expertise matters because stakeholder expectations,
-                governance realities, and the likely points of reputational
-                pressure change dramatically between a company, a government
-                agency, a peak body, or a school.
+              </T>
+            </H2>
+            <p className="mt-5 text-[clamp(1.05rem,1.5vw,1.2rem)] font-medium leading-[1.45]">
+              <T id={`${P}.t3`}>
+                Sector expertise matters because stakeholder expectations, governance realities, and the likely
+                points of reputational pressure change dramatically between a company, a government agency, a peak
+                body, or a school.
+              </T>
+            </p>
+            <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-muted">
+              <p>
+                <T id={`${P}.t4`}>
+                  A message that feels disciplined in one environment can be tone-deaf in another.
                 </T>
               </p>
-
-              <div className="space-y-6 mt-8">
-                <p className="text-charcoal-mid text-[15px] leading-relaxed">
-                  <T id="clients.t4">
-                  A message that feels disciplined in one environment can be
-                  tone-deaf in another.
-                  </T>
-                </p>
-                <p className="text-charcoal-mid text-[15px] leading-relaxed">
-                  <T id="clients.t5">
-                  We work best in sectors where communication is inseparable
-                  from trust, authority, and strategic judgement. That is why
-                  the pages below are organised around leadership pressure
-                  points rather than broad industry labels.
-                  </T>
-                </p>
-              </div>
+              <p>
+                <T id={`${P}.t5`}>
+                  We work best in sectors where communication is inseparable from trust, authority, and strategic
+                  judgement. That is why the pages below are organised around leadership pressure points rather than
+                  broad industry labels.
+                </T>
+              </p>
             </div>
-
-            <aside className="rounded-[1.5rem] border border-brand-border bg-off-white p-6 md:p-8">
-              <p className="mb-5 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
-                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
-                <T id="clients.t6">
-                What changes by sector
-                </T>
-              </p>
-
-              <div className="space-y-4">
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    <T id="clients.t7">
-                    Stakeholder expectations
-                    </T>
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    <T id="clients.t8">
-                    The audience that matters most, and what they need to hear,
-                    differs sharply by sector.
-                    </T>
-                  </p>
-                </div>
-
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    <T id="clients.t9">
-                    Governance realities
-                    </T>
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    <T id="clients.t10">
-                    Listed, public, member-based, and community institutions all
-                    carry different approval paths and accountability pressures.
-                    </T>
-                  </p>
-                </div>
-
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    <T id="clients.t11">
-                    Pressure points
-                    </T>
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    <T id="clients.t12">
-                    The reputational flashpoints are rarely identical, even when
-                    the communication discipline required is equally high.
-                    </T>
-                  </p>
-                </div>
+          </div>
+          <Reveal className="lg:pt-10">
+            <aside className="kit-r border border-line p-6 md:p-8">
+              <Eyebrow>
+                <T id={`${P}.t6`}>What changes by sector</T>
+              </Eyebrow>
+              <div className="mt-5 divide-y divide-[var(--line)]">
+                {[
+                  ["t7", "Stakeholder expectations", "t8", "The audience that matters most, and what they need to hear, differs sharply by sector."],
+                  ["t9", "Governance realities", "t10", "Listed, public, member-based, and community institutions all carry different approval paths and accountability pressures."],
+                  ["t11", "Pressure points", "t12", "The reputational flashpoints are rarely identical, even when the communication discipline required is equally high."],
+                ].map(([tid, title, bid, body]) => (
+                  <div key={tid} className="py-4 first:pt-0 last:pb-0">
+                    <p className="kit-display text-[15px] uppercase">
+                      <T id={`${P}.${tid}`}>{title}</T>
+                    </p>
+                    <p className="mt-1.5 text-sm leading-relaxed text-muted">
+                      <T id={`${P}.${bid}`}>{body}</T>
+                    </p>
+                  </div>
+                ))}
               </div>
             </aside>
-          </div>
-        </div>
-      </section>
+          </Reveal>
+        </Container>
+      </Section>
 
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
-          {sectors.map(({ title, body, href, magnetKey }) => {
-            const magnet = siteConfig.leadMagnets[magnetKey];
-            return (
-              <article
-                key={href}
-                className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-8"
-              >
-                <h3 className="font-heading text-navy text-2xl">
-                  {title}
-                </h3>
-                <p className="text-charcoal-mid text-[15px] leading-relaxed mt-3">
-                  {body}
-                </p>
+      {/* ---------- THE SECTOR PAGES ---------- */}
+      <Section tone="base" className="pb-11 md:pb-14">
+        <Container>
+          <div className="border-t border-line">
+            {sectors.map((sector, i) => (
+              <Reveal key={sector.href} delay={i * 0.05}>
                 <Link
-                  href={href}
-                  className="text-brand-gold font-sans font-semibold text-sm mt-6 inline-block hover:text-gold-light transition-colors"
+                  href={sector.href}
+                  className="group grid gap-2 border-b border-line py-6 md:grid-cols-[3rem,1fr,1.5fr,2rem] md:items-baseline md:gap-8"
                 >
-                  Explore {title.toLowerCase()} →
+                  <span className="kit-display text-sm text-accent">{`0${i + 1}.`}</span>
+                  <h3 className="kit-display text-[clamp(1.1rem,1.7vw,1.35rem)] uppercase leading-tight transition-transform duration-300 group-hover:translate-x-1.5">
+                    {sector.title}
+                  </h3>
+                  <p className="text-[15px] leading-relaxed text-muted">{sector.body}</p>
+                  <ArrowUpRight className="hidden h-5 w-5 self-center text-accent md:block" aria-hidden />
                 </Link>
-                <p className="text-charcoal-mid/80 text-xs leading-relaxed mt-4">
-                  Free resource: {magnet.title}
-                </p>
-              </article>
-            );
-          })}
-        </div>
-      </section>
+              </Reveal>
+            ))}
+          </div>
+        </Container>
+      </Section>
 
-      <InlineEnquirySection copyId="clients"
+      <InlineEnquirySection
+        copyId={P}
         title="Need advice tailored to your sector?"
         body="If your situation is shaped by sector-specific governance, stakeholder, or community pressures, we can help you work out the right starting point and the right communication approach."
         bullets={[
@@ -243,18 +198,19 @@ export default function ClientsPage() {
           "Help identifying the right service and first move",
         ]}
         defaultMessage="We would like sector-specific communications advice."
-        variant="white"
       />
 
       <LeadMagnetBanner magnet="crisisReadinessChecklist" variant="light" />
 
-      <FAQSection copyId="clients"
+      <FAQSection
+        copyId={P}
         items={faqs}
         titleText="Common questions about CRC Public Relations' sector expertise"
         expandable={false}
       />
 
-      <PageClosingCTA copyId="clients"
+      <PageClosingCTA
+        copyId={P}
         title="Ready to discuss your communications needs?"
         body="If you are working through a sector-specific issue, an emerging reputation risk, or a pressure point that needs experienced judgment, we can help you work out the right next step."
         secondaryLabel="Explore My PR Partner"

@@ -1,50 +1,35 @@
-import Image from "next/image";
-
 export interface PacificCaseStudy {
   id: string;
   sector: string;
   headline: string;
   body: string;
-  image: { src: string; alt: string };
+  /** Kept for call-site compatibility; the Chambers design runs no generated imagery here. */
+  image?: { src: string; alt: string };
 }
 
 interface PacificCaseStudiesProps {
   items: PacificCaseStudy[];
 }
 
+/** Chambers case studies: three hairline-bordered columns of text, no imagery. */
 export function PacificCaseStudies({ items }: PacificCaseStudiesProps) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
       {items.map((study) => (
         <article
           key={study.id}
-          className="flex flex-col rounded-[1.5rem] border-t-4 border-brand-gold border-x border-b border-brand-border bg-warm-white/70 backdrop-blur overflow-hidden"
+          className="kit-r flex flex-col border border-line border-t-[3px] border-t-[var(--k-blue)] bg-card p-6"
         >
-          <div className="relative w-full aspect-[3/2] overflow-hidden">
-            <Image
-              src={study.image.src}
-              alt={study.image.alt}
-              fill
-              sizes="(max-width: 768px) 100vw, 33vw"
-              className="object-cover"
-              loading="lazy"
-            />
-          </div>
-          <div className="flex flex-col flex-1 p-6">
-            <p className="mb-2 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
-              <span className="h-px w-8 bg-current opacity-50" aria-hidden />
-              {study.sector}
-            </p>
-            <h3 className="font-heading text-navy text-2xl leading-tight mb-4">
-              {study.headline}
-            </h3>
-            <p className="text-charcoal text-sm leading-relaxed">
-              {study.body}
-            </p>
-            <p className="text-charcoal-mid text-xs mt-5 pt-4 border-t border-brand-border">
-              Anonymised to protect client confidentiality
-            </p>
-          </div>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-accent">
+            {study.sector}
+          </p>
+          <h3 className="kit-display mt-3 text-[clamp(1.05rem,1.5vw,1.25rem)] uppercase leading-tight">
+            {study.headline}
+          </h3>
+          <p className="mt-4 text-sm leading-relaxed text-muted">{study.body}</p>
+          <p className="mt-5 border-t border-line pt-4 text-xs text-muted">
+            Anonymised to protect client confidentiality
+          </p>
         </article>
       ))}
     </div>

@@ -4,6 +4,8 @@ import { FAQSection } from "@/components/shared/FAQSection";
 import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
 import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
 import { PageProofStrip } from "@/components/shared/PageProofStrip";
+import { Reveal } from "@/components/altkit/motion";
+import { Container, Eyebrow, H2, Section } from "@/components/altkit/primitives";
 import { siteConfig } from "@/config/site";
 import { T } from "@/components/editable";
 
@@ -31,20 +33,19 @@ export default function FAQPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      <PageHero copyId="faq"
+      <PageHero
+        copyId="faq"
         asidePreset="editorialInsights"
         eyebrow="FAQ"
         title="Frequently asked questions."
         description="Straight answers about how CRC Public Relations works, what kind of organisations we support, and what to expect when you get in touch."
         ctaLabel="Contact CRC Public Relations"
         ctaHref="/contact"
-        heroImage={{
-          src: "/images/faq/editorial-reading-room.png",
-          alt: "Quiet reading corner with a leather armchair beside a tall window in warm afternoon light",
-        }}
       />
 
-      <PageProofStrip copyId="faq"
+      <PageProofStrip
+        copyId="faq"
+        variant="navy"
         title="Most buying decisions at this level depend on clarity, confidence, and fit."
         items={[
           {
@@ -68,90 +69,54 @@ export default function FAQPage() {
         ]}
       />
 
-      <section className="py-16 md:py-20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1.15fr)_340px] gap-10 items-start">
-            <div className="max-w-3xl">
-              <p className="mb-4 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-brand-gold">
-                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
-                <T id="faq.t1">
-                Before you engage
-                </T>
-              </p>
-              <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mb-6">
-                <T id="faq.t2">
-                The questions most clients want answered first.
-                </T>
-              </h2>
-              <p className="text-navy text-lg md:text-xl leading-relaxed max-w-2xl">
-                <T id="faq.t3">
-                The questions below reflect what most clients want to
-                understand before they engage CRC Public Relations: how the firm works, what
-                kinds of matters fit best, how urgent support is handled, and
-                what direct counsel actually looks like in practice.
-                </T>
-              </p>
-            </div>
+      <Section tone="base" className="py-11 md:py-14">
+        <Container className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:gap-14">
+          <div>
+            <Eyebrow>
+              <T id="faq.t1">Before you engage</T>
+            </Eyebrow>
+            <H2 className="mt-3">
+              <T id="faq.t2">The questions most clients want answered first.</T>
+            </H2>
+            <p className="mt-6 max-w-2xl text-[clamp(1.05rem,1.5vw,1.2rem)] font-medium leading-[1.45]">
+              <T id="faq.t3">
+                The questions below reflect what most clients want to understand before they engage CRC Public
+                Relations: how the firm works, what kinds of matters fit best, how urgent support is handled, and what
+                direct counsel actually looks like in practice.
+              </T>
+            </p>
+          </div>
 
-            <aside className="rounded-[1.5rem] border border-brand-border bg-warm-white/70 backdrop-blur p-6 md:p-8">
-              <p className="mb-5 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
-                <span className="h-px w-8 bg-current opacity-50" aria-hidden />
-                <T id="faq.t4">
-                What this FAQ covers
-                </T>
-              </p>
-
-              <div className="space-y-4">
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    <T id="faq.t5">
-                    How CRC Public Relations works
-                    </T>
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    <T id="faq.t6">
-                    The firm model, how advice is delivered, and what experienced
-                    support means in practice.
-                    </T>
-                  </p>
-                </div>
-
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    <T id="faq.t7">
-                    Fit and urgency
-                    </T>
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    <T id="faq.t8">
-                    What kinds of matters suit CRC Public Relations best, and how urgent
-                    situations are handled.
-                    </T>
-                  </p>
-                </div>
-
-                <div className="border-l-[3px] border-brand-gold pl-4">
-                  <p className="font-sans font-semibold text-navy text-sm mb-1">
-                    <T id="faq.t9">
-                    The next sensible step
-                    </T>
-                  </p>
-                  <p className="text-charcoal-mid text-sm leading-relaxed">
-                    <T id="faq.t10">
-                    Enough context to decide whether the right move is to keep
-                    reading or start a confidential conversation.
-                    </T>
-                  </p>
-                </div>
+          <Reveal className="lg:pt-10">
+            <aside className="kit-r border border-line p-6 md:p-8">
+              <Eyebrow>
+                <T id="faq.t4">What this FAQ covers</T>
+              </Eyebrow>
+              <div className="mt-5 divide-y divide-[var(--line)]">
+                {[
+                  ["t5", "How CRC Public Relations works", "t6", "The firm model, how advice is delivered, and what experienced support means in practice."],
+                  ["t7", "Fit and urgency", "t8", "What kinds of matters suit CRC Public Relations best, and how urgent situations are handled."],
+                  ["t9", "The next sensible step", "t10", "Enough context to decide whether the right move is to keep reading or start a confidential conversation."],
+                ].map(([tid, title, bid, body]) => (
+                  <div key={tid} className="py-4 first:pt-0 last:pb-0">
+                    <p className="kit-display text-[15px] uppercase">
+                      <T id={`faq.${tid}`}>{title}</T>
+                    </p>
+                    <p className="mt-1.5 text-sm leading-relaxed text-muted">
+                      <T id={`faq.${bid}`}>{body}</T>
+                    </p>
+                  </div>
+                ))}
               </div>
             </aside>
-          </div>
-        </div>
-      </section>
+          </Reveal>
+        </Container>
+      </Section>
 
       <FAQSection copyId="faq" titleText="Frequently asked questions" />
 
-      <InlineEnquirySection copyId="faq"
+      <InlineEnquirySection
+        copyId="faq"
         title="Still deciding whether CRC Public Relations is the right fit?"
         body="If your question is specific, sensitive, or difficult to reduce to a general FAQ, the best next step is a direct conversation with an experienced adviser."
         bullets={[
@@ -163,7 +128,8 @@ export default function FAQPage() {
         variant="white"
       />
 
-      <PageClosingCTA copyId="faq"
+      <PageClosingCTA
+        copyId="faq"
         title="Have a question not answered here?"
         body="If your situation is specific, sensitive, or difficult to fit into a general FAQ, the best next step is to get in touch directly and we will help."
         primaryLabel="Get in touch"

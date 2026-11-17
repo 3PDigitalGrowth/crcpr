@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { CheckCircle, ChevronRight } from "lucide-react";
+import { Eyebrow, H2 } from "@/components/altkit/primitives";
 import { submitAssessment } from "@/lib/actions";
 import type { FormState } from "@/types";
 
@@ -308,10 +309,10 @@ export function ReputationAssessment({ embedded = false }: { embedded?: boolean 
   if (phase === "results" || phase === "capture") {
     return (
       <section
-        className={embedded ? "scroll-mt-24" : "py-16 md:py-24 scroll-mt-24"}
+        className={embedded ? "scroll-mt-24" : "py-11 md:py-14 scroll-mt-24"}
         id="reputation-assessment"
       >
-        <div className={embedded ? "max-w-none" : "max-w-3xl mx-auto px-6"}>
+        <div className={embedded ? "max-w-none" : "mx-auto max-w-3xl px-4 sm:px-6"}>
           <div className="relative">
             <div
               className={`transition-all duration-300 ${
@@ -319,55 +320,43 @@ export function ReputationAssessment({ embedded = false }: { embedded?: boolean 
               }`}
               aria-hidden={!isUnlocked}
             >
-              <div className="rounded-[1.75rem] border border-brand-border bg-warm-white/70 backdrop-blur p-8 md:p-10">
-                <div className="text-center mb-12">
-                  <p className="font-sans inline-flex items-center justify-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
-                    <span className="h-px w-8 bg-current opacity-50" aria-hidden />
-                    Your results
-                  </p>
-                  <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mt-3">
-                    Reputation Vulnerability Score
-                  </h2>
-                  <div
-                    className={`inline-flex items-center gap-3 mt-6 px-8 py-4 rounded-full ${rating.bgColor}`}
-                  >
-                    <span className="font-heading text-5xl text-navy">
+              <div className={embedded ? "" : "kit-r border border-line bg-card p-6 md:p-8"}>
+                <div className="mb-8">
+                  <Eyebrow>Your results</Eyebrow>
+                  <H2 className="mt-3">Reputation Vulnerability Score</H2>
+                  <div className="mt-6 flex flex-wrap items-baseline gap-x-3 gap-y-2">
+                    <span className="kit-display text-5xl leading-none text-accent">
                       {totalScore}
                     </span>
-                    <span className="text-charcoal-mid text-sm">/40</span>
+                    <span className="text-sm text-muted">/40</span>
                     <span
-                      className={`font-heading text-lg ${rating.color}`}
+                      className={`kit-r-sm px-3 py-1 text-sm font-bold ${rating.bgColor} ${rating.color}`}
                     >
                       {rating.label}
                     </span>
                   </div>
                 </div>
 
-                <div className="space-y-4">
+                <div className="border-t border-line">
                   {categories.map((cat) => {
                     const catScore = getCategoryScore(answers, cat);
                     const maxCatScore = 8;
                     const pct = Math.round((catScore / maxCatScore) * 100);
                     return (
-                      <div
-                        key={cat}
-                        className="rounded-xl border border-brand-border bg-warm-white/70 backdrop-blur p-4"
-                      >
-                        <div className="flex items-center justify-between gap-4 mb-3">
-                          <p className="text-[11px] sm:text-xs font-medium text-charcoal-mid">
-                            {cat}
-                          </p>
-                          <p className="text-sm font-heading text-navy whitespace-nowrap">
+                      <div key={cat} className="border-b border-line py-4">
+                        <div className="mb-3 flex items-center justify-between gap-4">
+                          <p className="kit-display text-[13px] uppercase">{cat}</p>
+                          <p className="kit-display whitespace-nowrap text-sm">
                             {catScore}/{maxCatScore}
                           </p>
                         </div>
-                        <div className="h-2 bg-brand-border rounded-full overflow-hidden">
+                        <div className="h-1.5 overflow-hidden rounded-full bg-[var(--line)]">
                           <div
-                            className="h-full bg-brand-gold rounded-full transition-all duration-500"
+                            className="h-full rounded-full bg-[var(--k-blue)] transition-all duration-500"
                             style={{ width: `${pct}%` }}
                           />
                         </div>
-                        <p className="text-xs text-charcoal-mid mt-2">
+                        <p className="mt-2 text-xs text-muted">
                           {pct}% readiness in this area
                         </p>
                       </div>
@@ -378,12 +367,12 @@ export function ReputationAssessment({ embedded = false }: { embedded?: boolean 
             </div>
 
             {!isUnlocked ? (
-              <div className="absolute inset-0 flex items-center justify-center p-4 md:p-8">
-                <div className="bg-warm-white/90 backdrop-blur-md border border-brand-border rounded-[1.75rem] p-8 max-w-md w-full shadow-[0_20px_60px_rgba(10,22,40,0.18)]">
-                  <h3 className="font-heading text-navy text-xl text-center">
+              <div className="absolute inset-0 flex items-center justify-center p-2 md:p-8">
+                <div className="tone-base kit-r w-full max-w-md border border-line p-6 shadow-[0_20px_60px_rgba(11,18,32,0.22)] md:p-8">
+                  <h3 className="kit-display text-center text-[clamp(1.1rem,1.7vw,1.35rem)] uppercase leading-tight">
                     Unlock your full report
                   </h3>
-                  <p className="text-charcoal-mid text-sm text-center mt-2">
+                  <p className="mt-3 text-center text-sm leading-relaxed text-muted">
                     Enter your details to reveal your score and receive the full
                     assessment breakdown with recommendations for each risk
                     area.
@@ -396,7 +385,7 @@ export function ReputationAssessment({ embedded = false }: { embedded?: boolean 
                       placeholder="First name"
                       value={firstName}
                       onChange={(e) => setFirstName(e.target.value)}
-                      className="w-full rounded-xl border border-brand-border bg-white px-4 py-3 text-sm font-sans text-charcoal placeholder:text-charcoal-mid/50 focus:outline-none focus:ring-2 focus:ring-brand-gold/30 focus:border-brand-gold/60 transition mb-3"
+                      className="field mb-3"
                     />
                     <input
                       type="email"
@@ -405,24 +394,24 @@ export function ReputationAssessment({ embedded = false }: { embedded?: boolean 
                       placeholder="Work email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full rounded-xl border border-brand-border bg-white px-4 py-3 text-sm font-sans text-charcoal placeholder:text-charcoal-mid/50 focus:outline-none focus:ring-2 focus:ring-brand-gold/30 focus:border-brand-gold/60 transition mb-3"
+                      className="field mb-3"
                     />
                     {formState.status === "error" && (
-                      <p className="text-sm text-red-600 mb-3">
+                      <p className="mb-3 text-sm text-red-600">
                         {formState.message}
                       </p>
                     )}
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="bg-brand-gold text-navy font-sans font-semibold text-sm w-full py-4 rounded-full shadow-lg shadow-brand-gold/20 transition-colors hover:bg-gold-light disabled:opacity-60"
+                      className="btn btn-primary w-full disabled:opacity-60"
                     >
                       {isSubmitting
                         ? "Unlocking..."
                         : "Unlock your full report →"}
                     </button>
                   </form>
-                  <p className="text-xs text-charcoal-mid text-center mt-4">
+                  <p className="mt-4 text-center text-xs text-muted">
                     No spam. Unsubscribe anytime.
                   </p>
                 </div>
@@ -431,16 +420,16 @@ export function ReputationAssessment({ embedded = false }: { embedded?: boolean 
           </div>
 
           {isUnlocked ? (
-            <div className="text-center py-8">
+            <div className="border-t border-line py-8">
               <CheckCircle
-                className="text-brand-teal mx-auto size-16"
+                className="size-12 text-accent"
                 strokeWidth={1.5}
               />
-              <p className="text-charcoal text-lg mt-4">
+              <p className="mt-4 text-lg font-semibold leading-snug">
                 Your Reputation Risk Report request has been received for{" "}
                 <strong>{email}</strong>.
               </p>
-              <p className="text-charcoal-mid text-sm mt-2">
+              <p className="mt-2 text-sm leading-relaxed text-muted">
                 A CRC Public Relations adviser may follow up with personalised
                 recommendations.
               </p>
@@ -455,49 +444,43 @@ export function ReputationAssessment({ embedded = false }: { embedded?: boolean 
 
   return (
     <section
-      className={embedded ? "scroll-mt-24" : "py-16 md:py-24 scroll-mt-24"}
+      className={embedded ? "scroll-mt-24" : "py-11 md:py-14 scroll-mt-24"}
       id="reputation-assessment"
     >
-      <div className={embedded ? "max-w-none" : "max-w-3xl mx-auto px-6"}>
-        <div className="text-center mb-8">
-          <p className="font-sans inline-flex items-center justify-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
-            <span className="h-px w-8 bg-current opacity-50" aria-hidden />
-            Free assessment
-          </p>
-          <h2 className="font-heading text-navy text-4xl md:text-5xl leading-[1.05] tracking-[-0.02em] mt-3">
-            Reputation Vulnerability Assessment
-          </h2>
-          <p className="text-charcoal-mid text-sm mt-2">
+      <div className={embedded ? "max-w-none" : "mx-auto max-w-3xl px-4 sm:px-6"}>
+        <div className="mb-8">
+          <Eyebrow>Free assessment</Eyebrow>
+          <H2 className="mt-3">Reputation Vulnerability Assessment</H2>
+          <p className="mt-3 text-sm text-muted">
             20 questions · 5 risk areas · 3 minutes
           </p>
         </div>
 
         <div className="mb-8">
-          <div className="flex justify-between text-xs text-charcoal-mid mb-2">
+          <div className="mb-2 flex justify-between text-xs text-muted">
             <span>
               Question {currentIndex + 1} of {totalQuestions}
             </span>
             <span>{progress}% complete</span>
           </div>
-          <div className="h-2 bg-brand-border rounded-full overflow-hidden">
+          <div className="h-1.5 overflow-hidden rounded-full bg-[var(--line)]">
             <div
-              className="h-full bg-brand-gold rounded-full transition-all duration-300"
+              className="h-full rounded-full bg-[var(--k-blue)] transition-all duration-300"
               style={{ width: `${progress}%` }}
             />
           </div>
         </div>
 
-        <div className="mb-4">
-          <p className="mb-2 font-sans inline-flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.24em] text-link-teal">
-            <span className="h-px w-8 bg-current opacity-50" aria-hidden />
+        <div className="mb-4 border-t border-line pt-6">
+          <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.22em] text-accent">
             {currentQ.category}
           </p>
-          <h3 className="font-heading text-navy text-2xl">
+          <h3 className="kit-display text-[clamp(1.1rem,1.7vw,1.35rem)] uppercase leading-tight">
             {currentQ.text}
           </h3>
         </div>
 
-        <div className="space-y-3 mt-6">
+        <div className="mt-6 space-y-3">
           {currentQ.options.map((opt, oi) => {
             const isSelected = answers[currentIndex] === opt.score;
             return (
@@ -505,16 +488,16 @@ export function ReputationAssessment({ embedded = false }: { embedded?: boolean 
                 key={oi}
                 type="button"
                 onClick={() => selectAnswer(currentIndex, opt.score)}
-                className={`w-full text-left px-6 py-4 rounded-xl border transition flex items-center justify-between gap-4 ${
+                className={`kit-r-sm flex w-full items-center justify-between gap-4 border px-5 py-4 text-left transition ${
                   isSelected
-                    ? "border-brand-gold bg-gold-light/50"
-                    : "border-brand-border bg-warm-white/60 backdrop-blur hover:border-brand-gold/50"
+                    ? "border-[var(--k-blue)] shadow-[inset_3px_0_0_var(--k-blue)]"
+                    : "border-line hover:border-[var(--k-blue)]"
                 }`}
               >
-                <span className="text-charcoal text-[15px]">{opt.label}</span>
+                <span className="text-[15px]">{opt.label}</span>
                 <ChevronRight
                   className={`size-4 shrink-0 ${
-                    isSelected ? "text-brand-gold" : "text-charcoal-mid/30"
+                    isSelected ? "text-accent" : "text-muted opacity-40"
                   }`}
                 />
               </button>
@@ -522,12 +505,12 @@ export function ReputationAssessment({ embedded = false }: { embedded?: boolean 
           })}
         </div>
 
-        <div className="flex justify-between items-center mt-8">
+        <div className="mt-8 flex items-center justify-between gap-3">
           <button
             type="button"
             disabled={currentIndex === 0}
             onClick={() => setCurrentIndex((i) => Math.max(0, i - 1))}
-            className="text-sm text-charcoal-mid hover:text-charcoal transition disabled:opacity-30"
+            className="text-xs font-semibold uppercase tracking-[0.1em] text-muted transition hover:text-[var(--fg)] disabled:opacity-30"
           >
             ← Previous
           </button>
@@ -535,7 +518,7 @@ export function ReputationAssessment({ embedded = false }: { embedded?: boolean 
             <button
               type="button"
               onClick={() => setPhase("results")}
-              className="bg-brand-gold text-navy font-sans font-semibold text-sm rounded-full px-8 py-3 shadow-lg shadow-brand-gold/20 transition-colors hover:bg-gold-light"
+              className="btn btn-primary"
             >
               View results →
             </button>
@@ -549,7 +532,7 @@ export function ReputationAssessment({ embedded = false }: { embedded?: boolean 
             onClick={() =>
               setCurrentIndex((i) => Math.min(totalQuestions - 1, i + 1))
             }
-            className="text-sm text-charcoal-mid hover:text-charcoal transition disabled:opacity-30"
+            className="text-xs font-semibold uppercase tracking-[0.1em] text-muted transition hover:text-[var(--fg)] disabled:opacity-30"
           >
             Next →
           </button>

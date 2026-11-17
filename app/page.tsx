@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/config/site";
-import { RedesignHomeV2 } from "@/components/redesign/v2/RedesignHomeV2";
+import { Alt2Home } from "@/components/altkit/Alt2Home";
+import { CONCEPTS } from "@/components/altkit/concepts";
+import { getA1Posts, toCard } from "@/components/altkit/insights";
 
 const homepageFaqs = siteConfig.faqs;
 
@@ -74,7 +76,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <RedesignHomeV2 />
+      <Alt2Home base={CONCEPTS.site.base} posts={getA1Posts(CONCEPTS.site.base).map(toCard)} />
     </>
   );
 }

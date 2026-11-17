@@ -155,7 +155,7 @@ export default function ServicesPage() {
             </div>
           </div>
           <Reveal className="lg:pt-10">
-            <FramedPhoto src={MEDIA.lyallWhiteboard} alt="Lyall Mercer working through a strategy at the whiteboard with Barbara Gorogh" position="40% 35%" className="mb-6" />
+            <FramedPhoto src={MEDIA.officeOrangeChair} alt="An orange chair against the book wallpaper in the CRC Public Relations office" className="mb-6" />
             <aside className="kit-r border border-line p-6 md:p-8">
               <Eyebrow>
                 <T id="services.t6">What the right starting point solves</T>

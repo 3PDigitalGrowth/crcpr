@@ -9,7 +9,8 @@ import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
 import { PortraitPlaceholder } from "@/components/shared/PortraitPlaceholder";
 import { Reveal } from "@/components/altkit/motion";
 import { Container, Eyebrow, H2, Section } from "@/components/altkit/primitives";
-import { FOUNDERS_ALT, PHOTOS } from "@/components/altkit/data";
+import { MEDIA, PHOTOS } from "@/components/altkit/data";
+import { FramedPhoto } from "@/components/altkit/media";
 import { T } from "@/components/editable";
 
 export const metadata: Metadata = {
@@ -137,13 +138,14 @@ export default function AboutPage() {
 
           <div className="kit-r relative mt-10 aspect-[16/9] overflow-hidden md:aspect-[3/1]">
             <Image
-              src={PHOTOS.foundersStudio}
-              alt={FOUNDERS_ALT}
+              src={MEDIA.officeWallpaper}
+              alt="The illustrated wallpaper in the CRC Public Relations boardroom"
               fill
               priority
+              quality={85}
               sizes="(min-width: 1200px) 1140px, 100vw"
               className="object-cover"
-              style={{ objectPosition: "50% 9%" }}
+              style={{ objectPosition: "50% 35%" }}
             />
           </div>
         </Container>
@@ -208,6 +210,11 @@ export default function AboutPage() {
             </div>
           </div>
           <Reveal className="lg:pt-2">
+            <FramedPhoto
+              src={MEDIA.teamAtTable}
+              alt="The CRC Public Relations team in a meeting around the boardroom table"
+              className="mb-6"
+            />
             <div className="divide-y divide-[var(--line)] border-y border-line">
               {STATS.map((stat, __ti) => (
                 <div key={stat.label} className="py-5">

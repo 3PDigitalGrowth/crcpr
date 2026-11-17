@@ -5,7 +5,7 @@ import { siteConfig } from "@/config/site";
 import { PAGE_HERO_ASIDES } from "@/config/pageHeroAsides";
 import { ClosingCTA } from "../blocks";
 import { CONCEPTS, type ConceptId } from "../concepts";
-import { PHOTOS } from "../data";
+import { MEDIA, PHOTOS } from "../data";
 import { EnquiryForm } from "../forms";
 import { getA1Posts, toCard } from "../insights";
 import { Reveal } from "../motion";
@@ -126,6 +126,9 @@ const faqs = [
 ];
 
 export function CrisisPage({ id }: { id: ConceptId }) {
+  // Live site: a media photo from CRC's past work, not another photo of Lyall
+  // (Lyall, 18 Nov 2026). The concept pages keep the version they were shown with.
+  const site = id === "site";
   const aside = PAGE_HERO_ASIDES.crisisTrust;
   const readingFor = getA1Posts(CONCEPTS[id].base)
     .filter((p) => p.category === "Crisis Communications")
@@ -168,8 +171,9 @@ export function CrisisPage({ id }: { id: ConceptId }) {
           <Reveal delay={0.1} className="relative">
             <div className="kit-r relative aspect-[4/3] overflow-hidden">
               <Image
-                src={PHOTOS.lyallPhoneLaptop}
-                alt="Lyall Mercer taking a call in the CRC Public Relations office"
+                src={site ? MEDIA.mediaDoorstop : PHOTOS.lyallPhoneLaptop}
+                alt={site ? "Television crews at a media doorstop" : "Lyall Mercer taking a call in the CRC Public Relations office"}
+                quality={site ? 85 : undefined}
                 fill
                 priority
                 sizes="(min-width: 1024px) 480px, 100vw"

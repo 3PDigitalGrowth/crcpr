@@ -36,18 +36,29 @@ export const PHOTOS = {
 
 /*
  * Imagery added 17 Nov 2026, each placed on the one page it belongs to. All of
- * it is the client's own: working scenes from the 2026 shoot (staff only seen
- * from behind, per Barbara 4 Aug 2026), and pictures from CRC's Drive library
- * (licensed stock CRC bought, Pacific Islands Forum and event photos). No AI.
+ * it is the client's own: the 2026 office shoot, and pictures from CRC's Drive
+ * library (licensed stock CRC bought, Pacific Islands Forum, event and media
+ * photos from past work). No AI.
+ */
+/*
+ * Lyall (18 Nov 2026): "We don't want continual photos of Barbara and me. One
+ * each for our intro sections and maybe one somewhere else of the team around
+ * a table, but the rest should be other photos": office abstracts, client
+ * photos and media photos from past work. So Lyall and Barbara appear only in
+ * their intro portraits, the approved homepage hero, and teamAtTable (About).
  */
 const W = "/images/crc-2026/work";
+const O = "/images/crc-2026/office";
 const L = "/images/crc-2026/library";
 
 export const MEDIA = {
-  lyallWhiteboard: `${W}/lyall-whiteboard.jpg`,
-  lyallAdvising: `${W}/lyall-advising.jpg`,
-  advisingClient: `${W}/advising-client.jpg`,
-  lyallSpeaking: `${L}/lyall-speaking.jpg`,
+  teamAtTable: `${W}/team-at-table.jpg`,
+  officeWallpaper: `${O}/boardroom-wallpaper.jpg`,
+  officeOrangeChair: `${O}/orange-chair.jpg`,
+  officeMeetingRoom: `${O}/meeting-room.jpg`,
+  officePlants: `${O}/plants-meeting.jpg`,
+  mediaDoorstop: `${L}/media-doorstop.jpg`,
+  conferenceAudience: `${L}/conference-audience.jpg`,
   mediaTrainingInterview: `${L}/media-training-interview.jpg`,
   mediaInterview: `${L}/media-interview.jpg`,
   pressConference: `${L}/press-conference.jpg`,

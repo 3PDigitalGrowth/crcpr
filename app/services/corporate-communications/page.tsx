@@ -331,7 +331,7 @@ export default function CorporateCommunicationsPage() {
                 strategic advice.
               </T>
             </p>
-            <FramedPhoto src={MEDIA.lyallAdvising} alt="Lyall Mercer in a meeting at the CRC Public Relations office" position="45% 40%" className="mt-8" />
+            <FramedPhoto src={MEDIA.officeMeetingRoom} alt="A meeting room at the CRC Public Relations office, seen through glass" className="mt-8" />
           </div>
           <div>
             <div className="space-y-4 text-[15px] leading-relaxed text-muted">

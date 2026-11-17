@@ -126,7 +126,7 @@ export default function CorporateClientsPage() {
             </div>
           </div>
           <Reveal className="lg:pt-10">
-            <FramedPhoto src={MEDIA.advisingClient} alt="Barbara Gorogh and Lyall Mercer in a client meeting in the CRC Public Relations boardroom" className="mb-6" />
+            <FramedPhoto src={MEDIA.officePlants} alt="Plants beside the meeting tables at the CRC Public Relations office" position="60% 50%" className="mb-6" />
             <aside className="kit-r border border-line p-6 md:p-8">
               <Eyebrow>
                 <T id={`${P}.t6`}>Typical support areas</T>

@@ -244,7 +244,7 @@ export default function LyallMercerPage() {
             </a>
           </div>
           <Reveal className="lg:pt-2">
-            <FramedPhoto src={MEDIA.lyallSpeaking} alt="Lyall Mercer presenting at a workshop" position="50% 30%" className="mb-6" />
+            <FramedPhoto src={MEDIA.conferenceAudience} alt="A conference audience during a speaking session" className="mb-6" />
             <MyPRPartnerCTA
               title="Need training, workshops, or practical communications development?"
               description="My PR Partner is CRC Public Relations' training platform for communications practitioners, spokesperson development, crisis workshops, and practical support between major advisory engagements."

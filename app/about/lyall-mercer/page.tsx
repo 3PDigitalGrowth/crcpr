@@ -11,8 +11,9 @@ import { MediaOutletLogoLink } from "@/components/shared/MediaOutletLogoLink";
 import Link from "next/link";
 import { Reveal } from "@/components/altkit/motion";
 import { Container, Eyebrow, H2, Section } from "@/components/altkit/primitives";
-import { PHOTOS } from "@/components/altkit/data";
+import { MEDIA, PHOTOS } from "@/components/altkit/data";
 import { T } from "@/components/editable";
+import { FramedPhoto } from "@/components/altkit/media";
 
 export const metadata: Metadata = {
   title: "Lyall Mercer: co-founder & principal adviser",
@@ -243,6 +244,7 @@ export default function LyallMercerPage() {
             </a>
           </div>
           <Reveal className="lg:pt-2">
+            <FramedPhoto src={MEDIA.lyallSpeaking} alt="Lyall Mercer presenting at a workshop" position="50% 30%" className="mb-6" />
             <MyPRPartnerCTA
               title="Need training, workshops, or practical communications development?"
               description="My PR Partner is CRC Public Relations' training platform for communications practitioners, spokesperson development, crisis workshops, and practical support between major advisory engagements."

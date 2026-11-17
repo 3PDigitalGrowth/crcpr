@@ -10,6 +10,8 @@ import { PageProofStrip } from "@/components/shared/PageProofStrip";
 import { Reveal } from "@/components/altkit/motion";
 import { Container, Eyebrow, H2, Section } from "@/components/altkit/primitives";
 import { T } from "@/components/editable";
+import { FramedPhoto } from "@/components/altkit/media";
+import { MEDIA } from "@/components/altkit/data";
 
 export const metadata: Metadata = {
   title: "Corporate PR Services",
@@ -153,6 +155,7 @@ export default function ServicesPage() {
             </div>
           </div>
           <Reveal className="lg:pt-10">
+            <FramedPhoto src={MEDIA.lyallWhiteboard} alt="Lyall Mercer working through a strategy at the whiteboard with Barbara Gorogh" position="40% 35%" className="mb-6" />
             <aside className="kit-r border border-line p-6 md:p-8">
               <Eyebrow>
                 <T id="services.t6">What the right starting point solves</T>

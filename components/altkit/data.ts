@@ -34,6 +34,33 @@ export const PHOTOS = {
   officePlant: `${P}/office-plant.jpg`,
 } as const;
 
+/*
+ * Imagery added 17 Nov 2026, each placed on the one page it belongs to. All of
+ * it is the client's own: working scenes from the 2026 shoot (staff only seen
+ * from behind, per Barbara 4 Aug 2026), and pictures from CRC's Drive library
+ * (licensed stock CRC bought, Pacific Islands Forum and event photos). No AI.
+ */
+const W = "/images/crc-2026/work";
+const L = "/images/crc-2026/library";
+
+export const MEDIA = {
+  lyallWhiteboard: `${W}/lyall-whiteboard.jpg`,
+  lyallAdvising: `${W}/lyall-advising.jpg`,
+  advisingClient: `${W}/advising-client.jpg`,
+  lyallSpeaking: `${L}/lyall-speaking.jpg`,
+  mediaTrainingInterview: `${L}/media-training-interview.jpg`,
+  mediaInterview: `${L}/media-interview.jpg`,
+  pressConference: `${L}/press-conference.jpg`,
+  socialMediaPhone: `${L}/social-media-phone.jpg`,
+  newsOnPhone: `${L}/news-on-phone.jpg`,
+  businessNewspapers: `${L}/business-newspapers.jpg`,
+  pacificForum: `${L}/pacific-islands-forum.jpg`,
+  videoIndustryAssociations: "/videos/industry-associations.mp4",
+  videoIndustryAssociationsPoster: "/videos/industry-associations-poster.jpg",
+  videoSchools: "/videos/schools-faith.mp4",
+  videoSchoolsPoster: "/videos/schools-faith-poster.jpg",
+} as const;
+
 export const FOUNDERS_ALT = "Lyall Mercer and Barbara Gorogh of CRC Public Relations";
 
 export type NavItem = { label: string; href: string; menu?: "services" | "about" | "clients" };

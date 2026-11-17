@@ -12,6 +12,8 @@ import { PacificFootprintMap } from "@/components/pacific/PacificFootprintMap";
 import { Reveal } from "@/components/altkit/motion";
 import { Container, Eyebrow, H2, Section } from "@/components/altkit/primitives";
 import { T } from "@/components/editable";
+import { FramedPhoto } from "@/components/altkit/media";
+import { MEDIA } from "@/components/altkit/data";
 
 export const metadata: Metadata = {
   title: "Pacific Communications & PR Advisory | CRC Public Relations",
@@ -247,6 +249,7 @@ export default function PacificPage() {
             </div>
           </div>
           <Reveal className="lg:pt-10">
+            <FramedPhoto src={MEDIA.pacificForum} alt="Delegation tables and flags at the Pacific Islands Forum" className="mb-6" />
             <aside className="kit-r border border-line p-6 md:p-8">
               <Eyebrow>
                 <T id="pacific.t8">What serious Pacific work requires</T>

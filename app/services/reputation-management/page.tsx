@@ -10,6 +10,8 @@ import { ReputationAssessment } from "@/components/shared/ReputationAssessment";
 import { Reveal } from "@/components/altkit/motion";
 import { Container, Eyebrow, H2, Section } from "@/components/altkit/primitives";
 import { T } from "@/components/editable";
+import { FramedPhoto } from "@/components/altkit/media";
+import { MEDIA } from "@/components/altkit/data";
 
 export const metadata: Metadata = {
   title:
@@ -182,6 +184,7 @@ Your reputation is at the core of our communications strategies. This includes u
             </div>
           </div>
           <Reveal className="lg:pt-10">
+            <FramedPhoto src={MEDIA.businessNewspapers} alt="A stack of business newspapers" className="mb-6" />
             <aside className="kit-r border border-line p-6 md:p-8">
               <Eyebrow>
                 <T id={`${P}.t7`}>Early warning signs</T>

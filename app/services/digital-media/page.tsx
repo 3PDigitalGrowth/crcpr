@@ -8,6 +8,8 @@ import { PageProofStrip } from "@/components/shared/PageProofStrip";
 import { Reveal } from "@/components/altkit/motion";
 import { Container, Eyebrow, H2, Section } from "@/components/altkit/primitives";
 import { T } from "@/components/editable";
+import { FramedPhoto } from "@/components/altkit/media";
+import { MEDIA } from "@/components/altkit/data";
 
 export const metadata: Metadata = {
   title:
@@ -168,6 +170,7 @@ export default function DigitalMediaPage() {
             </div>
           </div>
           <Reveal className="lg:pt-10">
+            <FramedPhoto src={MEDIA.socialMediaPhone} alt="Social media apps open on a phone" className="mb-6" />
             <aside className="kit-r border border-line p-6 md:p-8">
               <Eyebrow>
                 <T id={`${P}.t14`}>What changes online</T>

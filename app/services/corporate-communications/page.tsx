@@ -10,6 +10,8 @@ import { PageProofStrip } from "@/components/shared/PageProofStrip";
 import { Reveal } from "@/components/altkit/motion";
 import { Container, Eyebrow, H2, Section } from "@/components/altkit/primitives";
 import { T } from "@/components/editable";
+import { FramedPhoto } from "@/components/altkit/media";
+import { MEDIA } from "@/components/altkit/data";
 
 export const metadata: Metadata = {
   title:
@@ -329,6 +331,7 @@ export default function CorporateCommunicationsPage() {
                 strategic advice.
               </T>
             </p>
+            <FramedPhoto src={MEDIA.lyallAdvising} alt="Lyall Mercer in a meeting at the CRC Public Relations office" position="45% 40%" className="mt-8" />
           </div>
           <div>
             <div className="space-y-4 text-[15px] leading-relaxed text-muted">

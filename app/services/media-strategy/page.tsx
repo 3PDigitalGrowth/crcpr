@@ -8,6 +8,8 @@ import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
 import { Reveal } from "@/components/altkit/motion";
 import { Container, Eyebrow, H2, Section } from "@/components/altkit/primitives";
 import { T } from "@/components/editable";
+import { FramedPhoto } from "@/components/altkit/media";
+import { MEDIA } from "@/components/altkit/data";
 
 export const metadata: Metadata = {
   title:
@@ -185,6 +187,7 @@ export default function MediaStrategyPage() {
             </div>
           </div>
           <Reveal className="lg:pt-10">
+            <FramedPhoto src={MEDIA.mediaInterview} alt="A reporter interviewing an executive" position="70% 40%" className="mb-6" />
             <aside className="kit-r border border-line p-6 md:p-8">
               <Eyebrow>
                 <T id={`${P}.t9`}>What weak strategy looks like</T>

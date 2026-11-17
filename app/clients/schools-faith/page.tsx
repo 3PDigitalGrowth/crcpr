@@ -9,6 +9,8 @@ import { PageProofStrip } from "@/components/shared/PageProofStrip";
 import { Reveal } from "@/components/altkit/motion";
 import { Container, Eyebrow, H2, Section } from "@/components/altkit/primitives";
 import { T } from "@/components/editable";
+import { FramedVideo } from "@/components/altkit/media";
+import { MEDIA } from "@/components/altkit/data";
 
 export const metadata: Metadata = {
   title:
@@ -173,6 +175,7 @@ export default function SchoolsFaithPage() {
             </div>
           </div>
           <Reveal className="lg:pt-10">
+            <FramedVideo src={MEDIA.videoSchools} poster={MEDIA.videoSchoolsPoster} label="Video: the communication needs of independent and faith-based schools" className="mb-6" />
             <aside className="kit-r border border-line p-6 md:p-8">
               <Eyebrow>
                 <T id={`${P}.t7`}>What makes this different</T>

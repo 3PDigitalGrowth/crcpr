@@ -7,6 +7,8 @@ import { PageProofStrip } from "@/components/shared/PageProofStrip";
 import { Reveal } from "@/components/altkit/motion";
 import { Container, Eyebrow, H2, Section } from "@/components/altkit/primitives";
 import { T } from "@/components/editable";
+import { FramedVideo } from "@/components/altkit/media";
+import { MEDIA } from "@/components/altkit/data";
 
 export const metadata: Metadata = {
   title:
@@ -255,6 +257,7 @@ export default function IndustryAssociationsPage() {
               </div>
             </div>
             <Reveal className="lg:pt-10">
+              <FramedVideo src={MEDIA.videoIndustryAssociations} poster={MEDIA.videoIndustryAssociationsPoster} label="Video: the core needs of every industry association" className="mb-6" />
               <aside className="kit-r border border-line p-6 md:p-8">
                 <p className="text-lg font-semibold leading-snug">
                   <T id={`${P}.t8`}>

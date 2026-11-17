@@ -396,6 +396,25 @@ Your reputation is at the core of our communications strategies. This includes u
         </Container>
       </Section>
 
+      <InlineEnquirySection
+        copyId={P}
+        title="Concerned about where your organisation is exposed?"
+        body="If your board, executive team, or communications function needs a clearer view of reputation risk, we can help you assess the pressure points before they become a recovery project."
+        bullets={[
+          "Leadership-level reputation risk assessment",
+          "Stakeholder and media exposure review",
+          "Recovery advice for damaged trust environments",
+        ]}
+        defaultMessage="We would like confidential advice on our organisation's reputation risk and next steps."
+      />
+
+      <FAQSection
+        copyId={P}
+        items={faqs}
+        titleText="Common questions about reputation management"
+        expandable={false}
+      />
+
       {/* ---------- RELATED SECTORS ---------- */}
       <Section tone="base" className="pb-11 pt-4 md:pb-14 md:pt-6">
         <Container>
@@ -418,25 +437,6 @@ Your reputation is at the core of our communications strategies. This includes u
           </div>
         </Container>
       </Section>
-
-      <InlineEnquirySection
-        copyId={P}
-        title="Concerned about where your organisation is exposed?"
-        body="If your board, executive team, or communications function needs a clearer view of reputation risk, we can help you assess the pressure points before they become a recovery project."
-        bullets={[
-          "Leadership-level reputation risk assessment",
-          "Stakeholder and media exposure review",
-          "Recovery advice for damaged trust environments",
-        ]}
-        defaultMessage="We would like confidential advice on our organisation's reputation risk and next steps."
-      />
-
-      <FAQSection
-        copyId={P}
-        items={faqs}
-        titleText="Common questions about reputation management"
-        expandable={false}
-      />
 
       <PageClosingCTA
         copyId={P}

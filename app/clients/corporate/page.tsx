@@ -85,13 +85,6 @@ export default function CorporateClientsPage() {
         ctaHref="/contact"
       />
 
-      <PageProofStrip
-        copyId={P}
-        variant="navy"
-        title="Corporate clients need communications advice that understands governance pressure, not just publicity."
-        items={[...proofItems]}
-      />
-
       <Section tone="base" className="py-11 md:py-14">
         <Container className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:gap-14">
           <div>
@@ -144,6 +137,15 @@ export default function CorporateClientsPage() {
         </Container>
       </Section>
 
+      <LeadMagnetBanner magnet="crisisReadinessChecklist" variant="light" />
+
+      <PageProofStrip
+        copyId={P}
+        variant="navy"
+        title="Corporate clients need communications advice that understands governance pressure, not just publicity."
+        items={[...proofItems]}
+      />
+
       <InlineEnquirySection
         copyId={P}
         eyebrow="Typical situations"
@@ -156,8 +158,6 @@ export default function CorporateClientsPage() {
         ]}
         defaultMessage="We need corporate communications advice on a sensitive matter."
       />
-
-      <LeadMagnetBanner magnet="crisisReadinessChecklist" />
 
       <FAQSection
         copyId={P}

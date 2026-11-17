@@ -185,6 +185,13 @@ export default function LyallMercerPage() {
         </Container>
       </Section>
 
+      <LeadMagnetBanner
+        magnet="publicVoiceSteps"
+        variant="light"
+        title="Are you ready to raise your public profile and be the trusted voice of authority for your area of expertise?"
+        description="Download the CRC Public Relations '5 steps to becoming a trusted public voice', and drive new clients and staff through the credibility this brings. Applies to companies, non-profits, governments, professional services firms, schools and associations."
+      />
+
       {/* ---------- AREAS OF EXPERTISE ---------- */}
       <Section tone="base" className="py-11 md:py-14">
         <Container>
@@ -258,13 +265,6 @@ export default function LyallMercerPage() {
           </Reveal>
         </Container>
       </Section>
-
-      <LeadMagnetBanner
-        magnet="publicVoiceSteps"
-        variant="light"
-        title="Are you ready to raise your public profile and be the trusted voice of authority for your area of expertise?"
-        description="Download the CRC Public Relations '5 steps to becoming a trusted public voice', and drive new clients and staff through the credibility this brings. Applies to companies, non-profits, governments, professional services firms, schools and associations."
-      />
 
       <InlineEnquirySection
         copyId="about-lyall-mercer"

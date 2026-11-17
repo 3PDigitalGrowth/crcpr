@@ -4,6 +4,7 @@ import { CONCEPTS } from "./concepts";
 import { fontClasses } from "./fonts";
 import { Header } from "./chrome";
 import { Footer } from "./Footer";
+import { StickyCta } from "./StickyCta";
 
 /**
  * Chrome for the live site. Client approval, 17 Nov 2026: "Please create the
@@ -26,6 +27,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
         <Header base={base} />
         <main>{children}</main>
         <Footer base={base} />
+        <StickyCta />
       </div>
     </div>
   );

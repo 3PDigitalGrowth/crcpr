@@ -35,6 +35,7 @@ export function ContactFormSection({ source }: ContactFormSectionProps) {
     setIsSubmitting(true);
     setFormState(initialState);
     const formData = new FormData(e.currentTarget);
+    formData.set("page", window.location.pathname + window.location.search);
     const result = await submitEnquiry(initialState, formData);
     setIsSubmitting(false);
     setFormState(result);

@@ -74,6 +74,7 @@ export function LeadMagnetModal({
     setIsSubmitting(true);
     setFormState(initialFormState);
     const formData = new FormData(e.currentTarget);
+    formData.set("page", window.location.pathname + window.location.search);
     const result = await submitLeadMagnet(initialFormState, formData);
     setIsSubmitting(false);
     setFormState(result);

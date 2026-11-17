@@ -100,12 +100,28 @@ export default function ClientsPage() {
         ctaHref="/contact"
       />
 
-      <PageProofStrip
-        copyId={P}
-        variant="navy"
-        title="The communications challenge changes by sector. The stakes do not."
-        items={[...proofItems]}
-      />
+      {/* ---------- THE SECTOR PAGES ---------- */}
+      <Section tone="base" className="pb-11 md:pb-14">
+        <Container>
+          <div className="border-t border-line">
+            {sectors.map((sector, i) => (
+              <Reveal key={sector.href} delay={i * 0.05}>
+                <Link
+                  href={sector.href}
+                  className="group grid gap-2 border-b border-line py-6 md:grid-cols-[3rem,1fr,1.5fr,2rem] md:items-baseline md:gap-8"
+                >
+                  <span className="kit-display text-sm text-accent">{`0${i + 1}.`}</span>
+                  <h3 className="kit-display text-[clamp(1.1rem,1.7vw,1.35rem)] uppercase leading-tight transition-transform duration-300 group-hover:translate-x-1.5">
+                    {sector.title}
+                  </h3>
+                  <p className="text-[15px] leading-relaxed text-muted">{sector.body}</p>
+                  <ArrowUpRight className="hidden h-5 w-5 self-center text-accent md:block" aria-hidden />
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+        </Container>
+      </Section>
 
       {/* ---------- WHY SECTOR CONTEXT MATTERS ---------- */}
       <Section tone="base" className="py-11 md:py-14">
@@ -167,28 +183,14 @@ export default function ClientsPage() {
         </Container>
       </Section>
 
-      {/* ---------- THE SECTOR PAGES ---------- */}
-      <Section tone="base" className="pb-11 md:pb-14">
-        <Container>
-          <div className="border-t border-line">
-            {sectors.map((sector, i) => (
-              <Reveal key={sector.href} delay={i * 0.05}>
-                <Link
-                  href={sector.href}
-                  className="group grid gap-2 border-b border-line py-6 md:grid-cols-[3rem,1fr,1.5fr,2rem] md:items-baseline md:gap-8"
-                >
-                  <span className="kit-display text-sm text-accent">{`0${i + 1}.`}</span>
-                  <h3 className="kit-display text-[clamp(1.1rem,1.7vw,1.35rem)] uppercase leading-tight transition-transform duration-300 group-hover:translate-x-1.5">
-                    {sector.title}
-                  </h3>
-                  <p className="text-[15px] leading-relaxed text-muted">{sector.body}</p>
-                  <ArrowUpRight className="hidden h-5 w-5 self-center text-accent md:block" aria-hidden />
-                </Link>
-              </Reveal>
-            ))}
-          </div>
-        </Container>
-      </Section>
+      <LeadMagnetBanner magnet="crisisReadinessChecklist" variant="light" />
+
+      <PageProofStrip
+        copyId={P}
+        variant="navy"
+        title="The communications challenge changes by sector. The stakes do not."
+        items={[...proofItems]}
+      />
 
       <InlineEnquirySection
         copyId={P}
@@ -201,8 +203,6 @@ export default function ClientsPage() {
         ]}
         defaultMessage="We would like sector-specific communications advice."
       />
-
-      <LeadMagnetBanner magnet="crisisReadinessChecklist" variant="light" />
 
       <FAQSection
         copyId={P}

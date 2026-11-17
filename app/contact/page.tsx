@@ -33,32 +33,7 @@ export default function ContactPage({
         photo={{ src: PHOTOS.officeLounge, alt: "The CRC Public Relations office" }}
       />
 
-      <PageProofStrip
-        copyId="contact"
-        title="Why CRC Public Relations"
-        body="When you contact CRC Public Relations, we will carefully consider your situation and unique needs with a commitment of confidentiality."
-        items={[
-          {
-            label: "How we work",
-            value: "Senior-led",
-            detail:
-              "Your enquiry will be passed to an experienced adviser, who will consider your request and respond at the first available opportunity.",
-          },
-          {
-            label: "Response model",
-            value: "Senior review",
-            detail:
-              "We will respond directly by email or phone, depending on your enquiry.",
-          },
-          {
-            label: "Urgent matters",
-            value: "Call first",
-            detail:
-              "If the issue is already active, phone is the best channel. The form is best for general and planned advisory matters.",
-          },
-        ]}
-        variant="navy"
-      />
+      <ContactFormSection source={searchParams.source} />
 
       <Section tone="base" className="py-11 md:py-14">
         <Container>
@@ -130,7 +105,32 @@ export default function ContactPage({
         </Container>
       </Section>
 
-      <ContactFormSection source={searchParams.source} />
+      <PageProofStrip
+        copyId="contact"
+        title="Why CRC Public Relations"
+        body="When you contact CRC Public Relations, we will carefully consider your situation and unique needs with a commitment of confidentiality."
+        items={[
+          {
+            label: "How we work",
+            value: "Senior-led",
+            detail:
+              "Your enquiry will be passed to an experienced adviser, who will consider your request and respond at the first available opportunity.",
+          },
+          {
+            label: "Response model",
+            value: "Senior review",
+            detail:
+              "We will respond directly by email or phone, depending on your enquiry.",
+          },
+          {
+            label: "Urgent matters",
+            value: "Call first",
+            detail:
+              "If the issue is already active, phone is the best channel. The form is best for general and planned advisory matters.",
+          },
+        ]}
+        variant="navy"
+      />
 
       <FAQSection copyId="contact" />
 

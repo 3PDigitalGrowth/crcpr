@@ -2,6 +2,7 @@
 
 import { siteConfig } from "@/config/site";
 import { sendAssessmentEmail } from "@/lib/email/sendAssessmentEmail";
+import { notifyLead } from "@/lib/email/notifyLead";
 import {
   ASSESSMENT_CATEGORIES,
   type AssessmentCategory,
@@ -27,9 +28,10 @@ export async function submitEnquiry(
     return { status: "error", message: "Please fill in all required fields." };
   }
 
-  // TODO: Connect to email provider (Resend preferred, Formspree fallback)
-  // Send to siteConfig.email.newBusiness
-  console.log("Enquiry submitted:", { name, organisation, phone, email, message });
+  const page = (formData.get("page") as string) || undefined;
+  console.log("Enquiry submitted:", { name, organisation, phone, email, message, page });
+  // Emails CRC (LEADS_NOTIFY_TO) once RESEND_API_KEY is set; never fails the form.
+  await notifyLead({ kind: "enquiry", name, email, organisation, phone, message, page });
 
   return {
     status: "success",
@@ -59,12 +61,23 @@ export async function submitLeadMagnet(
   // Waitlist signups (resource not yet published) should be routed to the
   // dedicated "coming soon" list so they are emailed once the PDF is ready.
   // TODO: Trigger automated email with download link (or waitlist confirmation).
+  const page = (formData.get("page") as string) || undefined;
   console.log("Lead magnet requested:", {
     firstName,
     email,
     organisation,
     magnet,
     waitlist: isWaitlist,
+    page,
+  });
+  await notifyLead({
+    kind: "resource",
+    name: firstName,
+    email,
+    organisation,
+    resource: magnetMeta?.title ?? magnet,
+    waitlist: isWaitlist,
+    page,
   });
 
   return {

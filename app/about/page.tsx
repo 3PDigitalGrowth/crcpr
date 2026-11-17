@@ -258,19 +258,6 @@ export default function AboutPage() {
         </Container>
       </Section>
 
-      <InlineEnquirySection
-        copyId="about"
-        title="Start a direct conversation"
-        body="If your situation is sensitive or high-stakes, the first step is a short, confidential conversation. You will speak with an experienced adviser."
-        bullets={[
-          "Direct access to experienced advisers",
-          "Support across corporate, crisis, reputation, and stakeholder matters",
-          "Confidential review of the situation before recommending a next step",
-        ]}
-        defaultMessage="We would like to speak directly with CRC Public Relations about a sensitive communications matter."
-        variant="white"
-      />
-
       {/* ---------- TEAM ---------- */}
       <Section tone="base" className="py-11 md:py-14">
         <Container>
@@ -321,6 +308,19 @@ export default function AboutPage() {
           </div>
         </Container>
       </Section>
+
+      <InlineEnquirySection
+        copyId="about"
+        title="Start a direct conversation"
+        body="If your situation is sensitive or high-stakes, the first step is a short, confidential conversation. You will speak with an experienced adviser."
+        bullets={[
+          "Direct access to experienced advisers",
+          "Support across corporate, crisis, reputation, and stakeholder matters",
+          "Confidential review of the situation before recommending a next step",
+        ]}
+        defaultMessage="We would like to speak directly with CRC Public Relations about a sensitive communications matter."
+        variant="white"
+      />
 
       <Section tone="base" className="pb-11 md:pb-14">
         <Container>

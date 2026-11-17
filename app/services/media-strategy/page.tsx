@@ -225,6 +225,14 @@ export default function MediaStrategyPage() {
         </Container>
       </Section>
 
+      <LeadMagnetBanner
+        magnet="publicVoiceSteps"
+        variant="light"
+        title="Are you ready to raise your public profile and be the trusted voice of authority for your area of expertise?"
+        description="Download the CRC Public Relations '5 steps to becoming a trusted public voice', and drive new clients and staff through the credibility this brings. Applies to companies, non-profits, governments, professional services firms, schools and associations."
+        highlights={[]}
+      />
+
       {/* ---------- AN EFFECTIVE STRATEGY ---------- */}
       <Section tone="deep" className="py-11 md:py-14">
         <Container className="grid gap-10 lg:grid-cols-[0.8fr,1.2fr] lg:gap-14">
@@ -256,18 +264,6 @@ export default function MediaStrategyPage() {
           </div>
         </Container>
       </Section>
-
-      <InlineEnquirySection copyId={P}
-        title="Need a sharper media strategy?"
-        body="If your organisation wants stronger editorial positioning, better spokesperson preparedness, or more deliberate thought leadership, CRC Public Relations can help design the strategy behind it."
-        bullets={[
-          "Media strategy and editorial positioning",
-          "Journalist relationship and spokesperson planning",
-          "Thought leadership and commentary programmes",
-        ]}
-        defaultMessage="We would like advice on our media strategy and spokesperson positioning."
-        variant="white"
-      />
 
       {/* ---------- WHAT IT DELIVERS ---------- */}
       <Section tone="base" className="py-11 md:py-14">
@@ -350,6 +346,10 @@ export default function MediaStrategyPage() {
         </Container>
       </Section>
 
+      <div id="media-reach-snapshot">
+        <MediaReachSnapshot />
+      </div>
+
       {/* ---------- NEWSROOM PERSPECTIVE ---------- */}
       <Section tone="base" className="py-11 md:py-14">
         <Container className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:gap-14">
@@ -414,16 +414,16 @@ export default function MediaStrategyPage() {
         </Container>
       </Section>
 
-      <div id="media-reach-snapshot">
-        <MediaReachSnapshot />
-      </div>
-
-      <LeadMagnetBanner
-        magnet="trustedVoiceGuide"
-        variant="light"
-        title="Are you ready to raise your public profile and be the trusted voice of authority for your area of expertise?"
-        description="Download the CRC Public Relations '5 steps to becoming a trusted public voice', and drive new clients and staff through the credibility this brings. Applies to companies, non-profits, governments, professional services firms, schools and associations."
-        highlights={[]}
+      <InlineEnquirySection copyId={P}
+        title="Need a sharper media strategy?"
+        body="If your organisation wants stronger editorial positioning, better spokesperson preparedness, or more deliberate thought leadership, CRC Public Relations can help design the strategy behind it."
+        bullets={[
+          "Media strategy and editorial positioning",
+          "Journalist relationship and spokesperson planning",
+          "Thought leadership and commentary programmes",
+        ]}
+        defaultMessage="We would like advice on our media strategy and spokesperson positioning."
+        variant="white"
       />
 
       <FAQSection copyId={P}

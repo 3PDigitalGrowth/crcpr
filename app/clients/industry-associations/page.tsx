@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PageHero } from "@/components/layout/PageHero";
 import { FAQSection } from "@/components/shared/FAQSection";
+import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
 import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
 import { PageClosingCTA } from "@/components/shared/PageClosingCTA";
 import { PageProofStrip } from "@/components/shared/PageProofStrip";
@@ -292,8 +293,21 @@ export default function IndustryAssociationsPage() {
         </Container>
       </Section>
 
+      <LeadMagnetBanner
+        magnet="associationsPRChecklist"
+        eyebrow="Free resource"
+        title="Elevate your voice and build trust"
+        description="Is your industry or professional association communicating in a way that builds member trust, supports your advocacy, and builds trust with stakeholders including government and regulators? Are you the voice the media seeks out for regular expert commentary? This checklist is created from 15+ years of association experience and is a great place to start."
+        highlights={[
+          "Built from 15+ years of association advisory work",
+          "Covers member trust, advocacy, and media authority",
+          "We'll send it the moment it is published",
+        ]}
+        whatYouGetBody="A practical PR and communications strategy checklist for industry and professional associations. Sign up now and we'll email it the moment it goes live."
+      />
+
       {/* ---------- SECTORS ---------- */}
-      <Section tone="base" className="pb-11 pt-0 md:pb-14">
+      <Section tone="base" className="py-11 md:py-14">
         <Container>
           <div className="border-t border-line pt-11 md:pt-14">
             <div className="grid gap-5 lg:grid-cols-[1fr,1fr] lg:items-end lg:gap-14">
@@ -401,17 +415,16 @@ export default function IndustryAssociationsPage() {
         </Container>
       </Section>
 
-      <LeadMagnetBanner
-        magnet="associationsPRChecklist"
-        eyebrow="Free resource"
-        title="Elevate your voice and build trust"
-        description="Is your industry or professional association communicating in a way that builds member trust, supports your advocacy, and builds trust with stakeholders including government and regulators? Are you the voice the media seeks out for regular expert commentary? This checklist is created from 15+ years of association experience and is a great place to start."
-        highlights={[
-          "Built from 15+ years of association advisory work",
-          "Covers member trust, advocacy, and media authority",
-          "We'll send it the moment it is published",
+      {/* Enquiry block reused verbatim from /clients (no new copy): the page had no form. */}
+      <InlineEnquirySection
+        title="Need advice tailored to your sector?"
+        body="If your situation is shaped by sector-specific governance, stakeholder, or community pressures, we can help you work out the right starting point and the right communication approach."
+        bullets={[
+          "Sector-aware message and stakeholder strategy",
+          "Direct counsel for high-stakes matters",
+          "Help identifying the right service and first move",
         ]}
-        whatYouGetBody="A practical PR and communications strategy checklist for industry and professional associations. Sign up now and we'll email it the moment it goes live."
+        defaultMessage="We would like sector-specific communications advice."
       />
 
       <FAQSection

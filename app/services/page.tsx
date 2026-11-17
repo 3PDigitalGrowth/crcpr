@@ -117,6 +117,31 @@ export default function ServicesPage() {
         ctaHref="/contact"
       />
 
+      {/* ---------- THE SERVICES ---------- */}
+      <Section tone="base" className="py-11 md:py-14">
+        <Container>
+          <div className="border-t border-line">
+            {services.map((service, i) => (
+              <Reveal key={service.slug} delay={i * 0.04}>
+                <Link
+                  href={`/services/${service.slug}`}
+                  className="group grid gap-2 border-b border-line py-6 md:grid-cols-[3rem,1fr,1.5fr,auto] md:items-baseline md:gap-8"
+                >
+                  <span className="kit-display text-sm text-accent">{`0${i + 1}.`}</span>
+                  <h3 className="kit-display text-[clamp(1.1rem,1.7vw,1.35rem)] uppercase leading-tight">
+                    {service.title}
+                  </h3>
+                  <p className="text-[15px] leading-relaxed text-muted">{service.description}</p>
+                  <span className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-accent">
+                    <T id="services.t13">Learn more →</T>
+                  </span>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+        </Container>
+      </Section>
+
       <PageProofStrip copyId="services"
         title="The service mix changes by client. The standard of counsel does not."
         items={[...proofItems]}
@@ -182,6 +207,12 @@ export default function ServicesPage() {
         </Container>
       </Section>
 
+      <LeadMagnetBanner
+        magnet="reputationAssessment"
+        title="Want a clearer view of where your organisation is exposed?"
+        description="Start with the CRC Public Relations Reputation Vulnerability Assessment. It gives leadership a fast view of media, stakeholder, governance, crisis, and digital exposure so the next decision is based on evidence rather than instinct."
+      />
+
       <InlineEnquirySection copyId="services"
         title="Not sure which service is the right starting point?"
         body="That is common. Many clients come to CRC Public Relations with a situation rather than a neatly labelled service category. We can help identify the right starting point and the right next step."
@@ -192,37 +223,6 @@ export default function ServicesPage() {
         ]}
         defaultMessage="We would like advice on which CRC Public Relations service is the right starting point for our situation."
         variant="white"
-      />
-
-      {/* ---------- THE SERVICES ---------- */}
-      <Section tone="base" className="py-11 md:py-14">
-        <Container>
-          <div className="border-t border-line">
-            {services.map((service, i) => (
-              <Reveal key={service.slug} delay={i * 0.04}>
-                <Link
-                  href={`/services/${service.slug}`}
-                  className="group grid gap-2 border-b border-line py-6 md:grid-cols-[3rem,1fr,1.5fr,auto] md:items-baseline md:gap-8"
-                >
-                  <span className="kit-display text-sm text-accent">{`0${i + 1}.`}</span>
-                  <h3 className="kit-display text-[clamp(1.1rem,1.7vw,1.35rem)] uppercase leading-tight">
-                    {service.title}
-                  </h3>
-                  <p className="text-[15px] leading-relaxed text-muted">{service.description}</p>
-                  <span className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.1em] text-accent">
-                    <T id="services.t13">Learn more →</T>
-                  </span>
-                </Link>
-              </Reveal>
-            ))}
-          </div>
-        </Container>
-      </Section>
-
-      <LeadMagnetBanner
-        magnet="reputationAssessment"
-        title="Want a clearer view of where your organisation is exposed?"
-        description="Start with the CRC Public Relations Reputation Vulnerability Assessment. It gives leadership a fast view of media, stakeholder, governance, crisis, and digital exposure so the next decision is based on evidence rather than instinct."
       />
 
       <Section tone="base" className="py-11 md:py-14">

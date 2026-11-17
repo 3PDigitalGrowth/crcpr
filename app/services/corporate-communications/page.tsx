@@ -183,83 +183,6 @@ export default function CorporateCommunicationsPage() {
         </Container>
       </Section>
 
-      {/* ---------- HOW AN ENGAGEMENT BEGINS ---------- */}
-      <Section tone="base" className="py-11 md:py-14">
-        <Container>
-          <Eyebrow>
-            <T id={`${P}.t13`}>When you engage CRC Public Relations</T>
-          </Eyebrow>
-          <H2 className="mt-3 max-w-3xl">
-            <T id={`${P}.t14`}>How a corporate communications engagement begins</T>
-          </H2>
-          <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-muted">
-            <T id={`${P}.t15`}>
-              The immediate objective is not more communications activity. It is a clearer picture of what your
-              organisation needs to say, to whom, in what order, and under what level of scrutiny. That discipline is
-              what prevents sensitive communications work from becoming reactive, inconsistent, or unnecessarily
-              exposed.
-            </T>
-          </p>
-          <div className="mt-8 border-t border-line">
-            {[
-              ["t16", "Situation assessment", "t17", "We assess your communications posture, stakeholder landscape, current messages, and the specific decision or pressure point your leadership team is navigating."],
-              ["t18", "Message and stakeholder sequence", "t19", "We define the messages that need to hold across leadership, staff, media, regulators, and other critical stakeholders, then sequence those communications so confidence is built rather than diluted."],
-              ["t20", "Ongoing counsel", "t21", "We stay close to the matter, reviewing drafts, preparing spokespeople, pressure-testing language, and advising leadership as the situation evolves."],
-            ].map(([tid, title, bid, body], i) => (
-              <Reveal key={tid} delay={i * 0.05}>
-                <div className="grid gap-2 border-b border-line py-6 md:grid-cols-[3rem,1fr,1.5fr] md:items-baseline md:gap-8">
-                  <span className="kit-display text-sm text-accent">{`0${i + 1}.`}</span>
-                  <h3 className="kit-display text-[clamp(1.1rem,1.7vw,1.35rem)] uppercase leading-tight">
-                    <T id={`${P}.${tid}`}>{title}</T>
-                  </h3>
-                  <p className="text-[15px] leading-relaxed text-muted">
-                    <T id={`${P}.${bid}`}>{body}</T>
-                  </p>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </Container>
-      </Section>
-
-      <InlineEnquirySection
-        copyId={P}
-        title="Need communications counsel on a sensitive matter?"
-        body="Use this form if you are preparing a significant announcement, managing a board or stakeholder issue, or want an experienced external adviser to review your communications posture before the pressure arrives."
-        bullets={[
-          "Executive and board communication support",
-          "Stakeholder engagement planning and message discipline",
-          "Sensitive media and internal communication advice",
-        ]}
-        defaultMessage="We need corporate communications support for an upcoming matter."
-      />
-
-      {/* ---------- IN PRACTICE ---------- */}
-      <Section tone="base" className="py-11 md:py-14">
-        <Container>
-          <H2 className="max-w-3xl">
-            <T id={`${P}.t22`}>What corporate communications looks like in practice</T>
-          </H2>
-          <div className="mt-8 grid gap-x-14 md:grid-cols-2">
-            {[
-              ["t23", "Corporate messaging and positioning", "t24", "When your organisation needs to communicate, whether to the market, to government, to the community, or to its own people, the message must be clear, credible, and aligned with your strategic objectives. We develop messaging frameworks that give your leadership team a consistent, defensible position on every issue that matters."],
-              ["t25", "Stakeholder engagement and communications strategy", "t26", "Are your stakeholders advocates or adversaries? Every organisation has stakeholders who can either support or obstruct its objectives. We map your stakeholder landscape, identify the relationships that matter most, and design engagement strategies that build trust and maintain it through major change programmes, regulatory processes, and periods of uncertainty."],
-              ["t27", "Internal communications and change management", "t28", "How an organisation communicates with its own people during change, crisis, or transition determines whether that process builds or erodes confidence. We develop internal communications programmes that keep your workforce informed, aligned, and engaged, from board announcements to all-staff responses."],
-              ["t29", "Executive communications and media positioning", "t30", "Leaders are the face of the organisations they run. We help executives develop their communications voice, prepare for media and stakeholder appearances, and build a public profile that reflects the quality of their leadership. This includes speechwriting, talking points development, and sustained media relationship management."],
-            ].map(([tid, title, bid, body]) => (
-              <div key={tid} className="border-t border-line py-6">
-                <h3 className="kit-display text-[15px] uppercase leading-snug">
-                  <T id={`${P}.${tid}`}>{title}</T>
-                </h3>
-                <p className="mt-2.5 text-[15px] leading-relaxed text-muted">
-                  <T id={`${P}.${bid}`}>{body}</T>
-                </p>
-              </div>
-            ))}
-          </div>
-        </Container>
-      </Section>
-
       {/* ---------- WHERE IT BREAKS DOWN ---------- */}
       <Section tone="base" className="py-11 md:py-14">
         <Container className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:gap-14">
@@ -313,6 +236,84 @@ export default function CorporateCommunicationsPage() {
               </div>
             </aside>
           </Reveal>
+        </Container>
+      </Section>
+
+      <LeadMagnetBanner
+        magnet="corpCommsChecklist"
+        variant="dark"
+        title="Is your organisation's communications strategy ready for scrutiny?"
+        description="Download the CRC Public Relations 10 point communications checklist. This provides you with 10 key areas that together ensure your communication isn't random, but is strategically planned with the aim of building ongoing trust with your stakeholders. Applies to companies, non-profits, governments, professional services firms, schools and associations."
+        highlights={[
+          "10 strategic communication checkpoints",
+          "Useful for boards, executives, and comms leaders",
+          "Built to surface trust and reputation gaps",
+        ]}
+        whatYouGetBody="A 10 point checklist that helps your team identify whether your communications strategy is strategically planned to build ongoing stakeholder trust, or leaving you exposed."
+      />
+
+      {/* ---------- IN PRACTICE ---------- */}
+      <Section tone="base" className="py-11 md:py-14">
+        <Container>
+          <H2 className="max-w-3xl">
+            <T id={`${P}.t22`}>What corporate communications looks like in practice</T>
+          </H2>
+          <div className="mt-8 grid gap-x-14 md:grid-cols-2">
+            {[
+              ["t23", "Corporate messaging and positioning", "t24", "When your organisation needs to communicate, whether to the market, to government, to the community, or to its own people, the message must be clear, credible, and aligned with your strategic objectives. We develop messaging frameworks that give your leadership team a consistent, defensible position on every issue that matters."],
+              ["t25", "Stakeholder engagement and communications strategy", "t26", "Are your stakeholders advocates or adversaries? Every organisation has stakeholders who can either support or obstruct its objectives. We map your stakeholder landscape, identify the relationships that matter most, and design engagement strategies that build trust and maintain it through major change programmes, regulatory processes, and periods of uncertainty."],
+              ["t27", "Internal communications and change management", "t28", "How an organisation communicates with its own people during change, crisis, or transition determines whether that process builds or erodes confidence. We develop internal communications programmes that keep your workforce informed, aligned, and engaged, from board announcements to all-staff responses."],
+              ["t29", "Executive communications and media positioning", "t30", "Leaders are the face of the organisations they run. We help executives develop their communications voice, prepare for media and stakeholder appearances, and build a public profile that reflects the quality of their leadership. This includes speechwriting, talking points development, and sustained media relationship management."],
+            ].map(([tid, title, bid, body]) => (
+              <div key={tid} className="border-t border-line py-6">
+                <h3 className="kit-display text-[15px] uppercase leading-snug">
+                  <T id={`${P}.${tid}`}>{title}</T>
+                </h3>
+                <p className="mt-2.5 text-[15px] leading-relaxed text-muted">
+                  <T id={`${P}.${bid}`}>{body}</T>
+                </p>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </Section>
+
+      {/* ---------- HOW AN ENGAGEMENT BEGINS ---------- */}
+      <Section tone="base" className="py-11 md:py-14">
+        <Container>
+          <Eyebrow>
+            <T id={`${P}.t13`}>When you engage CRC Public Relations</T>
+          </Eyebrow>
+          <H2 className="mt-3 max-w-3xl">
+            <T id={`${P}.t14`}>How a corporate communications engagement begins</T>
+          </H2>
+          <p className="mt-5 max-w-2xl text-[15px] leading-relaxed text-muted">
+            <T id={`${P}.t15`}>
+              The immediate objective is not more communications activity. It is a clearer picture of what your
+              organisation needs to say, to whom, in what order, and under what level of scrutiny. That discipline is
+              what prevents sensitive communications work from becoming reactive, inconsistent, or unnecessarily
+              exposed.
+            </T>
+          </p>
+          <div className="mt-8 border-t border-line">
+            {[
+              ["t16", "Situation assessment", "t17", "We assess your communications posture, stakeholder landscape, current messages, and the specific decision or pressure point your leadership team is navigating."],
+              ["t18", "Message and stakeholder sequence", "t19", "We define the messages that need to hold across leadership, staff, media, regulators, and other critical stakeholders, then sequence those communications so confidence is built rather than diluted."],
+              ["t20", "Ongoing counsel", "t21", "We stay close to the matter, reviewing drafts, preparing spokespeople, pressure-testing language, and advising leadership as the situation evolves."],
+            ].map(([tid, title, bid, body], i) => (
+              <Reveal key={tid} delay={i * 0.05}>
+                <div className="grid gap-2 border-b border-line py-6 md:grid-cols-[3rem,1fr,1.5fr] md:items-baseline md:gap-8">
+                  <span className="kit-display text-sm text-accent">{`0${i + 1}.`}</span>
+                  <h3 className="kit-display text-[clamp(1.1rem,1.7vw,1.35rem)] uppercase leading-tight">
+                    <T id={`${P}.${tid}`}>{title}</T>
+                  </h3>
+                  <p className="text-[15px] leading-relaxed text-muted">
+                    <T id={`${P}.${bid}`}>{body}</T>
+                  </p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </Container>
       </Section>
 
@@ -380,6 +381,25 @@ export default function CorporateCommunicationsPage() {
         </Container>
       </Section>
 
+      <InlineEnquirySection
+        copyId={P}
+        title="Need communications counsel on a sensitive matter?"
+        body="Use this form if you are preparing a significant announcement, managing a board or stakeholder issue, or want an experienced external adviser to review your communications posture before the pressure arrives."
+        bullets={[
+          "Executive and board communication support",
+          "Stakeholder engagement planning and message discipline",
+          "Sensitive media and internal communication advice",
+        ]}
+        defaultMessage="We need corporate communications support for an upcoming matter."
+      />
+
+      <FAQSection
+        copyId={P}
+        items={faqs}
+        titleText="Common questions about corporate communications support"
+        expandable={false}
+      />
+
       {/* ---------- RELATED SECTORS ---------- */}
       <Section tone="base" className="py-11 md:py-14">
         <Container>
@@ -416,26 +436,6 @@ export default function CorporateCommunicationsPage() {
           </div>
         </Container>
       </Section>
-
-      <LeadMagnetBanner
-        magnet="corpCommsChecklist"
-        variant="dark"
-        title="Is your organisation's communications strategy ready for scrutiny?"
-        description="Download the CRC Public Relations 10 point communications checklist. This provides you with 10 key areas that together ensure your communication isn't random, but is strategically planned with the aim of building ongoing trust with your stakeholders. Applies to companies, non-profits, governments, professional services firms, schools and associations."
-        highlights={[
-          "10 strategic communication checkpoints",
-          "Useful for boards, executives, and comms leaders",
-          "Built to surface trust and reputation gaps",
-        ]}
-        whatYouGetBody="A 10 point checklist that helps your team identify whether your communications strategy is strategically planned to build ongoing stakeholder trust, or leaving you exposed."
-      />
-
-      <FAQSection
-        copyId={P}
-        items={faqs}
-        titleText="Common questions about corporate communications support"
-        expandable={false}
-      />
 
       <PageClosingCTA
         copyId={P}

@@ -154,7 +154,7 @@ export const siteDefaults = {
       description:
         "Pre-interview checklist and briefing framework for executives and spokespeople.",
       fileName: "crcpr-media-interview-guide.pdf",
-      available: true,
+      available: false, // no PDF in public/downloads yet: shows the existing 'Coming soon' wording
     },
     trustedVoiceGuide: {
       title: "5 steps to becoming a trusted public voice",
@@ -175,7 +175,7 @@ export const siteDefaults = {
       description:
         "Covers parent communications, media management, board governance, and social media incidents for school leaders.",
       fileName: "crcpr-schools-crisis-playbook.pdf",
-      available: true,
+      available: false, // no PDF in public/downloads yet: shows the existing 'Coming soon' wording
     },
     pacificGuide: {
       title: "Pacific Stakeholder Engagement Guide",

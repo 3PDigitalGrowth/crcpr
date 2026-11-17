@@ -26,7 +26,9 @@ export function LeadMagnetForm({
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setBusy(true);
-    const result = await submitLeadMagnet(idle, new FormData(e.currentTarget));
+    const data = new FormData(e.currentTarget);
+    data.set("page", window.location.pathname + window.location.search);
+    const result = await submitLeadMagnet(idle, data);
     setBusy(false);
     setState(result);
   }
@@ -105,7 +107,9 @@ export function EnquiryForm({
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setBusy(true);
-    const result = await submitEnquiry(idle, new FormData(e.currentTarget));
+    const data = new FormData(e.currentTarget);
+    data.set("page", window.location.pathname + window.location.search);
+    const result = await submitEnquiry(idle, data);
     setBusy(false);
     setState(result);
   }

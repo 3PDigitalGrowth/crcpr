@@ -246,16 +246,11 @@ export default function SchoolsFaithPage() {
         </Container>
       </Section>
 
-      <InlineEnquirySection
-        copyId={P}
-        title="Need confidential advice for a school or faith-based matter?"
-        body="CRC Public Relations advises school leaders, boards, and faith-based organisations facing parent concern, media attention, governance pressure, or a sensitive incident. If it is urgent, call us now."
-        bullets={[
-          "Parent, staff, and community communication support",
-          "Principal, board, and spokesperson advice",
-          "Urgent incident response and preparedness planning",
-        ]}
-        defaultMessage="We need confidential advice for a school or faith-based communications matter."
+      <LeadMagnetBanner
+        variant="light"
+        magnet="schoolsPlaybook"
+        title="Free: School crisis communications playbook"
+        description="A practical guide for school leaders covering the crisis scenarios most likely to affect independent, Catholic, and faith-based schools, including parent communications, media response, and early leadership decisions."
       />
 
       {/* ---------- HOW WE SUPPORT ---------- */}
@@ -305,10 +300,16 @@ export default function SchoolsFaithPage() {
         </Container>
       </Section>
 
-      <LeadMagnetBanner
-        magnet="schoolsPlaybook"
-        title="Free: School crisis communications playbook"
-        description="A practical guide for school leaders covering the crisis scenarios most likely to affect independent, Catholic, and faith-based schools, including parent communications, media response, and early leadership decisions."
+      <InlineEnquirySection
+        copyId={P}
+        title="Need confidential advice for a school or faith-based matter?"
+        body="CRC Public Relations advises school leaders, boards, and faith-based organisations facing parent concern, media attention, governance pressure, or a sensitive incident. If it is urgent, call us now."
+        bullets={[
+          "Parent, staff, and community communication support",
+          "Principal, board, and spokesperson advice",
+          "Urgent incident response and preparedness planning",
+        ]}
+        defaultMessage="We need confidential advice for a school or faith-based communications matter."
       />
 
       <FAQSection

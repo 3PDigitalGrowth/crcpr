@@ -245,20 +245,20 @@ export default function DigitalMediaPage() {
         </Container>
       </Section>
 
-      <InlineEnquirySection
-        copyId={P}
-        title="Need a digital reputation review?"
-        body="If your organisation needs better monitoring, stronger governance, or a clearer response plan for online issues, CRC Public Relations can help you assess the exposure and tighten the system."
-        bullets={[
-          "Digital reputation and social governance reviews",
-          "Online issue and escalation planning",
-          "Experienced advice for social and review-driven reputation pressure",
+      <LeadMagnetBanner
+        magnet="reputationAssessment"
+        opensAssessment
+        title="How exposed is your organisation's digital reputation?"
+        description="Our Reputation Vulnerability Assessment includes a digital exposure lens covering monitoring, governance, escalation, and online trust risks. It is a fast way to identify where your organisation is currently overconfident or underprepared."
+        highlights={[
+          "Includes digital exposure review",
+          "Useful for communications and risk leaders",
+          "Turns online risk into practical next steps",
         ]}
-        defaultMessage="We would like a digital reputation review and advice on our online communications risks."
       />
 
       {/* ---------- DIGITAL COMMUNICATIONS SERVICES ---------- */}
-      <Section tone="base" className="pb-11 pt-4 md:pb-14 md:pt-6">
+      <Section tone="base" className="py-11 md:py-14">
         <Container>
           <H2 className="max-w-3xl">
             <T id={`${P}.t28`}>Digital communications services</T>
@@ -357,16 +357,16 @@ export default function DigitalMediaPage() {
         </Container>
       </Section>
 
-      <LeadMagnetBanner
-        magnet="reputationAssessment"
-        opensAssessment
-        title="How exposed is your organisation's digital reputation?"
-        description="Our Reputation Vulnerability Assessment includes a digital exposure lens covering monitoring, governance, escalation, and online trust risks. It is a fast way to identify where your organisation is currently overconfident or underprepared."
-        highlights={[
-          "Includes digital exposure review",
-          "Useful for communications and risk leaders",
-          "Turns online risk into practical next steps",
+      <InlineEnquirySection
+        copyId={P}
+        title="Need a digital reputation review?"
+        body="If your organisation needs better monitoring, stronger governance, or a clearer response plan for online issues, CRC Public Relations can help you assess the exposure and tighten the system."
+        bullets={[
+          "Digital reputation and social governance reviews",
+          "Online issue and escalation planning",
+          "Experienced advice for social and review-driven reputation pressure",
         ]}
+        defaultMessage="We would like a digital reputation review and advice on our online communications risks."
       />
 
       <FAQSection

@@ -84,13 +84,6 @@ export default function GovernmentClientsPage() {
         ctaHref="/contact"
       />
 
-      <PageProofStrip
-        copyId={P}
-        variant="navy"
-        title="Government communications succeeds when authority, process, and public confidence remain aligned."
-        items={[...proofItems]}
-      />
-
       <Section tone="base" className="py-11 md:py-14">
         <Container className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:gap-14">
           <div>
@@ -148,6 +141,15 @@ export default function GovernmentClientsPage() {
         </Container>
       </Section>
 
+      <LeadMagnetBanner magnet="crisisReadinessChecklist" variant="light" />
+
+      <PageProofStrip
+        copyId={P}
+        variant="navy"
+        title="Government communications succeeds when authority, process, and public confidence remain aligned."
+        items={[...proofItems]}
+      />
+
       <InlineEnquirySection
         copyId={P}
         eyebrow="Where it gets difficult"
@@ -160,8 +162,6 @@ export default function GovernmentClientsPage() {
         ]}
         defaultMessage="We need government or public sector communications advice on a current matter."
       />
-
-      <LeadMagnetBanner magnet="crisisReadinessChecklist" />
 
       <FAQSection
         copyId={P}

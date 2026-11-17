@@ -183,8 +183,19 @@ export default function IssuesManagementPage() {
         </Container>
       </Section>
 
+      <LeadMagnetBanner
+        magnet="crisisReadinessChecklist"
+        variant="dark"
+        whatYouGetBody="The essential crisis readiness checklist: 30 questions with an action plan for every gap."
+        highlights={[
+          "30 questions across readiness areas",
+          "Action plan guidance for every gap",
+          "Used by Australian leadership teams",
+        ]}
+      />
+
       {/* ---------- COMMON ENGAGEMENTS ---------- */}
-      <Section tone="base" className="pb-11 pt-4 md:pb-14 md:pt-6">
+      <Section tone="base" className="py-11 md:py-14">
         <Container>
           <div className="grid gap-10 lg:grid-cols-[1.1fr,0.9fr] lg:gap-14">
             <div>
@@ -274,18 +285,6 @@ export default function IssuesManagementPage() {
           </div>
         </Container>
       </Section>
-
-      <InlineEnquirySection
-        copyId={P}
-        title="Watching something develop?"
-        body="If your team is seeing signals that a matter could escalate, engage early. The right response now can prevent unnecessary media, stakeholder, and regulatory pressure later."
-        bullets={[
-          "Rapid issue assessment and escalation advice",
-          "Stakeholder mapping and message discipline",
-          "Support before the matter becomes a live crisis",
-        ]}
-        defaultMessage="We are monitoring an emerging issue and would like confidential advice on next steps."
-      />
 
       {/* ---------- PREDICTABILITY ---------- */}
       <Section tone="base" className="pb-11 pt-4 md:pb-14 md:pt-6">
@@ -378,15 +377,16 @@ export default function IssuesManagementPage() {
         </Container>
       </Section>
 
-      <LeadMagnetBanner
-        magnet="crisisReadinessChecklist"
-        variant="dark"
-        whatYouGetBody="The essential crisis readiness checklist: 30 questions with an action plan for every gap."
-        highlights={[
-          "30 questions across readiness areas",
-          "Action plan guidance for every gap",
-          "Used by Australian leadership teams",
+      <InlineEnquirySection
+        copyId={P}
+        title="Watching something develop?"
+        body="If your team is seeing signals that a matter could escalate, engage early. The right response now can prevent unnecessary media, stakeholder, and regulatory pressure later."
+        bullets={[
+          "Rapid issue assessment and escalation advice",
+          "Stakeholder mapping and message discipline",
+          "Support before the matter becomes a live crisis",
         ]}
+        defaultMessage="We are monitoring an emerging issue and would like confidential advice on next steps."
       />
 
       <FAQSection

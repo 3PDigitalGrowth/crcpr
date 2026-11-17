@@ -243,8 +243,8 @@ export function ArticlePage({ id, slug }: { id: ConceptId; slug: string }) {
         body="Our articles are designed to clarify the issue. If you need to apply that thinking to a live situation, the next step is a confidential conversation."
         primaryLabel="Get in touch"
       />
-      {/* Room for the pinned contact bar below lg, so it never covers the footer. */}
-      <div className="h-[4.5rem] lg:hidden" aria-hidden />
+      {/* Room for the pinned contact bar below lg. On the live site SiteShell adds it after the footer instead. */}
+      {id !== "site" ? <div className="h-[4.5rem] lg:hidden" aria-hidden /> : null}
     </>
   );
 }

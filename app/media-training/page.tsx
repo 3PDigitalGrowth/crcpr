@@ -220,16 +220,11 @@ export default function MediaTrainingPage() {
         </Container>
       </Section>
 
-      <InlineEnquirySection copyId={P}
-        title="Planning a training session for your executives or spokespersons?"
-        body="We run one-to-one, small-group, crisis-specific, and board-level media training for organisations that want stronger performance before the next difficult interview."
-        bullets={[
-          "Executive, spokesperson, and board-level media training",
-          "Hostile interview rehearsal and crisis scenario preparation",
-          "Sessions tailored to your organisation, not generic examples",
-        ]}
-        defaultMessage="We are interested in a media training session for our executives or spokespersons."
-        variant="white"
+      <LeadMagnetBanner
+        magnet="mediaInterviewGuide"
+        variant="light"
+        title="Download the Media Interview Preparation Guide"
+        description="The pre-interview checklist and briefing framework we give to executives before meaningful media appearances. Covers hostile interview preparation, on-camera presence, message prioritisation, and the questions every spokesperson should be able to answer before walking in."
       />
 
       {/* ---------- TRAINING PROGRAMMES ---------- */}
@@ -344,11 +339,16 @@ export default function MediaTrainingPage() {
         </Container>
       </Section>
 
-      <LeadMagnetBanner
-        magnet="mediaInterviewGuide"
-        variant="light"
-        title="Download the Media Interview Preparation Guide"
-        description="The pre-interview checklist and briefing framework we give to executives before meaningful media appearances. Covers hostile interview preparation, on-camera presence, message prioritisation, and the questions every spokesperson should be able to answer before walking in."
+      <InlineEnquirySection copyId={P}
+        title="Planning a training session for your executives or spokespersons?"
+        body="We run one-to-one, small-group, crisis-specific, and board-level media training for organisations that want stronger performance before the next difficult interview."
+        bullets={[
+          "Executive, spokesperson, and board-level media training",
+          "Hostile interview rehearsal and crisis scenario preparation",
+          "Sessions tailored to your organisation, not generic examples",
+        ]}
+        defaultMessage="We are interested in a media training session for our executives or spokespersons."
+        variant="white"
       />
 
       <FAQSection copyId={P}

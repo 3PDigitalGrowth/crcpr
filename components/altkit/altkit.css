@@ -497,6 +497,18 @@
   -webkit-backdrop-filter: blur(22px) saturate(160%);
   backdrop-filter: blur(22px) saturate(160%);
 }
+/* Header dropdowns: a solid panel so the menu items read clearly over the page
+   (Alex, 17 Nov 2026: the translucent panel was hard to read). */
+.kit .kit-menu {
+  background: var(--card);
+  border: 1px solid var(--line);
+  box-shadow: 0 24px 48px -24px rgba(11, 18, 32, 0.35);
+}
+.kit[data-theme="white"] .kit-header .kit-menu,
+.kit[data-light-chrome] .kit-header .kit-menu {
+  background: #ffffff;
+}
+
 /* Glass that sits directly on a photograph. */
 .kit .glass-photo {
   color: #ffffff;

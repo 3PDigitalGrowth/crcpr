@@ -55,7 +55,7 @@ function MenuLink({ title, blurb, href }: { title: string; blurb?: string; href:
 
 function ServicesMenu({ base }: { base: string }) {
   return (
-    <div className="glass-strong kit-r grid w-[600px] grid-cols-[1.25fr,1fr] gap-5 p-5">
+    <div className="kit-menu kit-r grid w-[600px] grid-cols-[1.25fr,1fr] gap-5 p-5">
       <div>
         <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-muted">Our practice areas</p>
         <ul className="mt-2 space-y-0.5">
@@ -87,7 +87,7 @@ function ServicesMenu({ base }: { base: string }) {
 
 function ListMenu({ items, footer }: { items: MenuItem[]; footer?: { label: string; href: string } }) {
   return (
-    <div className="glass-strong kit-r w-[360px] p-3">
+    <div className="kit-menu kit-r w-[360px] p-3">
       <ul className="space-y-0.5">
         {items.map((s) => (
           <li key={s.href}>

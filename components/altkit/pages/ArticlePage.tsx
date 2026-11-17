@@ -151,6 +151,21 @@ export function ArticlePage({ id, slug }: { id: ConceptId; slug: string }) {
             <MDXRemote source={partTwo} components={mdxComponents} />
           </article>
 
+          {/* Phones and tablets: the adviser card is replaced by a bar pinned to the foot of the screen. */}
+          <div className="tone-base fixed inset-x-0 bottom-0 z-40 flex items-center gap-3 border-t border-line px-4 py-3 shadow-[0_-12px_32px_-18px_rgba(11,18,32,0.35)] lg:hidden">
+            <Link href="/contact" className="btn btn-primary flex-1">
+              Get in touch
+            </Link>
+            <a
+              href={siteConfig.phone.href}
+              className="btn btn-quiet shrink-0 whitespace-nowrap"
+              aria-label={`Call ${siteConfig.phone.display}`}
+            >
+              <Phone className="h-4 w-4 text-accent" aria-hidden />
+              {siteConfig.phone.display}
+            </a>
+          </div>
+
           <aside className="hidden lg:block">
             <div className="glass kit-r sticky top-24 p-5">
               <p className="text-sm font-bold">{FOUNDERS.lyall.name}</p>
@@ -228,6 +243,8 @@ export function ArticlePage({ id, slug }: { id: ConceptId; slug: string }) {
         body="Our articles are designed to clarify the issue. If you need to apply that thinking to a live situation, the next step is a confidential conversation."
         primaryLabel="Get in touch"
       />
+      {/* Room for the pinned contact bar below lg, so it never covers the footer. */}
+      <div className="h-[4.5rem] lg:hidden" aria-hidden />
     </>
   );
 }

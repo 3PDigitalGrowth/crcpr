@@ -17,7 +17,10 @@ export function Section({
   ariaLabel?: string;
 }) {
   return (
-    <section id={id} aria-label={ariaLabel} className={`tone-${tone} relative overflow-hidden ${className}`}>
+    // overflow-clip, not overflow-hidden: it still clips the decorative light,
+    // but does not make the section a scroll container, so sticky asides
+    // (article CTA, contents list) keep working inside it.
+    <section id={id} aria-label={ariaLabel} className={`tone-${tone} relative overflow-clip ${className}`}>
       {children}
     </section>
   );

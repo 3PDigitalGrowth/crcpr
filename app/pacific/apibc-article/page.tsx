@@ -11,7 +11,6 @@ import { MT } from "@/components/editable";
 import { APIBC_ARTICLE, APIBC_CLOSING, APIBC_SOURCE, type ArticleBlock } from "@/components/pacific/apibc/article";
 import { ScrollQuote } from "@/components/pacific/apibc/ScrollQuote";
 import { InlineEnquirySection } from "@/components/shared/InlineEnquirySection";
-import { LeadMagnetBanner } from "@/components/shared/LeadMagnetBanner";
 
 /*
  * Landing page for the Australia Pacific Islands Business Council's member
@@ -341,8 +340,6 @@ export default function ApibcArticlePage() {
           </div>
         </Container>
       </Section>
-
-      <LeadMagnetBanner magnet="crisisReadinessChecklist" variant="dark" />
 
       <div id="enquiry" className="scroll-mt-24">
         <InlineEnquirySection
